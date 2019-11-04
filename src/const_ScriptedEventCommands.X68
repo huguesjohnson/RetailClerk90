@@ -1,0 +1,12 @@
+SCRIPTED_EVENT_END=$FFFF	; end of scripted event
+SCRIPTED_EVENT_DIALOG=$EEEE	; show a dialog
+SCRIPTED_EVENT_CHANGE_SPRITE=$DDDD	; change the moving sprite
+SCRIPTED_EVENT_CHANGE_SCENE=$CCCC	; switch scenes
+SCRIPTED_EVENT_CHANGE_PLAYER_SPRITE=$BBBB	; switch player sprites
+SCRIPTED_EVENT_SET_PLAYER_SPRITE_X=$AAAA	; set player sprite X
+SCRIPTED_EVENT_SET_PLAYER_SPRITE_Y=$9999	; set player sprite Y
+SCRIPTED_EVENT_SET_PLAYER_SPRITE_DIRECTION=$8888	; set player direction
+SCRIPTED_EVENT_FADE_BLACK=$7777	; fade and blackout the palette
+SCRIPTED_EVENT_DRAW_SCENE=$6666	; draw scene, but not completely reload scene
+SCRIPTED_EVENT_TIMER=$5555	; pause for a specified number of frames
+SCRIPTED_EVENT_ENDGAME=$4444	; end the game

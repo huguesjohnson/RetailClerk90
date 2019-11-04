@@ -1,0 +1,42 @@
+Story & program by Hugues Johnson
+
+Almost everything from Retail Clerk '89 applies here, see:
+https://github.com/huguesjohnson/RetailClerk89/blob/master/CREDITS
+
+********************************************************************************
+3rd party software used to build this demo
+********************************************************************************
+vasm is used to build this demo
+ vasm 1.7c (c) 2002-2015 Volker Barthelmann
+ vasm M68k/CPU32/ColdFire cpu backend 2.0f (c) 2002-2015 Frank Wille
+ vasm motorola syntax module 3.8 (c) 2002-2015 Frank Wille
+ vasm binary output module 1.8 (c) 2002-2009,2013,2015 Volker Barthelmann
+ http://sun.hasenbraten.de/vasm/
+
+Background music was composed or edited using MilkyTracker
+ http://www.milkytracker.org/
+ https://github.com/Deltafire/MilkyTracker/blob/master/COPYING
+ https://github.com/Deltafire/MilkyTracker/blob/master/AUTHORS
+
+This demo uses the Echo Sound Driver
+ (c) 2010-2017 Javier Degirolmo
+ https://github.com/sikthehedgehog/Echo
+
+xm2esf was used to convert xm files to esf for use with Echo
+ (c) 2010-2015 Eric Voirin alias Oerg866
+ https://github.com/oerg866/xm2esf
+
+********************************************************************************
+3rd party assets used to build this demo
+********************************************************************************
+See LICENSE for the list of 3rd party code, graphics, & music used in this demo
+
+********************************************************************************
+Inspirations
+********************************************************************************
+The graphic style of Retail Clerk '90 is influenced by Phantasy Star II-IV.
+
+Elements of the story were inspired by Falcom's Kiseki series.
+
+The setting is based on various malls I frequented in the early 90s.
+However all characters, places, and events are fictitious.

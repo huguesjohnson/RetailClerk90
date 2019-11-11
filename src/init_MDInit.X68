@@ -13,7 +13,7 @@ SecurityCheck:
 	move.l	#'SEGA',(REG_TMS)	; otherwise copy 'SEGA' to TMS register
 SkipSecurity:
 
-	if _ATGAMES_HACKS
+	if _ATGAMES_HACKS_
     ; AtGames audio fix
 	; https://bigevilcorporation.co.uk/2018/04/18/taming-the-atgames-firecore/
 	move.w #$FFFF,($00000000)  ; Latch 0x0000

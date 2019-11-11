@@ -1,0 +1,40 @@
+{ 
+   "basePath":"..",
+   "memoryMap":{ 
+      "sourceFile":"src/MemoryMap.csv",
+      "destinationFile":"src/const_MemoryMap.X68",
+      "baseAddress":"FFFF0000"
+   },
+   "collision":{ 
+      "collisionMap":{ 
+         "design/collision/store-00-512x512.bmp":"src/collision-maps/Store00Collision.X68"
+      },
+      "includeFilePath":"src/inc_CollisionMaps.X68"
+   },
+   "header":{ 
+      "filePath":"src/init_Header.X68",
+      "copyright":"\u0027(C)HUJO \u0027",
+      "cartName":"\u0027Retail Clerk 90                                 \u0027",
+      "romStart":"$00000000",
+      "romEnd":"RomEnd",
+      "ramStartEnd":"$FFFF0000,$FFFFFFFF",
+      "sramType":"\u0027RA\u0027,$F8,$20",
+      "sramStart":"SRAM_START",
+      "sramEnd":"SRAM_END",
+      "comment":"\u0027http://huguesjohnson.com/               \u0027"
+   },
+   "assembly":[ 
+      { 
+         "assemblerPath":"src/",
+         "arguments":"vasmm68k_mot -o ../build/RetailClerk90.bin -Fbin -spaces -D_DEBUG_\u003d0 -D_ATGAMES_HACKS_\u003d0 RetailClerk90.X68"
+      },
+      { 
+         "assemblerPath":"src/",
+         "arguments":"vasmm68k_mot -o ../build/RetailClerk90_DEBUG.bin -Fbin -spaces -D_DEBUG_\u003d1 -D_ATGAMES_HACKS_\u003d1 RetailClerk90.X68"
+      },
+      { 
+         "assemblerPath":"src/",
+         "arguments":"vasmm68k_mot -o ../build/RetailClerk90_ATGAMES.bin -Fbin -spaces -D_DEBUG_\u003d0 -D_ATGAMES_HACKS_\u003d1 RetailClerk90.X68"
+      }
+   ]
+}

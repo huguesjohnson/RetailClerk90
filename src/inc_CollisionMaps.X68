@@ -1,3 +1,3 @@
-;MapStore00Collision:
-;	include 'collision-maps/map_Store00Collision.X68'
+Store00Collision:
+	include 'collision-maps/Store00Collision.X68'
 

@@ -3,12 +3,6 @@
 ;*******************************************************************************
 
 ;-------------------------------------------------------------------------------
-; these are effectively conditional compilation directives
-;-------------------------------------------------------------------------------
-_DEBUG_=$0	; enable/disable debug mode
-_ATGAMES_HACKS=$0	; enable/disable hacks for AtGames devices
-
-;-------------------------------------------------------------------------------
 ; settings that effect the game speed that are changed often for debugging
 ;-------------------------------------------------------------------------------
 	if	_DEBUG_

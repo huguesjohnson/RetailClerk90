@@ -24,19 +24,89 @@ THE SOFTWARE.
 
 package com.huguesjohnson.retailclerk.build.test;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import org.junit.jupiter.api.Test;
 
 import com.google.gson.Gson;
 import com.huguesjohnson.retailclerk.build.BuildInstructions;
+import com.huguesjohnson.retailclerk.build.ColorUtils;
 import com.huguesjohnson.retailclerk.build.parameters.AssemblyParameters;
 import com.huguesjohnson.retailclerk.build.parameters.CollisionDataParameters;
 import com.huguesjohnson.retailclerk.build.parameters.HeaderParameters;
 import com.huguesjohnson.retailclerk.build.parameters.MemoryMapParameters;
+import com.huguesjohnson.retailclerk.build.parameters.PaletteParameters;
+import com.huguesjohnson.retailclerk.build.parameters.SpriteDefinition;
+import com.huguesjohnson.retailclerk.build.parameters.SpriteParameters;
+import com.huguesjohnson.retailclerk.build.parameters.TilesetDefinition;
+import com.huguesjohnson.retailclerk.build.parameters.TilesetParameters;
 
-class TestBuildStuff{
+import junit.framework.TestCase;
 
+class TestBuildStuff extends TestCase{
+
+	@Test
+	void testColorUtils(){
+		String s=ColorUtils.hexStringToGenesisRgb("ff");
+		assertEquals("111",s);
+		s=ColorUtils.rgbStringToGenesisRgbString("ffe0a040");
+		assertEquals("0000010010101110",s);
+		s=ColorUtils.genesisRgbStringToHexString("%"+s);
+		assertEquals("ffe0a040",s);
+		s=ColorUtils.genesisRgbStringToHexString("dc.w\t%0000010010101110 ; blah"+0000010010101110);
+		assertEquals("ffe0a040",s);
+		ArrayList<String> colors=new ArrayList<String>();
+		colors.add("ffe000e0");//00
+		colors.add("ff000000");//01
+		colors.add("ff806440");//02
+		colors.add("ffe0c8a0");//03
+		colors.add("ff80a8c0");//04		
+		colors.add("ff604020");//05
+		colors.add("ffc0a880");//06
+		colors.add("ffa06420");//07
+		colors.add("ff608440");//08
+		colors.add("ff802080");//09
+		colors.add("ffc0c8c0");//0A
+		colors.add("ffc06420");//0B
+		colors.add("ffc00000");//0C
+		colors.add("ffe0e8e0");//0D
+		colors.add("ffe0c820");//0E
+		colors.add("ff6084a0");//0F
+		assertEquals(0,ColorUtils.findNearestColor(colors,"ffe000e0"));
+		assertEquals(1,ColorUtils.findNearestColor(colors,"ff000000"));
+		assertEquals(2,ColorUtils.findNearestColor(colors,"ff806440"));
+		assertEquals(3,ColorUtils.findNearestColor(colors,"ffe0c8a0"));
+		assertEquals(4,ColorUtils.findNearestColor(colors,"ff80a8c0"));
+		assertEquals(5,ColorUtils.findNearestColor(colors,"ff604020"));
+		assertEquals(6,ColorUtils.findNearestColor(colors,"ffc0a880"));
+		assertEquals(7,ColorUtils.findNearestColor(colors,"ffa06420"));
+		assertEquals(8,ColorUtils.findNearestColor(colors,"ff608440"));
+		assertEquals(9,ColorUtils.findNearestColor(colors,"ff802080"));
+		assertEquals(10,ColorUtils.findNearestColor(colors,"ffc0c8c0"));
+		assertEquals(11,ColorUtils.findNearestColor(colors,"ffc06420"));
+		assertEquals(12,ColorUtils.findNearestColor(colors,"ffc00000"));
+		assertEquals(13,ColorUtils.findNearestColor(colors,"ffe0e8e0"));
+		assertEquals(14,ColorUtils.findNearestColor(colors,"ffe0c820"));
+		assertEquals(15,ColorUtils.findNearestColor(colors,"ff6084a0"));
+		assertEquals(0,ColorUtils.findNearestColor(colors,"ffe000e8"));
+		assertEquals(1,ColorUtils.findNearestColor(colors,"ff200000"));
+		assertEquals(2,ColorUtils.findNearestColor(colors,"ff806040"));
+		assertEquals(3,ColorUtils.findNearestColor(colors,"ffe0c0a0"));
+		assertEquals(4,ColorUtils.findNearestColor(colors,"ff80a0c0"));
+		assertEquals(5,ColorUtils.findNearestColor(colors,"ff602020"));
+		assertEquals(6,ColorUtils.findNearestColor(colors,"ffa0a880"));
+		assertEquals(7,ColorUtils.findNearestColor(colors,"ffa06400"));
+		assertEquals(8,ColorUtils.findNearestColor(colors,"ff608420"));
+		assertEquals(9,ColorUtils.findNearestColor(colors,"ff800080"));
+		assertEquals(10,ColorUtils.findNearestColor(colors,"ffc0c0c0"));
+		assertEquals(11,ColorUtils.findNearestColor(colors,"ffc06820"));
+		assertEquals(12,ColorUtils.findNearestColor(colors,"ffc00020"));
+		assertEquals(13,ColorUtils.findNearestColor(colors,"ffe0e8c0"));
+		assertEquals(14,ColorUtils.findNearestColor(colors,"ffe0c800"));
+		assertEquals(15,ColorUtils.findNearestColor(colors,"ff6080a0"));
+	}
+	
 	@Test
 	void testBuildInstructions(){
 		/*
@@ -45,6 +115,7 @@ class TestBuildStuff{
 		 */
 		BuildInstructions instructions=new BuildInstructions();
 		instructions.basePath=".";
+		
 		/* ***********************************************************
 		* Memory map parameters
 		*********************************************************** */
@@ -52,6 +123,7 @@ class TestBuildStuff{
 		instructions.memoryMap.sourceFile="src/MemoryMap.csv";
 		instructions.memoryMap.destinationFile="src/const_MemoryMap.X68";
 		instructions.memoryMap.baseAddress="FFFF0000";
+		
 		/* ***********************************************************
 		* Collision data parameters
 		*********************************************************** */
@@ -65,17 +137,49 @@ class TestBuildStuff{
 		/* ***********************************************************
 		* Palettes parameters
 		*********************************************************** */
-		//TODO
+		instructions.palettes=new PaletteParameters();
+		instructions.palettes.includeFilePath="src/inc_Palettes.X68";
+		instructions.palettes.paletteMap=new HashMap<String,String>();
+		instructions.palettes.paletteMap.put(
+				"design/img/swatches/people.png",
+				"src/palettes/People.X68");
 		
 		/* ***********************************************************
 		* Tile parameters
 		*********************************************************** */
-		//TODO
+		instructions.tiles=new TilesetParameters();
+		instructions.tiles.includeFilePath="src/inc_SpriteTiles.X68";
+		instructions.tiles.tilesets=new TilesetDefinition[2];
+		instructions.tiles.tilesets[0]=new TilesetDefinition();
+		instructions.tiles.tilesets[0].name="DialogFrame";
+		instructions.tiles.tilesets[0].palettePath="src/palettes/People.X68";
+		instructions.tiles.tilesets[0].sourceFilePath="design/img/font-dialog-tiles/frame.png";
+		instructions.tiles.tilesets[0].destinationFilePath="src/tiles/font-tiles/dialog-frame.X68";
+		instructions.tiles.tilesets[1]=new TilesetDefinition();
+		instructions.tiles.tilesets[1].name="Font";
+		instructions.tiles.tilesets[1].palettePath="src/palettes/People.X68";
+		instructions.tiles.tilesets[1].sourceFilePath="design/img/font-dialog-tiles/font.png";
+		instructions.tiles.tilesets[1].destinationFilePath="src/tiles/font-tiles/dwf.X68";
 		
 		/* ***********************************************************
 		* Sprite definition parameters
 		*********************************************************** */
-		//TODO
+		SpriteParameters sprites=new SpriteParameters();
+		sprites.palettePath="src/palettes/People.X68";
+		sprites.includeFilePath="src/inc_SpriteTiles.X68";
+		sprites.characterDefinitionFilePath="src/data_CharacterDefinitions.X68";
+		sprites.constantDefinitionPath="src/const_CharacterIDs.X68";
+		sprites.baseId="2000";
+		sprites.sprites=new SpriteDefinition[2];
+		sprites.sprites[0]=new SpriteDefinition();
+		sprites.sprites[0].name="Eryn";
+		sprites.sprites[0].sourceFilePath="design/img/sprite-tiles/pc-eryn.png";
+		sprites.sprites[0].destinationFilePath="src/tiles/sprite-tiles/pc-eryn.X68";
+		sprites.sprites[1]=new SpriteDefinition();
+		sprites.sprites[1].name="Carl";
+		sprites.sprites[1].sourceFilePath="design/img/sprite-tiles/pc-carl.png";
+		sprites.sprites[1].destinationFilePath="src/tiles/sprite-tiles/pc-carl.X68";
+		instructions.sprites=sprites;
 		
 		/* ***********************************************************
 		* Header parameters
@@ -92,6 +196,7 @@ class TestBuildStuff{
 		header.sramEnd="SRAM_END";
 		header.comment="'http://huguesjohnson.com/               '";		
 		instructions.header=header;
+		
 		/* ***********************************************************
 		* Compile parameters
 		*********************************************************** */

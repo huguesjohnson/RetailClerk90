@@ -30,6 +30,9 @@ import com.huguesjohnson.retailclerk.build.parameters.AssemblyParameters;
 import com.huguesjohnson.retailclerk.build.parameters.CollisionDataParameters;
 import com.huguesjohnson.retailclerk.build.parameters.HeaderParameters;
 import com.huguesjohnson.retailclerk.build.parameters.MemoryMapParameters;
+import com.huguesjohnson.retailclerk.build.parameters.PaletteParameters;
+import com.huguesjohnson.retailclerk.build.parameters.SpriteParameters;
+import com.huguesjohnson.retailclerk.build.parameters.TilesetParameters;
 
 public class BuildInstructions implements Serializable{
 	private static final long serialVersionUID=666L;
@@ -52,17 +55,17 @@ public class BuildInstructions implements Serializable{
 	/* ***********************************************************
 	* Palettes
 	*********************************************************** */
-	//TODO
+	public PaletteParameters palettes;
 	
 	/* ***********************************************************
 	* Tiles
 	*********************************************************** */
-	//TODO
+	public TilesetParameters tiles;
 	
 	/* ***********************************************************
 	* Sprite definitions
 	*********************************************************** */
-	//TODO
+	public SpriteParameters sprites;
 	
 	/* ***********************************************************
 	* Header

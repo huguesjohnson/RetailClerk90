@@ -36,8 +36,6 @@ import com.huguesjohnson.PathResolver;
 public class MainBuild{
 
 	public static void main(String[] args){
-		args=new String[1];
-		args[0]="/media/hugues/Hyrule/git/RetailClerk90/build.json";
 		try{
 			if((args==null)||(args.length==0)){
 				throw(new Exception("No build file specified, how about you try including one."));
@@ -47,6 +45,7 @@ public class MainBuild{
 			*********************************************************** */
 			String json=Files.readString(Paths.get(args[0]));
 			BuildInstructions instructions=(new Gson()).fromJson(json,BuildInstructions.class);
+			
 			/* ***********************************************************
 			* Sort out the base path
 			*********************************************************** */
@@ -61,34 +60,40 @@ public class MainBuild{
 					basePath=basePath+File.separator;
 				}
 			}
+			
 			/* ***********************************************************
 			* Build memory map
 			*********************************************************** */
-			CSVMemoryMap.GenerateMemoryMap(
+			CSVMemoryMap.generateMemoryMap(
 					basePath+instructions.memoryMap.sourceFile,
 					basePath+instructions.memoryMap.destinationFile,
 					instructions.memoryMap.baseAddress);
+			
 			/* ***********************************************************
 			* Build collision data
 			*********************************************************** */
-			BMPtoCollisionData.GenerateCollisionData(
+			BMPtoCollisionData.generateCollisionData(
 					basePath,
 					instructions.collision.collisionMap,
 					instructions.collision.includeFilePath);
+			
 			/* ***********************************************************
 			* Build palettes
 			*********************************************************** */
-			//TODO
+			ExtractPalette.extract(
+					basePath,
+					instructions.palettes.paletteMap,
+					instructions.palettes.includeFilePath);
 			
 			/* ***********************************************************
 			* Build tiles
 			*********************************************************** */
-			//TODO
+			BuildTiles.build(basePath,instructions.tiles);
 			
 			/* ***********************************************************
-			* Build Sprite definitions
+			* Build sprites
 			*********************************************************** */
-			//TODO
+			BuildSprites.build(basePath,instructions.sprites);
 			
 			/* ***********************************************************
 			* Generate header

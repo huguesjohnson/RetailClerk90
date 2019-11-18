@@ -25,6 +25,7 @@ THE SOFTWARE.
 package com.huguesjohnson.retailclerk.build;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.InputStreamReader;
@@ -33,7 +34,7 @@ import java.io.OutputStreamWriter;
 public abstract class CSVMemoryMap{
 	private static final String newLine=System.lineSeparator();
 
-	public static void GenerateMemoryMap(String sourceFile,String destinationFile,String baseAddress){
+	public static void generateMemoryMap(String sourceFile,String destinationFile,String baseAddress){
 		BufferedReader bufferedReader=null;
 		OutputStreamWriter outputStreamWriter=null;
 		int lineNumber=0;
@@ -41,8 +42,8 @@ public abstract class CSVMemoryMap{
 		try{
 			String currentAddressHex=baseAddress;
 			long currentAddressInt=Long.valueOf(currentAddressHex,16);
-			bufferedReader=new BufferedReader(new InputStreamReader(new FileInputStream(sourceFile)));
-			outputStreamWriter=new FileWriter(destinationFile);
+			bufferedReader=new BufferedReader(new InputStreamReader(new FileInputStream(new File(sourceFile))));
+			outputStreamWriter=new FileWriter((new File(destinationFile)));
 			outputStreamWriter.write("MEM_START=$"+baseAddress+newLine);
 			String address=baseAddress;
 			while((currentLine=bufferedReader.readLine())!=null){

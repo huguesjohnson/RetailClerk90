@@ -105,7 +105,7 @@ NPC_SPRITE_MOVE_STEPS=$0009; how many steps NPC sprites take when they move
 PLAYER_BASE_TILE=%0110000100000001 ; pri=0,pal=2,vf=0,hf=0,pattern=101
 NPC0_BASE_TILE=%0110000101110001 ;pri=0,pal=2,vf=0,hf=0,pattern=171
 NPC_BASE_TILE_INC=$0060	; how many tiles to increment between NPCs
-CHARACTER_DEFINITION_SIZE=CharacterDefinitionPlayerEnd-CharacterDefinitionPlayer
+CHARACTER_DEFINITION_SIZE=CharacterDefinitionErynEnd-CharacterDefinitionErynStart
 
 ;-------------------------------------------------------------------------------
 ; dialog settings

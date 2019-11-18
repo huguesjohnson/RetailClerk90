@@ -1,7 +1,7 @@
 /* 
 Convert a BMP image to collision data
 
-Code to read bmp pixels is from: http://stackoverflow.com/questions/17015340/how-to-read-a-bmp-file-identify-which-pixels-are-black-in-java (mmirwaldt response)
+Some code is based on - http://stackoverflow.com/questions/17015340/how-to-read-a-bmp-file-identify-which-pixels-are-black-in-java (mmirwaldt response)
 
 Everything else by Hugues Johnson
 
@@ -22,7 +22,7 @@ import com.huguesjohnson.PathResolver;
 public abstract class BMPtoCollisionData{
 	private final static String newLine=System.lineSeparator();
 
-	public static void GenerateCollisionData(String basePath,Map<String,String> sourceDestinationMap,String includeFilePath){
+	public static void generateCollisionData(String basePath,Map<String,String> sourceDestinationMap,String includeFilePath){
 		FileWriter collisionDataWriter=null;
 		FileWriter includeDataWriter=null;
 		try{
@@ -81,12 +81,16 @@ public abstract class BMPtoCollisionData{
 					includePathRel=includePathRel.substring(3);
 				}
 				StringBuffer includeString=new StringBuffer();
-				includeString.append(includePathRel.substring(includePathRel.lastIndexOf(File.separator)+1,includePathRel.lastIndexOf('.')));
-				includeString.append(":");
+				String label=includePathRel.substring(includePathRel.lastIndexOf(File.separator)+1,includePathRel.lastIndexOf('.'));
+				includeString.append(label);
+				includeString.append("Start:");
 				includeString.append(newLine);
 				includeString.append("\tinclude '");
 				includeString.append(includePathRel);
 				includeString.append("'");
+				includeString.append(newLine);
+				includeString.append(label);
+				includeString.append("End:");
 				includeString.append(newLine);
 				includeString.append(newLine);
 				includeDataWriter.write(includeString.toString());

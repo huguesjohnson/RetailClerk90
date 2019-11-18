@@ -63,6 +63,7 @@ Main:
 	include	'init_NewGame.X68'
 
 ;	include	'sub_MainGameLoop.X68'
+
 MainGameLoop:
 	bsr.w	WaitVBlank ; wait for vblank to complete
 	bra.w	MainGameLoop
@@ -227,7 +228,18 @@ TrapException:
 ;*******************************************************************************
 ; tiles
 ;*******************************************************************************
+TransparentTileStart:
+	dc.l	$00000000
+	dc.l	$00000000
+	dc.l	$00000000
+	dc.l	$00000000
+	dc.l	$00000000
+	dc.l	$00000000
+	dc.l	$00000000
+	dc.l	$00000000
+TransparentTileEnd:
 	include 'inc_Tiles.X68'
+	include	'inc_SpriteTiles.X68'
 
 ;*******************************************************************************
 ; echo instruments

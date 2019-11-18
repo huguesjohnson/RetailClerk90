@@ -1,5 +1,5 @@
 { 
-   "basePath":"..",
+   "basePath":".",
    "memoryMap":{ 
       "sourceFile":"src/MemoryMap.csv",
       "destinationFile":"src/const_MemoryMap.X68",
@@ -11,6 +11,48 @@
       },
       "includeFilePath":"src/inc_CollisionMaps.X68"
    },
+   "palettes":{ 
+      "paletteMap":{ 
+         "design/img/swatches/people.png":"src/palettes/People.X68"
+      },
+      "includeFilePath":"src/inc_Palettes.X68"
+   },
+   "tiles":{ 
+      "tilesets":[ 
+         { 
+            "name":"DialogFrame",
+            "palettePath":"src/palettes/People.X68",
+            "sourceFilePath":"design/img/font-dialog-tiles/frame.png",
+            "destinationFilePath":"src/tiles/font-tiles/dialog-frame.X68"
+         },
+         { 
+            "name":"Font",
+            "palettePath":"src/palettes/People.X68",
+            "sourceFilePath":"design/img/font-dialog-tiles/font.png",
+            "destinationFilePath":"src/tiles/font-tiles/dwf.X68"
+         }
+      ],
+      "includeFilePath":"src/inc_Tiles.X68"
+   },
+   "sprites":{ 
+      "sprites":[ 
+         { 
+            "name":"Eryn",
+            "sourceFilePath":"design/img/sprite-tiles/pc-eryn.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/pc-eryn.X68"
+         },
+         { 
+            "name":"Carl",
+            "sourceFilePath":"design/img/sprite-tiles/pc-carl.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/pc-carl.X68"
+         }
+      ],
+      "palettePath":"src/palettes/People.X68",
+      "includeFilePath":"src/inc_SpriteTiles.X68",
+      "characterDefinitionFilePath":"src/data_CharacterDefinitions.X68",
+      "constantDefinitionPath":"src/const_CharacterIDs.X68",
+      "baseId":"2000"
+   },
    "header":{ 
       "filePath":"src/init_Header.X68",
       "copyright":"\u0027(C)HUJO \u0027",
@@ -21,7 +63,7 @@
       "sramType":"\u0027RA\u0027,$F8,$20",
       "sramStart":"SRAM_START",
       "sramEnd":"SRAM_END",
-      "comment":"\u0027http://huguesjohnson.com/               \u0027"
+      "comment":"\u0027https://HuguesJohnson.com/              \u0027"
    },
    "assembly":[ 
       { 

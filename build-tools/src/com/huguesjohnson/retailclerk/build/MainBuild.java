@@ -21,7 +21,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN 
 THE SOFTWARE.
 */
-
 package com.huguesjohnson.retailclerk.build;
 
 import java.io.BufferedReader;
@@ -29,6 +28,10 @@ import java.io.File;
 import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import com.google.gson.Gson;
 import com.huguesjohnson.PathResolver;
@@ -40,6 +43,7 @@ public class MainBuild{
 			if((args==null)||(args.length==0)){
 				throw(new Exception("No build file specified, how about you try including one."));
 			}
+			
 			/* ***********************************************************
 			* Open the build file
 			*********************************************************** */
@@ -51,7 +55,13 @@ public class MainBuild{
 			*********************************************************** */
 			String basePath=instructions.basePath;
 			if(basePath.startsWith(".")){
-				String localPath=System.getProperty("user.dir");
+				String localPath=null;
+				int index=args[0].lastIndexOf(File.separator);
+				if(index<0){//same directory application is running out of
+					localPath=System.getProperty("user.dir");
+				}else{
+					localPath=args[0].substring(0,index);
+				}
 				if(!localPath.endsWith(File.separator)){
 					localPath=localPath+File.separator;
 				}
@@ -60,57 +70,123 @@ public class MainBuild{
 					basePath=basePath+File.separator;
 				}
 			}
+
+			/* ***********************************************************
+			* Backup
+			*********************************************************** */
+			if((instructions.backupPath!=null)&&(instructions.backupPath.length()>0)){
+				String fullBackupPath=PathResolver.getAbsolutePath(basePath,instructions.backupPath);
+				if(!fullBackupPath.endsWith(File.separator)){
+					fullBackupPath=fullBackupPath+File.separator;
+				}
+				if(!(new File(fullBackupPath).exists())){
+					System.out.println("Backup path "+fullBackupPath+" doesn't exist, skipping task.");
+				}else{
+					int index=basePath.lastIndexOf(File.separator,basePath.length()-2)+1;
+					String name=basePath.substring(index,basePath.length()-1);
+					Calendar calendar=Calendar.getInstance();
+					Date now=calendar.getTime();
+					DateFormat format=new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss-SSS");
+					name=name+"_"+format.format(now)+".tar.gz";
+					String command="tar --exclude='"+name+"' "+" --exclude='*.git' -zcvf "+name+" "+".";
+					ProcessBuilder pb=new ProcessBuilder(new String[]{"sh","-c",command});
+					pb.directory(new File(basePath));
+					Process p=pb.start();
+					p.waitFor();
+					BufferedReader sErr=new BufferedReader(new InputStreamReader(p.getErrorStream()));
+					String line=null;
+					while((line=sErr.readLine())!=null){System.out.println(line);}
+					command="mv -v '"+name+"' '"+fullBackupPath+"'";
+					pb=new ProcessBuilder(new String[]{"sh","-c",command});
+					pb.directory(new File(basePath));
+					p=pb.start();
+					p.waitFor();
+					sErr=new BufferedReader(new InputStreamReader(p.getErrorStream()));
+					line=null;
+					while((line=sErr.readLine())!=null){System.out.println(line);}
+				}
+			}else{
+				System.out.println("backupPath not defined, skipping task.");
+			}
 			
 			/* ***********************************************************
 			* Build memory map
 			*********************************************************** */
-			CSVMemoryMap.generateMemoryMap(
-					basePath+instructions.memoryMap.sourceFile,
-					basePath+instructions.memoryMap.destinationFile,
-					instructions.memoryMap.baseAddress);
+			if(instructions.memoryMap!=null){
+				CSVMemoryMap.generateMemoryMap(
+						basePath+instructions.memoryMap.sourceFile,
+						basePath+instructions.memoryMap.destinationFile,
+						instructions.memoryMap.baseAddress);
+			}else{
+				System.out.println("memoryMap not defined, skipping task.");
+			}
 			
 			/* ***********************************************************
 			* Build collision data
 			*********************************************************** */
-			BMPtoCollisionData.generateCollisionData(
-					basePath,
-					instructions.collision.collisionMap,
-					instructions.collision.includeFilePath);
+			if(instructions.collision!=null){
+				BMPtoCollisionData.generateCollisionData(
+						basePath,
+						instructions.collision.collisionMap,
+						instructions.collision.includeFilePath);
+			}else{
+				System.out.println("collision not defined, skipping task.");
+			}
 			
 			/* ***********************************************************
 			* Build palettes
 			*********************************************************** */
-			ExtractPalette.extract(
-					basePath,
-					instructions.palettes.paletteMap,
-					instructions.palettes.includeFilePath);
+			if(instructions.palettes!=null){
+				ExtractPalette.extract(
+						basePath,
+						instructions.palettes.paletteMap,
+						instructions.palettes.includeFilePath);
+			}else{
+				System.out.println("palettes not defined, skipping task.");
+			}
 			
 			/* ***********************************************************
 			* Build tiles
 			*********************************************************** */
-			BuildTiles.build(basePath,instructions.tiles);
+			if(instructions.tiles!=null){
+				BuildTiles.build(basePath,instructions.tiles);
+			}else{
+				System.out.println("tiles not defined, skipping task.");
+			}
 			
 			/* ***********************************************************
 			* Build sprites
 			*********************************************************** */
-			BuildSprites.build(basePath,instructions.sprites);
+			if(instructions.sprites!=null){
+				BuildSprites.build(basePath,instructions.sprites);
+			}else{
+				System.out.println("sprites not defined, skipping task.");
+			}
 			
 			/* ***********************************************************
 			* Generate header
 			*********************************************************** */
-			GenerateHeader.write(basePath,instructions.header);
+			if(instructions.header!=null){
+				GenerateHeader.write(basePath,instructions.header);
+			}else{
+				System.out.println("header not defined, skipping task.");
+			}
 			
 			/* ***********************************************************
 			* Compile
 			*********************************************************** */
-			for(int i=0;i<instructions.assembly.length;i++){
-				ProcessBuilder pb=new ProcessBuilder(new String[]{"sh","-c",instructions.assembly[i].arguments});
-				pb.directory(new File(basePath+instructions.assembly[i].assemblerPath));
-				Process p=pb.start();
-				p.waitFor();
-				BufferedReader sErr=new BufferedReader(new InputStreamReader(p.getErrorStream()));
-				String line=null;
-				while((line=sErr.readLine())!=null){System.out.println(line);}
+			if(instructions.assembly!=null){
+				for(int i=0;i<instructions.assembly.length;i++){
+					ProcessBuilder pb=new ProcessBuilder(new String[]{"sh","-c",instructions.assembly[i].arguments});
+					pb.directory(new File(basePath+instructions.assembly[i].assemblerPath));
+					Process p=pb.start();
+					p.waitFor();
+					BufferedReader sErr=new BufferedReader(new InputStreamReader(p.getErrorStream()));
+					String line=null;
+					while((line=sErr.readLine())!=null){System.out.println(line);}
+				}
+			}else{
+				System.out.println("assembly not defined, skipping task.");
 			}
 			System.out.println("Build finished, have a nice day or whatever.");
 		}catch(Exception x){

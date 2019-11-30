@@ -96,44 +96,44 @@ BuildSaveTitleLoop:
 	bra.w	BuildSaveTitleLoop ; loop until ETX
 BuildSaveTitleLoopExit:
 	dbf	d5,BuildSaveTitlesLoop ; loop
-BuildStatusScreenStoreKeys:
-	moveq	#$000C,d7	; loop counter / key number
-BuildStatusScreenStoreKeysLoop:
-	; determine start position for next store name	
-	clr	d6	; lazy way to prevent various bugs
-	; next 3 operations are to determine the row for the text 
-	move.w	#$0080,d6
-	mulu.w	d7,d6
-	swap d6
-	add.l	#STATUS_SCREEN_STOREKEYS_VDP,d6
-	move.l	d6,(MEM_DIALOG_VDP)
-	clr	d6	; lazy way to prevent various bugs
-	move.w	d7,d6	; copy loop counter / key number to d6
-	mulu.w	#$4,d6	; multiply by 4 to get offset
-	lea	StoreNameTable,a6	; point a6 to the scene lookup table
-	adda.l	d6,a6	; move to offset
-	move.l	(a6),a0	; point a0 to the first character
-	move.l	(MEM_PLAYER_STORE_KEYS),d5
-BuildStatusScreenStoreKeysLoopNextChar:
-	clr	d6	; lazy way to prevent various bugs
-	move.b	(a0)+,d6	; copy current character to d6
-	cmpi.b	#ETX,d6	; is this the end of the text?
-	beq.s	BuildStatusScreenStoreKeysLoopDec
-	sub.w	#$20,d6	; subtract 32 to get the character index
-	btst.l	d7,d5	; does the player have this key?
-	beq.s	.1	; branch if player does not have the key
-	add.w	#DIALOG_BASE_TILE_LOW+%0010000000000000,d6	; add the base tile
-	bra.s	.2
-.1
-	add.w	#DIALOG_BASE_TILE_LOW+%0100000000000000,d6	; add the base tile
-.2
-	move.l	(MEM_DIALOG_VDP),(VDP_CONTROL)	; set VDP address
-	move.w  d6,(VDP_DATA)	; copy the character to VDP
-	; draw the next character
-	add.l	#$00020000,(MEM_DIALOG_VDP)	; move to the next column
-	bra.w	BuildStatusScreenStoreKeysLoopNextChar ; loop until ETX
-BuildStatusScreenStoreKeysLoopDec:
-	dbra	d7,BuildStatusScreenStoreKeysLoop
+;BuildStatusScreenStoreKeys:
+;	moveq	#$000C,d7	; loop counter / key number
+;BuildStatusScreenStoreKeysLoop:
+;	; determine start position for next store name	
+;	clr	d6	; lazy way to prevent various bugs
+;	; next 3 operations are to determine the row for the text 
+;	move.w	#$0080,d6
+;	mulu.w	d7,d6
+;	swap d6
+;	add.l	#STATUS_SCREEN_STOREKEYS_VDP,d6
+;	move.l	d6,(MEM_DIALOG_VDP)
+;	clr	d6	; lazy way to prevent various bugs
+;	move.w	d7,d6	; copy loop counter / key number to d6
+;	mulu.w	#$4,d6	; multiply by 4 to get offset
+;	lea	StoreNameTable,a6	; point a6 to the scene lookup table
+;	adda.l	d6,a6	; move to offset
+;	move.l	(a6),a0	; point a0 to the first character
+;	move.l	(MEM_PLAYER_STORE_KEYS),d5
+;BuildStatusScreenStoreKeysLoopNextChar:
+;	clr	d6	; lazy way to prevent various bugs
+;	move.b	(a0)+,d6	; copy current character to d6
+;	cmpi.b	#ETX,d6	; is this the end of the text?
+;	beq.s	BuildStatusScreenStoreKeysLoopDec
+;	sub.w	#$20,d6	; subtract 32 to get the character index
+;	btst.l	d7,d5	; does the player have this key?
+;	beq.s	.1	; branch if player does not have the key
+;	add.w	#DIALOG_BASE_TILE_LOW+%0010000000000000,d6	; add the base tile
+;	bra.s	.2
+;.1
+;	add.w	#DIALOG_BASE_TILE_LOW+%0100000000000000,d6	; add the base tile
+;.2
+;	move.l	(MEM_DIALOG_VDP),(VDP_CONTROL)	; set VDP address
+;	move.w  d6,(VDP_DATA)	; copy the character to VDP
+;	; draw the next character
+;	add.l	#$00020000,(MEM_DIALOG_VDP)	; move to the next column
+;	bra.w	BuildStatusScreenStoreKeysLoopNextChar ; loop until ETX
+;BuildStatusScreenStoreKeysLoopDec:
+;	dbra	d7,BuildStatusScreenStoreKeysLoop
 BuildStatusScreenInventory:
 	cmpi.w	#$0000,(MEM_PLAYER_ITEM_COUNT)	; is item count 0?
 	ble.w	BuildStatusScreenNoItems	; branch if no items

@@ -1,5 +1,6 @@
 { 
    "basePath":".",
+   "backupPath":"../../Backup/RetailClerk90/2019",
    "memoryMap":{ 
       "sourceFile":"src/MemoryMap.csv",
       "destinationFile":"src/const_MemoryMap.X68",
@@ -13,12 +14,25 @@
    },
    "palettes":{ 
       "paletteMap":{ 
-         "design/img/swatches/people.png":"src/palettes/People.X68"
+         "design/img/swatches/people.png":"src/palettes/People.X68",
+         "design/img/swatches/text00.png":"src/palettes/Text00.X68",
+         "design/img/swatches/text01.png":"src/palettes/Text01.X68",
+         "design/img/swatches/text02.png":"src/palettes/Text02.X68",
+         "design/img/swatches/title00.png":"src/palettes/Title00.X68",
+         "design/img/swatches/title01.png":"src/palettes/Title01.X68",
+         "design/img/swatches/title02.png":"src/palettes/Title02.X68",
+         "design/img/swatches/title03.png":"src/palettes/Title03.X68"
       },
       "includeFilePath":"src/inc_Palettes.X68"
    },
    "tiles":{ 
       "tilesets":[ 
+         { 
+            "name":"Font",
+            "palettePath":"src/palettes/People.X68",
+            "sourceFilePath":"design/img/font-dialog-tiles/font.png",
+            "destinationFilePath":"src/tiles/font-tiles/dwf.X68"
+         },
          { 
             "name":"DialogFrame",
             "palettePath":"src/palettes/People.X68",
@@ -26,10 +40,28 @@
             "destinationFilePath":"src/tiles/font-tiles/dialog-frame.X68"
          },
          { 
-            "name":"Font",
+            "name":"TitleBackground",
+            "palettePath":"src/palettes/Title00.X68",
+            "sourceFilePath":"design/img/scene-tiles/title-background.png",
+            "destinationFilePath":"src/tiles/scene-tiles/title-background.X68"
+         },
+         { 
+            "name":"TitleLogo",
+            "palettePath":"src/palettes/Title01.X68",
+            "sourceFilePath":"design/img/scene-tiles/title-logo.png",
+            "destinationFilePath":"src/tiles/scene-tiles/title-logo.X68"
+         },
+         { 
+            "name":"TitleMenuBG",
+            "palettePath":"src/palettes/Title01.X68",
+            "sourceFilePath":"design/img/scene-tiles/title-menu-bg.png",
+            "destinationFilePath":"src/tiles/scene-tiles/title-menu-bg.X68"
+         },
+         { 
+            "name":"SpriteZero",
             "palettePath":"src/palettes/People.X68",
-            "sourceFilePath":"design/img/font-dialog-tiles/font.png",
-            "destinationFilePath":"src/tiles/font-tiles/dwf.X68"
+            "sourceFilePath":"design/img/sprite-tiles/sprite-zero.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/sprite-zero.X68"
          }
       ],
       "includeFilePath":"src/inc_Tiles.X68"

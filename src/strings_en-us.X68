@@ -54,13 +54,13 @@ TitleScreenTextDebug:
 
 TitleScreenTextFooter:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"  Stable Debug Build (November 2019)  ",ETX
+	dc.b	"       Placeholder Title Screen",ETX
 
 	else
 
 TitleScreenTextFooter:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"     Release Build (November 2019)    ",ETX
+	dc.b	"       Placeholder Title Screen",ETX
 	endif
 
 	if _DEBUG_
@@ -534,10 +534,10 @@ StoreName0C:
 
 LegalScreenLine00:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"           Retail Clerk '89           ",ETX
+	dc.b	"           Retail Clerk '90           ",ETX
 LegalScreenLine01:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"Copyright (c) 2015-2019 Hugues Johnson",ETX
+	dc.b	"Copyright (c) 2019-2020 Hugues Johnson",ETX
 LegalScreenLine02:
 	;		"12345678901234567890123456789012345678"
 	dc.b	"This demo is not licensed by Sega     ",ETX
@@ -558,7 +558,7 @@ LegalScreenLine07:
 	dc.b	"Javier Degirolmo (sikthehedgehog)     ",ETX
 LegalScreenLine08:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"Inspired by '80s malls but all events,",ETX
+	dc.b	"Inspired by '90s malls but all events,",ETX
 LegalScreenLine09:
 	;		"12345678901234567890123456789012345678"
 	dc.b	"characters, and places are fictitious ",ETX

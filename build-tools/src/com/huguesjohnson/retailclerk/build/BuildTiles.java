@@ -88,6 +88,9 @@ public class BuildTiles{
 						}
 						if(!uniqueTiles.contains(tile8x8)){
 							uniqueTiles.add(tile8x8);
+							String indexStr="\t; "+Integer.toHexString(uniqueTiles.size()-1).toUpperCase();
+							tileWriter.write(indexStr);
+							tileWriter.write(newLine);
 							tileWriter.write(tile8x8.toAsmLines());
 							tileWriter.write(newLine);
 						}

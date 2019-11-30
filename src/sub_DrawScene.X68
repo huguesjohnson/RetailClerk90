@@ -54,13 +54,10 @@ LoadSceneLoadTilesLoop:
 ; load the font tiles
 ;-------------------------------------------------------------------------------
 LoadFontTiles:
-;	bsr.w	WaitVBlank	; wait for vblank to end
-;	bsr.w	WaitVBlankEnd	; if currently in VBlank, wait
-;	bsr.w	WaitVBlankStart	; wait to clear screen until VBlank starts
 	move.w	#FONT_VDP,d1	; setup call to BuildVRAMWriteAddress
 	bsr.w	BuildVRAMWriteAddress	; build the VRAM write address
 	move.l	#FontTilesStart,d2	; start address of tileset
-	move.l	#FontTilesEnd,d0	; end address of tileset
+	move.l	#DialogFrameTilesEnd,d0	; end address of tileset
 	sub.l	d2,d0	; subtract the start address to get length
 	divu.w	#$0004,d0	; divide by 4 to setup call to LoadTiles
 	movea.l	d2,a0	; set address of first tile to load
@@ -69,15 +66,16 @@ LoadFontTiles:
 ;-------------------------------------------------------------------------------
 ; load palettes
 ;-------------------------------------------------------------------------------
-	move.w	(a6)+,d0	; number of palettes to load
-	movea.l	(a6)+,a0	; start address of palettes
 	lea	MEM_SCENE_PALETTE,a1	; point a1 to scene palette address
-	mulu.w	#$10,d0	; multiply number of palettes by 16
-	subq.w	#$01,d0	; subtract 1 since the loop counts to 0
-StorePalettesLoop:
+	move.w	#$0003,d1	; 4 palettes per scene = loop 4 times
+LoadPalettesLoop:
+	movea.l	(a6)+,a0	; start address of palette
+	move.w	#$0F,d0	; 16 entries per palette to loop through
+StorePaletteLoop:
 	move.w	(a0)+,(a1)+	; write the palette data
-	dbf	d0,StorePalettesLoop		; decrement value of d0 and loop if not 0
-
+	dbf	d0,StorePaletteLoop		; decrement value of d0 and loop if not 0
+	dbf	d1,LoadPalettesLoop		; decrement value of d1 and loop if not 0
+	
 ;-------------------------------------------------------------------------------
 ; draw the scenery
 ;-------------------------------------------------------------------------------
@@ -99,7 +97,7 @@ LoadSceneDrawSceneryLoop:
 ; draw the text
 ;-------------------------------------------------------------------------------
 LoadSceneDrawText:	
-	move.w	(a6)+,d7	; number of scenery items to draw
+	move.w	(a6)+,d7	; number of text items to draw
 	cmpi.w	#$FFFF,d7	; are there any items to draw?
 	beq.s	ExitDrawScene	; if no items then move to next section
 LoadSceneDrawTextLoop:

@@ -35,8 +35,8 @@ VDP_VRAM_WRITE_WINDOW=$60000002	; register 3
 VDP_VRAM_WRITE_VSCROLL=$40000010	; vscroll write
 ; relative VPD memory locations
 SCENE_VDP=$0000	; write location for scene tiles
-FONT_VDP=$1200	; write location for font tiles
-SPRITE_VDP=$2200	; write location for sprite tiles
+FONT_VDP=$6000	; write location for font tiles
+SPRITE_VDP=FONT_VDP+$0E00
 PLAYER_SPRITE_VDP=SPRITE_VDP+$0020	; write location for player sprite tiles
 PLAYER_SPRITE_VDP_X=$780E0002	; player sprite x vdp
 PLAYER_SPRITE_VDP_Y=$78080002	; player sprite y vdp
@@ -72,7 +72,8 @@ DIRECTION_NULL=%1111	; used for movement patterns
 ;-------------------------------------------------------------------------------
 ; sprite settings
 ;-------------------------------------------------------------------------------
-SPRITE_BASE_PATTERN=$6110	; base pattern of sprites
+SPRITE_BASE_PATTERN=$6000+(SPRITE_VDP/$0020)
+SPRITE_BASE_PATTERN_HIGH=$E000+(SPRITE_VDP/$0020)
 SPRITE_TILESET_SIZE=$60	; the size of the tileset used for sprites
 SPRITE_TILESET_LWORDS=SPRITE_TILESET_SIZE*LWORDS_PER_TILE	; lwords in tileset
 DEFAULT_SPRITE_HEIGHT=$0020	; how many pixels tall a sprite is by default
@@ -111,8 +112,8 @@ CHARACTER_DEFINITION_SIZE=CharacterDefinitionErynEnd-CharacterDefinitionErynStar
 ; dialog settings
 ;-------------------------------------------------------------------------------
 DIALOG_PATTERN_SIZE=$0124	; size of dialog pattern (#tiles*2+4 for loop ctrl)
-DIALOG_BASE_TILE=$8090	; base tile for dialogs
-DIALOG_BASE_TILE_LOW=$0090	; base tile for dialogs (low)
+DIALOG_BASE_TILE_LOW=FONT_VDP/$0020 ;$0090	; base tile for dialogs (low)
+DIALOG_BASE_TILE=DIALOG_BASE_TILE_LOW+$8000 ;$8400	; base tile for dialogs
 DIALOG_ROWCOL=$09100000	; row 18 column 16=(128*18)+16=2320=910
 DIALOG_TEXT_AREA_ROWCOL=$0A900000	; DIALOG_ROWCOL + 3 rows
 DIALOG_TEXT_ROWCOL=$0A920000	; DIALOG_ROWCOL + 3 rows + 1 column

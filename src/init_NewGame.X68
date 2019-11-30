@@ -15,8 +15,6 @@ InitCounters:
 InitGameState:
 	move.l	#$00000000,d0
 	bset.l	#STATE_FLAG_TITLE_SCREEN,d0	; set title screen flag
-	bset.l	#STATE_FLAG_EXITS_BLOCKED,d0	; set exits blocked flag
-	bset.l	#STATE_FLAG_MALL_CLOSED,d0	; set mall closed flag
 	move.l	d0,(MEM_GAME_STATE)	; save game state
 	move.w	#$0000,(MEM_DAY)	; starting day is zero
 	move.w	#OBJECTIVE_D0_O0,(MEM_OBJECTIVE)	; initial objective
@@ -26,7 +24,6 @@ InitGameState:
 	and.l	#$00000000,(MEM_SCENE_BGM)	; clear BGM
 	move.w	#PLAYER_SPRITE_ERYN,(MEM_PLAYER_SPRITE)	; initial sprite
 	bsr.w	ClearPlayerInventory	; clear player inventory
-	and.l	#$00000000,(MEM_PLAYER_STORE_KEYS)	; clear store keys
 	move.w	#$0000,(MEM_CUSTOMER_FEEDBACK_SCORE)	; clear customer feedback
 
 ;-------------------------------------------------------------------------------
@@ -38,20 +35,24 @@ InitGameState:
 ;-------------------------------------------------------------------------------
 ; load the initial scene
 ;-------------------------------------------------------------------------------
-;DisplayLegalScene:
-;	lea	SceneLegal,a6	; address of the scene for the title screen
-;	bsr.w	LoadScene	; branch to LoadScene subroutine
-;	bsr.w	FadeIn	; fade in to the intro scene
-;	move.w	#LEGAL_SCREEN_LOOP,d7	; use d7 for loop control
-;DisplayLegalSceneLoop:
-;	bsr.w	WaitVBlank	; wait for vblank
-;	dbf	d7,DisplayLegalSceneLoop	; loop
+	clr	d6
+DisplayLegalScene:
+	lea	SceneLegal,a6	; address of the scene for the title screen
+	bsr.w	LoadScene	; branch to LoadScene subroutine
+	bsr.w	FadeIn	; fade in to the intro scene
+	move.w	#LEGAL_SCREEN_LOOP,d7	; use d7 for loop control
+DisplayLegalSceneLoop:
+	move.b	(MEM_CONTROL_6_HELD),d6	; copy pressed buttons to d6
+	andi.b	#BUTTON_Z,d6	; test if the Z button is held
+	bne.w	LoadTitleScene	; Z button is held, skip scene
+	bsr.w	WaitVBlank	; wait for vblank
+	dbf	d7,DisplayLegalSceneLoop	; loop
 
-;LoadTitleScene:
-;	lea	SceneTitle,a6	; address of the scene for the title screen
-;	bsr.w	LoadScene	; branch to LoadScene subroutine
-;	bsr.w	FadeIn	; fade in to the intro scene
-;	move.w	#TITLE_SCREEN_COUNTER_START,(MEM_INTRO_SCENE_COUNTER)
+LoadTitleScene:
+	lea	SceneTitle,a6	; address of the scene for the title screen
+	bsr.w	LoadScene	; branch to LoadScene subroutine
+	bsr.w	FadeIn	; fade in to the intro scene
+	move.w	#TITLE_SCREEN_COUNTER_START,(MEM_INTRO_SCENE_COUNTER)
 
 ;-------------------------------------------------------------------------------
 ; load and setup the sprites

@@ -1,3 +1,24 @@
 PalettePeople:
 	include 'palettes/People.X68'
 
+PaletteText00:
+	include 'palettes/Text00.X68'
+
+PaletteText01:
+	include 'palettes/Text01.X68'
+
+PaletteText02:
+	include 'palettes/Text02.X68'
+
+PaletteTitle00:
+	include 'palettes/Title00.X68'
+
+PaletteTitle01:
+	include 'palettes/Title01.X68'
+
+PaletteTitle02:
+	include 'palettes/Title02.X68'
+
+PaletteTitle03:
+	include 'palettes/Title03.X68'
+

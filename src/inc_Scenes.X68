@@ -1,11 +1,10 @@
 	;---------------------------------------------------------------------------
 	; title, end, transition scenes
 	;---------------------------------------------------------------------------
-;	include 'scenes/scene_legal.X68'
-;	include 'scenes/scene_title.X68'
+	include 'scenes/scene_legal.X68'
+	include 'scenes/scene_title.X68'
 ;	include 'scenes/scene_load.X68'
 ;	include 'scenes/scene_day00.X68'
-
 
 	;---------------------------------------------------------------------------
 	; status screen

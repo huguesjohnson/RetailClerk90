@@ -91,10 +91,6 @@ VBlank:
 	bset	#STATE_FLAG_VBLANK,(MEM_GAME_STATE)	; set vblank flag
 	addq	#$1,(MEM_VBLANK_COUNTER)	; increment debug counter 
 	addq	#$1,(MEM_FRAME_COUNTER)		; increment frame counter
-
-	move.w	(MEM_VBLANK_COUNTER),(MEM_DEBUG_1)
-
-	; prevent some freezing bugs	
 	bpl.s	VBlankReadJoypads
 	and.w	#$0000,(MEM_FRAME_COUNTER)
 
@@ -145,6 +141,8 @@ TrapException:
 ; palettes
 ;*******************************************************************************
 	include 'inc_Palettes.X68'
+PaletteBlack:
+	include 'palettes/Black.X68'
 
 ;*******************************************************************************
 ; patterns

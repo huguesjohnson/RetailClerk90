@@ -1,5 +1,2 @@
-*.sh~
-*.java~
-*.X68~
-*.68k~
+*.class
 /build/*.bin

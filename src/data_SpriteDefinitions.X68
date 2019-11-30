@@ -41,9 +41,7 @@ SpriteZeroLowDefinition:
 	;---------------------------------------------------------------------------
 	; index + 4 = priority, palette, flip, pattern
 	;---------------------------------------------------------------------------
-			;pccvhnnnnnnnnnnn
-	dc.w 	%0000000100010000	; pri=1,palette=0,vflip=0,hflip=0,pattern=272
-            ;0110000100010000
+	dc.w 	SPRITE_BASE_PATTERN
 
 	;---------------------------------------------------------------------------
 	; index + 6 = horizontal coordinate
@@ -71,9 +69,7 @@ SpriteZeroDefinition:
 	;---------------------------------------------------------------------------
 	; index + 4 = priority, palette, flip, pattern
 	;---------------------------------------------------------------------------
-			;pccvhnnnnnnnnnnn
-	dc.w 	%1000000100010000	; pri=1,palette=0,vflip=0,hflip=0,pattern=272
-            ;0110000100010000
+	dc.w 	SPRITE_BASE_PATTERN_HIGH
 
 	;---------------------------------------------------------------------------
 	; index + 6 = horizontal coordinate

@@ -30,8 +30,12 @@ MEM_NPC_LOOP_COUNTER,2,used for loop control in main
 ;-------------------------------------------------------------------------------
 ; controller input
 ;-------------------------------------------------------------------------------
-MEM_CONTROL_HELD,2,store value of a held button
-MEM_CONTROL_PRESSED,2,store value of a pressed button
+MEM_CONTROL_1_ID,2,what type of controller is connected
+MEM_CONTROL_1_6BUTTON,2,whether first controller is 6 button
+MEM_CONTROL_HELD,2,store value of regular held buttons
+MEM_CONTROL_PRESSED,2,store value of regular pressed buttons
+MEM_CONTROL_6_HELD,2,store value of extra held buttons
+MEM_CONTROL_6_PRESSED,2,store value of extra pressed buttons
 ;-------------------------------------------------------------------------------
 ; game state
 ;-------------------------------------------------------------------------------
@@ -57,7 +61,6 @@ MEM_CUSTOMER_FEEDBACK_SCORE,2,used for some missions
 ;-------------------------------------------------------------------------------
 MEM_PLAYER_ITEM_COUNT,2,how many items the player is holding
 MEM_PLAYER_ITEMS,8,four items
-MEM_PLAYER_STORE_KEYS,4,track which store keys the player has
 ;-------------------------------------------------------------------------------
 ; sprite management
 ;-------------------------------------------------------------------------------

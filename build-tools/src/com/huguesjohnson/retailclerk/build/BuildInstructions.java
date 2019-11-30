@@ -43,6 +43,11 @@ public class BuildInstructions implements Serializable{
 	public String basePath;
 
 	/* ***********************************************************
+	* Backup path
+	*********************************************************** */
+	public String backupPath;
+
+	/* ***********************************************************
 	* Memory map
 	*********************************************************** */
 	public MemoryMapParameters memoryMap;

@@ -68,13 +68,13 @@ LoadFontTiles:
 ;-------------------------------------------------------------------------------
 	lea	MEM_SCENE_PALETTE,a1	; point a1 to scene palette address
 	move.w	#$0003,d1	; 4 palettes per scene = loop 4 times
-LoadPalettesLoop:
+LoadScenePalettesLoop:
 	movea.l	(a6)+,a0	; start address of palette
 	move.w	#$0F,d0	; 16 entries per palette to loop through
-StorePaletteLoop:
+StoreScenePaletteLoop:
 	move.w	(a0)+,(a1)+	; write the palette data
-	dbf	d0,StorePaletteLoop		; decrement value of d0 and loop if not 0
-	dbf	d1,LoadPalettesLoop		; decrement value of d1 and loop if not 0
+	dbf	d0,StoreScenePaletteLoop ; decrement value of d0 and loop if not 0
+	dbf	d1,LoadScenePalettesLoop ; decrement value of d1 and loop if not 0
 	
 ;-------------------------------------------------------------------------------
 ; draw the scenery

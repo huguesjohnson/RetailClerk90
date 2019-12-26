@@ -160,7 +160,7 @@ STATUS_SCREEN_SAVE0_VDP=VDP_VRAM_WRITE_B+$00220000+$0B000000
 ;-------------------------------------------------------------------------------
 ; load screen settings
 ;-------------------------------------------------------------------------------
-LOAD_SCREEN_SAVE0_VDP=VDP_VRAM_WRITE_B+$07800000+$00140000
+LOAD_SCREEN_SAVE0_VDP=VDP_VRAM_WRITE_B+$04800000+$00140000
 
 ;-------------------------------------------------------------------------------
 ; display settings
@@ -171,8 +171,8 @@ PALETTE_SET_SIZE=$80	; size of 4 palettes
 ;-------------------------------------------------------------------------------
 ; action table settings
 ;-------------------------------------------------------------------------------
-SCENE_COUNT=$18	; total number of scenes
-ACTION_COUNT=$04	; total number of actions
+SCENE_COUNT=$20	; total number of scenes
+ACTION_COUNT=$03	; total number of actions
 ACTION_COUNT_X4=(ACTION_COUNT*4)
 SCENE_COUNT_X_ACTION_COUNT_X4=(SCENE_COUNT*ACTION_COUNT_X4)
 
@@ -180,6 +180,5 @@ SCENE_COUNT_X_ACTION_COUNT_X4=(SCENE_COUNT*ACTION_COUNT_X4)
 ; everything else
 ;-------------------------------------------------------------------------------
 MAX_ITEMS=$04	; maximum number of items the player can carry
-MAX_STORE_ID=$0017	; maximum number of stores
 TITLE_SCREEN_COUNTER_START=$2800	; how long to display title before reset
 NPC_NAME_TABLE_SIZE=NPCNameTableEnd-NPCNameTable

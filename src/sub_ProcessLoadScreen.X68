@@ -56,7 +56,7 @@ ProcessLoadScreenMoveSelector:
 	; move selector sprite based on menu selection
 	move.w	(MEM_MENU_SELECTION),d7	; copy current value to d7
 	mulu.w	#$0008,d7	; rows are 8 apart
-	add.w	#$00F8,d7	; first row is F8
+	add.w	#$00C8,d7	; first row is F8
 	move.l	#VDP_VRAM_WRITE_SPRITE,d6	; add to sprite table address
 	move.l	d6,(VDP_CONTROL)	; set write location in VDP
 	move.w	d7,(VDP_DATA)	; copy the new y-coordinate

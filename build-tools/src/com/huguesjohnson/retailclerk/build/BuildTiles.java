@@ -39,14 +39,26 @@ public class BuildTiles{
 	private final static String newLine=System.lineSeparator();
 
 	public static void build(String basePath,TilesetParameters tiles){
-		FileWriter includeWriter=null;
+		FileWriter tileIncludeWriter=null;
 		FileWriter tileWriter=null;
+		FileWriter patternWriter=null;
+		FileWriter patternIncludeWriter=null;
 		try{
-			//setup include writer
-			String includeFilePath=basePath+tiles.includeFilePath;
-			includeWriter=new FileWriter(includeFilePath);
+			//setup include writers
+			String tileIncludeFilePath=basePath+tiles.tileIncludeFilePath;
+			tileIncludeWriter=new FileWriter(tileIncludeFilePath);
+			String patternIncludeFilePath=basePath+tiles.patternIncludeFilePath;
+			patternIncludeWriter=new FileWriter(patternIncludeFilePath);
 			//loop through all tilesets
 			for(int i=0;i<tiles.tilesets.length;i++){
+				boolean allowDuplicateTiles=false;
+				if((tiles.tilesets[i].allowDuplicateTiles!=null)&&(tiles.tilesets[i].allowDuplicateTiles.equalsIgnoreCase("TRUE"))){
+					allowDuplicateTiles=true;
+				}
+				boolean createPattern=false;
+				if((tiles.tilesets[i].patternFilePath!=null)&&(!tiles.tilesets[i].patternFilePath.isBlank())){
+					createPattern=true;
+				}
 				//read colors from the palette
 				ArrayList<String> colors=new ArrayList<String>();
 				BufferedReader reader=null;
@@ -57,8 +69,14 @@ public class BuildTiles{
 				}
 				reader.close();
 				//setup the tilewriter
-				String outputFilePath=basePath+tiles.tilesets[i].destinationFilePath;
-				tileWriter=new FileWriter(outputFilePath);
+				String tileOutputPath=basePath+tiles.tilesets[i].destinationFilePath;
+				tileWriter=new FileWriter(tileOutputPath);
+				//setup the patternwriter
+				String patternOutputPath=null;
+				if(createPattern){
+					patternOutputPath=basePath+tiles.tilesets[i].patternFilePath;
+					patternWriter=new FileWriter(patternOutputPath);
+				}
 				//read the source file
 				String sourceFilePath=basePath+tiles.tilesets[i].sourceFilePath;
 				File sourceFile=new File(sourceFilePath);
@@ -69,6 +87,14 @@ public class BuildTiles{
 				//get & test image height
 				int height=image.getHeight();
 				if(height%8!=0){throw(new Exception("Image width must be a multiple of 8"));}
+				if(createPattern){
+					int rowCount=height/8;
+					patternWriter.write("\tdc.w\t$"+Integer.toHexString(rowCount-1).toUpperCase()+"\t; "+rowCount+" rows");
+					patternWriter.write(newLine);
+					int colCount=width/8;
+					patternWriter.write("\tdc.w\t$"+Integer.toHexString(colCount-1).toUpperCase()+"\t; "+colCount+" columns");
+					patternWriter.write(newLine);
+				}
 				ArrayList<Tile8x8> uniqueTiles=new ArrayList<Tile8x8>();
 				//loop through all the pixels and filter out duplicate tiles
 				int row=0;
@@ -86,20 +112,31 @@ public class BuildTiles{
 								tile8x8.pixels[y-row][x-col]=index;
 							}
 						}
-						if(!uniqueTiles.contains(tile8x8)){
+						int tileIndex=-1;
+						boolean addTile=allowDuplicateTiles;
+						if(!addTile){
+							tileIndex=uniqueTiles.indexOf(tile8x8);
+							addTile=tileIndex<0;
+						}
+						if(addTile){
 							uniqueTiles.add(tile8x8);
-							String indexStr="\t; "+Integer.toHexString(uniqueTiles.size()-1).toUpperCase();
+							tileIndex=uniqueTiles.size()-1;
+							String indexStr="\t; "+Integer.toHexString(tileIndex).toUpperCase();
 							tileWriter.write(indexStr);
 							tileWriter.write(newLine);
 							tileWriter.write(tile8x8.toAsmLines());
 							tileWriter.write(newLine);
 						}
+						if(createPattern){
+							patternWriter.write("\tdc.w\t"+Integer.toHexString(tileIndex).toUpperCase());
+							patternWriter.write(newLine);
+						}
 						col+=8;
 					}
 					row+=8;
 				}
-				//update the include file
-				String includePathRel=PathResolver.getRelativePath(includeFilePath,outputFilePath);
+				//update the include files
+				String includePathRel=PathResolver.getRelativePath(tileIncludeFilePath,tileOutputPath);
 				if(includePathRel.startsWith("..")){
 					includePathRel=includePathRel.substring(3);
 				}
@@ -115,17 +152,38 @@ public class BuildTiles{
 				includeString.append("TilesEnd:");
 				includeString.append(newLine);
 				includeString.append(newLine);
-				includeWriter.write(includeString.toString());
+				tileIncludeWriter.write(includeString.toString());
 				//close the tile writer
 				tileWriter.flush();
 				tileWriter.close();
+				if(createPattern){
+					includePathRel=PathResolver.getRelativePath(patternIncludeFilePath,patternOutputPath);
+					if(includePathRel.startsWith("..")){
+						includePathRel=includePathRel.substring(3);
+					}
+					includeString=new StringBuffer();
+					includeString.append("Pattern");
+					includeString.append(tiles.tilesets[i].name);
+					includeString.append(":");
+					includeString.append(newLine);
+					includeString.append("\tinclude '");
+					includeString.append(includePathRel);
+					includeString.append("'");
+					includeString.append(newLine);
+					includeString.append(newLine);
+					patternIncludeWriter.write(includeString.toString());
+					//close the pattern writer
+					patternWriter.flush();
+					patternWriter.close();
+				}
 			}
-			
 		}catch(Exception x){
 			x.printStackTrace();
 		}finally{
-			try{if(includeWriter!=null){includeWriter.flush();includeWriter.close();}}catch(Exception x){ }
+			try{if(tileIncludeWriter!=null){tileIncludeWriter.flush();tileIncludeWriter.close();}}catch(Exception x){ }
+			try{if(patternIncludeWriter!=null){patternIncludeWriter.flush();patternIncludeWriter.close();}}catch(Exception x){ }
 			try{if(tileWriter!=null){tileWriter.flush();tileWriter.close();}}catch(Exception x){ }
+			try{if(patternWriter!=null){patternWriter.flush();patternWriter.close();}}catch(Exception x){ }
 		}
 	}
 }

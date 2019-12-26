@@ -1,15 +1,18 @@
 	;---------------------------------------------------------------------------
 	; title, end, transition scenes
 	;---------------------------------------------------------------------------
-	include 'scenes/scene_legal.X68'
-	include 'scenes/scene_title.X68'
-;	include 'scenes/scene_load.X68'
-;	include 'scenes/scene_day00.X68'
+	include 'scenes/Legal.X68'
+	include 'scenes/Title.X68'
+	include 'scenes/Load.X68'
+	if _DEBUG_
+	include 'scenes/DebugMenu.X68'
+	endif
+	include 'scenes/DayIntro00.X68'
 
 	;---------------------------------------------------------------------------
 	; status screen
 	;---------------------------------------------------------------------------
-;	include 'scenes/scene_status.X68'
+	include 'scenes/Status.X68'
 
 	;---------------------------------------------------------------------------
 	; stores

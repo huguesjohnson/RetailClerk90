@@ -18,6 +18,14 @@ TitleMenuBGTilesStart:
 	include 'tiles/scene-tiles/title-menu-bg.X68'
 TitleMenuBGTilesEnd:
 
+TitleBGTilesStart:
+	include 'tiles/scene-tiles/title-bg.X68'
+TitleBGTilesEnd:
+
+TitleMallTilesStart:
+	include 'tiles/scene-tiles/title-mall.X68'
+TitleMallTilesEnd:
+
 SpriteZeroTilesStart:
 	include 'tiles/sprite-tiles/sprite-zero.X68'
 SpriteZeroTilesEnd:

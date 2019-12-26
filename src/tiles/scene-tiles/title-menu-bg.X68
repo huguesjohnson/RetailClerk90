@@ -1,12 +1,12 @@
 	; 0
-	dc.l	$82DDDDDD
-	dc.l	$682DDDDD
-	dc.l	$6682DDDD
-	dc.l	$66682DDD
-	dc.l	$66682DDD
-	dc.l	$6682DDDD
-	dc.l	$682DDDDD
-	dc.l	$82DDDDDD
+	dc.l	$AEDDDDDD
+	dc.l	$FAEDDDDD
+	dc.l	$FFAEDDDD
+	dc.l	$FFFAEDDD
+	dc.l	$FFFAEDDD
+	dc.l	$FFAEDDDD
+	dc.l	$FAEDDDDD
+	dc.l	$AEDDDDDD
 
 	; 1
 	dc.l	$DDDDDDDD

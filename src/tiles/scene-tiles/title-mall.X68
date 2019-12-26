@@ -1,0 +1,190 @@
+	; 0
+	dc.l	$77777777
+	dc.l	$88888888
+	dc.l	$99999999
+	dc.l	$77777777
+	dc.l	$88888888
+	dc.l	$99999999
+	dc.l	$77777777
+	dc.l	$99999999
+
+	; 1
+	dc.l	$EEEEEEEE
+	dc.l	$EDDDDDDD
+	dc.l	$EDCDFFFF
+	dc.l	$EDDDFFFF
+	dc.l	$EDFFFFFF
+	dc.l	$EDFFFFFF
+	dc.l	$EDFFFFFF
+	dc.l	$EDFFFFFF
+
+	; 2
+	dc.l	$EEEEEEEE
+	dc.l	$DDDDDDDE
+	dc.l	$FFFFDCDE
+	dc.l	$FFFFDDDE
+	dc.l	$FFFFFFDE
+	dc.l	$FFFFFFDE
+	dc.l	$FFFFFFDE
+	dc.l	$FFFFFFDE
+
+	; 3
+	dc.l	$EDFFFFFF
+	dc.l	$EDFFFFFF
+	dc.l	$EDFFFFFF
+	dc.l	$EDFFFFFF
+	dc.l	$EDDDFFFF
+	dc.l	$EDCDFFFF
+	dc.l	$EDDDDDDD
+	dc.l	$EEEEEEEE
+
+	; 4
+	dc.l	$FFFFFFDE
+	dc.l	$FFFFFFDE
+	dc.l	$FFFFFFDE
+	dc.l	$FFFFFFDE
+	dc.l	$FFFFDDDE
+	dc.l	$FFFFDCDE
+	dc.l	$DDDDDDDE
+	dc.l	$EEEEEEEE
+
+	; 5
+	dc.l	$66666666
+	dc.l	$62222222
+	dc.l	$66666666
+	dc.l	$311111CC
+	dc.l	$366111C3
+	dc.l	$36661113
+	dc.l	$36111133
+	dc.l	$4611111C
+
+	; 6
+	dc.l	$66666666
+	dc.l	$22222222
+	dc.l	$66666666
+	dc.l	$33333333
+	dc.l	$33333333
+	dc.l	$33333333
+	dc.l	$333333C3
+	dc.l	$333333C3
+
+	; 7
+	dc.l	$66666666
+	dc.l	$22222222
+	dc.l	$66666666
+	dc.l	$33ECCC3C
+	dc.l	$33ECC6C3
+	dc.l	$333333C6
+	dc.l	$33333333
+	dc.l	$33333333
+
+	; 8
+	dc.l	$66661177
+	dc.l	$22222138
+	dc.l	$66662139
+	dc.l	$3C362137
+	dc.l	$33362138
+	dc.l	$33362139
+	dc.l	$CC362137
+	dc.l	$33362138
+
+	; 9
+	dc.l	$49E11111
+	dc.l	$31631113
+	dc.l	$31113131
+	dc.l	$31363113
+	dc.l	$41113313
+	dc.l	$43333311
+	dc.l	$63333333
+	dc.l	$43333333
+
+	; A
+	dc.l	$33333333
+	dc.l	$33333363
+	dc.l	$33333363
+	dc.l	$6333C366
+	dc.l	$11663366
+	dc.l	$11333333
+	dc.l	$33333333
+	dc.l	$33333333
+
+	; B
+	dc.l	$33333C33
+	dc.l	$33333333
+	dc.l	$333C3333
+	dc.l	$33333333
+	dc.l	$33333333
+	dc.l	$33333313
+	dc.l	$33333333
+	dc.l	$33333333
+
+	; C
+	dc.l	$33362137
+	dc.l	$3C362138
+	dc.l	$33362139
+	dc.l	$3C362137
+	dc.l	$C6362138
+	dc.l	$33362139
+	dc.l	$33362137
+	dc.l	$33362139
+
+	; D
+	dc.l	$77111111
+	dc.l	$88771111
+	dc.l	$99887711
+	dc.l	$77998877
+	dc.l	$88779988
+	dc.l	$99887799
+	dc.l	$77998877
+	dc.l	$99779988
+
+	; E
+	dc.l	$77997799
+	dc.l	$88779977
+	dc.l	$99887799
+	dc.l	$77998877
+	dc.l	$88779988
+	dc.l	$99887799
+	dc.l	$77998877
+	dc.l	$99779988
+
+	; F
+	dc.l	$77997799
+	dc.l	$88779977
+	dc.l	$99887799
+	dc.l	$77998877
+	dc.l	$88779988
+	dc.l	$99887799
+	dc.l	$77998877
+	dc.l	$99779988
+
+	; 10
+	dc.l	$77997799
+	dc.l	$88779977
+	dc.l	$99887799
+	dc.l	$77998877
+	dc.l	$88779988
+	dc.l	$99887799
+	dc.l	$77998877
+	dc.l	$99779988
+
+	; 11
+	dc.l	$77997799
+	dc.l	$88779977
+	dc.l	$99887799
+	dc.l	$77998877
+	dc.l	$88779988
+	dc.l	$99887799
+	dc.l	$77998877
+	dc.l	$99779988
+
+	; 12
+	dc.l	$77997799
+	dc.l	$88779977
+	dc.l	$99887799
+	dc.l	$77998877
+	dc.l	$88779988
+	dc.l	$99887799
+	dc.l	$77998877
+	dc.l	$99779988
+

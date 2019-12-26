@@ -1,0 +1,2 @@
+ProcessDebugScreen:
+	rts

@@ -29,5 +29,6 @@ public class TilesetParameters implements Serializable{
 	private static final long serialVersionUID=666L;
 
 	public TilesetDefinition[] tilesets;
-	public String includeFilePath;
+	public String tileIncludeFilePath;
+	public String patternIncludeFilePath;
 }

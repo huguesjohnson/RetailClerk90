@@ -32,4 +32,6 @@ public class TilesetDefinition implements Serializable{
 	public String palettePath;
 	public String sourceFilePath;
 	public String destinationFilePath;
+	public String allowDuplicateTiles;
+	public String patternFilePath;
 }

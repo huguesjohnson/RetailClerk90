@@ -33,6 +33,7 @@ SCENE_ID_BASEMENTWDORM=$001C
 SCENE_ID_BASEMENTMDORM=$001D
 SCENE_ID_BASEMENTCAFE=$001E
 SCENE_ID_BASEMENTOFFICE=$001F
+MAX_STORE_ID=SCENE_ID_BASEMENTOFFICE
 
 ;-------------------------------------------------------------------------------
 ; scenes used in cut-scenes

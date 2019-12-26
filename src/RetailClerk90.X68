@@ -62,11 +62,7 @@ Main:
 
 	include	'init_NewGame.X68'
 
-;	include	'sub_MainGameLoop.X68'
-
-MainGameLoop:
-	bsr.w	WaitVBlank ; wait for vblank to complete
-	bra.w	MainGameLoop
+	include	'sub_MainGameLoop.X68'
 
 ;-------------------------------------------------------------------------------
 ; WaitVBlank
@@ -140,7 +136,13 @@ TrapException:
 ;*******************************************************************************
 ; palettes
 ;*******************************************************************************
+	;-------------------------------------	
+	; auto-generated include file
+	;-------------------------------------	
 	include 'inc_Palettes.X68'
+	;-------------------------------------	
+	; used in text-only scenes
+	;-------------------------------------	
 PaletteBlack:
 	include 'palettes/Black.X68'
 
@@ -209,17 +211,22 @@ PaletteBlack:
 ;*******************************************************************************
 ; background music
 ;*******************************************************************************
-;BGM_Title:
-;	incbin	'music/bgm_title.esf'
+BGM_Title:
+	incbin	'music/track0.esf'
 
-;BGM_End:
-;	incbin	'music/bgm_end.esf'
+BGM_DayIntro:
+	incbin	'music/track1.esf'
 
-;BGM_Store0:
-;	incbin	'music/bgm_store00_four-track.esf'
+BGM_Mall:
+	incbin	'music/track2.esf'
 
-;BGM_Day00:
-;	incbin	'music/bgm_day00.esf'
+BGM_End_Bad:
+	incbin	'music/track3.esf'
+
+BGM_End_Good:
+	incbin	'music/track4.esf'
+
+
 
 	align 2
 

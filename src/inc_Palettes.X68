@@ -22,3 +22,9 @@ PaletteTitle02:
 PaletteTitle03:
 	include 'palettes/Title03.X68'
 
+PaletteDayIntro01:
+	include 'palettes/DayIntro01.X68'
+
+PaletteDayIntro02:
+	include 'palettes/DayIntro02.X68'
+

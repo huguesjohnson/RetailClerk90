@@ -12,60 +12,18 @@ ProcessAction:
 	jsr	(a6)	; jump to location of code to process this event
 	bra.w	ExitProcessAction	; exit
 	; --------------------------------------------------------------------------
-	; action is something other than exiting the current scene
+	; ACTION_RESPOND is the only other option at this point
 	; --------------------------------------------------------------------------
 ProcessActionResetDialog:
 	bsr.w	ResetDialog	; reset the dialog
 	; if the target is an NPC - the resulting dialog should be titled
 	move.w	(MEM_ACTION_TARGET_OBJID),d7	; copy action target to d7
 	andi.w	#OBJ_NPC_BASE,d7	; and against base npc ID
-	beq.s	ProcessActionTestDefaultActions	; target is not an NPC
-	cmpi.w	#ACTION_LOOK,(MEM_ACTION_ID)	; test if this is a look action
-	beq.s	ProcessActionTestDefaultActions	; look action, no title
+	beq.s	ProcessActionBuildActionTableOffset	; target is not an NPC
+	; set the dialog titled flag
 	move.l	(MEM_DIALOG_FLAGS),d7	; copy dialog flags to d7
 	bset.l	#DIALOG_FLAG_STYLE_TITLED,d7	; set the titled flag
 	move.l	d7,(MEM_DIALOG_FLAGS)	; save updated event flags for the day	
-ProcessActionTestDefaultActions:
-	; --------------------------------------------------------------------------
-	; test if a default handler should be used
-	; --------------------------------------------------------------------------
-	cmpi.w	#ACTION_TAKE_GIVE,(MEM_ACTION_ID)	; test if this is a give action
-	bne.s	ProcessActionBuildActionTableOffset	; not give action, branch
-	move.w	(MEM_ACTION_TARGET_OBJID),d7	; copy action target to d7
-	andi.w	#OBJ_NPC_BASE,d7	; and against base npc ID
-	beq.s	ProcessActionTakeTestScenery	; target is not an NPC
-	; --------------------------------------------------------------------------
-	; default handler for giving an item to an NPC
-	; --------------------------------------------------------------------------
-	cmpi.w	#$0000,(MEM_ACTIVE_ITEM)	; test if there is an active item
-	bne.s	ProcessActionBuildActionTableOffset	; responding to a give menu
-	bsr.w	DefaultActionGive	; otherwise launch default action
-	bra.s	ExitProcessAction	; exit
-ProcessActionTakeTestScenery:	; test if target is scenery
-	move.w	(MEM_ACTION_TARGET_OBJID),d7	; copy action target to d7
-	andi.w	#OBJ_SCENE_BASE,d7	; and against base npc ID
-	beq.s	ProcessActionBuildActionTableOffset	; target is not scenery
-	; --------------------------------------------------------------------------
-	; trying to take an item from a scene, test if inventory is full
-	; --------------------------------------------------------------------------
-	cmpi.w	#$0000,(MEM_ACTIVE_ITEM)	; test if there is an active item
-	beq.s	ProcessActionDefaultTakeMenu	; 0 = opening a take menu
-	; ******************************
-	; PROBABLY GETTING RID OF THIS
-	; ******************************
-;	bsr.w	DefaultTakeAddItem	; add the item to the player's inventory
-	bra.s	ExitProcessAction	; exit
-ProcessActionDefaultTakeMenu:	; default take menu
-	; --------------------------------------------------------------------------
-	; trying to take an item from a scene, test if inventory is full
-	; --------------------------------------------------------------------------
-	cmpi.w	#MAX_ITEMS,(MEM_PLAYER_ITEM_COUNT)	; carrying max items?
-	bne.s	ProcessActionBuildActionTableOffset	; branch if < max
-	; ******************************
-	; PROBABLY GETTING RID OF THIS
-	; ******************************
-;	bsr.w	DefaultActionInventoryFull	; launch default action
-	bra.s	ExitProcessAction	; exit
 ProcessActionBuildActionTableOffset:
 	bsr.w	BuildActionTableOffset	; build action table offset
 	lea	ActionTable,a5	; point to action table

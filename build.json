@@ -21,7 +21,9 @@
          "design/img/swatches/title00.png":"src/palettes/Title00.X68",
          "design/img/swatches/title01.png":"src/palettes/Title01.X68",
          "design/img/swatches/title02.png":"src/palettes/Title02.X68",
-         "design/img/swatches/title03.png":"src/palettes/Title03.X68"
+         "design/img/swatches/title03.png":"src/palettes/Title03.X68",
+         "design/img/swatches/dayintro01.png":"src/palettes/DayIntro01.X68",
+         "design/img/swatches/dayintro02.png":"src/palettes/DayIntro02.X68"
       },
       "includeFilePath":"src/inc_Palettes.X68"
    },
@@ -31,7 +33,8 @@
             "name":"Font",
             "palettePath":"src/palettes/People.X68",
             "sourceFilePath":"design/img/font-dialog-tiles/font.png",
-            "destinationFilePath":"src/tiles/font-tiles/dwf.X68"
+            "destinationFilePath":"src/tiles/font-tiles/dwf.X68",
+			"allowDuplicateTiles":"true"
          },
          { 
             "name":"DialogFrame",
@@ -47,15 +50,30 @@
          },
          { 
             "name":"TitleLogo",
-            "palettePath":"src/palettes/Title01.X68",
+            "palettePath":"src/palettes/Title03.X68",
             "sourceFilePath":"design/img/scene-tiles/title-logo.png",
-            "destinationFilePath":"src/tiles/scene-tiles/title-logo.X68"
+            "destinationFilePath":"src/tiles/scene-tiles/title-logo.X68",
+			"allowDuplicateTiles":"true"
          },
          { 
             "name":"TitleMenuBG",
-            "palettePath":"src/palettes/Title01.X68",
+            "palettePath":"src/palettes/Title03.X68",
             "sourceFilePath":"design/img/scene-tiles/title-menu-bg.png",
-            "destinationFilePath":"src/tiles/scene-tiles/title-menu-bg.X68"
+            "destinationFilePath":"src/tiles/scene-tiles/title-menu-bg.X68",
+            "patternFilePath":"src/patterns/title-menu-bg.X68"
+         },
+         { 
+            "name":"TitleBG",
+            "palettePath":"src/palettes/Title00.X68",
+            "sourceFilePath":"design/img/scene-tiles/title-bg.png",
+            "destinationFilePath":"src/tiles/scene-tiles/title-bg.X68"
+         },
+         { 
+            "name":"TitleMall",
+            "palettePath":"src/palettes/Title01.X68",
+            "sourceFilePath":"design/img/scene-tiles/title-mall.png",
+            "destinationFilePath":"src/tiles/scene-tiles/title-mall.X68",
+			"allowDuplicateTiles":"true"
          },
          { 
             "name":"SpriteZero",
@@ -64,7 +82,8 @@
             "destinationFilePath":"src/tiles/sprite-tiles/sprite-zero.X68"
          }
       ],
-      "includeFilePath":"src/inc_Tiles.X68"
+      "tileIncludeFilePath":"src/inc_Tiles.X68",
+      "patternIncludeFilePath":"src/inc_PatternsGenerated.X68"
    },
    "sprites":{ 
       "sprites":[ 

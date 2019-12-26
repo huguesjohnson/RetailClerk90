@@ -21,7 +21,7 @@ MainGameLoop:
 TestPauseToggle:
 	move.l	(MEM_GAME_STATE),d7	; copy current game state to d7
 	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
-	andi.b	#BUTTON_START_PRESSED,d6	; test if the start button was pressed
+	andi.b	#BUTTON_START,d6	; test if the start button was pressed
 	beq.s	TestPause	; start button is not pressed test if still paused
 	; clear MEM_CONTROL_PRESSED to prevent pause state from flipping in loop
 	move.w	#$0000,(MEM_CONTROL_PRESSED)
@@ -125,7 +125,7 @@ TestExploring:
 	beq.w	TestTitleScreen	; not exploring, branch to next test
 TestCButtonPressed:	; test if the player pressed the C button
 	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
-	andi.b	#BUTTON_C_PRESSED,d6	; test if the C button was pressed
+	andi.b	#BUTTON_C,d6	; test if the C button was pressed
 	beq.w	TestAButtonPressed	; C button is not pressed
 	lea	SceneStatus,a6	; address of the scene for the status screen
 	bsr.w	DrawScene	; branch to subroutine to draw the scene
@@ -137,7 +137,7 @@ TestCButtonPressed:	; test if the player pressed the C button
 	bra.w	MainGameLoop	; go back the start of the game loop
 TestAButtonPressed: ; test if the player pressed the A button
 	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
-	andi.b	#BUTTON_A_PRESSED,d6	; test if the A button was pressed
+	andi.b	#BUTTON_A,d6	; test if the A button was pressed
 	beq.w	MainGameLoopUpdateSprites	; A button is not pressed
 	;---------------------------------------------------------------------------
 	; build event table address and branch to code
@@ -223,23 +223,23 @@ TestTitleScreen:
 	beq.w	TestEndScreen	; not on the title screen, move to next test
 TestTitleScreenTestStartPressed:
 	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
-	andi.b	#BUTTON_START_PRESSED,d6	; test if the start button was pressed
+	andi.b	#BUTTON_START,d6	; test if the start button was pressed
 	;---------------------------------------------------------------------------
 	; handle selector movement
 	;---------------------------------------------------------------------------
 	bne.w	TestTitleLoadSelectedScreen	; start button pressed, load next screen
 TestTitleScreenTestDPadPressed:
 	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
-	andi.b	#BUTTON_UP_PRESSED,d6	; test if the up button was pressed
+	andi.b	#BUTTON_UP,d6	; test if the up button was pressed
 	bne.s	TestTitleScreenDecrementSelector	; dpad pressed, branch
 	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
-	andi.b	#BUTTON_DOWN_PRESSED,d6	; test if the down button was pressed
+	andi.b	#BUTTON_DOWN,d6	; test if the down button was pressed
 	bne.s	TestTitleScreenIncrementSelector	; dpad pressed, branch
 	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
-	andi.b	#BUTTON_LEFT_PRESSED,d6	; test if the left button was pressed
+	andi.b	#BUTTON_LEFT,d6	; test if the left button was pressed
 	bne.s	TestTitleScreenDecrementSelector	; dpad pressed, branch
 	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
-	andi.b	#BUTTON_RIGHT_PRESSED,d6	; test if the right button was pressed
+	andi.b	#BUTTON_RIGHT,d6	; test if the right button was pressed
 	bne.s	TestTitleScreenIncrementSelector	; dpad pressed, branch
 	bra.s	TestTitleScreenTestStartPressedLoop	; dpad not pressed
 	if _DEBUG_
@@ -341,7 +341,7 @@ TestEndScreen:
 	beq.w	TestIntroScreen	; not on the end screen, move to next test
 TestEndScreenTestStartPressed:
 	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
-	andi.b	#BUTTON_START_PRESSED,d6	; test if the start button was pressed
+	andi.b	#BUTTON_START,d6	; test if the start button was pressed
 	beq.w	MainGameLoop	; start button not pressed, loop
 	; --------------------------------------------------------------------------
 	; start button was pressed on the end screen - loop back to the beginning
@@ -363,7 +363,7 @@ TestIntroScreen:
 TestIntroScreenWaitButtonPress:
 	; counter is zero, test if button was pressed
 	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
-	andi.b	#BUTTON_START_PRESSED,d6	; test if the start button was pressed
+	andi.b	#BUTTON_START,d6	; test if the start button was pressed
 	beq.w	MainGameLoop	; loop until start is pressed
 TestIntroScreenLoadScene:
 	; load the next scene

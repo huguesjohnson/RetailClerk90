@@ -7,6 +7,8 @@
 
 	include	'sub_ClearVRAM.X68'
 
+	include	'sub_LoadPalettes.X68'
+
 	include 'sub_SaveLoad.X68'
 
 	include	'sub_ProcessLoadScreen.X68'

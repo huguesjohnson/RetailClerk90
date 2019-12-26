@@ -42,15 +42,15 @@ CHAR_DQUOTE=$22	; ACSII code for double quote character
 ; title screen
 ;-------------------------------------------------------------------------------
 TitleScreenTextNewGame:
-	dc.b	"New Game",ETX
+	dc.b	"{New Game",ETX
 
 TitleScreenTextLoadGame:
-	dc.b	"Load Game",ETX
+	dc.b	"{Load Game",ETX
 
 	if _DEBUG_
 
 TitleScreenTextDebug:
-	dc.b	"Debug",ETX
+	dc.b	"{Debug",ETX
 
 TitleScreenTextFooter:
 	;		"12345678901234567890123456789012345678"
@@ -67,10 +67,117 @@ TitleScreenTextFooter:
 
 	; 28 lines available on the debug screen (28-1 = 1B)
 
-;	DebugScreenLine00:
-;	;		"12345678901234567890123456789012345678"
-;	dc.b	"Debug starting scene                  ",ETX
+	DebugScreenLine00:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"Debug menu",ETX
 
+	DebugScreenLine01:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine02:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine03:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine04:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine05:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine06:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine07:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine08:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine09:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine0A:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine0B:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine0C:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine0D:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine0E:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine0F:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine10:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine11:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine12:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine13:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine14:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine15:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine16:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine17:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine18:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine19:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine1A:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
+
+	DebugScreenLine1B:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"{(not implemented)  {(not implemented)",ETX
 
 	endif
 
@@ -419,9 +526,38 @@ ItemNameNothing:
 ;-------------------------------------------------------------------------------
 ; day intros
 ;-------------------------------------------------------------------------------
-;Day00IntroText:
-;	;		"1234567890123456789012345678901234567890"
-;	dc.b	"           November 19, 1989            ",ETX
+Day00IntroText:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"           November 18, 1990            ",ETX
+
+Day00IntroTip0:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"D-Pad: Move Player,change menu selection",ETX
+
+Day00IntroTip1:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"A button: Interact with people & objects",ETX
+
+Day00IntroTip2:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"C button: Open the status screen",ETX
+
+Day00IntroTip3:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"A or C button: Confirm menu selection",ETX
+
+Day00IntroTip4:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"B button: Cancel menu, exit status",ETX
+
+Day00IntroTip5:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"Z button: Hold for fast-forward",ETX
+
+Day00IntroTip6:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"Start: Pause, exit this screen",ETX
+
 
 ;-------------------------------------------------------------------------------
 ; status screen

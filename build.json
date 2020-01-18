@@ -96,6 +96,21 @@
             "name":"Carl",
             "sourceFilePath":"design/img/sprite-tiles/pc-carl.png",
             "destinationFilePath":"src/tiles/sprite-tiles/pc-carl.X68"
+         },
+         { 
+            "name":"Frank",
+            "sourceFilePath":"design/img/sprite-tiles/npc-frank.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-frank.X68"
+         },
+         { 
+            "name":"Carol",
+            "sourceFilePath":"design/img/sprite-tiles/npc-carol.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-carol.X68"
+         },
+         { 
+            "name":"Lisa",
+            "sourceFilePath":"design/img/sprite-tiles/npc-lisa.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-lisa.X68"
          }
       ],
       "palettePath":"src/palettes/People.X68",

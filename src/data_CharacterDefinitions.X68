@@ -10,4 +10,19 @@ CharacterDefinitionCarlStart:
 	dc.l	CarlSpriteTilesStart
 CharacterDefinitionCarlEnd:
 
+; 2003 - Frank
+CharacterDefinitionFrankStart:
+	dc.l	FrankSpriteTilesStart
+CharacterDefinitionFrankEnd:
+
+; 2004 - Carol
+CharacterDefinitionCarolStart:
+	dc.l	CarolSpriteTilesStart
+CharacterDefinitionCarolEnd:
+
+; 2005 - Lisa
+CharacterDefinitionLisaStart:
+	dc.l	LisaSpriteTilesStart
+CharacterDefinitionLisaEnd:
+
 CharacterDefinitionEnd:

@@ -1,0 +1,912 @@
+
+Carol_Frame0Start:
+
+	dc.l	$00000111
+	dc.l	$00001AAA
+	dc.l	$0001AAAA
+	dc.l	$001AAA33
+	dc.l	$001AA3D3
+	dc.l	$001AC373
+	dc.l	$001A3333
+	dc.l	$001A3333
+
+	dc.l	$001A3333
+	dc.l	$0001DD33
+	dc.l	$001CCCD3
+	dc.l	$01CCCCCD
+	dc.l	$01CC1CCC
+	dc.l	$01CC1CCD
+	dc.l	$01CC1CCC
+	dc.l	$01CC1CCD
+
+	dc.l	$01DD1CCC
+	dc.l	$01DD1CCD
+	dc.l	$01331CCC
+	dc.l	$00111111
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$00011DD1
+	dc.l	$00111CC1
+	dc.l	$00111111
+	dc.l	$00011111
+
+	dc.l	$11000000
+	dc.l	$AA100000
+	dc.l	$AAA10000
+	dc.l	$3AAA1000
+	dc.l	$D3AA1000
+	dc.l	$73CA1000
+	dc.l	$333A1000
+	dc.l	$333A1000
+
+	dc.l	$333A1000
+	dc.l	$3DD10000
+	dc.l	$DCCC1000
+	dc.l	$CCCCC100
+	dc.l	$CC1CC100
+	dc.l	$CC1CC100
+	dc.l	$CC1CC100
+	dc.l	$CC1CC100
+
+	dc.l	$CC1DD100
+	dc.l	$CC1DD100
+	dc.l	$CC133100
+	dc.l	$11111000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$DD110000
+	dc.l	$CC111000
+	dc.l	$11111000
+	dc.l	$11110000
+
+Carol_Frame0End:
+
+Carol_Frame1Start:
+
+	dc.l	$00000000
+	dc.l	$00000111
+	dc.l	$00001AAA
+	dc.l	$0001AAAA
+	dc.l	$001AAA33
+	dc.l	$001AA3D3
+	dc.l	$001AC373
+	dc.l	$001A3333
+
+	dc.l	$001A3333
+	dc.l	$001A3333
+	dc.l	$0001DD33
+	dc.l	$001CCCD3
+	dc.l	$001CCCCD
+	dc.l	$001CCCCC
+	dc.l	$001C1CCD
+	dc.l	$001C1CCC
+
+	dc.l	$001D1CCD
+	dc.l	$001D1CCC
+	dc.l	$00011CCD
+	dc.l	$00001CCC
+	dc.l	$00001111
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$00001CC1
+	dc.l	$00011DD1
+	dc.l	$00111CC1
+	dc.l	$00111111
+	dc.l	$00011111
+
+	dc.l	$00000000
+	dc.l	$11000000
+	dc.l	$AA100000
+	dc.l	$AAA10000
+	dc.l	$3AAA1000
+	dc.l	$D3AA1000
+	dc.l	$73CA1000
+	dc.l	$333A1000
+
+	dc.l	$333A1000
+	dc.l	$333A1000
+	dc.l	$3DD10000
+	dc.l	$DCCC1000
+	dc.l	$CCCCC100
+	dc.l	$CCCCC100
+	dc.l	$CC1CC100
+	dc.l	$CC11CC10
+
+	dc.l	$CC11DD10
+	dc.l	$CC11DD10
+	dc.l	$CC113310
+	dc.l	$CC101100
+	dc.l	$11100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC110000
+	dc.l	$CC111000
+	dc.l	$DD111000
+	dc.l	$11110000
+	dc.l	$11000000
+	dc.l	$00000000
+
+Carol_Frame1End:
+
+Carol_Frame2Start:
+
+	dc.l	$00000000
+	dc.l	$00000011
+	dc.l	$000001AA
+	dc.l	$00001AAA
+	dc.l	$0001AAA3
+	dc.l	$0001AA3D
+	dc.l	$0001AC37
+	dc.l	$0001A333
+
+	dc.l	$0001A333
+	dc.l	$0001A333
+	dc.l	$00001DD3
+	dc.l	$0001CCCD
+	dc.l	$001CCCCC
+	dc.l	$001CCCCC
+	dc.l	$001CC1CC
+	dc.l	$01CC11CC
+
+	dc.l	$01DD11CC
+	dc.l	$01DD1CCC
+	dc.l	$01331CCD
+	dc.l	$00111CCC
+	dc.l	$00001111
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$00011CC1
+	dc.l	$00111DD1
+	dc.l	$00111111
+	dc.l	$00011111
+	dc.l	$00000111
+	dc.l	$00000001
+
+	dc.l	$00000000
+	dc.l	$11100000
+	dc.l	$AAA10000
+	dc.l	$AAAA1000
+	dc.l	$33AAA100
+	dc.l	$3D3AA100
+	dc.l	$373CA100
+	dc.l	$3333A100
+
+	dc.l	$3333A100
+	dc.l	$3333A100
+	dc.l	$33DD1000
+	dc.l	$3DCCC100
+	dc.l	$DCCCC100
+	dc.l	$CCCCC100
+	dc.l	$DCC1C100
+	dc.l	$CCC1C100
+
+	dc.l	$DCC1D100
+	dc.l	$CC1D1000
+	dc.l	$CC110000
+	dc.l	$CC100000
+	dc.l	$11100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$DD110000
+	dc.l	$CC111000
+	dc.l	$11111000
+	dc.l	$11110000
+
+Carol_Frame2End:
+
+Carol_Frame3Start:
+
+	dc.l	$00000111
+	dc.l	$00001AAA
+	dc.l	$0001AAAA
+	dc.l	$001AAAAA
+	dc.l	$001AAAAA
+	dc.l	$001AAAAA
+	dc.l	$001AAAAA
+	dc.l	$001AAAAA
+
+	dc.l	$001AAAAA
+	dc.l	$0001AAAA
+	dc.l	$001CDAAA
+	dc.l	$01CCCDDD
+	dc.l	$01CC1CCC
+	dc.l	$01CC1CCC
+	dc.l	$01CC1CCC
+	dc.l	$01CC1CCC
+
+	dc.l	$01DD1CCC
+	dc.l	$01DD1CCC
+	dc.l	$01331CCC
+	dc.l	$00111111
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$00011DD1
+	dc.l	$00111CC1
+	dc.l	$00111111
+	dc.l	$00011111
+
+	dc.l	$11000000
+	dc.l	$AA100000
+	dc.l	$AAA10000
+	dc.l	$AAAA1000
+	dc.l	$AAAA1000
+	dc.l	$AAAA1000
+	dc.l	$AAAA1000
+	dc.l	$AAAA1000
+
+	dc.l	$AAAA1000
+	dc.l	$AAA10000
+	dc.l	$AADC1000
+	dc.l	$DDCCC100
+	dc.l	$CC1CC100
+	dc.l	$CC1CC100
+	dc.l	$CC1CC100
+	dc.l	$CC1CC100
+
+	dc.l	$CC1DD100
+	dc.l	$CC1DD100
+	dc.l	$CC133100
+	dc.l	$11111000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$DD110000
+	dc.l	$CC111000
+	dc.l	$11111000
+	dc.l	$11110000
+
+Carol_Frame3End:
+
+Carol_Frame4Start:
+
+	dc.l	$00000000
+	dc.l	$00000111
+	dc.l	$00001AAA
+	dc.l	$0001AAAA
+	dc.l	$001AAAAA
+	dc.l	$001AAAAA
+	dc.l	$001AAAAA
+	dc.l	$001AAAAA
+
+	dc.l	$001AAAAA
+	dc.l	$001AAAAA
+	dc.l	$0001AAAA
+	dc.l	$001CDAAA
+	dc.l	$01CCCDDD
+	dc.l	$01CC1CCC
+	dc.l	$01CC1CCC
+	dc.l	$01CC1CCC
+
+	dc.l	$01CC1CCC
+	dc.l	$001D1CCC
+	dc.l	$00011CCC
+	dc.l	$00001CCC
+	dc.l	$00001111
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$00001DD1
+	dc.l	$00011111
+	dc.l	$00111CC1
+	dc.l	$00111111
+	dc.l	$00011111
+
+	dc.l	$00000000
+	dc.l	$11000000
+	dc.l	$AA100000
+	dc.l	$AAA10000
+	dc.l	$AAAA1000
+	dc.l	$AAAA1000
+	dc.l	$AAAA1000
+	dc.l	$AAAA1000
+
+	dc.l	$AAAA1000
+	dc.l	$AAAA1000
+	dc.l	$AAA10000
+	dc.l	$AADC1000
+	dc.l	$DDCCC100
+	dc.l	$CC1CC100
+	dc.l	$CC1CC100
+	dc.l	$CC1CCC10
+
+	dc.l	$CC11CC10
+	dc.l	$CC11DD10
+	dc.l	$CC11DD10
+	dc.l	$CC111100
+	dc.l	$11100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC110000
+	dc.l	$DD111000
+	dc.l	$11111000
+	dc.l	$11110000
+	dc.l	$11000000
+	dc.l	$00000000
+
+Carol_Frame4End:
+
+Carol_Frame5Start:
+
+	dc.l	$00000000
+	dc.l	$00000111
+	dc.l	$00001AAA
+	dc.l	$0001AAAA
+	dc.l	$001AAAAA
+	dc.l	$001AAAAA
+	dc.l	$001AAAAA
+	dc.l	$001AAAAA
+
+	dc.l	$001AAAAA
+	dc.l	$001AAAAA
+	dc.l	$0001AAAA
+	dc.l	$001CDAAA
+	dc.l	$01CCCDDD
+	dc.l	$01CC1CCC
+	dc.l	$01C11CCC
+	dc.l	$1CC11CCC
+
+	dc.l	$1CC11CCC
+	dc.l	$1DD11CCC
+	dc.l	$1DD11CCC
+	dc.l	$01111CCC
+	dc.l	$00001111
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$00011DD1
+	dc.l	$00111111
+	dc.l	$00111111
+	dc.l	$00011111
+	dc.l	$00000111
+
+	dc.l	$00000000
+	dc.l	$11000000
+	dc.l	$AA100000
+	dc.l	$AAA10000
+	dc.l	$AAAA1000
+	dc.l	$AAAA1000
+	dc.l	$AAAA1000
+	dc.l	$AAAA1000
+
+	dc.l	$AAAA1000
+	dc.l	$AAAA1000
+	dc.l	$AAA10000
+	dc.l	$AADC1000
+	dc.l	$DDCCC100
+	dc.l	$CC1CC100
+	dc.l	$CC1CC100
+	dc.l	$CC1CC100
+
+	dc.l	$CC1CC100
+	dc.l	$CC1D1000
+	dc.l	$CC110000
+	dc.l	$CC100000
+	dc.l	$11100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$DD100000
+	dc.l	$11110000
+	dc.l	$CC111000
+	dc.l	$11111000
+	dc.l	$11110000
+
+Carol_Frame5End:
+
+Carol_Frame6Start:
+
+	dc.l	$00000011
+	dc.l	$000001AA
+	dc.l	$00001AAA
+	dc.l	$00001AAA
+	dc.l	$0000133A
+	dc.l	$000013D3
+	dc.l	$00001373
+	dc.l	$00001333
+
+	dc.l	$00000133
+	dc.l	$00000013
+	dc.l	$00000011
+	dc.l	$000001CC
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$000001CC
+
+	dc.l	$000001CC
+	dc.l	$000001CC
+	dc.l	$00000111
+	dc.l	$000001CC
+	dc.l	$000001CC
+	dc.l	$000001CC
+	dc.l	$000001CC
+	dc.l	$000001CC
+
+	dc.l	$000001CC
+	dc.l	$000001CC
+	dc.l	$000001CC
+	dc.l	$000001CC
+	dc.l	$0000011D
+	dc.l	$000011CC
+	dc.l	$00001111
+	dc.l	$00000111
+
+	dc.l	$11100000
+	dc.l	$AAA10000
+	dc.l	$AAAA1000
+	dc.l	$AAAA1000
+	dc.l	$AAAA1000
+	dc.l	$DAAA1000
+	dc.l	$3CAA1000
+	dc.l	$33AA1000
+
+	dc.l	$33AA1000
+	dc.l	$1DDA1000
+	dc.l	$DCC10000
+	dc.l	$CCC10000
+	dc.l	$1CC10000
+	dc.l	$1CC10000
+	dc.l	$1CC10000
+	dc.l	$1CC10000
+
+	dc.l	$1DD10000
+	dc.l	$1DD10000
+	dc.l	$13310000
+	dc.l	$C1100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$DD110000
+	dc.l	$CC111000
+	dc.l	$11111000
+	dc.l	$11110000
+
+Carol_Frame6End:
+
+Carol_Frame7Start:
+
+	dc.l	$00000000
+	dc.l	$00000011
+	dc.l	$000001AA
+	dc.l	$00001AAA
+	dc.l	$00001AAA
+	dc.l	$0000133A
+	dc.l	$000013D3
+	dc.l	$00001373
+
+	dc.l	$00001333
+	dc.l	$00000133
+	dc.l	$00000013
+	dc.l	$00000011
+	dc.l	$000001CC
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$000001C1
+
+	dc.l	$0000011D
+	dc.l	$000013DD
+	dc.l	$000013D1
+	dc.l	$0000011C
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$0001CCCC
+
+	dc.l	$0001CCCC
+	dc.l	$0001CCCC
+	dc.l	$0001CCCC
+	dc.l	$0011CCCC
+	dc.l	$01111DDD
+	dc.l	$0111CCCC
+	dc.l	$00111111
+	dc.l	$00011111
+
+	dc.l	$00000000
+	dc.l	$11100000
+	dc.l	$AAA10000
+	dc.l	$AAAA1000
+	dc.l	$AAAA1000
+	dc.l	$AAAA1000
+	dc.l	$DAAA1000
+	dc.l	$3CAA1000
+
+	dc.l	$33AA1000
+	dc.l	$33AA1000
+	dc.l	$1DDA1000
+	dc.l	$DCC10000
+	dc.l	$CCC11000
+	dc.l	$CCC1C100
+	dc.l	$1CC1C100
+	dc.l	$CCC1C100
+
+	dc.l	$CC11C100
+	dc.l	$C111D100
+	dc.l	$11111000
+	dc.l	$CC100000
+	dc.l	$CCC10000
+	dc.l	$CCC10000
+	dc.l	$CCCC1000
+	dc.l	$CCCC1000
+
+	dc.l	$CCCC1000
+	dc.l	$CCCCC100
+	dc.l	$CCCCC100
+	dc.l	$CCCCC110
+	dc.l	$11DDD110
+	dc.l	$1CCCC110
+	dc.l	$11111100
+	dc.l	$11111000
+
+Carol_Frame7End:
+
+Carol_Frame8Start:
+
+	dc.l	$00000000
+	dc.l	$00000011
+	dc.l	$000001AA
+	dc.l	$00001AAA
+	dc.l	$00001AAA
+	dc.l	$0000133A
+	dc.l	$000013D3
+	dc.l	$00001373
+
+	dc.l	$00001333
+	dc.l	$00000133
+	dc.l	$00000013
+	dc.l	$00000011
+	dc.l	$000001CC
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$000001CC
+
+	dc.l	$000011CC
+	dc.l	$000131CC
+	dc.l	$000131CC
+	dc.l	$00001111
+	dc.l	$000001CC
+	dc.l	$00001CCC
+	dc.l	$0001CCCC
+	dc.l	$0001CCCC
+
+	dc.l	$0001CCCC
+	dc.l	$001CCCCC
+	dc.l	$001CCCCC
+	dc.l	$001CCCCC
+	dc.l	$0011DDD1
+	dc.l	$011CCCC1
+	dc.l	$01111111
+	dc.l	$00111111
+
+	dc.l	$00000000
+	dc.l	$11100000
+	dc.l	$AAA10000
+	dc.l	$AAAA1000
+	dc.l	$AAAA1000
+	dc.l	$AAAA1000
+	dc.l	$DAAA1000
+	dc.l	$3CAA1000
+
+	dc.l	$33AA1000
+	dc.l	$33AA1000
+	dc.l	$1DDA1000
+	dc.l	$DCC10000
+	dc.l	$CCC10000
+	dc.l	$CCCC1000
+	dc.l	$C1CCC100
+	dc.l	$CC1CC100
+
+	dc.l	$CC1CC100
+	dc.l	$CC1DD100
+	dc.l	$CC1DD100
+	dc.l	$11111000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+
+	dc.l	$CCC10000
+	dc.l	$CCC10000
+	dc.l	$CCCC1000
+	dc.l	$CCCC1000
+	dc.l	$1DDD1100
+	dc.l	$CCCC1100
+	dc.l	$11111100
+	dc.l	$11111000
+
+Carol_Frame8End:
+
+Carol_Frame9Start:
+
+	dc.l	$00000111
+	dc.l	$00001AAA
+	dc.l	$0001AAAA
+	dc.l	$0001AAAA
+	dc.l	$0001AAAA
+	dc.l	$0001AAAD
+	dc.l	$0001AAC3
+	dc.l	$0001AA33
+
+	dc.l	$0001AA33
+	dc.l	$0001ADD1
+	dc.l	$00001CCD
+	dc.l	$00001CCC
+	dc.l	$00001CC1
+	dc.l	$00001CC1
+	dc.l	$00001CC1
+	dc.l	$00001CC1
+
+	dc.l	$00001DD1
+	dc.l	$00001DD1
+	dc.l	$00001331
+	dc.l	$0000011C
+	dc.l	$000001CC
+	dc.l	$000001CC
+	dc.l	$000001CC
+	dc.l	$000001CC
+
+	dc.l	$000001CC
+	dc.l	$000001CC
+	dc.l	$000001CC
+	dc.l	$000001CC
+	dc.l	$000011DD
+	dc.l	$000111CC
+	dc.l	$00011111
+	dc.l	$00001111
+
+	dc.l	$11000000
+	dc.l	$AA100000
+	dc.l	$AAA10000
+	dc.l	$AAA10000
+	dc.l	$A3310000
+	dc.l	$3D310000
+	dc.l	$37310000
+	dc.l	$33310000
+
+	dc.l	$33100000
+	dc.l	$31000000
+	dc.l	$11000000
+	dc.l	$CC100000
+	dc.l	$CCC10000
+	dc.l	$CCC10000
+	dc.l	$CCC10000
+	dc.l	$CC100000
+
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$11100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$D1100000
+	dc.l	$CC110000
+	dc.l	$11110000
+	dc.l	$11100000
+
+Carol_Frame9End:
+
+Carol_Frame10Start:
+
+	dc.l	$00000000
+	dc.l	$00000111
+	dc.l	$00001AAA
+	dc.l	$0001AAAA
+	dc.l	$0001AAAA
+	dc.l	$0001AAAA
+	dc.l	$0001AAAD
+	dc.l	$0001AAC3
+
+	dc.l	$0001AA33
+	dc.l	$0001AA33
+	dc.l	$0001ADD1
+	dc.l	$00001CCD
+	dc.l	$00011CCC
+	dc.l	$001C1CCC
+	dc.l	$001C1CC1
+	dc.l	$001C1CCC
+
+	dc.l	$001C11CC
+	dc.l	$001D111C
+	dc.l	$00011111
+	dc.l	$000001CC
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$0001CCCC
+	dc.l	$0001CCCC
+
+	dc.l	$0001CCCC
+	dc.l	$001CCCCC
+	dc.l	$001CCCCC
+	dc.l	$011CCCCC
+	dc.l	$011DDD11
+	dc.l	$011CCCC1
+	dc.l	$00111111
+	dc.l	$00011111
+
+	dc.l	$00000000
+	dc.l	$11000000
+	dc.l	$AA100000
+	dc.l	$AAA10000
+	dc.l	$AAA10000
+	dc.l	$A3310000
+	dc.l	$3D310000
+	dc.l	$37310000
+
+	dc.l	$33310000
+	dc.l	$33100000
+	dc.l	$31000000
+	dc.l	$11000000
+	dc.l	$CC100000
+	dc.l	$CCC10000
+	dc.l	$CCC10000
+	dc.l	$1C100000
+
+	dc.l	$D1100000
+	dc.l	$DD310000
+	dc.l	$1D310000
+	dc.l	$C1100000
+	dc.l	$CCC10000
+	dc.l	$CCC10000
+	dc.l	$CCC10000
+	dc.l	$CCCC1000
+
+	dc.l	$CCCC1000
+	dc.l	$CCCC1000
+	dc.l	$CCCC1000
+	dc.l	$CCCC1100
+	dc.l	$DDD11110
+	dc.l	$CCCC1110
+	dc.l	$11111100
+	dc.l	$11111000
+
+Carol_Frame10End:
+
+Carol_Frame11Start:
+
+	dc.l	$00000000
+	dc.l	$00000111
+	dc.l	$00001AAA
+	dc.l	$0001AAAA
+	dc.l	$0001AAAA
+	dc.l	$0001AAAA
+	dc.l	$0001AAAD
+	dc.l	$0001AAC3
+
+	dc.l	$0001AA33
+	dc.l	$0001AA33
+	dc.l	$0001ADD1
+	dc.l	$00001CCD
+	dc.l	$00001CCC
+	dc.l	$0001CCCC
+	dc.l	$001CCC1C
+	dc.l	$001CC1CC
+
+	dc.l	$001CC1CC
+	dc.l	$001DD1CC
+	dc.l	$001DD1CC
+	dc.l	$00011111
+	dc.l	$000001CC
+	dc.l	$000001CC
+	dc.l	$000001CC
+	dc.l	$000001CC
+
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$0001CCCC
+	dc.l	$0001CCCC
+	dc.l	$0011DDD1
+	dc.l	$0011CCCC
+	dc.l	$00111111
+	dc.l	$00011111
+
+	dc.l	$00000000
+	dc.l	$11000000
+	dc.l	$AA100000
+	dc.l	$AAA10000
+	dc.l	$AAA10000
+	dc.l	$A3310000
+	dc.l	$3D310000
+	dc.l	$37310000
+
+	dc.l	$33310000
+	dc.l	$33100000
+	dc.l	$31000000
+	dc.l	$11000000
+	dc.l	$CC100000
+	dc.l	$CCC10000
+	dc.l	$CCC10000
+	dc.l	$CC100000
+
+	dc.l	$CC110000
+	dc.l	$CC131000
+	dc.l	$CC131000
+	dc.l	$11110000
+	dc.l	$CC100000
+	dc.l	$CCC10000
+	dc.l	$CCCC1000
+	dc.l	$CCCC1000
+
+	dc.l	$CCCC1000
+	dc.l	$CCCCC100
+	dc.l	$CCCCC100
+	dc.l	$CCCCC100
+	dc.l	$1DDD1100
+	dc.l	$1CCCC110
+	dc.l	$11111110
+	dc.l	$11111100
+
+Carol_Frame11End:

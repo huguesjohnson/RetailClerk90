@@ -128,7 +128,7 @@ public class BuildTiles{
 							tileWriter.write(newLine);
 						}
 						if(createPattern){
-							patternWriter.write("\tdc.w\t"+Integer.toHexString(tileIndex).toUpperCase());
+							patternWriter.write("\tdc.w\t$"+Integer.toHexString(tileIndex).toUpperCase());
 							patternWriter.write(newLine);
 						}
 						col+=8;

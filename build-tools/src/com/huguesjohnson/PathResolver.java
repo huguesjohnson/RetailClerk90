@@ -2,7 +2,7 @@
 PathResolver.java - Utility class to resolve full and absolute paths.
 I wrote this on a whim in 2004, there's probably something built into JDK to do the same now.
 
-Copyright (c) 2004-2019 Hugues Johnson
+Copyright (c) 2004-2020 Hugues Johnson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files(the "Software"), to deal in 
@@ -75,8 +75,6 @@ public abstract class PathResolver{
 						relativePath.append(File.separator);
 						relativePath.append(token2);
 						parentCount++;
-					} else{
-
 					}
 				}
 				// one or both are now out of tokens

@@ -90,13 +90,13 @@
 
 	; 9
 	dc.l	$DDDDDDDD
-	dc.l	$DDDDD8DD
-	dc.l	$DDDDDD8D
-	dc.l	$DDDDDDD8
-	dc.l	$DDDDDDD8
-	dc.l	$DDDDDDD8
-	dc.l	$DDDDDD8D
-	dc.l	$DDDDD8DD
+	dc.l	$DD8DDDDD
+	dc.l	$DDD8DDDD
+	dc.l	$DDDD8DDD
+	dc.l	$DDDD8DDD
+	dc.l	$DDDD8DDD
+	dc.l	$DDD8DDDD
+	dc.l	$DD8DDDDD
 
 	; A
 	dc.l	$DDDDDDDD

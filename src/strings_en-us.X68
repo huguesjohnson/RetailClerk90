@@ -250,27 +250,28 @@ CreditsScreen00Line09:
 
 CreditsScreen00Line0A:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"Dialog & menu font based on",ETX
+	dc.b	"Copyright (c) 2016 Missy Meyer",ETX
 
 CreditsScreen00Line0B:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"Deathwake font by Zee-3",ETX
+	dc.b	"Some scenery is based on tilesets",ETX
 
 CreditsScreen00Line0C:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"Santa sign is based on Tragic Marker",ETX
+	dc.b	"created by Sithjester",ETX
 
 CreditsScreen00Line0D:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"Copyright (c) 2016 Missy Meyer",ETX
+	dc.b	"untamed.wild-refuge.net/rpgxp.php",ETX
 
 CreditsScreen00Line0E:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"Some scenery is based on tilesets",ETX
+	dc.b	" ",ETX
 
 CreditsScreen00Line0F:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"created by Sithjester",ETX
+	dc.b	" ",ETX
+
 
 CreditsScreen00Line10:
 	;		"12345678901234567890123456789012345678"
@@ -322,15 +323,15 @@ CreditsScreen00Line1B:
 
 LegalScreenLine00BadEnding:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"    Retail Clerk '89 - Bad Ending     ",ETX
+	dc.b	"    Retail Clerk '90 - Bad Ending     ",ETX
 
 LegalScreenLine00GoodEnding:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"    Retail Clerk '89 - Good Ending    ",ETX
+	dc.b	"    Retail Clerk '90 - Good Ending    ",ETX
 
 LegalScreenLine00PerfectEnding:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"  Retail Clerk '89 - Perfect Ending   ",ETX
+	dc.b	"  Retail Clerk '90 - Perfect Ending   ",ETX
 
 ;-------------------------------------------------------------------------------
 ; general messages

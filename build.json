@@ -1,6 +1,6 @@
 { 
    "basePath":".",
-   "backupPath":"../../Backup/RetailClerk90/2019",
+   "backupPath":"../../Backup/RetailClerk90/2020",
    "memoryMap":{ 
       "sourceFile":"src/MemoryMap.csv",
       "destinationFile":"src/const_MemoryMap.X68",
@@ -80,6 +80,126 @@
             "palettePath":"src/palettes/People.X68",
             "sourceFilePath":"design/img/sprite-tiles/sprite-zero.png",
             "destinationFilePath":"src/tiles/sprite-tiles/sprite-zero.X68"
+         },
+         { 
+            "name":"FrameRect",
+            "palettePath":"src/palettes/FrameRect.X68",
+            "sourceFilePath":"design/img/scene-tiles/frame-rect.png",
+            "destinationFilePath":"src/tiles/scene-tiles/frame-rect.X68"
+         },
+         { 
+            "name":"FrameRound",
+            "palettePath":"src/palettes/FrameRound.X68",
+            "sourceFilePath":"design/img/scene-tiles/frame-round.png",
+            "destinationFilePath":"src/tiles/scene-tiles/frame-round.X68"
+         },
+         { 
+            "name":"FrameWood",
+            "palettePath":"src/palettes/FrameWood.X68",
+            "sourceFilePath":"design/img/scene-tiles/frame-wood.png",
+            "destinationFilePath":"src/tiles/scene-tiles/frame-wood.X68"
+         },
+         { 
+            "name":"FloorCarpet",
+            "palettePath":"src/palettes/FloorCarpet.X68",
+            "sourceFilePath":"design/img/scene-tiles/floor-carpet.png",
+            "destinationFilePath":"src/tiles/scene-tiles/floor-carpet.X68"
+         },
+         { 
+            "name":"FloorCarpet70s",
+            "palettePath":"src/palettes/FloorCarpet70s.X68",
+            "sourceFilePath":"design/img/scene-tiles/floor-carpet-70s.png",
+            "destinationFilePath":"src/tiles/scene-tiles/floor-carpet-70s.X68"
+         },
+         { 
+            "name":"FloorCarpetBlacklight",
+            "palettePath":"src/palettes/FloorCarpetBlacklight.X68",
+            "sourceFilePath":"design/img/scene-tiles/floor-carpet-blacklight.png",
+            "destinationFilePath":"src/tiles/scene-tiles/floor-carpet-blacklight.X68"
+         },
+         { 
+            "name":"FloorPavement",
+            "palettePath":"src/palettes/FloorPavement.X68",
+            "sourceFilePath":"design/img/scene-tiles/floor-pavement.png",
+            "destinationFilePath":"src/tiles/scene-tiles/floor-pavement.X68"
+         },
+         { 
+            "name":"FloorSnow",
+            "palettePath":"src/palettes/FloorSnow.X68",
+            "sourceFilePath":"design/img/scene-tiles/floor-snow.png",
+            "destinationFilePath":"src/tiles/scene-tiles/floor-snow.X68"
+         },
+         { 
+            "name":"FloorStone",
+            "palettePath":"src/palettes/FloorStone.X68",
+            "sourceFilePath":"design/img/scene-tiles/floor-stone.png",
+            "destinationFilePath":"src/tiles/scene-tiles/floor-stone.X68"
+         },
+         { 
+            "name":"FloorTile2Color",
+            "palettePath":"src/palettes/FloorTile2Color.X68",
+            "sourceFilePath":"design/img/scene-tiles/floor-tile-2color.png",
+            "destinationFilePath":"src/tiles/scene-tiles/floor-tile-2color.X68"
+         },
+         { 
+            "name":"FloorTile4Color",
+            "palettePath":"src/palettes/FloorTile4Color.X68",
+            "sourceFilePath":"design/img/scene-tiles/floor-tile-4color.png",
+            "destinationFilePath":"src/tiles/scene-tiles/floor-tile-4color.X68"
+         },
+         { 
+            "name":"FloorTileBasic",
+            "palettePath":"src/palettes/FloorTileBasic.X68",
+            "sourceFilePath":"design/img/scene-tiles/floor-tile-basic.png",
+            "destinationFilePath":"src/tiles/scene-tiles/floor-tile-basic.X68"
+         },
+         { 
+            "name":"FloorTileDiamond",
+            "palettePath":"src/palettes/FloorTileDiamond.X68",
+            "sourceFilePath":"design/img/scene-tiles/floor-tile-diamond.png",
+            "destinationFilePath":"src/tiles/scene-tiles/floor-tile-diamond.X68"
+         },
+         { 
+            "name":"FloorTileDiamondAccent",
+            "palettePath":"src/palettes/FloorTileDiamondAccent.X68",
+            "sourceFilePath":"design/img/scene-tiles/floor-tile-diamond-accent.png",
+            "destinationFilePath":"src/tiles/scene-tiles/floor-tile-diamond-accent.X68"
+         },
+         { 
+            "name":"FloorTileDiamondBroken",
+            "palettePath":"src/palettes/FloorTileDiamondBroken.X68",
+            "sourceFilePath":"design/img/scene-tiles/floor-tile-diamond-broken.png",
+            "destinationFilePath":"src/tiles/scene-tiles/floor-tile-diamond-broken.X68"
+         },
+         { 
+            "name":"FloorTileSquare",
+            "palettePath":"src/palettes/FloorTileSquare.X68",
+            "sourceFilePath":"design/img/scene-tiles/floor-tile-square.png",
+            "destinationFilePath":"src/tiles/scene-tiles/floor-tile-square.X68"
+         },
+         { 
+            "name":"FloorTileSquareBroken",
+            "palettePath":"src/palettes/FloorTileSquareBroken.X68",
+            "sourceFilePath":"design/img/scene-tiles/floor-tile-square-broken.png",
+            "destinationFilePath":"src/tiles/scene-tiles/floor-tile-square-broken.X68"
+         },
+         { 
+            "name":"FloorWoodDiag",
+            "palettePath":"src/palettes/FloorWoodDiag.X68",
+            "sourceFilePath":"design/img/scene-tiles/floor-wood-d.png",
+            "destinationFilePath":"src/tiles/scene-tiles/floor-wood-d.X68"
+         },
+         { 
+            "name":"FloorWoodHor",
+            "palettePath":"src/palettes/FloorWoodHor.X68",
+            "sourceFilePath":"design/img/scene-tiles/floor-wood-h.png",
+            "destinationFilePath":"src/tiles/scene-tiles/floor-wood-h.X68"
+         },
+         { 
+            "name":"FloorWoodVert",
+            "palettePath":"src/palettes/FloorWoodVert.X68",
+            "sourceFilePath":"design/img/scene-tiles/floor-wood-v.png",
+            "destinationFilePath":"src/tiles/scene-tiles/floor-wood-v.X68"
          }
       ],
       "tileIncludeFilePath":"src/inc_Tiles.X68",

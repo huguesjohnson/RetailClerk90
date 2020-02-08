@@ -148,7 +148,8 @@ class TestBuildStuff extends TestCase{
 		* Tile parameters
 		*********************************************************** */
 		instructions.tiles=new TilesetParameters();
-		instructions.tiles.includeFilePath="src/inc_SpriteTiles.X68";
+		instructions.tiles.tileIncludeFilePath="src/inc_SpriteTiles.X68";
+		instructions.tiles.patternIncludeFilePath="src/inc_PatternsGenerated.X68";
 		instructions.tiles.tilesets=new TilesetDefinition[2];
 		instructions.tiles.tilesets[0]=new TilesetDefinition();
 		instructions.tiles.tilesets[0].name="DialogFrame";

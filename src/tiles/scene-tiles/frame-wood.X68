@@ -1,0 +1,140 @@
+	; 0
+	dc.l	$0B8888B8
+	dc.l	$80BBBBB8
+	dc.l	$880BBBBB
+	dc.l	$8B80BBB8
+	dc.l	$8BB80B8B
+	dc.l	$88BB80B8
+	dc.l	$8BBBB80B
+	dc.l	$88B8BB80
+
+	; 1
+	dc.l	$88888888
+	dc.l	$B8B8B8B8
+	dc.l	$8B8B8B8B
+	dc.l	$B8B8B8B8
+	dc.l	$8B8B8B8B
+	dc.l	$B88888B8
+	dc.l	$8B8B8BBB
+	dc.l	$88888888
+
+	; 2
+	dc.l	$8B8B8B80
+	dc.l	$888BBB08
+	dc.l	$BB8BB088
+	dc.l	$8BBB08B8
+	dc.l	$B8B08BB8
+	dc.l	$8B08BB88
+	dc.l	$B08BBBB8
+	dc.l	$08BB8B88
+
+	; 3
+	dc.l	$88B888B8
+	dc.l	$8BBB8B8B
+	dc.l	$88B8B8B8
+	dc.l	$8BB88B8B
+	dc.l	$88B8B8B8
+	dc.l	$8BB8888B
+	dc.l	$88B8B8B8
+	dc.l	$8BB88888
+
+	; 4
+	dc.l	$88B8B8B8
+	dc.l	$8BBB8B8B
+	dc.l	$88B888B8
+	dc.l	$8BBB8B8B
+	dc.l	$88B8B8B8
+	dc.l	$8BB88B8B
+	dc.l	$88B8B8B8
+	dc.l	$8BB8888B
+
+	; 5
+	dc.l	$8BB8B880
+	dc.l	$8B8B8808
+	dc.l	$8BB88088
+	dc.l	$8B88088B
+	dc.l	$8B8088B8
+	dc.l	$88088B8B
+	dc.l	$8088B8B8
+	dc.l	$08888888
+
+	; 6
+	dc.l	$088B8BB8
+	dc.l	$8088B8B8
+	dc.l	$88088BB8
+	dc.l	$B88088B8
+	dc.l	$8B8808B8
+	dc.l	$B8B88088
+	dc.l	$8B8B8808
+	dc.l	$88888880
+
+	; 7
+	dc.l	$8BB88888
+	dc.l	$88B8B8B8
+	dc.l	$8BB88888
+	dc.l	$88B8B8B8
+	dc.l	$8B888B88
+	dc.l	$88B8B888
+	dc.l	$88888B88
+	dc.l	$88B8B8B8
+
+	; 8
+	dc.l	$88888888
+	dc.l	$8888888B
+	dc.l	$88B8B8B8
+	dc.l	$8BBBBBBB
+	dc.l	$88B8B8B8
+	dc.l	$8BBB8888
+	dc.l	$88B8B8B8
+	dc.l	$88888888
+
+	; 9
+	dc.l	$88888888
+	dc.l	$B8888888
+	dc.l	$8B8B8B88
+	dc.l	$BBBBBBB8
+	dc.l	$8B8B8B88
+	dc.l	$8888BBB8
+	dc.l	$8B8B8B88
+	dc.l	$88888888
+
+	; A
+	dc.l	$8B88888B
+	dc.l	$8B888888
+	dc.l	$8B888888
+	dc.l	$8B888888
+	dc.l	$8B888888
+	dc.l	$8B888888
+	dc.l	$8B88888B
+	dc.l	$8B8888B8
+
+	; B
+	dc.l	$BBBBBBBB
+	dc.l	$88888888
+	dc.l	$88888888
+	dc.l	$88888888
+	dc.l	$88888888
+	dc.l	$88888888
+	dc.l	$88888888
+	dc.l	$88888888
+
+	; C
+	dc.l	$B88888B8
+	dc.l	$888888B8
+	dc.l	$888888B8
+	dc.l	$888888B8
+	dc.l	$888888B8
+	dc.l	$888888B8
+	dc.l	$B88888B8
+	dc.l	$8B8888B8
+
+	; D
+	dc.l	$8B8888B8
+	dc.l	$8B8888B8
+	dc.l	$8B8888B8
+	dc.l	$8B8888B8
+	dc.l	$8B8888B8
+	dc.l	$8B8888B8
+	dc.l	$8B8888B8
+	dc.l	$8B8888B8
+

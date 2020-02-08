@@ -20,3 +20,7 @@
 	; status screen
 	;-------------------------------------
 	include 'patterns/StatusScreen.X68'
+	;-------------------------------------
+	; store frames
+	;-------------------------------------
+	include 'patterns/StoreFrames.X68'

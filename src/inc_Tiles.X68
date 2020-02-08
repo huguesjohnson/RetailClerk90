@@ -30,3 +30,83 @@ SpriteZeroTilesStart:
 	include 'tiles/sprite-tiles/sprite-zero.X68'
 SpriteZeroTilesEnd:
 
+FrameRectTilesStart:
+	include 'tiles/scene-tiles/frame-rect.X68'
+FrameRectTilesEnd:
+
+FrameRoundTilesStart:
+	include 'tiles/scene-tiles/frame-round.X68'
+FrameRoundTilesEnd:
+
+FrameWoodTilesStart:
+	include 'tiles/scene-tiles/frame-wood.X68'
+FrameWoodTilesEnd:
+
+FloorCarpetTilesStart:
+	include 'tiles/scene-tiles/floor-carpet.X68'
+FloorCarpetTilesEnd:
+
+FloorCarpet70sTilesStart:
+	include 'tiles/scene-tiles/floor-carpet-70s.X68'
+FloorCarpet70sTilesEnd:
+
+FloorCarpetBlacklightTilesStart:
+	include 'tiles/scene-tiles/floor-carpet-blacklight.X68'
+FloorCarpetBlacklightTilesEnd:
+
+FloorPavementTilesStart:
+	include 'tiles/scene-tiles/floor-pavement.X68'
+FloorPavementTilesEnd:
+
+FloorSnowTilesStart:
+	include 'tiles/scene-tiles/floor-snow.X68'
+FloorSnowTilesEnd:
+
+FloorStoneTilesStart:
+	include 'tiles/scene-tiles/floor-stone.X68'
+FloorStoneTilesEnd:
+
+FloorTile2ColorTilesStart:
+	include 'tiles/scene-tiles/floor-tile-2color.X68'
+FloorTile2ColorTilesEnd:
+
+FloorTile4ColorTilesStart:
+	include 'tiles/scene-tiles/floor-tile-4color.X68'
+FloorTile4ColorTilesEnd:
+
+FloorTileBasicTilesStart:
+	include 'tiles/scene-tiles/floor-tile-basic.X68'
+FloorTileBasicTilesEnd:
+
+FloorTileDiamondTilesStart:
+	include 'tiles/scene-tiles/floor-tile-diamond.X68'
+FloorTileDiamondTilesEnd:
+
+FloorTileDiamondAccentTilesStart:
+	include 'tiles/scene-tiles/floor-tile-diamond-accent.X68'
+FloorTileDiamondAccentTilesEnd:
+
+FloorTileDiamondBrokenTilesStart:
+	include 'tiles/scene-tiles/floor-tile-diamond-broken.X68'
+FloorTileDiamondBrokenTilesEnd:
+
+FloorTileSquareTilesStart:
+	include 'tiles/scene-tiles/floor-tile-square.X68'
+FloorTileSquareTilesEnd:
+
+FloorTileSquareBrokenTilesStart:
+	include 'tiles/scene-tiles/floor-tile-square-broken.X68'
+FloorTileSquareBrokenTilesEnd:
+
+FloorWoodDiagTilesStart:
+	include 'tiles/scene-tiles/floor-wood-d.X68'
+FloorWoodDiagTilesEnd:
+
+FloorWoodHorTilesStart:
+	include 'tiles/scene-tiles/floor-wood-h.X68'
+FloorWoodHorTilesEnd:
+
+FloorWoodVertTilesStart:
+	include 'tiles/scene-tiles/floor-wood-v.X68'
+FloorWoodVertTilesEnd:
+

@@ -9,7 +9,9 @@ The rough list of planed enhancements from Retail Clerk '89 -> '90 includes:
 
 * Auto-generate anything that can reasonably be auto-generated
 * Adding fast travel on the map
-* Simplify interactions with items and NPCs - this will make the game less-annoying and also allow for 2-button systems to be supported later
+* Generally overhauling the status menu and map
+* Simplify interactions with items and NPCs - this will make the game less-annoying and also allow for 2-button systems to be supported later (yes this is a hint about future systems I might possibly try to port this to)
+* A very basic "free time" system that also serves as an even more basic bonding-like system
 * Make scene change events part of action table (this probably sounds like gibberish to anyone that's not me)
 
 **Links**

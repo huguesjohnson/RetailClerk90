@@ -22,9 +22,21 @@ PaletteTitle02:
 PaletteTitle03:
 	include 'palettes/Title03.X68'
 
+PaletteDayIntro00:
+	include 'palettes/DayIntro00.X68'
+
 PaletteDayIntro01:
 	include 'palettes/DayIntro01.X68'
 
 PaletteDayIntro02:
 	include 'palettes/DayIntro02.X68'
+
+PaletteDenimCountry00:
+	include 'palettes/DenimCountry00.X68'
+
+PaletteDenimCountry01:
+	include 'palettes/DenimCountry01.X68'
+
+PaletteDenimCountry02:
+	include 'palettes/DenimCountry02.X68'
 

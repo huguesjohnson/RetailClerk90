@@ -378,47 +378,6 @@ TestIntroScreenLoadScene:
 	move.l	(a5),a6	; a5 has the address of the scene to load
 	bsr.w	LoadScene	; branch to LoadScene subroutine
 	bsr.w	LoadPlayerSprite	; load the player sprite
-	cmpi.w	#$0003,(MEM_DAY)	; is this day 03?
-	beq.s	TestIntroScreenDay03Setup	; if day 03, go to day 03 setup
-	cmpi.w	#$0002,(MEM_DAY)	; is this day 02?
-	beq.s	TestIntroScreenEndDays0002Setup	; if day 02, go to day 02 setup
-	cmpi.w	#$0001,(MEM_DAY)	; is this day 01?
-	beq.w	TestIntroScreenDay01Setup	; if day 01, go to day 01 setup
-	cmpi.w	#$0000,(MEM_DAY)	; is this day 00?
-	beq.w	TestIntroScreenEndDays0002Setup	; if day 00, go to day 00 setup
-	bra.w	TestIntroScreenEnd	; if not, skip day setup
-TestIntroScreenDay03Setup:
-	move.w	#$0102,(MEM_PLAYER_SPRITE_X)	; starting x location
-	move.w	#$0064,(MEM_PLAYER_SPRITE_Y)	; starting y location
-	move.w	#DIRECTION_DOWN,(MEM_PLAYER_SPRITE_DIRECTION)	; direction
-	move.l	#PLAYER_SPRITE_VDP_Y,(VDP_CONTROL)	; set write location in VDP
-	move.w	(MEM_PLAYER_SPRITE_Y),(VDP_DATA)	; copy the new y-coordinate
-	move.l	#PLAYER_SPRITE_VDP_X,(VDP_CONTROL)	; set write location in VDP
-	move.w	(MEM_PLAYER_SPRITE_X),(VDP_DATA)	; copy the new x-coordinate
-	bra.s	TestIntroScreenEnd	; finish intro screen seup
-TestIntroScreenEndDays0002Setup:
-	; move NPC0 out of frame here
-	move.w	#$0140,(MEM_NPC0_SPRITE_X)	; copy x-coordinate
-	move.w	#$0160,(MEM_NPC0_SPRITE_Y)	; copy y-coordinate
-	move.w	#$FFFF,(MEM_NPC0_MOVE_FREQUENCY)	; set move frequency to never
-	; fix order in sprite sort table
-	move.w	#$0002,d2	; NPC0 is the sprite to update
-	move.w	(MEM_NPC0_SPRITE_Y),d3	; new y-value	
-	bsr.w	UpdateSpriteSortTable	; update the table
-	bsr.w	OrderSprites	; force re-sort
-	; update NPC0 in the sprite table
-	move.l	#NPC0_SPRITE_VDP_Y,(VDP_CONTROL)	; set write location in VDP
-	move.w	(MEM_NPC0_SPRITE_Y),(VDP_DATA)	; copy the new y-coordinate
-	move.l	#NPC0_SPRITE_VDP_X,(VDP_CONTROL)	; set write location in VDP
-	move.w	(MEM_NPC0_SPRITE_X),(VDP_DATA)	; copy the new x-coordinate
-	bra.s	TestIntroScreenEnd	; finish intro screen setup
-TestIntroScreenDay01Setup:
-	; move player sprite into starting position
-	move.w	#SPRITE_PLAYER_INIT_X,(MEM_PLAYER_SPRITE_X)	; starting x location
-	move.w	#SPRITE_PLAYER_INIT_Y,(MEM_PLAYER_SPRITE_Y)	; starting y location
-	move.w	#SPRITE_PLAYER_PATTERN,(MEM_PLAYER_SPRITE_PATTERN_INDEX) ; pattern
-	move.w	#DIRECTION_DOWN,(MEM_PLAYER_SPRITE_DIRECTION)	; direction
-	move.w	#$0000,(MEM_PLAYER_SPRITE_FRAME)	; frame
 TestIntroScreenEnd:
 	; reorder all the sprites
 	bsr.w	OrderSprites	; order sprites

@@ -8,7 +8,37 @@
    },
    "collision":{ 
       "collisionMap":{ 
-         "design/collision/store-00-512x512.bmp":"src/collision-maps/Store00Collision.X68"
+         "design/collision/BasementCafe.png":"src/collision-maps/BasementCafeCollision.X68",
+         "design/collision/BasementMDorm.png":"src/collision-maps/BasementMDormCollision.X68",
+         "design/collision/BasementOffice.png":"src/collision-maps/BasementOfficeCollision.X68",
+         "design/collision/BasementWDorm.png":"src/collision-maps/BasementWDormCollision.X68",
+         "design/collision/Cavern.png":"src/collision-maps/CavernCollision.X68",
+         "design/collision/Center.png":"src/collision-maps/CenterCollision.X68",
+         "design/collision/Checkers.png":"src/collision-maps/CheckersCollision.X68",
+         "design/collision/CNow.png":"src/collision-maps/CNowCollision.X68",
+         "design/collision/CPlanet.png":"src/collision-maps/CPlanetCollision.X68",
+         "design/collision/DenimCountry.png":"src/collision-maps/DenimCountryCollision.X68",
+         "design/collision/EEHall.png":"src/collision-maps/EEHallCollision.X68",
+         "design/collision/EWHall.png":"src/collision-maps/EWHallCollision.X68",
+         "design/collision/FCBCamping.png":"src/collision-maps/FCBCampingCollision.X68",
+         "design/collision/FCBCheckout.png":"src/collision-maps/FCBCheckoutCollision.X68",
+         "design/collision/FCBFishing.png":"src/collision-maps/FCBFishingCollision.X68",
+         "design/collision/FCBFirearms.png":"src/collision-maps/FCBFirearmsCollision.X68",
+         "design/collision/NShack.png":"src/collision-maps/NShackCollision.X68",
+         "design/collision/ParkingLot.png":"src/collision-maps/ParkingLotCollision.X68",
+         "design/collision/PogoDawg.png":"src/collision-maps/PogoDawgCollision.X68",
+         "design/collision/SHall.png":"src/collision-maps/SHallCollision.X68",
+         "design/collision/SouthCenter.png":"src/collision-maps/SouthCenterCollision.X68",
+         "design/collision/SVideo.png":"src/collision-maps/SVideoCollision.X68",
+         "design/collision/TBooks.png":"src/collision-maps/TBooksCollision.X68",
+         "design/collision/TLodge.png":"src/collision-maps/TLodgeCollision.X68",
+         "design/collision/VB.png":"src/collision-maps/VBCollision.X68",
+         "design/collision/WEHall.png":"src/collision-maps/WEHallCollision.X68",
+         "design/collision/WWAppliances.png":"src/collision-maps/WWAppliancesCollision.X68",
+         "design/collision/WWAudio.png":"src/collision-maps/WWAudioCollision.X68",
+         "design/collision/WWCheckout.png":"src/collision-maps/WWCheckoutCollision.X68",
+         "design/collision/WWHall.png":"src/collision-maps/WWHallCollision.X68",
+         "design/collision/WWTV.png":"src/collision-maps/WWTVCollision.X68"
       },
       "includeFilePath":"src/inc_CollisionMaps.X68"
    },
@@ -22,8 +52,12 @@
          "design/img/swatches/title01.png":"src/palettes/Title01.X68",
          "design/img/swatches/title02.png":"src/palettes/Title02.X68",
          "design/img/swatches/title03.png":"src/palettes/Title03.X68",
+         "design/img/swatches/dayintro00.png":"src/palettes/DayIntro00.X68",
          "design/img/swatches/dayintro01.png":"src/palettes/DayIntro01.X68",
-         "design/img/swatches/dayintro02.png":"src/palettes/DayIntro02.X68"
+         "design/img/swatches/dayintro02.png":"src/palettes/DayIntro02.X68",
+         "design/img/swatches/denimcountry00.png":"src/palettes/DenimCountry00.X68",
+         "design/img/swatches/denimcountry01.png":"src/palettes/DenimCountry01.X68",
+         "design/img/swatches/denimcountry02.png":"src/palettes/DenimCountry02.X68"
       },
       "includeFilePath":"src/inc_Palettes.X68"
    },
@@ -264,5 +298,30 @@
          "assemblerPath":"src/",
          "arguments":"vasmm68k_mot -o ../build/RetailClerk90_ATGAMES.bin -Fbin -spaces -D_DEBUG_\u003d0 -D_ATGAMES_HACKS_\u003d1 RetailClerk90.X68"
       }
+   ],
+   "packageParameters":[
+      {
+         "includeFilePaths":[
+            "/build/RetailClerk90.bin",
+            "CREDITS",
+            "LICENSE",
+            "README.md"],
+         "packagePath":"/build/RetailClerk90.zip"
+      },
+      {
+         "includeFilePaths":[
+            "/build/RetailClerk90_DEBUG.bin",
+            "CREDITS",
+            "LICENSE",
+            "README.md"],
+         "packagePath":"/build/RetailClerk90_DEBUG.zip"
+      },
+      {
+         "includeFilePaths":[
+            "/build/RetailClerk90_ATGAMES.bin",
+            "CREDITS",
+            "LICENSE",
+            "README.md"],
+         "packagePath":"/build/RetailClerk90_ATGAMES.zip"}
    ]
 }

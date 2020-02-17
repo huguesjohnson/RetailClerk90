@@ -80,7 +80,7 @@
 	include 'scenes/FCBFishing.X68'
 
 	; SCENE_ID_FCBCAMPING=$0016
-	include 'scenes/Camping.X68'
+	include 'scenes/FCBCamping.X68'
 
 	; SCENE_ID_SOUTH_CENTER=$0017
 	include 'scenes/SouthCenter.X68'

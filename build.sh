@@ -1,3 +1,4 @@
+echo 'Compiling build tools..'
 ###########################################################
 # create outout directory and all sub paths needed
 ###########################################################
@@ -33,13 +34,18 @@ javac ./build-tools/src/com/huguesjohnson/retailclerk/build/*.java -cp ./build-t
 ###########################################################
 mv ./build-tools/src/com/huguesjohnson/retailclerk/build/*.class ./build-tools/bin/com/huguesjohnson/retailclerk/build/
 
+echo ''
+
 ###########################################################
 # temporary palettes used to build generic tiles
 ###########################################################
+echo 'Building temporary palettes..'
 java -cp ./build-tools/bin/:./build-tools/lib/gson-2.8.5.jar com.huguesjohnson.retailclerk.build.MainBuild build-temp-palettes.json
+echo ''
 
 ###########################################################
 # main build
 ###########################################################
+echo 'Running main build..'
 java -cp ./build-tools/bin/:./build-tools/lib/gson-2.8.5.jar com.huguesjohnson.retailclerk.build.MainBuild build.json
 

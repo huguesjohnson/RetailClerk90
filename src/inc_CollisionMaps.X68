@@ -1,4 +1,124 @@
-Store00CollisionStart:
-	include 'collision-maps/Store00Collision.X68'
-Store00CollisionEnd:
+BasementCafeCollisionStart:
+	include 'collision-maps/BasementCafeCollision.X68'
+BasementCafeCollisionEnd:
+
+BasementMDormCollisionStart:
+	include 'collision-maps/BasementMDormCollision.X68'
+BasementMDormCollisionEnd:
+
+BasementOfficeCollisionStart:
+	include 'collision-maps/BasementOfficeCollision.X68'
+BasementOfficeCollisionEnd:
+
+BasementWDormCollisionStart:
+	include 'collision-maps/BasementWDormCollision.X68'
+BasementWDormCollisionEnd:
+
+CavernCollisionStart:
+	include 'collision-maps/CavernCollision.X68'
+CavernCollisionEnd:
+
+CenterCollisionStart:
+	include 'collision-maps/CenterCollision.X68'
+CenterCollisionEnd:
+
+CheckersCollisionStart:
+	include 'collision-maps/CheckersCollision.X68'
+CheckersCollisionEnd:
+
+CNowCollisionStart:
+	include 'collision-maps/CNowCollision.X68'
+CNowCollisionEnd:
+
+CPlanetCollisionStart:
+	include 'collision-maps/CPlanetCollision.X68'
+CPlanetCollisionEnd:
+
+DenimCountryCollisionStart:
+	include 'collision-maps/DenimCountryCollision.X68'
+DenimCountryCollisionEnd:
+
+EEHallCollisionStart:
+	include 'collision-maps/EEHallCollision.X68'
+EEHallCollisionEnd:
+
+EWHallCollisionStart:
+	include 'collision-maps/EWHallCollision.X68'
+EWHallCollisionEnd:
+
+FCBCampingCollisionStart:
+	include 'collision-maps/FCBCampingCollision.X68'
+FCBCampingCollisionEnd:
+
+FCBCheckoutCollisionStart:
+	include 'collision-maps/FCBCheckoutCollision.X68'
+FCBCheckoutCollisionEnd:
+
+FCBFishingCollisionStart:
+	include 'collision-maps/FCBFishingCollision.X68'
+FCBFishingCollisionEnd:
+
+FCBFirearmsCollisionStart:
+	include 'collision-maps/FCBFirearmsCollision.X68'
+FCBFirearmsCollisionEnd:
+
+NShackCollisionStart:
+	include 'collision-maps/NShackCollision.X68'
+NShackCollisionEnd:
+
+ParkingLotCollisionStart:
+	include 'collision-maps/ParkingLotCollision.X68'
+ParkingLotCollisionEnd:
+
+PogoDawgCollisionStart:
+	include 'collision-maps/PogoDawgCollision.X68'
+PogoDawgCollisionEnd:
+
+SHallCollisionStart:
+	include 'collision-maps/SHallCollision.X68'
+SHallCollisionEnd:
+
+SouthCenterCollisionStart:
+	include 'collision-maps/SouthCenterCollision.X68'
+SouthCenterCollisionEnd:
+
+SVideoCollisionStart:
+	include 'collision-maps/SVideoCollision.X68'
+SVideoCollisionEnd:
+
+TBooksCollisionStart:
+	include 'collision-maps/TBooksCollision.X68'
+TBooksCollisionEnd:
+
+TLodgeCollisionStart:
+	include 'collision-maps/TLodgeCollision.X68'
+TLodgeCollisionEnd:
+
+VBCollisionStart:
+	include 'collision-maps/VBCollision.X68'
+VBCollisionEnd:
+
+WEHallCollisionStart:
+	include 'collision-maps/WEHallCollision.X68'
+WEHallCollisionEnd:
+
+WWAppliancesCollisionStart:
+	include 'collision-maps/WWAppliancesCollision.X68'
+WWAppliancesCollisionEnd:
+
+WWAudioCollisionStart:
+	include 'collision-maps/WWAudioCollision.X68'
+WWAudioCollisionEnd:
+
+WWCheckoutCollisionStart:
+	include 'collision-maps/WWCheckoutCollision.X68'
+WWCheckoutCollisionEnd:
+
+WWHallCollisionStart:
+	include 'collision-maps/WWHallCollision.X68'
+WWHallCollisionEnd:
+
+WWTVCollisionStart:
+	include 'collision-maps/WWTVCollision.X68'
+WWTVCollisionEnd:
 

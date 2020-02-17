@@ -8,24 +8,16 @@ ActionScriptNullEvent:
 ; used for lookup table conditions that only ever show default look text
 ;*******************************************************************************
 ActionScriptDefaultLook:
-;	bsr.w	ShowDefaultText
+	bsr.w	ShowDefaultText
 	rts
 
 ;*******************************************************************************
 ; used for lookup table conditions that show default use text (no npcs)
 ;*******************************************************************************
 ActionScriptDefaultUse:
-;	lea	DialogTextNothingHappens,a6	; load default text
-;	move.l	a6,MEM_DIALOG_TEXT	; copy address to MEM_DIALOG_TEXT
+	lea	DialogTextNothingHappens,a6	; load default text
+	move.l	a6,MEM_DIALOG_TEXT	; copy address to MEM_DIALOG_TEXT
 	rts
-
-;*******************************************************************************
-; used for lookup table conditions that show default take text (no npcs)
-;*******************************************************************************
-;ActionScriptDefaultTake:
-;	lea	DialogTextCantTake,a6	; load default text
-;	move.l	a6,MEM_DIALOG_TEXT	; copy address to MEM_DIALOG_TEXT
-;	rts
 
 ;*******************************************************************************
 ; end the game
@@ -76,27 +68,6 @@ EndGame:
 ;*******************************************************************************
 ; default event processing routines
 ;*******************************************************************************
-
-;-------------------------------------------------------------------------------
-; builds the give menu or displays message if the player has no items
-;-------------------------------------------------------------------------------
-DefaultActionGive:
-	cmpi.w	#$0000,(MEM_PLAYER_ITEM_COUNT)	; is item count 0?
-	beq.s	DefaultActionGiveNoItems	; branch if 0
-	lea	ItemMenu,a6	; load dialog text
-	move.l	a6,MEM_DIALOG_TEXT	; copy address to MEM_DIALOG_TEXT
-	lea	MEM_PLAYER_ITEMS,a6	; load item list
-	move.l	a6,MEM_DIALOG_ITEM_LIST	; copy address to MEM_DIALOG_ITEM_LIST
-	move.l	(MEM_DIALOG_FLAGS),d7	; copy dialog flags to d7
-	bset.l	#DIALOG_FLAG_STYLE_TEXT_4CHOICE,d7	; set text choice flag
-	bset.l	#DIALOG_FLAG_STYLE_ITEM_MENU,d7	; set item menu flag
-	move.l	d7,(MEM_DIALOG_FLAGS)	; save updated dialog flags
-	bra.s	ExitDefaultActionGive	; exit
-DefaultActionGiveNoItems:
-	lea	DialogTextNoItems,a6	; load dialog text
-	move.l	a6,MEM_DIALOG_TEXT	; copy address to MEM_DIALOG_TEXT
-ExitDefaultActionGive:
-	rts
 
 ;-------------------------------------------------------------------------------
 ; player uses a radio

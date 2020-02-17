@@ -67,7 +67,7 @@ SceneDefinitionTable:
 	dc.l	SceneFCBFishing
 
 	; SCENE_ID_FCBCAMPING=$0015
-	dc.l	SceneCamping
+	dc.l	SceneFCBCamping
 
 	; SCENE_ID_SOUTH_CENTER=$0016
 	dc.l	SceneSouthCenter

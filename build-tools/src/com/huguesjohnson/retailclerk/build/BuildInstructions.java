@@ -1,7 +1,7 @@
 /*
 BuildToolsForRetailClerk90
 
-Copyright (c) 2019 Hugues Johnson
+Copyright (c) 2019-2020 Hugues Johnson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files(the "Software"), to deal in 
@@ -30,6 +30,7 @@ import com.huguesjohnson.retailclerk.build.parameters.AssemblyParameters;
 import com.huguesjohnson.retailclerk.build.parameters.CollisionDataParameters;
 import com.huguesjohnson.retailclerk.build.parameters.HeaderParameters;
 import com.huguesjohnson.retailclerk.build.parameters.MemoryMapParameters;
+import com.huguesjohnson.retailclerk.build.parameters.PackageParameters;
 import com.huguesjohnson.retailclerk.build.parameters.PaletteParameters;
 import com.huguesjohnson.retailclerk.build.parameters.SpriteParameters;
 import com.huguesjohnson.retailclerk.build.parameters.TilesetParameters;
@@ -82,4 +83,8 @@ public class BuildInstructions implements Serializable{
 	*********************************************************** */	
 	public AssemblyParameters[] assembly;
 	
+	/* ***********************************************************
+	* Package
+	*********************************************************** */	
+	public PackageParameters[] packageParameters;
 }

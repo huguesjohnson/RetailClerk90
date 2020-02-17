@@ -1,5 +1,5 @@
 /* 
-Convert a BMP image to collision data
+Convert a BMP (or other) image to collision data
 
 Some code is based on - http://stackoverflow.com/questions/17015340/how-to-read-a-bmp-file-identify-which-pixels-are-black-in-java (mmirwaldt response)
 
@@ -15,6 +15,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.Map;
 
+import javax.imageio.IIOException;
 import javax.imageio.ImageIO;
 
 import com.huguesjohnson.PathResolver;
@@ -25,17 +26,19 @@ public abstract class BMPtoCollisionData{
 	public static void generateCollisionData(String basePath,Map<String,String> sourceDestinationMap,String includeFilePath){
 		FileWriter collisionDataWriter=null;
 		FileWriter includeDataWriter=null;
+		String sourceFilePath=null;
 		try{
 			includeFilePath=basePath+includeFilePath;
 			includeDataWriter=new FileWriter(includeFilePath);
 			for(Map.Entry<String,String> entry:sourceDestinationMap.entrySet()){
-				String sourceFilePath=basePath+entry.getKey();
+				sourceFilePath=basePath+entry.getKey();
 				String outputFilePath=basePath+entry.getValue();
 				File sourceFile=new File(sourceFilePath);
 				BufferedImage image=ImageIO.read(sourceFile);
 				int width=image.getWidth();
-				if(width%32!=0){throw(new Exception("Image width must be a multiple of 32"));}
+				if(width!=64){throw(new Exception("generateCollisionData: image width is "+width+", expected value is 64, sourceFilePath="+sourceFilePath));}
 				int height=image.getHeight();
+				if(height!=32){throw(new Exception("generateCollisionData: image height is "+height+", expected value is 32, sourceFilePath="+sourceFilePath));}
 				int rowCounter=0;
 				int colCounter=0;
 				collisionDataWriter=new FileWriter(outputFilePath);
@@ -97,6 +100,9 @@ public abstract class BMPtoCollisionData{
 		    }
 			includeDataWriter.flush();
 			includeDataWriter.close();
+		}catch(IIOException iiox){
+			iiox.printStackTrace();
+			System.err.println("sourceFilePath="+sourceFilePath);
 		}catch(Exception x){
 			x.printStackTrace();			
 		}finally{

@@ -93,6 +93,6 @@ InitPlayerSprite:
 	; setting SPRITE_STEP_COUNTER to SPRITE_ANIMATION_STEPS forces movement
 	; animation to trigger the next time the sprite moves
 	move.w	#SPRITE_ANIMATION_STEPS,(MEM_PLAYER_SPRITE_STEP_COUNTER)
-	lea	(MEM_PLAYER_SPRITE_ID),a6	; setup call to FlipSpriteMapPosition
+;	lea	(MEM_PLAYER_SPRITE_ID),a6	; setup call to FlipSpriteMapPosition
 
 	move.w	#$2000,sr		; re-enable interrupts

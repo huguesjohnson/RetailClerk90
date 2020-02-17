@@ -1,7 +1,7 @@
 /*
 BuildToolsForRetailClerk90
 
-Copyright (c) 2019 Hugues Johnson
+Copyright (c) 2019-2020 Hugues Johnson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files(the "Software"), to deal in 
@@ -35,6 +35,7 @@ import java.util.Date;
 
 import com.google.gson.Gson;
 import com.huguesjohnson.PathResolver;
+import com.huguesjohnson.ZipUtil;
 
 public class MainBuild{
 
@@ -188,6 +189,21 @@ public class MainBuild{
 			}else{
 				System.out.println("assembly not defined, skipping task.");
 			}
+
+			/* ***********************************************************
+			* Package
+			*********************************************************** */
+			if(instructions.packageParameters!=null){
+				for(int i=0;i<instructions.packageParameters.length;i++){
+					ZipUtil.zip(
+							basePath,
+							instructions.packageParameters[i].includeFilePaths,
+							instructions.packageParameters[i].packagePath);
+				}
+			}else{
+				System.out.println("package not defined, skipping task.");
+			}
+			
 			System.out.println("Build finished, have a nice day or whatever.");
 		}catch(Exception x){
 			System.out.println("Build error: "+x.getMessage());

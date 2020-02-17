@@ -224,33 +224,17 @@ CreditsScreen00Line03:
 	;		"12345678901234567890123456789012345678"
 	dc.b	"Echo Sound Driver by Javier Degirolmo",ETX
 
-CreditsScreen00Line04:
-	;		"12345678901234567890123456789012345678"
-	dc.b	"Some code is based on examples by ",ETX
-
-CreditsScreen00Line05:
-	;		"12345678901234567890123456789012345678"
-	dc.b	"Matt Phillips (tanglewoodgame.com)",ETX
-
-CreditsScreen00Line06:
-	;		"12345678901234567890123456789012345678"
-	dc.b	" ",ETX
-
 CreditsScreen00Line07:
 	;		"12345678901234567890123456789012345678"
 	dc.b	"               Graphics               ",ETX
 
 CreditsScreen00Line08:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"Title screen font based on Audiowide",ETX
+	dc.b	"Logo font based on Audiowide",ETX
 
 CreditsScreen00Line09:
 	;		"12345678901234567890123456789012345678"
 	dc.b	"Copyright (c) 2012 Brian J Bonislawsky",ETX
-
-CreditsScreen00Line0A:
-	;		"12345678901234567890123456789012345678"
-	dc.b	"Copyright (c) 2016 Missy Meyer",ETX
 
 CreditsScreen00Line0B:
 	;		"12345678901234567890123456789012345678"
@@ -287,27 +271,11 @@ CreditsScreen00Line12:
 
 CreditsScreen00Line13:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"Chip Overture, The Radix Point, and",ETX
+	dc.b	"",ETX
 
 CreditsScreen00Line14:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"October Chip by Drozerix",ETX
-
-CreditsScreen00Line15:
-	;		"12345678901234567890123456789012345678"
-	dc.b	"All under Public Domain license",ETX
-
-CreditsScreen00Line16:
-	;		"12345678901234567890123456789012345678"
-	dc.b	"Soundtrack contains a conversion of",ETX
-
-CreditsScreen00Line17:
-	;		"12345678901234567890123456789012345678"
-	dc.b	"The Spirit of Mods by Blurry",ETX
-
-CreditsScreen00Line18:
-	;		"12345678901234567890123456789012345678"
-	dc.b	"Under Attribution Share Alike license",ETX
+	dc.b	"",ETX
 
 CreditsScreen00Line19:
 	;		"12345678901234567890123456789012345678"
@@ -341,31 +309,9 @@ DialogTextNothing:
 	dc.b	"There's nothing very",LF
 	dc.b	"interesting here.",ETX
 
-DialogTextNoItems:
-	;		"1234567890123456789012"
-	dc.b	"You aren't carrying",LF
-	dc.b	"anything right now.",ETX
-
 DialogTextNothingHappens:
 	;		"1234567890123456789012"
 	dc.b	"Nothing happens.",ETX
-
-DialogTextCantTake:
-	;		"1234567890123456789012"
-	dc.b	"You can't take this.",ETX
-
-DialogTextCantLeaveStoreUnattended:
-	;		"1234567890123456789012"
-	dc.b	"You can't leave the",LF
-	dc.b	"store unattended.",ETX
-
-DialogTextStoreClosed:
-	;		"1234567890123456789012"
-	dc.b	"They are closed for ",LF
-	dc.b	"the night.           ^",FF
-	dc.b	"Maybe if you had a key",LF
-	dc.b	"to the store...",ETX
-
 
 ;-------------------------------------------------------------------------------
 ; information desk
@@ -406,17 +352,6 @@ DialogTextStoreClosed:
 ;	dc.b	"well & might close.  ^",FF
 ;	dc.b	"It might happen at the",LF
 ;	dc.b	"end of the year.",ETX
-
-
-;-------------------------------------------------------------------------------
-; radio stations
-;-------------------------------------------------------------------------------
-
-;DialogTextRadioDay00R0:	; WNWT (news and weather)
-;DialogTextRadioDay00R1:	; WOCX (talk radio)
-;DialogTextRadioDay00R2:	; WCAS (top 40)
-;DialogTextRadioDay00R3:	; WVVX (hair metal)
-
 
 ;-------------------------------------------------------------------------------
 ; default object descriptions
@@ -462,15 +397,6 @@ ObjectMenu:
 ItemMenu:
 	;		"1234567890123456789012"
 	dc.b	"{",ITEMNAMESTART
-
-;	align 2
-;InfoDeskMenu:
-;	dc.w	OBJ_NPC_CENTER_STAFF
-;	;		"{1234567890{1234567890"	
-;	dc.b	"What do you want to",LF
-;	dc.b	"know about today?    ^",FFR
-;	dc.b	"{Mall news {Store news",LF
-;	dc.b	"{Events    {Rumors",ETX
 
 	align 2
 RadioMenu:
@@ -558,6 +484,198 @@ Day00IntroTip5:
 Day00IntroTip6:
 	;		"1234567890123456789012345678901234567890"
 	dc.b	"Start: Pause, exit this screen",ETX
+
+Day01IntroText:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"           November 23, 1990            ",ETX
+
+Day01IntroTip0:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day01IntroTip1:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day01IntroTip2:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day01IntroTip3:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day01IntroTip4:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day01IntroTip5:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day01IntroTip6:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day02IntroText:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"           December 4, 1990             ",ETX
+
+Day02IntroTip0:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day02IntroTip1:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day02IntroTip2:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day02IntroTip3:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day02IntroTip4:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day02IntroTip5:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day02IntroTip6:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day03IntroText:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"           December 16, 1990            ",ETX
+
+Day03IntroTip0:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day03IntroTip1:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day03IntroTip2:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day03IntroTip3:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day03IntroTip4:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day03IntroTip5:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day03IntroTip6:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day04IntroText:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"           December 20, 1990            ",ETX
+
+Day04IntroTip0:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day04IntroTip1:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day04IntroTip2:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day04IntroTip3:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day04IntroTip4:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day04IntroTip5:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day04IntroTip6:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day05IntroText:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"           December 24, 1990            ",ETX
+
+Day05IntroTip0:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day05IntroTip1:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day05IntroTip2:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day05IntroTip3:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day05IntroTip4:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day05IntroTip5:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day05IntroTip6:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day06IntroText:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"           December 31, 1990            ",ETX
+
+Day06IntroTip0:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day06IntroTip1:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day06IntroTip2:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day06IntroTip3:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day06IntroTip4:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day06IntroTip5:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
+
+Day06IntroTip6:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"",ETX
 
 
 ;-------------------------------------------------------------------------------

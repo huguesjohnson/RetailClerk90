@@ -33,14 +33,37 @@ LoadSceneLoadObjectsLoop:
 ;-------------------------------------------------------------------------------
 ; load collision data
 ;-------------------------------------------------------------------------------
-	move.w	(a6)+,d7	; size of collision data
-	cmpi.w	#$0000,d7	; test if no collision data
-	beq.s	LoadSceneLoadExits	; branch if no collision data
-	movea.l	(a6)+,a0	; start address of collision data
-	lea	MEM_COLLISION_DATA,a1	; store destination memory location
-LoadSceneLoadMapCollisionLoop:
+	move.l	(a6)+,d7	; start address of collision data
+	cmp.l	#$00000000,d7	; test if no collision data
+	beq.s	LoadSceneLoadExits	; skip loading collision data
+LoadSceneLoadMapCollision:
+	movea.l	d7,a0	; point a0 to start address of collision data
+	lea	MEM_COLLISION_DATA,a1	; point a1 to destination memory location
+	;---------------------------------------------------------------------------
+	; I'd like this next part to be temporary but knowing me it won't..
+	; The way I originally implemented collision data left the first & last
+	; 16 rows as always open - this causes the collision data to use up more
+	; rom space than it should.
+	; So to cut down on space the collision maps were cut to 64x32 with the 
+	; first and last 16 rows being filled with 00000000 00000000. 
+	; I could trim this more because the left 16 columns and right 8 columns
+	; could also be set as always empty.
+	; Really this whole thing could be refactored to take up less ram too.
+	; That assumes future me sees this note and feels brave enough to try.
+	;---------------------------------------------------------------------------
+	move.w	#$1F,d7	; first 16 rows = 20 words
+LoadSceneLoadMapCollisionLoopA:
+	move.l  #$00000000,(a1)+
+	dbra    d7,LoadSceneLoadMapCollisionLoopA
+	move.w	#$3F,d7	; middle 32 rows = 64 words
+LoadSceneLoadMapCollisionLoopB:
 	move.l  (a0)+,(a1)+
-	dbra    d7,LoadSceneLoadMapCollisionLoop
+	dbra    d7,LoadSceneLoadMapCollisionLoopB
+	move.w	#$1F,d7	; last 16 rows = 20 words
+LoadSceneLoadMapCollisionLoopC:
+	move.l  #$00000000,(a1)+
+	move.l  (a0)+,(a1)+
+	dbra    d7,LoadSceneLoadMapCollisionLoopC
 
 ;-------------------------------------------------------------------------------
 ; load scene exits
@@ -67,26 +90,26 @@ LoadSceneLoadExits:
 LoadSceneLoadNPCData:
 	move.w	(a6)+,d7	; number of NPC slots in the scene
 	moveq	#$0002,d6	; use d6 to track sprite ID
-	move.w	#NPC0_BASE_TILE,d5	; use d5 to track the base tile
+	move.w	#NPC0_BASE_PATTERN,d5	; use d5 to track the base tile
 	lea	MEM_NPC0_SPRITE_ID,a0	; point a0 to the first NPC sprite
 	cmpi.w	#(NPC_LIST_LENGTH-1),d7	; test to defend against my own stupidity
 	bls.s	LoadSceneLoadNPCDataLoop	; did I add more NPCs than supported?
 	move.w	#(NPC_LIST_LENGTH-1),d7	; set d7 to the max possible NPCs
 LoadSceneLoadNPCDataLoop:
-	move.w	d6,(a0)+	; ID
+	move.w	d6,(a0)+ ; ID
 	move.w	(a6)+,(a0)+	; x
 	move.w	(a6)+,(a0)+	; y
 	move.w	d5,(a0)+ ; pattern
 	move.w	(a6)+,(a0)+	; direction
-	move.w	#$0000,(a0)+	; frame
-	move.w	#$0000,(a0)+	; step counter
-	move.w	#$0000,(a0)+	; move counter
-	move.w	(a6)+,(a0)+	; movement frequency
-	move.l	(a6)+,(a0)+	; movement pattern
+	move.w	#$0000,(a0)+ ; frame
+	move.w	#$0000,(a0)+ ; step counter
+	move.w	#$0000,(a0)+ ; move counter
+	move.w	(a6)+,(a0)+ ; movement frequency
+	move.l	(a6)+,(a0)+ ; movement pattern
 	move.w	(a6)+,(a0)+	; movement pattern length
-	move.w	#$0000,(a0)+	; movement index
-	addq	#$1,d6	; increment sprite ID
-	add.w	#NPC_BASE_TILE_INC,d5	; increment base tile
+	move.w	#$0000,(a0)+ ; movement index
+	addq	#$1,d6 ; increment sprite ID
+	add.w	#NPC_BASE_TILE_INC,d5 ; increment base tile
 	dbra    d7,LoadSceneLoadNPCDataLoop
 
 	bsr.w	LoadSceneLoadNPCSprites
@@ -155,6 +178,7 @@ ExitLoadSceneLoadNPCSprites:
 
 LoadNPC:
 	lea	CharacterDefinitionStart,a2	; point a2 to the character definition
+	subq	#$1,d5	; to account for there not being a character 0
 	; d5 contains NPC ID
 	mulu.w	#CHARACTER_DEFINITION_SIZE,d5	; multiply to get NPC def location
 	adda.w	d5,a2	; increment a2 to the NPC definition

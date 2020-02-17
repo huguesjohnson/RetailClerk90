@@ -103,9 +103,8 @@ SPRITE_PLANE_OFFSET_RIGHT=$0040	; sprite plane right to display right edge
 ; other sprite/NPC settings
 NPC_RECORD_SIZE=MEM_NPC1_SPRITE_ID-MEM_NPC0_SPRITE_ID
 NPC_SPRITE_MOVE_STEPS=$0009; how many steps NPC sprites take when they move
-PLAYER_BASE_TILE=%0110000100000001 ; pri=0,pal=2,vf=0,hf=0,pattern=101
-NPC0_BASE_TILE=%0110000101110001 ;pri=0,pal=2,vf=0,hf=0,pattern=171
 NPC_BASE_TILE_INC=$0060	; how many tiles to increment between NPCs
+NPC0_BASE_PATTERN=(SPRITE_PLAYER_PATTERN+NPC_BASE_TILE_INC)
 CHARACTER_DEFINITION_SIZE=CharacterDefinitionErynEnd-CharacterDefinitionErynStart
 
 ;-------------------------------------------------------------------------------
@@ -137,7 +136,6 @@ SCENE_ENTER_TOP=SPRITE_PLANE_OFFSET_TOP+$0008
 SCENE_ENTER_BOTTOM=SPRITE_PLANE_OFFSET_TOP+DISPLAY_PIXELS_Y-$0010
 SCENE_ENTER_LEFT=SPRITE_PLANE_OFFSET_LEFT+$0008
 SCENE_ENTER_RIGHT=SPRITE_PLANE_OFFSET_LEFT+DISPLAY_PIXELS_X-$0008
-DEFAULT_COLLISION_DATA_SIZE=$7F	; 128 longs of collision data by default 
 
 ;-------------------------------------------------------------------------------
 ; object/NPC list settings

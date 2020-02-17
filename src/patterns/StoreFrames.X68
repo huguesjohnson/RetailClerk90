@@ -59,20 +59,20 @@ PatternFrameSideClosedLeft:
 	dc.w	$03,$03,$03,$03,$03,$03,$03,$03,$03,$03,$03,$03,$03
 
 PatternFrameSideLeftOpenTop:
-	dc.w	$000A	; 9 rows
+	dc.w	$0008	; 9 rows
 	dc.w	$0000	; 1 column
-	dc.w	$03,$03,$03,$03,$03,$03,$03,$03,$08
+	dc.w	$04,$04,$04,$04,$04,$04,$04,$04,$08
 
 PatternFrameSideLeftOpenBottom:
-	dc.w	$000A	; 9 rows
+	dc.w	$0008	; 9 rows
 	dc.w	$0000	; 1 column
-	dc.w	$0B,$03,$03,$03,$03,$03,$03,$03,$03
+	dc.w	$0A,$04,$04,$04,$04,$04,$04,$04,$04
 
 PatternFrameSideClosedRight:
-	dc.w	$001B	; 26 rows
+	dc.w	$0019	; 26 rows
 	dc.w	$0000	; 1 column
-	dc.w	$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04
-	dc.w	$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04
+	dc.w	$03,$03,$03,$03,$03,$03,$03,$03,$03,$03,$03,$03,$03
+	dc.w	$03,$03,$03,$03,$03,$03,$03,$03,$03,$03,$03,$03,$03
 
 PatternFrameSideRightOpenTop:
 	dc.w	$000A	; 9 rows

@@ -14,7 +14,7 @@ The MIT License:
 
  The MIT License (MIT)
 
-Copyright (c) 2019 Hugues Johnson
+Copyright (c) 2020 Hugues Johnson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files (the "Software"), to deal in 
@@ -40,4 +40,41 @@ License for original non-code assets
 The story, setting, and all characters of Retail Clerk '90 are licensed under 
 Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
 https://creativecommons.org/licenses/by-sa/4.0/
+
+********************************************************************************
+License for Echo Sound Driver
+********************************************************************************
+© 2010-2019 Javier Degirolmo
+
+This software is provided 'as-is', without any express or implied
+warranty.  In no event will the authors be held liable for any damages
+arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not
+   claim that you wrote the original software. If you use this software
+   in a product, an acknowledgment in the product documentation would be
+   appreciated but is not required.
+2. Altered source versions must be plainly marked as such, and must not be
+   misrepresented as being the original software.
+3. This notice may not be removed or altered from any source distribution.
+
+********************************************************************************
+3rd party graphics
+********************************************************************************
+Logo font is based off Audiowide
+ Copyright (c) 2012, Brian J. Bonislawsky DBA Astigmatic (AOETI)
+ SIL Open Font License, Version 1.1
+
+Dialog & menu font is based off Deathwake font by Zee-3
+ http://www.zee-3.com/pickfordbros/archive/bitmapfonts.php
+ "Feel free to use any of these fonts for whatever purpose you see fit."
+
+Some scenery is based off tilesets created by Sithjester
+ http://untamed.wild-refuge.net/rpgxp.php
+ "Feel free to use my resources as you want, be it in free or commercial games,
+ edited how you want, as bases for your own sprites, or for non-RPG Maker stuff"
 

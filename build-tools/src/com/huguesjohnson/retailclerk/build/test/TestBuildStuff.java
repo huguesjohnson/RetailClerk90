@@ -1,7 +1,7 @@
 /*
 BuildToolsForRetailClerk90
 
-Copyright (c) 2019 Hugues Johnson
+Copyright (c) 2019-2020 Hugues Johnson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files(the "Software"), to deal in 
@@ -36,6 +36,7 @@ import com.huguesjohnson.retailclerk.build.parameters.AssemblyParameters;
 import com.huguesjohnson.retailclerk.build.parameters.CollisionDataParameters;
 import com.huguesjohnson.retailclerk.build.parameters.HeaderParameters;
 import com.huguesjohnson.retailclerk.build.parameters.MemoryMapParameters;
+import com.huguesjohnson.retailclerk.build.parameters.PackageParameters;
 import com.huguesjohnson.retailclerk.build.parameters.PaletteParameters;
 import com.huguesjohnson.retailclerk.build.parameters.SpriteDefinition;
 import com.huguesjohnson.retailclerk.build.parameters.SpriteParameters;
@@ -197,7 +198,7 @@ class TestBuildStuff extends TestCase{
 		header.sramEnd="SRAM_END";
 		header.comment="'http://huguesjohnson.com/               '";		
 		instructions.header=header;
-		
+
 		/* ***********************************************************
 		* Compile parameters
 		*********************************************************** */
@@ -210,8 +211,40 @@ class TestBuildStuff extends TestCase{
 		instructions.assembly[1]=assembly;
 		assembly.arguments="vasmm68k_mot -o ../build/RetailClerk90_ATGAMES.bin -Fbin -spaces -D_DEBUG_=0 -D_ATGAMES_HACKS_=1 RetailClerk90.X68";
 		instructions.assembly[2]=assembly;
+		
+		/* ***********************************************************
+		* Package parameters
+		*********************************************************** */
+		PackageParameters[] packageParameters=new PackageParameters[3];
+		packageParameters[0]=new PackageParameters();
+		packageParameters[0].packagePath="/build/RetailClerk90.zip";
+		packageParameters[0].includeFilePaths=new String[4];
+		packageParameters[0].includeFilePaths[0]="/build/RetailClerk90.bin";
+		packageParameters[0].includeFilePaths[1]="CREDITS";
+		packageParameters[0].includeFilePaths[2]="LICENSE";
+		packageParameters[0].includeFilePaths[3]="README.md";
+		packageParameters[1]=new PackageParameters();
+		packageParameters[1].packagePath="/build/RetailClerk90_DEBUG.zip";
+		packageParameters[1].includeFilePaths=new String[4];
+		packageParameters[1].includeFilePaths[0]="/build/RetailClerk90_DEBUG.bin";
+		packageParameters[1].includeFilePaths[1]="CREDITS";
+		packageParameters[1].includeFilePaths[2]="LICENSE";
+		packageParameters[1].includeFilePaths[3]="README.md";
+		packageParameters[2]=new PackageParameters();
+		packageParameters[2].packagePath="/build/RetailClerk90_ATGAMES.zip";
+		packageParameters[2].includeFilePaths=new String[4];
+		packageParameters[2].includeFilePaths[0]="/build/RetailClerk90_ATGAMES.bin";
+		packageParameters[2].includeFilePaths[1]="CREDITS";
+		packageParameters[2].includeFilePaths[2]="LICENSE";
+		packageParameters[2].includeFilePaths[3]="README.md";
+		instructions.packageParameters=packageParameters;
+	
+		/* ***********************************************************
+		* Print result
+		*********************************************************** */
 		String json=(new Gson()).toJson(instructions);
 		System.out.println(json);
+	
 	}
 
 }

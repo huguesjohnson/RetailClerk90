@@ -31,6 +31,8 @@ public class SpriteParameters implements Serializable{
 	public SpriteDefinition[] sprites;
 	public String palettePath;
 	public String includeFilePath;
+	public String nameLookupTableFilePath;
+	public String nameFilePath;
 	public String characterDefinitionFilePath;
 	public String constantDefinitionPath;
 	public String baseId;

@@ -3,12 +3,13 @@
 ; (Almost) All the game text is in one file to make it easier if that happens.
 ;
 ; The best way to go about it is:
-;  1) Copy this file and rename it to 'string_[locale].X68'
+;  1) Copy the /en-us/ folder and rename
 ;  2) Painfully change all the text
 ;  3) Not rename any of the labels
 ;  4) Change the include path in the main file
 ;  5) Change version in init_Header to avoid confusion
-;  6) Rebuild
+;  6) NPC names need to be updated in the build file
+;  7) Rebuild
 ;
 ; Things that will make translations difficult:
 ;  1) In the overhead view, the dialog displays a fixed 22 chars per row
@@ -380,6 +381,14 @@ DialogTextNothingHappens:
 ;	dc.b	"Did you see the new",LF
 ;	dc.b	"games that came in?",ETX
 
+
+	align 2
+DialogTextTest:
+	dc.w	OBJ_NPC_ERYN
+	;		"1234567890123456789012"
+	dc.b	"Blah blah blah",LF
+	dc.b	"whatever who cares?",ETX
+
 ;-------------------------------------------------------------------------------
 ; menus
 ;-------------------------------------------------------------------------------
@@ -676,7 +685,6 @@ Day06IntroTip5:
 Day06IntroTip6:
 	;		"1234567890123456789012345678901234567890"
 	dc.b	"",ETX
-
 
 ;-------------------------------------------------------------------------------
 ; status screen

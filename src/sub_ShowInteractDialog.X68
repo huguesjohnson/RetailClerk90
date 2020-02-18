@@ -1,15 +1,15 @@
-ShowSelectionDialog:
+ShowInteractDialog:
 	move.w	(MEM_ACTION_TARGET_OBJID),d7	; move target object ID to d7
 	andi.w	#$0FFF,d7	; clear the base value
 	mulu.w	#$4,d7	; multiply by 4 to get the offset
 	move.w	(MEM_ACTION_TARGET_OBJID),d6	; copy action target to d6
 	andi.w	#OBJ_SCENE_BASE,d6	; and against OBJ_SCENE_BASE
-	beq.s	ShowSelectionDialogNPC	; if result is zero then this is not scenery
+	beq.s	ShowInteractDialogNPC	; if result is zero then this is not scenery
 	lea	ObjectNameTable,a6	; point to default object text table
-	bra.s	ShowSelectionDialogScenery	; branch to next step
-ShowSelectionDialogNPC:	; target object is an NPC
+	bra.s	ShowInteractDialogScenery	; branch to next step
+ShowInteractDialogNPC:	; target object is an NPC
 	lea	NPCNameTable,a6	; point to default npc text table
-ShowSelectionDialogScenery:
+ShowInteractDialogScenery:
 	adda.l	d7,a6	; add offset
 	move.l	(a6),(MEM_DIALOG_TEXT)	; copy value at a6 to MEM_DIALOG_TEXT
 	; set dialog flags to display the dialog

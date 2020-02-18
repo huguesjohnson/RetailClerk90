@@ -7,16 +7,58 @@ ActionScriptNullEvent:
 ;*******************************************************************************
 ; used for lookup table conditions that only ever show default look text
 ;*******************************************************************************
-ActionScriptDefaultLook:
+ActionScriptDefaultInteract:
 	bsr.w	ShowDefaultText
 	rts
 
 ;*******************************************************************************
-; used for lookup table conditions that show default use text (no npcs)
+; default exit scene handler
 ;*******************************************************************************
-ActionScriptDefaultUse:
-	lea	DialogTextNothingHappens,a6	; load default text
-	move.l	a6,MEM_DIALOG_TEXT	; copy address to MEM_DIALOG_TEXT
+DefaultExitScene:
+	; determine which exit is being used based on sprite direction
+	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d6	; copy player direction to d6
+	mulu.w	#$2,d6	; multiply by 2 to get offset
+	lea	MEM_ACTIVE_SCENE_EXIT_S,a6	; point a6 to the first exit
+	adda.l	d6,a6	; add offset
+	move.w	(a6),d6	; copy location to d6
+	; this check shouldn't be needed unless I made a catastrophic error
+	cmpi.w	#$FFFF,d6	; is this a valid exit?
+	beq.w	ExitDefaultExit	; if not a valid exit then exit subroutine
+DefaultExitSceneLoadNewScene:
+	mulu.w	#$4,d6	; multiply by 4 to get offset
+	lea	SceneDefinitionTable,a6	; point a6 to the scene definition table
+	adda.l	d6,a6	; add offset
+	move.l	(a6),a6	; have a6 point to the value at a6
+	bsr.w	LoadScene	; branch to LoadScene subroutine
+	bsr.w	LoadPlayerSprite	; load the player sprite
+	; move player to the correct position
+	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d6	; copy player direction to d6
+	;---------------------------------------------------------------------------
+	; adjust player sprite x/y
+	;---------------------------------------------------------------------------
+DefaultExitSceneTestDown:
+	cmpi.w	#DIRECTION_DOWN,d6	; test for down
+	bne.s	DefaultExitSceneTestUp	; direction is not down, test for up
+	move.w	#SCENE_ENTER_TOP,(MEM_PLAYER_SPRITE_Y)	; update y location
+	bra.w	DefaultExitSceneFixSprites	; exit
+DefaultExitSceneTestUp:
+	cmpi.w	#DIRECTION_UP,d6	; test for up
+	bne.s	DefaultExitSceneTestLeft	; direction is not up, test for left
+	move.w	#SCENE_ENTER_BOTTOM,(MEM_PLAYER_SPRITE_Y)	; update y location
+	bra.s	DefaultExitSceneFixSprites	; exit
+DefaultExitSceneTestLeft:
+	cmpi.w	#DIRECTION_LEFT,d6	; test for left
+	bne.s	DefaultExitSceneTestRight	; direction is not left, test for right
+	move.w	#SCENE_ENTER_RIGHT,(MEM_PLAYER_SPRITE_X)	; update x location
+	bra.s	DefaultExitSceneFixSprites	; exit
+DefaultExitSceneTestRight:
+	cmpi.w	#DIRECTION_RIGHT,d6	; test for right
+	bne.s	DefaultExitSceneFixSprites	; should be unreachable
+	move.w	#SCENE_ENTER_LEFT,(MEM_PLAYER_SPRITE_X)	; update x location
+DefaultExitSceneFixSprites:
+	bsr.w	FixSprites ; fix all the sprites
+ExitDefaultExit:
+	bsr.w	FadeIn ; fade in now that everything is loaded
 	rts
 
 ;*******************************************************************************
@@ -64,21 +106,4 @@ EndGame:
 ;	include	'actionscript/ActionScriptDay05.X68'
 ;	include	'actionscript/ActionScriptDay06.X68'
 ;	include	'actionscript/ActionScriptDay07.X68'
-
-;*******************************************************************************
-; default event processing routines
-;*******************************************************************************
-
-;-------------------------------------------------------------------------------
-; player uses a radio
-;-------------------------------------------------------------------------------
-DefaultRadioUse:
-	; setup 4 choice dialog	
-	move.l	(MEM_DIALOG_FLAGS),d6	; copy dialog flags to d7
-	bset.l	#DIALOG_FLAG_STYLE_TEXT_4CHOICE,d6	; set text choice flag
-	bclr.l	#DIALOG_FLAG_STYLE_TITLED,d6	; clear the titled flag
-	move.l	d6,(MEM_DIALOG_FLAGS)	; save it back
-	lea	RadioMenu,a6	; load text
-	move.l	a6,MEM_DIALOG_TEXT	; copy address to MEM_DIALOG_TEXT
-	rts
 

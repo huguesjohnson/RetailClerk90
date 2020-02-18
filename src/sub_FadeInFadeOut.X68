@@ -61,5 +61,9 @@ FadeFrameDelay:
 	move.w	#FADE_FRAME_DELAY,d4	; copy frame delay to d6
 FadeFrameDelayLoop:
 	bsr.w	WaitVBlank	; force waiting for a frame
+	move.b	(MEM_CONTROL_6_HELD),d6	; copy pressed buttons to d6
+	andi.b	#BUTTON_Z,d6	; test if the Z button is held
+	bne.s	FadeFrameDelayExit	; Z button is held, skip test
 	dbf.w	d4,FadeFrameDelayLoop	; frame delay loop
+FadeFrameDelayExit:
 	rts	; exit

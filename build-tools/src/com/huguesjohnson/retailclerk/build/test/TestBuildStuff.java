@@ -171,6 +171,8 @@ class TestBuildStuff extends TestCase{
 		sprites.includeFilePath="src/inc_SpriteTiles.X68";
 		sprites.characterDefinitionFilePath="src/data_CharacterDefinitions.X68";
 		sprites.constantDefinitionPath="src/const_CharacterIDs.X68";
+		sprites.nameFilePath="src/text/en-us/CharacterNames.X68";
+		sprites.nameLookupTableFilePath="src/text/table_CharacterNames.X68";
 		sprites.baseId="2000";
 		sprites.sprites=new SpriteDefinition[2];
 		sprites.sprites[0]=new SpriteDefinition();

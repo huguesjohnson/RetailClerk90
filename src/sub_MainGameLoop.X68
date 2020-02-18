@@ -89,9 +89,15 @@ TestDialog:
 	btst.l	#STATE_FLAG_DIALOG,d7 ; test game state
 	beq.w	TestStatusScreen	; dialog not displaying, move to next test
 TestDialogUpdateFrequency:
+	move.b	(MEM_CONTROL_6_HELD),d6	; copy pressed buttons to d6
+	andi.b	#BUTTON_Z,d6	; test if the Z button is held
+	bne.s	.1	; Z button is held, skip test
 	cmpi.w	#DIALOG_UPDATE_FREQUENCY,(MEM_FRAME_COUNTER); is it time to update?
 	blt.s	TestDialogOpen	; branch if it's not time to move
-	blt.w	MainGameLoop	; branch i6f it's not time to move
+	; how would this test ever be different than the previous one?
+	; what was I thinking here? commenting out for now
+	;blt.w	MainGameLoop	; branch if it's not time to move
+.1	
 	move.w	#$0000,(MEM_FRAME_COUNTER)	; reset counter to 0	
 	bsr.w	ProcessDialog	; dialog is set, jump to process dialog sub-routine
 	bra.w	MainGameLoop	; return to start of game loop
@@ -150,19 +156,26 @@ TestAButtonPressed: ; test if the player pressed the A button
 	bsr.w	FindActionTarget	; find the target of the player's action
 	cmpi.w	#OBJ_NOTHING,(MEM_ACTION_TARGET_OBJID)	; is the target nothing?
 	beq.s	NoActionTarget	; branch if no target
-	bsr.w	ShowSelectionDialog	; otherwise show a selection dialog
+	bsr.w	ProcessAction
+;	bsr.w	ShowInteractDialog	; otherwise show a selection dialog
 	bra.w	MainGameLoop	; return to start of game loop
 NoActionTarget: 	; if target is 0 then display the default message
-	bsr.w	ShowDefaultText	; show the default text
+	lea	DialogTextNothing,a6	; load default text
+	move.l	a6,MEM_DIALOG_TEXT	; copy address to MEM_DIALOG_TEXT
 	bsr.w	SetDialogOpening	; set dialog state to opening
 	bra.w	MainGameLoop	; return to start of game loop
 ;-------------------------------------------------------------------------------
 ; determine if sprites need to be moved and move them
 ;-------------------------------------------------------------------------------
 MainGameLoopUpdateSprites:
+	; if Z button is held then skip the test
+	move.b	(MEM_CONTROL_6_HELD),d6	; copy pressed buttons to d6
+	andi.b	#BUTTON_Z,d6	; test if the Z button is held
+	bne.s	.1	; Z button is held, skip test
 	; test if it's time to move sprites
 	cmpi.w	#SPRITE_MOVE_FREQUENCY,(MEM_FRAME_COUNTER); is it time to move?
 	blt.w	MainGameLoopEnd	; exit if it's not time to move
+.1
 	; move the player sprite
 	move.w	#$0000,(MEM_FRAME_COUNTER)	; reset counter to 0
 	bsr.w	MovePlayer	; move the player sprite
@@ -373,7 +386,7 @@ TestIntroScreenLoadScene:
 	; determine which scene to load
 	move.w	(MEM_ACTIVE_SCENE_EXIT_N),d6	; copy any exit to d6
 	mulu.w	#LWORD_SIZE,d6	; SceneDefinitionTable entries are long values
-	lea	SceneDefinitionTable,a5	; point to action table
+	lea	SceneDefinitionTable,a5	; point to scene table
 	adda.w	d6,a5	; move to offset location
 	move.l	(a5),a6	; a5 has the address of the scene to load
 	bsr.w	LoadScene	; branch to LoadScene subroutine

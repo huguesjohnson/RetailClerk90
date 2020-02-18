@@ -271,6 +271,8 @@
       "includeFilePath":"src/inc_SpriteTiles.X68",
       "characterDefinitionFilePath":"src/data_CharacterDefinitions.X68",
       "constantDefinitionPath":"src/const_CharacterIDs.X68",
+      "nameLookupTableFilePath":"src/text/table_CharacterNames.X68",
+      "nameFilePath":"src/text/en-us/CharacterNames.X68",
       "baseId":"2000"
    },
    "header":{ 

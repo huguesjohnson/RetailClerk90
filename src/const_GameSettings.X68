@@ -111,8 +111,8 @@ CHARACTER_DEFINITION_SIZE=CharacterDefinitionErynEnd-CharacterDefinitionErynStar
 ; dialog settings
 ;-------------------------------------------------------------------------------
 DIALOG_PATTERN_SIZE=$0124	; size of dialog pattern (#tiles*2+4 for loop ctrl)
-DIALOG_BASE_TILE_LOW=FONT_VDP/$0020 ;$0090	; base tile for dialogs (low)
-DIALOG_BASE_TILE=DIALOG_BASE_TILE_LOW+$8000 ;$8400	; base tile for dialogs
+DIALOG_BASE_TILE_LOW=FONT_VDP/$0020	; base tile for dialogs (low)
+DIALOG_BASE_TILE=DIALOG_BASE_TILE_LOW+$8000	; base tile for dialogs
 DIALOG_ROWCOL=$09100000	; row 18 column 16=(128*18)+16=2320=910
 DIALOG_TEXT_AREA_ROWCOL=$0A900000	; DIALOG_ROWCOL + 3 rows
 DIALOG_TEXT_ROWCOL=$0A920000	; DIALOG_ROWCOL + 3 rows + 1 column
@@ -169,7 +169,7 @@ PALETTE_SET_SIZE=$80	; size of 4 palettes
 ;-------------------------------------------------------------------------------
 ; action table settings
 ;-------------------------------------------------------------------------------
-SCENE_COUNT=$20	; total number of scenes
+SCENE_COUNT=$1F	; total number of scenes
 ACTION_COUNT=$03	; total number of actions
 ACTION_COUNT_X4=(ACTION_COUNT*4)
 SCENE_COUNT_X_ACTION_COUNT_X4=(SCENE_COUNT*ACTION_COUNT_X4)
@@ -179,4 +179,4 @@ SCENE_COUNT_X_ACTION_COUNT_X4=(SCENE_COUNT*ACTION_COUNT_X4)
 ;-------------------------------------------------------------------------------
 MAX_ITEMS=$04	; maximum number of items the player can carry
 TITLE_SCREEN_COUNTER_START=$2800	; how long to display title before reset
-NPC_NAME_TABLE_SIZE=NPCNameTableEnd-NPCNameTable
+NPC_NAME_TABLE_SIZE=CharacterNameTableEnd-CharacterNameTableStart

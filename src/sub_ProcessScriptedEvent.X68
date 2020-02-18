@@ -110,7 +110,11 @@ ScriptedEventDrawScene:
 	move.w	#EVENT_FRAME_DELAY,d7	; copy delay to d7
 ScriptedEventFadeInDelayLoop:
 	bsr.w	WaitVBlank
+	move.b	(MEM_CONTROL_6_HELD),d6	; copy pressed buttons to d6
+	andi.b	#BUTTON_Z,d6	; test if the Z button is held
+	bne.s	.1	; Z button is held, skip test
 	dbf	d7,ScriptedEventFadeInDelayLoop	; loop until counter is zero
+.1
 	bsr.w	FadeIn	; fade in to the new scene
 	bra.w	ExitProcessScriptedEvent	; exit
 ScriptedEventChangePlayerSprite:

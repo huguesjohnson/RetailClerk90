@@ -10,8 +10,34 @@ ShowDefaultText:
 	lea	DefaultObjectDescriptionTable,a6	; point to default object text table
 	bra.s	.2
 .1	; npc
-	lea	DefaultNPCDescriptionTable,a6	; point to default npc text table
+	lea	CharacterInteractTextTableStart,a6	; point to text table
 .2
+
+	;---------------------------------------------------------------------------
+	; setup the dialog
+	;---------------------------------------------------------------------------
+
+
+;	lea	NPCNameTable,a6	; point to default npc text table
 	adda.l	d7,a6	; add offset
-	move.l	(a6),(MEM_DIALOG_TEXT)	; copy value at a6 to MEM_DIALOG_TEXT
+
+	lea DialogTextTest,a6
+
+	move.l	a6,(MEM_DIALOG_TEXT)	; copy value at a6 to MEM_DIALOG_TEXT
+	
+	; set dialog flags to display the dialog
+	move.l	(MEM_DIALOG_FLAGS),d7	; copy current dialog state to d7
+	bset.l	#DIALOG_FLAG_TEXT_OPENING,d7	; change state to opening
+	bset.l	#DIALOG_FLAG_STYLE_TITLED,d7	; set the titled flag
+;	bset.l	#DIALOG_FLAG_STYLE_MENU,d7	; set style to overworld menu
+;	bset.l	#DIALOG_FLAG_SELECTION_WAIT,d7	; set flag to wait for selection
+	move.l	d7,(MEM_DIALOG_FLAGS)	; save changes made to the game state
+	move.l	(MEM_GAME_STATE),d7	; copy current game state to d7
+	bset.l	#STATE_FLAG_DIALOG,d7	; set the dialog bit
+	move.l	d7,(MEM_GAME_STATE) ; copy game state back to d7
+
+
+
+;	adda.l	d7,a6	; add offset
+;	move.l	(a6),(MEM_DIALOG_TEXT)	; copy value at a6 to MEM_DIALOG_TEXT
 	rts

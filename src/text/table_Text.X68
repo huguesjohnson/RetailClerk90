@@ -8,13 +8,19 @@ DefaultObjectDescriptionTable:
 DefaultObjectDescriptionTableEnd:
 
 ;-------------------------------------------------------------------------------
-; default npc descriptions
+; default character descriptions
 ;-------------------------------------------------------------------------------
-DefaultNPCDescriptionTable:
-	dc.l	$00000000
-;	; nothing
-;	dc.l	DialogTextNothing
-DefaultNPCDescriptionTableEnd:
+CharacterInteractTextTableStart:
+	dc.l	DialogTextTest
+	dc.l	DialogTextTest
+	dc.l	DialogTextTest
+	dc.l	DialogTextTest
+	dc.l	DialogTextTest
+	dc.l	DialogTextTest
+	dc.l	DialogTextTest
+	dc.l	DialogTextTest
+	dc.l	DialogTextTest
+CharacterInteractTextTableEnd:
 
 ;-------------------------------------------------------------------------------
 ; object names

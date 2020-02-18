@@ -187,9 +187,10 @@ PaletteBlack:
 	include	'table_SceneDefinitions.X68'
 
 ;*******************************************************************************
-; default object text table
+; lookup tables for text
 ;*******************************************************************************
-	include	'table_Text.X68'
+	include	'text/table_Text.X68'
+	include	'text/table_CharacterNames.X68'
 
 ;*******************************************************************************
 ; action table
@@ -206,7 +207,8 @@ PaletteBlack:
 ;*******************************************************************************
 ; text
 ;*******************************************************************************
-	include 'strings_en-us.X68'
+	include 'text/en-us/strings.X68'
+	include 'text/en-us/CharacterNames.X68'
 
 ;*******************************************************************************
 ; background music

@@ -1,7 +1,7 @@
 /*
 BuildToolsForRetailClerk90
 
-Copyright (c) 2019 Hugues Johnson
+Copyright (c) 2019-2020 Hugues Johnson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files(the "Software"), to deal in 
@@ -23,13 +23,13 @@ THE SOFTWARE.
 */
 package com.huguesjohnson.retailclerk.build;
 
-import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Map;
 
+import javax.imageio.IIOException;
 import javax.imageio.ImageIO;
 
 import com.huguesjohnson.PathResolver;
@@ -40,12 +40,14 @@ public abstract class ExtractPalette{
 	public static void extract(String basePath,Map<String,String> sourceDestinationMap,String includeFilePath){
 		FileWriter paletteWriter=null;
 		FileWriter includeWriter=null;
+		String sourceFilePath=null;
+		String outputFilePath=null;
 		try{
 			includeFilePath=basePath+includeFilePath;
 			includeWriter=new FileWriter(includeFilePath);
 			for(Map.Entry<String,String> entry:sourceDestinationMap.entrySet()){
-				String sourceFilePath=basePath+entry.getKey();
-				String outputFilePath=basePath+entry.getValue();
+				sourceFilePath=basePath+entry.getKey();
+				outputFilePath=basePath+entry.getValue();
 				paletteWriter=new FileWriter(outputFilePath);
 				File sourceFile=new File(sourceFilePath);
 				BufferedImage image=ImageIO.read(sourceFile);
@@ -102,6 +104,10 @@ public abstract class ExtractPalette{
 		    }
 			includeWriter.flush();
 			includeWriter.close();
+		}catch(IIOException iiox){
+			iiox.printStackTrace();
+			System.err.println("sourceFilePath="+sourceFilePath);
+			System.err.println("outputFilePath="+outputFilePath);
 		}catch(Exception x){
 			x.printStackTrace();			
 		}finally{

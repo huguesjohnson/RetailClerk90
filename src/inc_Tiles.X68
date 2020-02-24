@@ -36,6 +36,10 @@ FrameRectTilesStart:
 	include 'tiles/scene-tiles/frame-rect.X68'
 FrameRectTilesEnd:
 
+GlassTilesStart:
+	include 'tiles/scene-tiles/glass.X68'
+GlassTilesEnd:
+
 FrameRoundTilesStart:
 	include 'tiles/scene-tiles/frame-round.X68'
 FrameRoundTilesEnd:

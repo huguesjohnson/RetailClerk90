@@ -14,7 +14,7 @@ ProcessAction:
 	; have the NPC face the player
 	move.w (MEM_ACTION_TARGET_NPCID),d7	; copy NPC target ID to d7
 	cmpi.w	#$FFFF,d7	; test if it is -1 - this should not happen of course
-	beq.s	.1	; skip if -1
+	beq.s	ProcessActionBuildActionTableOffset	; skip if -1
 	lea	MEM_NPC0_SPRITE_ID,a6	; point a6 to the first NPC sprite
 	move.w	(MEM_ACTION_TARGET_NPCID),d6	; copy target NPC id to d6
 	mulu.w	#NPC_RECORD_SIZE,d6	; multiply by NPC_RECORD_SIZE to get offset
@@ -26,27 +26,6 @@ ProcessAction:
 	; flip the last bit to reverse direction
 	eor.w	#$0001,(STRUCT_SPRITE_DIRECTION,a6)
 	bsr.w	StopSprite	; stop moving the sprite
-.1
-	;---------------------------------------------------------------------------
-	; setup the dialog
-	;---------------------------------------------------------------------------
-
-
-;	lea	NPCNameTable,a6	; point to default npc text table
-;	adda.l	d7,a6	; add offset
-;	move.l	(a6),(MEM_DIALOG_TEXT)	; copy value at a6 to MEM_DIALOG_TEXT
-;	; set dialog flags to display the dialog
-;	move.l	(MEM_DIALOG_FLAGS),d7	; copy current dialog state to d7
-;	bset.l	#DIALOG_FLAG_TEXT_OPENING,d7	; change state to opening
-;	bset.l	#DIALOG_FLAG_STYLE_TITLED,d7	; set the titled flag
-;	bset.l	#DIALOG_FLAG_STYLE_MENU,d7	; set style to overworld menu
-;	bset.l	#DIALOG_FLAG_SELECTION_WAIT,d7	; set flag to wait for selection
-;	move.l	d7,(MEM_DIALOG_FLAGS)	; save changes made to the game state
-;	move.l	(MEM_GAME_STATE),d7	; copy current game state to d7
-;	bset.l	#STATE_FLAG_DIALOG,d7	; set the dialog bit
-;	move.l	d7,(MEM_GAME_STATE) ; copy game state back to d7
-
-
 ProcessActionBuildActionTableOffset:
 	bsr.w	BuildActionTableOffset	; build action table offset
 	lea	ActionTable,a5	; point to action table
@@ -57,14 +36,8 @@ ProcessActionBuildActionTableOffset:
 	; returning from the action
 	; if the dialog is now titled style then some extra setup is needed
 	;---------------------------------------------------------------------------
-;	move.l	(MEM_DIALOG_FLAGS),d7	; copy flags to d7
-;	btst.l	#DIALOG_FLAG_STYLE_TITLED,d7	; test if flag is set
-;	beq.s	ExitProcessAction
-;	bset.l	#DIALOG_FLAG_TEXT_TITLE_DRAWING,d7	; change state to title drawing
-;	move.l	d7,(MEM_DIALOG_FLAGS)	; save updated flags
-;	bsr.w	ClearDialog	; clear the dialog
-;	move.l	#(VDP_VRAM_WRITE_A+DIALOG_TITLE_ROWCOL),(MEM_DIALOG_VDP)
-;	bsr.w	ProcessDialogLookupNPCName	; lookup the NPC name
+	; to do - determine what (if anything) still needs to be done here now 
+
 ExitProcessAction:
 	move.l	(MEM_GAME_STATE),d7	; copy current game state to d7
 	bclr.l	#STATE_FLAG_ACTION,d7 ; clear action flag

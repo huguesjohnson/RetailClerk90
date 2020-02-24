@@ -156,8 +156,8 @@ TestAButtonPressed: ; test if the player pressed the A button
 	bsr.w	FindActionTarget	; find the target of the player's action
 	cmpi.w	#OBJ_NOTHING,(MEM_ACTION_TARGET_OBJID)	; is the target nothing?
 	beq.s	NoActionTarget	; branch if no target
+	move.w	#ACTION_INTERACT,(MEM_ACTION_ID)
 	bsr.w	ProcessAction
-;	bsr.w	ShowInteractDialog	; otherwise show a selection dialog
 	bra.w	MainGameLoop	; return to start of game loop
 NoActionTarget: 	; if target is 0 then display the default message
 	lea	DialogTextNothing,a6	; load default text

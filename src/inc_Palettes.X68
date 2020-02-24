@@ -31,6 +31,66 @@ PaletteDayIntro01:
 PaletteDayIntro02:
 	include 'palettes/DayIntro02.X68'
 
+PaletteBasementFloor:
+	include 'palettes/BasementFloor.X68'
+
+PaletteBasementWall:
+	include 'palettes/BasementWall.X68'
+
+PaletteBasementCafe:
+	include 'palettes/BasementCafe.X68'
+
+PaletteBasementMDorm:
+	include 'palettes/BasementMDorm.X68'
+
+PaletteBasementOffice:
+	include 'palettes/BasementOffice.X68'
+
+PaletteBasementWDorm:
+	include 'palettes/BasementWDorm.X68'
+
+PaletteCavern00:
+	include 'palettes/Cavern00.X68'
+
+PaletteCavern01:
+	include 'palettes/Cavern01.X68'
+
+PaletteCavern02:
+	include 'palettes/Cavern02.X68'
+
+PaletteCheckers00:
+	include 'palettes/Checkers00.X68'
+
+PaletteCheckers01:
+	include 'palettes/Checkers01.X68'
+
+PaletteCheckers02:
+	include 'palettes/Checkers02.X68'
+
+PaletteCNow00:
+	include 'palettes/CNow00.X68'
+
+PaletteCNow01:
+	include 'palettes/CNow01.X68'
+
+PaletteCNow02:
+	include 'palettes/CNow02.X68'
+
+PaletteCenter00:
+	include 'palettes/Center00.X68'
+
+PaletteCenter01:
+	include 'palettes/Center01.X68'
+
+PaletteCPlanet00:
+	include 'palettes/CPlanet00.X68'
+
+PaletteCPlanet01:
+	include 'palettes/CPlanet01.X68'
+
+PaletteCPlanet02:
+	include 'palettes/CPlanet02.X68'
+
 PaletteDenimCountry00:
 	include 'palettes/DenimCountry00.X68'
 
@@ -39,4 +99,139 @@ PaletteDenimCountry01:
 
 PaletteDenimCountry02:
 	include 'palettes/DenimCountry02.X68'
+
+PaletteEEHall:
+	include 'palettes/EEHall.X68'
+
+PaletteEWHall:
+	include 'palettes/EWHall.X68'
+
+PaletteFCBFloorWall:
+	include 'palettes/FCBFloorWall.X68'
+
+PaletteFCBCamping00:
+	include 'palettes/FCBCamping00.X68'
+
+PaletteFCBCamping01:
+	include 'palettes/FCBCamping01.X68'
+
+PaletteFCBCheckout00:
+	include 'palettes/FCBCheckout00.X68'
+
+PaletteFCBCheckout01:
+	include 'palettes/FCBCheckout01.X68'
+
+PaletteFCBFirearms00:
+	include 'palettes/FCBFirearms00.X68'
+
+PaletteFCBFirearms01:
+	include 'palettes/FCBFirearms01.X68'
+
+PaletteFCBFishing00:
+	include 'palettes/FCBFishing00.X68'
+
+PaletteFCBFishing01:
+	include 'palettes/FCBFishing01.X68'
+
+PaletteNShack00:
+	include 'palettes/NShack00.X68'
+
+PaletteNShack01:
+	include 'palettes/NShack01.X68'
+
+PaletteNShack02:
+	include 'palettes/NShack02.X68'
+
+PaletteParkingLot00:
+	include 'palettes/ParkingLot00.X68'
+
+PaletteParkingLot01:
+	include 'palettes/ParkingLot01.X68'
+
+PaletteParkingLot02:
+	include 'palettes/ParkingLot02.X68'
+
+PalettePogoDawg00:
+	include 'palettes/PogoDawg00.X68'
+
+PalettePogoDawg01:
+	include 'palettes/PogoDawg01.X68'
+
+PalettePogoDawg02:
+	include 'palettes/PogoDawg02.X68'
+
+PaletteSHall:
+	include 'palettes/SHall.X68'
+
+PaletteSouthCenter:
+	include 'palettes/SouthCenter.X68'
+
+PaletteSVideo00:
+	include 'palettes/SVideo00.X68'
+
+PaletteSVideo01:
+	include 'palettes/SVideo01.X68'
+
+PaletteSVideo02:
+	include 'palettes/SVideo02.X68'
+
+PaletteTBooks00:
+	include 'palettes/TBooks00.X68'
+
+PaletteTBooks01:
+	include 'palettes/TBooks01.X68'
+
+PaletteTBooks02:
+	include 'palettes/TBooks02.X68'
+
+PaletteTLodge00:
+	include 'palettes/TLodge00.X68'
+
+PaletteTLodge01:
+	include 'palettes/TLodge01.X68'
+
+PaletteTLodge02:
+	include 'palettes/TLodge02.X68'
+
+PaletteVB00:
+	include 'palettes/VB00.X68'
+
+PaletteVB01:
+	include 'palettes/VB01.X68'
+
+PaletteVB02:
+	include 'palettes/VB02.X68'
+
+PaletteWEHall:
+	include 'palettes/WEHall.X68'
+
+PaletteWWFloorWall:
+	include 'palettes/WWFloorWall.X68'
+
+PaletteWWAppliances00:
+	include 'palettes/WWAppliances00.X68'
+
+PaletteWWAppliances01:
+	include 'palettes/WWAppliances01.X68'
+
+PaletteWWAudio00:
+	include 'palettes/WWAudio00.X68'
+
+PaletteWWAudio01:
+	include 'palettes/WWAudio01.X68'
+
+PaletteWWCheckout00:
+	include 'palettes/WWCheckout00.X68'
+
+PaletteWWCheckout01:
+	include 'palettes/WWCheckout01.X68'
+
+PaletteWWTV00:
+	include 'palettes/WWTV00.X68'
+
+PaletteWWTV01:
+	include 'palettes/WWTV01.X68'
+
+PaletteWWHall:
+	include 'palettes/WWHall.X68'
 

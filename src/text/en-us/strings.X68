@@ -1,31 +1,3 @@
-;*******************************************************************************
-; There's a 0.000001% chance this will ever be translated to another language.
-; (Almost) All the game text is in one file to make it easier if that happens.
-;
-; The best way to go about it is:
-;  1) Copy the /en-us/ folder and rename
-;  2) Painfully change all the text
-;  3) Not rename any of the labels
-;  4) Change the include path in the main file
-;  5) Change version in init_Header to avoid confusion
-;  6) NPC names need to be updated in the build file
-;  7) Rebuild
-;
-; Things that will make translations difficult:
-;  1) In the overhead view, the dialog displays a fixed 22 chars per row
-;  2) Game font only includes ASCII, unused chars could be re-purposed though
-;  3) The game logo text is not in this file
-;  4) Character & item names are also restricted to small values
-;
-; The second item is the one I feel worst about..
-; It makes adding non-English characters a complete nightmare.
-; Another option would be extending the dialog font but that has issues too..
-; Hint: If you try doing that also make sure to update DIALOG_BASE_TILE.
-;
-; Yes, this script was written by a native English speaker.
-; I know that is very difficult to believe.
-;*******************************************************************************
-
 ;-------------------------------------------------------------------------------
 ; character constants
 ;-------------------------------------------------------------------------------
@@ -315,79 +287,99 @@ DialogTextNothingHappens:
 	dc.b	"Nothing happens.",ETX
 
 ;-------------------------------------------------------------------------------
-; information desk
-;-------------------------------------------------------------------------------
-
-;	align 2
-;DialogTextInfoDeskDay00R0:	; mall news
-;	dc.w	OBJ_NPC_CENTER_STAFF
-;	;		"1234567890123456789012"
-;	dc.b	"Santa's Workshop",LF
-;	dc.b	"opened this morning. ^",FF
-;	dc.b	"It was already very",LF
-;	dc.b	"busy there today.",ETX
-
-;	align 2
-;DialogTextInfoDeskDay00R1:	; events
-;	dc.w	OBJ_NPC_CENTER_STAFF
-;	;		"1234567890123456789012"
-;	dc.b	"The mall opens at 6:00",LF
-;	dc.b	"AM on Black Friday!",ETX
-
-;	align 2
-;DialogTextInfoDeskDay00R2:	; store news
-;	dc.w	OBJ_NPC_CENTER_STAFF
-;	;		"1234567890123456789012"
-;	dc.b	"We now have a Fish or",LF
-;	dc.b	"Cut Bait store.      ^",FF
-;	dc.b	"All their employees",LF
-;	dc.b	"dress as lumberjacks.",ETX
-
-;	align 2
-;DialogTextInfoDeskDay00R3:	; rumors
-;	dc.w	OBJ_NPC_CENTER_STAFF
-;	;		"1234567890123456789012"
-;	dc.b	"I really shouldn't",LF
-;	dc.b	"tell you this but..  ^",FF
-;	dc.b	"One store isn't doing",LF
-;	dc.b	"well & might close.  ^",FF
-;	dc.b	"It might happen at the",LF
-;	dc.b	"end of the year.",ETX
-
-;-------------------------------------------------------------------------------
-; default object descriptions
-;-------------------------------------------------------------------------------
-;DialogText8Bit:
-;	;		"1234567890123456789012"
-;	dc.b	"The shelves are lined",LF
-;	dc.b	"with 8-bit games.",ETX
-
-;-------------------------------------------------------------------------------
-; default NPC descriptions
-;-------------------------------------------------------------------------------
-;DialogTextMaleShopper00DefaultLook:
-;	;		"1234567890123456789012"
-;	dc.b	"He has been browsing",LF
-;	dc.b	"for over an hour now.",ETX
-
-
-;-------------------------------------------------------------------------------
 ; default NPC talk responses
 ;-------------------------------------------------------------------------------
-;	align 2
-;DialogTextGreenbergDefaultTalk:
-;	dc.w	OBJ_NPC_GREENBERG
-;	;		"1234567890123456789012"
-;	dc.b	"Did you see the new",LF
-;	dc.b	"games that came in?",ETX
-
-
 	align 2
-DialogTextTest:
+DialogTextUnknownNPC:
+	dc.w	$2000
+	;		"1234567890123456789012"
+	dc.b	"If you see this then I",LF
+	dc.b	"really messed up. (hj)",ETX
+
+DialogTextErynDay00:
+DialogTextErynDay01:
+DialogTextErynDay02:
+DialogTextErynDay03:
+DialogTextErynDay04:
+DialogTextErynDay05:
+	align 2
+DialogTextErynDay06:
 	dc.w	OBJ_NPC_ERYN
 	;		"1234567890123456789012"
-	dc.b	"Blah blah blah",LF
-	dc.b	"whatever who cares?",ETX
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextCarlDay00:
+	dc.w	OBJ_NPC_CARL
+	;		"1234567890123456789012"
+	dc.b	"This is my day 00",LF
+	dc.b	"text.",ETX
+DialogTextCarlDay01:
+DialogTextCarlDay02:
+DialogTextCarlDay03:
+DialogTextCarlDay04:
+DialogTextCarlDay05:
+	align 2
+DialogTextCarlDay06:
+	dc.w	OBJ_NPC_CARL
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextFrankDay00:
+	dc.w	OBJ_NPC_FRANK
+	;		"1234567890123456789012"
+	dc.b	"This is my day 00",LF
+	dc.b	"text.",ETX
+DialogTextFrankDay01:
+DialogTextFrankDay02:
+DialogTextFrankDay03:
+DialogTextFrankDay04:
+DialogTextFrankDay05:
+	align 2
+DialogTextFrankDay06:
+	dc.w	OBJ_NPC_FRANK
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextCarolDay00:
+	dc.w	OBJ_NPC_CAROL
+	;		"1234567890123456789012"
+	dc.b	"This is my day 00",LF
+	dc.b	"text.",ETX
+DialogTextCarolDay01:
+DialogTextCarolDay02:
+DialogTextCarolDay03:
+DialogTextCarolDay04:
+DialogTextCarolDay05:
+	align 2
+DialogTextCarolDay06:
+	dc.w	OBJ_NPC_CAROL
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextLisaDay00:
+	dc.w	OBJ_NPC_LISA
+	;		"1234567890123456789012"
+	dc.b	"This is my day 00",LF
+	dc.b	"text.",ETX
+DialogTextLisaDay01:
+DialogTextLisaDay02:
+DialogTextLisaDay03:
+DialogTextLisaDay04:
+DialogTextLisaDay05:
+	align 2
+DialogTextLisaDay06:
+	dc.w	OBJ_NPC_LISA
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
 
 ;-------------------------------------------------------------------------------
 ; menus
@@ -406,51 +398,6 @@ ObjectMenu:
 ItemMenu:
 	;		"1234567890123456789012"
 	dc.b	"{",ITEMNAMESTART
-
-	align 2
-RadioMenu:
-	;		"{1234567890{1234567890"	
-	dc.b	"{WNWT      {WCAS",LF
-	dc.b	"{WOCX      {WVVX",ETX
-
-;-------------------------------------------------------------------------------
-; take menus and messages
-;-------------------------------------------------------------------------------
-TakeMenuItemTaken:
-	;		"1234567890123456789012"
-	dc.b	"Taken.",ETX
-
-TakeMenuAlreadyCarrying:
-	;		"1234567890123456789012"
-	dc.b	"You're already",LF
-	dc.b	"carrying one.",ETX
-
-TakeMenuFull:
-	;		"1234567890123456789012"
-	dc.b	"You can't carry any",LF
-	dc.b	"more items.",ETX
-
-;-------------------------------------------------------------------------------
-; default give messages
-;-------------------------------------------------------------------------------
-;	align 2
-;DialogTextDaniDefaultGive:
-;	dc.w	OBJ_NPC_DANI
-;	;		"1234567890123456789012"
-;	dc.b	"Yeah, whatever.",ETX
-
-;-------------------------------------------------------------------------------
-; object names
-;-------------------------------------------------------------------------------
-;ObjectName8Bit:
-;	dc.b	"Wall of 8-bit games",OBJNAMEEND
-
-;-------------------------------------------------------------------------------
-; npc names
-;-------------------------------------------------------------------------------
-;NPCNameUnknown:
-	;		"1234567890123456789012"
-;	dc.b	"????",NPCNAMEEND
 
 ;-------------------------------------------------------------------------------
 ; item names and descriptions

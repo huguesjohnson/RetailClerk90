@@ -45,42 +45,42 @@ SceneDenimCountry:
 	; left entrance - top
 	dc.l	PatternFrameSideLeftOpenTop
 	; 		%pccvhnnnnnnnnnnn
-	dc.w	%1010000000001001	; base pattern
+	dc.w	%1000000000001001	; base pattern
 	dc.w	$0000	; no repeat
 	dc.l	VDP_VRAM_WRITE_A+$00800000	; initial drawing location
 
 	; left entrance - bottom
 	dc.l	PatternFrameSideLeftOpenBottom
 	; 		%pccvhnnnnnnnnnnn
-	dc.w	%1010000000001001	; base pattern
+	dc.w	%1000000000001001	; base pattern
 	dc.w	$0000	; no repeat
 	dc.l	VDP_VRAM_WRITE_A+$09000000	; initial drawing location
 
 	; right side
 	dc.l	PatternFrameSideClosedRight
 	; 		%pccvhnnnnnnnnnnn
-	dc.w	%1010000000001001	; base pattern
+	dc.w	%1000000000001001	; base pattern
 	dc.w	$0000	; no repeat
 	dc.l	VDP_VRAM_WRITE_A+$00800000+$004E0000	; initial drawing location
 
 	; south wall
 	dc.l	PatternFrameBottom
 	; 		%pccvhnnnnnnnnnnn
-	dc.w	%1010000000001001	; base pattern
+	dc.w	%1000000000001001	; base pattern
 	dc.w	$0000	; no repeat
 	dc.l	VDP_VRAM_WRITE_A+$0D800000	; initial drawing location
 
 	; north wall - left side
 	dc.l	PatternFrameTopOpenLeft
 	; 		%pccvhnnnnnnnnnnn
-	dc.w	%1010000000001001	; base pattern
+	dc.w	%1000000000001001	; base pattern
 	dc.w	$0000	; no repeat
 	dc.l	VDP_VRAM_WRITE_A	; initial drawing location
 
 	; north wall - right side
 	dc.l	PatternFrameTopOpenRight
 	; 		%pccvhnnnnnnnnnnn
-	dc.w	%1010000000001001	; base pattern
+	dc.w	%1000000000001001	; base pattern
 	dc.w	$0000	; no repeat
 	dc.l	VDP_VRAM_WRITE_A+$00360000	; initial drawing location
 
@@ -154,14 +154,14 @@ SceneDenimCountry:
 	dc.w	$0100	; starting y location of npc0
 	dc.w	DIRECTION_DOWN	; starting direction of npc0
 	dc.w	$FFFF	; movement frequency of npc0
-	dc.l	NullMovementStart	; location of movement pattern for npc3
+	dc.l	NullMovementStart	; location of movement pattern for npc0
 	dc.w	(NullMovementEnd-NullMovementStart-1)	; pattern length
 
 	dc.w	$0100	; starting x location of npc1
 	dc.w	$0100	; starting y location of npc1
 	dc.w	DIRECTION_DOWN	; starting direction of npc1
-	dc.w	$FFFF	; movement frequency of npc0
-	dc.l	NullMovementStart	; location of movement pattern for npc3
+	dc.w	$FFFF	; movement frequency of npc1
+	dc.l	NullMovementStart	; location of movement pattern for npc1
 	dc.w	(NullMovementEnd-NullMovementStart-1)	; pattern length
 
 	dc.w	$0120	; starting x location of npc3

@@ -293,7 +293,7 @@ ProcessDialogSetClosing:
 	bra.w	ExitProcessDialog	; exit
 ProcessDialogTestClosing:
 	btst.l	#DIALOG_FLAG_TEXT_CLOSING,d7	; test if the dialog is closing
-	beq.s	ProcessDialogClearFlags	; dialog is not closing, exit
+	beq.w	ProcessDialogClearFlags	; dialog is not closing, exit
 	; dialog closing animation
 	move.w	d7,d6	; copy low word with frame number
 	subq	#$1,d6	; decrement frame number
@@ -313,7 +313,7 @@ ProcessDialogTestClosing:
 	bsr.w	DrawTileset		; branch to DrawTileset subroutine
 	subq	#$1,d7	; decrement frame number
 	cmpi.w	#$0000,d7	; are we at the last frame?
-	bgt.s	ExitProcessDialog ; not at the last frame, exit
+	bgt.w	ExitProcessDialog ; not at the last frame, exit
 	; if the target of the dialog was an NPC, restore their previous direction
 	move.w (MEM_ACTION_TARGET_NPCID),d7	; copy NPC target ID to d7
 	cmpi.w	#$FFFF,d7	; test if it is -1
@@ -326,7 +326,15 @@ ProcessDialogTestClosing:
 	move.l	(MEM_GAME_STATE),d7	; copy current game state to d7
 	btst.l	#STATE_FLAG_SCRIPTED_EVENT,d7	; test the scripted event flag
 	bne.s	ProcessDialogClearFlags	; skip step to restore NPC direction
+	move.w (MEM_ACTION_TARGET_NPCID),d6	; copy NPC target ID to d7
+	cmpi.w	#$FFFF,d6	; test if it is -1 - this should not happen of course
+	beq.s	ProcessDialogClearFlags	; skip if -1
+	lea	MEM_NPC0_SPRITE_ID,a6	; point a6 to the first NPC sprite
+	move.w	(MEM_ACTION_TARGET_NPCID),d6	; copy target NPC id to d6
+	mulu.w	#NPC_RECORD_SIZE,d6	; multiply by NPC_RECORD_SIZE to get offset
+	adda.l	d6,a6	; move to target NPC sprite
 	move.w	(MEM_ACTION_TARGET_NPC_DIRECTION),(STRUCT_SPRITE_DIRECTION,a6)
+	bsr.w	StopSprite	; stop moving the sprite	
 ProcessDialogClearFlags:	; clear flags when done
 	andi.l	#$00000000,d7	; clear all dialog flags 
 	; clear dialog bit on game state

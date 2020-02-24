@@ -131,10 +131,17 @@ SceneIntroDay00:
 	;---------------------------------------------------------------------------
 	; exits
 	;---------------------------------------------------------------------------
+	if _DEBUG_
+	dc.w	SCENE_ID_WEHALL	; north exit
+	dc.w	SCENE_ID_WEHALL	; south exit
+	dc.w	SCENE_ID_WEHALL	; east exit
+	dc.w	SCENE_ID_WEHALL	; west exit
+	else
 	dc.w	SCENE_ID_DENIMCOUNTRY	; north exit
 	dc.w	SCENE_ID_DENIMCOUNTRY	; south exit
 	dc.w	SCENE_ID_DENIMCOUNTRY	; east exit
 	dc.w	SCENE_ID_DENIMCOUNTRY	; west exit
+	endif
 
 	;---------------------------------------------------------------------------
 	; NPC locations

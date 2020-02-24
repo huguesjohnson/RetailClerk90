@@ -167,12 +167,14 @@ ROW_HEIGHT=$800000	; height of a tile row
 PALETTE_SET_SIZE=$80	; size of 4 palettes
 
 ;-------------------------------------------------------------------------------
-; action table settings
+; lookup table settings
 ;-------------------------------------------------------------------------------
 SCENE_COUNT=$1F	; total number of scenes
 ACTION_COUNT=$03	; total number of actions
 ACTION_COUNT_X4=(ACTION_COUNT*4)
 SCENE_COUNT_X_ACTION_COUNT_X4=(SCENE_COUNT*ACTION_COUNT_X4)
+DAY_COUNT=$07	; total number of days
+DAY_COUNT_X4=(DAY_COUNT*4)
 
 ;-------------------------------------------------------------------------------
 ; everything else

@@ -202,7 +202,8 @@
             "name":"FrameWood",
             "palettePath":"src/palettes/FrameWood.X68",
             "sourceFilePath":"design/img/scene-tiles/frame-wood.png",
-            "destinationFilePath":"src/tiles/scene-tiles/frame-wood.X68"
+            "destinationFilePath":"src/tiles/scene-tiles/frame-wood.X68",
+			"allowDuplicateTiles":"true"
          },
          { 
             "name":"FloorCarpet",
@@ -281,6 +282,13 @@
 			"allowDuplicateTiles":"true"
          },
          { 
+            "name":"FloorTileSmall",
+            "palettePath":"src/palettes/FloorTileSmall.X68",
+            "sourceFilePath":"design/img/scene-tiles/floor-tile-small.png",
+            "destinationFilePath":"src/tiles/scene-tiles/floor-tile-small.X68",
+			"allowDuplicateTiles":"true"
+         },
+         { 
             "name":"FloorTileSquare",
             "palettePath":"src/palettes/FloorTileSquare.X68",
             "sourceFilePath":"design/img/scene-tiles/floor-tile-square.png",
@@ -314,6 +322,34 @@
             "sourceFilePath":"design/img/scene-tiles/floor-wood-v.png",
             "destinationFilePath":"src/tiles/scene-tiles/floor-wood-v.X68",
 			"allowDuplicateTiles":"true"
+         },
+         { 
+            "name":"CounterTop",
+            "palettePath":"src/palettes/CounterTop.X68",
+            "sourceFilePath":"design/img/scene-tiles/countertop.png",
+            "destinationFilePath":"src/tiles/scene-tiles/countertop.X68",
+			"allowDuplicateTiles":"true"
+         },
+         { 
+            "name":"CounterShelves",
+            "palettePath":"src/palettes/CounterTop.X68",
+            "sourceFilePath":"design/img/scene-tiles/countershelves.png",
+            "destinationFilePath":"src/tiles/scene-tiles/countershelves.X68",
+			"allowDuplicateTiles":"true"
+         },
+         { 
+            "name":"DenimCountryTableHigh",
+            "palettePath":"src/palettes/DenimCountry02.X68",
+            "sourceFilePath":"design/img/scene-tiles/denim-country-table-high.png",
+            "destinationFilePath":"src/tiles/scene-tiles/denim-country-table-high.X68",
+            "patternFilePath":"src/patterns/denim-country-table-high.X68"
+         },
+         { 
+            "name":"DenimCountryTableLow",
+            "palettePath":"src/palettes/DenimCountry02.X68",
+            "sourceFilePath":"design/img/scene-tiles/denim-country-table-low.png",
+            "destinationFilePath":"src/tiles/scene-tiles/denim-country-table-low.X68",
+            "patternFilePath":"src/patterns/denim-country-table-low.X68"
          }
       ],
       "tileIncludeFilePath":"src/inc_Tiles.X68",
@@ -345,6 +381,181 @@
             "name":"Lisa",
             "sourceFilePath":"design/img/sprite-tiles/npc-lisa.png",
             "destinationFilePath":"src/tiles/sprite-tiles/npc-lisa.X68"
+         },
+         { 
+            "name":"Grunberg",
+            "sourceFilePath":"design/img/sprite-tiles/npc-grunberg.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-grunberg.X68"
+         },
+         { 
+            "name":"Jen",
+            "sourceFilePath":"design/img/sprite-tiles/npc-jen.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-jen.X68"
+         },
+         { 
+            "name":"Griffy",
+            "sourceFilePath":"design/img/sprite-tiles/npc-griffy.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-griffy.X68"
+         },
+         { 
+            "name":"Scott",
+            "sourceFilePath":"design/img/sprite-tiles/npc-scott.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-scott.X68"
+         },
+         { 
+            "name":"Todd",
+            "sourceFilePath":"design/img/sprite-tiles/npc-todd.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-todd.X68"
+         },
+         { 
+            "name":"Eliza",
+            "sourceFilePath":"design/img/sprite-tiles/npc-eliza.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-eliza.X68"
+         },
+         { 
+            "name":"Becky",
+            "sourceFilePath":"design/img/sprite-tiles/npc-becky.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-becky.X68"
+         },
+         { 
+            "name":"Charles",
+            "sourceFilePath":"design/img/sprite-tiles/npc-charles.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-charles.X68"
+         },
+         { 
+            "name":"Randy",
+            "sourceFilePath":"design/img/sprite-tiles/npc-randy.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-randy.X68"
+         },
+         { 
+            "name":"DB",
+            "sourceFilePath":"design/img/sprite-tiles/npc-db.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-db.X68"
+         },
+         { 
+            "name":"Dani",
+            "sourceFilePath":"design/img/sprite-tiles/npc-dani.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-dani.X68"
+         },
+         { 
+            "name":"Guard",
+            "sourceFilePath":"design/img/sprite-tiles/npc-guard.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-guard.X68"
+         },
+         { 
+            "name":"Billy",
+            "sourceFilePath":"design/img/sprite-tiles/npc-billy.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-billy.X68"
+         },
+         { 
+            "name":"Al",
+            "sourceFilePath":"design/img/sprite-tiles/npc-al.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-al.X68"
+         },
+         { 
+            "name":"Thomas",
+            "sourceFilePath":"design/img/sprite-tiles/npc-thomas.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-thomas.X68"
+         },
+         { 
+            "name":"Heather",
+            "sourceFilePath":"design/img/sprite-tiles/npc-heather.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-heather.X68"
+         },
+         { 
+            "name":"Gary",
+            "sourceFilePath":"design/img/sprite-tiles/npc-gary.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-gary.X68"
+         },
+         { 
+            "name":"Grant",
+            "sourceFilePath":"design/img/sprite-tiles/npc-grant.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-grant.X68"
+         },
+         { 
+            "name":"Brett",
+            "sourceFilePath":"design/img/sprite-tiles/npc-brett.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-brett.X68"
+         },
+         { 
+            "name":"Nicky",
+            "sourceFilePath":"design/img/sprite-tiles/npc-nicky.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-nicky.X68"
+         },
+         { 
+            "name":"Tanya",
+            "sourceFilePath":"design/img/sprite-tiles/npc-tanya.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-tanya.X68"
+         },
+         { 
+            "name":"Craig",
+            "sourceFilePath":"design/img/sprite-tiles/npc-craig.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-craig.X68"
+         },
+         { 
+            "name":"Juan",
+            "sourceFilePath":"design/img/sprite-tiles/npc-juan.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-juan.X68"
+         },
+         { 
+            "name":"Laura",
+            "sourceFilePath":"design/img/sprite-tiles/npc-laura.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-laura.X68"
+         },
+         { 
+            "name":"Gina",
+            "sourceFilePath":"design/img/sprite-tiles/npc-gina.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-gina.X68"
+         },
+         { 
+            "name":"Santa",
+            "sourceFilePath":"design/img/sprite-tiles/npc-santa.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-santa.X68"
+         },
+         { 
+            "name":"Lost Guy",
+            "sourceFilePath":"design/img/sprite-tiles/npc-shopper00.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-shopper00.X68"
+         },
+         { 
+            "name":"Rocker",
+            "sourceFilePath":"design/img/sprite-tiles/npc-shopper01.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-shopper01.X68"
+         },
+         { 
+            "name":"Shopper",
+            "sourceFilePath":"design/img/sprite-tiles/npc-shopper02.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-shopper02.X68"
+         },
+         { 
+            "name":"Busy Mom",
+            "sourceFilePath":"design/img/sprite-tiles/npc-shopper03.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-shopper03.X68"
+         },
+         { 
+            "name":"Mallrat",
+            "sourceFilePath":"design/img/sprite-tiles/npc-shopper04.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-shopper04.X68"
+         },
+         { 
+            "name":"Preppy",
+            "sourceFilePath":"design/img/sprite-tiles/npc-shopper05.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-shopper05.X68"
+         },
+         { 
+            "name":"Yuppie",
+            "sourceFilePath":"design/img/sprite-tiles/npc-shopper06.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-shopper06.X68"
+         },
+         { 
+            "name":"HiddenHJ",
+            "sourceFilePath":"design/img/sprite-tiles/npc-hidden00.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-hidden00.X68"
+         },
+         { 
+            "name":"HiddenMJ",
+            "sourceFilePath":"design/img/sprite-tiles/npc-hidden01.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-hidden01.X68"
          }
       ],
       "palettePath":"src/palettes/People.X68",

@@ -185,15 +185,15 @@ SceneDebugMenu:
 	;---------------------------------------------------------------------------
 	; collision data
 	;---------------------------------------------------------------------------
-	dc.w	$0000	; no collision data
+	dc.l	$00000000	; no collision data
 	
 	;---------------------------------------------------------------------------
 	; exits
 	;---------------------------------------------------------------------------
-	dc.w	SCENE_ID_VB	; north exit
-	dc.w	SCENE_ID_VB	; south exit
-	dc.w	SCENE_ID_VB	; east exit
-	dc.w	SCENE_ID_VB	; west exit
+	dc.w	$0000	; north exit
+	dc.w	$0000	; south exit
+	dc.w	$0000	; east exit
+	dc.w	$0000	; west exit
 
 	;---------------------------------------------------------------------------
 	; NPC locations

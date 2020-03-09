@@ -7,4 +7,39 @@ CharacterNameTableStart:
 	dc.l	CharacterNameFrank
 	dc.l	CharacterNameCarol
 	dc.l	CharacterNameLisa
+	dc.l	CharacterNameGrunberg
+	dc.l	CharacterNameJen
+	dc.l	CharacterNameGriffy
+	dc.l	CharacterNameScott
+	dc.l	CharacterNameTodd
+	dc.l	CharacterNameEliza
+	dc.l	CharacterNameBecky
+	dc.l	CharacterNameCharles
+	dc.l	CharacterNameRandy
+	dc.l	CharacterNameDB
+	dc.l	CharacterNameDani
+	dc.l	CharacterNameGuard
+	dc.l	CharacterNameBilly
+	dc.l	CharacterNameAl
+	dc.l	CharacterNameThomas
+	dc.l	CharacterNameHeather
+	dc.l	CharacterNameGary
+	dc.l	CharacterNameGrant
+	dc.l	CharacterNameBrett
+	dc.l	CharacterNameNicky
+	dc.l	CharacterNameTanya
+	dc.l	CharacterNameCraig
+	dc.l	CharacterNameJuan
+	dc.l	CharacterNameLaura
+	dc.l	CharacterNameGina
+	dc.l	CharacterNameSanta
+	dc.l	CharacterNameLostGuy
+	dc.l	CharacterNameRocker
+	dc.l	CharacterNameShopper
+	dc.l	CharacterNameBusyMom
+	dc.l	CharacterNameMallrat
+	dc.l	CharacterNamePreppy
+	dc.l	CharacterNameYuppie
+	dc.l	CharacterNameHiddenHJ
+	dc.l	CharacterNameHiddenMJ
 CharacterNameTableEnd:

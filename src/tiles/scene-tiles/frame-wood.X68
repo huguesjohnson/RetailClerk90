@@ -61,6 +61,16 @@
 	dc.l	$0FF8F8F8
 
 	; 6
+	dc.l	$FFFFFFFF
+	dc.l	$F8F8F8F8
+	dc.l	$8F8F8F8F
+	dc.l	$F8F8F8F8
+	dc.l	$8F8F8F8F
+	dc.l	$F88888F8
+	dc.l	$8F8F8FFF
+	dc.l	$FFFFFFFF
+
+	; 7
 	dc.l	$0F8F8FF8
 	dc.l	$F0F8F8FF
 	dc.l	$8F0F8FF8
@@ -70,7 +80,7 @@
 	dc.l	$8F8F8F0F
 	dc.l	$8F8F8FF0
 
-	; 7
+	; 8
 	dc.l	$FFF8888F
 	dc.l	$F8F8F8FF
 	dc.l	$FFF8888F
@@ -80,7 +90,37 @@
 	dc.l	$F8888F8F
 	dc.l	$F8F8F8FF
 
-	; 8
+	; 9
+	dc.l	$FFF8888F
+	dc.l	$F8F8F8FF
+	dc.l	$FFF8888F
+	dc.l	$F8F8F8FF
+	dc.l	$FF888F8F
+	dc.l	$F8F8F88F
+	dc.l	$F8888F8F
+	dc.l	$F8F8F8FF
+
+	; A
+	dc.l	$FFF8888F
+	dc.l	$F8F8F8FF
+	dc.l	$FFF8888F
+	dc.l	$F8F8F8FF
+	dc.l	$FF888F8F
+	dc.l	$F8F8F88F
+	dc.l	$F8888F8F
+	dc.l	$F8F8F8FF
+
+	; B
+	dc.l	$FFF8888F
+	dc.l	$F8F8F8FF
+	dc.l	$FFF8888F
+	dc.l	$F8F8F8FF
+	dc.l	$FF888F8F
+	dc.l	$F8F8F88F
+	dc.l	$F8888F8F
+	dc.l	$F8F8F8FF
+
+	; C
 	dc.l	$FFFFFFFF
 	dc.l	$F888888F
 	dc.l	$F8F8F8F8
@@ -90,7 +130,7 @@
 	dc.l	$F8F8F8F8
 	dc.l	$FFFFFFFF
 
-	; 9
+	; D
 	dc.l	$FFFFFFFF
 	dc.l	$F888888F
 	dc.l	$8F8F8F8F
@@ -100,7 +140,27 @@
 	dc.l	$8F8F8F8F
 	dc.l	$FFFFFFFF
 
-	; A
+	; E
+	dc.l	$FFFFFFFF
+	dc.l	$F888888F
+	dc.l	$F8F8F8F8
+	dc.l	$FFFFFFFF
+	dc.l	$F8F8F8F8
+	dc.l	$FFFF8888
+	dc.l	$F8F8F8F8
+	dc.l	$FFFFFFFF
+
+	; F
+	dc.l	$FFFFFFFF
+	dc.l	$F888888F
+	dc.l	$8F8F8F8F
+	dc.l	$FFFFFFFF
+	dc.l	$8F8F8F8F
+	dc.l	$8888FFFF
+	dc.l	$8F8F8F8F
+	dc.l	$FFFFFFFF
+
+	; 10
 	dc.l	$FF88888F
 	dc.l	$FF888888
 	dc.l	$FF888888
@@ -110,7 +170,7 @@
 	dc.l	$FF88888F
 	dc.l	$FF8888FF
 
-	; B
+	; 11
 	dc.l	$FFFFFFFF
 	dc.l	$88888888
 	dc.l	$88888888
@@ -120,7 +180,7 @@
 	dc.l	$88888888
 	dc.l	$88888888
 
-	; C
+	; 12
 	dc.l	$F88888FF
 	dc.l	$888888FF
 	dc.l	$888888FF
@@ -130,7 +190,7 @@
 	dc.l	$F88888FF
 	dc.l	$FF8888FF
 
-	; D
+	; 13
 	dc.l	$FF8888FF
 	dc.l	$FF8888FF
 	dc.l	$FF8888FF

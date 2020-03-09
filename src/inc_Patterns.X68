@@ -24,3 +24,7 @@
 	; store frames
 	;-------------------------------------
 	include 'patterns/StoreFrames.X68'
+	;-------------------------------------
+	; counters
+	;-------------------------------------
+	include 'patterns/Counters.X68'

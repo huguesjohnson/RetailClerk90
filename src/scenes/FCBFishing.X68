@@ -8,11 +8,19 @@ SceneFCBFishing:
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0000	; tileset count
+	dc.w	$0002	; tileset count
 
 	; tileset 0
 	dc.l	TransparentTileStart
 	dc.l	TransparentTileEnd
+
+	; tileset 1
+	dc.l	FloorStoneTilesStart
+	dc.l	FloorStoneTilesEnd
+
+	; tileset 2
+	dc.l	FrameWoodTilesStart
+	dc.l	FrameWoodTilesEnd
 
 	;---------------------------------------------------------------------------
 	; palettes
@@ -25,14 +33,28 @@ SceneFCBFishing:
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$FFFF	; scenery count
+	dc.w	$0002	; scenery count
 
-;	; background
-;	dc.l	PatternWoodFloorV
-;	; 		%pccvhnnnnnnnnnnn
-;	dc.w	%0000000000000001	; base pattern
-;	dc.w	$000D	; repeat 14 times
-;	dc.l	VDP_VRAM_WRITE_B	; initial drawing location
+	; stone floor
+	dc.l	Pattern32x32Tile	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0000000000000001	; base pattern
+	dc.w	$0006	; repeat 7 times
+	dc.l	VDP_VRAM_WRITE_B	; initial drawing location
+
+	; left wall
+	dc.l	PatternFrameSideLeft
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1000000000010001	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A	; initial drawing location
+
+	; south wall
+	dc.l	PatternFrameBottomLongRight
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1000000000010001	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$0D800000	; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text

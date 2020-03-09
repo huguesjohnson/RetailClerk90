@@ -8,7 +8,7 @@ SceneCenter:
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0001	; tileset count
+	dc.w	$0005	; tileset count
 
 	; tileset 0
 	dc.l	TransparentTileStart
@@ -18,10 +18,26 @@ SceneCenter:
 	dc.l	FloorTileBasicTilesStart
 	dc.l	FloorTileBasicTilesEnd
 
+	; tileset 2
+	dc.l	FrameRectTilesStart
+	dc.l	FrameRectTilesEnd
+
+	; tileset 3
+	dc.l	GlassTilesStart
+	dc.l	GlassTilesEnd
+
+	; tileset 4 - for entryway
+	dc.l	TransparentTileStart
+	dc.l	TransparentTileEnd
+
+	; tileset 5
+	dc.l	FloorTileSmallTilesStart
+	dc.l	FloorTileSmallTilesEnd
+
 	;---------------------------------------------------------------------------
 	; palettes
 	;---------------------------------------------------------------------------
-	dc.l	PaletteWWCheckout00	; first palette
+	dc.l	PaletteWWFloorWall	; first palette
 	dc.l	PaletteCenter00	; second palette
 	dc.l	PaletteCenter01	; third palette
 	dc.l	PalettePeople	; fourth palette
@@ -29,7 +45,7 @@ SceneCenter:
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$0000	; scenery count
+	dc.w	$0003	; scenery count
 
 	; background
 	dc.l	PatternTileFloor
@@ -37,6 +53,27 @@ SceneCenter:
 	dc.w	%0100000000000001	; base pattern
 	dc.w	$000D	; repeat 14 times
 	dc.l	VDP_VRAM_WRITE_B	; initial drawing location
+
+	; north floor
+	dc.l	Pattern32x32Tile	; location of first pattern to load
+	;       %pccvhnnnnnnnnnnn
+	dc.w	%0000000000101000
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_B	; initial drawing location
+
+	; north frame - high
+	dc.l	PatternStoreFrontExteriorHigh	; location of first pattern to load
+	;       %pccvhnnnnnnnnnnn
+	dc.w	%1000000000000101
+	dc.w	$0000	; no repeat times
+	dc.l	VDP_VRAM_WRITE_A	; initial drawing location
+
+	; north frame - low
+	dc.l	PatternStoreFrontExteriorLow	; location of first pattern to load
+	;       %pccvhnnnnnnnnnnn
+	dc.w	%0000000000000101
+	dc.w	$0000	; no repeat times
+	dc.l	VDP_VRAM_WRITE_A+$00800000	; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text

@@ -3,3 +3,9 @@
 PatternTitleMenuBG:
 	include 'patterns/title-menu-bg.X68'
 
+PatternDenimCountryTableHigh:
+	include 'patterns/denim-country-table-high.X68'
+
+PatternDenimCountryTableLow:
+	include 'patterns/denim-country-table-low.X68'
+

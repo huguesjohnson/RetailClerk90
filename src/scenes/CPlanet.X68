@@ -8,9 +8,25 @@ SceneCPlanet:
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0000	; tileset count
+	dc.w	$0004	; tileset count
 
 	; tileset 0
+	dc.l	TransparentTileStart
+	dc.l	TransparentTileEnd
+
+	; tileset 1
+	dc.l	FloorTileBasicTilesStart
+	dc.l	FloorTileBasicTilesEnd
+
+	; tileset 2
+	dc.l	FrameRectTilesStart
+	dc.l	FrameRectTilesEnd
+
+	; tileset 3
+	dc.l	GlassTilesStart
+	dc.l	GlassTilesEnd
+
+	; tileset 4 - for entryway
 	dc.l	TransparentTileStart
 	dc.l	TransparentTileEnd
 
@@ -25,14 +41,42 @@ SceneCPlanet:
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$FFFF	; scenery count
+	dc.w	$0004	; scenery count
 
-;	; background
-;	dc.l	PatternWoodFloorV
-;	; 		%pccvhnnnnnnnnnnn
-;	dc.w	%0000000000000001	; base pattern
-;	dc.w	$000D	; repeat 14 times
-;	dc.l	VDP_VRAM_WRITE_B	; initial drawing location
+	; background
+	dc.l	PatternTileFloor
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0000000000000001	; base pattern
+	dc.w	$000D	; repeat 14 times
+	dc.l	VDP_VRAM_WRITE_B	; initial drawing location
+
+	; north wall
+	dc.l	PatternFrameTop
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1000000000000101	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A	; initial drawing location
+
+	; right wall
+	dc.l	PatternFrameSideClosedRight
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0000000000000101	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_B+$00800000+$004E0000	; initial drawing location
+
+	; left wall
+	dc.l	PatternFrameSideClosedLeft
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0000000000000101	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_B+$00800000	; initial drawing location
+
+	; store front
+	dc.l	PatternStoreFront
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1000000000000101	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$0C000000	; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text

@@ -19,6 +19,9 @@ PaletteFloorCarpetBlacklight:
 PaletteFloorPavement:
 	include 'palettes/FloorPavement.X68'
 
+PaletteFloorTileSmall:
+	include 'palettes/FloorTileSmall.X68'
+
 PaletteFloorSnow:
 	include 'palettes/FloorSnow.X68'
 
@@ -57,4 +60,7 @@ PaletteFloorWoodHor:
 
 PaletteFloorWoodVert:
 	include 'palettes/FloorWoodVert.X68'
+
+PaletteCounterTop:
+	include 'palettes/CounterTop.X68'
 

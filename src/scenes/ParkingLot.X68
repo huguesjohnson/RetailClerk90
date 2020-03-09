@@ -8,11 +8,15 @@ SceneParkingLot:
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0000	; tileset count
+	dc.w	$0001	; tileset count
 
 	; tileset 0
 	dc.l	TransparentTileStart
 	dc.l	TransparentTileEnd
+
+	; tileset 1
+	dc.l	FloorPavementTilesStart
+	dc.l	FloorPavementTilesEnd
 
 	;---------------------------------------------------------------------------
 	; palettes
@@ -25,14 +29,14 @@ SceneParkingLot:
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$FFFF	; scenery count
+	dc.w	$0000	; scenery count
 
-;	; background
-;	dc.l	PatternWoodFloorV
-;	; 		%pccvhnnnnnnnnnnn
-;	dc.w	%0000000000000001	; base pattern
-;	dc.w	$000D	; repeat 14 times
-;	dc.l	VDP_VRAM_WRITE_B	; initial drawing location
+	; pavement
+	dc.l	Pattern32x32Tile	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0000000000000001	; base pattern
+	dc.w	$0006	; repeat 7 times
+	dc.l	VDP_VRAM_WRITE_B	; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text

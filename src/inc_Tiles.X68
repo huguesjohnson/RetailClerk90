@@ -96,6 +96,10 @@ FloorTileDiamondBrokenTilesStart:
 	include 'tiles/scene-tiles/floor-tile-diamond-broken.X68'
 FloorTileDiamondBrokenTilesEnd:
 
+FloorTileSmallTilesStart:
+	include 'tiles/scene-tiles/floor-tile-small.X68'
+FloorTileSmallTilesEnd:
+
 FloorTileSquareTilesStart:
 	include 'tiles/scene-tiles/floor-tile-square.X68'
 FloorTileSquareTilesEnd:
@@ -115,4 +119,20 @@ FloorWoodHorTilesEnd:
 FloorWoodVertTilesStart:
 	include 'tiles/scene-tiles/floor-wood-v.X68'
 FloorWoodVertTilesEnd:
+
+CounterTopTilesStart:
+	include 'tiles/scene-tiles/countertop.X68'
+CounterTopTilesEnd:
+
+CounterShelvesTilesStart:
+	include 'tiles/scene-tiles/countershelves.X68'
+CounterShelvesTilesEnd:
+
+DenimCountryTableHighTilesStart:
+	include 'tiles/scene-tiles/denim-country-table-high.X68'
+DenimCountryTableHighTilesEnd:
+
+DenimCountryTableLowTilesStart:
+	include 'tiles/scene-tiles/denim-country-table-low.X68'
+DenimCountryTableLowTilesEnd:
 

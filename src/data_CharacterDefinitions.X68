@@ -27,4 +27,179 @@ CharacterDefinitionLisaStart:
 	dc.l	LisaSpriteTilesStart
 CharacterDefinitionLisaEnd:
 
+; 2006 - Grunberg
+CharacterDefinitionGrunbergStart:
+	dc.l	GrunbergSpriteTilesStart
+CharacterDefinitionGrunbergEnd:
+
+; 2007 - Jen
+CharacterDefinitionJenStart:
+	dc.l	JenSpriteTilesStart
+CharacterDefinitionJenEnd:
+
+; 2008 - Griffy
+CharacterDefinitionGriffyStart:
+	dc.l	GriffySpriteTilesStart
+CharacterDefinitionGriffyEnd:
+
+; 2009 - Scott
+CharacterDefinitionScottStart:
+	dc.l	ScottSpriteTilesStart
+CharacterDefinitionScottEnd:
+
+; 200a - Todd
+CharacterDefinitionToddStart:
+	dc.l	ToddSpriteTilesStart
+CharacterDefinitionToddEnd:
+
+; 200b - Eliza
+CharacterDefinitionElizaStart:
+	dc.l	ElizaSpriteTilesStart
+CharacterDefinitionElizaEnd:
+
+; 200c - Becky
+CharacterDefinitionBeckyStart:
+	dc.l	BeckySpriteTilesStart
+CharacterDefinitionBeckyEnd:
+
+; 200d - Charles
+CharacterDefinitionCharlesStart:
+	dc.l	CharlesSpriteTilesStart
+CharacterDefinitionCharlesEnd:
+
+; 200e - Randy
+CharacterDefinitionRandyStart:
+	dc.l	RandySpriteTilesStart
+CharacterDefinitionRandyEnd:
+
+; 200f - DB
+CharacterDefinitionDBStart:
+	dc.l	DBSpriteTilesStart
+CharacterDefinitionDBEnd:
+
+; 2010 - Dani
+CharacterDefinitionDaniStart:
+	dc.l	DaniSpriteTilesStart
+CharacterDefinitionDaniEnd:
+
+; 2011 - Guard
+CharacterDefinitionGuardStart:
+	dc.l	GuardSpriteTilesStart
+CharacterDefinitionGuardEnd:
+
+; 2012 - Billy
+CharacterDefinitionBillyStart:
+	dc.l	BillySpriteTilesStart
+CharacterDefinitionBillyEnd:
+
+; 2013 - Al
+CharacterDefinitionAlStart:
+	dc.l	AlSpriteTilesStart
+CharacterDefinitionAlEnd:
+
+; 2014 - Thomas
+CharacterDefinitionThomasStart:
+	dc.l	ThomasSpriteTilesStart
+CharacterDefinitionThomasEnd:
+
+; 2015 - Heather
+CharacterDefinitionHeatherStart:
+	dc.l	HeatherSpriteTilesStart
+CharacterDefinitionHeatherEnd:
+
+; 2016 - Gary
+CharacterDefinitionGaryStart:
+	dc.l	GarySpriteTilesStart
+CharacterDefinitionGaryEnd:
+
+; 2017 - Grant
+CharacterDefinitionGrantStart:
+	dc.l	GrantSpriteTilesStart
+CharacterDefinitionGrantEnd:
+
+; 2018 - Brett
+CharacterDefinitionBrettStart:
+	dc.l	BrettSpriteTilesStart
+CharacterDefinitionBrettEnd:
+
+; 2019 - Nicky
+CharacterDefinitionNickyStart:
+	dc.l	NickySpriteTilesStart
+CharacterDefinitionNickyEnd:
+
+; 201a - Tanya
+CharacterDefinitionTanyaStart:
+	dc.l	TanyaSpriteTilesStart
+CharacterDefinitionTanyaEnd:
+
+; 201b - Craig
+CharacterDefinitionCraigStart:
+	dc.l	CraigSpriteTilesStart
+CharacterDefinitionCraigEnd:
+
+; 201c - Juan
+CharacterDefinitionJuanStart:
+	dc.l	JuanSpriteTilesStart
+CharacterDefinitionJuanEnd:
+
+; 201d - Laura
+CharacterDefinitionLauraStart:
+	dc.l	LauraSpriteTilesStart
+CharacterDefinitionLauraEnd:
+
+; 201e - Gina
+CharacterDefinitionGinaStart:
+	dc.l	GinaSpriteTilesStart
+CharacterDefinitionGinaEnd:
+
+; 201f - Santa
+CharacterDefinitionSantaStart:
+	dc.l	SantaSpriteTilesStart
+CharacterDefinitionSantaEnd:
+
+; 2020 - Lost Guy
+CharacterDefinitionLostGuyStart:
+	dc.l	LostGuySpriteTilesStart
+CharacterDefinitionLostGuyEnd:
+
+; 2021 - Rocker
+CharacterDefinitionRockerStart:
+	dc.l	RockerSpriteTilesStart
+CharacterDefinitionRockerEnd:
+
+; 2022 - Shopper
+CharacterDefinitionShopperStart:
+	dc.l	ShopperSpriteTilesStart
+CharacterDefinitionShopperEnd:
+
+; 2023 - Busy Mom
+CharacterDefinitionBusyMomStart:
+	dc.l	BusyMomSpriteTilesStart
+CharacterDefinitionBusyMomEnd:
+
+; 2024 - Mallrat
+CharacterDefinitionMallratStart:
+	dc.l	MallratSpriteTilesStart
+CharacterDefinitionMallratEnd:
+
+; 2025 - Preppy
+CharacterDefinitionPreppyStart:
+	dc.l	PreppySpriteTilesStart
+CharacterDefinitionPreppyEnd:
+
+; 2026 - Yuppie
+CharacterDefinitionYuppieStart:
+	dc.l	YuppieSpriteTilesStart
+CharacterDefinitionYuppieEnd:
+
+; 2027 - HiddenHJ
+CharacterDefinitionHiddenHJStart:
+	dc.l	HiddenHJSpriteTilesStart
+CharacterDefinitionHiddenHJEnd:
+
+; 2028 - HiddenMJ
+CharacterDefinitionHiddenMJStart:
+	dc.l	HiddenMJSpriteTilesStart
+CharacterDefinitionHiddenMJEnd:
+
 CharacterDefinitionEnd:

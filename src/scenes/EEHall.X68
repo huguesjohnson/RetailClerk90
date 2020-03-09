@@ -8,7 +8,7 @@ SceneEEHall:
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0002	; tileset count
+	dc.w	$0007	; tileset count
 
 	; tileset 0
 	dc.l	TransparentTileStart
@@ -22,6 +22,26 @@ SceneEEHall:
 	dc.l	FloorWoodHorTilesStart
 	dc.l	FloorWoodHorTilesEnd
 
+	; tileset 3
+	dc.l	FrameRectTilesStart
+	dc.l	FrameRectTilesEnd
+
+	; tileset 4
+	dc.l	GlassTilesStart
+	dc.l	GlassTilesEnd
+
+	; tileset 5 - for entryway
+	dc.l	TransparentTileStart
+	dc.l	TransparentTileEnd
+
+	; tileset 6
+	dc.l	FloorCarpetBlacklightTilesStart
+	dc.l	FloorCarpetBlacklightTilesEnd
+
+	; tileset 7
+	dc.l	FloorTileBasicTilesStart
+	dc.l	FloorTileBasicTilesEnd
+
 	;---------------------------------------------------------------------------
 	; palettes
 	;---------------------------------------------------------------------------
@@ -33,7 +53,7 @@ SceneEEHall:
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$0002	; scenery count
+	dc.w	$0008	; scenery count
 
 	; main floor
 	dc.l	Pattern32x32Tile	; location of pattern to load
@@ -41,6 +61,20 @@ SceneEEHall:
 	dc.w	%0100000000000001	; base pattern
 	dc.w	$0004	; repeat 5 times
 	dc.l	VDP_VRAM_WRITE_B+$03000000	; initial drawing location
+
+	; south floor
+	dc.l	PatternTileFloor	; location of first pattern to load
+	;       %pccvhnnnnnnnnnnn
+	dc.w	%0010000001001101
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_B+$0D800000	; initial drawing location
+
+	; north floor
+	dc.l	Pattern32x32Tile	; location of first pattern to load
+	;       %pccvhnnnnnnnnnnn
+	dc.w	%0000000000111101
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_B	; initial drawing location
 
 	; top border
 	dc.l	PatternWoodFloorH	; location of pattern to load
@@ -55,6 +89,34 @@ SceneEEHall:
 	dc.w	%0100000000010001	; base pattern
 	dc.w	$0000	; no repeat
 	dc.l	VDP_VRAM_WRITE_B+$0C800000	; initial drawing location
+
+	; south wall - left side
+	dc.l	PatternFrameBottomOpenLeftExterior
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1010000000011001	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$0D800000	; initial drawing location
+
+	; south wall - right side
+	dc.l	PatternFrameBottomOpenRightExterior
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1010000000011001	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$0D800000+$00360000	; initial drawing location
+
+	; north frame - high
+	dc.l	PatternStoreFrontExteriorHigh	; location of first pattern to load
+	;       %pccvhnnnnnnnnnnn
+	dc.w	%1000000000011001
+	dc.w	$0000	; no repeat times
+	dc.l	VDP_VRAM_WRITE_A	; initial drawing location
+
+	; north frame - low
+	dc.l	PatternStoreFrontExteriorLow	; location of first pattern to load
+	;       %pccvhnnnnnnnnnnn
+	dc.w	%0000000000011001
+	dc.w	$0000	; no repeat times
+	dc.l	VDP_VRAM_WRITE_A+$00800000	; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text

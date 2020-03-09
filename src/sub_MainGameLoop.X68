@@ -323,6 +323,11 @@ TestTitleLoadSelectedScreen:
 	lea	SceneLoad,a6	; address of the scene for the debug menu
 	bsr.w	LoadScene	; branch to LoadScene subroutine
 	bsr.w	LoadPlayerSprite	; load the player sprite (also loads sprite 0)
+	; hide the player sprite
+	move.w	#$0000,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0000,(MEM_PLAYER_SPRITE_Y) 
+	bsr.w	FixSprites
+	; build and show the load screen
 	bsr.w	BuildLoadScreen	; builds the text on the screen
 	bsr.w	FadeIn	; fade in to the new scene
 	bra.w	MainGameLoop	;	return to start of game loop

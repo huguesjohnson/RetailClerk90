@@ -9,6 +9,7 @@
          "design/img/swatches/floor-carpet-70s.png":"src/palettes/FloorCarpet70s.X68",
          "design/img/swatches/floor-carpet-blacklight.png":"src/palettes/FloorCarpetBlacklight.X68",
          "design/img/swatches/floor-pavement.png":"src/palettes/FloorPavement.X68",
+         "design/img/swatches/floor-smalltile.png":"src/palettes/FloorTileSmall.X68",
          "design/img/swatches/floor-snow.png":"src/palettes/FloorSnow.X68",
          "design/img/swatches/floor-stone.png":"src/palettes/FloorStone.X68",
          "design/img/swatches/floor-tile-2color.png":"src/palettes/FloorTile2Color.X68",
@@ -21,7 +22,8 @@
          "design/img/swatches/floor-tile-square-broken.png":"src/palettes/FloorTileSquareBroken.X68",
          "design/img/swatches/floor-wood-d.png":"src/palettes/FloorWoodDiag.X68",
          "design/img/swatches/floor-wood-h.png":"src/palettes/FloorWoodHor.X68",
-         "design/img/swatches/floor-wood-v.png":"src/palettes/FloorWoodVert.X68"
+         "design/img/swatches/floor-wood-v.png":"src/palettes/FloorWoodVert.X68",
+         "design/img/swatches/countertop.png":"src/palettes/CounterTop.X68"
       },
       "includeFilePath":"src/TEMP_BuildPalettes.X68"
    }

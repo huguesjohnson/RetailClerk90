@@ -381,6 +381,533 @@ DialogTextLisaDay06:
 	dc.b	"This is my default",LF
 	dc.b	"text.",ETX
 
+	align 2
+DialogTextGrunbergDay00:
+	dc.w	OBJ_NPC_GRUNBERG
+	;		"1234567890123456789012"
+	dc.b	"This is my day 00",LF
+	dc.b	"text.",ETX
+DialogTextGrunbergDay01:
+DialogTextGrunbergDay02:
+DialogTextGrunbergDay03:
+DialogTextGrunbergDay04:
+DialogTextGrunbergDay05:
+	align 2
+DialogTextGrunbergDay06:
+	dc.w	OBJ_NPC_GRUNBERG
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextJenDay00:
+	dc.w	OBJ_NPC_JEN
+	;		"1234567890123456789012"
+	dc.b	"This is my day 00",LF
+	dc.b	"text.",ETX
+DialogTextJenDay01:
+DialogTextJenDay02:
+DialogTextJenDay03:
+DialogTextJenDay04:
+DialogTextJenDay05:
+	align 2
+DialogTextJenDay06:
+	dc.w	OBJ_NPC_JEN
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextGriffyDay00:
+	dc.w	OBJ_NPC_GRIFFY
+	;		"1234567890123456789012"
+	dc.b	"This is my day 00",LF
+	dc.b	"text.",ETX
+DialogTextGriffyDay01:
+DialogTextGriffyDay02:
+DialogTextGriffyDay03:
+DialogTextGriffyDay04:
+DialogTextGriffyDay05:
+	align 2
+DialogTextGriffyDay06:
+	dc.w	OBJ_NPC_GRIFFY
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextScottDay00:
+	dc.w	OBJ_NPC_SCOTT
+	;		"1234567890123456789012"
+	dc.b	"This is my day 00",LF
+	dc.b	"text.",ETX
+DialogTextScottDay01:
+DialogTextScottDay02:
+DialogTextScottDay03:
+DialogTextScottDay04:
+DialogTextScottDay05:
+	align 2
+DialogTextScottDay06:
+	dc.w	OBJ_NPC_SCOTT
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextToddDay00:
+	dc.w	OBJ_NPC_TODD
+	;		"1234567890123456789012"
+	dc.b	"This is my day 00",LF
+	dc.b	"text.",ETX
+DialogTextToddDay01:
+DialogTextToddDay02:
+DialogTextToddDay03:
+DialogTextToddDay04:
+DialogTextToddDay05:
+	align 2
+DialogTextToddDay06:
+	dc.w	OBJ_NPC_TODD
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextElizaDay00:
+	dc.w	OBJ_NPC_ELIZA
+	;		"1234567890123456789012"
+	dc.b	"This is my day 00",LF
+	dc.b	"text.",ETX
+DialogTextElizaDay01:
+DialogTextElizaDay02:
+DialogTextElizaDay03:
+DialogTextElizaDay04:
+DialogTextElizaDay05:
+	align 2
+DialogTextElizaDay06:
+	dc.w	OBJ_NPC_ELIZA
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextBeckyDay00:
+	dc.w	OBJ_NPC_BECKY
+	;		"1234567890123456789012"
+	dc.b	"This is my day 00",LF
+	dc.b	"text.",ETX
+DialogTextBeckyDay01:
+DialogTextBeckyDay02:
+DialogTextBeckyDay03:
+DialogTextBeckyDay04:
+DialogTextBeckyDay05:
+	align 2
+DialogTextBeckyDay06:
+	dc.w	OBJ_NPC_BECKY
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextCharlesDay00:
+DialogTextCharlesDay01:
+DialogTextCharlesDay02:
+DialogTextCharlesDay03:
+DialogTextCharlesDay04:
+DialogTextCharlesDay05:
+	align 2
+DialogTextCharlesDay06:
+	dc.w	OBJ_NPC_CHARLES
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextRandyDay00:
+	dc.w	OBJ_NPC_RANDY
+	;		"1234567890123456789012"
+	dc.b	"This is my day 00",LF
+	dc.b	"text.",ETX
+DialogTextRandyDay01:
+DialogTextRandyDay02:
+DialogTextRandyDay03:
+DialogTextRandyDay04:
+DialogTextRandyDay05:
+	align 2
+DialogTextRandyDay06:
+	dc.w	OBJ_NPC_RANDY
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextDBDay00:
+	dc.w	OBJ_NPC_DB
+	;		"1234567890123456789012"
+	dc.b	"This is my day 00",LF
+	dc.b	"text.",ETX
+DialogTextDBDay01:
+DialogTextDBDay02:
+DialogTextDBDay03:
+DialogTextDBDay04:
+DialogTextDBDay05:
+	align 2
+DialogTextDBDay06:
+	dc.w	OBJ_NPC_DB
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextDaniDay00:
+DialogTextDaniDay01:
+DialogTextDaniDay02:
+DialogTextDaniDay03:
+DialogTextDaniDay04:
+DialogTextDaniDay05:
+	align 2
+DialogTextDaniDay06:
+	dc.w	OBJ_NPC_DANI
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextGuardDay00:
+DialogTextGuardDay01:
+DialogTextGuardDay02:
+DialogTextGuardDay03:
+DialogTextGuardDay04:
+DialogTextGuardDay05:
+	align 2
+DialogTextGuardDay06:
+	dc.w	OBJ_NPC_GUARD
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextBillyDay00:
+DialogTextBillyDay01:
+DialogTextBillyDay02:
+DialogTextBillyDay03:
+DialogTextBillyDay04:
+DialogTextBillyDay05:
+	align 2
+DialogTextBillyDay06:
+	dc.w	OBJ_NPC_BILLY
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextAlDay00:
+DialogTextAlDay01:
+DialogTextAlDay02:
+DialogTextAlDay03:
+DialogTextAlDay04:
+DialogTextAlDay05:
+	align 2
+DialogTextAlDay06:
+	dc.w	OBJ_NPC_AL
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextThomasDay00:
+DialogTextThomasDay01:
+DialogTextThomasDay02:
+DialogTextThomasDay03:
+DialogTextThomasDay04:
+DialogTextThomasDay05:
+	align 2
+DialogTextThomasDay06:
+	dc.w	OBJ_NPC_THOMAS
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextHeatherDay00:
+DialogTextHeatherDay01:
+DialogTextHeatherDay02:
+DialogTextHeatherDay03:
+DialogTextHeatherDay04:
+DialogTextHeatherDay05:
+	align 2
+DialogTextHeatherDay06:
+	dc.w	OBJ_NPC_HEATHER
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextGaryDay00:
+DialogTextGaryDay01:
+DialogTextGaryDay02:
+DialogTextGaryDay03:
+DialogTextGaryDay04:
+DialogTextGaryDay05:
+	align 2
+DialogTextGaryDay06:
+	dc.w	OBJ_NPC_GARY
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextGrantDay00:
+DialogTextGrantDay01:
+DialogTextGrantDay02:
+DialogTextGrantDay03:
+DialogTextGrantDay04:
+DialogTextGrantDay05:
+	align 2
+DialogTextGrantDay06:
+	dc.w	OBJ_NPC_GRANT
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextBrettDay00:
+DialogTextBrettDay01:
+DialogTextBrettDay02:
+DialogTextBrettDay03:
+DialogTextBrettDay04:
+DialogTextBrettDay05:
+	align 2
+DialogTextBrettDay06:
+	dc.w	OBJ_NPC_BRETT
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextNickyDay00:
+DialogTextNickyDay01:
+DialogTextNickyDay02:
+DialogTextNickyDay03:
+DialogTextNickyDay04:
+DialogTextNickyDay05:
+	align 2
+DialogTextNickyDay06:
+	dc.w	OBJ_NPC_NICKY
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextTanyaDay00:
+DialogTextTanyaDay01:
+DialogTextTanyaDay02:
+DialogTextTanyaDay03:
+DialogTextTanyaDay04:
+DialogTextTanyaDay05:
+	align 2
+DialogTextTanyaDay06:
+	dc.w	OBJ_NPC_TANYA
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextCraigDay00:
+DialogTextCraigDay01:
+DialogTextCraigDay02:
+DialogTextCraigDay03:
+DialogTextCraigDay04:
+DialogTextCraigDay05:
+	align 2
+DialogTextCraigDay06:
+	dc.w	OBJ_NPC_CRAIG
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextJuanDay00:
+DialogTextJuanDay01:
+DialogTextJuanDay02:
+DialogTextJuanDay03:
+DialogTextJuanDay04:
+DialogTextJuanDay05:
+	align 2
+DialogTextJuanDay06:
+	dc.w	OBJ_NPC_JUAN
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextLauraDay00:
+DialogTextLauraDay01:
+DialogTextLauraDay02:
+DialogTextLauraDay03:
+DialogTextLauraDay04:
+DialogTextLauraDay05:
+	align 2
+DialogTextLauraDay06:
+	dc.w	OBJ_NPC_LAURA
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextGinaDay00:
+DialogTextGinaDay01:
+DialogTextGinaDay02:
+DialogTextGinaDay03:
+DialogTextGinaDay04:
+DialogTextGinaDay05:
+	align 2
+DialogTextGinaDay06:
+	dc.w	OBJ_NPC_GINA
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextSantaDay00:
+DialogTextSantaDay01:
+DialogTextSantaDay02:
+DialogTextSantaDay03:
+DialogTextSantaDay04:
+DialogTextSantaDay05:
+	align 2
+DialogTextSantaDay06:
+	dc.w	OBJ_NPC_SANTA
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextLostGuyDay00:
+DialogTextLostGuyDay01:
+DialogTextLostGuyDay02:
+DialogTextLostGuyDay03:
+DialogTextLostGuyDay04:
+DialogTextLostGuyDay05:
+	align 2
+DialogTextLostGuyDay06:
+	dc.w	OBJ_NPC_LOSTGUY
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextRockerDay00:
+DialogTextRockerDay01:
+DialogTextRockerDay02:
+DialogTextRockerDay03:
+DialogTextRockerDay04:
+DialogTextRockerDay05:
+	align 2
+DialogTextRockerDay06:
+	dc.w	OBJ_NPC_ROCKER
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextShopperDay00:
+DialogTextShopperDay01:
+DialogTextShopperDay02:
+DialogTextShopperDay03:
+DialogTextShopperDay04:
+DialogTextShopperDay05:
+	align 2
+DialogTextShopperDay06:
+	dc.w	OBJ_NPC_SHOPPER
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextBusyMomDay00:
+DialogTextBusyMomDay01:
+DialogTextBusyMomDay02:
+DialogTextBusyMomDay03:
+DialogTextBusyMomDay04:
+DialogTextBusyMomDay05:
+	align 2
+DialogTextBusyMomDay06:
+	dc.w	OBJ_NPC_BUSYMOM
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextMallratDay00:
+DialogTextMallratDay01:
+DialogTextMallratDay02:
+DialogTextMallratDay03:
+DialogTextMallratDay04:
+DialogTextMallratDay05:
+	align 2
+DialogTextMallratDay06:
+	dc.w	OBJ_NPC_MALLRAT
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextPreppyDay00:
+DialogTextPreppyDay01:
+DialogTextPreppyDay02:
+DialogTextPreppyDay03:
+DialogTextPreppyDay04:
+DialogTextPreppyDay05:
+	align 2
+DialogTextPreppyDay06:
+	dc.w	OBJ_NPC_PREPPY
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextYuppieDay00:
+DialogTextYuppieDay01:
+DialogTextYuppieDay02:
+DialogTextYuppieDay03:
+DialogTextYuppieDay04:
+DialogTextYuppieDay05:
+	align 2
+DialogTextYuppieDay06:
+	dc.w	OBJ_NPC_YUPPIE
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextHiddenHJDay00:
+DialogTextHiddenHJDay01:
+DialogTextHiddenHJDay02:
+DialogTextHiddenHJDay03:
+DialogTextHiddenHJDay04:
+DialogTextHiddenHJDay05:
+	align 2
+DialogTextHiddenHJDay06:
+	dc.w	OBJ_NPC_HIDDENHJ
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextHiddenMJDay00:
+DialogTextHiddenMJDay01:
+DialogTextHiddenMJDay02:
+DialogTextHiddenMJDay03:
+DialogTextHiddenMJDay04:
+DialogTextHiddenMJDay05:
+	align 2
+DialogTextHiddenMJDay06:
+	dc.w	OBJ_NPC_HIDDENMJ
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+
 ;-------------------------------------------------------------------------------
 ; menus
 ;-------------------------------------------------------------------------------

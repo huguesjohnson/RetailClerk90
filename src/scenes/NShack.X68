@@ -8,11 +8,19 @@ SceneNShack:
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0000	; tileset count
+	dc.w	$0002	; tileset count
 
 	; tileset 0
 	dc.l	TransparentTileStart
 	dc.l	TransparentTileEnd
+
+	; tileset 1
+	dc.l	FloorTile4ColorTilesStart
+	dc.l	FloorTile4ColorTilesEnd
+
+	; tileset 2
+	dc.l	FrameRectTilesStart
+	dc.l	FrameRectTilesEnd
 
 	;---------------------------------------------------------------------------
 	; palettes
@@ -25,14 +33,56 @@ SceneNShack:
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$FFFF	; scenery count
+	dc.w	$0006	; scenery count
 
-;	; background
-;	dc.l	PatternWoodFloorV
-;	; 		%pccvhnnnnnnnnnnn
-;	dc.w	%0000000000000001	; base pattern
-;	dc.w	$000D	; repeat 14 times
-;	dc.l	VDP_VRAM_WRITE_B	; initial drawing location
+	; floor
+	dc.l	PatternTileFloorSimple
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0000000000000001	; base pattern
+	dc.w	$000D	; repeat 14 times
+	dc.l	VDP_VRAM_WRITE_B	; initial drawing location
+
+	; left entrance - top
+	dc.l	PatternFrameSideLeftOpenTop
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1000000000000011	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$00800000	; initial drawing location
+
+	; left entrance - bottom
+	dc.l	PatternFrameSideLeftOpenBottom
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1000000000000011	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$09000000	; initial drawing location
+
+	; right wall
+	dc.l	PatternFrameSideClosedRight
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1000000000000011	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$00800000+$004E0000	; initial drawing location
+
+	; north wall - left side
+	dc.l	PatternFrameTopOpenLeft
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1000000000000011	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A	; initial drawing location
+
+	; north wall - right side
+	dc.l	PatternFrameTopOpenRight
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1000000000000011	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$00360000	; initial drawing location
+
+	; south wall 
+	dc.l	PatternFrameBottom
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1000000000000011	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$0D800000	; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text

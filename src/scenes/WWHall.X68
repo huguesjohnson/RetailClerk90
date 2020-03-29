@@ -8,7 +8,7 @@ SceneWWHall:
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$000B	; tileset count
+	dc.w	$000D	; tileset count
 
 	; tileset 0
 	dc.l	TransparentTileStart
@@ -58,6 +58,14 @@ SceneWWHall:
 	dc.l	FloorCarpetTilesStart
 	dc.l	FloorCarpetTilesEnd
 
+	; tileset C
+	dc.l	TrashCanTilesStart
+	dc.l	TrashCanTilesEnd
+
+	; tileset D
+	dc.l	BenchTilesStart
+	dc.l	BenchTilesEnd
+
 	;---------------------------------------------------------------------------
 	; palettes
 	;---------------------------------------------------------------------------
@@ -69,7 +77,7 @@ SceneWWHall:
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$0008	; scenery count
+	dc.w	$000F	; scenery count
 
 	; main floor
 	dc.l	PatternHallFloor	; location of first pattern to load
@@ -134,6 +142,50 @@ SceneWWHall:
 	dc.w	$0000	; no repeat times
 	dc.l	VDP_VRAM_WRITE_A+$00800000	; initial drawing location
 
+	; trash cans
+	dc.l	Pattern16x24	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001001010
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$05800000+$00100000	; initial drawing location
+
+	dc.l	Pattern16x24	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001001010
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$05800000+$003C0000	; initial drawing location
+
+	; benches
+	dc.l	Pattern32x16	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001010000
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$06000000+$00140000	; initial drawing location
+
+	dc.l	Pattern32x16	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001010000
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$06000000+$001C0000	; initial drawing location
+
+	dc.l	Pattern32x16	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001010000
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$06000000+$00240000	; initial drawing location
+
+	dc.l	Pattern32x16	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001010000
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$06000000+$002C0000	; initial drawing location
+
+	dc.l	Pattern32x16	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001010000
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$06000000+$00340000	; initial drawing location
+
 	;---------------------------------------------------------------------------
 	; text
 	;---------------------------------------------------------------------------
@@ -155,18 +207,30 @@ SceneWWHall:
 	; word2[0-8]=y0 (0-512)
 	; word2[9-15]=height (0-127)
 	;---------------------------------------------------------------------------
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	dc.w	OBJ_SCENE_TRASHCAN
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0010000010111110
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0011000011011000
+
+	dc.w	OBJ_SCENE_TRASHCAN
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0010000101110010
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0011000011011000
+
+	dc.w	OBJ_SCENE_BENCH
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%1010000011010000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0010000011100000
+
+	dc.w	OBJ_SCENE_BENCH
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%1010000100100000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0010000011100000
+
 	dc.w	OBJ_NOTHING
 	dc.w	$0000
 	dc.w	$0000

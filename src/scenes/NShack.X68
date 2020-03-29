@@ -8,19 +8,43 @@ SceneNShack:
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0002	; tileset count
+	dc.w	$0008	; tileset count
 
 	; tileset 0
 	dc.l	TransparentTileStart
 	dc.l	TransparentTileEnd
 
 	; tileset 1
-	dc.l	FloorTile4ColorTilesStart
-	dc.l	FloorTile4ColorTilesEnd
+	dc.l	FloorTile2ColorTilesStart
+	dc.l	FloorTile2ColorTilesEnd
 
 	; tileset 2
 	dc.l	FrameRectTilesStart
 	dc.l	FrameRectTilesEnd
+
+	; tileset 3
+	dc.l	CounterTopTilesStart
+	dc.l	CounterTopTilesEnd
+
+	; tileset 4
+	dc.l	CounterShelvesTilesStart
+	dc.l	CounterShelvesTilesEnd
+
+	; tileset 5
+	dc.l	NShackBarrelHighTilesStart
+	dc.l	NShackBarrelHighTilesEnd
+
+	; tileset 6
+	dc.l	NShackBarrelLowTilesStart
+	dc.l	NShackBarrelLowTilesEnd
+
+	; tileset 7
+	dc.l	NShackCaseHighTilesStart
+	dc.l	NShackCaseHighTilesEnd
+
+	; tileset 8
+	dc.l	NShackCaseLowTilesStart
+	dc.l	NShackCaseLowTilesEnd
 
 	;---------------------------------------------------------------------------
 	; palettes
@@ -33,7 +57,7 @@ SceneNShack:
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$0006	; scenery count
+	dc.w	$0014	; scenery count
 
 	; floor
 	dc.l	PatternTileFloorSimple
@@ -63,19 +87,12 @@ SceneNShack:
 	dc.w	$0000	; no repeat
 	dc.l	VDP_VRAM_WRITE_A+$00800000+$004E0000	; initial drawing location
 
-	; north wall - left side
-	dc.l	PatternFrameTopOpenLeft
+	; north wall 
+	dc.l	PatternFrameTop
 	; 		%pccvhnnnnnnnnnnn
 	dc.w	%1000000000000011	; base pattern
 	dc.w	$0000	; no repeat
 	dc.l	VDP_VRAM_WRITE_A	; initial drawing location
-
-	; north wall - right side
-	dc.l	PatternFrameTopOpenRight
-	; 		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000000011	; base pattern
-	dc.w	$0000	; no repeat
-	dc.l	VDP_VRAM_WRITE_A+$00360000	; initial drawing location
 
 	; south wall 
 	dc.l	PatternFrameBottom
@@ -83,6 +100,100 @@ SceneNShack:
 	dc.w	%1000000000000011	; base pattern
 	dc.w	$0000	; no repeat
 	dc.l	VDP_VRAM_WRITE_A+$0D800000	; initial drawing location
+
+	; shelves under counter
+	dc.l	Pattern3Tile80x8	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000000100010	; base pattern
+	dc.w	$0001	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_B+$001E0000+$04000000	; initial drawing location
+
+	; counter
+	dc.l	PatternCounterHigh80x16
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1100000000010111	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$001E0000+$02800000	; initial drawing location
+
+	dc.l	PatternCounterLow80x16
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000000010111	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$001E0000+$03800000	; initial drawing location
+
+	; barrels
+	dc.l	Pattern32x8
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1100000000100101	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$00320000+$07000000	; initial drawing location
+
+	dc.l	Pattern32x24
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000000101001	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$00320000+$07800000	; initial drawing location
+
+	dc.l	Pattern32x8
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1100000000100101	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$00400000+$07000000	; initial drawing location
+
+	dc.l	Pattern32x24
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000000101001	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$00400000+$07800000	; initial drawing location
+
+	dc.l	Pattern32x8
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1100000000100101	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$00160000+$07000000	; initial drawing location
+
+	dc.l	Pattern32x24
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000000101001	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$00160000+$07800000	; initial drawing location
+
+	dc.l	Pattern32x8
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1100000000100101	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$00080000+$07000000	; initial drawing location
+
+	dc.l	Pattern32x24
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000000101001	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$00080000+$07800000	; initial drawing location
+
+	; display cases
+	dc.l	PatternNShackCaseHigh
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1010000000110101	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$02000000	; initial drawing location
+
+	dc.l	PatternNShackCaseLow
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000111110	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$02800000	; initial drawing location
+
+	dc.l	PatternNShackCaseHigh
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1010000000110101	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$00320000+$02000000	; initial drawing location
+
+	dc.l	PatternNShackCaseLow
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000111110	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$00320000+$02800000	; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text
@@ -105,37 +216,65 @@ SceneNShack:
 	; word2[0-8]=y0 (0-512)
 	; word2[9-15]=height (0-127)
 	;---------------------------------------------------------------------------
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000	
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	dc.w	OBJ_SCENE_NSHACK_CASE
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%1110000010001000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0100100010100100
 
+	dc.w	OBJ_SCENE_NSHACK_CASE
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%1110000101001010
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0100100010100100
+
+	dc.w	OBJ_SCENE_NSHACK_BARREL
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0011000010100000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0011000011110000
+
+	dc.w	OBJ_SCENE_NSHACK_BARREL
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0011000011011000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0011000011110000
+
+	dc.w	OBJ_SCENE_NSHACK_BARREL
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0011000101001000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0011000011110000
+
+	dc.w	OBJ_SCENE_NSHACK_BARREL
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0011000110000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0011000011110000
+
+	dc.w	OBJ_NPC_JEN
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0011000100010100
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0100100010100100
+
+	dc.w	OBJ_NOTHING
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
+
+	dc.w	OBJ_NOTHING
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
+
+	dc.w	OBJ_NOTHING
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
 	;---------------------------------------------------------------------------
 	; collision data
 	;---------------------------------------------------------------------------
@@ -154,9 +293,10 @@ SceneNShack:
 	;---------------------------------------------------------------------------
 	dc.w	$0003	; four npc slots
 
-	dc.w	$0000	; starting x location of npc0
-	dc.w	$0000	; starting y location of npc0
+	dc.w	$0118	; starting x location of npc0
+	dc.w	$0098	; starting y location of npc0
 	dc.w	DIRECTION_DOWN	; starting direction of npc0
+	dc.w	$0000	; movement frequency of npc0
 	dc.w	$FFFF	; movement frequency of npc0
 	dc.l	NullMovementStart	; location of movement pattern for npc0
 	dc.w	(NullMovementEnd-NullMovementStart-1)	; pattern length

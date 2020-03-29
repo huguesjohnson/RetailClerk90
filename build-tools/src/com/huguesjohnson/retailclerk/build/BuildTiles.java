@@ -92,10 +92,10 @@ public class BuildTiles{
 				BufferedImage image=ImageIO.read(sourceFile);
 				//get & test image width
 				int width=image.getWidth();
-				if(width%8!=0){throw(new Exception("Image width must be a multiple of 8"));}
+				if(width%8!=0){throw(new Exception("Image width must be a multiple of 8 - sourceFile="+sourceFile));}
 				//get & test image height
 				int height=image.getHeight();
-				if(height%8!=0){throw(new Exception("Image width must be a multiple of 8"));}
+				if(height%8!=0){throw(new Exception("Image width must be a multiple of 8 - sourceFile="+sourceFile));}
 				if(createPattern){
 					int rowCount=height/8;
 					patternWriter.write("\tdc.w\t$"+Integer.toHexString(rowCount-1).toUpperCase()+"\t; "+rowCount+" rows");

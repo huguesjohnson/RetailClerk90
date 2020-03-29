@@ -2,9 +2,175 @@
 ; default object descriptions
 ;-------------------------------------------------------------------------------
 DefaultObjectDescriptionTable:
-	dc.l	$00000000
-;	; nothing
-;	dc.l	DialogTextNothing
+	dc.l	DialogTextNothing
+	;-----------------------------------
+	; OBJ_SCENE_DC_MERCH=$1001
+	;-----------------------------------
+	dc.l	ObjectDescriptionDCMerch
+	;-----------------------------------
+	; OBJ_SCENE_VB_8BIT=$1002
+	;-----------------------------------
+	dc.l	ObjectDescriptionVB8Bit
+	;-----------------------------------
+	; OBJ_SCENE_VB_MAGS=$1003
+	;-----------------------------------
+	dc.l	ObjectDescriptionVBMags
+	;-----------------------------------
+	; OBJ_SCENE_VB_GEN=$1004
+	;-----------------------------------
+	dc.l	ObjectDescriptionVBGen
+	;-----------------------------------
+	; OBJ_SCENE_VB_TG=$1005
+	;-----------------------------------
+	dc.l	ObjectDescriptionVBTG
+	;-----------------------------------
+	; OBJ_SCENE_VB_GB=$1006
+	;-----------------------------------
+	dc.l	ObjectDescriptionVBGB
+	;-----------------------------------
+	; OBJ_SCENE_VB_PC=$1007
+	;-----------------------------------
+	dc.l	ObjectDescriptionVBPC
+	;-----------------------------------
+	; OBJ_SCENE_BENCH=$1008
+	;-----------------------------------
+	dc.l	ObjectDescriptionBench
+	;-----------------------------------
+	; OBJ_SCENE_FCB_FIREPIT=$1009
+	;-----------------------------------
+	dc.l	ObjectDescriptionFCBFirepit
+	;-----------------------------------
+	; OBJ_SCENE_FCB_TENT=$100A
+	;-----------------------------------
+	dc.l	ObjectDescriptionFCBTent
+	;-----------------------------------
+	; OBJ_SCENE_FCB_GUNCASE=$100B
+	;-----------------------------------
+	dc.l	ObjectDescriptionFCBGunCase
+	;-----------------------------------
+	; OBJ_SCENE_FCB_FISHINGPOLES=$100C
+	;-----------------------------------
+	dc.l	ObjectDescriptionFCBFishingPoles
+	;-----------------------------------
+	; OBJ_SCENE_SVIDEO_VIDEOWALL=$100D
+	;-----------------------------------
+	dc.l	ObjectDescriptionSVideoVideoWall
+	;-----------------------------------
+	; OBJ_SCENE_SVIDEO_VIDEORACK=$100E
+	;-----------------------------------
+	dc.l	ObjectDescriptionSVideoVideoRack
+	;-----------------------------------
+	; OBJ_SCENE_MANNEQUIN=$100F
+	;-----------------------------------
+	dc.l	ObjectDescriptionMannequin
+	;-----------------------------------
+	; OBJ_SCENE_CHECKERS_CLOTHING=$1010
+	;-----------------------------------
+	dc.l	ObjectDescriptionCheckersClothing
+	;-----------------------------------
+	; OBJ_SCENE_CPLANET_TAPES=$1011
+	;-----------------------------------
+	dc.l	ObjectDescriptionCPlanetTapes
+	;-----------------------------------
+	; OBJ_SCENE_CPLANET_CDS=$1012
+	;-----------------------------------
+	dc.l	ObjectDescriptionCPlanetCDs
+	;-----------------------------------
+	; OBJ_SCENE_CAVERN_ARCADE0=$1013
+	;-----------------------------------
+	dc.l	ObjectDescriptionCavernArcade00
+	;-----------------------------------
+	; OBJ_SCENE_CAVERN_ARCADE1=$1014
+	;-----------------------------------
+	dc.l	ObjectDescriptionCavernArcade01
+	;-----------------------------------
+	; OBJ_SCENE_CAVERN_ARCADE2=$1015
+	;-----------------------------------
+	dc.l	ObjectDescriptionCavernArcade02
+	;-----------------------------------
+	; OBJ_SCENE_CAVERN_ARCADE3=$1016
+	;-----------------------------------
+	dc.l	ObjectDescriptionCavernArcade03
+	;-----------------------------------
+	; OBJ_SCENE_CAVERN_ARCADE4=$1017
+	;-----------------------------------
+	dc.l	ObjectDescriptionCavernArcade04
+	;-----------------------------------
+	; OBJ_SCENE_CAVERN_ARCADE5=$1018
+	;-----------------------------------
+	dc.l	ObjectDescriptionCavernArcade05
+	;-----------------------------------
+	; OBJ_SCENE_CAVERN_ARCADE6=$1019
+	;-----------------------------------
+	dc.l	ObjectDescriptionCavernArcade06
+	;-----------------------------------
+	; OBJ_SCENE_CAVERN_ARCADE7=$101A
+	;-----------------------------------
+	dc.l	ObjectDescriptionCavernArcade07
+	;-----------------------------------
+	; OBJ_SCENE_CAVERN_ARCADE8=$101B
+	;-----------------------------------
+	dc.l	ObjectDescriptionCavernArcade08
+	;-----------------------------------
+	; OBJ_SCENE_PLANT=$101C
+	;-----------------------------------
+	dc.l	ObjectDescriptionPlant
+	;-----------------------------------
+	; OBJ_SCENE_TBOOKS_FICTION=$101D
+	;-----------------------------------
+	dc.l	ObjectDescriptionTBooksFiction
+	;-----------------------------------
+	; OBJ_SCENE_TBOOKS_ROMANCE=$101E
+	;-----------------------------------
+	dc.l	ObjectDescriptionTBooksRomance
+	;-----------------------------------
+	; OBJ_SCENE_TBOOKS_HISTORY=$101F
+	;-----------------------------------
+	dc.l	ObjectDescriptionTBooksHistory
+	;-----------------------------------
+	; OBJ_SCENE_TBOOKS_COOKING=$1020
+	;-----------------------------------
+	dc.l	ObjectDescriptionTBooksCooking
+	;-----------------------------------
+	; OBJ_SCENE_TRASHCAN=$1021
+	;-----------------------------------
+	dc.l	ObjectDescriptionTrashCan
+	;-----------------------------------
+	; OBJ_SCENE_POGODAWG_TABLE=$1022
+	;-----------------------------------
+	dc.l	ObjectDescriptionPogoDawgTable
+	;-----------------------------------
+	; OBJ_SCENE_POGODAWG_TRASH=$1023
+	;-----------------------------------
+	dc.l	ObjectDescriptionPogoDawgTrash
+	;-----------------------------------
+	; OBJ_SCENE_NSHACK_CASE=$1024
+	;-----------------------------------
+	dc.l	ObjectDescriptionNShackCase
+	;-----------------------------------
+	; OBJ_SCENE_NSHACK_BARREL=$1025
+	;-----------------------------------
+	dc.l	ObjectDescriptionNShackBarrel
+	;-----------------------------------
+	; OBJ_SCENE_TLODGE_DISKS=$1026
+	;-----------------------------------
+	dc.l	ObjectDescriptionTLodgeDisks
+	;-----------------------------------
+	; OBJ_SCENE_TLODGE_RADIOS=$1027
+	;-----------------------------------
+	dc.l	ObjectDescriptionTLodgeRadios
+	;-----------------------------------
+	; OBJ_SCENE_TLODGE_TVS=$1028
+	;-----------------------------------
+	dc.l	ObjectDescriptionTLodgeTVs
+	;-----------------------------------
+	; OBJ_SCENE_TLODGE_CLOCKS=$1029
+	;-----------------------------------
+	dc.l	ObjectDescriptionTLodgeClocks
+	;-----------------------------------
+	; OBJ_SCENE_TLODGE_VHS=$102A
+	;-----------------------------------
+	dc.l	ObjectDescriptionTLodgeVHS
 DefaultObjectDescriptionTableEnd:
 
 ;-------------------------------------------------------------------------------

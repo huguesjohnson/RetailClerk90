@@ -96,14 +96,8 @@ EndGame:
 	include	'sub_ShowDefaultText.X68'
 
 ;*******************************************************************************
-; process actions based on day and scene, this is effectively the game script
+; day specific events
 ;*******************************************************************************
 ;	include	'actionscript/ActionScriptDay00.X68'
-;	include	'actionscript/ActionScriptDay01.X68'
-;	include	'actionscript/ActionScriptDay02.X68'
-;	include	'actionscript/ActionScriptDay03.X68'
-;	include	'actionscript/ActionScriptDay04.X68'
-;	include	'actionscript/ActionScriptDay05.X68'
-;	include	'actionscript/ActionScriptDay06.X68'
-;	include	'actionscript/ActionScriptDay07.X68'
+
 

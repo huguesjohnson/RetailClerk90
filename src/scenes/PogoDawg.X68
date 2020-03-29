@@ -8,7 +8,7 @@ ScenePogoDawg:
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0002	; tileset count
+	dc.w	$0007	; tileset count
 
 	; tileset 0
 	dc.l	TransparentTileStart
@@ -22,6 +22,26 @@ ScenePogoDawg:
 	dc.l	FrameRectTilesStart
 	dc.l	FrameRectTilesEnd
 
+	; tileset 3
+	dc.l	CounterTopTilesStart
+	dc.l	CounterTopTilesEnd
+
+	; tileset 4
+	dc.l	CounterTopSouthCornersTilesStart
+	dc.l	CounterTopSouthCornersTilesEnd
+
+	; tileset 5
+	dc.l	PogoDawgTableTilesStart
+	dc.l	PogoDawgTableTilesEnd
+
+	; tileset 6
+	dc.l	PogoDawgSeatTilesStart
+	dc.l	PogoDawgSeatTilesEnd
+
+	; tileset 7
+	dc.l	PogoDawgTrashTilesStart
+	dc.l	PogoDawgTrashTilesEnd
+
 	;---------------------------------------------------------------------------
 	; palettes
 	;---------------------------------------------------------------------------
@@ -33,7 +53,7 @@ ScenePogoDawg:
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$0006	; scenery count
+	dc.w	$0012	; scenery count
 
 	; floor
 	dc.l	PatternTileFloorSimple
@@ -84,6 +104,83 @@ ScenePogoDawg:
 	dc.w	$0000	; no repeat
 	dc.l	VDP_VRAM_WRITE_A+$0D800000	; initial drawing location
 
+	; main counter
+	dc.l	PatternCounterLow24x8
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000000010111	; base pattern
+	dc.w	$0017	; repeat 24 times
+	dc.l	VDP_VRAM_WRITE_B+$000A0000+$00800000	; initial drawing location
+
+	; south counter
+	dc.l	PatternCounterLow272x16
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000000010111	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_B+$000A0000+$0C800000	; initial drawing location
+
+	; counter seating
+	dc.l	Pattern16x16
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000101110	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_B+$00180000+$0B800000	; initial drawing location
+
+	dc.l	Pattern16x16
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000101110	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_B+$00240000+$0B800000	; initial drawing location
+
+	dc.l	Pattern16x16
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000101110	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_B+$00300000+$0B800000	; initial drawing location
+
+	dc.l	Pattern16x16
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000101110	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_B+$003C0000+$0B800000	; initial drawing location
+
+	dc.l	Pattern16x16
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000101110	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_B+$00480000+$0B800000	; initial drawing location
+
+	; tables
+	dc.l	PatternPogoDawgTable
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000100100	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_B+$001A0000+$00800000	; initial drawing location
+
+	dc.l	PatternPogoDawgTable
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000100100	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_B+$002C0000+$00800000	; initial drawing location
+
+	dc.l	PatternPogoDawgTable
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000100100	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_B+$003E0000+$00800000	; initial drawing location
+
+	; trash on tables & counter
+	dc.l	Pattern16x16
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1100000000110010	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$001E0000+$0C800000	; initial drawing location
+
+	dc.l	Pattern16x16
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1100000000110010	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$00420000+$00800000	; initial drawing location
+
 	;---------------------------------------------------------------------------
 	; text
 	;---------------------------------------------------------------------------
@@ -105,36 +202,65 @@ ScenePogoDawg:
 	; word2[0-8]=y0 (0-512)
 	; word2[9-15]=height (0-127)
 	;---------------------------------------------------------------------------
+	dc.w	OBJ_SCENE_POGODAWG_TABLE
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0101000011101000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0100000010001000
+
+	dc.w	OBJ_SCENE_POGODAWG_TABLE
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0101000100110000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0100000010001000
+
+	dc.w	OBJ_SCENE_POGODAWG_TABLE
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0101000101111000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0100000010001000
+
+	dc.w	OBJ_SCENE_POGODAWG_TRASH
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0011010011110000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0011000101001000
+
+	dc.w	OBJ_NPC_GRIFFY
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0011000010101010
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0011100010110000
+
 	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
+
 	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
+
 	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
+
 	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
+
 	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000	
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
 
 	;---------------------------------------------------------------------------
 	; collision data
@@ -154,9 +280,9 @@ ScenePogoDawg:
 	;---------------------------------------------------------------------------
 	dc.w	$0003	; four npc slots
 
-	dc.w	$0000	; starting x location of npc0
-	dc.w	$0000	; starting y location of npc0
-	dc.w	DIRECTION_DOWN	; starting direction of npc0
+	dc.w	$0098	; starting x location of npc0
+	dc.w	$00B0	; starting y location of npc0
+	dc.w	DIRECTION_RIGHT	; starting direction of npc0
 	dc.w	$FFFF	; movement frequency of npc0
 	dc.l	NullMovementStart	; location of movement pattern for npc0
 	dc.w	(NullMovementEnd-NullMovementStart-1)	; pattern length

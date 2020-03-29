@@ -36,7 +36,7 @@ ExitClearDialog:
 ClearDialogTextArea:
 	; clear out the dialog text
 	lea PatternDialogClearTextArea,a0	; point a0 to pattern for clear text
-	move.w	#DIALOG_BASE_TILE,d0	; base pattern
+	move.w	#DIALOG_BASE_TILE+%0110000000000000,d0	; base pattern
 	moveq	#$0000,d1	; repeat
 	lea	VDP_VRAM_WRITE_A,a1	; initial drawing location
 	adda.l	#DIALOG_TEXT_AREA_ROWCOL,a1	; move to row & column

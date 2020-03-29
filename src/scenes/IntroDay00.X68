@@ -132,10 +132,10 @@ SceneIntroDay00:
 	; exits
 	;---------------------------------------------------------------------------
 	if _DEBUG_
-	dc.w	SCENE_ID_DENIMCOUNTRY	; north exit
-	dc.w	SCENE_ID_DENIMCOUNTRY	; south exit
-	dc.w	SCENE_ID_DENIMCOUNTRY	; east exit
-	dc.w	SCENE_ID_DENIMCOUNTRY	; west exit
+	dc.w	SCENE_ID_SHALL	; north exit
+	dc.w	SCENE_ID_SHALL	; south exit
+	dc.w	SCENE_ID_SHALL	; east exit
+	dc.w	SCENE_ID_SHALL	; west exit
 	else
 	dc.w	SCENE_ID_DENIMCOUNTRY	; north exit
 	dc.w	SCENE_ID_DENIMCOUNTRY	; south exit
@@ -148,11 +148,11 @@ SceneIntroDay00:
 	;---------------------------------------------------------------------------
 	dc.w	$0000	; one npc slot, which is just a placeholder
 
-	dc.w	$0000	; starting x location of npc2
-	dc.w	$0000	; starting y location of npc2
-	dc.w	DIRECTION_LEFT	; starting direction of npc2
-	dc.w	$FFFF	; movement frequency of npc2
-	dc.l	NullMovementStart	; location of movement pattern for npc2
+	dc.w	$0000	; starting x location of npc0
+	dc.w	$0000	; starting y location of npc0
+	dc.w	DIRECTION_LEFT	; starting direction of npc0
+	dc.w	$FFFF	; movement frequency of npc0
+	dc.l	NullMovementStart	; location of movement pattern for npc0
 	dc.w	(NullMovementEnd-NullMovementStart-1)	; pattern length
 
 	;---------------------------------------------------------------------------

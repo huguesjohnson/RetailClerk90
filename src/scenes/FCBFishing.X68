@@ -8,7 +8,7 @@ SceneFCBFishing:
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0002	; tileset count
+	dc.w	$0007	; tileset count
 
 	; tileset 0
 	dc.l	TransparentTileStart
@@ -22,6 +22,26 @@ SceneFCBFishing:
 	dc.l	FrameWoodTilesStart
 	dc.l	FrameWoodTilesEnd
 
+	; tileset 3
+	dc.l	FCBPondLowerLeftTilesStart
+	dc.l	FCBPondLowerLeftTilesEnd
+
+	; tileset 4
+	dc.l	FCBPathTilesStart
+	dc.l	FCBPathTilesEnd
+
+	; tileset 5
+	dc.l	FCBFishingPolesHighTilesStart
+	dc.l	FCBFishingPolesHighTilesEnd
+
+	; tileset 6
+	dc.l	FCBFishingPolesATilesStart
+	dc.l	FCBFishingPolesATilesEnd
+
+	; tileset 7
+	dc.l	FCBFishingPolesBTilesStart
+	dc.l	FCBFishingPolesBTilesEnd
+
 	;---------------------------------------------------------------------------
 	; palettes
 	;---------------------------------------------------------------------------
@@ -33,7 +53,7 @@ SceneFCBFishing:
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$0002	; scenery count
+	dc.w	$000C	; scenery count
 
 	; stone floor
 	dc.l	Pattern32x32Tile	; location of pattern to load
@@ -56,6 +76,70 @@ SceneFCBFishing:
 	dc.w	$0000	; no repeat
 	dc.l	VDP_VRAM_WRITE_A+$0D800000	; initial drawing location
 
+	; wood path - east-west
+	dc.l	PatternFCBFloorH	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0000000001001010	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_B+$09800000+$00100000	; initial drawing location
+
+	; wood path - north-south
+	dc.l	PatternFCBFloorVSouth	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0000000001001010	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_B+$00100000	; initial drawing location
+
+	dc.l	PatternFCBFloorVSouth	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0000000001001010	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_B+$00480000	; initial drawing location
+
+	; pond
+	dc.l	PatternFCBPondLowerLeft	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0000000000100101	; base pattern
+	dc.w	$0000	; repeat 1 times
+	dc.l	VDP_VRAM_WRITE_B+$00300000	; initial drawing location
+
+	; fishing poles
+	dc.l	PatternFCBFishingPolesHigh	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1010000001011010	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$001A0000+$06000000	; initial drawing location
+
+	dc.l	PatternFCBFishingPolesA	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001100001	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$001A0000+$07000000	; initial drawing location
+
+	dc.l	PatternFCBFishingPolesHigh	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001011010	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$00360000+$06000000	; initial drawing location
+
+	dc.l	PatternFCBFishingPolesB	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001101110	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$00360000+$07000000	; initial drawing location
+
+	dc.l	PatternFCBFishingPolesHigh	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001011010	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$001A0000+$02000000	; initial drawing location
+
+	dc.l	PatternFCBFishingPolesB	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001101110	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$001A0000+$03000000	; initial drawing location
+
 	;---------------------------------------------------------------------------
 	; text
 	;---------------------------------------------------------------------------
@@ -77,15 +161,24 @@ SceneFCBFishing:
 	; word2[0-8]=y0 (0-512)
 	; word2[9-15]=height (0-127)
 	;---------------------------------------------------------------------------
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	dc.w	OBJ_SCENE_FCB_FISHINGPOLES
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%1010000011100111
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0100100011100100
+
+	dc.w	OBJ_SCENE_FCB_FISHINGPOLES
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%1010000011100111
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0100100010100100
+
+	dc.w	OBJ_SCENE_FCB_FISHINGPOLES
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%1010011101010100
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0100100011100100
+
 	dc.w	OBJ_NOTHING
 	dc.w	$0000
 	dc.w	$0000
@@ -126,11 +219,11 @@ SceneFCBFishing:
 	;---------------------------------------------------------------------------
 	dc.w	$0003	; four npc slots
 
-	dc.w	$0000	; starting x location of npc0
-	dc.w	$0000	; starting y location of npc0
+	dc.w	$00F0	; starting x location of npc0
+	dc.w	$0110	; starting y location of npc0
 	dc.w	DIRECTION_DOWN	; starting direction of npc0
 	dc.w	$FFFF	; movement frequency of npc0
-	dc.l	NullMovementStart	; location of movement pattern for npc0
+	dc.l	NullMovementStart	; location of movement pattern for npc1
 	dc.w	(NullMovementEnd-NullMovementStart-1)	; pattern length
 
 	dc.w	$0000	; starting x location of npc1

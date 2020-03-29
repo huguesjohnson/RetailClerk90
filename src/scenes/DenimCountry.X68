@@ -188,15 +188,24 @@ SceneDenimCountry:
 	; word2[0-8]=y0 (0-512)
 	; word2[9-15]=height (0-127)
 	;---------------------------------------------------------------------------
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	dc.w	OBJ_SCENE_DC_MERCH
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%1000111010100000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0101000011101000
+
+	dc.w	OBJ_SCENE_DC_MERCH
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%1000111101011000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0101000010101000
+
+	dc.w	OBJ_SCENE_DC_MERCH
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%1000111101011000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0101000011101000
+
 	dc.w	OBJ_NOTHING
 	dc.w	$0000
 	dc.w	$0000

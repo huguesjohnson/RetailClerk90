@@ -1,14 +1,17 @@
 ShowDefaultText:
 	move.l	(MEM_DIALOG_FLAGS),d7	; copy current dialog state to d7
-;	move.w	(MEM_ACTION_TARGET_OBJID),d7	; move target object ID to d7
 	move.w	(MEM_ACTION_TARGET_OBJID),d6	; move target object ID to d6
-;	andi.w	#$0FFF,d7	; clear the base value
-;	mulu.w	#$4,d7	; multiply by 4 to get the offset
 	; determine whether this is an object or NPC
 	andi.w	#OBJ_SCENE_BASE,d6	; and d6 against base object value
 	beq.s	.1	; branch if zero (not an object)
 	; object
 	lea	DefaultObjectDescriptionTable,a6	; point to default object text table
+	; calculate and add offset to text pointer
+	clr d6	; out of paranoia
+	move.w	(MEM_ACTION_TARGET_OBJID),d6	; move target object ID to d6
+	andi.w	#$0FFF,d6	; clear the base value
+	mulu.w	#LWORD_SIZE,d6	; multiple by LWORD_SIZE
+	adda.l	d6,a6	; add offset to pointer
 	bra.s	.2
 .1	; npc
 	lea	CharacterInteractTextTableStart,a6	; point to text table
@@ -20,7 +23,7 @@ ShowDefaultText:
 	andi.w	#$0FFF,d6	; clear the base value
 	mulu.w	#DAY_COUNT_X4,d6	; multiply by number of days
 	move.w	(MEM_DAY),d5	; copy current day to d5
-	mulu.w	#LWORD_SIZE,d5	; multiple by LWORD_SIZE
+	mulu.w	#LWORD_SIZE,d5	; multiply by LWORD_SIZE
 	add.w	d5,d6	; add to d6
 	adda.l	d6,a6	; add offset to pointer
 .2

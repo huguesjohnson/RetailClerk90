@@ -907,7 +907,6 @@ DialogTextHiddenMJDay06:
 	dc.b	"This is my default",LF
 	dc.b	"text.",ETX
 
-
 ;-------------------------------------------------------------------------------
 ; menus
 ;-------------------------------------------------------------------------------
@@ -925,6 +924,258 @@ ObjectMenu:
 ItemMenu:
 	;		"1234567890123456789012"
 	dc.b	"{",ITEMNAMESTART
+
+;-------------------------------------------------------------------------------
+; default object descriptions 
+;-------------------------------------------------------------------------------
+ObjectDescriptionDCMerch:
+	;		"1234567890123456789012"
+	dc.b	"The lastest fashions",LF
+	dc.b	"neatly folded.",ETX
+
+ObjectDescriptionVB8Bit:
+	;		"1234567890123456789012"
+	dc.b	"There must be over 100",LF
+	dc.b	"Nintendo games here.",ETX
+
+ObjectDescriptionVBMags:
+	;		"1234567890123456789012"
+	dc.b	"Below the counter are",LF
+	dc.b	"various magazines.",ETX
+
+ObjectDescriptionVBGen:
+	;		"1234567890123456789012"
+	dc.b	"Phantasy Star II looks",LF
+	dc.b	"interesting.         ^",FF
+	dc.b	"Is it really worth $70",LF
+	dc.b	"though?",ETX
+
+ObjectDescriptionVBTG:
+	;		"1234567890123456789012"
+	dc.b	"$400 to play Ys I&II?",LF
+	dc.b	"It's still tempting.",ETX
+
+ObjectDescriptionVBGB:
+	;		"1234567890123456789012"
+	dc.b	"This portable gaming",LF
+	dc.b	"thing might take off.",ETX
+
+ObjectDescriptionVBPC:
+	;		"1234567890123456789012"
+	dc.b	"PC games with over-",LF
+	dc.b	"sized boxes.",ETX
+
+ObjectDescriptionBench:
+	;		"1234567890123456789012"
+	dc.b	"It doesn't look very",LF
+	dc.b	"comfortable.",ETX
+
+ObjectDescriptionFCBFirepit:
+	;		"1234567890123456789012"
+	dc.b	"It doesn't look like",LF
+	dc.b	"it was used recently.",ETX
+
+ObjectDescriptionFCBTent:
+	;		"1234567890123456789012"
+	dc.b	"It looks kind of cozy",LF
+	dc.b	"in there.",ETX
+
+ObjectDescriptionFCBGunCase:
+	;		"1234567890123456789012"
+	dc.b	"They sell everything",LF
+	dc.b	"at the mall now.",ETX
+
+ObjectDescriptionFCBFishingPoles:
+	;		"1234567890123456789012"
+	dc.b	"Assorted fishing",LF
+	dc.b	"poles.",ETX
+
+ObjectDescriptionSVideoVideoWall:
+	;		"1234567890123456789012"
+	dc.b	"Hundreds of VHS tapes",LF
+	dc.b	"line the wall.",ETX
+
+ObjectDescriptionSVideoVideoRack:
+	;		"1234567890123456789012"
+	dc.b	"These appear to be the",LF
+	dc.b	"new releases.",ETX
+
+ObjectDescriptionMannequin:
+	;		"1234567890123456789012"
+	dc.b	"Why are you trying",LF
+	dc.b	"to touch them?",ETX
+
+ObjectDescriptionCheckersClothing:
+	;		"1234567890123456789012"
+	dc.b	"Stacks of folded",LF
+	dc.b	"shirts & pants.",ETX
+
+ObjectDescriptionCPlanetTapes:
+	;		"1234567890123456789012"
+	dc.b	"Hundreds of cassette",LF
+	dc.b	"tapes by genre.",ETX
+
+ObjectDescriptionCPlanetCDs:
+	;		"1234567890123456789012"
+	dc.b	"All the new music is",LF
+	dc.b	"coming in these now.",ETX
+
+ObjectDescriptionCavernArcade00:
+	;		"1234567890123456789012"
+	dc.b	"'Xenowave'",LF
+	dc.b	"Defend the space     ^",FF
+	dc.b	"colony from swarms of",LF
+	dc.b	"hungry aliens.",ETX
+
+ObjectDescriptionCavernArcade01:
+	;		"1234567890123456789012"
+	dc.b	"'Racin'",LF
+	dc.b	"Featuring more       ^",FF
+	dc.b	"polygons than any",LF
+	dc.b	"other game.",ETX
+
+ObjectDescriptionCavernArcade02:
+	;		"1234567890123456789012"
+	dc.b	"'Glorious Golf'",LF
+	dc.b	"The most realistic   ^",FF
+	dc.b	"golf simulator ever",LF
+	dc.b	"made for 1-4 players.",ETX
+
+ObjectDescriptionCavernArcade03:
+	;		"1234567890123456789012"
+	dc.b	"'Comic Book Man'",LF
+	dc.b	"Save the fictional   ^",FF
+	dc.b	"big city from the evil",LF
+	dc.b	"clown brigade.",ETX
+
+ObjectDescriptionCavernArcade04:
+	;		"1234567890123456789012"
+	dc.b	"'The Bash Show'",LF
+	dc.b	"Bludgeon people with ^",FF
+	dc.b	"household items and",LF
+	dc.b	"win prizes.",ETX
+
+ObjectDescriptionCavernArcade05:
+	;		"1234567890123456789012"
+	dc.b	"'Super Secret Agent'",LF
+	dc.b	"A nuclear weapon has ^",FF
+	dc.b	"been smuggled out of",LF
+	dc.b	"Russia, go find it.",ETX
+
+ObjectDescriptionCavernArcade06:
+	;		"1234567890123456789012"
+	dc.b	"'Mystical Duke'",LF
+	dc.b	"Save the kingdom from^",FF
+	dc.b	"the dark wizard and",LF
+	dc.b	"his army of trolls.",ETX
+
+ObjectDescriptionCavernArcade07:
+	;		"1234567890123456789012"
+	dc.b	"'Street Beat 3'",LF
+	dc.b	"Your girlfriend has  ^",FF
+	dc.b	"been kidnapped by",LF
+	dc.b	"thugs & lowlifes.",ETX
+
+ObjectDescriptionCavernArcade08:
+	;		"1234567890123456789012"
+	dc.b	"'DigiFigher'",LF
+	dc.b	"Cutting-edge digital ^",FF
+	dc.b	"graphics that look",LF
+	dc.b	"totally real.",ETX
+
+ObjectDescriptionPlant:
+	;		"1234567890123456789012"
+	dc.b	"It's hard to believe",LF
+	dc.b	"this survives here.",ETX
+
+ObjectDescriptionTBooksFiction:
+	;		"1234567890123456789012"
+	dc.b	"Just over 90% Stephen",LF
+	dc.b	"King books.",ETX
+
+ObjectDescriptionTBooksRomance:
+	;		"1234567890123456789012"
+	dc.b	"If you enjoy romance",LF
+	dc.b	"books then check out ^",FF
+	dc.b	"'Too Good Too Be Real'",LF
+	dc.b	"by Melonie Johnson.  ^",FF
+	dc.b	"Due in stores summer",LF
+	dc.b	"2021.",ETX
+
+ObjectDescriptionTBooksHistory:
+	;		"1234567890123456789012"
+	dc.b	"There might be a",LF
+	dc.b	"useful reference here.",ETX
+
+ObjectDescriptionTBooksCooking:
+	;		"1234567890123456789012"
+	dc.b	"Low-fat cooking seems",LF
+	dc.b	"to be the hot fad.",ETX
+
+ObjectDescriptionTrashCan:
+	;		"1234567890123456789012"
+	dc.b	"It looks really gross",LF
+	dc.b	"in there.",ETX
+
+ObjectDescriptionPogoDawgTable:
+	;		"1234567890123456789012"
+	dc.b	"This obviously hasn't",LF
+	dc.b	"been cleaned recently.",ETX
+
+ObjectDescriptionPogoDawgTrash:
+	;		"1234567890123456789012"
+	dc.b	"The customers here are",LF
+	dc.b	"way too lazy.",ETX
+
+ObjectDescriptionNShackCase:
+	;		"1234567890123456789012"
+	dc.b	"Display case with",LF
+	dc.b	"fancy nut platters.",ETX
+
+ObjectDescriptionNShackBarrel:
+	;		"1234567890123456789012"
+	dc.b	"Barrel of self-serve",LF
+	dc.b	"nuts.",ETX
+
+ObjectDescriptionTLodgeDisks:
+	;		"1234567890123456789012"
+	dc.b	"Computer disks in many",LF
+	dc.b	"different formats.",ETX
+
+ObjectDescriptionTLodgeRadios:
+	;		"1234567890123456789012"
+	dc.b	"Radios and cassette",LF
+	dc.b	"player in many colors.",ETX
+
+ObjectDescriptionTLodgeTVs:
+	;		"1234567890123456789012"
+	dc.b	"Portable TVs for",LF
+	dc.b	"people on the go.",ETX
+
+ObjectDescriptionTLodgeClocks:
+	;		"1234567890123456789012"
+	dc.b	"Several dozen styles",LF
+	dc.b	"of alarm clocks.",ETX
+
+ObjectDescriptionTLodgeVHS:
+	;		"1234567890123456789012"
+	dc.b	"Blank VHS tapes.",LF
+	dc.b	"",ETX
+
+;-------------------------------------------------------------------------------
+; signs in stores
+;-------------------------------------------------------------------------------
+StoreSignFiction:
+	dc.b	"Fiction",ETX
+
+StoreSignRomance:
+	dc.b	"Romance",ETX
+
+StoreSignCooking:
+	dc.b	"Cooking",ETX
+
+StoreSignHistory:
+	dc.b	"History",ETX
 
 ;-------------------------------------------------------------------------------
 ; item names and descriptions

@@ -8,7 +8,7 @@ SceneFCBCheckout:
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0002	; tileset count
+	dc.w	$0006	; tileset count
 
 	; tileset 0
 	dc.l	TransparentTileStart
@@ -22,6 +22,22 @@ SceneFCBCheckout:
 	dc.l	FrameWoodTilesStart
 	dc.l	FrameWoodTilesEnd
 
+	; tileset 3
+	dc.l	FCBPondLowerRightTilesStart
+	dc.l	FCBPondLowerRightTilesEnd
+
+	; tileset 4
+	dc.l	FCBPathTilesStart
+	dc.l	FCBPathTilesEnd
+
+	; tileset 5
+	dc.l	CounterTopTilesStart
+	dc.l	CounterTopTilesEnd
+
+	; tileset 6
+	dc.l	CounterShelvesTilesStart
+	dc.l	CounterShelvesTilesEnd
+
 	;---------------------------------------------------------------------------
 	; palettes
 	;---------------------------------------------------------------------------
@@ -33,7 +49,7 @@ SceneFCBCheckout:
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$0001	; scenery count
+	dc.w	$0009	; scenery count
 
 	; stone floor
 	dc.l	Pattern32x32Tile	; location of pattern to load
@@ -48,6 +64,59 @@ SceneFCBCheckout:
 	dc.w	%1000000000010001	; base pattern
 	dc.w	$0000	; no repeat
 	dc.l	VDP_VRAM_WRITE_A+$0D800000	; initial drawing location
+
+	; wood path - east-west
+	dc.l	PatternFCBFloorH	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0000000001001100	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_B+$09800000	; initial drawing location
+
+	; wood path - north-south
+	dc.l	PatternFCBFloorVSouth	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0000000001001100	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_B+$00380000	; initial drawing location
+
+	dc.l	PatternFCBFloorVSouth	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0000000001001100	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_B;+$00380000	; initial drawing location
+
+	; pond
+	dc.l	PatternFCBPondLowerRight	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0000000000100101	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_B	; initial drawing location
+
+	; shelves under counter
+	dc.l	Pattern3Tile112x8	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0000000001100111	; base pattern
+	dc.w	$0001	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_B+$001C0000+$08800000	; initial drawing location
+
+	; counter
+	dc.l	PatternCounterLow112x24Open
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001011100	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$07800000+$001C0000	; initial drawing location
+
+	dc.l	PatternCounterHigh112x8Open
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1010000001011100	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$07000000+$001C0000	; initial drawing location
+
+	dc.l	PatternCounterSide32x64OpenLower
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001011100	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_B+$03800000+$00300000	; initial drawing location
 
 
 	;---------------------------------------------------------------------------
@@ -120,8 +189,8 @@ SceneFCBCheckout:
 	;---------------------------------------------------------------------------
 	dc.w	$0003	; four npc slots
 
-	dc.w	$0000	; starting x location of npc0
-	dc.w	$0000	; starting y location of npc0
+	dc.w	$0130	; starting x location of npc0
+	dc.w	$00D4	; starting y location of npc0
 	dc.w	DIRECTION_DOWN	; starting direction of npc0
 	dc.w	$FFFF	; movement frequency of npc0
 	dc.l	NullMovementStart	; location of movement pattern for npc0

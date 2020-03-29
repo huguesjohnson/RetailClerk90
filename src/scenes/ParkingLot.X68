@@ -8,7 +8,7 @@ SceneParkingLot:
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0001	; tileset count
+	dc.w	$0007	; tileset count
 
 	; tileset 0
 	dc.l	TransparentTileStart
@@ -17,6 +17,30 @@ SceneParkingLot:
 	; tileset 1
 	dc.l	FloorPavementTilesStart
 	dc.l	FloorPavementTilesEnd
+
+	; tileset 2
+	dc.l	FloorTileBasicTilesStart
+	dc.l	FloorTileBasicTilesEnd
+
+	; tileset 3
+	dc.l	ParkingLotWallTilesStart
+	dc.l	ParkingLotWallTilesEnd
+
+	; tileset 4
+	dc.l	ParkingLotSignTilesStart
+	dc.l	ParkingLotSignTilesEnd
+
+	; tileset 5
+	dc.l	ParkingLotGrassLeftTilesStart
+	dc.l	ParkingLotGrassLeftTilesEnd
+
+	; tileset 6
+	dc.l	ParkingLotGrassRightTilesStart
+	dc.l	ParkingLotGrassRightTilesEnd
+
+	; tileset 7
+	dc.l	ParkingLotStripeTilesStart
+	dc.l	ParkingLotStripeTilesEnd
 
 	;---------------------------------------------------------------------------
 	; palettes
@@ -29,14 +53,129 @@ SceneParkingLot:
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$0000	; scenery count
+	dc.w	$0012	; scenery count
+
+	; north mall floor
+	dc.l	PatternTileFloor	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000000010001	; base pattern
+	dc.w	$0001	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_B	; initial drawing location
 
 	; pavement
 	dc.l	Pattern32x32Tile	; location of pattern to load
 	; 		%pccvhnnnnnnnnnnn
-	dc.w	%0000000000000001	; base pattern
-	dc.w	$0006	; repeat 7 times
+	dc.w	%0010000000000001	; base pattern
+	dc.w	$000B	; repeat 12 times
+	dc.l	VDP_VRAM_WRITE_B+$02000000	; initial drawing location
+
+	; mall exterior - sign
+	dc.l	PatternParkingLotSign	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1000000000100000	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_A+$00180000	; initial drawing location
+
+	; mall exterior - left side
+	dc.l	PatternParkingLotWall	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0000000000010101	; base pattern
+	dc.w	$0000	; repeat 0 times
 	dc.l	VDP_VRAM_WRITE_B	; initial drawing location
+
+	; mall exterior - right side
+	dc.l	PatternParkingLotWall	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0000000000010101	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_B+$00380000	; initial drawing location
+
+	; left edge
+	dc.l	PatternParkingLotGrassLeft	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000100100	; base pattern
+	dc.w	$0002	; repeat 2 times
+	dc.l	VDP_VRAM_WRITE_B+$02000000	; initial drawing location
+
+	; right edge
+	dc.l	PatternParkingLotGrassRight	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000110000	; base pattern
+	dc.w	$0002	; repeat 2 times
+	dc.l	VDP_VRAM_WRITE_B+$004C0000+$02000000	; initial drawing location
+
+	; parking stripes
+	dc.l	PatternParkingLotStripe	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000111100	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_B+$00040000+$02000000	; initial drawing location
+
+	dc.l	PatternParkingLotStripe	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000111100	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_B+$00040000+$04000000	; initial drawing location
+
+	dc.l	PatternParkingLotStripe	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000111100	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_B+$00040000+$06000000	; initial drawing location
+
+	dc.l	PatternParkingLotStripe	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000111100	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_B+$00040000+$08000000	; initial drawing location
+
+	dc.l	PatternParkingLotStripe	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000111100	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_B+$00040000+$0A000000	; initial drawing location
+
+	dc.l	PatternParkingLotStripe	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000111100	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_B+$00040000+$0C000000	; initial drawing location
+
+	dc.l	PatternParkingLotStripe	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000111100	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_B+$00380000+$02000000	; initial drawing location
+
+	dc.l	PatternParkingLotStripe	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000111100	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_B+$00380000+$04000000	; initial drawing location
+
+	dc.l	PatternParkingLotStripe	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000111100	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_B+$00380000+$06000000	; initial drawing location
+
+	dc.l	PatternParkingLotStripe	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000111100	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_B+$00380000+$08000000	; initial drawing location
+
+	dc.l	PatternParkingLotStripe	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000111100	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_B+$00380000+$0A000000	; initial drawing location
+
+	dc.l	PatternParkingLotStripe	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000111100	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_B+$00380000+$0C000000	; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text

@@ -135,5 +135,3 @@ ActionTable:
 	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
 ActionTableEnd:
 
-
-

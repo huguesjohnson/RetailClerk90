@@ -8,7 +8,7 @@ SceneWEHall:
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$000A	; tileset count
+	dc.w	$0011	; tileset count
 
 	; tileset 0
 	dc.l	TransparentTileStart
@@ -54,6 +54,34 @@ SceneWEHall:
 	dc.l	FloorCarpetTilesStart
 	dc.l	FloorCarpetTilesEnd
 
+	; tileset B
+	dc.l	CPlanetSignTilesStart
+	dc.l	CPlanetSignTilesEnd
+
+	; tileset C
+	dc.l	CPlanetPoster00TilesStart
+	dc.l	CPlanetPoster00TilesEnd
+
+	; tileset D
+	dc.l	CPlanetPoster01TilesStart
+	dc.l	CPlanetPoster01TilesEnd
+
+	; tileset E
+	dc.l	CPlanetPoster02TilesStart
+	dc.l	CPlanetPoster02TilesEnd
+
+	; tileset F
+	dc.l	CPlanetPoster03TilesStart
+	dc.l	CPlanetPoster03TilesEnd
+
+	; tileset 10
+	dc.l	BenchTilesStart
+	dc.l	BenchTilesEnd
+
+	; tileset 11
+	dc.l	FloorCarpet70sTilesStart
+	dc.l	FloorCarpet70sTilesEnd
+
 	;---------------------------------------------------------------------------
 	; palettes
 	;---------------------------------------------------------------------------
@@ -65,7 +93,7 @@ SceneWEHall:
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$0008	; scenery count
+	dc.w	$0016	; scenery count
 
 	; main floor
 	dc.l	PatternHallFloor	; location of first pattern to load
@@ -73,6 +101,13 @@ SceneWEHall:
 	dc.w	%0100000000000001
 	dc.w	$0001	; repeat 1 times
 	dc.l	VDP_VRAM_WRITE_B+$03000000	; initial drawing location
+
+	; carpet
+	dc.l	PatternTackyFloor	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001100110	; base pattern
+	dc.w	$0001	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_B+$05000000+$000C0000	; initial drawing location
 
 	; south floor
 	dc.l	PatternFloor	; location of first pattern to load
@@ -130,6 +165,86 @@ SceneWEHall:
 	dc.w	$0000	; no repeat times
 	dc.l	VDP_VRAM_WRITE_A+$00800000	; initial drawing location
 
+	; store front - sign
+	dc.l	PatternCPlanetSign	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1000000000110010	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$001A0000	; initial drawing location
+
+	dc.l	Pattern16x24	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0000000001000110	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_A+$00040000+$00800000	; initial drawing location
+
+	dc.l	Pattern16x24	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0000000001001100	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_A+$00120000+$00800000	; initial drawing location
+
+	dc.l	Pattern16x24	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0000000001010010	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_A+$003a0000+$00800000	; initial drawing location
+
+	dc.l	Pattern16x24	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0000000001011000	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_A+$00460000+$00800000	; initial drawing location
+
+	dc.l	Pattern32x16	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001011110	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_A+$04800000+$00100000	; initial drawing location
+
+	dc.l	Pattern32x16	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001011110	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_A+$04800000+$01E0000	; initial drawing location
+
+	dc.l	Pattern32x16	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001011110	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_A+$04800000+$002C0000	; initial drawing location
+
+	dc.l	Pattern32x16	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001011110	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_A+$04800000+$003A0000	; initial drawing location
+
+	dc.l	Pattern32x16	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001011110	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_A+$08000000+$00100000	; initial drawing location
+
+	dc.l	Pattern32x16	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001011110	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_A+$08000000+$01E0000	; initial drawing location
+
+	dc.l	Pattern32x16	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001011110	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_A+$08000000+$002C0000	; initial drawing location
+
+	dc.l	Pattern32x16	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001011110	; base pattern
+	dc.w	$0000	; repeat 0 times
+	dc.l	VDP_VRAM_WRITE_A+$08000000+$003A0000	; initial drawing location
+
+
 	;---------------------------------------------------------------------------
 	; text
 	;---------------------------------------------------------------------------
@@ -151,33 +266,57 @@ SceneWEHall:
 	; word2[0-8]=y0 (0-512)
 	; word2[9-15]=height (0-127)
 	;---------------------------------------------------------------------------
+	dc.w	OBJ_SCENE_BENCH
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0100000011000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0010000011001000
+
+	dc.w	OBJ_SCENE_BENCH
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0100000011111000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0010000011001000
+
+	dc.w	OBJ_SCENE_BENCH
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0100000100110000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0010000011001000
+
+	dc.w	OBJ_SCENE_BENCH
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0100000101101000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0010000011001000
+
+	dc.w	OBJ_SCENE_BENCH
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0100000011000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0010000100000000
+
+	dc.w	OBJ_SCENE_BENCH
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0100000011111000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0010000100000000
+
+	dc.w	OBJ_SCENE_BENCH
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0100000100110000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0010000100000000
+
+	dc.w	OBJ_SCENE_BENCH
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0100000101101000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0010000100000000
+
 	dc.w	OBJ_NOTHING
 	dc.w	$0000
 	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000	
 	dc.w	OBJ_NOTHING
 	dc.w	$0000
 	dc.w	$0000

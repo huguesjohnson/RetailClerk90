@@ -8,7 +8,7 @@ SceneEWHall:
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0007	; tileset count
+	dc.w	$0009	; tileset count
 
 	; tileset 0
 	dc.l	TransparentTileStart
@@ -42,6 +42,14 @@ SceneEWHall:
 	dc.l	FloorWoodVertTilesStart
 	dc.l	FloorWoodVertTilesEnd
 
+	; tileset 8
+	dc.l	EWHallTreeHighTilesStart
+	dc.l	EWHallTreeHighTilesEnd
+
+	; tileset 9
+	dc.l	EWHallTreeLowTilesStart
+	dc.l	EWHallTreeLowTilesEnd
+
 	;---------------------------------------------------------------------------
 	; palettes
 	;---------------------------------------------------------------------------
@@ -53,7 +61,7 @@ SceneEWHall:
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$0008	; scenery count
+	dc.w	$000C	; scenery count
 
 	; main floor
 	dc.l	Pattern32x32Tile	; location of pattern to load
@@ -118,6 +126,31 @@ SceneEWHall:
 	dc.w	$0000	; no repeat times
 	dc.l	VDP_VRAM_WRITE_A+$00800000	; initial drawing location
 
+	; trees
+	dc.l	Pattern32x40	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001000111	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$05000000+$00100000	; initial drawing location
+
+	dc.l	Pattern32x24	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001011011	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$07800000+$00100000	; initial drawing location
+
+	dc.l	Pattern32x40	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001000111	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$05000000+$00380000	; initial drawing location
+
+	dc.l	Pattern32x24	; location of pattern to load
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001011011	; base pattern
+	dc.w	$0000	; no repeat
+	dc.l	VDP_VRAM_WRITE_A+$07800000+$00380000	; initial drawing location
+
 	;---------------------------------------------------------------------------
 	; text
 	;---------------------------------------------------------------------------
@@ -135,12 +168,18 @@ SceneEWHall:
 	; word2[0-8]=y0 (0-512)
 	; word2[9-15]=height (0-127)
 	;---------------------------------------------------------------------------
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	dc.w	OBJ_SCENE_EWHALL_TREE
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0100000011000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0011000011110100
+
+	dc.w	OBJ_SCENE_EWHALL_TREE
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0100000101100000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0011000011110100
+
 	dc.w	OBJ_NOTHING
 	dc.w	$0000
 	dc.w	$0000

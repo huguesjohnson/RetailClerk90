@@ -1,46 +1,18 @@
-PatternCounterLow24x8:
 ;---------------------------------
 ; Scenes this is used in:
 ; -PogoDawg
 ;---------------------------------
+PatternCounterLow24x8:
 	dc.w	$0000	; 1 row
 	dc.w	$0002	; 3 columns
 	; row 00
 	dc.w	$05,$04,$06
 
-PatternCounterLow24x40:
-	dc.w	$0004	; 5 rows
-	dc.w	$0002	; 3 columns
-	; row 00
-	dc.w	$05,$0E,$06
-	; row 01
-	dc.w	$05,$0E,$06
-	; row 02
-	dc.w	$05,$0E,$06
-	; row 03
-	dc.w	$05,$0E,$06
-	; row 04
-	dc.w	$07,$08,$09
-
-PatternCounterSide24x40:
-	dc.w	$0004	; 5 rows
-	dc.w	$0002	; 3 columns
-	; row 00
-	dc.w	$05,$04,$06
-	; row 01
-	dc.w	$05,$04,$06
-	; row 02
-	dc.w	$05,$04,$06
-	; row 03
-	dc.w	$05,$04,$06
-	; row 04
-	dc.w	$05,$04,$06
-
-PatternCounterSide24x40ClosedBottom:
 ;---------------------------------
 ; Scenes this is used in:
 ; -TBooks
 ;---------------------------------
+PatternCounterSide24x40ClosedBottom:
 	dc.w	$0004	; 5 rows
 	dc.w	$0002	; 3 columns
 	; row 00
@@ -54,12 +26,12 @@ PatternCounterSide24x40ClosedBottom:
 	; row 04
 	dc.w	$07,$08,$09
 
-PatternCounterSide24x64OpenLowerLeft:
 ;---------------------------------
 ; Scenes this is used in:
 ; -DenimCountry
 ; -VB
 ;---------------------------------
+PatternCounterSide24x64OpenLowerLeft:
 	dc.w	$0007	; 8 rows
 	dc.w	$0002	; 3 columns
 	; row 00
@@ -79,11 +51,11 @@ PatternCounterSide24x64OpenLowerLeft:
 	; row 07
 	dc.w	$08,$08,$09
 
-PatternCounterSide24x80OpenLowerLeft:
 ;---------------------------------
 ; Scenes this is used in:
 ; -CNow
 ;---------------------------------
+PatternCounterSide24x80OpenLowerLeft:
 	dc.w	$0009	; 10 rows
 	dc.w	$0002	; 3 columns
 	; row 00
@@ -107,11 +79,11 @@ PatternCounterSide24x80OpenLowerLeft:
 	; row 09
 	dc.w	$08,$08,$09
 
-PatternCounterSide32x64OpenLower:
 ;---------------------------------
 ; Scenes this is used in:
 ; -FCB
 ;---------------------------------
+PatternCounterSide32x64OpenLower:
 	dc.w	$0007	; 8 rows
 	dc.w	$0003	; 3 columns
 	; row 00
@@ -131,13 +103,13 @@ PatternCounterSide32x64OpenLower:
 	; row 07
 	dc.w	$0D,$04,$04,$06
 
-PatternCounterLow24x136:
 ;---------------------------------
 ; Scenes this is used in:
 ; -SVideo
 ; -CPlanet
 ; -TLodge
 ;---------------------------------
+PatternCounterLow24x136:
 	dc.w	$0010	; 17 rows
 	dc.w	$0002	; 3 columns
 	; row 00
@@ -175,41 +147,11 @@ PatternCounterLow24x136:
 	; row 10
 	dc.w	$07,$08,$09
 
-PatternCounterSide32x104:
-	dc.w	$000C	; 13 rows
-	dc.w	$0003	; 4 columns
-	; row 00
-	dc.w	$05,$0E,$0E,$06
-	; row 01
-	dc.w	$05,$0E,$0E,$06
-	; row 02
-	dc.w	$05,$0E,$0E,$06
-	; row 03
-	dc.w	$05,$0E,$0E,$06
-	; row 04
-	dc.w	$05,$0E,$0E,$06
-	; row 05
-	dc.w	$05,$0E,$0E,$06
-	; row 06
-	dc.w	$05,$0E,$0E,$06
-	; row 07
-	dc.w	$05,$0E,$0E,$06
-	; row 08
-	dc.w	$05,$0E,$0E,$06
-	; row 09
-	dc.w	$05,$0E,$0E,$06
-	; row 0A
-	dc.w	$05,$0E,$0E,$06
-	; row 0B
-	dc.w	$05,$0E,$0E,$06
-	; row 0C
-	dc.w	$05,$0E,$0E,$06
-
+;---------------------------------
+; Scenes this is used in:
+; -CNow
+;---------------------------------
 PatternCounterLow48x24Open:
-;---------------------------------
-; Scenes this is used in:
-; -CNow
-;---------------------------------
 	dc.w	$0002	; 3 rows
 	dc.w	$0005	; 6 columns
 	; row 00
@@ -219,11 +161,11 @@ PatternCounterLow48x24Open:
 	; row 02
 	dc.w	$07,$08,$08,$08,$08,$08
 
+;---------------------------------
+; Scenes this is used in:
+; -DenimCountry
+;---------------------------------
 PatternCounterLow48x24OpenTopRight:
-;---------------------------------
-; Scenes this is used in:
-; -DenimCountry
-;---------------------------------
 	dc.w	$0002	; 3 rows
 	dc.w	$0005	; 6 columns
 	; row 00
@@ -233,56 +175,32 @@ PatternCounterLow48x24OpenTopRight:
 	; row 02
 	dc.w	$07,$08,$08,$08,$08,$08
 
-PatternCounterHigh48x8OpenLowerRight:
 ;---------------------------------
 ; Scenes this is used in:
 ; -DenimCountry
 ; -CNow
 ;---------------------------------
+PatternCounterHigh48x8OpenLowerRight:
 	dc.w	$0000	; 1 row
 	dc.w	$0005	; 6 columns
 	; row 00
 	dc.w	$01,$02,$02,$02,$02,$02
 
-PatternCounter48x80:
-	dc.w	$0009	; 10 row
-	dc.w	$0005	; 6 columns
-	; row 00
-	dc.w	$01,$02,$02,$02,$02,$03
-	; row 01
-	dc.w	$05,$0E,$0E,$0E,$0E,$06
-	; row 02
-	dc.w	$07,$08,$08,$0C,$0E,$06
-	; row 03
-	dc.w	$00,$00,$00,$05,$0E,$06
-	; row 04
-	dc.w	$00,$00,$00,$05,$0E,$06
-	; row 05
-	dc.w	$00,$00,$00,$05,$0E,$06
-	; row 06
-	dc.w	$00,$00,$00,$05,$0E,$06
-	; row 07
-	dc.w	$00,$00,$00,$05,$0E,$06
-	; row 08
-	dc.w	$00,$00,$00,$05,$0E,$06
-	; row 09
-	dc.w	$00,$00,$00,$07,$08,$09
-
-PatternCounterHigh56x8OpenLowerRight:
 ;---------------------------------
 ; Scenes this is used in:
 ; -VB
 ;---------------------------------
+PatternCounterHigh56x8OpenLowerRight:
 	dc.w	$0000	; 1 row
 	dc.w	$0006	; 7 columns
 	; row 00
 	dc.w	$01,$02,$02,$02,$02,$02,$02
 
-PatternCounterLow56x24OpenTopRight:
 ;---------------------------------
 ; Scenes this is used in:
 ; -VB
 ;---------------------------------
+PatternCounterLow56x24OpenTopRight:
 	dc.w	$0002	; 3 rows
 	dc.w	$0006	; 7 columns
 	; row 00
@@ -292,17 +210,11 @@ PatternCounterLow56x24OpenTopRight:
 	; row 02
 	dc.w	$07,$08,$08,$08,$08,$08,$08
 
-PatternCounterHigh80x8:
-	dc.w	$0000	; 1 row
-	dc.w	$0009	; 10 columns
-	; row 00
-	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$03
-
-PatternCounterHigh80x16:
 ;---------------------------------
 ; Scenes this is used in:
 ; -NShack
 ;---------------------------------
+PatternCounterHigh80x16:
 	dc.w	$0001	; 2 rows
 	dc.w	$0009	; 10 columns
 	; row 00
@@ -322,47 +234,31 @@ PatternCounterLow80x16:
 	; row 02
 	dc.w	$07,$08,$08,$08,$08,$08,$08,$08,$08,$09
 
-PatternCounterLow80x24:
-	dc.w	$0002	; 3 rows
-	dc.w	$0009	; 10 columns
-	; row 00
-	dc.w	$04,$05,$05,$05,$05,$05,$05,$05,$05,$06
-	; row 01
-	dc.w	$04,$05,$05,$05,$05,$05,$05,$05,$05,$06
-	; row 02
-	dc.w	$07,$08,$08,$08,$08,$08,$08,$08,$08,$09
-
-PatternCounterHigh88x8:
-	dc.w	$0000	; 1 rows
-	dc.w	$000A	; 11 columns
-	; row 00
-	dc.w	$0A,$02,$02,$02,$02,$02,$02,$02,$02,$0D
-
-PatternCounterHigh112x8Closed:
 ;---------------------------------
 ; Scenes this is used in:
 ; -Checkers
 ;---------------------------------
+PatternCounterHigh112x8Closed:
 	dc.w	$0000	; 1 rows
 	dc.w	$000D	; 14 columns
 	; row 00
 	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$02,$02,$02,$02,$03
 
-PatternCounterHigh112x8Open:
 ;---------------------------------
 ; Scenes this is used in:
 ; -FCB
 ;---------------------------------
+PatternCounterHigh112x8Open:
 	dc.w	$0000	; 1 rows
 	dc.w	$000D	; 14 columns
 	; row 00
 	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$02,$0A,$0E,$0E,$06
 
-PatternCounterLow112x24Closed:
 ;---------------------------------
 ; Scenes this is used in:
 ; -Checkers
 ;---------------------------------
+PatternCounterLow112x24Closed:
 	dc.w	$0002	; 3 rows
 	dc.w	$000D	; 14 columns
 	; row 00
@@ -372,11 +268,11 @@ PatternCounterLow112x24Closed:
 	; row 02
 	dc.w	$07,$08,$08,$08,$08,$08,$08,$08,$08,$08,$08,$08,$08,$09
 
-PatternCounterLow112x24ClosedTop:
 ;---------------------------------
 ; Scenes this is used in:
 ; -TBooks
 ;---------------------------------
+PatternCounterLow112x24ClosedTop:
 	dc.w	$0002	; 3 rows
 	dc.w	$000D	; 14 columns
 	; row 00
@@ -386,11 +282,11 @@ PatternCounterLow112x24ClosedTop:
 	; row 02
 	dc.w	$05,$04,$0B,$08,$08,$08,$08,$08,$08,$08,$08,$0C,$04,$06
 
-PatternCounterLow112x24Open:
 ;---------------------------------
 ; Scenes this is used in:
 ; -FCB
 ;---------------------------------
+PatternCounterLow112x24Open:
 	dc.w	$0002	; 3 rows
 	dc.w	$000D	; 14 columns
 	; row 00
@@ -400,88 +296,11 @@ PatternCounterLow112x24Open:
 	; row 02
 	dc.w	$07,$08,$08,$08,$08,$08,$08,$08,$08,$08,$08,$08,$08,$09
 
-PatternCounterLow112x80Closed:
-	dc.w	$0009	; 10 rows
-	dc.w	$000D	; 14 columns
-	; row 00
-	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$02,$02,$02,$02,$03
-	; row 01
-	dc.w	$05,$0B,$08,$08,$08,$08,$08,$08,$08,$08,$08,$08,$0C,$06
-	; row 02
-	dc.w	$05,$06,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$05,$06
-	; row 03
-	dc.w	$05,$06,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$05,$06
-	; row 04
-	dc.w	$05,$06,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$05,$06
-	; row 05
-	dc.w	$05,$06,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$05,$06
-	; row 06
-	dc.w	$05,$06,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$05,$06
-	; row 07
-	dc.w	$05,$06,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$05,$06
-	; row 08
-	dc.w	$05,$0A,$02,$02,$02,$02,$02,$02,$02,$02,$02,$02,$0D,$06
-	; row 09
-	dc.w	$07,$08,$08,$08,$08,$08,$08,$08,$08,$08,$08,$08,$08,$09
-
-PatternCounterHigh88x8Bottom:
-	dc.w	$0000	; 1 row
-	dc.w	$000A	; 11 columns
-	; row 00
-	dc.w	$05,$0E,$0E,$0A,$02,$02,$02,$02,$02,$02,$02
-
-PatternCounterLow88x24Bottom:
-	dc.w	$0002	; 3 rows
-	dc.w	$000A	; 11 columns
-	; row 00
-	dc.w	$05,$0E,$0E,$0E,$0E,$0E,$0E,$0E,$0E,$0E,$0E
-	; row 01
-	dc.w	$05,$0E,$0E,$0E,$0E,$0E,$0E,$0E,$0E,$0E,$0E
-	; row 02
-	dc.w	$07,$08,$08,$08,$08,$08,$08,$08,$08,$08,$08
-
-PatternCounterLow112x88OpenRight:
-	dc.w	$000A	; 11 rows
-	dc.w	$0014	; 21 columns
-	; row 00
-	dc.w	$00,$01,$02,$03,$04,$05,$06,$07,$08,$09,$0A
-	dc.w	$0B,$0C,$0D,$0E,$0F,$10,$11,$12,$13,$14
-	; row 01
-	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$02,$02
-	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$03
-	; row 02
-	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$02,$02
-	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$03
-	; row 03
-	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$02,$02
-	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$03
-	; row 04
-	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$02,$02
-	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$03
-	; row 05
-	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$02,$02
-	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$03
-	; row 06
-	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$02,$02
-	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$03
-	; row 07
-	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$02,$02
-	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$03
-	; row 08
-	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$02,$02
-	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$03
-	; row 09
-	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$02,$02
-	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$03
-	; row 0A
-	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$02,$02
-	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$03
-
-PatternCounterLow272x16:
 ;---------------------------------
 ; Scenes this is used in:
 ; -PogoDawg
 ;---------------------------------
+PatternCounterLow272x16:
 	dc.w	$0001	; 2 rows
 	dc.w	$0021	; 34 columns
 	; row 00
@@ -490,4 +309,33 @@ PatternCounterLow272x16:
 	; row 01
 	dc.w	$05,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04
 	dc.w	$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04
+
+;---------------------------------
+; Scenes this is used in:
+; -WWCheckout
+;---------------------------------
+PatternCounterHigh208x8Closed:
+	dc.w	$0000	; 1 rows
+	dc.w	$0019	; 26 columns
+	; row 00
+	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$02,$02,$02,$03
+	dc.w	$01,$02,$02,$02,$02,$02,$02,$02,$02,$02,$02,$02,$03
+
+;---------------------------------
+; Scenes this is used in:
+; -WWCheckout
+;---------------------------------
+PatternCounterLow208x24Closed:
+	dc.w	$0002	; 3 rows
+	dc.w	$0019	; 26 columns
+	; row 00
+	dc.w	$05,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$06
+	dc.w	$05,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$06
+	; row 01
+	dc.w	$05,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$06
+	dc.w	$05,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$04,$06
+	; row 02
+	dc.w	$07,$08,$08,$08,$08,$08,$08,$08,$08,$08,$08,$08,$09
+	dc.w	$07,$08,$08,$08,$08,$08,$08,$08,$08,$08,$08,$08,$09
+
 

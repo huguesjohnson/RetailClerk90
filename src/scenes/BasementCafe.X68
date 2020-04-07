@@ -120,35 +120,64 @@ SceneBasementCafe:
 	; word2[9-15]=height (0-127)
 	;---------------------------------------------------------------------------
 	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
+
 	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
+
 	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
+
 	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
+
 	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
+
 	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
+
 	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
+
 	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
+
 	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000	
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
+
 	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
 
 	;---------------------------------------------------------------------------
 	; collision data

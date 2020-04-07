@@ -8,7 +8,7 @@ Carol_Frame0Start:
 	dc.l	$0001AAAA
 	dc.l	$001AAA33
 	dc.l	$001AA3D3
-	dc.l	$001AC373
+	dc.l	$001A3373
 	dc.l	$001A3333
 	dc.l	$001A3333
 
@@ -44,7 +44,7 @@ Carol_Frame0Start:
 	dc.l	$AAA10000
 	dc.l	$3AAA1000
 	dc.l	$D3AA1000
-	dc.l	$73CA1000
+	dc.l	$733A1000
 	dc.l	$333A1000
 	dc.l	$333A1000
 
@@ -85,7 +85,7 @@ Carol_Frame1Start:
 	dc.l	$0001AAAA
 	dc.l	$001AAA33
 	dc.l	$001AA3D3
-	dc.l	$001AC373
+	dc.l	$001A3373
 	dc.l	$001A3333
 
 	dc.l	$001A3333
@@ -121,7 +121,7 @@ Carol_Frame1Start:
 	dc.l	$AAA10000
 	dc.l	$3AAA1000
 	dc.l	$D3AA1000
-	dc.l	$73CA1000
+	dc.l	$733A1000
 	dc.l	$333A1000
 
 	dc.l	$333A1000
@@ -161,7 +161,7 @@ Carol_Frame2Start:
 	dc.l	$00001AAA
 	dc.l	$0001AAA3
 	dc.l	$0001AA3D
-	dc.l	$0001AC37
+	dc.l	$0001A337
 	dc.l	$0001A333
 
 	dc.l	$0001A333
@@ -197,7 +197,7 @@ Carol_Frame2Start:
 	dc.l	$AAAA1000
 	dc.l	$33AAA100
 	dc.l	$3D3AA100
-	dc.l	$373CA100
+	dc.l	$3733A100
 	dc.l	$3333A100
 
 	dc.l	$3333A100
@@ -501,7 +501,7 @@ Carol_Frame6Start:
 	dc.l	$AAAA1000
 	dc.l	$AAAA1000
 	dc.l	$DAAA1000
-	dc.l	$3CAA1000
+	dc.l	$3DAA1000
 	dc.l	$33AA1000
 
 	dc.l	$33AA1000
@@ -578,7 +578,7 @@ Carol_Frame7Start:
 	dc.l	$AAAA1000
 	dc.l	$AAAA1000
 	dc.l	$DAAA1000
-	dc.l	$3CAA1000
+	dc.l	$3DAA1000
 
 	dc.l	$33AA1000
 	dc.l	$33AA1000
@@ -654,7 +654,7 @@ Carol_Frame8Start:
 	dc.l	$AAAA1000
 	dc.l	$AAAA1000
 	dc.l	$DAAA1000
-	dc.l	$3CAA1000
+	dc.l	$3DAA1000
 
 	dc.l	$33AA1000
 	dc.l	$33AA1000
@@ -693,7 +693,7 @@ Carol_Frame9Start:
 	dc.l	$0001AAAA
 	dc.l	$0001AAAA
 	dc.l	$0001AAAD
-	dc.l	$0001AAC3
+	dc.l	$0001AAD3
 	dc.l	$0001AA33
 
 	dc.l	$0001AA33
@@ -770,7 +770,7 @@ Carol_Frame10Start:
 	dc.l	$0001AAAA
 	dc.l	$0001AAAA
 	dc.l	$0001AAAD
-	dc.l	$0001AAC3
+	dc.l	$0001AAD3
 
 	dc.l	$0001AA33
 	dc.l	$0001AA33
@@ -846,7 +846,7 @@ Carol_Frame11Start:
 	dc.l	$0001AAAA
 	dc.l	$0001AAAA
 	dc.l	$0001AAAD
-	dc.l	$0001AAC3
+	dc.l	$0001AAD3
 
 	dc.l	$0001AA33
 	dc.l	$0001AA33

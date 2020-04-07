@@ -153,3 +153,36 @@ PatternTLodgeSmallRackRightHigh:
 PatternTLodgeSmallRackRightLow:
 	include 'patterns/tlodge-smallrack-right-low.X68'
 
+PatternSHallPlant:
+	include 'patterns/shall-plant.X68'
+
+PatternCenterFireplaceHigh:
+	include 'patterns/center-fireplace-high.X68'
+
+PatternCenterFireplaceLow:
+	include 'patterns/center-fireplace-low.X68'
+
+PatternInfoDeskHigh:
+	include 'patterns/infodesk-high.X68'
+
+PatternInfoDeskLow:
+	include 'patterns/infodesk-low.X68'
+
+PatternLaserDiscsHigh:
+	include 'patterns/laserdiscs-high.X68'
+
+PatternLaserDiscsLow:
+	include 'patterns/laserdiscs-low.X68'
+
+PatternWWAudioStereoWoodHigh:
+	include 'patterns/wwaudio-stereo-wood-high.X68'
+
+PatternWWAudioStereoWoodLow:
+	include 'patterns/wwaudio-stereo-wood-low.X68'
+
+PatternWWAudioStereoBlackHigh:
+	include 'patterns/wwaudio-stereo-black-high.X68'
+
+PatternWWAudioStereoBlackLow:
+	include 'patterns/wwaudio-stereo-black-low.X68'
+

@@ -8,7 +8,7 @@ SceneCenter:
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0005	; tileset count
+	dc.w	$0014	; tileset count
 
 	; tileset 0
 	dc.l	TransparentTileStart
@@ -34,6 +34,66 @@ SceneCenter:
 	dc.l	FloorTileSmallTilesStart
 	dc.l	FloorTileSmallTilesEnd
 
+	; tileset 6
+	dc.l	FloorSnowTilesStart
+	dc.l	FloorSnowTilesEnd
+
+	; tileset 7
+	dc.l	CenterCarpetTilesStart
+	dc.l	CenterCarpetTilesEnd
+
+	; tileset 8
+	dc.l	CenterSnowEdgeLeftTilesStart
+	dc.l	CenterSnowEdgeLeftTilesEnd
+
+	; tileset 9
+	dc.l	CenterSnowEdgeRightTilesStart
+	dc.l	CenterSnowEdgeRightTilesEnd
+
+	; tileset A
+	dc.l	CenterSnowEdgeTopTilesStart
+	dc.l	CenterSnowEdgeTopTilesEnd
+
+	; tileset B
+	dc.l	CenterSnowEdgeBottomTilesStart
+	dc.l	CenterSnowEdgeBottomTilesEnd
+
+	; tileset C
+	dc.l	CenterSnowEdgeCornersTilesStart
+	dc.l	CenterSnowEdgeCornersTilesEnd
+
+	; tileset D
+	dc.l	CenterFireplaceHighTilesStart
+	dc.l	CenterFireplaceHighTilesEnd
+
+	; tileset E
+	dc.l	CenterFireplaceLowTilesStart
+	dc.l	CenterFireplaceLowTilesEnd
+
+	; tileset F
+	dc.l	CenterChairHighTilesStart
+	dc.l	CenterChairHighTilesEnd
+
+	; tileset 10
+	dc.l	CenterChairLowTilesStart
+	dc.l	CenterChairLowTilesEnd
+
+	; tileset 11
+	dc.l	CenterFenceHighTilesStart
+	dc.l	CenterFenceHighTilesEnd
+
+	; tileset 12
+	dc.l	CenterFenceLowTilesStart
+	dc.l	CenterFenceLowTilesEnd
+
+	; tileset 13
+	dc.l	CenterTreeHighTilesStart
+	dc.l	CenterTreeHighTilesEnd
+
+	; tileset 14
+	dc.l	CenterTreeLowTilesStart
+	dc.l	CenterTreeLowTilesEnd
+
 	;---------------------------------------------------------------------------
 	; palettes
 	;---------------------------------------------------------------------------
@@ -45,7 +105,7 @@ SceneCenter:
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$0003	; scenery count
+	dc.w	$0029	; scenery count
 
 	; background
 	dc.l	PatternTileFloor
@@ -75,6 +135,249 @@ SceneCenter:
 	dc.w	$0000	; no repeat times
 	dc.l	VDP_VRAM_WRITE_A+$00800000	; initial drawing location
 
+	; snow floor
+	dc.l	Pattern32x32Tile192
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000111001	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_B+$00100000+$03800000	; initial drawing location
+
+	; snow floor
+	dc.l	Pattern32x32Tile192
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000111001	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_B+$00100000+$06800000	; initial drawing locations
+
+	; carpet
+	dc.l	Pattern16x16Tile192
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001001001	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_B+$00100000+$05800000	; initial drawing locations
+
+	dc.l	Pattern16x16Tile96
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001001001	; base pattern
+	dc.w	$0001	; repeat 2 times
+	dc.l	VDP_VRAM_WRITE_B+$001C0000+$03800000	; initial drawing locations
+
+	; left snow edge
+	dc.l	Pattern8x16
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001001101	; base pattern
+	dc.w	$0001	; repeat 2 times
+	dc.l	VDP_VRAM_WRITE_A+$000E0000+$03800000	; initial drawing locations
+
+	dc.l	Pattern8x16
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001001101	; base pattern
+	dc.w	$0001	; repeat 2 times
+	dc.l	VDP_VRAM_WRITE_A+$000E0000+$06800000	; initial drawing locations
+
+	; right snow edge
+	dc.l	Pattern8x16
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001001111	; base pattern
+	dc.w	$0001	; repeat 2 times
+	dc.l	VDP_VRAM_WRITE_A+$00400000+$03800000	; initial drawing locations
+
+	dc.l	Pattern8x16
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001001111	; base pattern
+	dc.w	$0001	; repeat 2 times
+	dc.l	VDP_VRAM_WRITE_A+$00400000+$06800000	; initial drawing locations
+
+	; top snow edge
+	dc.l	Pattern16x8x192
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001010001	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$00100000+$03000000	; initial drawing locations
+
+	; bottom snow edge
+	dc.l	Pattern16x8x192
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001010011	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$00100000+$08800000	; initial drawing locations
+
+	; snow edge corners
+	dc.l	Pattern8x8
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001010101	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$000E0000+$03000000	; initial drawing locations
+
+	dc.l	Pattern8x8
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001010110	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$000E0000+$08800000	; initial drawing locations
+
+	dc.l	Pattern8x8
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001010111	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$00400000+$03000000	; initial drawing locations
+
+	dc.l	Pattern8x8
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001011000	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$00400000+$08800000	; initial drawing locations
+
+	dc.l	PatternCenterFireplaceHigh
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001011001	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$00220000+$03000000	; initial drawing locations
+
+	dc.l	PatternCenterFireplaceLow
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001100000	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$00220000+$03800000	; initial drawing locations
+
+	; chair
+
+	dc.l	Pattern24x16
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001110010	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$002E0000+$04000000	; initial drawing locations
+
+	dc.l	Pattern24x24
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001111000	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$002E0000+$05000000	; initial drawing locations
+
+	; fence
+
+	dc.l	Pattern24x8
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1010000010000001	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$00100000+$06800000	; initial drawing locations
+
+	dc.l	Pattern24x24
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000010000100	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$00100000+$07000000	; initial drawing locations
+
+	dc.l	Pattern24x8
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1010000010000001	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$00160000+$06800000	; initial drawing locations
+
+	dc.l	Pattern24x24
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000010000100	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$00160000+$07000000	; initial drawing locations
+
+	dc.l	Pattern24x8
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1010000010000001	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$001C0000+$06800000	; initial drawing locations
+
+	dc.l	Pattern24x24
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000010000100	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$001C0000+$07000000	; initial drawing locations
+
+	dc.l	Pattern24x8
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1010000010000001	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$00220000+$06800000	; initial drawing locations
+
+	dc.l	Pattern24x24
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000010000100	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$00220000+$07000000	; initial drawing locations
+
+	dc.l	Pattern24x8
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1010000010000001	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$00280000+$06800000	; initial drawing locations
+
+	dc.l	Pattern24x24
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000010000100	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$00280000+$07000000	; initial drawing locations
+
+	dc.l	Pattern24x8
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1010000010000001	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$002E0000+$06800000	; initial drawing locations
+
+	dc.l	Pattern24x24
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000010000100	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$002E0000+$07000000	; initial drawing locations
+
+	dc.l	Pattern24x8
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1010000010000001	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$00340000+$06800000	; initial drawing locations
+
+	dc.l	Pattern24x24
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000010000100	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$00340000+$07000000	; initial drawing locations
+
+	dc.l	Pattern24x8
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1010000010000001	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$003A0000+$06800000	; initial drawing locations
+
+	dc.l	Pattern24x24
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000010000100	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$003A0000+$07000000	; initial drawing locations
+
+	; trees
+
+	dc.l	Pattern24x24
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1010000010001101	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$00140000+$02000000	; initial drawing locations
+
+	dc.l	Pattern24x24
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000010010110	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$00140000+$03800000	; initial drawing locations
+
+	dc.l	Pattern24x24
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%1010000010001101	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$00380000+$02000000	; initial drawing locations
+
+	dc.l	Pattern24x24
+	; 		%pccvhnnnnnnnnnnn
+	dc.w	%0010000010010110	; base pattern
+	dc.w	$0000	; repeat 1 time
+	dc.l	VDP_VRAM_WRITE_A+$00380000+$03800000	; initial drawing locations
+
+
 	;---------------------------------------------------------------------------
 	; text
 	;---------------------------------------------------------------------------
@@ -96,36 +399,65 @@ SceneCenter:
 	; word2[0-8]=y0 (0-512)
 	; word2[9-15]=height (0-127)
 	;---------------------------------------------------------------------------
+	dc.w	OBJ_SCENE_CENTER_TREE
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0011100011001010
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0011000010110110
+
+	dc.w	OBJ_SCENE_CENTER_TREE
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0011000101011100
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0011010010110110
+
+	dc.w	OBJ_SCENE_CENTER_FIREPLACE
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0100000100001000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0010000010111000
+
 	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
+
 	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
+
 	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
+
 	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
+
 	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
+
 	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
+
 	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000	
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
 
 	;---------------------------------------------------------------------------
 	; collision data
@@ -145,15 +477,15 @@ SceneCenter:
 	;---------------------------------------------------------------------------
 	dc.w	$0003	; four npc slots
 
-	dc.w	$0000	; starting x location of npc0
-	dc.w	$0000	; starting y location of npc0
+	dc.w	$00F4	; starting x location of npc0
+	dc.w	$00B2	; starting y location of npc0
 	dc.w	DIRECTION_DOWN	; starting direction of npc0
 	dc.w	$FFFF	; movement frequency of npc0
 	dc.l	NullMovementStart	; location of movement pattern for npc0
 	dc.w	(NullMovementEnd-NullMovementStart-1)	; pattern length
 
-	dc.w	$0000	; starting x location of npc1
-	dc.w	$0000	; starting y location of npc1
+	dc.w	$013C	; starting x location of npc1
+	dc.w	$00D0	; starting y location of npc1
 	dc.w	DIRECTION_DOWN	; starting direction of npc1
 	dc.w	$FFFF	; movement frequency of npc1
 	dc.l	NullMovementStart	; location of movement pattern for npc1

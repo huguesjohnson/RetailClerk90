@@ -496,3 +496,147 @@ TLodgeSmallRackRightLowTilesStart:
 	include 'tiles/scene-tiles/tlodge-smallrack-right-low.X68'
 TLodgeSmallRackRightLowTilesEnd:
 
+SHallPlantTilesStart:
+	include 'tiles/scene-tiles/shall-plant.X68'
+SHallPlantTilesEnd:
+
+SHallPhoneHighTilesStart:
+	include 'tiles/scene-tiles/shall-phone-high.X68'
+SHallPhoneHighTilesEnd:
+
+SHallPhoneLowTilesStart:
+	include 'tiles/scene-tiles/shall-phone-low.X68'
+SHallPhoneLowTilesEnd:
+
+CenterCarpetTilesStart:
+	include 'tiles/scene-tiles/center-carpet.X68'
+CenterCarpetTilesEnd:
+
+CenterFireplaceHighTilesStart:
+	include 'tiles/scene-tiles/center-fireplace-high.X68'
+CenterFireplaceHighTilesEnd:
+
+CenterFireplaceLowTilesStart:
+	include 'tiles/scene-tiles/center-fireplace-low.X68'
+CenterFireplaceLowTilesEnd:
+
+CenterFenceHighTilesStart:
+	include 'tiles/scene-tiles/center-fence-high.X68'
+CenterFenceHighTilesEnd:
+
+CenterFenceLowTilesStart:
+	include 'tiles/scene-tiles/center-fence-low.X68'
+CenterFenceLowTilesEnd:
+
+CenterChairHighTilesStart:
+	include 'tiles/scene-tiles/center-chair-high.X68'
+CenterChairHighTilesEnd:
+
+CenterChairLowTilesStart:
+	include 'tiles/scene-tiles/center-chair-low.X68'
+CenterChairLowTilesEnd:
+
+CenterSnowEdgeLeftTilesStart:
+	include 'tiles/scene-tiles/center-snow-edge-left.X68'
+CenterSnowEdgeLeftTilesEnd:
+
+CenterSnowEdgeRightTilesStart:
+	include 'tiles/scene-tiles/center-snow-edge-right.X68'
+CenterSnowEdgeRightTilesEnd:
+
+CenterSnowEdgeTopTilesStart:
+	include 'tiles/scene-tiles/center-snow-edge-top.X68'
+CenterSnowEdgeTopTilesEnd:
+
+CenterSnowEdgeBottomTilesStart:
+	include 'tiles/scene-tiles/center-snow-edge-bottom.X68'
+CenterSnowEdgeBottomTilesEnd:
+
+CenterSnowEdgeCornersTilesStart:
+	include 'tiles/scene-tiles/center-snow-edge-corners.X68'
+CenterSnowEdgeCornersTilesEnd:
+
+CenterTreeHighTilesStart:
+	include 'tiles/scene-tiles/center-tree-high.X68'
+CenterTreeHighTilesEnd:
+
+CenterTreeLowTilesStart:
+	include 'tiles/scene-tiles/center-tree-low.X68'
+CenterTreeLowTilesEnd:
+
+EWHallTreeHighTilesStart:
+	include 'tiles/scene-tiles/ewhall-tree-high.X68'
+EWHallTreeHighTilesEnd:
+
+EWHallTreeLowTilesStart:
+	include 'tiles/scene-tiles/ewhall-tree-low.X68'
+EWHallTreeLowTilesEnd:
+
+InfoDeskHighTilesStart:
+	include 'tiles/scene-tiles/infodesk-high.X68'
+InfoDeskHighTilesEnd:
+
+InfoDeskLowTilesStart:
+	include 'tiles/scene-tiles/infodesk-low.X68'
+InfoDeskLowTilesEnd:
+
+LaserDiscsHighTilesStart:
+	include 'tiles/scene-tiles/laserdiscs-high.X68'
+LaserDiscsHighTilesEnd:
+
+LaserDiscsLowTilesStart:
+	include 'tiles/scene-tiles/laserdiscs-low.X68'
+LaserDiscsLowTilesEnd:
+
+TVLargeHighTilesStart:
+	include 'tiles/scene-tiles/tv-large-high.X68'
+TVLargeHighTilesEnd:
+
+TVLargeLowTilesStart:
+	include 'tiles/scene-tiles/tv-large-low.X68'
+TVLargeLowTilesEnd:
+
+WWTVWallTilesStart:
+	include 'tiles/scene-tiles/wwtvwall.X68'
+WWTVWallTilesEnd:
+
+WWAudioWallTilesStart:
+	include 'tiles/scene-tiles/wwaudiowall.X68'
+WWAudioWallTilesEnd:
+
+WWAudioStereoWoodHighTilesStart:
+	include 'tiles/scene-tiles/wwaudio-stereo-wood-high.X68'
+WWAudioStereoWoodHighTilesEnd:
+
+WWAudioStereoWoodLowTilesStart:
+	include 'tiles/scene-tiles/wwaudio-stereo-wood-low.X68'
+WWAudioStereoWoodLowTilesEnd:
+
+WWAudioStereoBlackHighTilesStart:
+	include 'tiles/scene-tiles/wwaudio-stereo-black-high.X68'
+WWAudioStereoBlackHighTilesEnd:
+
+WWAudioStereoBlackLowTilesStart:
+	include 'tiles/scene-tiles/wwaudio-stereo-black-low.X68'
+WWAudioStereoBlackLowTilesEnd:
+
+WWApplianceWallTilesStart:
+	include 'tiles/scene-tiles/wwappliancewall.X68'
+WWApplianceWallTilesEnd:
+
+WWApplianceFridgeHighTilesStart:
+	include 'tiles/scene-tiles/wwappliance-fridge-high.X68'
+WWApplianceFridgeHighTilesEnd:
+
+WWApplianceFridgeLowTilesStart:
+	include 'tiles/scene-tiles/wwappliance-fridge-low.X68'
+WWApplianceFridgeLowTilesEnd:
+
+WWApplianceFridgeGrayHighTilesStart:
+	include 'tiles/scene-tiles/wwappliance-fridge-gray-high.X68'
+WWApplianceFridgeGrayHighTilesEnd:
+
+WWApplianceFridgeGrayLowTilesStart:
+	include 'tiles/scene-tiles/wwappliance-fridge-gray-low.X68'
+WWApplianceFridgeGrayLowTilesEnd:
+

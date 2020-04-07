@@ -642,10 +642,10 @@ Santa_Frame8Start:
 	dc.l	$0001CCC1
 	dc.l	$0001DDD1
 	dc.l	$00015551
-	dc.l	$00000011
-	dc.l	$000011CC
-	dc.l	$0001CCCC
-	dc.l	$0001CCCC
+	dc.l	$00115551
+	dc.l	$01155551
+	dc.l	$01111111
+	dc.l	$00111111
 
 	dc.l	$00000000
 	dc.l	$11000000
@@ -678,234 +678,234 @@ Santa_Frame8Start:
 	dc.l	$1CCC1000
 	dc.l	$01DDD100
 	dc.l	$01555100
-	dc.l	$11000000
-	dc.l	$CC100000
-	dc.l	$CCC10000
-	dc.l	$CCC10000
+	dc.l	$11555110
+	dc.l	$15555110
+	dc.l	$11111110
+	dc.l	$11111100
 
 Santa_Frame8End:
 
 Santa_Frame9Start:
 
+	dc.l	$00000011
+	dc.l	$000011CC
+	dc.l	$0001CCCC
+	dc.l	$0001CCCC
 	dc.l	$001CCCCC
 	dc.l	$001DDDDD
 	dc.l	$001AAAAA
 	dc.l	$0001DDD6
+
 	dc.l	$0001DD66
 	dc.l	$00001DD6
 	dc.l	$00001CDD
 	dc.l	$00001CCD
+	dc.l	$00001CCC
+	dc.l	$00001CCC
+	dc.l	$00001CC1
+	dc.l	$00001CC1
 
-	dc.l	$00001CCC
-	dc.l	$00001CCC
-	dc.l	$00001CC1
-	dc.l	$00001CC1
 	dc.l	$00001CC1
 	dc.l	$00001CC1
 	dc.l	$00001CC1
 	dc.l	$00001661
-
 	dc.l	$0000011C
 	dc.l	$000001CC
 	dc.l	$000001CC
 	dc.l	$000001CC
+
 	dc.l	$000001CC
 	dc.l	$000001CC
 	dc.l	$000001DD
 	dc.l	$00000155
-
 	dc.l	$00001155
 	dc.l	$00011155
 	dc.l	$00011111
 	dc.l	$00001111
-	dc.l	$00000000
-	dc.l	$00000011
-	dc.l	$000011CC
-	dc.l	$0001CCCC
 
+	dc.l	$11000000
+	dc.l	$CC100000
+	dc.l	$CCC10000
+	dc.l	$CCC10000
 	dc.l	$CCCC1000
 	dc.l	$DDDD1000
 	dc.l	$AAAA1000
 	dc.l	$DD610000
+
 	dc.l	$D5610000
 	dc.l	$66610000
 	dc.l	$6D100000
 	dc.l	$D1000000
-
 	dc.l	$DD100000
 	dc.l	$CCD10000
 	dc.l	$CCC81000
 	dc.l	$CCCC1000
+
 	dc.l	$CCC81000
 	dc.l	$CCCC1000
 	dc.l	$DDD10000
 	dc.l	$CCC10000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
+	dc.l	$CC100000
 
-	dc.l	$CC100000
-	dc.l	$CC100000
-	dc.l	$CC100000
-	dc.l	$CC100000
 	dc.l	$CC100000
 	dc.l	$CC100000
 	dc.l	$DD100000
 	dc.l	$55100000
-
 	dc.l	$55110000
 	dc.l	$55511000
 	dc.l	$11111000
 	dc.l	$11110000
-	dc.l	$00000000
-	dc.l	$11000000
-	dc.l	$CC100000
-	dc.l	$CCC10000
 
 Santa_Frame9End:
 
 Santa_Frame10Start:
 
-	dc.l	$0001CCCC
-	dc.l	$001CCCCC
-	dc.l	$001DDDDD
-	dc.l	$001AAAAA
-	dc.l	$0001DDD6
-	dc.l	$0001DD66
-	dc.l	$00001DD6
-	dc.l	$00001CDD
-
-	dc.l	$00001CCD
-	dc.l	$00001CCC
-	dc.l	$00011CCC
-	dc.l	$001C1CC1
-	dc.l	$001C1CCC
-	dc.l	$001C11CC
-	dc.l	$001C111C
-	dc.l	$00011DD1
-
-	dc.l	$000001CC
-	dc.l	$00001CCC
-	dc.l	$00001CC1
-	dc.l	$0001CCC1
-	dc.l	$0001CCC1
-	dc.l	$001CCC10
-	dc.l	$001DDD10
-	dc.l	$01155510
-
-	dc.l	$01155511
-	dc.l	$01155551
-	dc.l	$00111111
-	dc.l	$00011111
 	dc.l	$00000000
 	dc.l	$00000011
 	dc.l	$000011CC
 	dc.l	$0001CCCC
+	dc.l	$0001CCCC
+	dc.l	$001CCCCC
+	dc.l	$001DDDDD
+	dc.l	$001AAAAA
 
-	dc.l	$CCC10000
-	dc.l	$CCCC1000
-	dc.l	$DDDD1000
-	dc.l	$AAAA1000
-	dc.l	$DD610000
-	dc.l	$D5610000
-	dc.l	$66610000
-	dc.l	$6D100000
+	dc.l	$0001DDD6
+	dc.l	$0001DD66
+	dc.l	$00001DD6
+	dc.l	$00001CDD
+	dc.l	$00001CCD
+	dc.l	$00001CCC
+	dc.l	$00011CCC
+	dc.l	$001C1CC1
 
-	dc.l	$D1000000
-	dc.l	$DD100000
-	dc.l	$CCD10000
-	dc.l	$CCC81000
-	dc.l	$1CCC1000
-	dc.l	$C1181000
-	dc.l	$CC611000
-	dc.l	$1C611000
+	dc.l	$001C1CCC
+	dc.l	$001C11CC
+	dc.l	$001C111C
+	dc.l	$00011DD1
+	dc.l	$000001CC
+	dc.l	$00001CCC
+	dc.l	$00001CC1
+	dc.l	$0001CCC1
 
-	dc.l	$C1110000
-	dc.l	$CCC10000
-	dc.l	$CCCC1000
-	dc.l	$1CCC1000
-	dc.l	$1CCC1000
-	dc.l	$1CCC1000
-	dc.l	$1DDD1000
-	dc.l	$15551100
+	dc.l	$0001CCC1
+	dc.l	$001CCC10
+	dc.l	$001DDD10
+	dc.l	$01155510
+	dc.l	$01155511
+	dc.l	$01155551
+	dc.l	$00111111
+	dc.l	$00011111
 
-	dc.l	$15551110
-	dc.l	$15555110
-	dc.l	$11111100
-	dc.l	$11111000
 	dc.l	$00000000
 	dc.l	$11000000
 	dc.l	$CC100000
 	dc.l	$CCC10000
+	dc.l	$CCC10000
+	dc.l	$CCCC1000
+	dc.l	$DDDD1000
+	dc.l	$AAAA1000
+
+	dc.l	$DD610000
+	dc.l	$D5610000
+	dc.l	$66610000
+	dc.l	$6D100000
+	dc.l	$D1000000
+	dc.l	$DD100000
+	dc.l	$CCD10000
+	dc.l	$CCC81000
+
+	dc.l	$1CCC1000
+	dc.l	$C1181000
+	dc.l	$CC611000
+	dc.l	$1C611000
+	dc.l	$C1110000
+	dc.l	$CCC10000
+	dc.l	$CCCC1000
+	dc.l	$1CCC1000
+
+	dc.l	$1CCC1000
+	dc.l	$1CCC1000
+	dc.l	$1DDD1000
+	dc.l	$15551100
+	dc.l	$15551110
+	dc.l	$15555110
+	dc.l	$11111100
+	dc.l	$11111000
 
 Santa_Frame10End:
 
 Santa_Frame11Start:
 
+	dc.l	$00000000
+	dc.l	$00000011
+	dc.l	$000011CC
+	dc.l	$0001CCCC
 	dc.l	$0001CCCC
 	dc.l	$001CCCCC
 	dc.l	$001DDDDD
 	dc.l	$001AAAAA
+
 	dc.l	$0001DDD6
 	dc.l	$0001DD66
 	dc.l	$00001DD6
 	dc.l	$00001CDD
-
 	dc.l	$00001CCD
 	dc.l	$00001CCC
 	dc.l	$0001CCCC
 	dc.l	$001CCC1C
+
 	dc.l	$001CC1CC
 	dc.l	$001CC1CC
 	dc.l	$001CC1CC
 	dc.l	$001661DD
-
 	dc.l	$000111CC
 	dc.l	$0000011C
 	dc.l	$00001CC1
 	dc.l	$00001CCC
+
 	dc.l	$0001CCC1
 	dc.l	$0001CCC1
 	dc.l	$001DDD10
 	dc.l	$00155510
-
-	dc.l	$01155511
-	dc.l	$01155551
-	dc.l	$01111111
-	dc.l	$00111111
 	dc.l	$01155511
 	dc.l	$01155551
 	dc.l	$01111111
 	dc.l	$00111111
 
+	dc.l	$00000000
+	dc.l	$11000000
+	dc.l	$CC100000
+	dc.l	$CCC10000
 	dc.l	$CCC10000
 	dc.l	$CCCC1000
 	dc.l	$DDDD1000
 	dc.l	$AAAA1000
+
 	dc.l	$DD610000
 	dc.l	$D5610000
 	dc.l	$66610000
 	dc.l	$6D100000
-
 	dc.l	$D1000000
 	dc.l	$DD100000
 	dc.l	$CCD10000
 	dc.l	$CCC81000
+
 	dc.l	$CCCC1000
 	dc.l	$CCC81000
 	dc.l	$CCCC1100
 	dc.l	$DDD16100
-
 	dc.l	$CC111000
 	dc.l	$CC100000
 	dc.l	$CCC10000
 	dc.l	$1CCC1000
+
 	dc.l	$1CCC1000
 	dc.l	$1CCC1000
 	dc.l	$1DDD1000
 	dc.l	$15551000
-
-	dc.l	$15551100
-	dc.l	$15555110
-	dc.l	$11111110
-	dc.l	$11111100
 	dc.l	$15551100
 	dc.l	$15555110
 	dc.l	$11111110

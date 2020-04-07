@@ -1162,6 +1162,63 @@ ObjectDescriptionTLodgeVHS:
 	dc.b	"Blank VHS tapes.",LF
 	dc.b	"",ETX
 
+ObjectDescriptionSHallPhone:
+	;		"1234567890123456789012"
+	dc.b	"Part of a phone number",LF
+	dc.b	"is written here.",ETX
+
+ObjectDescriptionCenterTree:
+	;		"1234567890123456789012"
+	dc.b	"Festive seasonal tree.",ETX
+
+ObjectDescriptionCenterFireplace:
+	;		"1234567890123456789012"
+	dc.b	"It doesn't appear to",LF
+	dc.b	"have a fire.",ETX
+
+ObjectDescriptionEWHallTree:
+	;		"1234567890123456789012"
+	dc.b	"This is close to",LF
+	dc.b	"hitting the ceiling.",ETX
+
+ObjectDescriptionWWCheckoutLaserDiscs:
+	;		"1234567890123456789012"
+	dc.b	"LaserDisc movies for",LF
+	dc.b	"trendy people.",ETX
+
+ObjectDescriptionWWTVLargeTV:
+	;		"1234567890123456789012"
+	dc.b	"Oversized television.",ETX
+
+ObjectDescriptionWWTVWall:
+	;		"1234567890123456789012"
+	dc.b	"Wall filled with",LF
+	dc.b	"televisions.",ETX
+
+ObjectDescriptionWWAudioWall:
+	;		"1234567890123456789012"
+	dc.b	"Car radios, some with",LF
+	dc.b	"CD players.",ETX
+
+ObjectDescriptionWWAudioWoodStereo:
+	;		"1234567890123456789012"
+	dc.b	"This must weigh well",LF
+	dc.b	"over 100 pounds.",ETX
+
+ObjectDescriptionWWAudioBlackStereo:
+	;		"1234567890123456789012"
+	dc.b	"Modern looking stereo.",ETX
+
+ObjectDescriptionWWApplianceWall:
+	;		"1234567890123456789012"
+	dc.b	"Owning a home seems",LF
+	dc.b	"expensive.",ETX
+
+ObjectDescriptionWWApplianceFridge:
+	;		"1234567890123456789012"
+	dc.b	"Do I need to keep",LF
+	dc.b	"anything cold?",ETX
+
 ;-------------------------------------------------------------------------------
 ; signs in stores
 ;-------------------------------------------------------------------------------

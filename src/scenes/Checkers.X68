@@ -328,9 +328,12 @@ SceneCheckers:
 	; 		%hhhhhhhyyyyyyyyy
 	dc.w	%0011000010001000
 
-	dc.w	OBJ_NOTHING
-	dc.w	$0000
-	dc.w	$0000	
+	dc.w	OBJ_SCENE_CHECKERS_CLOTHING
+	; 		%wwwwwwwxxxxxxxxx
+	dc.w	%1111111110000110
+	; 		%hhhhhhhyyyyyyyyy
+	dc.w	%0010000010001000
+
 	dc.w	OBJ_NOTHING
 	dc.w	$0000
 	dc.w	$0000

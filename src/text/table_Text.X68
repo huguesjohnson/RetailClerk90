@@ -171,6 +171,54 @@ DefaultObjectDescriptionTable:
 	; OBJ_SCENE_TLODGE_VHS=$102A
 	;-----------------------------------
 	dc.l	ObjectDescriptionTLodgeVHS
+	;-----------------------------------
+	; OBJ_SCENE_SHALL_PHONE=$102B
+	;-----------------------------------
+	dc.l	ObjectDescriptionSHallPhone
+	;-----------------------------------
+	; OBJ_SCENE_CENTER_TREE=$102C
+	;-----------------------------------
+	dc.l	ObjectDescriptionCenterTree
+	;-----------------------------------
+	; OBJ_SCENE_CENTER_FIREPLACE=$102D
+	;-----------------------------------
+	dc.l	ObjectDescriptionCenterFireplace
+	;-----------------------------------
+	; OBJ_SCENE_EWHALL_TREE=$102E
+	;-----------------------------------
+	dc.l	ObjectDescriptionEWHallTree
+	;-----------------------------------
+	; OBJ_SCENE_WWCHECKOUT_LASERDISCS=$102F
+	;-----------------------------------
+	dc.l	ObjectDescriptionWWCheckoutLaserDiscs
+	;-----------------------------------
+	; OBJ_SCENE_WWTV_LARGETV=$1030
+	;-----------------------------------
+	dc.l	ObjectDescriptionWWTVLargeTV
+	;-----------------------------------
+	; OBJ_SCENE_WWTV_TVWALL=$1031
+	;-----------------------------------
+	dc.l	ObjectDescriptionWWTVWall
+	;-----------------------------------
+	; OBJ_SCENE_WWAUDIO_WALL=$1032
+	;-----------------------------------
+	dc.l	ObjectDescriptionWWAudioWall
+	;-----------------------------------
+	; OBJ_SCENE_WWAUDIO_WOODSTEREO=$1033
+	;-----------------------------------
+	dc.l	ObjectDescriptionWWAudioWoodStereo
+	;-----------------------------------
+	; OBJ_SCENE_WWAUDIO_BLACKSTEREO=$1034
+	;-----------------------------------
+	dc.l	ObjectDescriptionWWAudioBlackStereo
+	;-----------------------------------
+	; OBJ_SCENE_WWAPPLIANCES_WALL=$1035
+	;-----------------------------------
+	dc.l	ObjectDescriptionWWApplianceWall
+	;-----------------------------------
+	; OBJ_SCENE_WWAPPLIANCES_FRIDGE=$1036
+	;-----------------------------------
+	dc.l	ObjectDescriptionWWApplianceFridge
 DefaultObjectDescriptionTableEnd:
 
 ;-------------------------------------------------------------------------------

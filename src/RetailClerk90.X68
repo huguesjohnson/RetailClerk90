@@ -200,7 +200,7 @@ PaletteBlack:
 ;*******************************************************************************
 ; status map icon location
 ;*******************************************************************************
-	include	'table_StatusMapIconLocation.X68'
+	include	'table_StatusMenuLocations.X68'
 
 	org	ROM_ADDR_RESOURCES
 

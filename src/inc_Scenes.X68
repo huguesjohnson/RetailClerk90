@@ -11,7 +11,10 @@
 	;---------------------------------------------------------------------------
 	; status screen
 	;---------------------------------------------------------------------------
-	include 'scenes/Status.X68'
+	include 'scenes/MenuMap.X68'
+	include 'scenes/MenuStatus.X68'
+	include 'scenes/MenuData.X68'
+	include 'scenes/MenuHelp.X68'
 
 	;---------------------------------------------------------------------------
 	; stores
@@ -31,8 +34,8 @@
 	; SCENE_ID_SHALL=$0004
 	include 'scenes/SHall.X68'
 
-	; SCENE_ID_PARKINGLOT=$0005
-	include 'scenes/ParkingLot.X68'
+	; SCENE_ID_CAVERN_BACKROOM=$0005
+	include 'scenes/CavernBackroom.X68'
 
 	; SCENE_ID_EWHALL=$0006
 	include 'scenes/EWHall.X68'

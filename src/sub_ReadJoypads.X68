@@ -1,6 +1,7 @@
 ;-------------------------------------------------------------------------------
 ; These sub-routines are not entirely my original code.
 ; This are based off various samples available online (see credits file).
+; Although most of those are based on Sega's documentation sent to developers.
 ; I made some modifications but probably not enough to qualify as original work.
 ;-------------------------------------------------------------------------------
 ReadJoypads:

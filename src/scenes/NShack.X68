@@ -285,7 +285,7 @@ SceneNShack:
 	; exits
 	;---------------------------------------------------------------------------
 	dc.w	$FFFF	; south exit
-	dc.w	SCENE_ID_BASEMENTWDORM	; north exit
+	dc.w	$FFFF	; north exit
 	dc.w	SCENE_ID_SHALL	; west exit
 	dc.w	$FFFF	; east exit
 

@@ -640,3 +640,75 @@ WWApplianceFridgeGrayLowTilesStart:
 	include 'tiles/scene-tiles/wwappliance-fridge-gray-low.X68'
 WWApplianceFridgeGrayLowTilesEnd:
 
+BasementFloorLightTilesStart:
+	include 'tiles/scene-tiles/basement-floor-light.X68'
+BasementFloorLightTilesEnd:
+
+BasementBedTilesStart:
+	include 'tiles/scene-tiles/basement-bed.X68'
+BasementBedTilesEnd:
+
+BasementLadderTilesStart:
+	include 'tiles/scene-tiles/basement-ladder.X68'
+BasementLadderTilesEnd:
+
+BasementCrate16x16TilesStart:
+	include 'tiles/scene-tiles/basement-crate-16x16.X68'
+BasementCrate16x16TilesEnd:
+
+BasementCrate32x32TilesStart:
+	include 'tiles/scene-tiles/basement-crate-32x32.X68'
+BasementCrate32x32TilesEnd:
+
+BasementCafeRackTilesStart:
+	include 'tiles/scene-tiles/basement-cafe-rack.X68'
+BasementCafeRackTilesEnd:
+
+BasementCafeTableTilesStart:
+	include 'tiles/scene-tiles/basement-cafe-table.X68'
+BasementCafeTableTilesEnd:
+
+BasementComputerTilesStart:
+	include 'tiles/scene-tiles/basement-computer.X68'
+BasementComputerTilesEnd:
+
+LadderTopTilesStart:
+	include 'tiles/scene-tiles/ladder-top.X68'
+LadderTopTilesEnd:
+
+LadderTopFrameTilesStart:
+	include 'tiles/scene-tiles/ladder-top-frame.X68'
+LadderTopFrameTilesEnd:
+
+CavernBackroomDeadArcadeBase00TilesStart:
+	include 'tiles/scene-tiles/cavern-backroom-dead-arcade-base-00.X68'
+CavernBackroomDeadArcadeBase00TilesEnd:
+
+CavernBackroomDeadArcadeBase01TilesStart:
+	include 'tiles/scene-tiles/cavern-backroom-dead-arcade-base-01.X68'
+CavernBackroomDeadArcadeBase01TilesEnd:
+
+CavernBackroomDeadArcadeBase02TilesStart:
+	include 'tiles/scene-tiles/cavern-backroom-dead-arcade-base-02.X68'
+CavernBackroomDeadArcadeBase02TilesEnd:
+
+CavernBackroomDeadArcadeTop00TilesStart:
+	include 'tiles/scene-tiles/cavern-backroom-dead-arcade-top-00.X68'
+CavernBackroomDeadArcadeTop00TilesEnd:
+
+CavernBackroomDeadArcadeTop01TilesStart:
+	include 'tiles/scene-tiles/cavern-backroom-dead-arcade-top-01.X68'
+CavernBackroomDeadArcadeTop01TilesEnd:
+
+CavernBackroomDeadArcadeTop02TilesStart:
+	include 'tiles/scene-tiles/cavern-backroom-dead-arcade-top-02.X68'
+CavernBackroomDeadArcadeTop02TilesEnd:
+
+MenuNavTilesStart:
+	include 'tiles/scene-tiles/menu-nav.X68'
+MenuNavTilesEnd:
+
+MenuNavSelectedTilesStart:
+	include 'tiles/scene-tiles/menu-nav-selected.X68'
+MenuNavSelectedTilesEnd:
+

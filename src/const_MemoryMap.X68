@@ -59,120 +59,121 @@ MEM_GLOBAL_EVENT_FLAGS=$FFFF00C6	; track events across days
 MEM_DAY_EVENT_FLAGS=$FFFF00CA	; track events in the current day
 MEM_MISSION_EVENT_FLAGS=$FFFF00CE	; track events in the current mission
 MEM_CUSTOMER_FEEDBACK_SCORE=$FFFF00D2	; used for some missions
+MEM_MENU_SCREEN_PAGE=$FFFF00D4	; last page viewed in menu screen
 ;-------------------------------------------------------------------------------
 ; player inventory
 ;-------------------------------------------------------------------------------
-MEM_PLAYER_ITEM_COUNT=$FFFF00D4	; how many items the player is holding
-MEM_PLAYER_ITEMS=$FFFF00D6	; four items
+MEM_PLAYER_ITEM_COUNT=$FFFF00D6	; how many items the player is holding
+MEM_PLAYER_ITEMS=$FFFF00D8	; four items
 ;-------------------------------------------------------------------------------
 ; sprite management
 ;-------------------------------------------------------------------------------
-MEM_SPRITE_Y_ORDER_CHANGED=$FFFF00DE	; track if sprite order has changed
-MEM_PLAYER_SPRITE_ID=$FFFF00E0	; sprite table id of player sprite
-MEM_PLAYER_SPRITE_X=$FFFF00E2	; virtual x position of the player
-MEM_PLAYER_SPRITE_Y=$FFFF00E4	; virtual y position of the player
-MEM_PLAYER_SPRITE_PATTERN_INDEX=$FFFF00E6	; index of pattern in VDP
-MEM_PLAYER_SPRITE_DIRECTION=$FFFF00E8	; which direction the player faces
-MEM_PLAYER_SPRITE_FRAME=$FFFF00EA	; animation frame of player sprite
-MEM_PLAYER_SPRITE_STEP_COUNTER=$FFFF00EC	; used to determine when to move
-MEM_PLAYER_MOVEMENT_COUNTER=$FFFF00EE	; used to determine how far to move
-MEM_PLAYER_MOVE_FREQUENCY=$FFFF00F0	; how often to move
-MEM_PLAYER_MOVE_PATTERN=$FFFF00F2	; movement pattern
-MEM_PLAYER_MOVE_PATTERN_LENGTH=$FFFF00F6	; length of movement pattern
-MEM_PLAYER_MOVE_INDEX=$FFFF00F8	; where the sprite is the movement pattern
-MEM_NPC0_SPRITE_ID=$FFFF00FA	; sprite table id of NPC0 sprite
-MEM_NPC0_SPRITE_X=$FFFF00FC	; virtual x position of NPC0 sprite
-MEM_NPC0_SPRITE_Y=$FFFF00FE	; virtual y position of NPC0 sprite
-MEM_NPC0_SPRITE_PATTERN_INDEX=$FFFF0100	; index of pattern in VDP
-MEM_NPC0_SPRITE_DIRECTION=$FFFF0102	; which direction NPC0 faces
-MEM_NPC0_SPRITE_FRAME=$FFFF0104	; animation frame of NPC0 sprite
-MEM_NPC0_SPRITE_STEP_COUNTER=$FFFF0106	; used to determine when to move
-MEM_NPC0_MOVEMENT_COUNTER=$FFFF0108	; used to determine how far to move
-MEM_NPC0_MOVE_FREQUENCY=$FFFF010A	; how often to move
-MEM_NPC0_MOVE_PATTERN=$FFFF010C	; movement pattern
-MEM_NPC0_MOVE_PATTERN_LENGTH=$FFFF0110	; length of movement pattern
-MEM_NPC0_MOVE_INDEX=$FFFF0112	; where the sprite is the movement pattern
-MEM_NPC1_SPRITE_ID=$FFFF0114	; sprite table id of NPC1 sprite
-MEM_NPC1_SPRITE_X=$FFFF0116	; virtual x position of NPC1 sprite
-MEM_NPC1_SPRITE_Y=$FFFF0118	; virtual y position of NPC1 sprite
-MEM_NPC1_SPRITE_PATTERN_INDEX=$FFFF011A	; index of pattern in VDP
-MEM_NPC1_SPRITE_DIRECTION=$FFFF011C	; which direction NPC1 faces
-MEM_NPC1_SPRITE_FRAME=$FFFF011E	; animation frame of NPC1 sprite
-MEM_NPC1_SPRITE_STEP_COUNTER=$FFFF0120	; used to determine when to move
-MEM_NPC1_MOVEMENT_COUNTER=$FFFF0122	; used to determine how far to move
-MEM_NPC1_MOVE_FREQUENCY=$FFFF0124	; how often to move
-MEM_NPC1_MOVE_PATTERN=$FFFF0126	; movement pattern
-MEM_NPC1_MOVE_PATTERN_LENGTH=$FFFF012A	; length of movement pattern
-MEM_NPC1_MOVE_INDEX=$FFFF012C	; where the sprite is the movement pattern
-MEM_NPC2_SPRITE_ID=$FFFF012E	; sprite table id of NPC2 sprite
-MEM_NPC2_SPRITE_X=$FFFF0130	; virtual x position of NPC2 sprite
-MEM_NPC2_SPRITE_Y=$FFFF0132	; virtual y position of NPC2 sprite
-MEM_NPC2_SPRITE_PATTERN_INDEX=$FFFF0134	; index of pattern in VDP
-MEM_NPC2_SPRITE_DIRECTION=$FFFF0136	; which direction NPC2 faces
-MEM_NPC2_SPRITE_FRAME=$FFFF0138	; animation frame of NPC2 sprite
-MEM_NPC2_SPRITE_STEP_COUNTER=$FFFF013A	; used to determine when to move
-MEM_NPC2_MOVEMENT_COUNTER=$FFFF013C	; used to determine how far to move
-MEM_NPC2_MOVE_FREQUENCY=$FFFF013E	; how often to move
-MEM_NPC2_MOVE_PATTERN=$FFFF0140	; movement pattern
-MEM_NPC2_MOVE_PATTERN_LENGTH=$FFFF0144	; length of movement pattern
-MEM_NPC2_MOVE_INDEX=$FFFF0146	; where the sprite is the movement pattern
-MEM_NPC3_SPRITE_ID=$FFFF0148	; sprite table id of NPC3 sprite
-MEM_NPC3_SPRITE_X=$FFFF014A	; virtual x position of NPC3 sprite
-MEM_NPC3_SPRITE_Y=$FFFF014C	; virtual y position of NPC3 sprite
-MEM_NPC3_SPRITE_PATTERN_INDEX=$FFFF014E	; index of pattern in VDP
-MEM_NPC3_SPRITE_DIRECTION=$FFFF0150	; which direction NPC3 faces
-MEM_NPC3_SPRITE_FRAME=$FFFF0152	; animation frame of NPC3 sprite
-MEM_NPC3_SPRITE_STEP_COUNTER=$FFFF0154	; used to determine when to move
-MEM_NPC3_MOVEMENT_COUNTER=$FFFF0156	; used to determine how far to move
-MEM_NPC3_MOVE_FREQUENCY=$FFFF0158	; how often to move
-MEM_NPC3_MOVE_PATTERN=$FFFF015A	; movement pattern
-MEM_NPC3_MOVE_PATTERN_LENGTH=$FFFF015E	; length of movement pattern
-MEM_NPC3_MOVE_INDEX=$FFFF0160	; where the sprite is the movement pattern
+MEM_SPRITE_Y_ORDER_CHANGED=$FFFF00E0	; track if sprite order has changed
+MEM_PLAYER_SPRITE_ID=$FFFF00E2	; sprite table id of player sprite
+MEM_PLAYER_SPRITE_X=$FFFF00E4	; virtual x position of the player
+MEM_PLAYER_SPRITE_Y=$FFFF00E6	; virtual y position of the player
+MEM_PLAYER_SPRITE_PATTERN_INDEX=$FFFF00E8	; index of pattern in VDP
+MEM_PLAYER_SPRITE_DIRECTION=$FFFF00EA	; which direction the player faces
+MEM_PLAYER_SPRITE_FRAME=$FFFF00EC	; animation frame of player sprite
+MEM_PLAYER_SPRITE_STEP_COUNTER=$FFFF00EE	; used to determine when to move
+MEM_PLAYER_MOVEMENT_COUNTER=$FFFF00F0	; used to determine how far to move
+MEM_PLAYER_MOVE_FREQUENCY=$FFFF00F2	; how often to move
+MEM_PLAYER_MOVE_PATTERN=$FFFF00F4	; movement pattern
+MEM_PLAYER_MOVE_PATTERN_LENGTH=$FFFF00F8	; length of movement pattern
+MEM_PLAYER_MOVE_INDEX=$FFFF00FA	; where the sprite is the movement pattern
+MEM_NPC0_SPRITE_ID=$FFFF00FC	; sprite table id of NPC0 sprite
+MEM_NPC0_SPRITE_X=$FFFF00FE	; virtual x position of NPC0 sprite
+MEM_NPC0_SPRITE_Y=$FFFF0100	; virtual y position of NPC0 sprite
+MEM_NPC0_SPRITE_PATTERN_INDEX=$FFFF0102	; index of pattern in VDP
+MEM_NPC0_SPRITE_DIRECTION=$FFFF0104	; which direction NPC0 faces
+MEM_NPC0_SPRITE_FRAME=$FFFF0106	; animation frame of NPC0 sprite
+MEM_NPC0_SPRITE_STEP_COUNTER=$FFFF0108	; used to determine when to move
+MEM_NPC0_MOVEMENT_COUNTER=$FFFF010A	; used to determine how far to move
+MEM_NPC0_MOVE_FREQUENCY=$FFFF010C	; how often to move
+MEM_NPC0_MOVE_PATTERN=$FFFF010E	; movement pattern
+MEM_NPC0_MOVE_PATTERN_LENGTH=$FFFF0112	; length of movement pattern
+MEM_NPC0_MOVE_INDEX=$FFFF0114	; where the sprite is the movement pattern
+MEM_NPC1_SPRITE_ID=$FFFF0116	; sprite table id of NPC1 sprite
+MEM_NPC1_SPRITE_X=$FFFF0118	; virtual x position of NPC1 sprite
+MEM_NPC1_SPRITE_Y=$FFFF011A	; virtual y position of NPC1 sprite
+MEM_NPC1_SPRITE_PATTERN_INDEX=$FFFF011C	; index of pattern in VDP
+MEM_NPC1_SPRITE_DIRECTION=$FFFF011E	; which direction NPC1 faces
+MEM_NPC1_SPRITE_FRAME=$FFFF0120	; animation frame of NPC1 sprite
+MEM_NPC1_SPRITE_STEP_COUNTER=$FFFF0122	; used to determine when to move
+MEM_NPC1_MOVEMENT_COUNTER=$FFFF0124	; used to determine how far to move
+MEM_NPC1_MOVE_FREQUENCY=$FFFF0126	; how often to move
+MEM_NPC1_MOVE_PATTERN=$FFFF0128	; movement pattern
+MEM_NPC1_MOVE_PATTERN_LENGTH=$FFFF012C	; length of movement pattern
+MEM_NPC1_MOVE_INDEX=$FFFF012E	; where the sprite is the movement pattern
+MEM_NPC2_SPRITE_ID=$FFFF0130	; sprite table id of NPC2 sprite
+MEM_NPC2_SPRITE_X=$FFFF0132	; virtual x position of NPC2 sprite
+MEM_NPC2_SPRITE_Y=$FFFF0134	; virtual y position of NPC2 sprite
+MEM_NPC2_SPRITE_PATTERN_INDEX=$FFFF0136	; index of pattern in VDP
+MEM_NPC2_SPRITE_DIRECTION=$FFFF0138	; which direction NPC2 faces
+MEM_NPC2_SPRITE_FRAME=$FFFF013A	; animation frame of NPC2 sprite
+MEM_NPC2_SPRITE_STEP_COUNTER=$FFFF013C	; used to determine when to move
+MEM_NPC2_MOVEMENT_COUNTER=$FFFF013E	; used to determine how far to move
+MEM_NPC2_MOVE_FREQUENCY=$FFFF0140	; how often to move
+MEM_NPC2_MOVE_PATTERN=$FFFF0142	; movement pattern
+MEM_NPC2_MOVE_PATTERN_LENGTH=$FFFF0146	; length of movement pattern
+MEM_NPC2_MOVE_INDEX=$FFFF0148	; where the sprite is the movement pattern
+MEM_NPC3_SPRITE_ID=$FFFF014A	; sprite table id of NPC3 sprite
+MEM_NPC3_SPRITE_X=$FFFF014C	; virtual x position of NPC3 sprite
+MEM_NPC3_SPRITE_Y=$FFFF014E	; virtual y position of NPC3 sprite
+MEM_NPC3_SPRITE_PATTERN_INDEX=$FFFF0150	; index of pattern in VDP
+MEM_NPC3_SPRITE_DIRECTION=$FFFF0152	; which direction NPC3 faces
+MEM_NPC3_SPRITE_FRAME=$FFFF0154	; animation frame of NPC3 sprite
+MEM_NPC3_SPRITE_STEP_COUNTER=$FFFF0156	; used to determine when to move
+MEM_NPC3_MOVEMENT_COUNTER=$FFFF0158	; used to determine how far to move
+MEM_NPC3_MOVE_FREQUENCY=$FFFF015A	; how often to move
+MEM_NPC3_MOVE_PATTERN=$FFFF015C	; movement pattern
+MEM_NPC3_MOVE_PATTERN_LENGTH=$FFFF0160	; length of movement pattern
+MEM_NPC3_MOVE_INDEX=$FFFF0162	; where the sprite is the movement pattern
 ;-------------------------------------------------------------------------------
 ; active scene
 ;-------------------------------------------------------------------------------
-MEM_ACTIVE_SCENE_ID=$FFFF0162	; ID of the active scene
-MEM_ACTIVE_SCENE_EXIT_S=$FFFF0164	; south exit of active scene
-MEM_ACTIVE_SCENE_EXIT_N=$FFFF0166	; north exit of active scene
-MEM_ACTIVE_SCENE_EXIT_W=$FFFF0168	; west exit of active scene
-MEM_ACTIVE_SCENE_EXIT_E=$FFFF016A	; east exit of active scene
-MEM_ACTIVE_NPC_COUNT=$FFFF016C	; number of NPCs in the current scene
-MEM_OBJECT_LIST_OBJS=$FFFF016E	; list of objects in current map
-MEM_OBJECT_LIST_NPCS=$FFFF01AA	; list of npcs in current map
-MEM_SCENE_BGM=$FFFF01C2	; reference to current background music
-MEM_SCENE_PALETTE=$FFFF01C6	; storing for fade in/out
+MEM_ACTIVE_SCENE_ID=$FFFF0164	; ID of the active scene
+MEM_ACTIVE_SCENE_EXIT_S=$FFFF0166	; south exit of active scene
+MEM_ACTIVE_SCENE_EXIT_N=$FFFF0168	; north exit of active scene
+MEM_ACTIVE_SCENE_EXIT_W=$FFFF016A	; west exit of active scene
+MEM_ACTIVE_SCENE_EXIT_E=$FFFF016C	; east exit of active scene
+MEM_ACTIVE_NPC_COUNT=$FFFF016E	; number of NPCs in the current scene
+MEM_OBJECT_LIST_OBJS=$FFFF0170	; list of objects in current map
+MEM_OBJECT_LIST_NPCS=$FFFF01AC	; list of npcs in current map
+MEM_SCENE_BGM=$FFFF01C4	; reference to current background music
+MEM_SCENE_PALETTE=$FFFF01C8	; storing for fade in/out
 ;-------------------------------------------------------------------------------
 ; dialog & menu management
 ;-------------------------------------------------------------------------------
-MEM_MENU_SELECTION=$FFFF0246	; which menu item is selected - used for sprite 0
-MEM_MENU_RESPONSE=$FFFF0248	; which dialog choice was selected
-MEM_DIALOG_FLAGS=$FFFF024A	; used to manage dialogs
-MEM_DIALOG_TITLE=$FFFF024E	; pointer to location of dialog title
-MEM_DIALOG_TEXT=$FFFF0252	; pointer to location of dialog text
-MEM_DIALOG_VDP=$FFFF0256	; pointer to VPD location to write text
-MEM_DIALOG_ITEM_LIST=$FFFF025A	; pointer to location of item list to display
-MEM_DIALOG_ITEM_INDEX=$FFFF025E	; track which item in the list is being drawn
+MEM_MENU_SELECTION=$FFFF0248	; which menu item is selected - used for sprite 0
+MEM_MENU_RESPONSE=$FFFF024A	; which dialog choice was selected
+MEM_DIALOG_FLAGS=$FFFF024C	; used to manage dialogs
+MEM_DIALOG_TITLE=$FFFF0250	; pointer to location of dialog title
+MEM_DIALOG_TEXT=$FFFF0254	; pointer to location of dialog text
+MEM_DIALOG_VDP=$FFFF0258	; pointer to VPD location to write text
+MEM_DIALOG_ITEM_LIST=$FFFF025C	; pointer to location of item list to display
+MEM_DIALOG_ITEM_INDEX=$FFFF0260	; track which item in the list is being drawn
 ;-------------------------------------------------------------------------------
 ; scripted event management
 ;-------------------------------------------------------------------------------
-MEM_SCRIPTED_EVENT_ADDR=$FFFF0260	; pointer to scripted event running
-MEM_SCRIPTED_EVENT_ACTION=$FFFF0264	; current scripted event action
-MEM_SCRIPTED_EVENT_STEPS=$FFFF0266	; steps remaining in current action
-MEM_SCRIPTED_SPRITE_ADDR=$FFFF0268	; which sprite to move
+MEM_SCRIPTED_EVENT_ADDR=$FFFF0262	; pointer to scripted event running
+MEM_SCRIPTED_EVENT_ACTION=$FFFF0266	; current scripted event action
+MEM_SCRIPTED_EVENT_STEPS=$FFFF0268	; steps remaining in current action
+MEM_SCRIPTED_SPRITE_ADDR=$FFFF026A	; which sprite to move
 ;-------------------------------------------------------------------------------
 ; temp working space
 ;-------------------------------------------------------------------------------
-MEM_TEMP_SPACE=$FFFF026C	; temp working space
+MEM_TEMP_SPACE=$FFFF026E	; temp working space
 ;-------------------------------------------------------------------------------
 ; collision detection
 ;-------------------------------------------------------------------------------
-MEM_ACTIVE_SPRITE_LEFT_COLUMN=$FFFF02AC	; left column of active sprite
-MEM_ACTIVE_SPRITE_HIGH_LEFT=$FFFF02AE	; high left row of active sprite
-MEM_ACTIVE_SPRITE_LOW_LEFT=$FFFF02B0	; low left row of active sprite
-MEM_ACTIVE_SPRITE_RIGHT_COLUMN=$FFFF02B2	; right column of active sprite
-MEM_ACTIVE_SPRITE_HIGH_RIGHT=$FFFF02B4	; high right row of active sprite
-MEM_ACTIVE_SPRITE_LOW_RIGHT=$FFFF02B6	; low right row of active sprite
-MEM_COLLISION_MAP_ROW=$FFFF02B8	; row of map data
-MEM_COLLISION_RESULT=$FFFF02BC	; result of collision test
-MEM_COLLISION_DATA=$FFFF02BE	; collision data for the current map
-MEM_END=$FFFF03BE
+MEM_ACTIVE_SPRITE_LEFT_COLUMN=$FFFF02AE	; left column of active sprite
+MEM_ACTIVE_SPRITE_HIGH_LEFT=$FFFF02B0	; high left row of active sprite
+MEM_ACTIVE_SPRITE_LOW_LEFT=$FFFF02B2	; low left row of active sprite
+MEM_ACTIVE_SPRITE_RIGHT_COLUMN=$FFFF02B4	; right column of active sprite
+MEM_ACTIVE_SPRITE_HIGH_RIGHT=$FFFF02B6	; high right row of active sprite
+MEM_ACTIVE_SPRITE_LOW_RIGHT=$FFFF02B8	; low right row of active sprite
+MEM_COLLISION_MAP_ROW=$FFFF02BA	; row of map data
+MEM_COLLISION_RESULT=$FFFF02BE	; result of collision test
+MEM_COLLISION_DATA=$FFFF02C0	; collision data for the current map
+MEM_END=$FFFF03C0

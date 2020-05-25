@@ -133,7 +133,7 @@ TestCButtonPressed:	; test if the player pressed the C button
 	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
 	andi.b	#BUTTON_C,d6	; test if the C button was pressed
 	beq.w	TestAButtonPressed	; C button is not pressed
-	lea	SceneStatus,a6	; address of the scene for the status screen
+	lea	SceneMenuMap,a6	; address of the scene for the status screen
 	bsr.w	DrawScene	; branch to subroutine to draw the scene
 	bsr.w	BuildStatusScreen	; build the status screen
 	bsr.w	FadeIn	; fade in the status screen

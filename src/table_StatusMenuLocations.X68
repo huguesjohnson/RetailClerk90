@@ -1,8 +1,34 @@
 ;*********************************************************
 ; THESE WILL CHANGE IF THE STATUS SCREEN MAP CHANGES
 ;*********************************************************
+; locations for the navigation menu selector
+MenuNavigationTable:
+	; Map
+	dc.w	$0088	; y
+	dc.w	$0098	; x
+	; Status
+	dc.w	$0088	; y
+	dc.w	$00E0	; x
+	; Data
+	dc.w	$0088	; y
+	dc.w	$0130	; x
+	; Help
+	dc.w	$0088	; y
+	dc.w	$0180	; x
 
-StatusMapIconLocationTable:
+; the maximum number of navigation items per menu page
+MenuPageMaxNavItem:
+	; Map
+	dc.w	$0003
+	; Status
+	dc.w	$0003
+	; Data
+	dc.w	$0003
+	; Help
+	dc.w	$0003
+
+; locations for the "you are here" map
+MenuMapIconLocationTable:
 	; SCENE_ID_VB
 	dc.l	VDP_VRAM_WRITE_A+$000C0000+$02000000
 

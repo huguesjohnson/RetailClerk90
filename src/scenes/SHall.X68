@@ -196,7 +196,7 @@ SceneSHall:
 	;---------------------------------------------------------------------------
 	; exits
 	;---------------------------------------------------------------------------
-	dc.w	SCENE_ID_PARKINGLOT	; south exit
+	dc.w	$FFFF	; south exit
 	dc.w	SCENE_ID_SOUTH_CENTER	; north exit
 	dc.w	SCENE_ID_POGODAWG	; west exit
 	dc.w	SCENE_ID_NSHACK	; east exit

@@ -186,3 +186,15 @@ PatternWWAudioStereoBlackHigh:
 PatternWWAudioStereoBlackLow:
 	include 'patterns/wwaudio-stereo-black-low.X68'
 
+PatternBasementBed:
+	include 'patterns/basement-bed.X68'
+
+PatternBasementLadder:
+	include 'patterns/basement-ladder.X68'
+
+PatternMenuNav:
+	include 'patterns/menu-nav.X68'
+
+PatternMenuNavSelected:
+	include 'patterns/menu-nav-selected.X68'
+

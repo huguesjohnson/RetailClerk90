@@ -132,10 +132,10 @@ SceneIntroDay00:
 	; exits
 	;---------------------------------------------------------------------------
 	if _DEBUG_
-	dc.w	SCENE_ID_BASEMENTWDORM	; north exit
-	dc.w	SCENE_ID_BASEMENTWDORM	; south exit
-	dc.w	SCENE_ID_BASEMENTWDORM	; east exit
-	dc.w	SCENE_ID_BASEMENTWDORM	; west exit
+	dc.w	SCENE_ID_DENIMCOUNTRY	; north exit
+	dc.w	SCENE_ID_DENIMCOUNTRY	; south exit
+	dc.w	SCENE_ID_DENIMCOUNTRY	; east exit
+	dc.w	SCENE_ID_DENIMCOUNTRY	; west exit
 	else
 	dc.w	SCENE_ID_DENIMCOUNTRY	; north exit
 	dc.w	SCENE_ID_DENIMCOUNTRY	; south exit

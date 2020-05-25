@@ -156,6 +156,14 @@ STATUS_SCREEN_INVENTORY_VDP=VDP_VRAM_WRITE_B+$00040000+$0B000000
 STATUS_SCREEN_SAVE0_VDP=VDP_VRAM_WRITE_B+$00220000+$0B000000
 
 ;-------------------------------------------------------------------------------
+; menu screen settings
+;-------------------------------------------------------------------------------
+MENU_SCREEN_PAGE_MAP=$0000
+MENU_SCREEN_PAGE_STATUS=$0001
+MENU_SCREEN_PAGE_DATA=$0002
+MENU_SCREEN_PAGE_HELP=$0003
+
+;-------------------------------------------------------------------------------
 ; load screen settings
 ;-------------------------------------------------------------------------------
 LOAD_SCREEN_SAVE0_VDP=VDP_VRAM_WRITE_B+$04800000+$00140000

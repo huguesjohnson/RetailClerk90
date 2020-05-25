@@ -20,6 +20,10 @@ CavernCollisionStart:
 	include 'collision-maps/CavernCollision.X68'
 CavernCollisionEnd:
 
+CavernBackroomCollisionStart:
+	include 'collision-maps/CavernBackroomCollision.X68'
+CavernBackroomCollisionEnd:
+
 CenterCollisionStart:
 	include 'collision-maps/CenterCollision.X68'
 CenterCollisionEnd:
@@ -67,10 +71,6 @@ FCBFirearmsCollisionEnd:
 NShackCollisionStart:
 	include 'collision-maps/NShackCollision.X68'
 NShackCollisionEnd:
-
-ParkingLotCollisionStart:
-	include 'collision-maps/ParkingLotCollision.X68'
-ParkingLotCollisionEnd:
 
 PogoDawgCollisionStart:
 	include 'collision-maps/PogoDawgCollision.X68'

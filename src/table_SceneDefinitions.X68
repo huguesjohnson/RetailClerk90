@@ -18,8 +18,8 @@ SceneDefinitionTable:
 	; SCENE_ID_SHALL=$0004
 	dc.l	SceneSHall
 
-	; SCENE_ID_PARKINGLOT=$0005
-	dc.l	SceneParkingLot
+	; SCENE_ID_CAVERN_BACKROOM=$0005
+	dc.l	SceneCavernBackroom
 
 	; SCENE_ID_EWHALL=$0006
 	dc.l	SceneEWHall

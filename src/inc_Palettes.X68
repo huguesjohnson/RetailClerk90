@@ -22,6 +22,18 @@ PaletteTitle02:
 PaletteTitle03:
 	include 'palettes/Title03.X68'
 
+PaletteMenu00:
+	include 'palettes/Menu00.X68'
+
+PaletteMenu01:
+	include 'palettes/Menu01.X68'
+
+PaletteMenu02:
+	include 'palettes/Menu02.X68'
+
+PaletteMenu03:
+	include 'palettes/Menu03.X68'
+
 PaletteDayIntro00:
 	include 'palettes/DayIntro00.X68'
 
@@ -57,6 +69,15 @@ PaletteCavern01:
 
 PaletteCavern02:
 	include 'palettes/Cavern02.X68'
+
+PaletteCavernBackroom00:
+	include 'palettes/CavernBackroom00.X68'
+
+PaletteCavernBackroom01:
+	include 'palettes/CavernBackroom01.X68'
+
+PaletteCavernBackroom02:
+	include 'palettes/CavernBackroom02.X68'
 
 PaletteCheckers00:
 	include 'palettes/Checkers00.X68'

@@ -219,6 +219,42 @@ DefaultObjectDescriptionTable:
 	; OBJ_SCENE_WWAPPLIANCES_FRIDGE=$1036
 	;-----------------------------------
 	dc.l	ObjectDescriptionWWApplianceFridge
+	;-----------------------------------
+	; OBJ_SCENE_BASEMENT_BED=$1037
+	;-----------------------------------
+	dc.l	ObjectDescriptionBasementBed
+	;-----------------------------------
+	; OBJ_SCENE_BASEMENT_LADDER=$1038
+	;-----------------------------------
+	dc.l	ObjectDescriptionBasementLadder
+	;-----------------------------------
+	; OBJ_SCENE_BASEMENT_CRATE=$1039
+	;-----------------------------------
+	dc.l	ObjectDescriptionBasementCrate
+	;-----------------------------------
+	; OBJ_SCENE_BASEMENT_CAFE_RACK=$103A
+	;-----------------------------------
+	dc.l	ObjectDescriptionCafeRack
+	;-----------------------------------
+	; OBJ_SCENE_BASEMENT_CAFE_TABLE=$103B
+	;-----------------------------------
+	dc.l	ObjectDescriptionCafeTable
+	;-----------------------------------
+	; OBJ_SCENE_BASEMENT_COMPUTER1=$103C
+	;-----------------------------------
+	dc.l	ObjectDescriptionBasementComputer1
+	;-----------------------------------
+	; OBJ_SCENE_BASEMENT_COMPUTER1=$103D
+	;-----------------------------------
+	dc.l	ObjectDescriptionBasementComputer2
+	;-----------------------------------
+	; OBJ_SCENE_DEAD_ARCADE_GAME=$103E
+	;-----------------------------------
+	dc.l	ObjectDescriptionDeadArcadeGame
+	;-----------------------------------
+	; OBJ_SCENE_CAVERN_BACKROOM_LADDER=$103F
+	;-----------------------------------
+	dc.l	ObjectDescriptionCavernBackroomLadder
 DefaultObjectDescriptionTableEnd:
 
 ;-------------------------------------------------------------------------------

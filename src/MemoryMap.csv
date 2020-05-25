@@ -56,6 +56,7 @@ MEM_GLOBAL_EVENT_FLAGS,4,track events across days
 MEM_DAY_EVENT_FLAGS,4,track events in the current day
 MEM_MISSION_EVENT_FLAGS,4,track events in the current mission
 MEM_CUSTOMER_FEEDBACK_SCORE,2,used for some missions
+MEM_MENU_SCREEN_PAGE,2,last page viewed in menu screen
 ;-------------------------------------------------------------------------------
 ; player inventory
 ;-------------------------------------------------------------------------------

@@ -1219,6 +1219,52 @@ ObjectDescriptionWWApplianceFridge:
 	dc.b	"Do I need to keep",LF
 	dc.b	"anything cold?",ETX
 
+ObjectDescriptionBasementBed:
+	;		"1234567890123456789012"
+	dc.b	"It looks like it's",LF
+	dc.b	"been used recently.",ETX
+
+ObjectDescriptionBasementLadder:
+	;		"1234567890123456789012"
+	dc.b	"This leads back to",LF
+	dc.b	"the main floor.",ETX
+
+ObjectDescriptionBasementCrate:
+	;		"1234567890123456789012"
+	dc.b	"Dusty old crate.",ETX
+
+ObjectDescriptionCafeRack:
+	;		"1234567890123456789012"
+	dc.b	"Shelves with canned",LF
+	dc.b	"food.",ETX
+
+ObjectDescriptionCafeTable:
+	;		"1234567890123456789012"
+	dc.b	"Messy table, looks",LF
+	dc.b	"recently used.",ETX
+
+ObjectDescriptionBasementComputer1:
+	;		"1234567890123456789012"
+	dc.b	"There's a list of",LF
+	dc.b	"locations in the mall^",FF
+	dc.b	"and menus to control",LF
+	dc.b	"the background music.",ETX
+
+ObjectDescriptionBasementComputer2:
+	;		"1234567890123456789012"
+	dc.b	"It looks like this one",LF
+	dc.b	"controls the climate.",ETX
+
+ObjectDescriptionDeadArcadeGame:
+	;		"1234567890123456789012"
+	dc.b	"This is just good for",LF
+	dc.b	"parts now.",ETX
+
+ObjectDescriptionCavernBackroomLadder:
+	;		"1234567890123456789012"
+	dc.b	"This appears to lead",LF
+	dc.b	"to a basement level.",ETX
+
 ;-------------------------------------------------------------------------------
 ; signs in stores
 ;-------------------------------------------------------------------------------
@@ -1258,7 +1304,7 @@ Day00IntroTip1:
 
 Day00IntroTip2:
 	;		"1234567890123456789012345678901234567890"
-	dc.b	"C button: Open the status screen",ETX
+	dc.b	"C button: Open the menu screen",ETX
 
 Day00IntroTip3:
 	;		"1234567890123456789012345678901234567890"
@@ -1266,7 +1312,7 @@ Day00IntroTip3:
 
 Day00IntroTip4:
 	;		"1234567890123456789012345678901234567890"
-	dc.b	"B button: Cancel menu, exit status",ETX
+	dc.b	"B button: Cancel dialog, exit menu",ETX
 
 Day00IntroTip5:
 	;		"1234567890123456789012345678901234567890"
@@ -1469,8 +1515,20 @@ Day06IntroTip6:
 	dc.b	"",ETX
 
 ;-------------------------------------------------------------------------------
-; status screen
+; menu screen
 ;-------------------------------------------------------------------------------
+MenuScreenNavMap:
+	dc.b	"{Map",ETX
+
+MenuScreenNavStatus:
+	dc.b	"{Status",ETX
+
+MenuScreenNavData:
+	dc.b	"{Data",ETX
+
+MenuScreenNavHelp:
+	dc.b	"{Help",ETX
+
 StatusScreenInventory:
 	dc.b	"Inventory",ETX
 

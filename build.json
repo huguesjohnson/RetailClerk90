@@ -13,6 +13,7 @@
          "design/collision/BasementOffice.png":"src/collision-maps/BasementOfficeCollision.X68",
          "design/collision/BasementWDorm.png":"src/collision-maps/BasementWDormCollision.X68",
          "design/collision/Cavern.png":"src/collision-maps/CavernCollision.X68",
+         "design/collision/CavernBackroom.png":"src/collision-maps/CavernBackroomCollision.X68",
          "design/collision/Center.png":"src/collision-maps/CenterCollision.X68",
          "design/collision/Checkers.png":"src/collision-maps/CheckersCollision.X68",
          "design/collision/CNow.png":"src/collision-maps/CNowCollision.X68",
@@ -25,7 +26,6 @@
          "design/collision/FCBFishing.png":"src/collision-maps/FCBFishingCollision.X68",
          "design/collision/FCBFirearms.png":"src/collision-maps/FCBFirearmsCollision.X68",
          "design/collision/NShack.png":"src/collision-maps/NShackCollision.X68",
-         "design/collision/ParkingLot.png":"src/collision-maps/ParkingLotCollision.X68",
          "design/collision/PogoDawg.png":"src/collision-maps/PogoDawgCollision.X68",
          "design/collision/SHall.png":"src/collision-maps/SHallCollision.X68",
          "design/collision/SouthCenter.png":"src/collision-maps/SouthCenterCollision.X68",
@@ -52,6 +52,10 @@
          "design/img/swatches/title01.png":"src/palettes/Title01.X68",
          "design/img/swatches/title02.png":"src/palettes/Title02.X68",
          "design/img/swatches/title03.png":"src/palettes/Title03.X68",
+         "design/img/swatches/menu00.png":"src/palettes/Menu00.X68",
+         "design/img/swatches/menu01.png":"src/palettes/Menu01.X68",
+         "design/img/swatches/menu02.png":"src/palettes/Menu02.X68",
+         "design/img/swatches/menu03.png":"src/palettes/Menu03.X68",
          "design/img/swatches/dayintro00.png":"src/palettes/DayIntro00.X68",
          "design/img/swatches/dayintro01.png":"src/palettes/DayIntro01.X68",
          "design/img/swatches/dayintro02.png":"src/palettes/DayIntro02.X68",
@@ -64,6 +68,9 @@
          "design/img/swatches/cavern00.png":"src/palettes/Cavern00.X68",
          "design/img/swatches/cavern01.png":"src/palettes/Cavern01.X68",
          "design/img/swatches/cavern02.png":"src/palettes/Cavern02.X68",
+         "design/img/swatches/cavernbackroom00.png":"src/palettes/CavernBackroom00.X68",
+         "design/img/swatches/cavernbackroom01.png":"src/palettes/CavernBackroom01.X68",
+         "design/img/swatches/cavernbackroom02.png":"src/palettes/CavernBackroom02.X68",
          "design/img/swatches/checkers00.png":"src/palettes/Checkers00.X68",
          "design/img/swatches/checkers01.png":"src/palettes/Checkers01.X68",
          "design/img/swatches/checkers02.png":"src/palettes/Checkers02.X68",
@@ -1208,6 +1215,129 @@
             "sourceFilePath":"design/img/scene-tiles/wwappliance-fridge-gray-low.png",
             "destinationFilePath":"src/tiles/scene-tiles/wwappliance-fridge-gray-low.X68",
             "allowDuplicateTiles":"true"
+         },
+         {
+            "name":"BasementFloorLight",
+            "palettePath":"src/palettes/BasementFloor.X68",
+            "sourceFilePath":"design/img/scene-tiles/basement-floor-light.png",
+            "destinationFilePath":"src/tiles/scene-tiles/basement-floor-light.X68",
+            "allowDuplicateTiles":"true"
+         },
+         {
+            "name":"BasementBed",
+            "palettePath":"src/palettes/BasementWDorm.X68",
+            "sourceFilePath":"design/img/scene-tiles/bed.png",
+            "destinationFilePath":"src/tiles/scene-tiles/basement-bed.X68",
+            "patternFilePath":"src/patterns/basement-bed.X68"
+         },
+         {
+            "name":"BasementLadder",
+            "palettePath":"src/palettes/BasementWall.X68",
+            "sourceFilePath":"design/img/scene-tiles/basement-ladder.png",
+            "destinationFilePath":"src/tiles/scene-tiles/basement-ladder.X68",
+            "patternFilePath":"src/patterns/basement-ladder.X68"
+         },
+         {
+            "name":"BasementCrate16x16",
+            "palettePath":"src/palettes/BasementWall.X68",
+            "sourceFilePath":"design/img/scene-tiles/basement-crate-16x16.png",
+            "destinationFilePath":"src/tiles/scene-tiles/basement-crate-16x16.X68"
+         },
+         {
+            "name":"BasementCrate32x32",
+            "palettePath":"src/palettes/BasementWall.X68",
+            "sourceFilePath":"design/img/scene-tiles/basement-crate-32x32.png",
+            "destinationFilePath":"src/tiles/scene-tiles/basement-crate-32x32.X68"
+         },
+         {
+            "name":"BasementCafeRack",
+            "palettePath":"src/palettes/BasementCafe.X68",
+            "sourceFilePath":"design/img/scene-tiles/basement-cafe-rack.png",
+            "destinationFilePath":"src/tiles/scene-tiles/basement-cafe-rack.X68",
+            "allowDuplicateTiles":"true"
+         },
+         {
+            "name":"BasementCafeTable",
+            "palettePath":"src/palettes/BasementWall.X68",
+            "sourceFilePath":"design/img/scene-tiles/basement-cafe-table.png",
+            "destinationFilePath":"src/tiles/scene-tiles/basement-cafe-table.X68",
+            "allowDuplicateTiles":"true"
+         },
+         {
+            "name":"BasementComputer",
+            "palettePath":"src/palettes/BasementOffice.X68",
+            "sourceFilePath":"design/img/scene-tiles/basement-computer.png",
+            "destinationFilePath":"src/tiles/scene-tiles/basement-computer.X68"
+         },
+         {
+            "name":"LadderTop",
+            "palettePath":"src/palettes/CavernBackroom02.X68",
+            "sourceFilePath":"design/img/scene-tiles/ladder-top.png",
+            "destinationFilePath":"src/tiles/scene-tiles/ladder-top.X68",
+            "allowDuplicateTiles":"true"
+         },
+         {
+            "name":"LadderTopFrame",
+            "palettePath":"src/palettes/CavernBackroom00.X68",
+            "sourceFilePath":"design/img/scene-tiles/ladder-top-frame.png",
+            "destinationFilePath":"src/tiles/scene-tiles/ladder-top-frame.X68",
+            "allowDuplicateTiles":"true"
+         },
+         { 
+            "name":"CavernBackroomDeadArcadeBase00",
+            "palettePath":"src/palettes/CavernBackroom00.X68",
+            "sourceFilePath":"design/img/scene-tiles/cavern-backroom-dead-arcade-base-00.png",
+            "destinationFilePath":"src/tiles/scene-tiles/cavern-backroom-dead-arcade-base-00.X68",
+			"allowDuplicateTiles":"true"
+         },
+         { 
+            "name":"CavernBackroomDeadArcadeBase01",
+            "palettePath":"src/palettes/CavernBackroom01.X68",
+            "sourceFilePath":"design/img/scene-tiles/cavern-backroom-dead-arcade-base-01.png",
+            "destinationFilePath":"src/tiles/scene-tiles/cavern-backroom-dead-arcade-base-01.X68",
+			"allowDuplicateTiles":"true"
+         },
+         { 
+            "name":"CavernBackroomDeadArcadeBase02",
+            "palettePath":"src/palettes/CavernBackroom02.X68",
+            "sourceFilePath":"design/img/scene-tiles/cavern-backroom-dead-arcade-base-02.png",
+            "destinationFilePath":"src/tiles/scene-tiles/cavern-backroom-dead-arcade-base-02.X68",
+			"allowDuplicateTiles":"true"
+         },
+         { 
+            "name":"CavernBackroomDeadArcadeTop00",
+            "palettePath":"src/palettes/CavernBackroom00.X68",
+            "sourceFilePath":"design/img/scene-tiles/cavern-backroom-dead-arcade-top-00.png",
+            "destinationFilePath":"src/tiles/scene-tiles/cavern-backroom-dead-arcade-top-00.X68",
+			"allowDuplicateTiles":"true"
+         },
+         { 
+            "name":"CavernBackroomDeadArcadeTop01",
+            "palettePath":"src/palettes/CavernBackroom01.X68",
+            "sourceFilePath":"design/img/scene-tiles/cavern-backroom-dead-arcade-top-01.png",
+            "destinationFilePath":"src/tiles/scene-tiles/cavern-backroom-dead-arcade-top-01.X68",
+			"allowDuplicateTiles":"true"
+         },
+         { 
+            "name":"CavernBackroomDeadArcadeTop02",
+            "palettePath":"src/palettes/CavernBackroom02.X68",
+            "sourceFilePath":"design/img/scene-tiles/cavern-backroom-dead-arcade-top-02.png",
+            "destinationFilePath":"src/tiles/scene-tiles/cavern-backroom-dead-arcade-top-02.X68",
+			"allowDuplicateTiles":"true"
+         },
+         { 
+            "name":"MenuNav",
+            "palettePath":"src/palettes/Menu01.X68",
+            "sourceFilePath":"design/img/scene-tiles/menu-nav.png",
+            "destinationFilePath":"src/tiles/scene-tiles/menu-nav.X68",
+            "patternFilePath":"src/patterns/menu-nav.X68"
+         },
+         { 
+            "name":"MenuNavSelected",
+            "palettePath":"src/palettes/Menu02.X68",
+            "sourceFilePath":"design/img/scene-tiles/menu-nav-selected.png",
+            "destinationFilePath":"src/tiles/scene-tiles/menu-nav-selected.X68",
+            "patternFilePath":"src/patterns/menu-nav-selected.X68"
          }
 
       ],

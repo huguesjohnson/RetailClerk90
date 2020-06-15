@@ -1,5 +1,8 @@
 ProcessStatusScreen:
 ;-------------------------------------------------------------------------------
+; this is called ProcessStatusScreen because in RC89 there was one status screen
+; that name is a little confusing in RC90+ because it's really a menu screen
+;
 ; a couple notes about handling multiple buttons pressed in the same frame...
 ; (mostly for myself as I will forget why I did things this way)
 ; tl;dr - if multiple buttons are pressed in the same frame one of them "wins"
@@ -44,7 +47,7 @@ ProcessStatusScreenTestDPadTestUp:
 	beq.s	ProcessStatusScreenTestDPadTestDown ; up button is not pressed
 	; if the selected item is <4 then move to the last menu item
 	cmpi.w	#$0003,(MEM_MENU_SELECTION)	; test if this is in the navigation
-	bgt.w	ExitProcessStatusScreenUpdateSelectorXY ;.1	; <4 means navigation
+	bgt.s	.1	; <4 means navigation
 	; find max selection number
 	clr	d6	; done out of paranoia
 	move.w	(MEM_MENU_SCREEN_PAGE),d6	; copy active page ID to d6
@@ -53,13 +56,24 @@ ProcessStatusScreenTestDPadTestUp:
 	adda.l	d6,a6 ; move to offset
 	move.w	(a6),(MEM_MENU_SELECTION) ; copy max menu selection from table
 	bra.w	ProcessStatusScreenTestDPadExit ; done processing d-pad
-.1 ; otherwise increment the selection
-	addq	#$01,(MEM_MENU_SELECTION)
+.1 ; otherwise decrement the selection
+	cmpi.w	#$0004,(MEM_MENU_SELECTION)	; test if this is the first item
+	bne.s	.2
+	move.w	(MEM_MENU_SCREEN_PAGE),(MEM_MENU_SELECTION) ; select the page
+	bra.w	ProcessStatusScreenTestDPadExit ; done processing d-pad
+.2
+	subq	#$01,(MEM_MENU_SELECTION)
 	bra.w	ProcessStatusScreenTestDPadExit ; done processing d-pad
 ProcessStatusScreenTestDPadTestDown:
 	move.w	d6,d7 ; copy d6 to d7 since the value will be modified
 	and.w	#BUTTON_DOWN,d7 ; test if the down button was pressed
 	beq.s	ProcessStatusScreenTestDPadTestLeft ; down button is not pressed
+	; if the selected item is <4 then move to the first menu item
+	cmpi.w	#$0003,(MEM_MENU_SELECTION)	; test if this is in the navigation
+	bgt.s	.1	; <4 means navigation
+	move.w	#$0004,(MEM_MENU_SELECTION)
+	bra.w	ProcessStatusScreenTestDPadExit ; done processing d-pad
+.1
 	; if the selected item is the max menu item then wrap to the navigation
 	; find max selection number for this page
 	clr	d6	; done out of paranoia
@@ -68,14 +82,14 @@ ProcessStatusScreenTestDPadTestDown:
 	lea	MenuPageMaxNavItem,a6	; point a6 to the lookup table
 	adda.l	d6,a6 ; move to offset
 	move.w	(a6),d7	; copy max page to d7
-	cmp.w	(MEM_MENU_SELECTION),d7
-	blt.s	.1 ; branch if below the max items per page
+	move.w	(MEM_MENU_SELECTION),d6
+	cmp.w	d6,d7
+	bgt.s	.2 ; branch if at the last item in the page
 	move.w	(MEM_MENU_SCREEN_PAGE),(MEM_MENU_SELECTION) ; select the page
 	bra.w	ProcessStatusScreenTestDPadExit ; done processing d-pad
-.1 ; otherwise decrement the selection
-	subq	#$01,(MEM_MENU_SELECTION)
+.2 ; otherwise increment the selection
+	addq	#$01,(MEM_MENU_SELECTION)
 	bra.w	ProcessStatusScreenTestDPadExit ; done processing d-pad
-
 ProcessStatusScreenTestDPadTestLeft:
 	move.w	d6,d7 ; copy d6 to d7 since the value will be modified
 	and.w	#BUTTON_LEFT,d7 ; test if the left button was pressed
@@ -86,6 +100,18 @@ ProcessStatusScreenTestDPadTestLeft:
 	move.w	#$0003,(MEM_MENU_SELECTION)
 	bra.w	ProcessStatusScreenTestDPadExit ; done processing d-pad
 .1 ; otherwise decrement the selection
+	cmpi.w	#$0004,(MEM_MENU_SELECTION)
+	bne.s	.2
+	; roll over to the last item
+	; find max selection number
+	clr	d6	; done out of paranoia
+	move.w	(MEM_MENU_SCREEN_PAGE),d6	; copy active page ID to d6
+	mulu.w	#WORD_SIZE,d6	; multiply by LWORD_SIZE to get offset
+	lea	MenuPageMaxNavItem,a6	; point a6 to the lookup table
+	adda.l	d6,a6 ; move to offset
+	move.w	(a6),(MEM_MENU_SELECTION) ; copy max menu selection from table
+	bra.w	ProcessStatusScreenTestDPadExit ; done processing d-pad
+.2
 	subq	#$01,(MEM_MENU_SELECTION)
 	bra.w	ProcessStatusScreenTestDPadExit ; done processing d-pad
 ProcessStatusScreenTestDPadTestRight:
@@ -99,34 +125,175 @@ ProcessStatusScreenTestDPadTestRight:
 	move.w	#$0000,(MEM_MENU_SELECTION)
 	bra.w	ProcessStatusScreenTestDPadExit ; done processing d-pad
 .1 ; otherwise increment the selection
+	; test if at the last item in the page
+	move.w	(MEM_MENU_SCREEN_PAGE),d6 ; copy active page ID to d6
+	mulu.w	#WORD_SIZE,d6	; multiply by LWORD_SIZE to get offset
+	lea	MenuPageMaxNavItem,a6	; point a6 to the lookup table
+	adda.l	d6,a6 ; move to offset
+	move.w	(a6),d7	; copy max page to d7
+	move.w	(MEM_MENU_SELECTION),d6
+	cmp.w	d6,d7
+	bgt.s	.2 ; branch if at the last item in the page
+	move.w	#$0004,(MEM_MENU_SELECTION)
+	bra.w	ProcessStatusScreenTestDPadExit ; done processing d-pad
+.2
 	addq	#$01,(MEM_MENU_SELECTION)
 	bra.w	ProcessStatusScreenTestDPadExit ; done processing d-pad
 ProcessStatusScreenTestDPadExit:
 	bsr.w	ProcessStatusScreenUpdateSelectorXY ; update the selector position
 	bra.w	ExitProcessStatusScreen	; exit
 
+;-------------------------------------------------------------------------------
+; test if A or C was pressed
+;-------------------------------------------------------------------------------
 ProcessStatusScreenTestAC:
+ProcessStatusScreenTestACButtonPressed:	; test if the player pressed A
+	cmpi.w	#BUTTON_A,d6	; test if the A button was pressed
+	beq.s	ProcessStatusScreenACButtonPressed	; A button is pressed
+	cmpi.w	#BUTTON_C,d6	; test if the C button was pressed
+	bne.w	ExitProcessStatusScreen	; C button is not pressed
+ProcessStatusScreenACButtonPressed:
+	move.w	(MEM_MENU_SELECTION),d6	; copy menu selection to d6
+	; if menu selection = the current page then do nothing	
+	cmp.w	(MEM_MENU_SCREEN_PAGE),d6
+	beq.w	ExitProcessStatusScreen	
+	; test if changing pages
+	cmpi.w	#$0000,(MEM_MENU_SELECTION)
+	bne.s	.1
+	move.w	d6,(MEM_MENU_SCREEN_PAGE)
+	lea	SceneMenuMap,a6	; address of the scene for the status screen
+	bsr.w	DrawScene	; branch to subroutine to draw the scene
+	bsr.w	BuildStatusScreen	; build the status screen
+	bsr.w	FadeIn	; fade in the status screen
+	bra.w	ExitProcessStatusScreen	
+.1
+	cmpi.w	#$0001,(MEM_MENU_SELECTION)
+	bne.s	.2
+	move.w	d6,(MEM_MENU_SCREEN_PAGE)
+	lea	SceneMenuStatus,a6	; address of the scene for the status screen
+	bsr.w	DrawScene	; branch to subroutine to draw the scene
+	bsr.w	BuildStatusScreen	; build the status screen
+	bsr.w	FadeIn	; fade in the status screen
+	bra.w	ExitProcessStatusScreen	
+.2
+	cmpi.w	#$0002,(MEM_MENU_SELECTION)
+	bne.s	.3
+	move.w	d6,(MEM_MENU_SCREEN_PAGE)
+	lea	SceneMenuData,a6	; address of the scene for the status screen
+	bsr.w	DrawScene	; branch to subroutine to draw the scene
+	bsr.w	BuildStatusScreen	; build the status screen
+	bsr.w	FadeIn	; fade in the status screen
+	bra.w	ExitProcessStatusScreen	
+.3
+	cmpi.w	#$0003,(MEM_MENU_SELECTION)
+	bne.s	.4
+	move.w	d6,(MEM_MENU_SCREEN_PAGE)
+	lea	SceneMenuHelp,a6	; address of the scene for the status screen
+	bsr.w	DrawScene	; branch to subroutine to draw the scene
+	bsr.w	BuildStatusScreen	; build the status screen
+	bsr.w	FadeIn	; fade in the status screen
+	bra.w	ExitProcessStatusScreen	
+.4
+	;---------------------------------------------------------------------------
+	; otherwise button was pressed somewhere outside of the navigation
+	;---------------------------------------------------------------------------
+	cmpi.w	#$0003,(MEM_MENU_SCREEN_PAGE)
+	beq.w	ProcessStatusScreenHelp
+	cmpi.w	#$0002,(MEM_MENU_SCREEN_PAGE)
+	beq.w	ProcessStatusScreenData
+	cmpi.w	#$0001,(MEM_MENU_SCREEN_PAGE)
+	beq.w	ProcessStatusScreenStatus
+ProcessStatusScreenMap:
+	move.w	#$2700,sr ; disable interrupts
+	move.l	(MEM_GAME_STATE),d7 ; copy current game state to d7
+	bclr.l	#STATE_FLAG_STATUS_SCREEN,d7 ; update game state
+	move.l	d7,(MEM_GAME_STATE) ; save updated game state
+	;---------------------------------------------------------------------------
+	; lookup which scene to fast travel to
+	;---------------------------------------------------------------------------
+	clr.l	d7 ; just being paranoid and clearing high word before mulu
+	move.w	(MEM_MENU_SELECTION),d7 ; copy scene id to d7
+	sub.w	#$0004,d7 ; adjust for navigation menu
+	mulu.w	#WORD_SIZE,d7 ; multiply by 2 to get offset in scene id table
+	lea	FastTravelSceneIDTable,a6	; point a6 to the scene definition table
+	adda.l	d7,a6 ; add offset
+	clr.l	d7 ; just being paranoid and clearing high word before mulu
+	move.w	(a6),d7 ; copy scene id to d7
+	;---------------------------------------------------------------------------
+	; load the scene
+	;---------------------------------------------------------------------------
+	mulu.w	#LWORD_SIZE,d7 ; multiply by 4 to get offset in scene table
+	lea	SceneDefinitionTable,a6	; point a6 to the scene definition table
+	adda.l	d7,a6 ; add offset
+	move.l	(a6),a6	; have a6 point to the value at a6
+	move.w	#$2000,sr ; re-enable interrupts
+	bsr.w	LoadScene ; branch to LoadScene subroutine
+	;---------------------------------------------------------------------------
+	; move sprite to a safe location in the scene
+	;---------------------------------------------------------------------------
+	move.w	#SPRITE_PLAYER_INIT_X,(MEM_PLAYER_SPRITE_X)	; starting x location
+	move.w	#SPRITE_PLAYER_INIT_Y,(MEM_PLAYER_SPRITE_Y)	; starting y location
+	move.w	#SPRITE_PLAYER_PATTERN,(MEM_PLAYER_SPRITE_PATTERN_INDEX) ; pattern
+	move.w	#DIRECTION_DOWN,(MEM_PLAYER_SPRITE_DIRECTION)	; direction
+	move.w	#$0000,(MEM_PLAYER_SPRITE_FRAME)	; frame
+	;---------------------------------------------------------------------------
+	; fix sprites and fade in
+	;---------------------------------------------------------------------------
+	bsr.w	LoadPlayerSprite ; load the player sprite
+	bsr.w	FixSprites ; move player sprite and reset sprite links
+	bsr.w	FadeIn ; fade in to the new scene
+	bra.w	ExitProcessStatusScreen
+ProcessStatusScreenStatus:
+	clr	d7
+	move.w	(MEM_MENU_SELECTION),d7 ; copy selected item to d7
+	; lookup description of selected item
+	subq.w	#$0004,d7 ; subtract 4 to get item slot
+	mulu.w	#WORD_SIZE,d7	; items are 1 word
+	cmpi.w	#$0000,(MEM_PLAYER_SPRITE)
+	beq.s	.1
+	lea	MEM_PLAYER2_ITEMS,a6 ; point a6 to player items
+	bra.s	.2
+.1
+	lea	MEM_PLAYER1_ITEMS,a6 ; point a6 to player items
+.2
+	adda.l	d7,a6	; move to offset
+	move.w	(a6),d7	; copy item number to d6
+	and.w	#$0FFF,d7	; clear out item mask
+	mulu.w	#LWORD_SIZE,d7	; addresses are 1 lword
+	lea	ItemDescriptionTable,a6	; point a6 to the lookup table
+	adda.l	d7,a6	; move to offset
+	move.l	(a6),a0	; point a0 to the first character
+	move.l	#STATUS_SCREEN_INVENTORY_DESCRIPTION_VDP,d7
+	move.l	#STATUS_SCREEN_INVENTORY_DESCRIPTION_VDP,(MEM_DIALOG_VDP)
+BuildItemDescriptionTextLoop:
+	clr	d6	; lazy way to prevent various bugs
+	move.b	(a0)+,d6	; copy current character to d6
+	cmpi.b	#ETX,d6	; is this the end of the text?
+	beq.s	ExitProcessStatusScreen	; end of text, move on
+	cmpi.b	#LF,d6	; is this a line feed character?
+	bne.s	.1	; not a line feed character
+	add.l	#$00800000,d7	; move down one row
+	move.l	d7,(MEM_DIALOG_VDP)	; set new VDP write
+.1
+	; update d6 to point to the tile ID
+	sub.w	#$20,d6	; subtract 32 to get the character index
+	add.w	#DIALOG_BASE_TILE_LOW+%0010000000000000,d6	; add the base tile
+	move.l	(MEM_DIALOG_VDP),(VDP_CONTROL)	; set VDP address
+	move.w  d6,(VDP_DATA)	; copy the character to VDP
+	; draw the next character
+	add.l	#$00020000,(MEM_DIALOG_VDP)	; move to the next column
+	bra.w	BuildItemDescriptionTextLoop ; loop until ETX
 
-; TO DO - this is the "last" part of this to work on
 
-;ProcessStatusScreenTestACButtonPressed:	; test if the player pressed A
-;	cmpi.w	#BUTTON_A,d6	; test if the A button was pressed
-;	beq.s	ProcessStatusScreenACButtonPressed	; A button is pressed
-;	cmpi.w	#BUTTON_C,d6	; test if the C button was pressed
-;	bne.w	ProcessStatusScreenTestBButtonPressed	; C button is not pressed
-;ProcessStatusScreenACButtonPressed:
-;	; setup dialog
-;	bsr.w	SetDialogOpening	; setup dialog
-;	; fixing similar bug to one in DefaultExitSceneNoKey
-;	move.w	#$FFFF,(MEM_ACTION_TARGET_NPCID)
-;	; set flag to not hide the selector after closing
-;	move.l	(MEM_DIALOG_FLAGS),d7	; copy current dialog state to d7
-;	bset.l	#DIALOG_FLAG_OPTION_PERSIST_SELECTOR,d7	; set option
-;	move.l	d7,(MEM_DIALOG_FLAGS)	; save changes made to the dialog options
-;	move.w	(MEM_MENU_SELECTION),d6	; copy menu selection to d6
-;	; test if the selector is on the save or item menu
-;	cmpi.w	#$0004,d6	; 0-3 are save, 4-7 are items
-;	blt.s	ProcessStatusScreenACButtonPressedSave	; branch to save logic
+
+
+	bra.w	ExitProcessStatusScreen
+ProcessStatusScreenData:
+	bra.w	ExitProcessStatusScreen
+ProcessStatusScreenHelp:
+	bra.w	ExitProcessStatusScreen
+
+
 ;ProcessStatusScreenACButtonPressedItem:
 ;	; lookup description of selected item
 ;	subq.w	#$0004,d6	; subtract 4 to get item slot
@@ -257,16 +424,38 @@ ExitProcessStatusScreen:
 	rts
 
 ProcessStatusScreenUpdateSelectorXY:
-	move.w	(MEM_MENU_SELECTION),d4	; copy menu selection to d4
-	cmpi.w	#$0003,d4	; test if this is in the navigation
-	bgt.w	ExitProcessStatusScreenUpdateSelectorXY ;.1	; <4 means navigation
+	clr	d6	; done out of paranoia
+	move.w	(MEM_MENU_SELECTION),d6	; copy menu selection to d6
+	cmpi.w	#$0003,d6	; test if this is in the navigation
+	bgt.s	.1	; <4 means navigation
+	lea	MenuNavigationTable,a6	; point a6 to the lookup table for the menu
+	bra.s	ProcessStatusScreenUpdateSelectorXYUpdateVDP
+.1 ; navigating the page-specific menus
+	subq	#$0004,d6
+	; no menu to navigate on the help page
+	;cmpi.w	#MENU_SCREEN_PAGE_HELP,(MEM_MENU_SCREEN_PAGE)
+	;bne.s	.2
+	;lea	MenuNavigationTable,a6	; point a6 to the lookup table for the menu
+	;bra.s	ProcessStatusScreenUpdateSelectorXYUpdateVDP
+;.2
+	cmpi.w	#MENU_SCREEN_PAGE_DATA,(MEM_MENU_SCREEN_PAGE)
+	bne.s	.3
+	lea	DataNavigationTable,a6	; point a6 to the lookup table for the data menu
+	bra.s	ProcessStatusScreenUpdateSelectorXYUpdateVDP
+.3	
+	cmpi.w	#MENU_SCREEN_PAGE_STATUS,(MEM_MENU_SCREEN_PAGE)
+	bne.s	.4
+	; TODO - UPDATE TO CORRECT TABLE
+	lea	StatusNavigationTable,a6	; point a6 to the lookup table for the menu
+	bra.s	ProcessStatusScreenUpdateSelectorXYUpdateVDP
+.4
+	; if we passed through everything then we must be on the map page
+	lea	MapNavigationTable,a6	; point a6 to the lookup table for the menu
+ProcessStatusScreenUpdateSelectorXYUpdateVDP:
 	;---------------------------------------------------------------------------
 	; move the selector to the right position in the navigation menu
 	;---------------------------------------------------------------------------
-	clr	d6	; done out of paranoia
-	move.w	(MEM_MENU_SELECTION),d6	; copy active scene ID to d6
 	mulu.w	#LWORD_SIZE,d6	; multiply by LWORD_SIZE to get offset
-	lea	MenuNavigationTable,a6	; point a6 to the lookup table
 	adda.l	d6,a6	; move to offset
 	;---------------------------------------------------------------------------
 	; update y

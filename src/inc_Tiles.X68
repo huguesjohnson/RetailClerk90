@@ -712,3 +712,11 @@ MenuNavSelectedTilesStart:
 	include 'tiles/scene-tiles/menu-nav-selected.X68'
 MenuNavSelectedTilesEnd:
 
+MenuMapIconsTilesStart:
+	include 'tiles/scene-tiles/menu-map-icons.X68'
+MenuMapIconsTilesEnd:
+
+MenuMapTilesStart:
+	include 'tiles/scene-tiles/menu-map.X68'
+MenuMapTilesEnd:
+

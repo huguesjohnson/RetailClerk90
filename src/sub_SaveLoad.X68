@@ -109,7 +109,6 @@ ExitInitSRAM:
 ; a5 is modified by this subroutine
 ;-------------------------------------------------------------------------------
 SaveGameLookup:
-	move.w	#$2700,sr	; disable interrupts
     move.b  #1,(SRAM_LOCK)	; unlock SRAM
 	lea	(MEM_TEMP_SPACE),a4	; point a4 to temp space
 	mulu.w	#SAVE_SIZE,d7	; d7 should have the save slot number
@@ -122,6 +121,5 @@ SaveGameLookup:
     move.b  #0,(SRAM_LOCK)   ; lock SRAM
 	move.l	(MEM_TEMP_SPACE),d6	; copy temp value to d6
 	swap	d6	; swap to low word
-	move.w	#$2000,sr		; re-enable interrupts
 	rts
 

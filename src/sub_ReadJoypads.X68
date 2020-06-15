@@ -2,7 +2,7 @@
 ; These sub-routines are not entirely my original code.
 ; This are based off various samples available online (see credits file).
 ; Although most of those are based on Sega's documentation sent to developers.
-; I made some modifications but probably not enough to qualify as original work.
+; There's kind of just one way to read controllers on the Genesis anyway.
 ;-------------------------------------------------------------------------------
 ReadJoypads:
 	move.w	#$2700,sr		; disable interrupts

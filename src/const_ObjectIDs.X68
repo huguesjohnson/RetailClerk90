@@ -78,6 +78,7 @@ OBJ_SCENE_CAVERN_BACKROOM_LADDER=$103F
 ;-------------------------------------------------------------------------------
 OBJ_ITEM_BASE=$3000
 OBJ_ITEM_NOTHING=OBJ_ITEM_BASE
+OBJ_ITEM_KEYS=OBJ_ITEM_NOTHING+$0001
 
 ;-------------------------------------------------------------------------------
 ; player sprite

@@ -11,6 +11,8 @@
 
 	include 'sub_SaveLoad.X68'
 
+	include	'sub_DrawSaveTitles.X68'
+
 	include	'sub_ProcessLoadScreen.X68'
 
 	include	'sub_BuildLoadScreen.X68'

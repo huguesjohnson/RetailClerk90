@@ -1282,10 +1282,33 @@ StoreSignHistory:
 
 ;-------------------------------------------------------------------------------
 ; item names and descriptions
+; item names can be 16 characters
+; item descriptions can be up to 7 lines of 18 characters
 ;-------------------------------------------------------------------------------
 ItemNameNothing:
-	;		"1234567890"
-	dc.b	"Nothing",ITEMNAMEEND
+	;		"1234567890123456"
+	dc.b	"(Nothing)",ITEMNAMEEND
+
+ItemDescriptionNothing:
+	;		"123456789012345678"
+	dc.b	"A deep void in",LF
+	dc.b	"your pocket that",LF
+	dc.b	"yearns to be",LF
+	dc.b	"filled.",ETX
+
+ItemNameKeys:
+	;		"1234567890123456"
+	dc.b	"Store keys",ITEMNAMEEND
+
+ItemDescriptionKeys:
+	;		"123456789012345678"
+	dc.b	"Oversized keyring",LF
+	dc.b	"with keys to every",LF
+	dc.b	"store. Earned over",LF
+	dc.b	"the summer. These",LF
+	dc.b	"allow entry to",LF
+	dc.b	"stores after the",LF
+	dc.b	"mall is closed.",ETX
 
 ;-------------------------------------------------------------------------------
 ; day intros
@@ -1529,36 +1552,237 @@ MenuScreenNavData:
 MenuScreenNavHelp:
 	dc.b	"{Help",ETX
 
-StatusScreenInventory:
-	dc.b	"Inventory",ETX
-
 StatusScreenSave:
 	dc.b	"Save",ETX
 
-StatusScreenStoreKeys:
-	dc.b	"Store keys",ETX
+StatusScreenLoad:
+	dc.b	"Load",ETX
 
-StatusScreenYouAreHere:
+StatusScreenInventory:
+	dc.b	"Inventory",ETX
+
+;-------------------------------------------------------------------------------
+; map menu
+;-------------------------------------------------------------------------------
+
+StatusScreenMapLegend:
+	dc.b	"Legend",ETX
+
+StatusScreenMapYouAreHere:
 	dc.b	" = you are here",ETX
 
+StatusScreenMapOptionalEvent:
+	dc.b	" = optional event",ETX
+
+StatusScreenMapStoryEvent:
+	dc.b	" = story event",ETX
+
+StatusScreenMapFastTravel:
+	dc.b	"Fast Travel",ETX
+
+StatusScreenMapFastTravel00:
+	;		"12345678901234567"
+	dc.b	"{West hall",ETX
+
+StatusScreenMapFastTravel01:
+	;		"12345678901234567"
+	dc.b	"{East hall",ETX
+
+StatusScreenMapFastTravel02:
+	;		"12345678901234567"
+	dc.b	"{Wire Warehouse",ETX
+
+StatusScreenMapFastTravel03:
+	;		"12345678901234567"
+	dc.b	"{Information desk",ETX
+
+StatusScreenMapFastTravel04:
+	;		"12345678901234567"
+	dc.b	"{The Cavern",ETX
+
+StatusScreenMapFastTravel05:
+	;		"12345678901234567"
+	dc.b	"{Denim Country",ETX
+
+StatusScreenMapFastTravel06:
+	;		"12345678901234567"
+	dc.b	"{ThoreauBooks",ETX
+
+StatusScreenMapFastTravel07:
+	;		"12345678901234567"
+	dc.b	"{Mall exit",ETX
+
+;-------------------------------------------------------------------------------
+; help menu
+;-------------------------------------------------------------------------------
+
+StatusScreenHelpControls:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"                Controls                ",ETX
+
+StatusScreenHelpTip6:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"Start: Pause",ETX
+
+StatusScreenHelpHints:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"                 Events                 ",ETX
+
+StatusScreenHelpHints00:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"Completing story events advances time.",ETX
+
+StatusScreenHelpHints01:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"Optional events do not advance time but",ETX
+
+StatusScreenHelpHints02:
+	;		"1234567890123456789012345678901234567890"
+	dc.b	"not all can be completed in one day.",ETX
+
+;-------------------------------------------------------------------------------
+; status screen objectives
+;-------------------------------------------------------------------------------
 StatusScreenDay00Objective00:
+StatusScreenDay00Objective01:
+StatusScreenDay00Objective02:
+StatusScreenDay00Objective03:
+StatusScreenDay00Objective04:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"November 19, 1989: Your first day",LF
+	dc.b	"November 18, 1990: ",LF
 	;		"1234567890123456789012345678901234567"
-	dc.b	"1) Help the customer who won't leave",LF
+	dc.b	"",LF
 	;		"1234567890123456789012345678901234567"
-	dc.b	"2) Go home",ETX
+	dc.b	"another line 0",LF
+	;		"1234567890123456789012345678901234567"
+	dc.b	"another line 1",LF
+	;		"1234567890123456789012345678901234567"
+	dc.b	"",LF
+	;		"1234567890123456789012345678901234567"
+	dc.b	"another line 2",ETX
+
+StatusScreenDay01Objective00:
+StatusScreenDay01Objective01:
+StatusScreenDay01Objective02:
+StatusScreenDay01Objective03:
+StatusScreenDay01Objective04:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"November 23, 1990: ",LF
+	;		"1234567890123456789012345678901234567"
+	dc.b	"another line",ETX
+
+StatusScreenDay02Objective00:
+StatusScreenDay02Objective01:
+StatusScreenDay02Objective02:
+StatusScreenDay02Objective03:
+StatusScreenDay02Objective04:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"December 4, 1990: ",LF
+	;		"1234567890123456789012345678901234567"
+	dc.b	"another line",ETX
+
+StatusScreenDay03Objective00:
+StatusScreenDay03Objective01:
+StatusScreenDay03Objective02:
+StatusScreenDay03Objective03:
+StatusScreenDay03Objective04:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"December 16, 1990: ",LF
+	;		"1234567890123456789012345678901234567"
+	dc.b	"another line",ETX
+
+StatusScreenDay04Objective00:
+StatusScreenDay04Objective01:
+StatusScreenDay04Objective02:
+StatusScreenDay04Objective03:
+StatusScreenDay04Objective04:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"December 20, 1990: ",LF
+	;		"1234567890123456789012345678901234567"
+	dc.b	"another line",ETX
+
+StatusScreenDay05Objective00:
+StatusScreenDay05Objective01:
+StatusScreenDay05Objective02:
+StatusScreenDay05Objective03:
+StatusScreenDay05Objective04:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"December 24, 1990: ",LF
+	;		"1234567890123456789012345678901234567"
+	dc.b	"another line",ETX
+
+StatusScreenDay06Objective00:
+StatusScreenDay06Objective01:
+StatusScreenDay06Objective02:
+StatusScreenDay06Objective03:
+StatusScreenDay06Objective04:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"December 31, 1990: ",LF
+	;		"1234567890123456789012345678901234567"
+	dc.b	"another line",ETX
 
 ;-------------------------------------------------------------------------------
 ; save game titles
 ;-------------------------------------------------------------------------------
-SaveGameTitleD0O0:
+SaveGameTitleDay00Objective00:
+SaveGameTitleDay00Objective01:
+SaveGameTitleDay00Objective02:
+SaveGameTitleDay00Objective03:
+SaveGameTitleDay00Objective04:
 	;		"123456789012345678901"
-	dc.b	"November 19 (Evening)",ETX
+	dc.b	"{November 18 (Night)",ETX
+
+SaveGameTitleDay01Objective00:
+SaveGameTitleDay01Objective01:
+SaveGameTitleDay01Objective02:
+SaveGameTitleDay01Objective03:
+SaveGameTitleDay01Objective04:
+	;		"123456789012345678901"
+	dc.b	"{November 23 (Day)",ETX
+
+SaveGameTitleDay02Objective00:
+SaveGameTitleDay02Objective01:
+SaveGameTitleDay02Objective02:
+SaveGameTitleDay02Objective03:
+SaveGameTitleDay02Objective04:
+	;		"123456789012345678901"
+	dc.b	"{December 4 (Day)",ETX
+
+SaveGameTitleDay03Objective00:
+SaveGameTitleDay03Objective01:
+SaveGameTitleDay03Objective02:
+SaveGameTitleDay03Objective03:
+SaveGameTitleDay03Objective04:
+	;		"123456789012345678901"
+	dc.b	"{December 16 (Day)",ETX
+
+SaveGameTitleDay04Objective00:
+SaveGameTitleDay04Objective01:
+SaveGameTitleDay04Objective02:
+SaveGameTitleDay04Objective03:
+SaveGameTitleDay04Objective04:
+	;		"123456789012345678901"
+	dc.b	"{December 20 (Day)",ETX
+	
+SaveGameTitleDay05Objective00:
+SaveGameTitleDay05Objective01:
+SaveGameTitleDay05Objective02:
+SaveGameTitleDay05Objective03:
+SaveGameTitleDay05Objective04:
+	;		"123456789012345678901"
+	dc.b	"{December 24 (Day)",ETX
+
+SaveGameTitleDay06Objective00:
+SaveGameTitleDay06Objective01:
+SaveGameTitleDay06Objective02:
+SaveGameTitleDay06Objective03:
+SaveGameTitleDay06Objective04:
+	;		"123456789012345678901"
+	dc.b	"{December 31 (Day)",ETX
 	
 StatusScreenEmptySave:
 	;		"123456789012345678901"
-	dc.b	"(empty)              ",ETX
+	dc.b	"{(empty)             ",ETX
 
 StatusScreenDefaultSave:
 	dc.b	"{",ETX

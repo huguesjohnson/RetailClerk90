@@ -198,3 +198,6 @@ PatternMenuNav:
 PatternMenuNavSelected:
 	include 'patterns/menu-nav-selected.X68'
 
+PatternMenuMap:
+	include 'patterns/menu-map.X68'
+

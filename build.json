@@ -1327,19 +1327,31 @@
          },
          { 
             "name":"MenuNav",
-            "palettePath":"src/palettes/Menu01.X68",
+            "palettePath":"src/palettes/Menu02.X68",
             "sourceFilePath":"design/img/scene-tiles/menu-nav.png",
             "destinationFilePath":"src/tiles/scene-tiles/menu-nav.X68",
             "patternFilePath":"src/patterns/menu-nav.X68"
          },
          { 
             "name":"MenuNavSelected",
-            "palettePath":"src/palettes/Menu02.X68",
+            "palettePath":"src/palettes/Menu03.X68",
             "sourceFilePath":"design/img/scene-tiles/menu-nav-selected.png",
             "destinationFilePath":"src/tiles/scene-tiles/menu-nav-selected.X68",
             "patternFilePath":"src/patterns/menu-nav-selected.X68"
+         },
+         { 
+            "name":"MenuMapIcons",
+            "palettePath":"src/palettes/Menu00.X68",
+            "sourceFilePath":"design/img/scene-tiles/map-icons.png",
+            "destinationFilePath":"src/tiles/scene-tiles/menu-map-icons.X68"
+         },
+         { 
+            "name":"MenuMap",
+            "palettePath":"src/palettes/Menu00.X68",
+            "sourceFilePath":"design/img/scene-tiles/map.png",
+            "destinationFilePath":"src/tiles/scene-tiles/menu-map.X68",
+            "patternFilePath":"src/patterns/menu-map.X68"
          }
-
       ],
       "tileIncludeFilePath":"src/inc_Tiles.X68",
       "patternIncludeFilePath":"src/inc_PatternsGenerated.X68"

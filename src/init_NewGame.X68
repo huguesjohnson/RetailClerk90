@@ -17,11 +17,14 @@ InitGameState:
 	bset.l	#STATE_FLAG_TITLE_SCREEN,d0	; set title screen flag
 	move.l	d0,(MEM_GAME_STATE)	; save game state
 	move.w	#$0000,(MEM_DAY)	; starting day is zero
-	move.w	#OBJECTIVE_D0_O0,(MEM_OBJECTIVE)	; initial objective
+	move.w	#OBJECTIVE_D00_O00,(MEM_OBJECTIVE)	; initial objective
 	and.l	#$00000000,(MEM_GLOBAL_EVENT_FLAGS)	; clear event flags
 	and.l	#$00000000,(MEM_DAY_EVENT_FLAGS)	; clear event flags
 	and.l	#$00000000,(MEM_MISSION_EVENT_FLAGS)	; clear mission flags
 	and.l	#$00000000,(MEM_SCENE_BGM)	; clear BGM
+	move.w	#$FFFF,(MEM_STORY_EVENT_SCENE_ID) ; no story event
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; no optional events
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; no optional events
 	move.w	#PLAYER_SPRITE_ERYN,(MEM_PLAYER_SPRITE)	; initial sprite
 	bsr.w	ClearPlayerInventory	; clear player inventory
 	move.w	#$0000,(MEM_CUSTOMER_FEEDBACK_SCORE)	; clear customer feedback

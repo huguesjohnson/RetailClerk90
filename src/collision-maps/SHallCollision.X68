@@ -21,7 +21,7 @@
 	dc.l	$00018000	; row[9] col[0]
 	dc.l	$03000000	; row[9] col[1]
 	dc.l	$00018000	; row[10] col[0]
-	dc.l	$03000000	; row[10] col[1]
+	dc.l	$030000E7	; row[10] col[1]
 	dc.l	$00018000	; row[11] col[0]
 	dc.l	$030000E7	; row[11] col[1]
 	dc.l	$00000000	; row[12] col[0]

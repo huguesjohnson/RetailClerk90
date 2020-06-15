@@ -253,22 +253,22 @@ SceneDenimCountry:
 	dc.l	NullMovementStart	; location of movement pattern for npc0
 	dc.w	(NullMovementEnd-NullMovementStart-1)	; pattern length
 
-	dc.w	$0100	; starting x location of npc1
-	dc.w	$0100	; starting y location of npc1
+	dc.w	$00D0	; starting x location of npc1
+	dc.w	$00D0	; starting y location of npc1
 	dc.w	DIRECTION_DOWN	; starting direction of npc1
 	dc.w	$FFFF	; movement frequency of npc1
 	dc.l	NullMovementStart	; location of movement pattern for npc1
 	dc.w	(NullMovementEnd-NullMovementStart-1)	; pattern length
 
 	dc.w	$0120	; starting x location of npc3
-	dc.w	$0100	; starting y location of npc3
+	dc.w	$00C0	; starting y location of npc3
 	dc.w	DIRECTION_DOWN	; starting direction of npc3
 	dc.w	$FFFF	; movement frequency of npc3
 	dc.l	NullMovementStart	; location of movement pattern for npc3
 	dc.w	(NullMovementEnd-NullMovementStart-1)	; pattern length
 
-	dc.w	$0140	; starting x location of npc4
-	dc.w	$0100	; starting y location of npc4
+	dc.w	$0148	; starting x location of npc4
+	dc.w	$0120	; starting y location of npc4
 	dc.w	DIRECTION_DOWN	; starting direction of npc4
 	dc.w	$FFFF	; movement frequency of npc4
 	dc.l	NullMovementStart	; location of movement pattern for npc4

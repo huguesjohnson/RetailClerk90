@@ -1,21 +1,22 @@
 ;-------------------------------------------------------------------------------
 ; game state flags
 ;-------------------------------------------------------------------------------
-STATE_FLAG_VBLANK=$00	; vblank flag
-STATE_FLAG_PAUSED=$01	; game is paused
-STATE_FLAG_EXPLORING=$02	; player is controlling the sprite on the map
-STATE_FLAG_DIALOG=$03	; player is interacting with a dialog
-STATE_FLAG_ACTION=$04	; there is an action queued
-STATE_FLAG_SCRIPTED_EVENT=$05	; a scripted event is running
-STATE_FLAG_TITLE_SCREEN=$06	; title screen is displaying
-STATE_FLAG_EXITS_BLOCKED=$07	; blocks sprite from leaving scene
-STATE_FLAG_END_SCREEN=$08	; end screen is displaying
-STATE_FLAG_INTRO_SCREEN=$09	; day intro screen is displaying
-STATE_FLAG_STATUS_SCREEN=$0A	; status screen is displaying
-STATE_FLAG_MALL_CLOSED=$0B	; mall is closed for the night
-STATE_FLAG_LOAD_MENU=$0C	; load menu is displaying
+STATE_FLAG_VBLANK=$00 ; vblank flag
+STATE_FLAG_PAUSED=$01 ; game is paused
+STATE_FLAG_EXPLORING=$02 ; player is controlling the sprite on the map
+STATE_FLAG_DIALOG=$03 ; player is interacting with a dialog
+STATE_FLAG_ACTION=$04 ; there is an action queued
+STATE_FLAG_SCRIPTED_EVENT=$05 ; a scripted event is running
+STATE_FLAG_TITLE_SCREEN=$06 ; title screen is displaying
+STATE_FLAG_EXITS_BLOCKED=$07 ; blocks sprite from leaving scene
+STATE_FLAG_END_SCREEN=$08 ; end screen is displaying
+STATE_FLAG_INTRO_SCREEN=$09 ; day intro screen is displaying
+STATE_FLAG_STATUS_SCREEN=$0A ; status screen is displaying
+STATE_FLAG_MALL_CLOSED=$0B ; mall is closed for the night
+STATE_FLAG_BASEMENT_OPEN=$C ; basement is accessible
+STATE_FLAG_LOAD_MENU=$0D ; load menu is displaying
 	if	_DEBUG_
-STATE_FLAG_DEBUG_MENU=$0F	; debug menu is displaying
+STATE_FLAG_DEBUG_MENU=$0F ; debug menu is displaying
 	endif
 
 ;-------------------------------------------------------------------------------

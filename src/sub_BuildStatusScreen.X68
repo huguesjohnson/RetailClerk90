@@ -99,6 +99,7 @@ BuildStatusScreenObjectiveTextLoop:
 	bne.s	.1	; not a line feed character
 	add.l	#$00800000,d7	; move down one row
 	move.l	d7,(MEM_DIALOG_VDP)	; set new VDP write
+	bra.w	BuildStatusScreenObjectiveTextLoop
 .1
 	; update d6 to point to the tile ID
 	sub.w	#$20,d6	; subtract 32 to get the character index

@@ -4,16 +4,13 @@
 
 ;-------------------------------------------------------------------------------
 ; Saves the current game state
-; -location is based on MEM_MENU_SELECTION
+; -d7 = save slot
 ; -in the save screen the index for save is 0-3
 ; -save everything from MEM_GAME_STATE to MEM_ACTIVE_SCENE_ID
 ; -~8kb is the current size limit for save games in this demo
 ; a4, a5, d7 are all modified by this routine
 ;-------------------------------------------------------------------------------
 SaveGame:
-	; compute which save slot to use
-	clr.l	d7	; just being paranoid
-	move.w	(MEM_MENU_SELECTION),d7	; copy menu selection to d7
 	mulu.w	#SAVE_SIZE,d7	; copy by save size
 	lea	(SRAM_START),a5	; point a5 to the start of SRAM
 	adda.w	d7,a5	; move to offset location
@@ -31,14 +28,12 @@ SaveLoopEnd:
 
 ;-------------------------------------------------------------------------------
 ; Loads a saved game
-; -location is based on MEM_MENU_SELECTION
+; -d7 = save slot
 ; -in the load screen the index for save is 0-3
 ; a4, a5, d7 are all modified by this routine
 ;-------------------------------------------------------------------------------
 LoadGame:
 	; compute which save slot to use
-	clr.l	d7	; just being paranoid
-	move.w	(MEM_MENU_SELECTION),d7	; copy menu selection to d7
 	mulu.w	#SAVE_SIZE,d7	; copy by save size
 	lea	(SRAM_START),a5	; point a5 to the start of SRAM
 	adda.w	d7,a5	; move to offset location

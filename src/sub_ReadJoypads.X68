@@ -1,8 +1,9 @@
 ;-------------------------------------------------------------------------------
 ; These sub-routines are not entirely my original code.
-; This are based off various samples available online (see credits file).
+; 3-button controller read is based off various samples (see credits file).
 ; Although most of those are based on Sega's documentation sent to developers.
 ; There's kind of just one way to read controllers on the Genesis anyway.
+; And then later via brute force trial & error I added 6-button support.
 ;-------------------------------------------------------------------------------
 ReadJoypads:
 	move.w	#$2700,sr		; disable interrupts

@@ -136,13 +136,8 @@ TestCButtonPressed:	; test if the player pressed the C button
 ;	lea	SceneMenuMap,a6	; address of the scene for the status screen
 ;	move.w	#$0000,(MEM_MENU_SCREEN_PAGE)
 
-
-	move.w	#OBJ_ITEM_KEYS,d7
-	lea MEM_PLAYER1_ITEM_COUNT,a1
-	bsr.w	AddItem
-
-	move.w	#$0001,(MEM_MENU_SCREEN_PAGE)
-	lea	SceneMenuStatus,a6	; address of the scene for the status screen
+	move.w	#$0002,(MEM_MENU_SCREEN_PAGE)
+	lea	SceneMenuData,a6	; address of the scene for the status screen
 
 
 	bsr.w	DrawScene	; branch to subroutine to draw the scene

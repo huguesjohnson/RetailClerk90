@@ -18,9 +18,10 @@ ProcessLoadScreenTestStart:
 	;---------------------------------------------------------------------------	
 	; load game	
 	;---------------------------------------------------------------------------	
-	bsr.w	LoadGame	;	load the game from SRAM
-	bsr.w	ReloadCurrentScene	; reload current scene (needed to fix sprites)
-	bra.w	MainGameLoop	;	return to start of game loop	
+	move.w	(MEM_MENU_SELECTION),d7	; lookup if this is a valid save slot
+	bsr.w	LoadGame ;	load the game from SRAM
+	bsr.w	ReloadCurrentScene ; reload current scene (needed to fix sprites)
+	bra.w	MainGameLoop ;	return to start of game loop	
 ProcessLoadScreenTestDpad:
 	; process dpad press
 	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
@@ -56,7 +57,7 @@ ProcessLoadScreenMoveSelector:
 	; move selector sprite based on menu selection
 	move.w	(MEM_MENU_SELECTION),d7	; copy current value to d7
 	mulu.w	#$0008,d7	; rows are 8 apart
-	add.w	#$00C8,d7	; first row is F8
+	add.w	#$00D0,d7	; first row is D0
 	move.l	#VDP_VRAM_WRITE_SPRITE,d6	; add to sprite table address
 	move.l	d6,(VDP_CONTROL)	; set write location in VDP
 	move.w	d7,(VDP_DATA)	; copy the new y-coordinate

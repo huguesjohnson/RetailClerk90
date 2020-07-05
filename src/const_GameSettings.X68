@@ -157,6 +157,8 @@ STATUS_SCREEN_INVENTORY_VDP=VDP_VRAM_WRITE_B+$00040000+$0B000000
 STATUS_SCREEN_INVENTORY_DESCRIPTION_VDP=VDP_VRAM_WRITE_B+$002A0000+$0A000000
 STATUS_SCREEN_SAVE0_VDP=VDP_VRAM_WRITE_B+$03800000+$00120000
 STATUS_SCREEN_LOAD0_VDP=VDP_VRAM_WRITE_B+$08800000+$00120000
+STATUS_SCREEN_INVENTORY_DESCRIPTION_ROWS=$0006
+STATUS_SCREEN_INVENTORY_DESCRIPTION_COLS=$0011
 
 ;-------------------------------------------------------------------------------
 ; menu screen settings
@@ -169,7 +171,7 @@ MENU_SCREEN_PAGE_HELP=$0003
 ;-------------------------------------------------------------------------------
 ; load screen settings
 ;-------------------------------------------------------------------------------
-LOAD_SCREEN_SAVE0_VDP=VDP_VRAM_WRITE_B+$04800000+$00140000
+LOAD_SCREEN_SAVE0_VDP=VDP_VRAM_WRITE_B+$05000000+$00120000
 
 ;-------------------------------------------------------------------------------
 ; display settings

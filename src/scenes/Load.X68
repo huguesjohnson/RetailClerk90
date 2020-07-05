@@ -22,8 +22,8 @@ SceneLoad:
 	; palettes
 	;---------------------------------------------------------------------------
 	dc.l	PaletteBlack	; first palette
-	dc.l	PaletteText00	; third palette
 	dc.l	PaletteText01	; third palette
+	dc.l	PaletteText00	; third palette
 	dc.l	PaletteTitle03	; fourth palette
 
 	;---------------------------------------------------------------------------
@@ -42,46 +42,29 @@ SceneLoad:
 	dc.l	PatternStatusSave	; location of pattern to load
 	; pccvhnnnnnnnnnnn
 	; 0000000000000000	
-	dc.w	DIALOG_BASE_TILE_LOW+%1010000000000000	; base pattern
+	dc.w	DIALOG_BASE_TILE_LOW+%1100000000000000	; base pattern
 	dc.w	$0000	; repeat 1 time
 	dc.l	VDP_VRAM_WRITE_B+$04000000+$00100000	; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text
 	;---------------------------------------------------------------------------
-	dc.w	$0006	; text count
+	dc.w	$0002	; text count
 
 	; caption for save
 	dc.l	LoadScreenCaption	; location of string to display
-	dc.w	DIALOG_BASE_TILE_LOW+%1010000000000000	; base pattern
-	dc.l	VDP_VRAM_WRITE_B+$03800000+$00120000	; initial drawing location
-
-	; default save message
-	dc.l	StatusScreenDefaultSave	; location of string to display
-	dc.w	DIALOG_BASE_TILE_LOW+%1010000000000000	; base pattern
+	dc.w	DIALOG_BASE_TILE_LOW+%0010000000000000	; base pattern
 	dc.l	VDP_VRAM_WRITE_B+$04800000+$00120000	; initial drawing location
-
-	dc.l	StatusScreenDefaultSave	; location of string to display
-	dc.w	DIALOG_BASE_TILE_LOW+%1010000000000000	; base pattern
-	dc.l	VDP_VRAM_WRITE_B+$05000000+$00120000	; initial drawing location
-
-	dc.l	StatusScreenDefaultSave	; location of string to display
-	dc.w	DIALOG_BASE_TILE_LOW+%1010000000000000	; base pattern
-	dc.l	VDP_VRAM_WRITE_B+$05800000+$00120000	; initial drawing location
-
-	dc.l	StatusScreenDefaultSave	; location of string to display
-	dc.w	DIALOG_BASE_TILE_LOW+%1010000000000000	; base pattern
-	dc.l	VDP_VRAM_WRITE_B+$06000000+$00120000	; initial drawing location
 
 	; help text
 
 	dc.l	LoadScreenHelp0	; location of string to display
-	dc.w	DIALOG_BASE_TILE_LOW+%1100000000000000	; base pattern
-	dc.l	VDP_VRAM_WRITE_B+$07800000+$00100000	; initial drawing location
+	dc.w	DIALOG_BASE_TILE_LOW+%0010000000000000	; base pattern
+	dc.l	VDP_VRAM_WRITE_B+$08000000+$00100000	; initial drawing location
 
 	dc.l	LoadScreenHelp1	; location of string to display
-	dc.w	DIALOG_BASE_TILE_LOW+%1100000000000000	; base pattern
-	dc.l	VDP_VRAM_WRITE_B+$08800000+$00100000	; initial drawing location
+	dc.w	DIALOG_BASE_TILE_LOW+%0010000000000000	; base pattern
+	dc.l	VDP_VRAM_WRITE_B+$09000000+$00100000	; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; objects

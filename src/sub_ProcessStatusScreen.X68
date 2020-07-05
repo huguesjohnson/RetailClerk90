@@ -244,6 +244,28 @@ ProcessStatusScreenMap:
 	bsr.w	FadeIn ; fade in to the new scene
 	bra.w	ExitProcessStatusScreen
 ProcessStatusScreenStatus:
+	move.w	#$2700,sr ; disable interrupts
+	;---------------------------------------------------------------------------
+	; clear old text
+	;---------------------------------------------------------------------------
+	move.l	#STATUS_SCREEN_INVENTORY_DESCRIPTION_VDP,d7
+	move.l	#STATUS_SCREEN_INVENTORY_DESCRIPTION_VDP,(MEM_DIALOG_VDP)
+	move.w	#STATUS_SCREEN_INVENTORY_DESCRIPTION_ROWS,d4
+ClearItemDescriptionRowLoop:
+	move.w	#STATUS_SCREEN_INVENTORY_DESCRIPTION_COLS,d5
+ClearItemDescriptionColLoop:
+	move.w	#DIALOG_BASE_TILE_LOW+%0010000000000000,d6 ; base tile
+	move.l	(MEM_DIALOG_VDP),(VDP_CONTROL) ; set VDP address
+	move.w  d6,(VDP_DATA) ; copy the character to VDP
+	; draw the next character
+	add.l	#$00020000,(MEM_DIALOG_VDP)	; move to the next column
+	dbf	d5,ClearItemDescriptionColLoop
+	add.l	#$00800000,d7	; move down one row
+	move.l	d7,(MEM_DIALOG_VDP)	; set new VDP write
+	dbf	d4,ClearItemDescriptionRowLoop
+	;---------------------------------------------------------------------------
+	; lookup the description
+	;---------------------------------------------------------------------------
 	clr	d7
 	move.w	(MEM_MENU_SELECTION),d7 ; copy selected item to d7
 	; lookup description of selected item
@@ -265,15 +287,19 @@ ProcessStatusScreenStatus:
 	move.l	(a6),a0	; point a0 to the first character
 	move.l	#STATUS_SCREEN_INVENTORY_DESCRIPTION_VDP,d7
 	move.l	#STATUS_SCREEN_INVENTORY_DESCRIPTION_VDP,(MEM_DIALOG_VDP)
+	;---------------------------------------------------------------------------
+	; draw the text
+	;---------------------------------------------------------------------------
 BuildItemDescriptionTextLoop:
 	clr	d6	; lazy way to prevent various bugs
 	move.b	(a0)+,d6	; copy current character to d6
 	cmpi.b	#ETX,d6	; is this the end of the text?
-	beq.s	ExitProcessStatusScreen	; end of text, move on
+	beq.s	ExitProcessStatusScreenStatus	; end of text, move on
 	cmpi.b	#LF,d6	; is this a line feed character?
 	bne.s	.1	; not a line feed character
 	add.l	#$00800000,d7	; move down one row
 	move.l	d7,(MEM_DIALOG_VDP)	; set new VDP write
+	bra.w	BuildItemDescriptionTextLoop ; loop
 .1
 	; update d6 to point to the tile ID
 	sub.w	#$20,d6	; subtract 32 to get the character index
@@ -283,142 +309,43 @@ BuildItemDescriptionTextLoop:
 	; draw the next character
 	add.l	#$00020000,(MEM_DIALOG_VDP)	; move to the next column
 	bra.w	BuildItemDescriptionTextLoop ; loop until ETX
-
-
-
-
+ExitProcessStatusScreenStatus:
+	move.w	#$2000,sr ; re-enable interrupts
 	bra.w	ExitProcessStatusScreen
 ProcessStatusScreenData:
+	move.w	(MEM_MENU_SELECTION),d7 ; copy selected item to d7
+	; lookup description of selected item
+	subq.w	#$0004,d7 ; subtract 4 to account for navigation
+	cmpi.w	#$0003,d7	; test if this is in the navigation
+	bgt.s	ProcessStatusScreenDataLoad	; <4 means load menu
+ProcessStatusScreenDataSave:
+	; d7 should have the right save slot here
+	bsr.w	SaveGame	; save game
+	;---------------------------------------------------------------------------
+	; redraw the save/load title text
+	;---------------------------------------------------------------------------
+	move.l	#STATUS_SCREEN_SAVE0_VDP,d0
+	bsr.w	DrawSaveTitles
+	move.l	#STATUS_SCREEN_LOAD0_VDP,d0
+	bsr.w	DrawSaveTitles
+	bra.w	ExitProcessStatusScreen
+ProcessStatusScreenDataLoad:
+	subq.w	#$0004,d7 ; subtract 4 to get load slot
+	bsr.w	SaveGameLookup	; get save title into d6
+	cmpi.w	#MAX_OBJECTIVE,d6 ; is this > MAX_OBJECTIVE?
+	bgt.w	ExitProcessStatusScreen ; if so exit
+	move.w	(MEM_MENU_SELECTION),d7 ; copy selected item to d7
+	; lookup description of selected item
+	subq.w	#$0008,d7 ; subtract 8 to get index
+	bsr.w	LoadGame ;	load the game from SRAM
+	bsr.w	ReloadCurrentScene ; reload current scene (needed to fix sprites)
+	bra.w	MainGameLoop ;	return to start of game loop
 	bra.w	ExitProcessStatusScreen
 ProcessStatusScreenHelp:
+	;---------------------------------------------------------------------------
+	; nothing to do here yet
+	;---------------------------------------------------------------------------
 	bra.w	ExitProcessStatusScreen
-
-
-;ProcessStatusScreenACButtonPressedItem:
-;	; lookup description of selected item
-;	subq.w	#$0004,d6	; subtract 4 to get item slot
-;	mulu.w	#WORD_SIZE,d6	; items are 1 word
-;	lea	MEM_PLAYER_ITEMS,a6	; point a6 to player items
-;	adda.l	d6,a6	; move to offset
-;	move.w	(a6),d6	; copy item number to d6
-;	and.w	#$0FFF,d6	; clear out item mask
-;	mulu.w	#LWORD_SIZE,d6	; addresses are 1 lword
-;	lea	ItemDescriptionTable,a6	; point a6 to the lookup table
-;	adda.l	d6,a6	; move to offset
-;	move.l	(a6),(MEM_DIALOG_TEXT)	; copy value at a6 to MEM_DIALOG_TEXT
-;	bra.w	ExitProcessStatusScreen	; exit
-;ProcessStatusScreenACButtonPressedSave:
-;	bsr.w	SaveGame	; save game
-;	; update the text
-;	move.w	(MEM_OBJECTIVE),d6	; objective is used for title lookup
-;	mulu.w	#LWORD_SIZE,d6	; multiply by LWORD_SIZE to get offset
-;	lea	SaveGameTitles,a5	; point a5 to the lookup table
-;	adda.l	d6,a5	; move to offset
-;	move.l	(a5),a0	; point a0 to the first character
-;	move.l	#STATUS_SCREEN_SAVE0_VDP,d7	; point d7 to first line
-;	clr	d6	; lazy way to prevent various bugs
-;	move.w	#$0080,d6	; using d6 to compute row
-;	mulu.w	(MEM_MENU_SELECTION),d6	; multiply by current save slot
-;	swap	d6	; move to high word
-;	add.l	d6,d7	; add offset to d7
-;	move.l	d7,(MEM_DIALOG_VDP)
-;UpdateSaveTitleLoop:
-;	clr	d6	; lazy way to prevent various bugs
-;	move.b	(a0)+,d6	; copy current character to d6
-;	cmpi.b	#ETX,d6	; is this the end of the text?
-;	beq.s	ExitSaveTitleLoopExit	; end of text, move on
-;	; update d6 to point to the tile ID
-;	sub.w	#$20,d6	; subtract 32 to get the character index
-;	add.w	#DIALOG_BASE_TILE_LOW,d6	; add the base tile
-;	move.l	(MEM_DIALOG_VDP),(VDP_CONTROL)	; set VDP address
-;	move.w  d6,(VDP_DATA)	; copy the character to VDP
-;	; draw the next character
-;	add.l	#$00020000,(MEM_DIALOG_VDP)	; move to the next column
-;	bra.w	UpdateSaveTitleLoop ; loop until ETX
-;ExitSaveTitleLoopExit:
-;	; show a saved message
-;	lea	StatusScreenSaveDialog,a6	; point a6 to the dialog text
-;	move.l	a6,(MEM_DIALOG_TEXT)	; copy value at a6 to MEM_DIALOG_TEXT
-;	bra.w	ExitProcessStatusScreen	; exit
-;ProcessStatusScreenTestBButtonPressed:	; test if the player pressed B
-;	cmpi.w	#BUTTON_B,d6	; test if the B button was pressed
-;	bne.w	ProcessStatusScreenTestDPad	; B button is not pressed
-;CancelStatusScreen:
-;	move.l	(MEM_GAME_STATE),d7	; copy current game state to d7
-;	bclr.l	#STATE_FLAG_STATUS_SCREEN,d7	; update game state
-;	move.l	d7,(MEM_GAME_STATE)	; save updated game state
-;	bsr.w	ReloadCurrentScene	; reload the current scene
-;	bra.w	ExitProcessStatusScreen	; exit
-;ProcessStatusScreenTestDPad:
-;	cmpi.w	#$0000,(MEM_PLAYER_ITEM_COUNT)	; is item count 0?
-;	ble.w	ProcessStatusScreenTestButtonPressUp	; branch if no items 
-;ProcessStatusScreenTestButtonPressLR:	; L/R toggles between menus
-;	cmpi.w	#BUTTON_LEFT,d6	; is the left button pressed?
-;	beq.s	ProcessStatusScreenTestButtonPressLRTestMenu	; left pressed
-;	cmpi.w	#BUTTON_RIGHT,d6	; is the right button pressed?
-;	bne.s	ProcessStatusScreenTestButtonPressUp	; right not pressed
-;ProcessStatusScreenTestButtonPressLRTestMenu:
-;	; test if on the item menu or inventory menu
-;	cmpi.w	#$0004,(MEM_MENU_SELECTION)	; test whether in item or save column
-;	blt.s	ProcessStatusScreenTestButtonPressLRSaveMenu
-;	; on the item menu
-;	subq	#$0004,(MEM_MENU_SELECTION)	; subtract 4 to move to save menu
-;	bra.w	ProcessStatusScreenUpdateSelector
-;ProcessStatusScreenTestButtonPressLRSaveMenu:
-;	move.w	(MEM_PLAYER_ITEM_COUNT),d6	; copy item count to d6
-;	cmp.w	(MEM_MENU_SELECTION),d6	; compare item count to menu selection
-;	bgt.s	.1
-;	move.w	#$0004,(MEM_MENU_SELECTION)
-;	bra.s	.2
-;.1
-;	addq	#$0004,(MEM_MENU_SELECTION)
-;.2
-;	bra.s	ProcessStatusScreenUpdateSelector
-;ProcessStatusScreenTestButtonPressUp:	; up
-;	;---------------------------------------------------------------------------
-;	; to do - once save is implemented update this 
-;	; -left/right should move between inventory & save
-;	; -track which column the selector is in
-;	;---------------------------------------------------------------------------
-;	; test if the up button is pressed
-;	cmpi.w	#BUTTON_UP,d6	; is the up button pressed?
-;	bne.s	ProcessStatusScreenTestButtonPressDown	; up not pressed
-;	; decrement MEM_MENU_SELECTION
-;	cmpi.w	#$0000,(MEM_MENU_SELECTION)	; is the menu selection 0?
-;	beq.s	ProcessStatusScreenTestButtonPressUpZero	; branch if zero
-;	cmpi.w	#$0004,(MEM_MENU_SELECTION)	; is the menu selection 4?
-;	beq.s	ProcessStatusScreenTestButtonPressUpFour	; branch if >=four
-;	; otherwise, decrement
-;	subq.w	#$0001,(MEM_MENU_SELECTION)	; decrement
-;	bra.s	ProcessStatusScreenUpdateSelector
-;ProcessStatusScreenTestButtonPressUpZero:
-;	move.w	#$0003,(MEM_MENU_SELECTION)	; wrap around to end of the list
-;	bra.s	ProcessStatusScreenUpdateSelector
-;ProcessStatusScreenTestButtonPressUpFour:
-;	move.w	(MEM_PLAYER_ITEM_COUNT),d6	; copy item count to d6
-;	addq	#$0003,d6	; add 3 to get higest menu item that should appear
-;	move.w	d6,(MEM_MENU_SELECTION)	; wrap around to end of the list
-;	bra.s	ProcessStatusScreenUpdateSelector
-;ProcessStatusScreenTestButtonPressDown:
-;	cmpi.w	#BUTTON_DOWN,d6	; is the down button pressed?
-;	bne.s	ExitProcessStatusScreen	; down not pressed
-;	; increment MEM_MENU_SELECTION
-;	cmpi.w	#$0003,(MEM_MENU_SELECTION)	; is the menu selection 3?
-;	beq.s	ProcessStatusScreenTestButtonPressDownThree	; branch if 3
-;	; determine if the last item is selected
-;	move.w	(MEM_PLAYER_ITEM_COUNT),d6	; copy item count to d6
-;	addq	#$0003,d6	; add 3 to get higest menu item that should appear
-;	cmp.w	(MEM_MENU_SELECTION),d6	; is the last item selected?
-;	beq.s	ProcessStatusScreenTestButtonPressDownLastItem	; branch if last
-;	addq.w	#$0001,(MEM_MENU_SELECTION)	; increment
-;	bra.s	ProcessStatusScreenUpdateSelector
-;ProcessStatusScreenTestButtonPressDownThree:
-;	move.w	#$0000,(MEM_MENU_SELECTION)	; wrap around to end of the list
-;	bra.s	ProcessStatusScreenUpdateSelector
-;ProcessStatusScreenTestButtonPressDownLastItem:
-;	move.w	#$0004,(MEM_MENU_SELECTION)	; wrap around to end of the list
-;ProcessStatusScreenUpdateSelector:
-;	bsr.w	ProcessStatusScreenUpdateSelectorXY	; update selector position
 ExitProcessStatusScreen:
 	move.w	#$0000,(MEM_CONTROL_PRESSED)	; clear pressed buttons
 	rts

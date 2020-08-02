@@ -880,33 +880,59 @@ DialogTextYuppieDay06:
 	dc.b	"text.",ETX
 
 	align 2
-DialogTextHiddenHJDay00:
-DialogTextHiddenHJDay01:
-DialogTextHiddenHJDay02:
-DialogTextHiddenHJDay03:
-DialogTextHiddenHJDay04:
-DialogTextHiddenHJDay05:
+DialogTextNelsonDay00:
+DialogTextNelsonDay01:
+DialogTextNelsonDay02:
+DialogTextNelsonDay03:
+DialogTextNelsonDay04:
+DialogTextNelsonDay05:
 	align 2
-DialogTextHiddenHJDay06:
+DialogTextNelsonDay06:
+	dc.w	OBJ_NPC_NELSON
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextVictorDay00:
+DialogTextVictorDay01:
+DialogTextVictorDay02:
+DialogTextVictorDay03:
+DialogTextVictorDay04:
+DialogTextVictorDay05:
+	align 2
+DialogTextVictorDay06:
+	dc.w	OBJ_NPC_VICTOR
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextHiddenHJ:
 	dc.w	OBJ_NPC_HIDDENHJ
 	;		"1234567890123456789012"
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
+	dc.b	"It's too bad, I have",LF
+	dc.b	"all of these already.^",FF
+	dc.b	"It was still worth the",LF
+	dc.b	"visit though.        ^",FF
+	dc.b	"I should go find my",LF
+	dc.b	"wife now.            ^",FF
+	dc.b	"I'm sure she doesn't",LF
+	dc.b	"want to stay too long.",ETX
 
 	align 2
-DialogTextHiddenMJDay00:
-DialogTextHiddenMJDay01:
-DialogTextHiddenMJDay02:
-DialogTextHiddenMJDay03:
-DialogTextHiddenMJDay04:
-DialogTextHiddenMJDay05:
-	align 2
-DialogTextHiddenMJDay06:
+DialogTextHiddenMJ:
 	dc.w	OBJ_NPC_HIDDENMJ
 	;		"1234567890123456789012"
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
+	dc.b	"I came all the way",LF
+	dc.b	"here & still can't   ^",FF
+	dc.b	"find the Kathleen",LF
+	dc.b	"Sunfire book.        ^",FF
+	dc.b	"I think it's about",LF
+	dc.b	"time to go back home.",ETX
 
+
+Kathleen
 ;-------------------------------------------------------------------------------
 ; menus
 ;-------------------------------------------------------------------------------

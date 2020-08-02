@@ -649,25 +649,45 @@ CharacterInteractTextTableStart:
 	dc.l	DialogTextYuppieDay05
 	dc.l	DialogTextYuppieDay06
 	;-----------------------------------
-	; OBJ_NPC_HIDDENHJ=$2027
+	; OBJ_NPC_NELSON=$2027
 	;-----------------------------------
-	dc.l	DialogTextHiddenHJDay00
-	dc.l	DialogTextHiddenHJDay01
-	dc.l	DialogTextHiddenHJDay02
-	dc.l	DialogTextHiddenHJDay03
-	dc.l	DialogTextHiddenHJDay04
-	dc.l	DialogTextHiddenHJDay05
-	dc.l	DialogTextHiddenHJDay06
+	dc.l	DialogTextNelsonDay00
+	dc.l	DialogTextNelsonDay01
+	dc.l	DialogTextNelsonDay02
+	dc.l	DialogTextNelsonDay03
+	dc.l	DialogTextNelsonDay04
+	dc.l	DialogTextNelsonDay05
+	dc.l	DialogTextNelsonDay06
 	;-----------------------------------
-	; OBJ_NPC_HIDDENMJ=$2028
+	; OBJ_NPC_VICTOR=$2028
 	;-----------------------------------
-	dc.l	DialogTextHiddenMJDay00
-	dc.l	DialogTextHiddenMJDay01
-	dc.l	DialogTextHiddenMJDay02
-	dc.l	DialogTextHiddenMJDay03
-	dc.l	DialogTextHiddenMJDay04
-	dc.l	DialogTextHiddenMJDay05
-	dc.l	DialogTextHiddenMJDay06
+	dc.l	DialogTextVictorDay00
+	dc.l	DialogTextVictorDay01
+	dc.l	DialogTextVictorDay02
+	dc.l	DialogTextVictorDay03
+	dc.l	DialogTextVictorDay04
+	dc.l	DialogTextVictorDay05
+	dc.l	DialogTextVictorDay06
+	;-----------------------------------
+	; OBJ_NPC_HIDDENHJ=$2029
+	;-----------------------------------
+	dc.l	DialogTextHiddenHJ
+	dc.l	DialogTextHiddenHJ
+	dc.l	DialogTextHiddenHJ
+	dc.l	DialogTextHiddenHJ
+	dc.l	DialogTextHiddenHJ
+	dc.l	DialogTextHiddenHJ
+	dc.l	DialogTextHiddenHJ
+	;-----------------------------------
+	; OBJ_NPC_HIDDENMJ=$202A
+	;-----------------------------------
+	dc.l	DialogTextHiddenMJ
+	dc.l	DialogTextHiddenMJ
+	dc.l	DialogTextHiddenMJ
+	dc.l	DialogTextHiddenMJ
+	dc.l	DialogTextHiddenMJ
+	dc.l	DialogTextHiddenMJ
+	dc.l	DialogTextHiddenMJ
 CharacterInteractTextTableEnd:
 
 ;-------------------------------------------------------------------------------

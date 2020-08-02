@@ -1,7 +1,7 @@
 # Retail Clerk '90
 A work in-progress casual adventure game for the Sega Genesis written in 68000 assembly. 
 
-This is a sequel to Retail Clerk '89. Since it's possible nobody played that, Retail Clerk '90 is an independent story. Playing the first game wouldn't hurt though.
+This is a sequel to Retail Clerk '89. Since it's possible nobody played that, Retail Clerk '90 is a mostly independent story. Playing the first game wouldn't hurt though. I mean, it might hurt a little if you don't enjoy it.
 
 The main goal of this demo is to improve on the engine and tooling developed for Retail Clerk '89. I have this ill-conceived idea for a set of tools to build adventure-like games for classic game consoles. If I accidentally produce an OK game along the way I guess that's nice. The Genesis is the first console I'm trying this idea on because.. well, I don't recall why I chose it.
 

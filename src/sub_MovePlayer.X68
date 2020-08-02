@@ -61,6 +61,8 @@ QueueExitAction:
 	bset.l	#STATE_FLAG_ACTION,d7	; set the action flag
 	move.l	d7,(MEM_GAME_STATE)	; save it back
 	move.w	#ACTION_EXIT_SCENE,(MEM_ACTION_ID)	; set the action id
+	; trying to prevent NPC sprites from changing direction
+	move.w	#$FFFF,(MEM_ACTION_TARGET_NPCID)
 	; test if the exits are blocked
 	btst.l	#STATE_FLAG_EXITS_BLOCKED,d7	; test exits blocked flag
 	bne.s	StopPlayerSprite	; if set stop the sprite

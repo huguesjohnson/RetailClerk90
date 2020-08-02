@@ -40,6 +40,8 @@ CharacterNameTableStart:
 	dc.l	CharacterNameMallrat
 	dc.l	CharacterNamePreppy
 	dc.l	CharacterNameYuppie
+	dc.l	CharacterNameNelson
+	dc.l	CharacterNameVictor
 	dc.l	CharacterNameHiddenHJ
 	dc.l	CharacterNameHiddenMJ
 CharacterNameTableEnd:

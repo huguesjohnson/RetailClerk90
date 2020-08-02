@@ -150,6 +150,14 @@ YuppieSpriteTilesStart:
 	include 'tiles/sprite-tiles/npc-shopper06.X68'
 YuppieSpriteTilesEnd:
 
+NelsonSpriteTilesStart:
+	include 'tiles/sprite-tiles/npc-nelson.X68'
+NelsonSpriteTilesEnd:
+
+VictorSpriteTilesStart:
+	include 'tiles/sprite-tiles/npc-victor.X68'
+VictorSpriteTilesEnd:
+
 HiddenHJSpriteTilesStart:
 	include 'tiles/sprite-tiles/npc-hidden00.X68'
 HiddenHJSpriteTilesEnd:

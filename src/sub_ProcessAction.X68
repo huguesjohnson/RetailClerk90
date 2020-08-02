@@ -7,13 +7,12 @@ ProcessAction:
 	move.w	(MEM_ACTION_TARGET_OBJID),d7	; copy action target to d7
 	andi.w	#OBJ_NPC_BASE,d7	; and against base npc ID
 	beq.s	ProcessActionBuildActionTableOffset	; target is not an NPC
-
 	;---------------------------------------------------------------------------
 	; interacting with a character
 	;---------------------------------------------------------------------------
 	; have the NPC face the player
 	move.w (MEM_ACTION_TARGET_NPCID),d7	; copy NPC target ID to d7
-	cmpi.w	#$FFFF,d7	; test if it is -1 - this should not happen of course
+	cmpi.w	#$FFFF,d7	; test if it is -1
 	beq.s	ProcessActionBuildActionTableOffset	; skip if -1
 	lea	MEM_NPC0_SPRITE_ID,a6	; point a6 to the first NPC sprite
 	move.w	(MEM_ACTION_TARGET_NPCID),d6	; copy target NPC id to d6
@@ -37,6 +36,15 @@ ProcessActionBuildActionTableOffset:
 	; if the dialog is now titled style then some extra setup is needed
 	;---------------------------------------------------------------------------
 	; to do - determine what (if anything) still needs to be done here now 
+	; this is the code from Retail Clerk '89 which may not apply now
+	;move.l	(MEM_DIALOG_FLAGS),d7	; copy flags to d7
+	;btst.l	#DIALOG_FLAG_STYLE_TITLED,d7	; test if flag is set
+	;beq.s	ExitProcessAction
+	;bset.l	#DIALOG_FLAG_TEXT_TITLE_DRAWING,d7	; change state to title drawing
+	;move.l	d7,(MEM_DIALOG_FLAGS)	; save updated flags
+	;bsr.w	ClearDialog	; clear the dialog
+	;move.l	#(VDP_VRAM_WRITE_A+DIALOG_TITLE_ROWCOL),(MEM_DIALOG_VDP)
+	;bsr.w	ProcessDialogLookupNPCName	; lookup the NPC name
 
 ExitProcessAction:
 	move.l	(MEM_GAME_STATE),d7	; copy current game state to d7

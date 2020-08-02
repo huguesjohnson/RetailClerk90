@@ -164,7 +164,7 @@ ProcessStatusScreenACButtonPressed:
 	lea	SceneMenuMap,a6	; address of the scene for the status screen
 	bsr.w	DrawScene	; branch to subroutine to draw the scene
 	bsr.w	BuildStatusScreen	; build the status screen
-	bsr.w	FadeIn	; fade in the status screen
+;	bsr.w	FadeIn	; fade in the status screen
 	bra.w	ExitProcessStatusScreen	
 .1
 	cmpi.w	#$0001,(MEM_MENU_SELECTION)
@@ -173,7 +173,7 @@ ProcessStatusScreenACButtonPressed:
 	lea	SceneMenuStatus,a6	; address of the scene for the status screen
 	bsr.w	DrawScene	; branch to subroutine to draw the scene
 	bsr.w	BuildStatusScreen	; build the status screen
-	bsr.w	FadeIn	; fade in the status screen
+;	bsr.w	FadeIn	; fade in the status screen
 	bra.w	ExitProcessStatusScreen	
 .2
 	cmpi.w	#$0002,(MEM_MENU_SELECTION)
@@ -182,7 +182,7 @@ ProcessStatusScreenACButtonPressed:
 	lea	SceneMenuData,a6	; address of the scene for the status screen
 	bsr.w	DrawScene	; branch to subroutine to draw the scene
 	bsr.w	BuildStatusScreen	; build the status screen
-	bsr.w	FadeIn	; fade in the status screen
+;	bsr.w	FadeIn	; fade in the status screen
 	bra.w	ExitProcessStatusScreen	
 .3
 	cmpi.w	#$0003,(MEM_MENU_SELECTION)
@@ -191,7 +191,7 @@ ProcessStatusScreenACButtonPressed:
 	lea	SceneMenuHelp,a6	; address of the scene for the status screen
 	bsr.w	DrawScene	; branch to subroutine to draw the scene
 	bsr.w	BuildStatusScreen	; build the status screen
-	bsr.w	FadeIn	; fade in the status screen
+;	bsr.w	FadeIn	; fade in the status screen
 	bra.w	ExitProcessStatusScreen	
 .4
 	;---------------------------------------------------------------------------

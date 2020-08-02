@@ -11,11 +11,15 @@ DrawScene:
 ;-------------------------------------------------------------------------------
 ; fade out current palette
 ;-------------------------------------------------------------------------------
+	move.l	(MEM_GAME_STATE),d7 ; copy current game state to d7
+	btst.l	#STATE_FLAG_STATUS_SCREEN,d7 ; test if on the status/menu screen
+	bne.s	DrawSceneClearVDP
 	bsr.w	FadeOut
 
 ;-------------------------------------------------------------------------------
 ; clear VDP
 ;-------------------------------------------------------------------------------
+DrawSceneClearVDP:
 	bsr.w	WaitVBlank	; wait for vblank to end
 
 	move.w	#$2700,sr		; disable interrupts

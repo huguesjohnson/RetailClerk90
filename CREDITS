@@ -4,16 +4,11 @@ Story & program by Hugues Johnson
 software used to build this demo
 ********************************************************************************
 vasm is used to build this demo
- vasm 1.7c (c) 2002-2015 Volker Barthelmann
- vasm M68k/CPU32/ColdFire cpu backend 2.0f (c) 2002-2015 Frank Wille
- vasm motorola syntax module 3.8 (c) 2002-2015 Frank Wille
- vasm binary output module 1.8 (c) 2002-2009,2013,2015 Volker Barthelmann
  http://sun.hasenbraten.de/vasm/
 
 Background music was edited using MilkyTracker
  http://www.milkytracker.org/
- https://github.com/Deltafire/MilkyTracker/blob/master/COPYING
- https://github.com/Deltafire/MilkyTracker/blob/master/AUTHORS
+ https://github.com/milkytracker/MilkyTracker
 
 xm2esf was used to convert xm files to esf for use with Echo
  (c) 2010-2015 Eric Voirin alias Oerg866
@@ -29,7 +24,7 @@ Inspirations
 ********************************************************************************
 The graphic style of Retail Clerk '90 is influenced by Phantasy Star II-IV.
 
-Elements of the story were inspired by Falcom's Kiseki series.
+Some elements of the story were inspired by Falcom's Kiseki series.
 
 The setting is based on various malls I frequented in the 80s-90s.
 However all characters, places, and events are fictitious.

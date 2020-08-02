@@ -192,12 +192,22 @@ CharacterDefinitionYuppieStart:
 	dc.l	YuppieSpriteTilesStart
 CharacterDefinitionYuppieEnd:
 
-; 2027 - HiddenHJ
+; 2027 - Nelson
+CharacterDefinitionNelsonStart:
+	dc.l	NelsonSpriteTilesStart
+CharacterDefinitionNelsonEnd:
+
+; 2028 - Victor
+CharacterDefinitionVictorStart:
+	dc.l	VictorSpriteTilesStart
+CharacterDefinitionVictorEnd:
+
+; 2029 - HiddenHJ
 CharacterDefinitionHiddenHJStart:
 	dc.l	HiddenHJSpriteTilesStart
 CharacterDefinitionHiddenHJEnd:
 
-; 2028 - HiddenMJ
+; 202a - HiddenMJ
 CharacterDefinitionHiddenMJStart:
 	dc.l	HiddenMJSpriteTilesStart
 CharacterDefinitionHiddenMJEnd:

@@ -66,7 +66,18 @@ TestAction:
 	btst.l	#STATE_FLAG_ACTION,d7 ; test game state
 	beq.w	TestScriptedEvent	; no action queued, move to next test
 	bsr.w	ProcessAction	; process the pending action
-	bra.w	MainGameLoop	; paused, return to start of game loop
+	;---------------------------------------------------------------------------
+	; setup action event for entering a scene if appropriate
+	;---------------------------------------------------------------------------
+	cmpi.w	#ACTION_EXIT_SCENE,(MEM_ACTION_ID) ; test if current action is exit
+	bne.w	MainGameLoop ; if not then back to the start of the game loop
+	cmpi.w	#MAX_STORE_ID,(MEM_ACTIVE_SCENE_ID) ; is the new scene a store?
+	bgt.w	MainGameLoop ; if not then back to the start of the game loop
+	move.l	(MEM_GAME_STATE),d7 ; copy game state to d7
+	bset.l	#STATE_FLAG_ACTION,d7 ; set the action flag
+	move.l	d7,(MEM_GAME_STATE) ; save it back
+	move.w	#ACTION_ENTER_SCENE,(MEM_ACTION_ID) ; set the action id
+	bra.w	MainGameLoop ; return to start of game loop
 ;-------------------------------------------------------------------------------
 ; determine if there is a scripted event to process
 ;-------------------------------------------------------------------------------
@@ -133,13 +144,8 @@ TestCButtonPressed:	; test if the player pressed the C button
 	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
 	andi.b	#BUTTON_C,d6	; test if the C button was pressed
 	beq.w	TestAButtonPressed	; C button is not pressed
-;	lea	SceneMenuMap,a6	; address of the scene for the status screen
-;	move.w	#$0000,(MEM_MENU_SCREEN_PAGE)
-
-	move.w	#$0002,(MEM_MENU_SCREEN_PAGE)
-	lea	SceneMenuData,a6	; address of the scene for the status screen
-
-
+	lea	SceneMenuMap,a6	; address of the scene for the status screen
+	move.w	#$0000,(MEM_MENU_SCREEN_PAGE)
 	bsr.w	DrawScene	; branch to subroutine to draw the scene
 	bsr.w	BuildStatusScreen	; build the status screen
 	bsr.w	FadeIn	; fade in the status screen
@@ -162,8 +168,11 @@ TestAButtonPressed: ; test if the player pressed the A button
 	bsr.w	FindActionTarget	; find the target of the player's action
 	cmpi.w	#OBJ_NOTHING,(MEM_ACTION_TARGET_OBJID)	; is the target nothing?
 	beq.s	NoActionTarget	; branch if no target
+	; queue the event	
 	move.w	#ACTION_INTERACT,(MEM_ACTION_ID)
-	bsr.w	ProcessAction
+	move.l	(MEM_GAME_STATE),d7	; copy game state to d7
+	bset.l	#STATE_FLAG_ACTION,d7	; set the action flag
+	move.l	d7,(MEM_GAME_STATE)	; save it back
 	bra.w	MainGameLoop	; return to start of game loop
 NoActionTarget: 	; if target is 0 then display the default message
 	lea	DialogTextNothing,a6	; load default text

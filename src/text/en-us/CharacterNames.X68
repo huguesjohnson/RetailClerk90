@@ -116,6 +116,12 @@ CharacterNamePreppy:
 CharacterNameYuppie:
 	dc.b	"Yuppie",NPCNAMEEND
 
+CharacterNameNelson:
+	dc.b	"Nelson",NPCNAMEEND
+
+CharacterNameVictor:
+	dc.b	"Victor",NPCNAMEEND
+
 CharacterNameHiddenHJ:
 	dc.b	"HiddenHJ",NPCNAMEEND
 

@@ -1549,6 +1549,16 @@
             "destinationFilePath":"src/tiles/sprite-tiles/npc-shopper06.X68"
          },
          { 
+            "name":"Nelson",
+            "sourceFilePath":"design/img/sprite-tiles/npc-nelson.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-nelson.X68"
+         },
+         { 
+            "name":"Victor",
+            "sourceFilePath":"design/img/sprite-tiles/npc-victor.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-victor.X68"
+         },
+         { 
             "name":"HiddenHJ",
             "sourceFilePath":"design/img/sprite-tiles/npc-hidden00.png",
             "destinationFilePath":"src/tiles/sprite-tiles/npc-hidden00.X68"

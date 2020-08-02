@@ -15,6 +15,8 @@ ActionScriptDefaultInteract:
 ; default exit scene handler
 ;*******************************************************************************
 DefaultExitScene:
+	; trying to prevent NPC sprites from changing direction
+	move.w	#$FFFF,(MEM_ACTION_TARGET_NPCID)
 	; determine which exit is being used based on sprite direction
 	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d6	; copy player direction to d6
 	mulu.w	#$2,d6	; multiply by 2 to get offset
@@ -59,6 +61,12 @@ DefaultExitSceneFixSprites:
 	bsr.w	FixSprites ; fix all the sprites
 ExitDefaultExit:
 	bsr.w	FadeIn ; fade in now that everything is loaded
+	rts
+
+;*******************************************************************************
+; default enter scene handler
+;*******************************************************************************
+DefaultEnterScene:
 	rts
 
 ;*******************************************************************************

@@ -57,9 +57,11 @@ MEM_DAY_EVENT_FLAGS,4,track events in the current day
 MEM_MISSION_EVENT_FLAGS,4,track events in the current mission
 MEM_CUSTOMER_FEEDBACK_SCORE,2,used for some missions
 MEM_MENU_SCREEN_PAGE,2,last page viewed in menu screen
-MEM_STORY_EVENT_SCENE_ID,2,scene where the next story event occurs
+MEM_STORY_EVENT1_SCENE_ID,2,scene where the next story event occurs
+MEM_STORY_EVENT2_SCENE_ID,2,scene where the next story event occurs
 MEM_OPTIONAL_EVENT1_SCENE_ID,2,scene where an optional event occurs
 MEM_OPTIONAL_EVENT2_SCENE_ID,2,scene where an optional event occurs
+MEM_OPTIONAL_EVENT3_SCENE_ID,2,scene where an optional event occurs
 ;-------------------------------------------------------------------------------
 ; player inventory
 ;-------------------------------------------------------------------------------

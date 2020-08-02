@@ -41,14 +41,17 @@ BuildStatusScreenMap:
 	;---------------------------------------------------------------------------
 	; event icons
 	;---------------------------------------------------------------------------
-	move.w	(MEM_ACTIVE_SCENE_ID),d6 ; copy active scene ID to d6
-	move.w	(MEM_STORY_EVENT_SCENE_ID),d5 ; copy event scene id to d5
+	move.w	(MEM_STORY_EVENT1_SCENE_ID),d5 ; copy event scene id to d5
 	move.w	#STATUS_SCREEN_MAP_ICON_STORY_EVENT_BASE_PATTERN,d4 ; icon to draw
+	bsr.w	DrawEventIcon
+	move.w	(MEM_STORY_EVENT2_SCENE_ID),d5 ; copy event scene id to d5
 	bsr.w	DrawEventIcon
 	move.w	(MEM_OPTIONAL_EVENT1_SCENE_ID),d5 ; copy event scene id to d5
 	move.w	#STATUS_SCREEN_MAP_ICON_OPTIONAL_EVENT_PATTERN,d4 ; icon to draw
 	bsr.w	DrawEventIcon
 	move.w	(MEM_OPTIONAL_EVENT2_SCENE_ID),d5 ; copy event scene id to d5
+	bsr.w	DrawEventIcon
+	move.w	(MEM_OPTIONAL_EVENT3_SCENE_ID),d5 ; copy event scene id to d5
 	bsr.w	DrawEventIcon
 	bra.w	ExitBuildStatusScreen
 DrawEventIcon:

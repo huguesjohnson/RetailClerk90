@@ -68,10 +68,13 @@ TestAction:
 	bsr.w	ProcessAction	; process the pending action
 	;---------------------------------------------------------------------------
 	; setup action event for entering a scene if appropriate
+	; there's one catch to this implementation..
+	; if the player tries to leave a scene but is blocked this event will fire
 	;---------------------------------------------------------------------------
-	cmpi.w	#ACTION_EXIT_SCENE,(MEM_ACTION_ID) ; test if current action is exit
+	cmpi.w	#ACTION_EXIT_SCENE,(MEM_ACTION_ID) ; test if last action was exiting
 	bne.w	MainGameLoop ; if not then back to the start of the game loop
-	cmpi.w	#MAX_STORE_ID,(MEM_ACTIVE_SCENE_ID) ; is the new scene a store?
+	move.w	(MEM_ACTIVE_SCENE_ID),d7 ; copy current scene id to d7
+	cmpi.w	#MAX_STORE_ID,d7 ; is the new scene a store?
 	bgt.w	MainGameLoop ; if not then back to the start of the game loop
 	move.l	(MEM_GAME_STATE),d7 ; copy game state to d7
 	bset.l	#STATE_FLAG_ACTION,d7 ; set the action flag

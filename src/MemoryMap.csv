@@ -54,7 +54,6 @@ MEM_DAY,2,what day is it in the story
 MEM_PLAYER_SPRITE,2,which sprite to use for the player
 MEM_GLOBAL_EVENT_FLAGS,4,track events across days
 MEM_DAY_EVENT_FLAGS,4,track events in the current day
-MEM_MISSION_EVENT_FLAGS,4,track events in the current mission
 MEM_CUSTOMER_FEEDBACK_SCORE,2,used for some missions
 MEM_MENU_SCREEN_PAGE,2,last page viewed in menu screen
 MEM_STORY_EVENT1_SCENE_ID,2,scene where the next story event occurs
@@ -69,6 +68,15 @@ MEM_PLAYER1_ITEM_COUNT,2,how many items the player is holding
 MEM_PLAYER1_ITEMS,8,four items
 MEM_PLAYER2_ITEM_COUNT,2,how many items the player is holding
 MEM_PLAYER2_ITEMS,8,four items
+;-------------------------------------------------------------------------------
+; relationship levels
+;-------------------------------------------------------------------------------
+MEM_PLAYER1_REL0,2,relationship score for p1 and npc0
+MEM_PLAYER1_REL1,2,relationship score for p1 and npc1
+MEM_PLAYER1_REL2,2,relationship score for p1 and npc2
+MEM_PLAYER2_REL0,2,relationship score for p2 and npc0
+MEM_PLAYER2_REL1,2,relationship score for p2 and npc1
+MEM_PLAYER2_REL2,2,relationship score for p2 and npc2
 ;-------------------------------------------------------------------------------
 ; sprite management
 ;-------------------------------------------------------------------------------

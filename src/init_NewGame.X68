@@ -20,7 +20,6 @@ InitGameState:
 	move.w	#OBJECTIVE_D00_O00,(MEM_OBJECTIVE)	; initial objective
 	and.l	#$00000000,(MEM_GLOBAL_EVENT_FLAGS)	; clear event flags
 	and.l	#$00000000,(MEM_DAY_EVENT_FLAGS)	; clear event flags
-	and.l	#$00000000,(MEM_MISSION_EVENT_FLAGS)	; clear mission flags
 	and.l	#$00000000,(MEM_SCENE_BGM)	; clear BGM
 	move.w	#$FFFF,(MEM_STORY_EVENT1_SCENE_ID) ; no story events
 	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; no story events
@@ -30,6 +29,12 @@ InitGameState:
 	move.w	#PLAYER_SPRITE_ERYN,(MEM_PLAYER_SPRITE)	; initial sprite
 	bsr.w	ClearPlayerInventory	; clear player inventory
 	move.w	#$0000,(MEM_CUSTOMER_FEEDBACK_SCORE)	; clear customer feedback
+	move.w	#$0000,(MEM_PLAYER1_REL0) ; clear relationship scores
+	move.w	#$0000,(MEM_PLAYER1_REL1) ; clear relationship scores
+	move.w	#$0000,(MEM_PLAYER1_REL2) ; clear relationship scores
+	move.w	#$0000,(MEM_PLAYER2_REL0) ; clear relationship scores
+	move.w	#$0000,(MEM_PLAYER2_REL1) ; clear relationship scores
+	move.w	#$0000,(MEM_PLAYER2_REL2) ; clear relationship scores
 
 ;-------------------------------------------------------------------------------
 ; load the initial NPC locations

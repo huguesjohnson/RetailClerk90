@@ -49,10 +49,7 @@ public class ZipUtil{
 	            /* generate CRC */
 	            CRC32 crc=new CRC32();
 	            fin=new FileInputStream(inputFile);
-	            int availableBytes=fin.available();
 	            int length;
-	            int bytesRead=0;
-	            int lastPercentComplete=-1;
 	            while((length=fin.read(buffer))>-1){
 	                crc.update(buffer,0,length);
 	            }

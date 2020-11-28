@@ -157,6 +157,162 @@ TitleScreenTextFooter:
 ;-------------------------------------------------------------------------------
 ; credits and end screen
 ;-------------------------------------------------------------------------------
+CreditsScreen00Line00:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"                Credits               ",ETX
+
+CreditsScreen00Line01:
+	;		"12345678901234567890123456789012345678"
+	dc.b	" ",ETX
+
+CreditsScreen00Line02:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"Story & program by Hugues Johnson",ETX
+
+CreditsScreen00Line03:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"",ETX
+
+CreditsScreen00Line04:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"",ETX
+
+CreditsScreen00Line05:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"Assembly code compiled using vasm",ETX
+
+CreditsScreen00Line06:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"http://sun.hasenbraten.de/vasm/",ETX
+
+CreditsScreen00Line07:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"",ETX
+
+CreditsScreen00Line08:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"",ETX
+
+CreditsScreen00Line09:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"",ETX
+
+CreditsScreen00Line0A:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"",ETX
+
+CreditsScreen00Line0B:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"",ETX
+
+CreditsScreen01Line00:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"               Graphics               ",ETX
+
+CreditsScreen01Line01:
+	;		"12345678901234567890123456789012345678"
+	dc.b	" ",ETX
+
+CreditsScreen01Line02:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"Logo font based on Audiowide",ETX
+
+CreditsScreen01Line03:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"Copyright (c) 2012 Brian J Bonislawsky",ETX
+
+CreditsScreen01Line04:
+	;		"12345678901234567890123456789012345678"
+	dc.b	" ",ETX
+
+CreditsScreen01Line05:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"Some scenery is based on tilesets",ETX
+
+CreditsScreen01Line06:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"created by Sithjester",ETX
+
+CreditsScreen01Line07:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"untamed.wild-refuge.net/rpgxp.php",ETX
+
+CreditsScreen01Line08:
+	;		"12345678901234567890123456789012345678"
+	dc.b	" ",ETX
+
+CreditsScreen01Line09:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"Some scenery is based off tilesets",ETX
+
+CreditsScreen01Line0A:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"from Pixel Art World",ETX
+
+CreditsScreen01Line0B:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"http://yms.main.jp/page-s1/terms.html",ETX
+
+CreditsScreen02Line00:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"                Audio                 ",ETX
+
+CreditsScreen02Line01:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"",ETX
+
+CreditsScreen02Line02:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"Echo Sound Driver by Javier Degirolmo",ETX
+
+CreditsScreen03Line03:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"https://github.com/sikthehedgehog/Echo",ETX
+
+CreditsScreen03Line04:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"",ETX
+
+CreditsScreen03Line05:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"xm2esf was used for audio conversion",ETX
+
+CreditsScreen03Line06:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"https://github.com/oerg866/xm2esf",ETX
+
+CreditsScreen03Line07:
+	;		"12345678901234567890123456789012345678"
+	dc.b	" ",ETX
+
+CreditsScreen03Line08:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"",ETX
+
+CreditsScreen03Line09:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"",ETX
+
+CreditsScreen03Line0A:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"",ETX
+
+CreditsScreen03Line0B:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"",ETX
+
+EndScreenLine00BadEnding:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"    Retail Clerk '90 - Bad Ending     ",ETX
+
+EndScreenLine00GoodEnding:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"    Retail Clerk '90 - Good Ending    ",ETX
+
+EndScreenLine00PerfectEnding:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"  Retail Clerk '90 - Perfect Ending   ",ETX
+
 EndScreenTextLine1:
 	;		"12345678901234567890123456789012345678"
 	dc.b	"Thank you for trying this little demo!",ETX
@@ -180,99 +336,6 @@ EndScreenTextLine5:
 EndScreenTextLine6:
 	;		"12345678901234567890123456789012345678"
 	dc.b	"Press the start button to reset.",ETX
-
-CreditsScreen00Line00:
-	;		"12345678901234567890123456789012345678"
-	dc.b	"                Credits               ",ETX
-
-CreditsScreen00Line01:
-	;		"12345678901234567890123456789012345678"
-	dc.b	" ",ETX
-
-CreditsScreen00Line02:
-	;		"12345678901234567890123456789012345678"
-	dc.b	"Story & program by Hugues Johnson",ETX
-
-CreditsScreen00Line03:
-	;		"12345678901234567890123456789012345678"
-	dc.b	"Echo Sound Driver by Javier Degirolmo",ETX
-
-CreditsScreen00Line07:
-	;		"12345678901234567890123456789012345678"
-	dc.b	"               Graphics               ",ETX
-
-CreditsScreen00Line08:
-	;		"12345678901234567890123456789012345678"
-	dc.b	"Logo font based on Audiowide",ETX
-
-CreditsScreen00Line09:
-	;		"12345678901234567890123456789012345678"
-	dc.b	"Copyright (c) 2012 Brian J Bonislawsky",ETX
-
-CreditsScreen00Line0B:
-	;		"12345678901234567890123456789012345678"
-	dc.b	"Some scenery is based on tilesets",ETX
-
-CreditsScreen00Line0C:
-	;		"12345678901234567890123456789012345678"
-	dc.b	"created by Sithjester",ETX
-
-CreditsScreen00Line0D:
-	;		"12345678901234567890123456789012345678"
-	dc.b	"untamed.wild-refuge.net/rpgxp.php",ETX
-
-CreditsScreen00Line0E:
-	;		"12345678901234567890123456789012345678"
-	dc.b	" ",ETX
-
-CreditsScreen00Line0F:
-	;		"12345678901234567890123456789012345678"
-	dc.b	" ",ETX
-
-
-CreditsScreen00Line10:
-	;		"12345678901234567890123456789012345678"
-	dc.b	" ",ETX
-
-CreditsScreen00Line11:
-	;		"12345678901234567890123456789012345678"
-	dc.b	"                Music                 ",ETX
-
-CreditsScreen00Line12:
-	;		"12345678901234567890123456789012345678"
-	dc.b	"Soundtrack contains conversions of",ETX
-
-CreditsScreen00Line13:
-	;		"12345678901234567890123456789012345678"
-	dc.b	"",ETX
-
-CreditsScreen00Line14:
-	;		"12345678901234567890123456789012345678"
-	dc.b	"",ETX
-
-CreditsScreen00Line19:
-	;		"12345678901234567890123456789012345678"
-	dc.b	" ",ETX
-
-CreditsScreen00Line1A:
-	;		"12345678901234567890123456789012345678"
-	dc.b	" ",ETX
-
-CreditsScreen00Line1B:
-	;		"12345678901234567890123456789012345678"
-	dc.b	"See CREDITS & LICENSE for details",ETX
-
-LegalScreenLine00BadEnding:
-	;		"12345678901234567890123456789012345678"
-	dc.b	"    Retail Clerk '90 - Bad Ending     ",ETX
-
-LegalScreenLine00GoodEnding:
-	;		"12345678901234567890123456789012345678"
-	dc.b	"    Retail Clerk '90 - Good Ending    ",ETX
-
-LegalScreenLine00PerfectEnding:
-	;		"12345678901234567890123456789012345678"
-	dc.b	"  Retail Clerk '90 - Perfect Ending   ",ETX
 
 ;-------------------------------------------------------------------------------
 ; general messages
@@ -908,6 +971,21 @@ DialogTextVictorDay06:
 	dc.b	"text.",ETX
 
 	align 2
+DialogTextAlOldDay00:
+DialogTextAlOldDay01:
+DialogTextAlOldDay02:
+DialogTextAlOldDay03:
+DialogTextAlOldDay04:
+DialogTextAlOldDay05:
+	align 2
+DialogTextAlOldDay06:
+	dc.w	OBJ_NPC_AL
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+
+	align 2
 DialogTextHiddenHJ:
 	dc.w	OBJ_NPC_HIDDENHJ
 	;		"1234567890123456789012"
@@ -931,8 +1009,617 @@ DialogTextHiddenMJ:
 	dc.b	"I think it's about",LF
 	dc.b	"time to go back home.",ETX
 
+DialogTextErynNight00:
+DialogTextErynNight01:
+DialogTextErynNight02:
+DialogTextErynNight03:
+DialogTextErynNight04:
+DialogTextErynNight05:
+	align 2
+DialogTextErynNight06:
+	dc.w	OBJ_NPC_ERYN
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
 
-Kathleen
+	align 2
+DialogTextCarlNight00:
+	dc.w	OBJ_NPC_CARL
+	;		"1234567890123456789012"
+	dc.b	"This is my Night 00",LF
+	dc.b	"text.",ETX
+DialogTextCarlNight01:
+DialogTextCarlNight02:
+DialogTextCarlNight03:
+DialogTextCarlNight04:
+DialogTextCarlNight05:
+	align 2
+DialogTextCarlNight06:
+	dc.w	OBJ_NPC_CARL
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextFrankNight00:
+	dc.w	OBJ_NPC_FRANK
+	;		"1234567890123456789012"
+	dc.b	"This is my Night 00",LF
+	dc.b	"text.",ETX
+DialogTextFrankNight01:
+DialogTextFrankNight02:
+DialogTextFrankNight03:
+DialogTextFrankNight04:
+DialogTextFrankNight05:
+	align 2
+DialogTextFrankNight06:
+	dc.w	OBJ_NPC_FRANK
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextCarolNight00:
+	dc.w	OBJ_NPC_CAROL
+	;		"1234567890123456789012"
+	dc.b	"This is my Night 00",LF
+	dc.b	"text.",ETX
+DialogTextCarolNight01:
+DialogTextCarolNight02:
+DialogTextCarolNight03:
+DialogTextCarolNight04:
+DialogTextCarolNight05:
+	align 2
+DialogTextCarolNight06:
+	dc.w	OBJ_NPC_CAROL
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextLisaNight00:
+	dc.w	OBJ_NPC_LISA
+	;		"1234567890123456789012"
+	dc.b	"This is my Night 00",LF
+	dc.b	"text.",ETX
+DialogTextLisaNight01:
+DialogTextLisaNight02:
+DialogTextLisaNight03:
+DialogTextLisaNight04:
+DialogTextLisaNight05:
+	align 2
+DialogTextLisaNight06:
+	dc.w	OBJ_NPC_LISA
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextGrunbergNight00:
+	dc.w	OBJ_NPC_GRUNBERG
+	;		"1234567890123456789012"
+	dc.b	"This is my Night 00",LF
+	dc.b	"text.",ETX
+DialogTextGrunbergNight01:
+DialogTextGrunbergNight02:
+DialogTextGrunbergNight03:
+DialogTextGrunbergNight04:
+DialogTextGrunbergNight05:
+	align 2
+DialogTextGrunbergNight06:
+	dc.w	OBJ_NPC_GRUNBERG
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextJenNight00:
+	dc.w	OBJ_NPC_JEN
+	;		"1234567890123456789012"
+	dc.b	"This is my Night 00",LF
+	dc.b	"text.",ETX
+DialogTextJenNight01:
+DialogTextJenNight02:
+DialogTextJenNight03:
+DialogTextJenNight04:
+DialogTextJenNight05:
+	align 2
+DialogTextJenNight06:
+	dc.w	OBJ_NPC_JEN
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextGriffyNight00:
+	dc.w	OBJ_NPC_GRIFFY
+	;		"1234567890123456789012"
+	dc.b	"This is my Night 00",LF
+	dc.b	"text.",ETX
+DialogTextGriffyNight01:
+DialogTextGriffyNight02:
+DialogTextGriffyNight03:
+DialogTextGriffyNight04:
+DialogTextGriffyNight05:
+	align 2
+DialogTextGriffyNight06:
+	dc.w	OBJ_NPC_GRIFFY
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextScottNight00:
+	dc.w	OBJ_NPC_SCOTT
+	;		"1234567890123456789012"
+	dc.b	"This is my Night 00",LF
+	dc.b	"text.",ETX
+DialogTextScottNight01:
+DialogTextScottNight02:
+DialogTextScottNight03:
+DialogTextScottNight04:
+DialogTextScottNight05:
+	align 2
+DialogTextScottNight06:
+	dc.w	OBJ_NPC_SCOTT
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextToddNight00:
+	dc.w	OBJ_NPC_TODD
+	;		"1234567890123456789012"
+	dc.b	"This is my Night 00",LF
+	dc.b	"text.",ETX
+DialogTextToddNight01:
+DialogTextToddNight02:
+DialogTextToddNight03:
+DialogTextToddNight04:
+DialogTextToddNight05:
+	align 2
+DialogTextToddNight06:
+	dc.w	OBJ_NPC_TODD
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextElizaNight00:
+	dc.w	OBJ_NPC_ELIZA
+	;		"1234567890123456789012"
+	dc.b	"This is my Night 00",LF
+	dc.b	"text.",ETX
+DialogTextElizaNight01:
+DialogTextElizaNight02:
+DialogTextElizaNight03:
+DialogTextElizaNight04:
+DialogTextElizaNight05:
+	align 2
+DialogTextElizaNight06:
+	dc.w	OBJ_NPC_ELIZA
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextBeckyNight00:
+	dc.w	OBJ_NPC_BECKY
+	;		"1234567890123456789012"
+	dc.b	"This is my Night 00",LF
+	dc.b	"text.",ETX
+DialogTextBeckyNight01:
+DialogTextBeckyNight02:
+DialogTextBeckyNight03:
+DialogTextBeckyNight04:
+DialogTextBeckyNight05:
+	align 2
+DialogTextBeckyNight06:
+	dc.w	OBJ_NPC_BECKY
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextCharlesNight00:
+DialogTextCharlesNight01:
+DialogTextCharlesNight02:
+DialogTextCharlesNight03:
+DialogTextCharlesNight04:
+DialogTextCharlesNight05:
+	align 2
+DialogTextCharlesNight06:
+	dc.w	OBJ_NPC_CHARLES
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextRandyNight00:
+	dc.w	OBJ_NPC_RANDY
+	;		"1234567890123456789012"
+	dc.b	"This is my Night 00",LF
+	dc.b	"text.",ETX
+DialogTextRandyNight01:
+DialogTextRandyNight02:
+DialogTextRandyNight03:
+DialogTextRandyNight04:
+DialogTextRandyNight05:
+	align 2
+DialogTextRandyNight06:
+	dc.w	OBJ_NPC_RANDY
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextDBNight00:
+	dc.w	OBJ_NPC_DB
+	;		"1234567890123456789012"
+	dc.b	"This is my Night 00",LF
+	dc.b	"text.",ETX
+DialogTextDBNight01:
+DialogTextDBNight02:
+DialogTextDBNight03:
+DialogTextDBNight04:
+DialogTextDBNight05:
+	align 2
+DialogTextDBNight06:
+	dc.w	OBJ_NPC_DB
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextDaniNight00:
+DialogTextDaniNight01:
+DialogTextDaniNight02:
+DialogTextDaniNight03:
+DialogTextDaniNight04:
+DialogTextDaniNight05:
+	align 2
+DialogTextDaniNight06:
+	dc.w	OBJ_NPC_DANI
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextGuardNight00:
+DialogTextGuardNight01:
+DialogTextGuardNight02:
+DialogTextGuardNight03:
+DialogTextGuardNight04:
+DialogTextGuardNight05:
+	align 2
+DialogTextGuardNight06:
+	dc.w	OBJ_NPC_GUARD
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextBillyNight00:
+DialogTextBillyNight01:
+DialogTextBillyNight02:
+DialogTextBillyNight03:
+DialogTextBillyNight04:
+DialogTextBillyNight05:
+	align 2
+DialogTextBillyNight06:
+	dc.w	OBJ_NPC_BILLY
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextAlNight00:
+DialogTextAlNight01:
+DialogTextAlNight02:
+DialogTextAlNight03:
+DialogTextAlNight04:
+DialogTextAlNight05:
+	align 2
+DialogTextAlNight06:
+	dc.w	OBJ_NPC_AL
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextThomasNight00:
+DialogTextThomasNight01:
+DialogTextThomasNight02:
+DialogTextThomasNight03:
+DialogTextThomasNight04:
+DialogTextThomasNight05:
+	align 2
+DialogTextThomasNight06:
+	dc.w	OBJ_NPC_THOMAS
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextHeatherNight00:
+DialogTextHeatherNight01:
+DialogTextHeatherNight02:
+DialogTextHeatherNight03:
+DialogTextHeatherNight04:
+DialogTextHeatherNight05:
+	align 2
+DialogTextHeatherNight06:
+	dc.w	OBJ_NPC_HEATHER
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextGaryNight00:
+DialogTextGaryNight01:
+DialogTextGaryNight02:
+DialogTextGaryNight03:
+DialogTextGaryNight04:
+DialogTextGaryNight05:
+	align 2
+DialogTextGaryNight06:
+	dc.w	OBJ_NPC_GARY
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextGrantNight00:
+DialogTextGrantNight01:
+DialogTextGrantNight02:
+DialogTextGrantNight03:
+DialogTextGrantNight04:
+DialogTextGrantNight05:
+	align 2
+DialogTextGrantNight06:
+	dc.w	OBJ_NPC_GRANT
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextBrettNight00:
+DialogTextBrettNight01:
+DialogTextBrettNight02:
+DialogTextBrettNight03:
+DialogTextBrettNight04:
+DialogTextBrettNight05:
+	align 2
+DialogTextBrettNight06:
+	dc.w	OBJ_NPC_BRETT
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextNickyNight00:
+DialogTextNickyNight01:
+DialogTextNickyNight02:
+DialogTextNickyNight03:
+DialogTextNickyNight04:
+DialogTextNickyNight05:
+	align 2
+DialogTextNickyNight06:
+	dc.w	OBJ_NPC_NICKY
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextTanyaNight00:
+DialogTextTanyaNight01:
+DialogTextTanyaNight02:
+DialogTextTanyaNight03:
+DialogTextTanyaNight04:
+DialogTextTanyaNight05:
+	align 2
+DialogTextTanyaNight06:
+	dc.w	OBJ_NPC_TANYA
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextCraigNight00:
+DialogTextCraigNight01:
+DialogTextCraigNight02:
+DialogTextCraigNight03:
+DialogTextCraigNight04:
+DialogTextCraigNight05:
+	align 2
+DialogTextCraigNight06:
+	dc.w	OBJ_NPC_CRAIG
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextJuanNight00:
+DialogTextJuanNight01:
+DialogTextJuanNight02:
+DialogTextJuanNight03:
+DialogTextJuanNight04:
+DialogTextJuanNight05:
+	align 2
+DialogTextJuanNight06:
+	dc.w	OBJ_NPC_JUAN
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextLauraNight00:
+DialogTextLauraNight01:
+DialogTextLauraNight02:
+DialogTextLauraNight03:
+DialogTextLauraNight04:
+DialogTextLauraNight05:
+	align 2
+DialogTextLauraNight06:
+	dc.w	OBJ_NPC_LAURA
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextGinaNight00:
+DialogTextGinaNight01:
+DialogTextGinaNight02:
+DialogTextGinaNight03:
+DialogTextGinaNight04:
+DialogTextGinaNight05:
+	align 2
+DialogTextGinaNight06:
+	dc.w	OBJ_NPC_GINA
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextSantaNight00:
+DialogTextSantaNight01:
+DialogTextSantaNight02:
+DialogTextSantaNight03:
+DialogTextSantaNight04:
+DialogTextSantaNight05:
+	align 2
+DialogTextSantaNight06:
+	dc.w	OBJ_NPC_SANTA
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextLostGuyNight00:
+DialogTextLostGuyNight01:
+DialogTextLostGuyNight02:
+DialogTextLostGuyNight03:
+DialogTextLostGuyNight04:
+DialogTextLostGuyNight05:
+	align 2
+DialogTextLostGuyNight06:
+	dc.w	OBJ_NPC_LOSTGUY
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextRockerNight00:
+DialogTextRockerNight01:
+DialogTextRockerNight02:
+DialogTextRockerNight03:
+DialogTextRockerNight04:
+DialogTextRockerNight05:
+	align 2
+DialogTextRockerNight06:
+	dc.w	OBJ_NPC_ROCKER
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextShopperNight00:
+DialogTextShopperNight01:
+DialogTextShopperNight02:
+DialogTextShopperNight03:
+DialogTextShopperNight04:
+DialogTextShopperNight05:
+	align 2
+DialogTextShopperNight06:
+	dc.w	OBJ_NPC_SHOPPER
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextBusyMomNight00:
+DialogTextBusyMomNight01:
+DialogTextBusyMomNight02:
+DialogTextBusyMomNight03:
+DialogTextBusyMomNight04:
+DialogTextBusyMomNight05:
+	align 2
+DialogTextBusyMomNight06:
+	dc.w	OBJ_NPC_BUSYMOM
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextMallratNight00:
+DialogTextMallratNight01:
+DialogTextMallratNight02:
+DialogTextMallratNight03:
+DialogTextMallratNight04:
+DialogTextMallratNight05:
+	align 2
+DialogTextMallratNight06:
+	dc.w	OBJ_NPC_MALLRAT
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextPreppyNight00:
+DialogTextPreppyNight01:
+DialogTextPreppyNight02:
+DialogTextPreppyNight03:
+DialogTextPreppyNight04:
+DialogTextPreppyNight05:
+	align 2
+DialogTextPreppyNight06:
+	dc.w	OBJ_NPC_PREPPY
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextYuppieNight00:
+DialogTextYuppieNight01:
+DialogTextYuppieNight02:
+DialogTextYuppieNight03:
+DialogTextYuppieNight04:
+DialogTextYuppieNight05:
+	align 2
+DialogTextYuppieNight06:
+	dc.w	OBJ_NPC_YUPPIE
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextNelsonNight00:
+DialogTextNelsonNight01:
+DialogTextNelsonNight02:
+DialogTextNelsonNight03:
+DialogTextNelsonNight04:
+DialogTextNelsonNight05:
+	align 2
+DialogTextNelsonNight06:
+	dc.w	OBJ_NPC_NELSON
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
+	align 2
+DialogTextVictorNight00:
+DialogTextVictorNight01:
+DialogTextVictorNight02:
+DialogTextVictorNight03:
+DialogTextVictorNight04:
+DialogTextVictorNight05:
+	align 2
+DialogTextVictorNight06:
+	dc.w	OBJ_NPC_VICTOR
+	;		"1234567890123456789012"
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+
 ;-------------------------------------------------------------------------------
 ; menus
 ;-------------------------------------------------------------------------------
@@ -1537,15 +2224,15 @@ Day06IntroText:
 
 Day06IntroTip0:
 	;		"1234567890123456789012345678901234567890"
-	dc.b	"",ETX
+	dc.b	"Wow, thanks for playing this far!",ETX
 
 Day06IntroTip1:
 	;		"1234567890123456789012345678901234567890"
-	dc.b	"",ETX
+	dc.b	"It's the last day of the story.",ETX
 
 Day06IntroTip2:
 	;		"1234567890123456789012345678901234567890"
-	dc.b	"",ETX
+	dc.b	"Don't forget to say bye to new friends.",ETX
 
 Day06IntroTip3:
 	;		"1234567890123456789012345678901234567890"
@@ -1553,7 +2240,7 @@ Day06IntroTip3:
 
 Day06IntroTip4:
 	;		"1234567890123456789012345678901234567890"
-	dc.b	"",ETX
+	dc.b	"There are three possible endings.",ETX
 
 Day06IntroTip5:
 	;		"1234567890123456789012345678901234567890"
@@ -1670,6 +2357,19 @@ StatusScreenHelpHints02:
 ; status screen objectives
 ;-------------------------------------------------------------------------------
 StatusScreenDay00Objective00:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"November 18, 1990: Evening",LF
+	;		"1234567890123456789012345678901234567"
+	dc.b	"Help the customers in your store.",LF
+	;		"1234567890123456789012345678901234567"
+	dc.b	"Use the A button to interact.",LF
+	;		"1234567890123456789012345678901234567"
+	dc.b	"Press A to confirm a choice.",LF
+	;		"1234567890123456789012345678901234567"
+	dc.b	"Press B to cancel a selection window.",LF
+	;		"1234567890123456789012345678901234567"
+	dc.b	" ",ETX
+
 StatusScreenDay00Objective01:
 StatusScreenDay00Objective02:
 StatusScreenDay00Objective03:
@@ -1893,28 +2593,28 @@ LegalScreenLine01:
 	dc.b	"Copyright (c) 2019-2020 Hugues Johnson",ETX
 LegalScreenLine02:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"This demo is not licensed by Sega     ",ETX
+	dc.b	"",ETX
 LegalScreenLine03:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"There is no relationship between the  ",ETX
+	dc.b	"This demo is not licensed by Sega     ",ETX
 LegalScreenLine04:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"author of this demo and Sega          ",ETX
+	dc.b	"There is no relationship between the  ",ETX
 LegalScreenLine05:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"This demo uses the Echo Sound Driver  ",ETX
+	dc.b	"author of this demo and Sega          ",ETX
 LegalScreenLine06:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"Copyright (c) 2010-2019               ",ETX
+	dc.b	"",ETX
 LegalScreenLine07:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"Javier Degirolmo (sikthehedgehog)     ",ETX
+	dc.b	"Inspired by '90s malls but all events,",ETX
 LegalScreenLine08:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"Inspired by '90s malls but all events,",ETX
+	dc.b	"characters, and places are fictitious ",ETX
 LegalScreenLine09:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"characters, and places are fictitious ",ETX
+	dc.b	"",ETX
 
 ;-------------------------------------------------------------------------------
 ; end

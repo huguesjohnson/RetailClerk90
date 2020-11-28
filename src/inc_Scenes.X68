@@ -12,6 +12,7 @@
 	; status screen
 	;---------------------------------------------------------------------------
 	include 'scenes/MenuMap.X68'
+	include 'scenes/MenuMapNoTravel.X68'
 	include 'scenes/MenuStatus.X68'
 	include 'scenes/MenuData.X68'
 	include 'scenes/MenuHelp.X68'

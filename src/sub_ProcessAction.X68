@@ -27,7 +27,14 @@ ProcessAction:
 	bsr.w	StopSprite	; stop moving the sprite
 ProcessActionBuildActionTableOffset:
 	bsr.w	BuildActionTableOffset	; build action table offset
-	lea	ActionTable,a5	; point to action table
+	; determine which action table to use	
+	cmpi.w	#PLAYER_SPRITE_ERYN,(MEM_PLAYER_SPRITE)
+	beq.s	.1
+	lea	ActionTablePlayer2Start,a5 ; point to player 2 action table (night)
+	bra.s	.2
+.1
+	lea	ActionTablePlayer1Start,a5 ; point to player 2 action table (day)
+.2
 	adda.w	(MEM_ACTION_TABLE_OFFSET),a5	; move to offset location
 	move.l	(a5),a6	; a5 has the address of the subroutine to jump to
 	jsr	(a6)	; jump to location of code to process this event

@@ -147,8 +147,16 @@ TestCButtonPressed:	; test if the player pressed the C button
 	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
 	andi.b	#BUTTON_C,d6	; test if the C button was pressed
 	beq.w	TestAButtonPressed	; C button is not pressed
-	lea	SceneMenuMap,a6	; address of the scene for the status screen
-	move.w	#$0000,(MEM_MENU_SCREEN_PAGE)
+	move.w	#MENU_PAGE_MAP,(MEM_MENU_SCREEN_PAGE)
+	; test if fast travel is available
+	move.l	(MEM_GAME_STATE),d7	; copy game state to d7
+	btst.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; test fast travel flag
+	beq.s	.NoFastTravel
+	lea	SceneMenuMap,a6	; address of the scene for the map screen
+	bra.s	.DrawMap
+.NoFastTravel
+	lea	SceneMenuMapNoTravel,a6	; address of the scene for the map screen
+.DrawMap
 	bsr.w	DrawScene	; branch to subroutine to draw the scene
 	bsr.w	BuildStatusScreen	; build the status screen
 	bsr.w	FadeIn	; fade in the status screen

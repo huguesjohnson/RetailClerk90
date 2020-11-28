@@ -42,6 +42,7 @@ CharacterNameTableStart:
 	dc.l	CharacterNameYuppie
 	dc.l	CharacterNameNelson
 	dc.l	CharacterNameVictor
+	dc.l	CharacterNameAlOld
 	dc.l	CharacterNameHiddenHJ
 	dc.l	CharacterNameHiddenMJ
 CharacterNameTableEnd:

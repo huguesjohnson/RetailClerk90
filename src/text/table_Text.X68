@@ -255,12 +255,13 @@ DefaultObjectDescriptionTable:
 	; OBJ_SCENE_CAVERN_BACKROOM_LADDER=$103F
 	;-----------------------------------
 	dc.l	ObjectDescriptionCavernBackroomLadder
+
 DefaultObjectDescriptionTableEnd:
 
 ;-------------------------------------------------------------------------------
-; default character dialog
+; default character dialog for player 1 (daytime events)
 ;-------------------------------------------------------------------------------
-CharacterInteractTextTableStart:
+CharacterInteractTextTablePlayer1Start:
 	dc.l	DialogTextUnknownNPC
 	dc.l	DialogTextUnknownNPC
 	dc.l	DialogTextUnknownNPC
@@ -669,7 +670,17 @@ CharacterInteractTextTableStart:
 	dc.l	DialogTextVictorDay05
 	dc.l	DialogTextVictorDay06
 	;-----------------------------------
-	; OBJ_NPC_HIDDENHJ=$2029
+	; OBJ_NPC_ALOLD=$2029
+	;-----------------------------------
+	dc.l	DialogTextAlOldDay00
+	dc.l	DialogTextAlOldDay01
+	dc.l	DialogTextAlOldDay02
+	dc.l	DialogTextAlOldDay03
+	dc.l	DialogTextAlOldDay04
+	dc.l	DialogTextAlOldDay05
+	dc.l	DialogTextAlOldDay06
+	;-----------------------------------
+	; OBJ_NPC_HIDDENHJ=$202A
 	;-----------------------------------
 	dc.l	DialogTextHiddenHJ
 	dc.l	DialogTextHiddenHJ
@@ -679,7 +690,7 @@ CharacterInteractTextTableStart:
 	dc.l	DialogTextHiddenHJ
 	dc.l	DialogTextHiddenHJ
 	;-----------------------------------
-	; OBJ_NPC_HIDDENMJ=$202A
+	; OBJ_NPC_HIDDENMJ=$202B
 	;-----------------------------------
 	dc.l	DialogTextHiddenMJ
 	dc.l	DialogTextHiddenMJ
@@ -688,7 +699,450 @@ CharacterInteractTextTableStart:
 	dc.l	DialogTextHiddenMJ
 	dc.l	DialogTextHiddenMJ
 	dc.l	DialogTextHiddenMJ
-CharacterInteractTextTableEnd:
+CharacterInteractTextTablePlayer1End:
+
+;-------------------------------------------------------------------------------
+; default character dialog for player 2 (nighttime events)
+;-------------------------------------------------------------------------------
+CharacterInteractTextTablePlayer2Start:
+	dc.l	DialogTextUnknownNPC
+	dc.l	DialogTextUnknownNPC
+	dc.l	DialogTextUnknownNPC
+	dc.l	DialogTextUnknownNPC
+	dc.l	DialogTextUnknownNPC
+	dc.l	DialogTextUnknownNPC
+	dc.l	DialogTextUnknownNPC
+	;-----------------------------------
+	; OBJ_NPC_ERYN=$2001
+	;-----------------------------------
+	dc.l	DialogTextErynNight00
+	dc.l	DialogTextErynNight01
+	dc.l	DialogTextErynNight02
+	dc.l	DialogTextErynNight03
+	dc.l	DialogTextErynNight04
+	dc.l	DialogTextErynNight05
+	dc.l	DialogTextErynNight06
+	;-----------------------------------
+	; OBJ_NPC_CARL=$2002
+	;-----------------------------------
+	dc.l	DialogTextCarlNight00
+	dc.l	DialogTextCarlNight01
+	dc.l	DialogTextCarlNight02
+	dc.l	DialogTextCarlNight03
+	dc.l	DialogTextCarlNight04
+	dc.l	DialogTextCarlNight05
+	dc.l	DialogTextCarlNight06
+	;-----------------------------------
+	; OBJ_NPC_FRANK=$2003
+	;-----------------------------------
+	dc.l	DialogTextFrankNight00
+	dc.l	DialogTextFrankNight01
+	dc.l	DialogTextFrankNight02
+	dc.l	DialogTextFrankNight03
+	dc.l	DialogTextFrankNight04
+	dc.l	DialogTextFrankNight05
+	dc.l	DialogTextFrankNight06
+	;-----------------------------------
+	; OBJ_NPC_CAROL=$2004
+	;-----------------------------------
+	dc.l	DialogTextCarolNight00
+	dc.l	DialogTextCarolNight01
+	dc.l	DialogTextCarolNight02
+	dc.l	DialogTextCarolNight03
+	dc.l	DialogTextCarolNight04
+	dc.l	DialogTextCarolNight05
+	dc.l	DialogTextCarolNight06
+	;-----------------------------------
+	; OBJ_NPC_LISA=$2005
+	;-----------------------------------
+	dc.l	DialogTextLisaNight00
+	dc.l	DialogTextLisaNight01
+	dc.l	DialogTextLisaNight02
+	dc.l	DialogTextLisaNight03
+	dc.l	DialogTextLisaNight04
+	dc.l	DialogTextLisaNight05
+	dc.l	DialogTextLisaNight06
+	;-----------------------------------
+	; OBJ_NPC_GRUNBERG=$2006
+	;-----------------------------------
+	dc.l	DialogTextGrunbergNight00
+	dc.l	DialogTextGrunbergNight01
+	dc.l	DialogTextGrunbergNight02
+	dc.l	DialogTextGrunbergNight03
+	dc.l	DialogTextGrunbergNight04
+	dc.l	DialogTextGrunbergNight05
+	dc.l	DialogTextGrunbergNight06
+	;-----------------------------------
+	; OBJ_NPC_JEN=$2007
+	;-----------------------------------
+	dc.l	DialogTextJenNight00
+	dc.l	DialogTextJenNight01
+	dc.l	DialogTextJenNight02
+	dc.l	DialogTextJenNight03
+	dc.l	DialogTextJenNight04
+	dc.l	DialogTextJenNight05
+	dc.l	DialogTextJenNight06
+	;-----------------------------------
+	; OBJ_NPC_GRIFFY=$2008
+	;-----------------------------------
+	dc.l	DialogTextGriffyNight00
+	dc.l	DialogTextGriffyNight01
+	dc.l	DialogTextGriffyNight02
+	dc.l	DialogTextGriffyNight03
+	dc.l	DialogTextGriffyNight04
+	dc.l	DialogTextGriffyNight05
+	dc.l	DialogTextGriffyNight06
+	;-----------------------------------
+	; OBJ_NPC_SCOTT=$2009
+	;-----------------------------------
+	dc.l	DialogTextScottNight00
+	dc.l	DialogTextScottNight01
+	dc.l	DialogTextScottNight02
+	dc.l	DialogTextScottNight03
+	dc.l	DialogTextScottNight04
+	dc.l	DialogTextScottNight05
+	dc.l	DialogTextScottNight06
+	;-----------------------------------
+	; OBJ_NPC_TODD=$200A
+	;-----------------------------------
+	dc.l	DialogTextToddNight00
+	dc.l	DialogTextToddNight01
+	dc.l	DialogTextToddNight02
+	dc.l	DialogTextToddNight03
+	dc.l	DialogTextToddNight04
+	dc.l	DialogTextToddNight05
+	dc.l	DialogTextToddNight06
+	;-----------------------------------
+	; OBJ_NPC_ELIZA=$200B
+	;-----------------------------------
+	dc.l	DialogTextElizaNight00
+	dc.l	DialogTextElizaNight01
+	dc.l	DialogTextElizaNight02
+	dc.l	DialogTextElizaNight03
+	dc.l	DialogTextElizaNight04
+	dc.l	DialogTextElizaNight05
+	dc.l	DialogTextElizaNight06
+	;-----------------------------------
+	; OBJ_NPC_BECKY=$200C
+	;-----------------------------------
+	dc.l	DialogTextBeckyNight00
+	dc.l	DialogTextBeckyNight01
+	dc.l	DialogTextBeckyNight02
+	dc.l	DialogTextBeckyNight03
+	dc.l	DialogTextBeckyNight04
+	dc.l	DialogTextBeckyNight05
+	dc.l	DialogTextBeckyNight06
+	;-----------------------------------
+	; OBJ_NPC_CHARLES=$200D
+	;-----------------------------------
+	dc.l	DialogTextCharlesNight00
+	dc.l	DialogTextCharlesNight01
+	dc.l	DialogTextCharlesNight02
+	dc.l	DialogTextCharlesNight03
+	dc.l	DialogTextCharlesNight04
+	dc.l	DialogTextCharlesNight05
+	dc.l	DialogTextCharlesNight06
+	;-----------------------------------
+	; OBJ_NPC_RANDY=$200E
+	;-----------------------------------
+	dc.l	DialogTextRandyNight00
+	dc.l	DialogTextRandyNight01
+	dc.l	DialogTextRandyNight02
+	dc.l	DialogTextRandyNight03
+	dc.l	DialogTextRandyNight04
+	dc.l	DialogTextRandyNight05
+	dc.l	DialogTextRandyNight06
+	;-----------------------------------
+	; OBJ_NPC_DB=$200F
+	;-----------------------------------
+	dc.l	DialogTextDBNight00
+	dc.l	DialogTextDBNight01
+	dc.l	DialogTextDBNight02
+	dc.l	DialogTextDBNight03
+	dc.l	DialogTextDBNight04
+	dc.l	DialogTextDBNight05
+	dc.l	DialogTextDBNight06
+	;-----------------------------------
+	; OBJ_NPC_DANI=$200F
+	;-----------------------------------
+	dc.l	DialogTextDaniNight00
+	dc.l	DialogTextDaniNight01
+	dc.l	DialogTextDaniNight02
+	dc.l	DialogTextDaniNight03
+	dc.l	DialogTextDaniNight04
+	dc.l	DialogTextDaniNight05
+	dc.l	DialogTextDaniNight06
+	;-----------------------------------
+	; OBJ_NPC_GUARD=$2011
+	;-----------------------------------
+	dc.l	DialogTextGuardNight00
+	dc.l	DialogTextGuardNight01
+	dc.l	DialogTextGuardNight02
+	dc.l	DialogTextGuardNight03
+	dc.l	DialogTextGuardNight04
+	dc.l	DialogTextGuardNight05
+	dc.l	DialogTextGuardNight06
+	;-----------------------------------
+	; OBJ_NPC_BILLY=$2012
+	;-----------------------------------
+	dc.l	DialogTextBillyNight00
+	dc.l	DialogTextBillyNight01
+	dc.l	DialogTextBillyNight02
+	dc.l	DialogTextBillyNight03
+	dc.l	DialogTextBillyNight04
+	dc.l	DialogTextBillyNight05
+	dc.l	DialogTextBillyNight06
+	;-----------------------------------
+	; OBJ_NPC_AL=$2013
+	;-----------------------------------
+	dc.l	DialogTextAlNight00
+	dc.l	DialogTextAlNight01
+	dc.l	DialogTextAlNight02
+	dc.l	DialogTextAlNight03
+	dc.l	DialogTextAlNight04
+	dc.l	DialogTextAlNight05
+	dc.l	DialogTextAlNight06
+	;-----------------------------------
+	; OBJ_NPC_THOMAS=$2014
+	;-----------------------------------
+	dc.l	DialogTextThomasNight00
+	dc.l	DialogTextThomasNight01
+	dc.l	DialogTextThomasNight02
+	dc.l	DialogTextThomasNight03
+	dc.l	DialogTextThomasNight04
+	dc.l	DialogTextThomasNight05
+	dc.l	DialogTextThomasNight06
+	;-----------------------------------
+	; OBJ_NPC_HEATHER=$2015
+	;-----------------------------------
+	dc.l	DialogTextHeatherNight00
+	dc.l	DialogTextHeatherNight01
+	dc.l	DialogTextHeatherNight02
+	dc.l	DialogTextHeatherNight03
+	dc.l	DialogTextHeatherNight04
+	dc.l	DialogTextHeatherNight05
+	dc.l	DialogTextHeatherNight06
+	;-----------------------------------
+	; OBJ_NPC_GARY=$2016
+	;-----------------------------------
+	dc.l	DialogTextGaryNight00
+	dc.l	DialogTextGaryNight01
+	dc.l	DialogTextGaryNight02
+	dc.l	DialogTextGaryNight03
+	dc.l	DialogTextGaryNight04
+	dc.l	DialogTextGaryNight05
+	dc.l	DialogTextGaryNight06
+	;-----------------------------------
+	; OBJ_NPC_GRANT=$2017
+	;-----------------------------------
+	dc.l	DialogTextGrantNight00
+	dc.l	DialogTextGrantNight01
+	dc.l	DialogTextGrantNight02
+	dc.l	DialogTextGrantNight03
+	dc.l	DialogTextGrantNight04
+	dc.l	DialogTextGrantNight05
+	dc.l	DialogTextGrantNight06
+	;-----------------------------------
+	; OBJ_NPC_BRETT=$2018
+	;-----------------------------------
+	dc.l	DialogTextBrettNight00
+	dc.l	DialogTextBrettNight01
+	dc.l	DialogTextBrettNight02
+	dc.l	DialogTextBrettNight03
+	dc.l	DialogTextBrettNight04
+	dc.l	DialogTextBrettNight05
+	dc.l	DialogTextBrettNight06
+	;-----------------------------------
+	; OBJ_NPC_NICKY=$2019
+	;-----------------------------------
+	dc.l	DialogTextNickyNight00
+	dc.l	DialogTextNickyNight01
+	dc.l	DialogTextNickyNight02
+	dc.l	DialogTextNickyNight03
+	dc.l	DialogTextNickyNight04
+	dc.l	DialogTextNickyNight05
+	dc.l	DialogTextNickyNight06
+	;-----------------------------------
+	; OBJ_NPC_TANYA=$201A
+	;-----------------------------------
+	dc.l	DialogTextTanyaNight00
+	dc.l	DialogTextTanyaNight01
+	dc.l	DialogTextTanyaNight02
+	dc.l	DialogTextTanyaNight03
+	dc.l	DialogTextTanyaNight04
+	dc.l	DialogTextTanyaNight05
+	dc.l	DialogTextTanyaNight06
+	;-----------------------------------
+	; OBJ_NPC_CRAIG=$201B
+	;-----------------------------------
+	dc.l	DialogTextCraigNight00
+	dc.l	DialogTextCraigNight01
+	dc.l	DialogTextCraigNight02
+	dc.l	DialogTextCraigNight03
+	dc.l	DialogTextCraigNight04
+	dc.l	DialogTextCraigNight05
+	dc.l	DialogTextCraigNight06
+	;-----------------------------------
+	; OBJ_NPC_JUAN=$201C
+	;-----------------------------------
+	dc.l	DialogTextJuanNight00
+	dc.l	DialogTextJuanNight01
+	dc.l	DialogTextJuanNight02
+	dc.l	DialogTextJuanNight03
+	dc.l	DialogTextJuanNight04
+	dc.l	DialogTextJuanNight05
+	dc.l	DialogTextJuanNight06
+	;-----------------------------------
+	; OBJ_NPC_LAURA=$201D
+	;-----------------------------------
+	dc.l	DialogTextLauraNight00
+	dc.l	DialogTextLauraNight01
+	dc.l	DialogTextLauraNight02
+	dc.l	DialogTextLauraNight03
+	dc.l	DialogTextLauraNight04
+	dc.l	DialogTextLauraNight05
+	dc.l	DialogTextLauraNight06
+	;-----------------------------------
+	; OBJ_NPC_GINA=$201E
+	;-----------------------------------
+	dc.l	DialogTextGinaNight00
+	dc.l	DialogTextGinaNight01
+	dc.l	DialogTextGinaNight02
+	dc.l	DialogTextGinaNight03
+	dc.l	DialogTextGinaNight04
+	dc.l	DialogTextGinaNight05
+	dc.l	DialogTextGinaNight06
+	;-----------------------------------
+	; OBJ_NPC_SANTA=$201F
+	;-----------------------------------
+	dc.l	DialogTextSantaNight00
+	dc.l	DialogTextSantaNight01
+	dc.l	DialogTextSantaNight02
+	dc.l	DialogTextSantaNight03
+	dc.l	DialogTextSantaNight04
+	dc.l	DialogTextSantaNight05
+	dc.l	DialogTextSantaNight06
+	;-----------------------------------
+	; OBJ_NPC_LOSTGUY=$2020
+	;-----------------------------------
+	dc.l	DialogTextLostGuyNight00
+	dc.l	DialogTextLostGuyNight01
+	dc.l	DialogTextLostGuyNight02
+	dc.l	DialogTextLostGuyNight03
+	dc.l	DialogTextLostGuyNight04
+	dc.l	DialogTextLostGuyNight05
+	dc.l	DialogTextLostGuyNight06
+	;-----------------------------------
+	; OBJ_NPC_ROCKER=$2021
+	;-----------------------------------
+	dc.l	DialogTextRockerNight00
+	dc.l	DialogTextRockerNight01
+	dc.l	DialogTextRockerNight02
+	dc.l	DialogTextRockerNight03
+	dc.l	DialogTextRockerNight04
+	dc.l	DialogTextRockerNight05
+	dc.l	DialogTextRockerNight06
+	;-----------------------------------
+	; OBJ_NPC_SHOPPER=$2022
+	;-----------------------------------
+	dc.l	DialogTextShopperNight00
+	dc.l	DialogTextShopperNight01
+	dc.l	DialogTextShopperNight02
+	dc.l	DialogTextShopperNight03
+	dc.l	DialogTextShopperNight04
+	dc.l	DialogTextShopperNight05
+	dc.l	DialogTextShopperNight06
+	;-----------------------------------
+	; OBJ_NPC_BUSYMOM=$2023
+	;-----------------------------------
+	dc.l	DialogTextBusyMomNight00
+	dc.l	DialogTextBusyMomNight01
+	dc.l	DialogTextBusyMomNight02
+	dc.l	DialogTextBusyMomNight03
+	dc.l	DialogTextBusyMomNight04
+	dc.l	DialogTextBusyMomNight05
+	dc.l	DialogTextBusyMomNight06
+	;-----------------------------------
+	; OBJ_NPC_MALLRAT=$2024
+	;-----------------------------------
+	dc.l	DialogTextMallratNight00
+	dc.l	DialogTextMallratNight01
+	dc.l	DialogTextMallratNight02
+	dc.l	DialogTextMallratNight03
+	dc.l	DialogTextMallratNight04
+	dc.l	DialogTextMallratNight05
+	dc.l	DialogTextMallratNight06
+	;-----------------------------------
+	; OBJ_NPC_PREPPY=$2025
+	;-----------------------------------
+	dc.l	DialogTextPreppyNight00
+	dc.l	DialogTextPreppyNight01
+	dc.l	DialogTextPreppyNight02
+	dc.l	DialogTextPreppyNight03
+	dc.l	DialogTextPreppyNight04
+	dc.l	DialogTextPreppyNight05
+	dc.l	DialogTextPreppyNight06
+	;-----------------------------------
+	; OBJ_NPC_YUPPIE=$2026
+	;-----------------------------------
+	dc.l	DialogTextYuppieNight00
+	dc.l	DialogTextYuppieNight01
+	dc.l	DialogTextYuppieNight02
+	dc.l	DialogTextYuppieNight03
+	dc.l	DialogTextYuppieNight04
+	dc.l	DialogTextYuppieNight05
+	dc.l	DialogTextYuppieNight06
+	;-----------------------------------
+	; OBJ_NPC_NELSON=$2027
+	;-----------------------------------
+	dc.l	DialogTextNelsonNight00
+	dc.l	DialogTextNelsonNight01
+	dc.l	DialogTextNelsonNight02
+	dc.l	DialogTextNelsonNight03
+	dc.l	DialogTextNelsonNight04
+	dc.l	DialogTextNelsonNight05
+	dc.l	DialogTextNelsonNight06
+	;-----------------------------------
+	; OBJ_NPC_VICTOR=$2028
+	;-----------------------------------
+	dc.l	DialogTextVictorNight00
+	dc.l	DialogTextVictorNight01
+	dc.l	DialogTextVictorNight02
+	dc.l	DialogTextVictorNight03
+	dc.l	DialogTextVictorNight04
+	dc.l	DialogTextVictorNight05
+	dc.l	DialogTextVictorNight06
+	;-----------------------------------
+	; OBJ_NPC_ALOLD=$2029
+	;-----------------------------------
+	dc.l	DialogTextAlOldDay00
+	dc.l	DialogTextAlOldDay01
+	dc.l	DialogTextAlOldDay02
+	dc.l	DialogTextAlOldDay03
+	dc.l	DialogTextAlOldDay04
+	dc.l	DialogTextAlOldDay05
+	dc.l	DialogTextAlOldDay06
+	;-----------------------------------
+	; OBJ_NPC_HIDDENHJ=$202A
+	;-----------------------------------
+	dc.l	DialogTextHiddenHJ
+	dc.l	DialogTextHiddenHJ
+	dc.l	DialogTextHiddenHJ
+	dc.l	DialogTextHiddenHJ
+	dc.l	DialogTextHiddenHJ
+	dc.l	DialogTextHiddenHJ
+	dc.l	DialogTextHiddenHJ
+	;-----------------------------------
+	; OBJ_NPC_HIDDENMJ=$202B
+	;-----------------------------------
+	dc.l	DialogTextHiddenMJ
+	dc.l	DialogTextHiddenMJ
+	dc.l	DialogTextHiddenMJ
+	dc.l	DialogTextHiddenMJ
+	dc.l	DialogTextHiddenMJ
+	dc.l	DialogTextHiddenMJ
+	dc.l	DialogTextHiddenMJ
+CharacterInteractTextTablePlayer2End:
 
 ;-------------------------------------------------------------------------------
 ; object names

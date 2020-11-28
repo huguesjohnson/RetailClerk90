@@ -46,8 +46,18 @@ ProcessStatusScreenTestDPadTestUp:
 	and.w	#BUTTON_UP,d7 ; test if the up button was pressed
 	beq.s	ProcessStatusScreenTestDPadTestDown ; up button is not pressed
 	; if the selected item is <4 then move to the last menu item
-	cmpi.w	#$0003,(MEM_MENU_SELECTION)	; test if this is in the navigation
-	bgt.s	.1	; <4 means navigation
+	cmpi.w	#MAX_MENU_PAGE,(MEM_MENU_SELECTION)	; test if this is in the navigation
+	bgt.s	.Decrement	; <MAX_MENU_PAGE means navigation
+	cmpi.w	#MENU_PAGE_HELP,(MEM_MENU_SCREEN_PAGE) ; test if this is the help page
+	beq.w	ProcessStatusScreenTestDPadExit ; if not then exit
+	cmpi.w	#MENU_PAGE_MAP,(MEM_MENU_SCREEN_PAGE) ; test if this is the map page
+	bne.s	.FindMaxSelection ; not the map
+	; test if fast travel is available
+	move.l	(MEM_GAME_STATE),d7	; copy game state to d7
+	btst.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; test fast travel flag
+	bne.s	.FindMaxSelection ; if so then continue
+	bra.w	ProcessStatusScreenTestDPadExit ; if not then exit
+.FindMaxSelection
 	; find max selection number
 	clr	d6	; done out of paranoia
 	move.w	(MEM_MENU_SCREEN_PAGE),d6	; copy active page ID to d6
@@ -56,8 +66,8 @@ ProcessStatusScreenTestDPadTestUp:
 	adda.l	d6,a6 ; move to offset
 	move.w	(a6),(MEM_MENU_SELECTION) ; copy max menu selection from table
 	bra.w	ProcessStatusScreenTestDPadExit ; done processing d-pad
-.1 ; otherwise decrement the selection
-	cmpi.w	#$0004,(MEM_MENU_SELECTION)	; test if this is the first item
+.Decrement ; otherwise decrement the selection
+	cmpi.w	#MAX_MENU_PAGE+$0001,(MEM_MENU_SELECTION)	; test if this is the first item
 	bne.s	.2
 	move.w	(MEM_MENU_SCREEN_PAGE),(MEM_MENU_SELECTION) ; select the page
 	bra.w	ProcessStatusScreenTestDPadExit ; done processing d-pad
@@ -68,12 +78,21 @@ ProcessStatusScreenTestDPadTestDown:
 	move.w	d6,d7 ; copy d6 to d7 since the value will be modified
 	and.w	#BUTTON_DOWN,d7 ; test if the down button was pressed
 	beq.s	ProcessStatusScreenTestDPadTestLeft ; down button is not pressed
-	; if the selected item is <4 then move to the first menu item
-	cmpi.w	#$0003,(MEM_MENU_SELECTION)	; test if this is in the navigation
-	bgt.s	.1	; <4 means navigation
-	move.w	#$0004,(MEM_MENU_SELECTION)
-	bra.w	ProcessStatusScreenTestDPadExit ; done processing d-pad
+	; if the selected item is <MAX_MENU_PAGE then move to the first menu item
+	cmpi.w	#MAX_MENU_PAGE,(MEM_MENU_SELECTION)	; test if this is in the navigation
+	bgt.s	.TestWraparound	; <MAX_MENU_PAGE means navigation
+	cmpi.w	#MENU_PAGE_HELP,(MEM_MENU_SCREEN_PAGE) ; test if this is the help page
+	beq.w	ProcessStatusScreenTestDPadExit ; if so then exit
+	cmpi.w	#MENU_PAGE_MAP,(MEM_MENU_SCREEN_PAGE) ; test if this is the map page
+	bne.s	.1 ; not the map
+	; test if fast travel is available
+	move.l	(MEM_GAME_STATE),d7	; copy game state to d7
+	btst.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; test fast travel flag
+	beq.w	ProcessStatusScreenTestDPadExit ; if not then exit
 .1
+	move.w	#MAX_MENU_PAGE+$0001,(MEM_MENU_SELECTION)
+	bra.w	ProcessStatusScreenTestDPadExit ; done processing d-pad
+.TestWraparound
 	; if the selected item is the max menu item then wrap to the navigation
 	; find max selection number for this page
 	clr	d6	; done out of paranoia
@@ -84,10 +103,10 @@ ProcessStatusScreenTestDPadTestDown:
 	move.w	(a6),d7	; copy max page to d7
 	move.w	(MEM_MENU_SELECTION),d6
 	cmp.w	d6,d7
-	bgt.s	.2 ; branch if at the last item in the page
+	bgt.s	.Increment ; branch if at the last item in the page
 	move.w	(MEM_MENU_SCREEN_PAGE),(MEM_MENU_SELECTION) ; select the page
 	bra.w	ProcessStatusScreenTestDPadExit ; done processing d-pad
-.2 ; otherwise increment the selection
+.Increment ; otherwise increment the selection
 	addq	#$01,(MEM_MENU_SELECTION)
 	bra.w	ProcessStatusScreenTestDPadExit ; done processing d-pad
 ProcessStatusScreenTestDPadTestLeft:
@@ -96,11 +115,11 @@ ProcessStatusScreenTestDPadTestLeft:
 	beq.s	ProcessStatusScreenTestDPadTestRight ; left button is not pressed
 	tst.w	(MEM_MENU_SELECTION) ; test if the menu selection is zero
 	bne.s	.1	; zero means the first nav item is selected
-	; if MEM_MENU_SELECTION is zero then roll it over to 3
-	move.w	#$0003,(MEM_MENU_SELECTION)
+	; if MEM_MENU_SELECTION is zero then roll it over to MAX_MENU_PAGE
+	move.w	#MAX_MENU_PAGE,(MEM_MENU_SELECTION)
 	bra.w	ProcessStatusScreenTestDPadExit ; done processing d-pad
 .1 ; otherwise decrement the selection
-	cmpi.w	#$0004,(MEM_MENU_SELECTION)
+	cmpi.w	#MAX_MENU_PAGE+$0001,(MEM_MENU_SELECTION)
 	bne.s	.2
 	; roll over to the last item
 	; find max selection number
@@ -119,10 +138,10 @@ ProcessStatusScreenTestDPadTestRight:
 	and.w	#BUTTON_RIGHT,d7 ; test if the right button was pressed
 	; this should never fail but I make a lot of mistakes so it's possible
 	beq.s	ProcessStatusScreenTestAC ; right button is not pressed
-	cmpi.w	#$0003,(MEM_MENU_SELECTION) ; test if the menu selection is three
+	cmpi.w	#MAX_MENU_PAGE,(MEM_MENU_SELECTION) ; test if the menu selection is the last
 	bne.s	.1	; three means the last nav item is selected
 	; if MEM_MENU_SELECTION is three then roll it over to zero
-	move.w	#$0000,(MEM_MENU_SELECTION)
+	move.w	#MENU_PAGE_MAP,(MEM_MENU_SELECTION)
 	bra.w	ProcessStatusScreenTestDPadExit ; done processing d-pad
 .1 ; otherwise increment the selection
 	; test if at the last item in the page
@@ -134,7 +153,7 @@ ProcessStatusScreenTestDPadTestRight:
 	move.w	(MEM_MENU_SELECTION),d6
 	cmp.w	d6,d7
 	bgt.s	.2 ; branch if at the last item in the page
-	move.w	#$0004,(MEM_MENU_SELECTION)
+	move.w	#MAX_MENU_PAGE+$0001,(MEM_MENU_SELECTION)
 	bra.w	ProcessStatusScreenTestDPadExit ; done processing d-pad
 .2
 	addq	#$01,(MEM_MENU_SELECTION)
@@ -158,16 +177,24 @@ ProcessStatusScreenACButtonPressed:
 	cmp.w	(MEM_MENU_SCREEN_PAGE),d6
 	beq.w	ExitProcessStatusScreen	
 	; test if changing pages
-	cmpi.w	#$0000,(MEM_MENU_SELECTION)
+	cmpi.w	#MENU_PAGE_MAP,(MEM_MENU_SELECTION)
 	bne.s	.1
 	move.w	d6,(MEM_MENU_SCREEN_PAGE)
-	lea	SceneMenuMap,a6	; address of the scene for the status screen
+	; test if fast travel is available
+	move.l	(MEM_GAME_STATE),d7	; copy game state to d7
+	btst.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; test fast travel flag
+	beq.s	.NoFastTravel
+	lea	SceneMenuMap,a6	; address of the scene for the map screen
+	bra.s	.DrawMap
+.NoFastTravel
+	lea	SceneMenuMapNoTravel,a6	; address of the scene for the map screen
+.DrawMap
 	bsr.w	DrawScene	; branch to subroutine to draw the scene
 	bsr.w	BuildStatusScreen	; build the status screen
 ;	bsr.w	FadeIn	; fade in the status screen
 	bra.w	ExitProcessStatusScreen	
 .1
-	cmpi.w	#$0001,(MEM_MENU_SELECTION)
+	cmpi.w	#MENU_PAGE_STATUS,(MEM_MENU_SELECTION)
 	bne.s	.2
 	move.w	d6,(MEM_MENU_SCREEN_PAGE)
 	lea	SceneMenuStatus,a6	; address of the scene for the status screen
@@ -176,7 +203,7 @@ ProcessStatusScreenACButtonPressed:
 ;	bsr.w	FadeIn	; fade in the status screen
 	bra.w	ExitProcessStatusScreen	
 .2
-	cmpi.w	#$0002,(MEM_MENU_SELECTION)
+	cmpi.w	#MENU_PAGE_DATA,(MEM_MENU_SELECTION)
 	bne.s	.3
 	move.w	d6,(MEM_MENU_SCREEN_PAGE)
 	lea	SceneMenuData,a6	; address of the scene for the status screen
@@ -185,7 +212,7 @@ ProcessStatusScreenACButtonPressed:
 ;	bsr.w	FadeIn	; fade in the status screen
 	bra.w	ExitProcessStatusScreen	
 .3
-	cmpi.w	#$0003,(MEM_MENU_SELECTION)
+	cmpi.w	#MENU_PAGE_HELP,(MEM_MENU_SELECTION)
 	bne.s	.4
 	move.w	d6,(MEM_MENU_SCREEN_PAGE)
 	lea	SceneMenuHelp,a6	; address of the scene for the status screen
@@ -197,11 +224,11 @@ ProcessStatusScreenACButtonPressed:
 	;---------------------------------------------------------------------------
 	; otherwise button was pressed somewhere outside of the navigation
 	;---------------------------------------------------------------------------
-	cmpi.w	#$0003,(MEM_MENU_SCREEN_PAGE)
+	cmpi.w	#MENU_PAGE_HELP,(MEM_MENU_SCREEN_PAGE)
 	beq.w	ProcessStatusScreenHelp
-	cmpi.w	#$0002,(MEM_MENU_SCREEN_PAGE)
+	cmpi.w	#MENU_PAGE_DATA,(MEM_MENU_SCREEN_PAGE)
 	beq.w	ProcessStatusScreenData
-	cmpi.w	#$0001,(MEM_MENU_SCREEN_PAGE)
+	cmpi.w	#MENU_PAGE_STATUS,(MEM_MENU_SCREEN_PAGE)
 	beq.w	ProcessStatusScreenStatus
 ProcessStatusScreenMap:
 	move.w	#$2700,sr ; disable interrupts
@@ -213,7 +240,7 @@ ProcessStatusScreenMap:
 	;---------------------------------------------------------------------------
 	clr.l	d7 ; just being paranoid and clearing high word before mulu
 	move.w	(MEM_MENU_SELECTION),d7 ; copy scene id to d7
-	sub.w	#$0004,d7 ; adjust for navigation menu
+	sub.w	#MAX_MENU_PAGE+$0001,d7 ; adjust for navigation menu
 	mulu.w	#WORD_SIZE,d7 ; multiply by 2 to get offset in scene id table
 	lea	FastTravelSceneIDTable,a6	; point a6 to the scene definition table
 	adda.l	d7,a6 ; add offset
@@ -269,7 +296,7 @@ ClearItemDescriptionColLoop:
 	clr	d7
 	move.w	(MEM_MENU_SELECTION),d7 ; copy selected item to d7
 	; lookup description of selected item
-	subq.w	#$0004,d7 ; subtract 4 to get item slot
+	subq.w	#MAX_MENU_PAGE+$0001,d7 ; subtract 4 to get item slot
 	mulu.w	#WORD_SIZE,d7	; items are 1 word
 	cmpi.w	#$0000,(MEM_PLAYER_SPRITE)
 	beq.s	.1
@@ -315,8 +342,8 @@ ExitProcessStatusScreenStatus:
 ProcessStatusScreenData:
 	move.w	(MEM_MENU_SELECTION),d7 ; copy selected item to d7
 	; lookup description of selected item
-	subq.w	#$0004,d7 ; subtract 4 to account for navigation
-	cmpi.w	#$0003,d7	; test if this is in the navigation
+	subq.w	#MAX_MENU_PAGE+$0001,d7 ; subtract 4 to account for navigation
+	cmpi.w	#MENU_PAGE_HELP,d7	; test if this is in the navigation
 	bgt.s	ProcessStatusScreenDataLoad	; <4 means load menu
 ProcessStatusScreenDataSave:
 	; d7 should have the right save slot here
@@ -330,7 +357,7 @@ ProcessStatusScreenDataSave:
 	bsr.w	DrawSaveTitles
 	bra.w	ExitProcessStatusScreen
 ProcessStatusScreenDataLoad:
-	subq.w	#$0004,d7 ; subtract 4 to get load slot
+	subq.w	#MAX_MENU_PAGE+$0001,d7 ; subtract 4 to get load slot
 	bsr.w	SaveGameLookup	; get save title into d6
 	cmpi.w	#MAX_OBJECTIVE,d6 ; is this > MAX_OBJECTIVE?
 	bgt.w	ExitProcessStatusScreen ; if so exit
@@ -353,12 +380,12 @@ ExitProcessStatusScreen:
 ProcessStatusScreenUpdateSelectorXY:
 	clr	d6	; done out of paranoia
 	move.w	(MEM_MENU_SELECTION),d6	; copy menu selection to d6
-	cmpi.w	#$0003,d6	; test if this is in the navigation
+	cmpi.w	#MAX_MENU_PAGE,d6	; test if this is in the navigation
 	bgt.s	.1	; <4 means navigation
 	lea	MenuNavigationTable,a6	; point a6 to the lookup table for the menu
 	bra.s	ProcessStatusScreenUpdateSelectorXYUpdateVDP
 .1 ; navigating the page-specific menus
-	subq	#$0004,d6
+	subq	#MAX_MENU_PAGE+$0001,d6
 	; no menu to navigate on the help page
 	;cmpi.w	#MENU_SCREEN_PAGE_HELP,(MEM_MENU_SCREEN_PAGE)
 	;bne.s	.2

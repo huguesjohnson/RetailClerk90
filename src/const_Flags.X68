@@ -12,9 +12,10 @@ STATE_FLAG_EXITS_BLOCKED=$07 ; blocks sprite from leaving scene
 STATE_FLAG_END_SCREEN=$08 ; end screen is displaying
 STATE_FLAG_INTRO_SCREEN=$09 ; day intro screen is displaying
 STATE_FLAG_STATUS_SCREEN=$0A ; status screen is displaying
-STATE_FLAG_MALL_CLOSED=$0B ; mall is closed for the night
+STATE_FLAG_MALL_CLOSED=$0B ; mall is closed for the night (unused in rc90)
 STATE_FLAG_BASEMENT_OPEN=$C ; basement is accessible
 STATE_FLAG_LOAD_MENU=$0D ; load menu is displaying
+STATE_FLAG_FAST_TRAVEL_AVAILABLE=$0E ; whether fast-travel is available
 	if	_DEBUG_
 STATE_FLAG_DEBUG_MENU=$0F ; debug menu is displaying
 	endif
@@ -46,7 +47,8 @@ DIALOG_FLAG_TEXT_CLOSING=$1F	; dialog is closing
 ;-------------------------------------------------------------------------------
 ; day event flags - used to track events in the current day 
 ;-------------------------------------------------------------------------------
-
+FLAG_DAY00_EVENT00=$00 ; set after helping all customers in your store
+FLAG_DAY00_EVENT01=$01 ; set after visiting the info desk
 
 ;-------------------------------------------------------------------------------
 ; mission event flags - used to track progress within sub-quests 

@@ -37,21 +37,20 @@ MAX_STORE_ID=SCENE_ID_BASEMENTOFFICE
 ;-------------------------------------------------------------------------------
 ; credits scenes
 ;-------------------------------------------------------------------------------
-SCENE_ID_GAMEOVER=$001F
-SCENE_ID_ENDING_BAD0=$0020
-SCENE_ID_ENDING_BAD1=$0021
-SCENE_ID_ENDING_BAD2=$0022
-SCENE_ID_ENDING_BAD3=$0023
-SCENE_ID_ENDING_GOOD0=$0024
-SCENE_ID_ENDING_GOOD1=$0025
-SCENE_ID_ENDING_GOOD2=$0026
-SCENE_ID_ENDING_GOOD3=$0027
-SCENE_ID_ENDING_PERFECT0=$0028
+SCENE_ID_ENDING_BAD0=$001F
+SCENE_ID_ENDING_BAD1=$0020
+SCENE_ID_ENDING_BAD2=$0021
+SCENE_ID_ENDING_BAD3=$0022
+SCENE_ID_ENDING_GOOD0=$0023
+SCENE_ID_ENDING_GOOD1=$0024
+SCENE_ID_ENDING_GOOD2=$0025
+SCENE_ID_ENDING_GOOD3=$0026
+SCENE_ID_ENDING_PERFECT0=$0027
 
 ;-------------------------------------------------------------------------------
 ; scenes used in cut-scenes
 ;-------------------------------------------------------------------------------
-
+SCENE_ID_DREAM=$0028
 
 ;-------------------------------------------------------------------------------
 ; day transition screens

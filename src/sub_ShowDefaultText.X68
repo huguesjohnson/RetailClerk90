@@ -3,7 +3,7 @@ ShowDefaultText:
 	move.w	(MEM_ACTION_TARGET_OBJID),d6	; move target object ID to d6
 	; determine whether this is an object or NPC
 	andi.w	#OBJ_SCENE_BASE,d6	; and d6 against base object value
-	beq.s	.1	; branch if zero (not an object)
+	beq.s	.npc	; branch if zero (not an object)
 	; object
 	lea	DefaultObjectDescriptionTable,a6	; point to default object text table
 	; calculate and add offset to text pointer
@@ -12,9 +12,16 @@ ShowDefaultText:
 	andi.w	#$0FFF,d6	; clear the base value
 	mulu.w	#LWORD_SIZE,d6	; multiple by LWORD_SIZE
 	adda.l	d6,a6	; add offset to pointer
+	bra.s	.setupdialog
+.npc	; npc
+	; determine which text table to use	
+	cmpi.w	#PLAYER_SPRITE_ERYN,(MEM_PLAYER_SPRITE)
+	beq.s	.1
+	lea	CharacterInteractTextTablePlayer2Start,a6 ; player 2 text table (night)
 	bra.s	.2
-.1	; npc
-	lea	CharacterInteractTextTableStart,a6	; point to text table
+.1
+	lea	CharacterInteractTextTablePlayer1Start,a6 ; player 2 text table (day)
+.2
 	bset.l	#DIALOG_FLAG_STYLE_TITLED,d7	; set the titled flag
 	; calculate and add offset to text pointer
 	; something like ((CharacterId*NumberOfDays)+(CurrentDay*LWORD_SIZE))
@@ -26,7 +33,7 @@ ShowDefaultText:
 	mulu.w	#LWORD_SIZE,d5	; multiply by LWORD_SIZE
 	add.w	d5,d6	; add to d6
 	adda.l	d6,a6	; add offset to pointer
-.2
+.setupdialog
 	;---------------------------------------------------------------------------
 	; setup the dialog
 	;---------------------------------------------------------------------------

@@ -24,7 +24,7 @@ BuildStatusScreen:
 ; build the map screen
 ;---------------------------------------------------------------------------
 BuildStatusScreenMap:
-	move.w	#$0000,(MEM_MENU_SCREEN_PAGE) ; just in case I did something dumb
+	move.w	#MENU_PAGE_MAP,(MEM_MENU_SCREEN_PAGE) ; just in case I did something dumb
 	move.w	#$0000,(MEM_MENU_SELECTION)	; first menu item is selected 
 	;---------------------------------------------------------------------------
 	; determine spot for "you are here" icon
@@ -78,7 +78,7 @@ ExitDrawEventIcon:
 ; build the status screen
 ;---------------------------------------------------------------------------
 BuildStatusScreenStatus:
-	move.w	#$0001,(MEM_MENU_SELECTION)	; second menu item is selected 
+	move.w	#MENU_PAGE_STATUS,(MEM_MENU_SELECTION) ; second menu item selected
 	;---------------------------------------------------------------------------
 	; draw the objective text
 	;---------------------------------------------------------------------------
@@ -135,7 +135,7 @@ BuildStatusScreenInventoryLoop:
 	move.w	d7,d6
 	mulu.w	#WORD_SIZE,d6
 	; determine which set of inventory to show	
-	cmpi.w	#$0000,(MEM_PLAYER_SPRITE)
+	cmpi.w	#PLAYER_SPRITE_ERYN,(MEM_PLAYER_SPRITE)
 	beq.s	.1
 	lea	MEM_PLAYER2_ITEMS,a6	; point a6 to player items
 	bra.s	.2
@@ -173,7 +173,7 @@ BuildStatusScreenInventoryLoopDec:
 ; build the data screen
 ;---------------------------------------------------------------------------
 BuildStatusScreenData:
-	move.w	#$0002,(MEM_MENU_SELECTION)	; third menu item is selected 
+	move.w	#MENU_PAGE_DATA,(MEM_MENU_SELECTION) ; third menu item selected 
 	;---------------------------------------------------------------------------
 	; draw the save/load title text
 	;---------------------------------------------------------------------------
@@ -186,7 +186,7 @@ BuildStatusScreenData:
 ; build the help screen
 ;---------------------------------------------------------------------------
 BuildStatusScreenHelp:
-	move.w	#$0003,(MEM_MENU_SELECTION)	; fourth menu item is selected 
+	move.w	#MENU_PAGE_HELP,(MEM_MENU_SELECTION) ; fourth menu item selected
 	bra.w	ExitBuildStatusScreen
 ExitBuildStatusScreen:
 	; move the selector to the right position

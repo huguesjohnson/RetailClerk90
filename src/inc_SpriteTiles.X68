@@ -158,6 +158,10 @@ VictorSpriteTilesStart:
 	include 'tiles/sprite-tiles/npc-victor.X68'
 VictorSpriteTilesEnd:
 
+AlOldSpriteTilesStart:
+	include 'tiles/sprite-tiles/npc-alold.X68'
+AlOldSpriteTilesEnd:
+
 HiddenHJSpriteTilesStart:
 	include 'tiles/sprite-tiles/npc-hidden00.X68'
 HiddenHJSpriteTilesEnd:

@@ -122,6 +122,9 @@ CharacterNameNelson:
 CharacterNameVictor:
 	dc.b	"Victor",NPCNAMEEND
 
+CharacterNameAlOld:
+	dc.b	"AlOld",NPCNAMEEND
+
 CharacterNameHiddenHJ:
 	dc.b	"HiddenHJ",NPCNAMEEND
 

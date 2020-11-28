@@ -1559,6 +1559,11 @@
             "destinationFilePath":"src/tiles/sprite-tiles/npc-victor.X68"
          },
          { 
+            "name":"AlOld",
+            "sourceFilePath":"design/img/sprite-tiles/npc-alold.png",
+            "destinationFilePath":"src/tiles/sprite-tiles/npc-alold.X68"
+         },
+         { 
             "name":"HiddenHJ",
             "sourceFilePath":"design/img/sprite-tiles/npc-hidden00.png",
             "destinationFilePath":"src/tiles/sprite-tiles/npc-hidden00.X68"

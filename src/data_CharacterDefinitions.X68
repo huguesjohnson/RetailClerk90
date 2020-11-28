@@ -202,12 +202,17 @@ CharacterDefinitionVictorStart:
 	dc.l	VictorSpriteTilesStart
 CharacterDefinitionVictorEnd:
 
-; 2029 - HiddenHJ
+; 2029 - AlOld
+CharacterDefinitionAlOldStart:
+	dc.l	AlOldSpriteTilesStart
+CharacterDefinitionAlOldEnd:
+
+; 202a - HiddenHJ
 CharacterDefinitionHiddenHJStart:
 	dc.l	HiddenHJSpriteTilesStart
 CharacterDefinitionHiddenHJEnd:
 
-; 202a - HiddenMJ
+; 202b - HiddenMJ
 CharacterDefinitionHiddenMJStart:
 	dc.l	HiddenMJSpriteTilesStart
 CharacterDefinitionHiddenMJEnd:

@@ -33,11 +33,12 @@ import javax.imageio.IIOException;
 import javax.imageio.ImageIO;
 
 import com.huguesjohnson.PathResolver;
+import com.huguesjohnson.retailclerk.build.parameters.PaletteMapDefinition;
 
 public abstract class ExtractPalette{
 	private final static String newLine=System.lineSeparator();
 
-	public static void extract(String basePath,Map<String,String> sourceDestinationMap,String includeFilePath){
+	public static void extract(String basePath,PaletteMapDefinition[] paletteMap,String includeFilePath){
 		FileWriter paletteWriter=null;
 		FileWriter includeWriter=null;
 		String sourceFilePath=null;
@@ -45,9 +46,9 @@ public abstract class ExtractPalette{
 		try{
 			includeFilePath=basePath+includeFilePath;
 			includeWriter=new FileWriter(includeFilePath);
-			for(Map.Entry<String,String> entry:sourceDestinationMap.entrySet()){
-				sourceFilePath=basePath+entry.getKey();
-				outputFilePath=basePath+entry.getValue();
+			for(PaletteMapDefinition entry:paletteMap){
+				sourceFilePath=basePath+entry.sourceFilePath;
+				outputFilePath=basePath+entry.destinationFilePath;
 				paletteWriter=new FileWriter(outputFilePath);
 				File sourceFile=new File(sourceFilePath);
 				BufferedImage image=ImageIO.read(sourceFile);
@@ -63,7 +64,7 @@ public abstract class ExtractPalette{
 						if(index<0){
 							colors.add(genesisRGBStr);
 							if(colors.size()>16){
-								throw(new Exception("More than 16 colors found in: "+entry.getKey()));
+								throw(new Exception("More than 16 colors found in: "+entry.sourceFilePath));
 							}else{
 								StringBuffer line=new StringBuffer();
 								line.append("\tdc.w\t%");
@@ -86,21 +87,23 @@ public abstract class ExtractPalette{
 				paletteWriter.flush();
 				paletteWriter.close();
 				//update the include file
-				String includePathRel=PathResolver.getRelativePath(includeFilePath,outputFilePath);
-				if(includePathRel.startsWith("..")){
-					includePathRel=includePathRel.substring(3);
+				if((entry.exclude==null)||(!entry.exclude.equalsIgnoreCase("true"))){
+					String includePathRel=PathResolver.getRelativePath(includeFilePath,outputFilePath);
+					if(includePathRel.startsWith("..")){
+						includePathRel=includePathRel.substring(3);
+					}
+					StringBuffer includeString=new StringBuffer();
+					String label="Palette"+includePathRel.substring(includePathRel.lastIndexOf(File.separator)+1,includePathRel.lastIndexOf('.'));
+					includeString.append(label);
+					includeString.append(":");
+					includeString.append(newLine);
+					includeString.append("\tinclude '");
+					includeString.append(includePathRel);
+					includeString.append("'");
+					includeString.append(newLine);
+					includeString.append(newLine);
+					includeWriter.write(includeString.toString());
 				}
-				StringBuffer includeString=new StringBuffer();
-				String label="Palette"+includePathRel.substring(includePathRel.lastIndexOf(File.separator)+1,includePathRel.lastIndexOf('.'));
-				includeString.append(label);
-				includeString.append(":");
-				includeString.append(newLine);
-				includeString.append("\tinclude '");
-				includeString.append(includePathRel);
-				includeString.append("'");
-				includeString.append(newLine);
-				includeString.append(newLine);
-				includeWriter.write(includeString.toString());
 		    }
 			includeWriter.flush();
 			includeWriter.close();

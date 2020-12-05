@@ -37,6 +37,7 @@ import com.huguesjohnson.retailclerk.build.parameters.CollisionDataParameters;
 import com.huguesjohnson.retailclerk.build.parameters.HeaderParameters;
 import com.huguesjohnson.retailclerk.build.parameters.MemoryMapParameters;
 import com.huguesjohnson.retailclerk.build.parameters.PackageParameters;
+import com.huguesjohnson.retailclerk.build.parameters.PaletteMapDefinition;
 import com.huguesjohnson.retailclerk.build.parameters.PaletteParameters;
 import com.huguesjohnson.retailclerk.build.parameters.SpriteDefinition;
 import com.huguesjohnson.retailclerk.build.parameters.SpriteParameters;
@@ -140,10 +141,14 @@ class TestBuildStuff extends TestCase{
 		*********************************************************** */
 		instructions.palettes=new PaletteParameters();
 		instructions.palettes.includeFilePath="src/inc_Palettes.X68";
-		instructions.palettes.paletteMap=new HashMap<String,String>();
-		instructions.palettes.paletteMap.put(
-				"design/img/swatches/people.png",
-				"src/palettes/People.X68");
+		instructions.palettes.paletteMap=new PaletteMapDefinition[2];
+		instructions.palettes.paletteMap[0]=new PaletteMapDefinition();
+		instructions.palettes.paletteMap[0].sourceFilePath="design/img/swatches/people.png";
+		instructions.palettes.paletteMap[0].destinationFilePath="src/palettes/People.X68";
+		instructions.palettes.paletteMap[1]=new PaletteMapDefinition();
+		instructions.palettes.paletteMap[1].sourceFilePath="design/img/swatches/people1.png";
+		instructions.palettes.paletteMap[1].destinationFilePath="src/palettes/People1.X68";
+		instructions.palettes.paletteMap[1].exclude="true";
 		
 		/* ***********************************************************
 		* Tile parameters

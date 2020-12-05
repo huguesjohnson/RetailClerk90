@@ -37,13 +37,6 @@ mv ./build-tools/src/com/huguesjohnson/retailclerk/build/*.class ./build-tools/b
 echo ''
 
 ###########################################################
-# temporary palettes used to build generic tiles
-###########################################################
-echo 'Building temporary palettes..'
-java -cp ./build-tools/bin/:./build-tools/lib/gson-2.8.5.jar com.huguesjohnson.retailclerk.build.MainBuild build-temp-palettes.json
-echo ''
-
-###########################################################
 # main build
 ###########################################################
 echo 'Running main build..'

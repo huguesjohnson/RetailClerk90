@@ -1,6 +1,7 @@
 /*
 PathResolver.java - Utility class to resolve full and absolute paths.
 I wrote this on a whim in 2004, there's probably something built into JDK to do the same now.
+Originally designed with Windows in mind but works with Linux.
 
 Copyright (c) 2004-2020 Hugues Johnson
 
@@ -33,6 +34,7 @@ import java.util.StringTokenizer;
 public abstract class PathResolver{
 	public final static String PARENT_PATH="..";
 	public final static String SELF_PATH=".";
+	public final static String SEPARATOR=File.separator;
 
 	/*
 	 * Resolves an absolute path against another to get a relative path.<br>
@@ -57,8 +59,8 @@ public abstract class PathResolver{
 			return(absolutePath1);
 		}
 		StringBuffer relativePath=new StringBuffer();
-		StringTokenizer tokenizer1=new StringTokenizer(absolutePath1,File.separator);
-		StringTokenizer tokenizer2=new StringTokenizer(absolutePath2,File.separator);
+		StringTokenizer tokenizer1=new StringTokenizer(absolutePath1,SEPARATOR);
+		StringTokenizer tokenizer2=new StringTokenizer(absolutePath2,SEPARATOR);
 		// are there tokens?
 		if(tokenizer1.hasMoreTokens()&&tokenizer2.hasMoreTokens()){
 			// are the first tokens (drive letters) equal?
@@ -72,7 +74,7 @@ public abstract class PathResolver{
 					token2=tokenizer2.nextToken();
 					if(!token1.equals(token2)||pathBroken){
 						pathBroken=true;
-						relativePath.append(File.separator);
+						relativePath.append(SEPARATOR);
 						relativePath.append(token2);
 						parentCount++;
 					}
@@ -82,7 +84,7 @@ public abstract class PathResolver{
 					parentCount+=tokenizer1.countTokens();
 				} else if(tokenizer2.hasMoreTokens()){
 					while(tokenizer2.hasMoreTokens()){
-						relativePath.append(File.separator);
+						relativePath.append(SEPARATOR);
 						relativePath.append(tokenizer2.nextToken());
 					}
 				}
@@ -90,15 +92,15 @@ public abstract class PathResolver{
 				if(parentCount>0){
 					for(int index=0;index<parentCount-1;index++){
 						relativePath.insert(0,PARENT_PATH);
-						relativePath.insert(0,File.separator);
+						relativePath.insert(0,SEPARATOR);
 					}
 					relativePath.insert(0,PARENT_PATH);
 				} else{
 					relativePath.insert(0,SELF_PATH);
 				}
 				// add a path separator to the end of this
-				if(absolutePath2.endsWith(File.separator)){
-					relativePath.append(File.separator);
+				if(absolutePath2.endsWith(SEPARATOR)){
+					relativePath.append(SEPARATOR);
 				}
 			} else{ // need to return the absolute path
 				return(absolutePath2);
@@ -128,25 +130,25 @@ public abstract class PathResolver{
 			return(absolutePath);
 		}
 		StringBuffer finalPath=new StringBuffer(absolutePath);
-		StringTokenizer tokenizer=new StringTokenizer(relativePath,File.separator);
+		StringTokenizer tokenizer=new StringTokenizer(relativePath,SEPARATOR);
 		while(tokenizer.hasMoreTokens()){
 			String token=tokenizer.nextToken();
 			if(token.equals(PARENT_PATH)){
 				int lastIndex=finalPath.length()-1;
-				int indexOf=finalPath.substring(0,lastIndex).lastIndexOf(File.separator);
+				int indexOf=finalPath.substring(0,lastIndex).lastIndexOf(SEPARATOR);
 				if(indexOf>0){
 					finalPath.delete(indexOf,lastIndex);
 				}
 			} else if(!token.equals(SELF_PATH)){
 				finalPath.append(token);
-				finalPath.append(File.separator);
+				finalPath.append(SEPARATOR);
 			}
 		}
-		// trim off File.separator if relativePath didn't end in one
+		// trim off SEPARATOR if relativePath didn't end in one
 		String returnPath=finalPath.toString();
-		if(!relativePath.endsWith(File.separator)){
-			if(returnPath.endsWith(File.separator)){
-				returnPath=returnPath.substring(0,returnPath.length()-File.separator.length());
+		if(!relativePath.endsWith(SEPARATOR)){
+			if(returnPath.endsWith(SEPARATOR)){
+				returnPath=returnPath.substring(0,returnPath.length()-SEPARATOR.length());
 			}
 		}
 		return(returnPath);

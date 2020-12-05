@@ -42,95 +42,463 @@
       },
       "includeFilePath":"src/inc_CollisionMaps.X68"
    },
-   "palettes":{ 
-      "paletteMap":{ 
-         "design/img/swatches/people.png":"src/palettes/People.X68",
-         "design/img/swatches/text00.png":"src/palettes/Text00.X68",
-         "design/img/swatches/text01.png":"src/palettes/Text01.X68",
-         "design/img/swatches/text02.png":"src/palettes/Text02.X68",
-         "design/img/swatches/title00.png":"src/palettes/Title00.X68",
-         "design/img/swatches/title01.png":"src/palettes/Title01.X68",
-         "design/img/swatches/title02.png":"src/palettes/Title02.X68",
-         "design/img/swatches/title03.png":"src/palettes/Title03.X68",
-         "design/img/swatches/menu00.png":"src/palettes/Menu00.X68",
-         "design/img/swatches/menu01.png":"src/palettes/Menu01.X68",
-         "design/img/swatches/menu02.png":"src/palettes/Menu02.X68",
-         "design/img/swatches/menu03.png":"src/palettes/Menu03.X68",
-         "design/img/swatches/dayintro00.png":"src/palettes/DayIntro00.X68",
-         "design/img/swatches/dayintro01.png":"src/palettes/DayIntro01.X68",
-         "design/img/swatches/dayintro02.png":"src/palettes/DayIntro02.X68",
-         "design/img/swatches/basement-floor.png":"src/palettes/BasementFloor.X68",
-         "design/img/swatches/basement-wall.png":"src/palettes/BasementWall.X68",
-         "design/img/swatches/basement-cafe.png":"src/palettes/BasementCafe.X68",
-         "design/img/swatches/basement-mdorm.png":"src/palettes/BasementMDorm.X68",
-         "design/img/swatches/basement-office.png":"src/palettes/BasementOffice.X68",
-         "design/img/swatches/basement-wdorm.png":"src/palettes/BasementWDorm.X68",
-         "design/img/swatches/cavern00.png":"src/palettes/Cavern00.X68",
-         "design/img/swatches/cavern01.png":"src/palettes/Cavern01.X68",
-         "design/img/swatches/cavern02.png":"src/palettes/Cavern02.X68",
-         "design/img/swatches/cavernbackroom00.png":"src/palettes/CavernBackroom00.X68",
-         "design/img/swatches/cavernbackroom01.png":"src/palettes/CavernBackroom01.X68",
-         "design/img/swatches/cavernbackroom02.png":"src/palettes/CavernBackroom02.X68",
-         "design/img/swatches/checkers00.png":"src/palettes/Checkers00.X68",
-         "design/img/swatches/checkers01.png":"src/palettes/Checkers01.X68",
-         "design/img/swatches/checkers02.png":"src/palettes/Checkers02.X68",
-         "design/img/swatches/cnow00.png":"src/palettes/CNow00.X68",
-         "design/img/swatches/cnow01.png":"src/palettes/CNow01.X68",
-         "design/img/swatches/cnow02.png":"src/palettes/CNow02.X68",
-         "design/img/swatches/center00.png":"src/palettes/Center00.X68",
-         "design/img/swatches/center01.png":"src/palettes/Center01.X68",
-         "design/img/swatches/cplanet00.png":"src/palettes/CPlanet00.X68",
-         "design/img/swatches/cplanet01.png":"src/palettes/CPlanet01.X68",
-         "design/img/swatches/cplanet02.png":"src/palettes/CPlanet02.X68",
-         "design/img/swatches/denimcountry00.png":"src/palettes/DenimCountry00.X68",
-         "design/img/swatches/denimcountry01.png":"src/palettes/DenimCountry01.X68",
-         "design/img/swatches/denimcountry02.png":"src/palettes/DenimCountry02.X68",
-         "design/img/swatches/eehall.png":"src/palettes/EEHall.X68",
-         "design/img/swatches/ewhall.png":"src/palettes/EWHall.X68",
-         "design/img/swatches/fcbfloorwall.png":"src/palettes/FCBFloorWall.X68",
-         "design/img/swatches/fcbcamping00.png":"src/palettes/FCBCamping00.X68",
-         "design/img/swatches/fcbcamping01.png":"src/palettes/FCBCamping01.X68",
-         "design/img/swatches/fcbcheckout00.png":"src/palettes/FCBCheckout00.X68",
-         "design/img/swatches/fcbcheckout01.png":"src/palettes/FCBCheckout01.X68",
-         "design/img/swatches/fcbfirearms00.png":"src/palettes/FCBFirearms00.X68",
-         "design/img/swatches/fcbfirearms01.png":"src/palettes/FCBFirearms01.X68",
-         "design/img/swatches/fcbfishing00.png":"src/palettes/FCBFishing00.X68",
-         "design/img/swatches/fcbfishing01.png":"src/palettes/FCBFishing01.X68",
-         "design/img/swatches/nshack00.png":"src/palettes/NShack00.X68",
-         "design/img/swatches/nshack01.png":"src/palettes/NShack01.X68",
-         "design/img/swatches/nshack02.png":"src/palettes/NShack02.X68",
-         "design/img/swatches/parkinglot00.png":"src/palettes/ParkingLot00.X68",
-         "design/img/swatches/parkinglot01.png":"src/palettes/ParkingLot01.X68",
-         "design/img/swatches/parkinglot02.png":"src/palettes/ParkingLot02.X68",
-         "design/img/swatches/pogodawg00.png":"src/palettes/PogoDawg00.X68",
-         "design/img/swatches/pogodawg01.png":"src/palettes/PogoDawg01.X68",
-         "design/img/swatches/pogodawg02.png":"src/palettes/PogoDawg02.X68",
-         "design/img/swatches/shall.png":"src/palettes/SHall.X68",
-         "design/img/swatches/southcenter.png":"src/palettes/SouthCenter.X68",
-         "design/img/swatches/svideo00.png":"src/palettes/SVideo00.X68",
-         "design/img/swatches/svideo01.png":"src/palettes/SVideo01.X68",
-         "design/img/swatches/svideo02.png":"src/palettes/SVideo02.X68",
-         "design/img/swatches/tbooks00.png":"src/palettes/TBooks00.X68",
-         "design/img/swatches/tbooks01.png":"src/palettes/TBooks01.X68",
-         "design/img/swatches/tbooks02.png":"src/palettes/TBooks02.X68",
-         "design/img/swatches/tlodge00.png":"src/palettes/TLodge00.X68",
-         "design/img/swatches/tlodge01.png":"src/palettes/TLodge01.X68",
-         "design/img/swatches/tlodge02.png":"src/palettes/TLodge02.X68",
-         "design/img/swatches/vb00.png":"src/palettes/VB00.X68",
-         "design/img/swatches/vb01.png":"src/palettes/VB01.X68",
-         "design/img/swatches/vb02.png":"src/palettes/VB02.X68",
-         "design/img/swatches/wehall.png":"src/palettes/WEHall.X68",
-         "design/img/swatches/wwfloorwall.png":"src/palettes/WWFloorWall.X68",
-         "design/img/swatches/wwappliances00.png":"src/palettes/WWAppliances00.X68",
-         "design/img/swatches/wwappliances01.png":"src/palettes/WWAppliances01.X68",
-         "design/img/swatches/wwaudio00.png":"src/palettes/WWAudio00.X68",
-         "design/img/swatches/wwaudio01.png":"src/palettes/WWAudio01.X68",
-         "design/img/swatches/wwcheckout00.png":"src/palettes/WWCheckout00.X68",
-         "design/img/swatches/wwcheckout01.png":"src/palettes/WWCheckout01.X68",
-         "design/img/swatches/wwtv00.png":"src/palettes/WWTV00.X68",
-         "design/img/swatches/wwtv01.png":"src/palettes/WWTV01.X68",
-         "design/img/swatches/wwhall.png":"src/palettes/WWHall.X68"
-      },
+   "palettes":{
+      "paletteMap":[
+         {
+            "sourceFilePath":"design/img/swatches/frame-rect.png",
+            "destinationFilePath":"src/palettes/FrameRect.X68",
+            "exclude":"true"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/frame-round.png",
+            "destinationFilePath":"src/palettes/FrameRound.X68",
+            "exclude":"true"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/frame-wood.png",
+            "destinationFilePath":"src/palettes/FrameWood.X68",
+            "exclude":"true"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/floor-carpet.png",
+            "destinationFilePath":"src/palettes/FloorCarpet.X68",
+            "exclude":"true"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/floor-carpet-70s.png",
+            "destinationFilePath":"src/palettes/FloorCarpet70s.X68",
+            "exclude":"true"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/floor-carpet-blacklight.png",
+            "destinationFilePath":"src/palettes/FloorCarpetBlacklight.X68",
+            "exclude":"true"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/floor-pavement.png",
+            "destinationFilePath":"src/palettes/FloorPavement.X68",
+            "exclude":"true"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/floor-smalltile.png",
+            "destinationFilePath":"src/palettes/FloorTileSmall.X68",
+            "exclude":"true"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/floor-snow.png",
+            "destinationFilePath":"src/palettes/FloorSnow.X68",
+            "exclude":"true"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/floor-stone.png",
+            "destinationFilePath":"src/palettes/FloorStone.X68",
+            "exclude":"true"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/floor-tile-2color.png",
+            "destinationFilePath":"src/palettes/FloorTile2Color.X68",
+            "exclude":"true"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/floor-tile-4color.png",
+            "destinationFilePath":"src/palettes/FloorTile4Color.X68",
+            "exclude":"true"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/floor-tile-basic.png",
+            "destinationFilePath":"src/palettes/FloorTileBasic.X68",
+            "exclude":"true"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/floor-tile-diamond.png",
+            "destinationFilePath":"src/palettes/FloorTileDiamond.X68",
+            "exclude":"true"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/floor-tile-diamond-accent.png",
+            "destinationFilePath":"src/palettes/FloorTileDiamondAccent.X68",
+            "exclude":"true"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/floor-tile-diamond-broken.png",
+            "destinationFilePath":"src/palettes/FloorTileDiamondBroken.X68",
+            "exclude":"true"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/floor-tile-square.png",
+            "destinationFilePath":"src/palettes/FloorTileSquare.X68",
+            "exclude":"true"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/floor-tile-square-broken.png",
+            "destinationFilePath":"src/palettes/FloorTileSquareBroken.X68",
+            "exclude":"true"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/floor-wood-d.png",
+            "destinationFilePath":"src/palettes/FloorWoodDiag.X68",
+            "exclude":"true"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/floor-wood-h.png",
+            "destinationFilePath":"src/palettes/FloorWoodHor.X68",
+            "exclude":"true"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/floor-wood-v.png",
+            "destinationFilePath":"src/palettes/FloorWoodVert.X68",
+            "exclude":"true"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/countertop.png",
+            "destinationFilePath":"src/palettes/CounterTop.X68",
+            "exclude":"true"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/people.png",
+            "destinationFilePath":"src/palettes/People.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/text00.png",
+            "destinationFilePath":"src/palettes/Text00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/text01.png",
+            "destinationFilePath":"src/palettes/Text01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/text02.png",
+            "destinationFilePath":"src/palettes/Text02.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/title00.png",
+            "destinationFilePath":"src/palettes/Title00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/title01.png",
+            "destinationFilePath":"src/palettes/Title01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/title02.png",
+            "destinationFilePath":"src/palettes/Title02.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/title03.png",
+            "destinationFilePath":"src/palettes/Title03.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/menu00.png",
+            "destinationFilePath":"src/palettes/Menu00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/menu01.png",
+            "destinationFilePath":"src/palettes/Menu01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/menu02.png",
+            "destinationFilePath":"src/palettes/Menu02.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/menu03.png",
+            "destinationFilePath":"src/palettes/Menu03.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/dayintro00.png",
+            "destinationFilePath":"src/palettes/DayIntro00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/dayintro01.png",
+            "destinationFilePath":"src/palettes/DayIntro01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/dayintro02.png",
+            "destinationFilePath":"src/palettes/DayIntro02.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/basement-floor.png",
+            "destinationFilePath":"src/palettes/BasementFloor.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/basement-wall.png",
+            "destinationFilePath":"src/palettes/BasementWall.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/basement-cafe.png",
+            "destinationFilePath":"src/palettes/BasementCafe.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/basement-mdorm.png",
+            "destinationFilePath":"src/palettes/BasementMDorm.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/basement-office.png",
+            "destinationFilePath":"src/palettes/BasementOffice.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/basement-wdorm.png",
+            "destinationFilePath":"src/palettes/BasementWDorm.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/cavern00.png",
+            "destinationFilePath":"src/palettes/Cavern00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/cavern01.png",
+            "destinationFilePath":"src/palettes/Cavern01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/cavern02.png",
+            "destinationFilePath":"src/palettes/Cavern02.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/cavernbackroom00.png",
+            "destinationFilePath":"src/palettes/CavernBackroom00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/cavernbackroom01.png",
+            "destinationFilePath":"src/palettes/CavernBackroom01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/cavernbackroom02.png",
+            "destinationFilePath":"src/palettes/CavernBackroom02.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/checkers00.png",
+            "destinationFilePath":"src/palettes/Checkers00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/checkers01.png",
+            "destinationFilePath":"src/palettes/Checkers01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/checkers02.png",
+            "destinationFilePath":"src/palettes/Checkers02.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/cnow00.png",
+            "destinationFilePath":"src/palettes/CNow00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/cnow01.png",
+            "destinationFilePath":"src/palettes/CNow01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/cnow02.png",
+            "destinationFilePath":"src/palettes/CNow02.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/center00.png",
+            "destinationFilePath":"src/palettes/Center00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/center01.png",
+            "destinationFilePath":"src/palettes/Center01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/cplanet00.png",
+            "destinationFilePath":"src/palettes/CPlanet00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/cplanet01.png",
+            "destinationFilePath":"src/palettes/CPlanet01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/cplanet02.png",
+            "destinationFilePath":"src/palettes/CPlanet02.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/denimcountry00.png",
+            "destinationFilePath":"src/palettes/DenimCountry00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/denimcountry01.png",
+            "destinationFilePath":"src/palettes/DenimCountry01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/denimcountry02.png",
+            "destinationFilePath":"src/palettes/DenimCountry02.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/eehall.png",
+            "destinationFilePath":"src/palettes/EEHall.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/ewhall.png",
+            "destinationFilePath":"src/palettes/EWHall.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/fcbfloorwall.png",
+            "destinationFilePath":"src/palettes/FCBFloorWall.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/fcbcamping00.png",
+            "destinationFilePath":"src/palettes/FCBCamping00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/fcbcamping01.png",
+            "destinationFilePath":"src/palettes/FCBCamping01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/fcbcheckout00.png",
+            "destinationFilePath":"src/palettes/FCBCheckout00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/fcbcheckout01.png",
+            "destinationFilePath":"src/palettes/FCBCheckout01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/fcbfirearms00.png",
+            "destinationFilePath":"src/palettes/FCBFirearms00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/fcbfirearms01.png",
+            "destinationFilePath":"src/palettes/FCBFirearms01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/fcbfishing00.png",
+            "destinationFilePath":"src/palettes/FCBFishing00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/fcbfishing01.png",
+            "destinationFilePath":"src/palettes/FCBFishing01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/nshack00.png",
+            "destinationFilePath":"src/palettes/NShack00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/nshack01.png",
+            "destinationFilePath":"src/palettes/NShack01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/nshack02.png",
+            "destinationFilePath":"src/palettes/NShack02.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/parkinglot00.png",
+            "destinationFilePath":"src/palettes/ParkingLot00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/parkinglot01.png",
+            "destinationFilePath":"src/palettes/ParkingLot01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/parkinglot02.png",
+            "destinationFilePath":"src/palettes/ParkingLot02.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/pogodawg00.png",
+            "destinationFilePath":"src/palettes/PogoDawg00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/pogodawg01.png",
+            "destinationFilePath":"src/palettes/PogoDawg01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/pogodawg02.png",
+            "destinationFilePath":"src/palettes/PogoDawg02.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/shall.png",
+            "destinationFilePath":"src/palettes/SHall.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/southcenter.png",
+            "destinationFilePath":"src/palettes/SouthCenter.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/svideo00.png",
+            "destinationFilePath":"src/palettes/SVideo00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/svideo01.png",
+            "destinationFilePath":"src/palettes/SVideo01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/svideo02.png",
+            "destinationFilePath":"src/palettes/SVideo02.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/tbooks00.png",
+            "destinationFilePath":"src/palettes/TBooks00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/tbooks01.png",
+            "destinationFilePath":"src/palettes/TBooks01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/tbooks02.png",
+            "destinationFilePath":"src/palettes/TBooks02.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/tlodge00.png",
+            "destinationFilePath":"src/palettes/TLodge00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/tlodge01.png",
+            "destinationFilePath":"src/palettes/TLodge01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/tlodge02.png",
+            "destinationFilePath":"src/palettes/TLodge02.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/vb00.png",
+            "destinationFilePath":"src/palettes/VB00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/vb01.png",
+            "destinationFilePath":"src/palettes/VB01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/vb02.png",
+            "destinationFilePath":"src/palettes/VB02.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/wehall.png",
+            "destinationFilePath":"src/palettes/WEHall.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/wwfloorwall.png",
+            "destinationFilePath":"src/palettes/WWFloorWall.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/wwappliances00.png",
+            "destinationFilePath":"src/palettes/WWAppliances00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/wwappliances01.png",
+            "destinationFilePath":"src/palettes/WWAppliances01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/wwaudio00.png",
+            "destinationFilePath":"src/palettes/WWAudio00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/wwaudio01.png",
+            "destinationFilePath":"src/palettes/WWAudio01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/wwcheckout00.png",
+            "destinationFilePath":"src/palettes/WWCheckout00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/wwcheckout01.png",
+            "destinationFilePath":"src/palettes/WWCheckout01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/wwtv00.png",
+            "destinationFilePath":"src/palettes/WWTV00.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/wwtv01.png",
+            "destinationFilePath":"src/palettes/WWTV01.X68"
+         },
+         {
+            "sourceFilePath":"design/img/swatches/wwhall.png",
+            "destinationFilePath":"src/palettes/WWHall.X68"
+         }      
+      ],
       "includeFilePath":"src/inc_Palettes.X68"
    },
    "tiles":{ 
@@ -140,7 +508,7 @@
             "palettePath":"src/palettes/People.X68",
             "sourceFilePath":"design/img/font-dialog-tiles/font.png",
             "destinationFilePath":"src/tiles/font-tiles/dwf.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"DialogFrame",
@@ -159,7 +527,7 @@
             "palettePath":"src/palettes/Title03.X68",
             "sourceFilePath":"design/img/scene-tiles/title-logo.png",
             "destinationFilePath":"src/tiles/scene-tiles/title-logo.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"TitleMenuBG",
@@ -179,7 +547,7 @@
             "palettePath":"src/palettes/Title01.X68",
             "sourceFilePath":"design/img/scene-tiles/title-mall.png",
             "destinationFilePath":"src/tiles/scene-tiles/title-mall.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"SpriteZero",
@@ -210,7 +578,7 @@
             "palettePath":"src/palettes/FrameWood.X68",
             "sourceFilePath":"design/img/scene-tiles/frame-wood.png",
             "destinationFilePath":"src/tiles/scene-tiles/frame-wood.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"FloorCarpet",
@@ -265,77 +633,77 @@
             "palettePath":"src/palettes/FloorTileBasic.X68",
             "sourceFilePath":"design/img/scene-tiles/floor-tile-basic.png",
             "destinationFilePath":"src/tiles/scene-tiles/floor-tile-basic.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"FloorTileDiamond",
             "palettePath":"src/palettes/FloorTileDiamond.X68",
             "sourceFilePath":"design/img/scene-tiles/floor-tile-diamond.png",
             "destinationFilePath":"src/tiles/scene-tiles/floor-tile-diamond.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"FloorTileDiamondAccent",
             "palettePath":"src/palettes/FloorTileDiamondAccent.X68",
             "sourceFilePath":"design/img/scene-tiles/floor-tile-diamond-accent.png",
             "destinationFilePath":"src/tiles/scene-tiles/floor-tile-diamond-accent.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"FloorTileDiamondBroken",
             "palettePath":"src/palettes/FloorTileDiamondBroken.X68",
             "sourceFilePath":"design/img/scene-tiles/floor-tile-diamond-broken.png",
             "destinationFilePath":"src/tiles/scene-tiles/floor-tile-diamond-broken.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"FloorTileSmall",
             "palettePath":"src/palettes/FloorTileSmall.X68",
             "sourceFilePath":"design/img/scene-tiles/floor-tile-small.png",
             "destinationFilePath":"src/tiles/scene-tiles/floor-tile-small.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"FloorTileSquare",
             "palettePath":"src/palettes/FloorTileSquare.X68",
             "sourceFilePath":"design/img/scene-tiles/floor-tile-square.png",
             "destinationFilePath":"src/tiles/scene-tiles/floor-tile-square.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"FloorTileSquareBroken",
             "palettePath":"src/palettes/FloorTileSquareBroken.X68",
             "sourceFilePath":"design/img/scene-tiles/floor-tile-square-broken.png",
             "destinationFilePath":"src/tiles/scene-tiles/floor-tile-square-broken.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"FloorWoodDiag",
             "palettePath":"src/palettes/FloorWoodDiag.X68",
             "sourceFilePath":"design/img/scene-tiles/floor-wood-d.png",
             "destinationFilePath":"src/tiles/scene-tiles/floor-wood-d.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"FloorWoodHor",
             "palettePath":"src/palettes/FloorWoodHor.X68",
             "sourceFilePath":"design/img/scene-tiles/floor-wood-h.png",
             "destinationFilePath":"src/tiles/scene-tiles/floor-wood-h.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"FloorWoodVert",
             "palettePath":"src/palettes/FloorWoodVert.X68",
             "sourceFilePath":"design/img/scene-tiles/floor-wood-v.png",
             "destinationFilePath":"src/tiles/scene-tiles/floor-wood-v.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"CounterTop",
             "palettePath":"src/palettes/CounterTop.X68",
             "sourceFilePath":"design/img/scene-tiles/countertop.png",
             "destinationFilePath":"src/tiles/scene-tiles/countertop.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"CounterTopNorthCorners",
@@ -354,7 +722,7 @@
             "palettePath":"src/palettes/CounterTop.X68",
             "sourceFilePath":"design/img/scene-tiles/countershelves.png",
             "destinationFilePath":"src/tiles/scene-tiles/countershelves.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"DenimCountryTableHigh",
@@ -375,7 +743,7 @@
             "palettePath":"src/palettes/VB01.X68",
             "sourceFilePath":"design/img/scene-tiles/vb-magazines.png",
             "destinationFilePath":"src/tiles/scene-tiles/vb-magazines.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"VBGames",
@@ -472,7 +840,7 @@
             "palettePath":"src/palettes/FCBFloorWall.X68",
             "sourceFilePath":"design/img/scene-tiles/fcb-path.png",
             "destinationFilePath":"src/tiles/scene-tiles/fcb-path.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"FCBCampingCampsite",
@@ -683,21 +1051,21 @@
             "palettePath":"src/palettes/Checkers00.X68",
             "sourceFilePath":"design/img/scene-tiles/checkers-shelf-h.png",
             "destinationFilePath":"src/tiles/scene-tiles/checkers-shelf-h.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"CheckersShelfM",
             "palettePath":"src/palettes/Checkers00.X68",
             "sourceFilePath":"design/img/scene-tiles/checkers-shelf-m.png",
             "destinationFilePath":"src/tiles/scene-tiles/checkers-shelf-m.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"CheckersShelfL",
             "palettePath":"src/palettes/Checkers00.X68",
             "sourceFilePath":"design/img/scene-tiles/checkers-shelf-l.png",
             "destinationFilePath":"src/tiles/scene-tiles/checkers-shelf-l.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"CPlanetSign",
@@ -711,35 +1079,35 @@
             "palettePath":"src/palettes/CPlanet00.X68",
             "sourceFilePath":"design/img/scene-tiles/cplanet-poster-00.png",
             "destinationFilePath":"src/tiles/scene-tiles/cplanet-poster-00.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"CPlanetPoster01",
             "palettePath":"src/palettes/CPlanet00.X68",
             "sourceFilePath":"design/img/scene-tiles/cplanet-poster-01.png",
             "destinationFilePath":"src/tiles/scene-tiles/cplanet-poster-01.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"CPlanetPoster02",
             "palettePath":"src/palettes/CPlanet00.X68",
             "sourceFilePath":"design/img/scene-tiles/cplanet-poster-02.png",
             "destinationFilePath":"src/tiles/scene-tiles/cplanet-poster-02.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"CPlanetPoster03",
             "palettePath":"src/palettes/CPlanet00.X68",
             "sourceFilePath":"design/img/scene-tiles/cplanet-poster-03.png",
             "destinationFilePath":"src/tiles/scene-tiles/cplanet-poster-03.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"CPlanetTapes",
             "palettePath":"src/palettes/CPlanet01.X68",
             "sourceFilePath":"design/img/scene-tiles/cplanet-tapes.png",
             "destinationFilePath":"src/tiles/scene-tiles/cplanet-tapes.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"CPlanetCDsHigh",
@@ -760,7 +1128,7 @@
             "palettePath":"src/palettes/WEHall.X68",
             "sourceFilePath":"design/img/scene-tiles/bench.png",
             "destinationFilePath":"src/tiles/scene-tiles/bench.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"CavernSign",
@@ -774,42 +1142,42 @@
             "palettePath":"src/palettes/Cavern00.X68",
             "sourceFilePath":"design/img/scene-tiles/cavern-arcade-base-00.png",
             "destinationFilePath":"src/tiles/scene-tiles/cavern-arcade-base-00.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"CavernArcadeBase01",
             "palettePath":"src/palettes/Cavern00.X68",
             "sourceFilePath":"design/img/scene-tiles/cavern-arcade-base-01.png",
             "destinationFilePath":"src/tiles/scene-tiles/cavern-arcade-base-01.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"CavernArcadeBase02",
             "palettePath":"src/palettes/Cavern00.X68",
             "sourceFilePath":"design/img/scene-tiles/cavern-arcade-base-02.png",
             "destinationFilePath":"src/tiles/scene-tiles/cavern-arcade-base-02.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"CavernArcadeTop00",
             "palettePath":"src/palettes/Cavern00.X68",
             "sourceFilePath":"design/img/scene-tiles/cavern-arcade-top-00.png",
             "destinationFilePath":"src/tiles/scene-tiles/cavern-arcade-top-00.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"CavernArcadeTop01",
             "palettePath":"src/palettes/Cavern00.X68",
             "sourceFilePath":"design/img/scene-tiles/cavern-arcade-top-01.png",
             "destinationFilePath":"src/tiles/scene-tiles/cavern-arcade-top-01.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"CavernArcadeTop02",
             "palettePath":"src/palettes/Cavern00.X68",
             "sourceFilePath":"design/img/scene-tiles/cavern-arcade-top-02.png",
             "destinationFilePath":"src/tiles/scene-tiles/cavern-arcade-top-02.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          {
             "name":"EEHallPlantHigh",
@@ -1288,42 +1656,42 @@
             "palettePath":"src/palettes/CavernBackroom00.X68",
             "sourceFilePath":"design/img/scene-tiles/cavern-backroom-dead-arcade-base-00.png",
             "destinationFilePath":"src/tiles/scene-tiles/cavern-backroom-dead-arcade-base-00.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"CavernBackroomDeadArcadeBase01",
             "palettePath":"src/palettes/CavernBackroom01.X68",
             "sourceFilePath":"design/img/scene-tiles/cavern-backroom-dead-arcade-base-01.png",
             "destinationFilePath":"src/tiles/scene-tiles/cavern-backroom-dead-arcade-base-01.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"CavernBackroomDeadArcadeBase02",
             "palettePath":"src/palettes/CavernBackroom02.X68",
             "sourceFilePath":"design/img/scene-tiles/cavern-backroom-dead-arcade-base-02.png",
             "destinationFilePath":"src/tiles/scene-tiles/cavern-backroom-dead-arcade-base-02.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"CavernBackroomDeadArcadeTop00",
             "palettePath":"src/palettes/CavernBackroom00.X68",
             "sourceFilePath":"design/img/scene-tiles/cavern-backroom-dead-arcade-top-00.png",
             "destinationFilePath":"src/tiles/scene-tiles/cavern-backroom-dead-arcade-top-00.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"CavernBackroomDeadArcadeTop01",
             "palettePath":"src/palettes/CavernBackroom01.X68",
             "sourceFilePath":"design/img/scene-tiles/cavern-backroom-dead-arcade-top-01.png",
             "destinationFilePath":"src/tiles/scene-tiles/cavern-backroom-dead-arcade-top-01.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"CavernBackroomDeadArcadeTop02",
             "palettePath":"src/palettes/CavernBackroom02.X68",
             "sourceFilePath":"design/img/scene-tiles/cavern-backroom-dead-arcade-top-02.png",
             "destinationFilePath":"src/tiles/scene-tiles/cavern-backroom-dead-arcade-top-02.X68",
-			"allowDuplicateTiles":"true"
+            "allowDuplicateTiles":"true"
          },
          { 
             "name":"MenuNav",

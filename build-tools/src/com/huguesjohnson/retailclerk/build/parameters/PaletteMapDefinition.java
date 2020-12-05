@@ -26,9 +26,10 @@ package com.huguesjohnson.retailclerk.build.parameters;
 
 import java.io.Serializable;
 
-public class PaletteParameters implements Serializable{
+public class PaletteMapDefinition implements Serializable{
 	private static final long serialVersionUID=666L;
 
-	public PaletteMapDefinition[] paletteMap;
-	public String includeFilePath;
+	public String sourceFilePath;
+	public String destinationFilePath;
+	public String exclude;
 }

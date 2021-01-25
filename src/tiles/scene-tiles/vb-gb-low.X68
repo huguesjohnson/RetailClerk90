@@ -41,20 +41,20 @@
 	dc.l	$00000000
 
 	; 4
-	dc.l	$F33550F6
-	dc.l	$F35550F6
-	dc.l	$F55530F6
-	dc.l	$F55330FD
+	dc.l	$F55550F6
+	dc.l	$F55550F6
+	dc.l	$F55550F6
+	dc.l	$F55550FD
 	dc.l	$11111111
 	dc.l	$FFFFFFFF
 	dc.l	$00000000
 	dc.l	$00000000
 
 	; 5
-	dc.l	$66D0F33C
-	dc.l	$6DD0F3CC
+	dc.l	$66D0F55C
+	dc.l	$6DD0F5CC
 	dc.l	$DD60FCCC
-	dc.l	$D660FCC3
+	dc.l	$D660FCC5
 	dc.l	$11111111
 	dc.l	$FFFFFFFF
 	dc.l	$00000000
@@ -63,8 +63,8 @@
 	; 6
 	dc.l	$C0FEEED0
 	dc.l	$C0FEEDD0
-	dc.l	$30FEDDE0
-	dc.l	$30FDDEE0
+	dc.l	$50FEDDE0
+	dc.l	$50FDDEE0
 	dc.l	$11111111
 	dc.l	$FFFFFFFF
 	dc.l	$00000000

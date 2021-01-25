@@ -4,29 +4,29 @@
 	dc.l	$BCCCCCCC
 	dc.l	$CC777777
 	dc.l	$C3BBB22B
-	dc.l	$C322BCCC
-	dc.l	$CCBBCCCC
-	dc.l	$C3C37777
-	dc.l	$CCCCCCCC
+	dc.l	$C322BBCC
+	dc.l	$CCBBBCCC
+	dc.l	$C3C3C777
+	dc.l	$CCBBCCCB
 	dc.l	$C7777777
 
 	; 1
 	dc.l	$CCCCCCCB
 	dc.l	$777777CC
 	dc.l	$22222B7C
-	dc.l	$CCCCCC3C
-	dc.l	$CCCCCC7C
+	dc.l	$CCCCCB3C
+	dc.l	$CCCCCCCC
 	dc.l	$77777C7C
-	dc.l	$CCCCCC7C
+	dc.l	$BBCCCC7C
 	dc.l	$77777777
 
 	; 2
 	dc.l	$B2222222
 	dc.l	$1BB2BBBB
 	dc.l	$12211122
-	dc.l	$B2C12123
+	dc.l	$B2B12123
 	dc.l	$B2312123
-	dc.l	$B2311111
+	dc.l	$B2B11111
 	dc.l	$12312BBC
 	dc.l	$11111111
 
@@ -37,6 +37,6 @@
 	dc.l	$12B212B1
 	dc.l	$12B21B2B
 	dc.l	$11111221
-	dc.l	$3CCC1221
+	dc.l	$3BCC1221
 	dc.l	$11111111
 

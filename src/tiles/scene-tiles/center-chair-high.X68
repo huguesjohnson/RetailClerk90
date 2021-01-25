@@ -2,43 +2,43 @@
 
 	; 0
 	dc.l	$00000FCC
-	dc.l	$0004FCCD
-	dc.l	$000FDDDD
+	dc.l	$0004FCCC
+	dc.l	$000FCDDD
 	dc.l	$000FDDCC
 	dc.l	$000FFCCC
-	dc.l	$000FCCDC
-	dc.l	$000FCCCD
-	dc.l	$000FCCDD
+	dc.l	$000FFCDC
+	dc.l	$000FFCCD
+	dc.l	$000FFCDD
 
 	; 1
 	dc.l	$CCCCCCCC
-	dc.l	$DDDDDDDD
+	dc.l	$CCCCCCCC
 	dc.l	$DDDDDDDD
 	dc.l	$CCCCCCCC
 	dc.l	$CCCCCCCC
-	dc.l	$DDCDCDDC
-	dc.l	$DDDDDDDD
+	dc.l	$DCCDCDCC
+	dc.l	$CDDCDDDD
 	dc.l	$DDDDDDDD
 
 	; 2
 	dc.l	$CFDD0000
-	dc.l	$DCCCF000
-	dc.l	$DDDDC000
-	dc.l	$CCDDC000
+	dc.l	$CCCCF000
+	dc.l	$DDDCF000
+	dc.l	$FCDDC000
 	dc.l	$CCCFF000
-	dc.l	$CDCCF000
-	dc.l	$DCCCF000
-	dc.l	$CDCCF000
+	dc.l	$CDCFF000
+	dc.l	$DCCFF000
+	dc.l	$CDCFF000
 
 	; 3
-	dc.l	$000FCCCD
-	dc.l	$000FCCDD
-	dc.l	$000FCCDD
-	dc.l	$000FCCCD
-	dc.l	$000FCCDD
-	dc.l	$000FCCCD
-	dc.l	$000FCCCD
-	dc.l	$000FCCCD
+	dc.l	$000FFCCD
+	dc.l	$000FFCCD
+	dc.l	$000FFCCD
+	dc.l	$000FFCCD
+	dc.l	$000FFCCD
+	dc.l	$000FFCCD
+	dc.l	$000FFCCD
+	dc.l	$000FFCCD
 
 	; 4
 	dc.l	$DDDDDDDD
@@ -51,12 +51,12 @@
 	dc.l	$DDDDDDDD
 
 	; 5
-	dc.l	$DCCCC000
-	dc.l	$CDCCC000
-	dc.l	$DDCCF000
-	dc.l	$DCCCC000
-	dc.l	$CDCCC000
-	dc.l	$DCCCC000
-	dc.l	$CCCCC000
-	dc.l	$CCCCC000
+	dc.l	$DCCFC000
+	dc.l	$CCCFC000
+	dc.l	$DCCFF000
+	dc.l	$DCCFC000
+	dc.l	$CCCFC000
+	dc.l	$DCCFC000
+	dc.l	$CCCFC000
+	dc.l	$CCCFC000
 

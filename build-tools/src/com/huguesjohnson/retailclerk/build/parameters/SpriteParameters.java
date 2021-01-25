@@ -1,7 +1,7 @@
 /*
 BuildToolsForRetailClerk90
 
-Copyright (c) 2019 Hugues Johnson
+Copyright (c) 2019-2021 Hugues Johnson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files(the "Software"), to deal in 
@@ -21,15 +21,18 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN 
 THE SOFTWARE.
 */
+
 package com.huguesjohnson.retailclerk.build.parameters;
 
 import java.io.Serializable;
 
+import com.huguesjohnson.retailclerk.build.objects.Sprite;
+
 public class SpriteParameters implements Serializable{
 	private static final long serialVersionUID=666L;
 
-	public SpriteDefinition[] sprites;
-	public String palettePath;
+	public Sprite[] sprites;
+	public String palette;
 	public String includeFilePath;
 	public String nameLookupTableFilePath;
 	public String nameFilePath;

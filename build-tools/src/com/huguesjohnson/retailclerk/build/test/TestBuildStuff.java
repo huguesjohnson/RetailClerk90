@@ -1,7 +1,7 @@
 /*
 BuildToolsForRetailClerk90
 
-Copyright (c) 2019-2020 Hugues Johnson
+Copyright (c) 2019-2021 Hugues Johnson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files(the "Software"), to deal in 
@@ -31,17 +31,24 @@ import org.junit.jupiter.api.Test;
 
 import com.google.gson.Gson;
 import com.huguesjohnson.retailclerk.build.BuildInstructions;
+import com.huguesjohnson.retailclerk.build.BuildScenes;
 import com.huguesjohnson.retailclerk.build.ColorUtils;
+import com.huguesjohnson.retailclerk.build.objects.PaletteMap;
+import com.huguesjohnson.retailclerk.build.objects.Scene;
+import com.huguesjohnson.retailclerk.build.objects.SceneNpcLocation;
+import com.huguesjohnson.retailclerk.build.objects.SceneObject;
+import com.huguesjohnson.retailclerk.build.objects.SceneScenery;
+import com.huguesjohnson.retailclerk.build.objects.SceneText;
+import com.huguesjohnson.retailclerk.build.objects.Sprite;
+import com.huguesjohnson.retailclerk.build.objects.Tileset;
 import com.huguesjohnson.retailclerk.build.parameters.AssemblyParameters;
 import com.huguesjohnson.retailclerk.build.parameters.CollisionDataParameters;
 import com.huguesjohnson.retailclerk.build.parameters.HeaderParameters;
 import com.huguesjohnson.retailclerk.build.parameters.MemoryMapParameters;
 import com.huguesjohnson.retailclerk.build.parameters.PackageParameters;
-import com.huguesjohnson.retailclerk.build.parameters.PaletteMapDefinition;
 import com.huguesjohnson.retailclerk.build.parameters.PaletteParameters;
-import com.huguesjohnson.retailclerk.build.parameters.SpriteDefinition;
+import com.huguesjohnson.retailclerk.build.parameters.SceneParameters;
 import com.huguesjohnson.retailclerk.build.parameters.SpriteParameters;
-import com.huguesjohnson.retailclerk.build.parameters.TilesetDefinition;
 import com.huguesjohnson.retailclerk.build.parameters.TilesetParameters;
 
 import junit.framework.TestCase;
@@ -110,6 +117,42 @@ class TestBuildStuff extends TestCase{
 	}
 	
 	@Test
+	void testToHexWord(){
+		assertEquals("$0000",BuildScenes.toHexWord(0));
+		assertEquals("$000D",BuildScenes.toHexWord(13));
+		assertEquals("$029A",BuildScenes.toHexWord(666));
+		assertEquals("$FFFF",BuildScenes.toHexWord(65535));
+	}
+	
+	@Test
+	void testBuildPatternString(){
+		assertEquals("0000000000000001",BuildScenes.buildPatternString(1,0,false));
+		assertEquals("1000000000001001",BuildScenes.buildPatternString(9,0,true));
+		assertEquals("0010000000011101",BuildScenes.buildPatternString(29,1,false));
+		assertEquals("1100000000101101",BuildScenes.buildPatternString(45,2,true));
+		assertEquals("0110000010000010",BuildScenes.buildPatternString(130,3,false));
+	}
+	
+	@Test
+	void testBuildRowColumnString(){
+		assertEquals("00000000",BuildScenes.buildRowColumnString(null));
+		assertEquals("00000000",BuildScenes.buildRowColumnString("0"));
+		assertEquals("03800000",BuildScenes.buildRowColumnString("03800000"));
+		assertEquals("03800000",BuildScenes.buildRowColumnString("3800000"));
+	}
+	
+	@Test
+	void textBuildWHXYString(){
+		assertEquals("1000111010001000",BuildScenes.buildWHXYString(71,136));
+		assertEquals("0101000100001000",BuildScenes.buildWHXYString(40,264));
+	}
+	
+	
+/*
+ * This is the worst-named thing I've created in a while because it's not really testing anything.
+ * This is really just a simple way to avoid writing json by hand.
+ */
+	@Test
 	void testBuildInstructions(){
 		/*
 		 * Test that everything gets to/from json correctly
@@ -141,11 +184,11 @@ class TestBuildStuff extends TestCase{
 		*********************************************************** */
 		instructions.palettes=new PaletteParameters();
 		instructions.palettes.includeFilePath="src/inc_Palettes.X68";
-		instructions.palettes.paletteMap=new PaletteMapDefinition[2];
-		instructions.palettes.paletteMap[0]=new PaletteMapDefinition();
+		instructions.palettes.paletteMap=new PaletteMap[2];
+		instructions.palettes.paletteMap[0]=new PaletteMap();
 		instructions.palettes.paletteMap[0].sourceFilePath="design/img/swatches/people.png";
 		instructions.palettes.paletteMap[0].destinationFilePath="src/palettes/People.X68";
-		instructions.palettes.paletteMap[1]=new PaletteMapDefinition();
+		instructions.palettes.paletteMap[1]=new PaletteMap();
 		instructions.palettes.paletteMap[1].sourceFilePath="design/img/swatches/people1.png";
 		instructions.palettes.paletteMap[1].destinationFilePath="src/palettes/People1.X68";
 		instructions.palettes.paletteMap[1].exclude="true";
@@ -156,15 +199,15 @@ class TestBuildStuff extends TestCase{
 		instructions.tiles=new TilesetParameters();
 		instructions.tiles.tileIncludeFilePath="src/inc_SpriteTiles.X68";
 		instructions.tiles.patternIncludeFilePath="src/inc_PatternsGenerated.X68";
-		instructions.tiles.tilesets=new TilesetDefinition[2];
-		instructions.tiles.tilesets[0]=new TilesetDefinition();
+		instructions.tiles.tilesets=new Tileset[2];
+		instructions.tiles.tilesets[0]=new Tileset();
 		instructions.tiles.tilesets[0].name="DialogFrame";
-		instructions.tiles.tilesets[0].palettePath="src/palettes/People.X68";
+		instructions.tiles.tilesets[0].palette="src/palettes/People.X68";
 		instructions.tiles.tilesets[0].sourceFilePath="design/img/font-dialog-tiles/frame.png";
 		instructions.tiles.tilesets[0].destinationFilePath="src/tiles/font-tiles/dialog-frame.X68";
-		instructions.tiles.tilesets[1]=new TilesetDefinition();
+		instructions.tiles.tilesets[1]=new Tileset();
 		instructions.tiles.tilesets[1].name="Font";
-		instructions.tiles.tilesets[1].palettePath="src/palettes/People.X68";
+		instructions.tiles.tilesets[1].palette="src/palettes/People.X68";
 		instructions.tiles.tilesets[1].sourceFilePath="design/img/font-dialog-tiles/font.png";
 		instructions.tiles.tilesets[1].destinationFilePath="src/tiles/font-tiles/dwf.X68";
 		
@@ -172,23 +215,92 @@ class TestBuildStuff extends TestCase{
 		* Sprite definition parameters
 		*********************************************************** */
 		SpriteParameters sprites=new SpriteParameters();
-		sprites.palettePath="src/palettes/People.X68";
+		sprites.palette="src/palettes/People.X68";
 		sprites.includeFilePath="src/inc_SpriteTiles.X68";
 		sprites.characterDefinitionFilePath="src/data_CharacterDefinitions.X68";
 		sprites.constantDefinitionPath="src/const_CharacterIDs.X68";
 		sprites.nameFilePath="src/text/en-us/CharacterNames.X68";
 		sprites.nameLookupTableFilePath="src/text/table_CharacterNames.X68";
 		sprites.baseId="2000";
-		sprites.sprites=new SpriteDefinition[2];
-		sprites.sprites[0]=new SpriteDefinition();
+		sprites.sprites=new Sprite[2];
+		sprites.sprites[0]=new Sprite();
 		sprites.sprites[0].name="Eryn";
 		sprites.sprites[0].sourceFilePath="design/img/sprite-tiles/pc-eryn.png";
 		sprites.sprites[0].destinationFilePath="src/tiles/sprite-tiles/pc-eryn.X68";
-		sprites.sprites[1]=new SpriteDefinition();
+		sprites.sprites[1]=new Sprite();
 		sprites.sprites[1].name="Carl";
 		sprites.sprites[1].sourceFilePath="design/img/sprite-tiles/pc-carl.png";
 		sprites.sprites[1].destinationFilePath="src/tiles/sprite-tiles/pc-carl.X68";
 		instructions.sprites=sprites;
+
+		/* ***********************************************************
+		* Scene parameters
+		*********************************************************** */
+		SceneParameters scenes=new SceneParameters();
+		scenes.includeFilePath="src/inc_Scenes_Generated.X68";
+		scenes.scenes=new Scene[1];
+		scenes.scenes[0]=new Scene();
+		scenes.scenes[0].name="SceneTBooks";
+		scenes.scenes[0].id="SCENE_ID_TBOOKS";
+		scenes.scenes[0].destinationFilePath="src/scenes/TestScene.X68";
+		scenes.scenes[0].tilesetNames=new String[10];
+		scenes.scenes[0].tilesetNames[0]="FloorWoodVert";
+		scenes.scenes[0].tilesetNames[1]="FrameRound";
+		scenes.scenes[0].tilesetNames[2]="CounterTop";
+		scenes.scenes[0].tilesetNames[3]="CounterTopNorthCorners";
+		scenes.scenes[0].tilesetNames[4]="CounterShelves";
+		scenes.scenes[0].tilesetNames[5]="TBooksBookcaseTitle";
+		scenes.scenes[0].tilesetNames[6]="TBooksBookcaseAHigh";
+		scenes.scenes[0].tilesetNames[7]="TBooksBookcaseALow";
+		scenes.scenes[0].tilesetNames[8]="TBooksBookcaseBHigh";
+		scenes.scenes[0].tilesetNames[9]="TBooksBookcaseBLow";
+		scenes.scenes[0].paletteNames=new String[4];
+		scenes.scenes[0].paletteNames[0]="PaletteTBooks00";
+		scenes.scenes[0].paletteNames[1]="PaletteTBooks01";
+		scenes.scenes[0].paletteNames[2]="PaletteTBooks02";
+		scenes.scenes[0].paletteNames[3]="PalettePeople";
+		scenes.scenes[0].scenery=new SceneScenery[1];
+		scenes.scenes[0].scenery[0]=new SceneScenery();
+		scenes.scenes[0].scenery[0].patternName="PatternWoodFloorV";
+		scenes.scenes[0].scenery[0].comment="scenery comment 0";
+		scenes.scenes[0].scenery[0].tilesetIndex=0;
+		scenes.scenes[0].scenery[0].highPriority=false;
+		scenes.scenes[0].scenery[0].paletteNumber=0;
+		scenes.scenes[0].scenery[0].repeat=13;
+		scenes.scenes[0].scenery[0].layer="VDP_VRAM_WRITE_B";
+		scenes.scenes[0].scenery[0].row="00000000";
+		scenes.scenes[0].scenery[0].column="00000000";
+		scenes.scenes[0].text=new SceneText[1];
+		scenes.scenes[0].text[0]=new SceneText();
+		scenes.scenes[0].text[0].stringLabel="StoreSignFiction";
+		scenes.scenes[0].text[0].comment="text comment 0";
+		scenes.scenes[0].text[0].highPriority=false;
+		scenes.scenes[0].text[0].paletteNumber=2;
+		scenes.scenes[0].text[0].layer="VDP_VRAM_WRITE_A";
+		scenes.scenes[0].text[0].row="08000000";
+		scenes.scenes[0].text[0].column="00040000";
+		scenes.scenes[0].objects=new SceneObject[1];
+		scenes.scenes[0].objects[0]=new SceneObject();
+		scenes.scenes[0].objects[0].id="OBJ_SCENE_TBOOKS_FICTION";
+		scenes.scenes[0].objects[0].x=136;
+		scenes.scenes[0].objects[0].width=71;
+		scenes.scenes[0].objects[0].y=264;
+		scenes.scenes[0].objects[0].height=40;
+		scenes.scenes[0].collisionDataName="TBooksCollisionStart";
+		scenes.scenes[0].exitIds=new String[4];
+		scenes.scenes[0].exitIds[0]="$FFFF";
+		scenes.scenes[0].exitIds[1]="SCENE_ID_WWHALL";
+		scenes.scenes[0].exitIds[2]="$FFFF";
+		scenes.scenes[0].exitIds[3]="$FFFF";
+		scenes.scenes[0].npcLocations=new SceneNpcLocation[1];
+		scenes.scenes[0].npcLocations[0]=new SceneNpcLocation();
+		scenes.scenes[0].npcLocations[0].x=162;
+		scenes.scenes[0].npcLocations[0].y=218;
+		scenes.scenes[0].npcLocations[0].direction="DIRECTION_DOWN";
+		scenes.scenes[0].npcLocations[0].movementFrequency=65535;
+		scenes.scenes[0].npcLocations[0].movementPatternName="NullMovement";
+		scenes.scenes[0].bgmName="BGM_Mall";
+		instructions.scenes=scenes;
 		
 		/* ***********************************************************
 		* Header parameters

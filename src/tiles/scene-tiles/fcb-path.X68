@@ -28,7 +28,7 @@
 	dc.l	$CCECCCEC
 	dc.l	$CECCCECC
 	dc.l	$ECCCECCC
-	dc.l	$7CCECCCE
+	dc.l	$ACCECCCE
 
 	; 3
 	dc.l	$CCECCCEC
@@ -38,7 +38,7 @@
 	dc.l	$CCECCCEC
 	dc.l	$CECCCECC
 	dc.l	$ECCCECCC
-	dc.l	$CCCE7CCE
+	dc.l	$CCCEACCE
 
 	; 4
 	dc.l	$CCECCCEC
@@ -54,7 +54,7 @@
 	dc.l	$CCECCCEC
 	dc.l	$CECCCECC
 	dc.l	$ECCCECCC
-	dc.l	$7CCECCCE
+	dc.l	$ACCECCCE
 	dc.l	$CCECCCEC
 	dc.l	$CECCCECC
 	dc.l	$ECCCECCC
@@ -77,8 +77,8 @@
 	dc.l	$CCCECCCE
 	dc.l	$CCECCCEC
 	dc.l	$CECCCECC
-	dc.l	$E7CCECCC
-	dc.l	$7CCECCCE
+	dc.l	$EACCECCC
+	dc.l	$ACCECCCE
 
 	; 8
 	dc.l	$CCECCCEC
@@ -122,7 +122,7 @@
 
 	; C
 	dc.l	$CCECCCEC
-	dc.l	$7ECCCECC
+	dc.l	$AECCCECC
 	dc.l	$ECCCECCC
 	dc.l	$CCCECCCE
 	dc.l	$CCECCCEC
@@ -154,7 +154,7 @@
 	dc.l	$CCECCCEC
 	dc.l	$CECCCECC
 	dc.l	$ECCCECCC
-	dc.l	$CCCE7CCE
+	dc.l	$CCCEACCE
 	dc.l	$CCECCCEC
 	dc.l	$CECCCECC
 	dc.l	$ECCCECCC

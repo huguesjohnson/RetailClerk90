@@ -1,7 +1,8 @@
 /*
-CSVMemoryMap
+BuildToolsForRetailClerk90
+CSVMemoryMap - originally created for Retail Clerk '89
 
-Copyright(c) 2016-2019 Hugues Johnson
+Copyright(c) 2016-2021 Hugues Johnson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files(the "Software"), to deal in 
@@ -34,6 +35,7 @@ import java.io.OutputStreamWriter;
 public abstract class CSVMemoryMap{
 	private static final String newLine=System.lineSeparator();
 
+	@SuppressWarnings("resource") //resources are closed in finally block but Eclipse still warns
 	public static void generateMemoryMap(String sourceFile,String destinationFile,String baseAddress){
 		BufferedReader bufferedReader=null;
 		OutputStreamWriter outputStreamWriter=null;
@@ -82,7 +84,7 @@ public abstract class CSVMemoryMap{
 			x.printStackTrace();
 		}finally{
 			try{
-				if(bufferedReader!= null){bufferedReader.close();}
+				if(bufferedReader!=null){bufferedReader.close();}
 			}catch (Exception x){ }
 			try{
 				if(outputStreamWriter!=null){

@@ -33,10 +33,13 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 
 import com.google.gson.Gson;
 import com.huguesjohnson.PathResolver;
 import com.huguesjohnson.ZipUtil;
+import com.huguesjohnson.retailclerk.build.objects.PaletteMap;
+import com.huguesjohnson.retailclerk.build.objects.Tileset;
 
 public class MainBuild{
 
@@ -81,9 +84,18 @@ public class MainBuild{
 				if(!fullBackupPath.endsWith(File.separator)){
 					fullBackupPath=fullBackupPath+File.separator;
 				}
-				if(!(new File(fullBackupPath).exists())){
-					System.out.println("Backup path "+fullBackupPath+" doesn't exist, skipping task.");
-				}else{
+				File f=(new File(fullBackupPath));
+				boolean backupPathExists=f.exists();
+				if(!backupPathExists){
+					try{
+						backupPathExists=f.mkdirs();
+						System.out.println(fullBackupPath+" didn't exist but now does.");
+					}catch(Exception x){
+						System.out.println(fullBackupPath+" doesn't exist and can't be created");
+						x.printStackTrace();
+					}
+				}
+				if(backupPathExists){
 					int index=basePath.lastIndexOf(File.separator,basePath.length()-2)+1;
 					String name=basePath.substring(index,basePath.length()-1);
 					Calendar calendar=Calendar.getInstance();
@@ -138,8 +150,9 @@ public class MainBuild{
 			/* ***********************************************************
 			* Build palettes
 			*********************************************************** */
+			HashMap<String,PaletteMap> paletteMap=new HashMap<String,PaletteMap>();
 			if(instructions.palettes!=null){
-				ExtractPalette.extract(
+				paletteMap=ExtractPalette.extract(
 						basePath,
 						instructions.palettes.paletteMap,
 						instructions.palettes.includeFilePath);
@@ -150,8 +163,9 @@ public class MainBuild{
 			/* ***********************************************************
 			* Build tiles
 			*********************************************************** */
+			HashMap<String,Tileset> tileMap=new HashMap<String,Tileset>();
 			if(instructions.tiles!=null){
-				BuildTiles.build(basePath,instructions.tiles);
+				tileMap=BuildTiles.build(basePath,instructions.tiles,paletteMap);
 			}else{
 				System.out.println("tiles not defined, skipping task.");
 			}
@@ -160,9 +174,18 @@ public class MainBuild{
 			* Build sprites
 			*********************************************************** */
 			if(instructions.sprites!=null){
-				BuildSprites.build(basePath,instructions.sprites);
+				BuildSprites.build(basePath,instructions.sprites,paletteMap);
 			}else{
 				System.out.println("sprites not defined, skipping task.");
+			}
+			
+			/* ***********************************************************
+			* Build scenes
+			*********************************************************** */
+			if(instructions.scenes!=null){
+				BuildScenes.build(basePath,instructions.scenes,tileMap);
+			}else{
+				System.out.println("scenes not defined, skipping task.");
 			}
 			
 			/* ***********************************************************

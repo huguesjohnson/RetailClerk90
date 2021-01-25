@@ -24,15 +24,15 @@
 	dc.l	$C4666666
 	dc.l	$C4F66666
 	dc.l	$C4666646
-	dc.l	$CF6F6664
-	dc.l	$C46FF664
+	dc.l	$CF6F666F
+	dc.l	$C46FF66F
 	dc.l	$CF66F666
 	dc.l	$C6666666
 	dc.l	$C6666666
 
 	; 3
 	dc.l	$F666666C
-	dc.l	$F46666FC
+	dc.l	$FF6666FC
 	dc.l	$4466666C
 	dc.l	$F666666C
 	dc.l	$6666666C

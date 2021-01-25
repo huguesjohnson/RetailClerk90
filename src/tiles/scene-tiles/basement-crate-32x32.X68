@@ -3,7 +3,7 @@
 	; 0
 	dc.l	$1BBBBBBB
 	dc.l	$BC777777
-	dc.l	$B7C7CCCC
+	dc.l	$B7B7CCCC
 	dc.l	$B77B7777
 	dc.l	$B7C7BBB1
 	dc.l	$B7C37122
@@ -17,23 +17,23 @@
 	dc.l	$77777777
 	dc.l	$B11B1111
 	dc.l	$22BCCCCC
-	dc.l	$BB2BBCCB
-	dc.l	$33C77777
+	dc.l	$BB2BBBBB
+	dc.l	$33CC7777
 
 	; 2
 	dc.l	$BBBBBBBB
 	dc.l	$77777777
-	dc.l	$CCCCC777
+	dc.l	$CCCCC7C7
 	dc.l	$77777777
 	dc.l	$B1B1B1B1
 	dc.l	$7777777C
-	dc.l	$CCCCCBCB
+	dc.l	$CCCCCBBB
 	dc.l	$77777777
 
 	; 3
 	dc.l	$BBBBBBB1
 	dc.l	$7777777B
-	dc.l	$7C7C7C7B
+	dc.l	$7C7C7B7B
 	dc.l	$7777B77B
 	dc.l	$B1BB7C7B
 	dc.l	$C3B7C77B
@@ -43,41 +43,41 @@
 	; 4
 	dc.l	$B7C371BC
 	dc.l	$B7C3711B
-	dc.l	$B7CC7BBC
-	dc.l	$B7C771BC
+	dc.l	$B7CC71BC
+	dc.l	$B7CC71BC
 	dc.l	$B737BB1B
 	dc.l	$B77B7777
-	dc.l	$B7B73337
+	dc.l	$B7B7333C
 	dc.l	$B7777777
 
 	; 5
 	dc.l	$CCC77777
-	dc.l	$BCCCCCCC
+	dc.l	$BBCCCCCC
 	dc.l	$C7777777
-	dc.l	$CCC77777
+	dc.l	$CCCC7777
 	dc.l	$BBBBBBBB
 	dc.l	$77777777
-	dc.l	$77C77777
+	dc.l	$C7C77777
 	dc.l	$77777777
 
 	; 6
 	dc.l	$7777777C
-	dc.l	$CCCCCCCC
+	dc.l	$CCCCCBCC
 	dc.l	$77777777
-	dc.l	$77777777
-	dc.l	$BBBBBCCB
+	dc.l	$77777C7C
+	dc.l	$BBBBBBCB
 	dc.l	$77777777
 	dc.l	$77777777
 	dc.l	$77777777
 
 	; 7
-	dc.l	$7CB7C77B
-	dc.l	$CBB7C77B
+	dc.l	$CCB7C77B
+	dc.l	$BBB7C77B
 	dc.l	$77B7777B
-	dc.l	$77C7777B
+	dc.l	$77B7777B
 	dc.l	$BCBB777B
-	dc.l	$7777C77B
-	dc.l	$77777C7B
+	dc.l	$7777B77B
+	dc.l	$77777B7B
 	dc.l	$7777777B
 
 	; 8
@@ -87,7 +87,7 @@
 	dc.l	$11111111
 	dc.l	$12112211
 	dc.l	$1C222211
-	dc.l	$1C222312
+	dc.l	$1C222311
 	dc.l	$1C222C11
 
 	; 9
@@ -116,17 +116,17 @@
 	dc.l	$BBB2BC31
 	dc.l	$11111111
 	dc.l	$11212225
-	dc.l	$1121BBC1
-	dc.l	$11C11BC1
-	dc.l	$113122C1
+	dc.l	$1121BBB1
+	dc.l	$11B11BB1
+	dc.l	$11B122B1
 
 	; C
-	dc.l	$1C222C11
+	dc.l	$1C222B11
 	dc.l	$1C222311
 	dc.l	$1C222311
-	dc.l	$13222C11
+	dc.l	$13222B11
 	dc.l	$1322231B
-	dc.l	$12222C11
+	dc.l	$12222B11
 	dc.l	$12222211
 	dc.l	$11111115
 
@@ -135,9 +135,9 @@
 	dc.l	$22B122BC
 	dc.l	$1B211B22
 	dc.l	$11111111
-	dc.l	$CCCCCCC7
-	dc.l	$22222222
+	dc.l	$BBCCCCCC
 	dc.l	$12222222
+	dc.l	$11211222
 	dc.l	$55555555
 
 	; E
@@ -145,17 +145,17 @@
 	dc.l	$1222B122
 	dc.l	$11212122
 	dc.l	$11111111
-	dc.l	$77C77777
+	dc.l	$CCCCC7CC
 	dc.l	$22222222
 	dc.l	$22222222
 	dc.l	$55555555
 
 	; F
-	dc.l	$11C2B231
+	dc.l	$11B2B231
 	dc.l	$21B22231
-	dc.l	$21B222C1
+	dc.l	$21B222B1
 	dc.l	$11B22231
-	dc.l	$C1C222C1
+	dc.l	$C1B222B1
 	dc.l	$212222B1
 	dc.l	$21222B21
 	dc.l	$51111555

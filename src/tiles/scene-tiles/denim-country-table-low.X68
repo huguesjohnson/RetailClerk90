@@ -13,7 +13,7 @@
 	; 1
 	dc.l	$99963663
 	dc.l	$99933663
-	dc.l	$33366E63
+	dc.l	$33366363
 	dc.l	$99966633
 	dc.l	$99966663
 	dc.l	$99963963
@@ -33,7 +33,7 @@
 	; 3
 	dc.l	$738733AA
 	dc.l	$337733AA
-	dc.l	$77E733A3
+	dc.l	$773733A3
 	dc.l	$7773333A
 	dc.l	$767733AA
 	dc.l	$738733AA
@@ -43,7 +43,7 @@
 	; 4
 	dc.l	$3A999A3A
 	dc.l	$3399933A
-	dc.l	$AA333AAE
+	dc.l	$AA333AA3
 	dc.l	$AA999AAA
 	dc.l	$A99999AA
 	dc.l	$3A999A3A
@@ -63,7 +63,7 @@
 	; 6
 	dc.l	$99C3CC33
 	dc.l	$9933CC33
-	dc.l	$33CCEC33
+	dc.l	$33CC3C33
 	dc.l	$99CCC333
 	dc.l	$99CCCC33
 	dc.l	$99C3CC33
@@ -83,7 +83,7 @@
 	; 8
 	dc.l	$38831530
 	dc.l	$38831530
-	dc.l	$8E831530
+	dc.l	$83831530
 	dc.l	$88331530
 	dc.l	$88831530
 	dc.l	$38831530

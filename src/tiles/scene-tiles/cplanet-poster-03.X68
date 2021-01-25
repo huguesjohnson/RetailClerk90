@@ -4,7 +4,7 @@
 	dc.l	$DDDDDDDD
 	dc.l	$77777777
 	dc.l	$77777777
-	dc.l	$11771E11
+	dc.l	$11711E11
 	dc.l	$8822222E
 	dc.l	$8FF8F882
 	dc.l	$FFFFFF88
@@ -14,40 +14,40 @@
 	dc.l	$DDDDDDDD
 	dc.l	$777E7777
 	dc.l	$777E7777
-	dc.l	$771E1777
-	dc.l	$EEEF88E1
-	dc.l	$228DDD82
+	dc.l	$711E1777
+	dc.l	$2EEF88E1
+	dc.l	$228FDF82
 	dc.l	$288FFF8F
 	dc.l	$888FFFFF
 
 	; 2
-	dc.l	$DDDDDFFF
-	dc.l	$D6DDD6DD
-	dc.l	$D6DDDDDD
-	dc.l	$6666FFFD
-	dc.l	$666666FD
-	dc.l	$666666FD
+	dc.l	$DDDFDFFF
+	dc.l	$D6DDD6DF
+	dc.l	$F6DDDDDD
+	dc.l	$6666FFFF
+	dc.l	$666666FF
+	dc.l	$666666FF
 	dc.l	$666666F6
 	dc.l	$8A4444F4
 
 	; 3
-	dc.l	$DDFDFDDF
+	dc.l	$DDFFFDFF
 	dc.l	$DDDDDDDD
 	dc.l	$DDDDDDDD
-	dc.l	$DFFD6FFF
+	dc.l	$DFFF6FFF
 	dc.l	$FFFFFFFF
 	dc.l	$FF222222
-	dc.l	$FF2E222E
+	dc.l	$FF22222E
 	dc.l	$FF2AF8AF
 
 	; 4
-	dc.l	$33344444
-	dc.l	$838A4444
-	dc.l	$838AA444
-	dc.l	$88AA8AA4
+	dc.l	$38844444
+	dc.l	$88844444
+	dc.l	$888AA444
+	dc.l	$88AAAAA4
 	dc.l	$8A8AAAAA
-	dc.l	$84AA4AAA
-	dc.l	$444A4444
+	dc.l	$84A44A4A
+	dc.l	$44444444
 	dc.l	$44444444
 
 	; 5
@@ -55,8 +55,8 @@
 	dc.l	$4FFFFFFF
 	dc.l	$4FFA8F88
 	dc.l	$4F6FFFFF
-	dc.l	$AFDFFD6D
-	dc.l	$84883844
-	dc.l	$4F88A888
-	dc.l	$4444444A
+	dc.l	$AFFFFF6F
+	dc.l	$A4888844
+	dc.l	$4FAAA888
+	dc.l	$44444A4A
 

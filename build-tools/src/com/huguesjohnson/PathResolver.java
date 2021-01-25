@@ -3,7 +3,7 @@ PathResolver.java - Utility class to resolve full and absolute paths.
 I wrote this on a whim in 2004, there's probably something built into JDK to do the same now.
 Originally designed with Windows in mind but works with Linux.
 
-Copyright (c) 2004-2020 Hugues Johnson
+Copyright (c) 2004-2021 Hugues Johnson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files(the "Software"), to deal in 

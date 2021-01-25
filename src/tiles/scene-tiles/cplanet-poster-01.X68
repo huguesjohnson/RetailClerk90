@@ -26,37 +26,37 @@
 	dc.l	$3AF66666
 	dc.l	$EFFFAF66
 	dc.l	$E8AFAF66
-	dc.l	$1E3F83FF
-	dc.l	$11EF33EA
+	dc.l	$EE3F83FF
+	dc.l	$11EF83EA
 	dc.l	$171A8EE8
 
 	; 3
 	dc.l	$6666F31E
 	dc.l	$666F8311
-	dc.l	$666A33E1
-	dc.l	$66FE111E
+	dc.l	$666A83E1
+	dc.l	$66FEE11E
 	dc.l	$6F81E711
 	dc.l	$F811EB1B
-	dc.l	$831EE11B
-	dc.l	$83181BB1
+	dc.l	$831EE111
+	dc.l	$831811B1
 
 	; 4
-	dc.l	$1B7881E3
-	dc.l	$31B8A188
-	dc.l	$A313FE38
+	dc.l	$1B7881E8
+	dc.l	$3118A188
+	dc.l	$A813FE3A
 	dc.l	$FA33AE38
-	dc.l	$FF811311
+	dc.l	$FF8EE311
 	dc.l	$FFAE11E1
 	dc.l	$FFFFA8FF
 	dc.l	$FFFFA8EE
 
 	; 5
 	dc.l	$83EF111E
-	dc.l	$A38A11E3
-	dc.l	$A8F81E3A
-	dc.l	$AAF3E3AF
-	dc.l	$3AF38AFF
+	dc.l	$A38A11E8
+	dc.l	$A8F81E8A
+	dc.l	$AAF3E8AF
+	dc.l	$3AF88AFF
 	dc.l	$E3E8FFFF
 	dc.l	$E3A8FFFF
-	dc.l	$E8E3E8AF
+	dc.l	$E8E8E8AF
 

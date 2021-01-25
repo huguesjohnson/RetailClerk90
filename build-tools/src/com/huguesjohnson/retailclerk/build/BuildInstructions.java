@@ -1,7 +1,7 @@
 /*
 BuildToolsForRetailClerk90
 
-Copyright (c) 2019-2020 Hugues Johnson
+Copyright (c) 2019-2021 Hugues Johnson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files(the "Software"), to deal in 
@@ -32,6 +32,7 @@ import com.huguesjohnson.retailclerk.build.parameters.HeaderParameters;
 import com.huguesjohnson.retailclerk.build.parameters.MemoryMapParameters;
 import com.huguesjohnson.retailclerk.build.parameters.PackageParameters;
 import com.huguesjohnson.retailclerk.build.parameters.PaletteParameters;
+import com.huguesjohnson.retailclerk.build.parameters.SceneParameters;
 import com.huguesjohnson.retailclerk.build.parameters.SpriteParameters;
 import com.huguesjohnson.retailclerk.build.parameters.TilesetParameters;
 
@@ -72,6 +73,11 @@ public class BuildInstructions implements Serializable{
 	* Sprite definitions
 	*********************************************************** */
 	public SpriteParameters sprites;
+	
+	/* ***********************************************************
+	* Scene definitions
+	*********************************************************** */
+	public SceneParameters scenes;
 	
 	/* ***********************************************************
 	* Header

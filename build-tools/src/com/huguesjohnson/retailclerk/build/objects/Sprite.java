@@ -1,7 +1,7 @@
 /*
 BuildToolsForRetailClerk90
 
-Copyright (c) 2019 Hugues Johnson
+Copyright (c) 2019-2021 Hugues Johnson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files(the "Software"), to deal in 
@@ -22,17 +22,14 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-package com.huguesjohnson.retailclerk.build.parameters;
+package com.huguesjohnson.retailclerk.build.objects;
 
 import java.io.Serializable;
 
-public class TilesetDefinition implements Serializable{
+public class Sprite implements Serializable{
 	private static final long serialVersionUID=666L;
-	
+
 	public String name;
-	public String palettePath;
 	public String sourceFilePath;
 	public String destinationFilePath;
-	public String allowDuplicateTiles;
-	public String patternFilePath;
 }

@@ -4,7 +4,7 @@
 	dc.l	$11111111
 	dc.l	$1BB66B61
 	dc.l	$166896B1
-	dc.l	$17797661
+	dc.l	$177976B1
 	dc.l	$17353361
 	dc.l	$16373351
 	dc.l	$16999921
@@ -15,7 +15,7 @@
 	dc.l	$515B36B6
 	dc.l	$51BB3316
 	dc.l	$515B3616
-	dc.l	$51213552
+	dc.l	$51216552
 	dc.l	$51111111
 	dc.l	$51C1C1CC
 	dc.l	$51111111
@@ -53,7 +53,7 @@
 	; 5
 	dc.l	$66666511
 	dc.l	$11116512
-	dc.l	$33316513
+	dc.l	$63316513
 	dc.l	$BB216515
 	dc.l	$712B6516
 	dc.l	$DD516511
@@ -87,16 +87,16 @@
 	dc.l	$5331D6F6
 	dc.l	$533116B2
 	dc.l	$5331CBBB
-	dc.l	$533181B7
+	dc.l	$5331C1B7
 	dc.l	$53318167
 
 	; 9
 	dc.l	$33333333
 	dc.l	$11111133
 	dc.l	$BB111133
-	dc.l	$FAD32133
+	dc.l	$F3D32133
 	dc.l	$2F2DD133
-	dc.l	$2222B133
+	dc.l	$22B2B133
 	dc.l	$B6319133
 	dc.l	$11619133
 
@@ -112,30 +112,30 @@
 
 	; B
 	dc.l	$11111111
-	dc.l	$444A3211
-	dc.l	$AAAA3511
+	dc.l	$444A3111
+	dc.l	$AAAA3211
 	dc.l	$AA44A311
-	dc.l	$4AAAA511
+	dc.l	$44A43511
 	dc.l	$AAAA3311
 	dc.l	$AA3A3311
-	dc.l	$53335211
+	dc.l	$53355211
 
 	; C
 	dc.l	$51111111
-	dc.l	$5176B211
-	dc.l	$516BB222
+	dc.l	$5176BB11
+	dc.l	$516BBBBB
 	dc.l	$516B1222
-	dc.l	$516B122B
-	dc.l	$516B1222
+	dc.l	$516B1BBB
+	dc.l	$516B1B2B
 	dc.l	$516B1211
 	dc.l	$519BBBBB
 
 	; D
 	dc.l	$11111111
 	dc.l	$2BBBBB71
-	dc.l	$2BBBBB61
-	dc.l	$2222BB81
-	dc.l	$61122581
+	dc.l	$BBBBBB61
+	dc.l	$22BBBB81
+	dc.l	$6112B581
 	dc.l	$2112B881
 	dc.l	$22215781
 	dc.l	$BBBDAA31
@@ -162,8 +162,8 @@
 
 	; 10
 	dc.l	$5331C2BB
-	dc.l	$5331C62D
-	dc.l	$53311C62
+	dc.l	$5331B62D
+	dc.l	$53311B62
 	dc.l	$5331111C
 	dc.l	$53333333
 	dc.l	$53333333
@@ -171,10 +171,10 @@
 	dc.l	$55555555
 
 	; 11
-	dc.l	$BB119133
-	dc.l	$5D26C133
+	dc.l	$BB11C133
+	dc.l	$FD26C133
 	dc.l	$25661133
-	dc.l	$CC111133
+	dc.l	$CB111133
 	dc.l	$33333333
 	dc.l	$3EE3EE33
 	dc.l	$33333333
@@ -192,7 +192,7 @@
 
 	; 13
 	dc.l	$52222211
-	dc.l	$35555611
+	dc.l	$35255611
 	dc.l	$33737311
 	dc.l	$55222111
 	dc.l	$11111111
@@ -211,11 +211,11 @@
 	dc.l	$55555555
 
 	; 15
-	dc.l	$22253A71
+	dc.l	$22253371
 	dc.l	$22998881
 	dc.l	$BBB77771
 	dc.l	$66677771
-	dc.l	$F25F3331
+	dc.l	$F25F6331
 	dc.l	$885BBB51
 	dc.l	$11111111
 	dc.l	$55555555

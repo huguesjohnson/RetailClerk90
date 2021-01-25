@@ -1,7 +1,7 @@
 /*
 BuildToolsForRetailClerk90
 
-Copyright (c) 2019 Hugues Johnson
+Copyright (c) 2019-2021 Hugues Johnson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files(the "Software"), to deal in 
@@ -26,10 +26,11 @@ package com.huguesjohnson.retailclerk.build.parameters;
 
 import java.io.Serializable;
 
-public class PaletteMapDefinition implements Serializable{
+import com.huguesjohnson.retailclerk.build.objects.Scene;
+
+public class SceneParameters implements Serializable{
 	private static final long serialVersionUID=666L;
 
-	public String sourceFilePath;
-	public String destinationFilePath;
-	public String exclude;
+	public Scene[] scenes;
+	public String includeFilePath;
 }

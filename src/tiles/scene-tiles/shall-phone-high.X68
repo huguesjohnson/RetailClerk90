@@ -44,10 +44,10 @@
 	dc.l	$7EEEEEF7
 	dc.l	$7EEEEEF7
 	dc.l	$7BBBBBB7
-	dc.l	$7ED222D7
-	dc.l	$7EDD2DD7
-	dc.l	$7EDD2DD7
-	dc.l	$7ED222D7
+	dc.l	$7ED777D7
+	dc.l	$7EDD7DD7
+	dc.l	$7EDD7DD7
+	dc.l	$7ED777D7
 	dc.l	$7BBBBBB7
 
 	; 5

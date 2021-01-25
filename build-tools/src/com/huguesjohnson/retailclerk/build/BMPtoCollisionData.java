@@ -7,6 +7,7 @@ Everything else by Hugues Johnson
 
 Since it's partially derived from a StackOverflow answer the entire contents of this file are licensed under cc by-sa 3.0 https://creativecommons.org/licenses/by-sa/3.0/.
 */
+
 package com.huguesjohnson.retailclerk.build;
 
 import java.awt.Color;
@@ -23,6 +24,7 @@ import com.huguesjohnson.PathResolver;
 public abstract class BMPtoCollisionData{
 	private final static String newLine=System.lineSeparator();
 
+	@SuppressWarnings("resource") //resources are closed in finally block but Eclipse still warns
 	public static void generateCollisionData(String basePath,Map<String,String> sourceDestinationMap,String includeFilePath){
 		FileWriter collisionDataWriter=null;
 		FileWriter includeDataWriter=null;

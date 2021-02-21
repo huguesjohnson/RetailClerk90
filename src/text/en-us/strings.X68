@@ -24,12 +24,15 @@ TitleScreenTextLoadGame:
 
 TitleScreenTextDebug:
 	dc.b	"{Debug",ETX
-
+	
 TitleScreenTextFooter:
 	;		"12345678901234567890123456789012345678"
 	dc.b	"       Placeholder Title Screen",ETX
 
 	else
+
+TitleScreenTextDebug:
+	dc.b	ETX
 
 TitleScreenTextFooter:
 	;		"12345678901234567890123456789012345678"
@@ -152,7 +155,40 @@ TitleScreenTextFooter:
 	;		"12345678901234567890123456789012345678"
 	dc.b	"{(not implemented)  {(not implemented)",ETX
 
+	else
+	
+	DebugScreenLine00:
+	DebugScreenLine01:
+	DebugScreenLine02:
+	DebugScreenLine03:
+	DebugScreenLine04:
+	DebugScreenLine05:
+	DebugScreenLine06:
+	DebugScreenLine07:
+	DebugScreenLine08:
+	DebugScreenLine09:
+	DebugScreenLine0A:
+	DebugScreenLine0B:
+	DebugScreenLine0C:
+	DebugScreenLine0D:
+	DebugScreenLine0E:
+	DebugScreenLine0F:
+	DebugScreenLine10:
+	DebugScreenLine11:
+	DebugScreenLine12:
+	DebugScreenLine13:
+	DebugScreenLine14:
+	DebugScreenLine15:
+	DebugScreenLine16:
+	DebugScreenLine17:
+	DebugScreenLine18:
+	DebugScreenLine19:
+	DebugScreenLine1A:
+	DebugScreenLine1B:
+	dc.b	"",ETX
+
 	endif
+	
 
 ;-------------------------------------------------------------------------------
 ; credits and end screen
@@ -2587,32 +2623,86 @@ StoreName0C:
 
 LegalScreenLine00:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"           Retail Clerk '90           ",ETX
+	dc.b	"",ETX
 LegalScreenLine01:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"Copyright (c) 2019-2020 Hugues Johnson",ETX
+	dc.b	"",ETX
 LegalScreenLine02:
 	;		"12345678901234567890123456789012345678"
 	dc.b	"",ETX
 LegalScreenLine03:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"This demo is not licensed by Sega     ",ETX
+	dc.b	"",ETX
 LegalScreenLine04:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"There is no relationship between the  ",ETX
+	dc.b	"",ETX
 LegalScreenLine05:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"author of this demo and Sega          ",ETX
+	dc.b	"",ETX
 LegalScreenLine06:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"",ETX
+	dc.b	"           Retail Clerk '90           ",ETX
 LegalScreenLine07:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"Inspired by '90s malls but all events,",ETX
+	dc.b	"",ETX
 LegalScreenLine08:
 	;		"12345678901234567890123456789012345678"
-	dc.b	"characters, and places are fictitious ",ETX
+	dc.b	"",ETX
 LegalScreenLine09:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"",ETX
+LegalScreenLine10:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"",ETX
+LegalScreenLine11:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"",ETX
+LegalScreenLine12:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"",ETX
+LegalScreenLine13:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"",ETX
+LegalScreenLine14:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"",ETX
+LegalScreenLine15:
+	;		"12345678901234567890123456789012345678"
+	dc.b	" Copyright (c) 2019-2021",ETX
+LegalScreenLine16:
+	;		"12345678901234567890123456789012345678"
+	dc.b	" Hugues Johnson (HuguesJohnson.com)",ETX
+LegalScreenLine17:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"",ETX
+LegalScreenLine18:
+	;		"12345678901234567890123456789012345678"
+	dc.b	" This demo is not licensed by Sega.",ETX
+LegalScreenLine19:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"",ETX
+LegalScreenLine20:
+	;		"12345678901234567890123456789012345678"
+	dc.b	" There is no relationship between the",ETX
+LegalScreenLine21:
+	;		"12345678901234567890123456789012345678"
+	dc.b	" author of this demo and Sega.",ETX
+LegalScreenLine22:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"",ETX
+LegalScreenLine23:
+	;		"12345678901234567890123456789012345678"
+	dc.b	"",ETX
+LegalScreenLine24:
+	;		"12345678901234567890123456789012345678"
+	dc.b	" Inspired by '90s malls and culture.",ETX
+LegalScreenLine25:
+	;		"12345678901234567890123456789012345678"
+	dc.b	" However.. all events, characters,",ETX
+LegalScreenLine26:
+	;		"12345678901234567890123456789012345678"
+	dc.b	" and places are purely fictitious.",ETX
+LegalScreenLine27:
 	;		"12345678901234567890123456789012345678"
 	dc.b	"",ETX
 

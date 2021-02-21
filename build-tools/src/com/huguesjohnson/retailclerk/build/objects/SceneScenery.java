@@ -32,6 +32,7 @@ public class SceneScenery implements Serializable{
 	public String patternName;
 	public String comment;
 	public int tilesetIndex;
+	public int tilesetOffset;
 	public boolean highPriority;
 	public int paletteNumber;
 	public int repeat;

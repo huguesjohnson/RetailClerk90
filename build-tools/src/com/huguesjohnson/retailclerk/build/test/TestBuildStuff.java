@@ -34,15 +34,11 @@ import com.huguesjohnson.retailclerk.build.BuildInstructions;
 import com.huguesjohnson.retailclerk.build.BuildScenes;
 import com.huguesjohnson.retailclerk.build.ColorUtils;
 import com.huguesjohnson.retailclerk.build.objects.PaletteMap;
-import com.huguesjohnson.retailclerk.build.objects.Scene;
-import com.huguesjohnson.retailclerk.build.objects.SceneNpcLocation;
-import com.huguesjohnson.retailclerk.build.objects.SceneObject;
-import com.huguesjohnson.retailclerk.build.objects.SceneScenery;
-import com.huguesjohnson.retailclerk.build.objects.SceneText;
 import com.huguesjohnson.retailclerk.build.objects.Sprite;
 import com.huguesjohnson.retailclerk.build.objects.Tileset;
 import com.huguesjohnson.retailclerk.build.parameters.AssemblyParameters;
 import com.huguesjohnson.retailclerk.build.parameters.CollisionDataParameters;
+import com.huguesjohnson.retailclerk.build.parameters.ConstantFileParameters;
 import com.huguesjohnson.retailclerk.build.parameters.HeaderParameters;
 import com.huguesjohnson.retailclerk.build.parameters.MemoryMapParameters;
 import com.huguesjohnson.retailclerk.build.parameters.PackageParameters;
@@ -168,6 +164,16 @@ class TestBuildStuff extends TestCase{
 		instructions.memoryMap.sourceFile="src/MemoryMap.csv";
 		instructions.memoryMap.destinationFile="src/const_MemoryMap.X68";
 		instructions.memoryMap.baseAddress="FFFF0000";
+
+		/* ***********************************************************
+		* Constant parameters
+		*********************************************************** */
+		instructions.constants=new ConstantFileParameters();
+		instructions.constants.includeFilePath="src/inc_Constants.X68";
+		instructions.constants.fileMap=new HashMap<String,String>();
+		instructions.constants.fileMap.put(
+				"design/constants/test.csv",
+				"src/const_test.X68");
 		
 		/* ***********************************************************
 		* Collision data parameters
@@ -238,68 +244,8 @@ class TestBuildStuff extends TestCase{
 		*********************************************************** */
 		SceneParameters scenes=new SceneParameters();
 		scenes.includeFilePath="src/inc_Scenes_Generated.X68";
-		scenes.scenes=new Scene[1];
-		scenes.scenes[0]=new Scene();
-		scenes.scenes[0].name="SceneTBooks";
-		scenes.scenes[0].id="SCENE_ID_TBOOKS";
-		scenes.scenes[0].destinationFilePath="src/scenes/TestScene.X68";
-		scenes.scenes[0].tilesetNames=new String[10];
-		scenes.scenes[0].tilesetNames[0]="FloorWoodVert";
-		scenes.scenes[0].tilesetNames[1]="FrameRound";
-		scenes.scenes[0].tilesetNames[2]="CounterTop";
-		scenes.scenes[0].tilesetNames[3]="CounterTopNorthCorners";
-		scenes.scenes[0].tilesetNames[4]="CounterShelves";
-		scenes.scenes[0].tilesetNames[5]="TBooksBookcaseTitle";
-		scenes.scenes[0].tilesetNames[6]="TBooksBookcaseAHigh";
-		scenes.scenes[0].tilesetNames[7]="TBooksBookcaseALow";
-		scenes.scenes[0].tilesetNames[8]="TBooksBookcaseBHigh";
-		scenes.scenes[0].tilesetNames[9]="TBooksBookcaseBLow";
-		scenes.scenes[0].paletteNames=new String[4];
-		scenes.scenes[0].paletteNames[0]="PaletteTBooks00";
-		scenes.scenes[0].paletteNames[1]="PaletteTBooks01";
-		scenes.scenes[0].paletteNames[2]="PaletteTBooks02";
-		scenes.scenes[0].paletteNames[3]="PalettePeople";
-		scenes.scenes[0].scenery=new SceneScenery[1];
-		scenes.scenes[0].scenery[0]=new SceneScenery();
-		scenes.scenes[0].scenery[0].patternName="PatternWoodFloorV";
-		scenes.scenes[0].scenery[0].comment="scenery comment 0";
-		scenes.scenes[0].scenery[0].tilesetIndex=0;
-		scenes.scenes[0].scenery[0].highPriority=false;
-		scenes.scenes[0].scenery[0].paletteNumber=0;
-		scenes.scenes[0].scenery[0].repeat=13;
-		scenes.scenes[0].scenery[0].layer="VDP_VRAM_WRITE_B";
-		scenes.scenes[0].scenery[0].row="00000000";
-		scenes.scenes[0].scenery[0].column="00000000";
-		scenes.scenes[0].text=new SceneText[1];
-		scenes.scenes[0].text[0]=new SceneText();
-		scenes.scenes[0].text[0].stringLabel="StoreSignFiction";
-		scenes.scenes[0].text[0].comment="text comment 0";
-		scenes.scenes[0].text[0].highPriority=false;
-		scenes.scenes[0].text[0].paletteNumber=2;
-		scenes.scenes[0].text[0].layer="VDP_VRAM_WRITE_A";
-		scenes.scenes[0].text[0].row="08000000";
-		scenes.scenes[0].text[0].column="00040000";
-		scenes.scenes[0].objects=new SceneObject[1];
-		scenes.scenes[0].objects[0]=new SceneObject();
-		scenes.scenes[0].objects[0].id="OBJ_SCENE_TBOOKS_FICTION";
-		scenes.scenes[0].objects[0].x=136;
-		scenes.scenes[0].objects[0].width=71;
-		scenes.scenes[0].objects[0].y=264;
-		scenes.scenes[0].objects[0].height=40;
-		scenes.scenes[0].collisionDataName="TBooksCollisionStart";
-		scenes.scenes[0].exitIds=new String[4];
-		scenes.scenes[0].exitIds[0]="$FFFF";
-		scenes.scenes[0].exitIds[1]="SCENE_ID_WWHALL";
-		scenes.scenes[0].exitIds[2]="$FFFF";
-		scenes.scenes[0].exitIds[3]="$FFFF";
-		scenes.scenes[0].npcLocations=new SceneNpcLocation[1];
-		scenes.scenes[0].npcLocations[0]=new SceneNpcLocation();
-		scenes.scenes[0].npcLocations[0].x=162;
-		scenes.scenes[0].npcLocations[0].y=218;
-		scenes.scenes[0].npcLocations[0].direction="DIRECTION_DOWN";
-		scenes.scenes[0].npcLocations[0].movementFrequency=65535;
-		scenes.scenes[0].npcLocations[0].movementPatternName="NullMovement";
-		scenes.scenes[0].bgmName="BGM_Mall";
+		scenes.scenePaths=new String[1];
+		scenes.scenePaths[0]="/design/scene-json/tbooks.json";
 		instructions.scenes=scenes;
 		
 		/* ***********************************************************

@@ -39,6 +39,7 @@ import com.google.gson.Gson;
 import com.huguesjohnson.PathResolver;
 import com.huguesjohnson.ZipUtil;
 import com.huguesjohnson.retailclerk.build.objects.PaletteMap;
+import com.huguesjohnson.retailclerk.build.objects.Scene;
 import com.huguesjohnson.retailclerk.build.objects.Tileset;
 
 public class MainBuild{
@@ -134,6 +135,17 @@ public class MainBuild{
 			}else{
 				System.out.println("memoryMap not defined, skipping task.");
 			}
+
+			/* ***********************************************************
+			* Build constants
+			*********************************************************** */
+			if(instructions.constants!=null){
+				BuildConstants.build(
+						basePath,
+						instructions.constants);
+			}else{
+				System.out.println("constants not defined, skipping task.");
+			}
 			
 			/* ***********************************************************
 			* Build collision data
@@ -183,7 +195,13 @@ public class MainBuild{
 			* Build scenes
 			*********************************************************** */
 			if(instructions.scenes!=null){
-				BuildScenes.build(basePath,instructions.scenes,tileMap);
+				int length=instructions.scenes.scenePaths.length;
+				Scene[] scenes=new Scene[length];
+				for(int i=0;i<length;i++){
+					String sceneJson=Files.readString(Paths.get(basePath+instructions.scenes.scenePaths[i]));
+					scenes[i]=(new Gson()).fromJson(sceneJson,Scene.class);
+				}
+				BuildScenes.build(basePath,basePath+instructions.scenes.includeFilePath,scenes,tileMap);
 			}else{
 				System.out.println("scenes not defined, skipping task.");
 			}

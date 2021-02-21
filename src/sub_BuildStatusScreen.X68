@@ -14,17 +14,17 @@ BuildStatusScreen:
 	;---------------------------------------------------------------------------
 	; determine which screen to draw
 	;---------------------------------------------------------------------------
-	cmpi.w	#MENU_SCREEN_PAGE_HELP,(MEM_MENU_SCREEN_PAGE)
+	cmpi.w	#MENU_PAGE_HELP,(MEM_MENU_SCREEN_PAGE)
 	beq.w	BuildStatusScreenHelp
-	cmpi.w	#MENU_SCREEN_PAGE_DATA,(MEM_MENU_SCREEN_PAGE)
+	cmpi.w	#MENU_PAGE_DATA,(MEM_MENU_SCREEN_PAGE)
 	beq.w	BuildStatusScreenData
-	cmpi.w	#MENU_SCREEN_PAGE_STATUS,(MEM_MENU_SCREEN_PAGE)
+	cmpi.w	#MENU_PAGE_STATUS,(MEM_MENU_SCREEN_PAGE)
 	beq.w	BuildStatusScreenStatus
 ;---------------------------------------------------------------------------
 ; build the map screen
 ;---------------------------------------------------------------------------
 BuildStatusScreenMap:
-	move.w	#MENU_PAGE_MAP,(MEM_MENU_SCREEN_PAGE) ; just in case I did something dumb
+	move.w	#MENU_PAGE_MAP,(MEM_MENU_SCREEN_PAGE) ; in case I did something dumb
 	move.w	#$0000,(MEM_MENU_SELECTION)	; first menu item is selected 
 	;---------------------------------------------------------------------------
 	; determine spot for "you are here" icon

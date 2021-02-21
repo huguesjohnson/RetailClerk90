@@ -189,6 +189,7 @@ ProcessStatusScreenACButtonPressed:
 .NoFastTravel
 	lea	SceneMenuMapNoTravel,a6	; address of the scene for the map screen
 .DrawMap
+	adda.l	#$2,a6	; skip scene id before branching to DrawScene
 	bsr.w	DrawScene	; branch to subroutine to draw the scene
 	bsr.w	BuildStatusScreen	; build the status screen
 ;	bsr.w	FadeIn	; fade in the status screen
@@ -198,6 +199,7 @@ ProcessStatusScreenACButtonPressed:
 	bne.s	.2
 	move.w	d6,(MEM_MENU_SCREEN_PAGE)
 	lea	SceneMenuStatus,a6	; address of the scene for the status screen
+	adda.l	#$2,a6	; skip scene id before branching to DrawScene
 	bsr.w	DrawScene	; branch to subroutine to draw the scene
 	bsr.w	BuildStatusScreen	; build the status screen
 ;	bsr.w	FadeIn	; fade in the status screen
@@ -207,6 +209,7 @@ ProcessStatusScreenACButtonPressed:
 	bne.s	.3
 	move.w	d6,(MEM_MENU_SCREEN_PAGE)
 	lea	SceneMenuData,a6	; address of the scene for the status screen
+	adda.l	#$2,a6	; skip scene id before branching to DrawScene
 	bsr.w	DrawScene	; branch to subroutine to draw the scene
 	bsr.w	BuildStatusScreen	; build the status screen
 ;	bsr.w	FadeIn	; fade in the status screen
@@ -216,6 +219,7 @@ ProcessStatusScreenACButtonPressed:
 	bne.s	.4
 	move.w	d6,(MEM_MENU_SCREEN_PAGE)
 	lea	SceneMenuHelp,a6	; address of the scene for the status screen
+	adda.l	#$2,a6	; skip scene id before branching to DrawScene
 	bsr.w	DrawScene	; branch to subroutine to draw the scene
 	bsr.w	BuildStatusScreen	; build the status screen
 ;	bsr.w	FadeIn	; fade in the status screen
@@ -387,17 +391,17 @@ ProcessStatusScreenUpdateSelectorXY:
 .1 ; navigating the page-specific menus
 	subq	#MAX_MENU_PAGE+$0001,d6
 	; no menu to navigate on the help page
-	;cmpi.w	#MENU_SCREEN_PAGE_HELP,(MEM_MENU_SCREEN_PAGE)
+	;cmpi.w	#MENU_PAGE_HELP,(MEM_MENU_SCREEN_PAGE)
 	;bne.s	.2
 	;lea	MenuNavigationTable,a6	; point a6 to the lookup table for the menu
 	;bra.s	ProcessStatusScreenUpdateSelectorXYUpdateVDP
 ;.2
-	cmpi.w	#MENU_SCREEN_PAGE_DATA,(MEM_MENU_SCREEN_PAGE)
+	cmpi.w	#MENU_PAGE_DATA,(MEM_MENU_SCREEN_PAGE)
 	bne.s	.3
 	lea	DataNavigationTable,a6	; point a6 to the lookup table for the data menu
 	bra.s	ProcessStatusScreenUpdateSelectorXYUpdateVDP
 .3	
-	cmpi.w	#MENU_SCREEN_PAGE_STATUS,(MEM_MENU_SCREEN_PAGE)
+	cmpi.w	#MENU_PAGE_STATUS,(MEM_MENU_SCREEN_PAGE)
 	bne.s	.4
 	; TODO - UPDATE TO CORRECT TABLE
 	lea	StatusNavigationTable,a6	; point a6 to the lookup table for the menu

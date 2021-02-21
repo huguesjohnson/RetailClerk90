@@ -31,6 +31,6 @@ import com.huguesjohnson.retailclerk.build.objects.Scene;
 public class SceneParameters implements Serializable{
 	private static final long serialVersionUID=666L;
 
-	public Scene[] scenes;
+	public String[] scenePaths;
 	public String includeFilePath;
 }

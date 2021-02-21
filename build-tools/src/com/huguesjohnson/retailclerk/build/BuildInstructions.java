@@ -28,6 +28,7 @@ import java.io.Serializable;
 
 import com.huguesjohnson.retailclerk.build.parameters.AssemblyParameters;
 import com.huguesjohnson.retailclerk.build.parameters.CollisionDataParameters;
+import com.huguesjohnson.retailclerk.build.parameters.ConstantFileParameters;
 import com.huguesjohnson.retailclerk.build.parameters.HeaderParameters;
 import com.huguesjohnson.retailclerk.build.parameters.MemoryMapParameters;
 import com.huguesjohnson.retailclerk.build.parameters.PackageParameters;
@@ -54,6 +55,11 @@ public class BuildInstructions implements Serializable{
 	*********************************************************** */
 	public MemoryMapParameters memoryMap;
 
+	/* ***********************************************************
+	* Constants
+	*********************************************************** */
+	public ConstantFileParameters constants;
+	
 	/* ***********************************************************
 	* Collision data
 	*********************************************************** */

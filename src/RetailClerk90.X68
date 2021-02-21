@@ -7,40 +7,31 @@
 ; Visit http://HuguesJohnson.com/ for random articles about this project.
 ; 
 ; General program notes:
-; 	-there is a lot of copy and paste code from Retail Clerk '89
-; 	-there are a lot of opportunities to optimize this code
+; 	-this is largely an optimization & re-organization of Retail Clerk '89
+; 	-there are many opportunities to optimize this code
 ;*******************************************************************************
-
-	org	$000000
 
 ;*******************************************************************************
 ; constants
 ;*******************************************************************************
-
-;-------------------------------------------------------------------------------
-; common constants
-;-------------------------------------------------------------------------------
-	include 'const_MegaDrive.X68'
-
 ;-------------------------------------------------------------------------------
 ; memory map
 ;-------------------------------------------------------------------------------
 	include 'const_MemoryMap.X68'
+;-------------------------------------------------------------------------------
+; general and game-specific constants
+;-------------------------------------------------------------------------------
+	include 'inc_Constants.X68'
+;-------------------------------------------------------------------------------
+; other generated constants
+;-------------------------------------------------------------------------------
+	include 'const_CharacterIDs.X68'			
 
-;-------------------------------------------------------------------------------
-; program-specific constants
-;-------------------------------------------------------------------------------
-	include 'const_GameSettings.X68'
-	include 'const_ActionIDs.X68'
-	include 'const_Flags.X68'
-	include 'const_MemNPCLocations.X68'
-	include 'const_MenuPages.X68'
-	include 'const_ObjectIDs.X68'
-	include 'const_Objectives.X68'
-	include	'const_RomMap.X68'
-	include 'const_SceneIDs.X68'
-	include	'const_ScriptedEventCommands.X68'
-	include	'const_StructFields.X68'
+;*******************************************************************************
+; start of program
+;*******************************************************************************
+
+	org	$000000
 
 ;*******************************************************************************
 ; vectors
@@ -143,11 +134,6 @@ TrapException:
 	; auto-generated include file
 	;-------------------------------------	
 	include 'inc_Palettes.X68'
-	;-------------------------------------	
-	; used in text-only scenes
-	;-------------------------------------	
-PaletteBlack:
-	include 'palettes/Black.X68'
 
 ;*******************************************************************************
 ; patterns
@@ -239,16 +225,9 @@ BGM_Mystery:
 ;*******************************************************************************
 ; tiles
 ;*******************************************************************************
-TransparentTileStart:
-	dc.l	$00000000
-	dc.l	$00000000
-	dc.l	$00000000
-	dc.l	$00000000
-	dc.l	$00000000
-	dc.l	$00000000
-	dc.l	$00000000
-	dc.l	$00000000
-TransparentTileEnd:
+	;--------------------------------------	
+	; both are auto-generated include files
+	;--------------------------------------	
 	include 'inc_Tiles.X68'
 	include	'inc_SpriteTiles.X68'
 

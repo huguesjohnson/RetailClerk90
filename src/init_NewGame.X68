@@ -59,7 +59,11 @@ DisplayLegalSceneLoop:
 	dbf	d7,DisplayLegalSceneLoop	; loop
 
 LoadTitleScene:
+	if _DEBUG_
+	lea	SceneTitleDebug,a6	; address of the scene for the title screen
+	else
 	lea	SceneTitle,a6	; address of the scene for the title screen
+	endif
 	bsr.w	LoadScene	; branch to LoadScene subroutine
 	bsr.w	FadeIn	; fade in to the intro scene
 	move.w	#TITLE_SCREEN_COUNTER_START,(MEM_INTRO_SCENE_COUNTER)

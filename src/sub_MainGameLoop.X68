@@ -157,6 +157,7 @@ TestCButtonPressed:	; test if the player pressed the C button
 .NoFastTravel
 	lea	SceneMenuMapNoTravel,a6	; address of the scene for the map screen
 .DrawMap
+	adda.l	#$2,a6	; skip scene id before branching to DrawScene
 	bsr.w	DrawScene	; branch to subroutine to draw the scene
 	bsr.w	BuildStatusScreen	; build the status screen
 	bsr.w	FadeIn	; fade in the status screen

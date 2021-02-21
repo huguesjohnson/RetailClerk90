@@ -89,9 +89,21 @@ LoadSceneLoadExits:
 ;-------------------------------------------------------------------------------
 LoadSceneLoadNPCData:
 	move.w	(a6)+,d7	; number of NPC slots in the scene
+	;---------------------------------------------------------------------------
+	; this test prevents a crash but also probably creates a new bug
+	; the old NPC data should be cleared in this case
+	; really that would make sense to do before loading the scene anyway
+	; maybe I did that already and forgot
+	;---------------------------------------------------------------------------
+	cmpi.w	#$FFFF,d7	; test for no NPCs
+	beq.s	LoadSceneBuildNPCObjectList	; skip loading npcs
 	moveq	#$0002,d6	; use d6 to track sprite ID
 	move.w	#NPC0_BASE_PATTERN,d5	; use d5 to track the base tile
 	lea	MEM_NPC0_SPRITE_ID,a0	; point a0 to the first NPC sprite
+	;---------------------------------------------------------------------------
+	; similar to the previous comment...
+	; this test prevents a crash but also probably creates a new bug
+	;---------------------------------------------------------------------------
 	cmpi.w	#(NPC_LIST_LENGTH-1),d7	; test to defend against my own stupidity
 	bls.s	LoadSceneLoadNPCDataLoop	; did I add more NPCs than supported?
 	move.w	#(NPC_LIST_LENGTH-1),d7	; set d7 to the max possible NPCs
@@ -113,7 +125,7 @@ LoadSceneLoadNPCDataLoop:
 	dbra    d7,LoadSceneLoadNPCDataLoop
 
 	bsr.w	LoadSceneLoadNPCSprites
-
+LoadSceneBuildNPCObjectList:
 	; once all NPCs have been added, rebuild the object list
 	bsr.w	BuildNPCObjectList
 

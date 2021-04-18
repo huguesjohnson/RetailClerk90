@@ -8,6 +8,7 @@
 	},
 	"constants":{
 		"fileMap":{
+			"design/constants/Characters.csv":"src/const_Characters.X68",
 			"design/constants/MegaDrive.csv":"src/const_MegaDrive.X68",
 			"design/constants/RomMap.csv":"src/const_RomMap.X68",
 			"design/constants/RetailClerkBase.csv":"src/const_RetailClerkBase.X68",

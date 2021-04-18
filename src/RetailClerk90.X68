@@ -79,23 +79,23 @@ HBlank:
 
 VBlank:
 	bset	#STATE_FLAG_VBLANK,(MEM_GAME_STATE)	; set vblank flag
-	addq	#$1,(MEM_VBLANK_COUNTER)	; increment debug counter 
-	addq	#$1,(MEM_FRAME_COUNTER)		; increment frame counter
+	addq	#$1,(MEM_VBLANK_COUNTER) ; increment debug counter 
+	addq	#$1,(MEM_FRAME_COUNTER) ; increment frame counter
 	bpl.s	VBlankReadJoypads
 	and.w	#$0000,(MEM_FRAME_COUNTER)
 
 VBlankReadJoypads:
-	bsr.w	ReadJoypads					; read controllers
+	bsr.w	ReadJoypads ; read controllers
 
 VBlankOrderSprites:
 	; test if sprites need to be re-ordered
-	tst.w	(MEM_SPRITE_Y_ORDER_CHANGED)	; has the sprite Y order changed?
-	beq.s	VBlankExit	; hasn't changed, no need to order sprites
-	move.l	(MEM_GAME_STATE),d0	; copy current game state to d0
-	btst.l	#STATE_FLAG_EXPLORING,d0	; test game state
-	beq.s	VBlankExit	; not exploring, no need to order sprites
+	tst.w	(MEM_SPRITE_Y_ORDER_CHANGED) ; has the sprite Y order changed?
+	beq.s	VBlankExit ; hasn't changed, no need to order sprites
+	move.l	(MEM_GAME_STATE),d0 ; copy current game state to d0
+	btst.l	#STATE_FLAG_EXPLORING,d0 ; test game state
+	beq.s	VBlankExit ; not exploring, no need to order sprites
 	; else order sprites and loop
-	bsr.w	OrderSprites	; reorder the sprites
+	bsr.w	OrderSprites ; reorder the sprites
 
 VBlankExit:
 	rte

@@ -24,7 +24,11 @@ THE SOFTWARE.
 
 package com.huguesjohnson.retailclerk.build.parameters;
 
-public class MemoryMapParameters{
+import java.io.Serializable;
+
+public class MemoryMapParameters implements Serializable{
+	private static final long serialVersionUID=22122L;
+
 	public String sourceFile;
 	public String destinationFile;
 	public String baseAddress;

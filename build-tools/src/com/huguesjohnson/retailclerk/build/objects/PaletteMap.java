@@ -28,7 +28,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class PaletteMap implements Serializable{
-	private static final long serialVersionUID=666L;
+	private static final long serialVersionUID=1641L;
 
 	public String name;
 	public String sourceFilePath;

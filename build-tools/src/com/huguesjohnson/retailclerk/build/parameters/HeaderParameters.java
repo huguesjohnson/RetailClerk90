@@ -24,7 +24,11 @@ THE SOFTWARE.
 
 package com.huguesjohnson.retailclerk.build.parameters;
 
-public class HeaderParameters{
+import java.io.Serializable;
+
+public class HeaderParameters implements Serializable{
+	private static final long serialVersionUID=476L;
+	
 	public String filePath;
 	public String copyright;
 	public String cartName;

@@ -27,7 +27,7 @@ package com.huguesjohnson.retailclerk.build.parameters;
 import java.io.Serializable;
 
 public class AssemblyParameters implements Serializable{
-	private static final long serialVersionUID=666L;
+	private static final long serialVersionUID=1232L;
 
 	public String assemblerPath;
 	public String arguments;

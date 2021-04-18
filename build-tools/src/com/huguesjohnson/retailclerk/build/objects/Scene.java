@@ -27,7 +27,7 @@ package com.huguesjohnson.retailclerk.build.objects;
 import java.io.Serializable;
 
 public class Scene implements Serializable{
-	private static final long serialVersionUID=666L;
+	private static final long serialVersionUID=6489L;
 
 	public String name;
 	public String id;

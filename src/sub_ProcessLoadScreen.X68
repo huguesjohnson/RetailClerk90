@@ -21,7 +21,7 @@ ProcessLoadScreenTestStart:
 	move.w	(MEM_MENU_SELECTION),d7	; lookup if this is a valid save slot
 	bsr.w	LoadGame ;	load the game from SRAM
 	bsr.w	ReloadCurrentScene ; reload current scene (needed to fix sprites)
-	bra.w	MainGameLoop ;	return to start of game loop	
+	bra.w	ExitProcessProcessLoadScreen ;	exit	
 ProcessLoadScreenTestDpad:
 	; process dpad press
 	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
@@ -65,4 +65,4 @@ ProcessLoadScreenMoveSelector:
 	move.l	d6,(VDP_CONTROL)	; set write location in VDP
 	move.w	#$00C8,(VDP_DATA)	; copy the new x-coordinate
 ExitProcessProcessLoadScreen:
-	bra.w	MainGameLoop
+	rts

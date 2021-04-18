@@ -26,10 +26,8 @@ package com.huguesjohnson.retailclerk.build.parameters;
 
 import java.io.Serializable;
 
-import com.huguesjohnson.retailclerk.build.objects.Scene;
-
 public class SceneParameters implements Serializable{
-	private static final long serialVersionUID=666L;
+	private static final long serialVersionUID=39L;
 
 	public String[] scenePaths;
 	public String includeFilePath;

@@ -28,7 +28,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Tileset implements Serializable{
-	private static final long serialVersionUID=666L;
+	private static final long serialVersionUID=10131L;
 	
 	public String name;
 	public String palette;

@@ -5,21 +5,71 @@ MainGameLoop:
 	bsr.w	WaitVBlank ; wait for vblank to complete
 	addq	#$1,(MEM_MAINLOOP_COUNTER) ; increment counter
 	move.l	(MEM_GAME_STATE),d7	; copy current game state to d7
+;-------------------------------------------------------------------------------
+; title screen
+;-------------------------------------------------------------------------------
+TestTitleScreen:
+	move.l	(MEM_GAME_STATE),d7	; copy current game state to d7
+	btst.l	#STATE_FLAG_TITLE_SCREEN,d7 ; test game state
+	beq.s	TestDebugMenu ; not on the title screen, move to next test
+	bsr.w	ProcessTitleScreen ; process the title screen
+	bra.w	MainGameLoop ; return to start of game loop	
+;-------------------------------------------------------------------------------
+; debug menu
+;-------------------------------------------------------------------------------
+TestDebugMenu:
 	if _DEBUG_
 	btst.l	#STATE_FLAG_DEBUG_MENU,d7 ; test game state
-	bne.w	ProcessDebugScreen
+	beq.s	TestLoadScreen ; not on the debug screen, move to next test
+	bsr.w	ProcessDebugScreen
+	bra.w	MainGameLoop ; return to start of game loop
 	endif
-	; test if load screen is showing
+;-------------------------------------------------------------------------------
+; load screen
+;-------------------------------------------------------------------------------
+TestLoadScreen:
 	btst.l	#STATE_FLAG_LOAD_MENU,d7 ; test game state
-	bne.w	ProcessLoadScreen
-	; test if exploring	
-	btst.l	#STATE_FLAG_EXPLORING,d7 ; test game state
-	beq.w	TestTitleScreen	; not exploring, branch
+	beq.s	TestIntroScreen ; not on the load screen, move to next test
+	bsr.w	ProcessLoadScreen
+	bra.w	MainGameLoop ; return to start of game loop
+;-------------------------------------------------------------------------------
+; day intro screen
+;-------------------------------------------------------------------------------
+TestIntroScreen:
+	btst.l	#STATE_FLAG_INTRO_SCREEN,d7 ; test game state
+	beq.w	TestEndScreen ; not on the intro screen, move to next test
+	bsr.w	ProcessIntroScreen ; process intro screen
+	bra.w	MainGameLoop ; return to start of game loop	
+;-------------------------------------------------------------------------------
+; end screen
+;-------------------------------------------------------------------------------
+TestEndScreen:
+	btst.l	#STATE_FLAG_END_SCREEN,d7 ; test game state
+	beq.s	TestPauseToggle	; not on the end screen, move to next test
+	; no separate subroutine since the logic here is short
+TestEndScreenTestStartPressed:
+	move.b	(MEM_CONTROL_PRESSED),d6 ; copy pressed buttons to d6
+	andi.b	#BUTTON_START,d6 ; test if the start button was pressed
+	beq.w	MainGameLoop ; start button not pressed, loop
+	; --------------------------------------------------------------------------
+	; start button was pressed on the end screen - loop back to the beginning
+	; --------------------------------------------------------------------------
+	; clear MEM_CONTROL_PRESSED to prevent entering pause state immediately
+	move.w	#$0000,(MEM_CONTROL_PRESSED)
+EndScreenRestart:
+	bra.w	NewGame	; restart
 ;-------------------------------------------------------------------------------
 ; pause/unpause
+; -this is first because every game state from here on out can be paused
+; -none of the screens tested before this can be paused
 ;-------------------------------------------------------------------------------
 TestPauseToggle:
-	move.l	(MEM_GAME_STATE),d7	; copy current game state to d7
+	; ---------------------------------------------------------
+	; this test should never fail unless I did something bad
+	; ---------------------------------------------------------
+	btst.l	#STATE_FLAG_EXPLORING,d7 ; test game state
+	beq.w	MainGameLoop ; start over
+	;move.l	(MEM_GAME_STATE),d7	; copy current game state to d7
 	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
 	andi.b	#BUTTON_START,d6	; test if the start button was pressed
 	beq.s	TestPause	; start button is not pressed test if still paused
@@ -129,7 +179,7 @@ TestDialogOpen:
 TestStatusScreen:
 	move.l	(MEM_GAME_STATE),d7	; copy current game state to d7
 	btst.l	#STATE_FLAG_STATUS_SCREEN,d7 ; test game state
-	beq.w	TestExploring	; not in status screen, move to next test
+	beq.s	TestExploring	; not in status screen, move to next test
 	;---------------------------------------------------------------------------
 	; player is on the status screen
 	;---------------------------------------------------------------------------
@@ -138,11 +188,12 @@ TestStatusScreen:
 	bra.w	MainGameLoop	; return to start of game loop
 ;-------------------------------------------------------------------------------
 ; determine if the player is in free exploration mode
+; there "shouldn't" be a way to reach here unless that's the case
 ;-------------------------------------------------------------------------------
 TestExploring:
 	move.l	(MEM_GAME_STATE),d7	; copy current game state to d7
 	btst.l	#STATE_FLAG_EXPLORING,d7	; test game state
-	beq.w	TestTitleScreen	; not exploring, branch to next test
+	beq.w	MainGameLoopEnd	; not exploring, branch
 TestCButtonPressed:	; test if the player pressed the C button
 	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
 	andi.b	#BUTTON_C,d6	; test if the C button was pressed
@@ -253,185 +304,6 @@ MainGameLoopUpdateNPCSpritesLoopEnd:
 	subq	#$1,(MEM_NPC_LOOP_COUNTER)	; decrement loop counter
 	bgt.w	MainGameLoopUpdateNPCSpritesLoop	; branch
 	; done looping through NPC sprites
-	bra.w	MainGameLoop	; return to start of game loop
-;-------------------------------------------------------------------------------
-; title screen
-;-------------------------------------------------------------------------------
-TestTitleScreen:
-	move.l	(MEM_GAME_STATE),d7	; copy current game state to d7
-	btst.l	#STATE_FLAG_TITLE_SCREEN,d7 ; test game state
-	beq.w	TestEndScreen	; not on the title screen, move to next test
-TestTitleScreenTestStartPressed:
-	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
-	andi.b	#BUTTON_START,d6	; test if the start button was pressed
-	;---------------------------------------------------------------------------
-	; handle selector movement
-	;---------------------------------------------------------------------------
-	bne.w	TestTitleLoadSelectedScreen	; start button pressed, load next screen
-TestTitleScreenTestDPadPressed:
-	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
-	andi.b	#BUTTON_UP,d6	; test if the up button was pressed
-	bne.s	TestTitleScreenDecrementSelector	; dpad pressed, branch
-	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
-	andi.b	#BUTTON_DOWN,d6	; test if the down button was pressed
-	bne.s	TestTitleScreenIncrementSelector	; dpad pressed, branch
-	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
-	andi.b	#BUTTON_LEFT,d6	; test if the left button was pressed
-	bne.s	TestTitleScreenDecrementSelector	; dpad pressed, branch
-	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
-	andi.b	#BUTTON_RIGHT,d6	; test if the right button was pressed
-	bne.s	TestTitleScreenIncrementSelector	; dpad pressed, branch
-	bra.s	TestTitleScreenTestStartPressedLoop	; dpad not pressed
-	if _DEBUG_
-TestTitleScreenIncrementSelector:
-	cmpi.w	#$0002,(MEM_MENU_SELECTION)
-	bne	.1
-	move.w	#$0000,(MEM_MENU_SELECTION)
-	bra.s	TestTitleScreenMoveSelector
-.1	
-	add.w	#$0001,(MEM_MENU_SELECTION)
-	bra.s	TestTitleScreenMoveSelector
-TestTitleScreenDecrementSelector:
-	tst.w	(MEM_MENU_SELECTION)
-	bne	.2
-	move.w	#$0002,(MEM_MENU_SELECTION)
-	bra.s	TestTitleScreenMoveSelector
-.2	
-	sub.w	#$0001,(MEM_MENU_SELECTION)
-	else
-TestTitleScreenIncrementSelector:
-	cmpi.w	#$0001,(MEM_MENU_SELECTION)
-	bne	.1
-	move.w	#$0000,(MEM_MENU_SELECTION)
-	bra.s	TestTitleScreenMoveSelector
-.1	
-	add.w	#$0001,(MEM_MENU_SELECTION)
-	bra.s	TestTitleScreenMoveSelector
-TestTitleScreenDecrementSelector:
-	tst.w	(MEM_MENU_SELECTION)
-	bne	.2
-	move.w	#$0001,(MEM_MENU_SELECTION)
-	bra.s	TestTitleScreenMoveSelector
-.2	
-	sub.w	#$0001,(MEM_MENU_SELECTION)
-	endif
-TestTitleScreenMoveSelector:
-	move.w	(MEM_MENU_SELECTION),d7	; menu position
-	mulu.w	#$10,d7	; 16 pixels
-	add.w	#$0118,d7	; starting y-coordinate
-	move.l	#VDP_VRAM_WRITE_SPRITE,d6	; add to sprite table address
-	move.l	d6,(VDP_CONTROL)	; set write location in VDP
-	move.w	d7,(VDP_DATA)	; copy the new y-coordinate;
-TestTitleScreenTestStartPressedLoop:
-	subq	#$1,(MEM_INTRO_SCENE_COUNTER)	; decrement counter
-	bne.w	MainGameLoop	; loop until the counter is zero
-	; if still on the intro screen restart, if on load screen wait it out
-	move.l	(MEM_GAME_STATE),d7	; copy game state to d7
-	btst.l	#STATE_FLAG_LOAD_MENU,d7	; test if on load menu
-	bne.w	MainGameLoop	; flag is set, keep looping
-	bra.w	NewGame	; counter is zero, restart
-TestTitleLoadSelectedScreen:
-	; clear MEM_CONTROL_PRESSED to prevent entering pause state immediately
-	move.w	#$0000,(MEM_CONTROL_PRESSED)
-	; --------------------------------------------------------------------------
-	; start button was pressed on the title screen
-	; --------------------------------------------------------------------------
-	bclr.l	#STATE_FLAG_TITLE_SCREEN,d7 ; clear game state flag
-	tst.w	(MEM_MENU_SELECTION)	; which item was selected?
-	beq.s	TestTitleLoadNewGame	; new game selected
-	if _DEBUG_
-	cmpi.w	#$0002,(MEM_MENU_SELECTION)	; debug menu selected?
-	beq.s	TestTitleLoadDebugMenu	; branch to debug menu
-	endif
-	; switch to load screen
-	move.w	#$0000,(MEM_MENU_SELECTION)	; clear menu selection
-	bset.l	#STATE_FLAG_LOAD_MENU,d7 ; set debug menu flag
-	move.l	d7,(MEM_GAME_STATE)	; save updated game state
-	lea	SceneLoad,a6	; address of the scene for the debug menu
-	bsr.w	LoadScene	; branch to LoadScene subroutine
-	bsr.w	LoadPlayerSprite	; load the player sprite (also loads sprite 0)
-	; hide the player sprite
-	move.w	#$0000,(MEM_PLAYER_SPRITE_X)
-	move.w	#$0000,(MEM_PLAYER_SPRITE_Y) 
-	bsr.w	FixSprites
-	; build and show the load screen
-	bsr.w	BuildLoadScreen	; builds the text on the screen
-	bsr.w	FadeIn	; fade in to the new scene
-	bra.w	MainGameLoop	;	return to start of game loop
-	if _DEBUG_
-TestTitleLoadDebugMenu:
-	move.w	#$0000,(MEM_MENU_SELECTION)	; clear menu selection
-	bset.l	#STATE_FLAG_DEBUG_MENU,d7 ; set debug menu flag
-	move.l	d7,(MEM_GAME_STATE)	; save updated game state
-	lea	SceneDebugMenu,a6	; address of the scene for the debug menu
-	bsr.w	LoadScene	; branch to LoadScene subroutine
-	bsr.w	LoadPlayerSprite	; load the player sprite (also loads sprite 0)
-	bsr.w	FadeIn	; fade in to the new scene
-	bra.w	MainGameLoop	;	return to start of game loop
-	endif
-TestTitleLoadNewGame:
-	bset.l	#STATE_FLAG_INTRO_SCREEN,d7 ; set intro screen flag
-	move.l	d7,(MEM_GAME_STATE)	; save updated game state
-	; set the intro screen counter
-	move.w	#INTRO_SCREEN_COUNTER_START,(MEM_INTRO_SCENE_COUNTER)
-	lea	SceneIntroDay00,a6	; address of the scene for the title screen
-	bsr.w	LoadScene	; branch to LoadScene subroutine
-	bsr.w	FadeIn	; fade in to the new scene
-	bra.w	MainGameLoop	;	return to start of game loop
-;-------------------------------------------------------------------------------
-; end screen
-;-------------------------------------------------------------------------------
-TestEndScreen:
-	btst.l	#STATE_FLAG_END_SCREEN,d7 ; test game state
-	beq.w	TestIntroScreen	; not on the end screen, move to next test
-TestEndScreenTestStartPressed:
-	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
-	andi.b	#BUTTON_START,d6	; test if the start button was pressed
-	beq.w	MainGameLoop	; start button not pressed, loop
-	; --------------------------------------------------------------------------
-	; start button was pressed on the end screen - loop back to the beginning
-	; --------------------------------------------------------------------------
-	; clear MEM_CONTROL_PRESSED to prevent entering pause state immediately
-	move.w	#$0000,(MEM_CONTROL_PRESSED)
-EndScreenRestart:
-	bra.w	NewGame	; restart
-;-------------------------------------------------------------------------------
-; day intro screen
-;-------------------------------------------------------------------------------
-TestIntroScreen:
-	btst.l	#STATE_FLAG_INTRO_SCREEN,d7 ; test game state
-	beq.w	MainGameLoopEnd	; not on the intro screen, move to next test
-	tst.w	(MEM_INTRO_SCENE_COUNTER)	; is the counter already zero
-	beq.s	TestIntroScreenWaitButtonPress	; wait for button press
-	subq	#$1,(MEM_INTRO_SCENE_COUNTER)	; decrement counter
-	bne.w	MainGameLoop	; loop until the counter is zero
-TestIntroScreenWaitButtonPress:
-	; counter is zero, test if button was pressed
-	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
-	andi.b	#BUTTON_START,d6	; test if the start button was pressed
-	beq.w	MainGameLoop	; loop until start is pressed
-TestIntroScreenLoadScene:
-	; load the next scene
-	bclr.l	#STATE_FLAG_INTRO_SCREEN,d7 ; clear game state flag
-	bset.l	#STATE_FLAG_EXPLORING,d7	; initial mode is exploring
-	move.l	d7,(MEM_GAME_STATE)	; save updated game state
-	; determine which scene to load
-	move.w	(MEM_ACTIVE_SCENE_EXIT_N),d6	; copy any exit to d6
-	mulu.w	#LWORD_SIZE,d6	; SceneDefinitionTable entries are long values
-	lea	SceneDefinitionTable,a5	; point to scene table
-	adda.w	d6,a5	; move to offset location
-	move.l	(a5),a6	; a5 has the address of the scene to load
-	bsr.w	LoadScene	; branch to LoadScene subroutine
-	bsr.w	LoadPlayerSprite	; load the player sprite
-TestIntroScreenEnd:
-	; reorder all the sprites
-	bsr.w	OrderSprites	; order sprites
-	; workaround to issue where links aren't set if the table is already sorted
-	move.w	#$2700,sr		; disable interrupts
-	bsr.w	SetSpriteLinks
-	move.w	#$2000,sr		; re-enable interrupts
-	move.w	#$0000,(MEM_FRAME_COUNTER)	; reset frame counter
-	bsr.w	FadeIn	; fade in now that everything is setup
 MainGameLoopEnd:
 	bra.w	MainGameLoop	; return to start of game loop
 

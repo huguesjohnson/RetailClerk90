@@ -21,6 +21,10 @@
 
 	include 'sub_ProcessStatusScreen.X68'
 
+	include	'sub_ProcessTitleScreen.X68'
+
+	include	'sub_ProcessIntroScreen.X68'
+
 	include 'sub_ProcessScriptedEvent.X68'
 
 	include	'sub_SetSpritePattern.X68'

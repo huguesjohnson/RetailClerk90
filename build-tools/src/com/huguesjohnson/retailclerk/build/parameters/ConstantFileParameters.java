@@ -28,7 +28,7 @@ import java.io.Serializable;
 import java.util.Map;
 
 public class ConstantFileParameters implements Serializable{
-	private static final long serialVersionUID=666L;
+	private static final long serialVersionUID=556L;
 
 	public Map<String,String> fileMap;
 	public String includeFilePath;

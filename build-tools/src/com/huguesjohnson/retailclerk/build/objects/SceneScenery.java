@@ -27,7 +27,7 @@ package com.huguesjohnson.retailclerk.build.objects;
 import java.io.Serializable;
 
 public class SceneScenery implements Serializable{
-	private static final long serialVersionUID=666L;
+	private static final long serialVersionUID=1641L;
 
 	public String patternName;
 	public String comment;

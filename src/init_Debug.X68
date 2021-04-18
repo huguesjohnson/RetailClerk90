@@ -134,7 +134,7 @@ ProcessDebugScreenMoveSelector:
 .2
 	move.w	#$0080,(VDP_DATA)	; copy the new x-coordinate
 ExitProcessDebugScreen:
-	bra.w	MainGameLoop
+	rts
 
 LaunchDebug00:
 LaunchDebug01:

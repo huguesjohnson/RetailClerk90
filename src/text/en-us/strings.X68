@@ -1,17 +1,4 @@
 ;-------------------------------------------------------------------------------
-; character constants
-;-------------------------------------------------------------------------------
-LF=$0A	; '\n' - used to break text into multiple lines
-FF=$0C	; form feed - used to break text into pages
-FFR=$0D	; form feed & reset dialog style
-ETX=$03	; end of text
-OBJNAMEEND=$1E	; end of object name
-NPCNAMEEND=$1F	; end of NPC name
-ITEMNAMESTART=$1C	; indicator to draw the next item name
-ITEMNAMEEND=$1D	; end of item name
-CHAR_DQUOTE=$22	; ACSII code for double quote character
-
-;-------------------------------------------------------------------------------
 ; title screen
 ;-------------------------------------------------------------------------------
 TitleScreenTextNewGame:
@@ -20,8 +7,6 @@ TitleScreenTextNewGame:
 TitleScreenTextLoadGame:
 	dc.b	"{Load Game",ETX
 
-	if _DEBUG_
-
 TitleScreenTextDebug:
 	dc.b	"{Debug",ETX
 	
@@ -29,17 +14,9 @@ TitleScreenTextFooter:
 	;		"12345678901234567890123456789012345678"
 	dc.b	"       Placeholder Title Screen",ETX
 
-	else
-
-TitleScreenTextDebug:
-	dc.b	ETX
-
-TitleScreenTextFooter:
+TitleScreenTextFooterDebug:
 	;		"12345678901234567890123456789012345678"
 	dc.b	"       Placeholder Title Screen",ETX
-	endif
-
-	if _DEBUG_
 
 	; 28 lines available on the debug screen (28-1 = 1B)
 
@@ -154,41 +131,6 @@ TitleScreenTextFooter:
 	DebugScreenLine1B:
 	;		"12345678901234567890123456789012345678"
 	dc.b	"{(not implemented)  {(not implemented)",ETX
-
-	else
-	
-	DebugScreenLine00:
-	DebugScreenLine01:
-	DebugScreenLine02:
-	DebugScreenLine03:
-	DebugScreenLine04:
-	DebugScreenLine05:
-	DebugScreenLine06:
-	DebugScreenLine07:
-	DebugScreenLine08:
-	DebugScreenLine09:
-	DebugScreenLine0A:
-	DebugScreenLine0B:
-	DebugScreenLine0C:
-	DebugScreenLine0D:
-	DebugScreenLine0E:
-	DebugScreenLine0F:
-	DebugScreenLine10:
-	DebugScreenLine11:
-	DebugScreenLine12:
-	DebugScreenLine13:
-	DebugScreenLine14:
-	DebugScreenLine15:
-	DebugScreenLine16:
-	DebugScreenLine17:
-	DebugScreenLine18:
-	DebugScreenLine19:
-	DebugScreenLine1A:
-	DebugScreenLine1B:
-	dc.b	"",ETX
-
-	endif
-	
 
 ;-------------------------------------------------------------------------------
 ; credits and end screen

@@ -29,7 +29,7 @@ import java.io.Serializable;
 import com.huguesjohnson.retailclerk.build.objects.Sprite;
 
 public class SpriteParameters implements Serializable{
-	private static final long serialVersionUID=666L;
+	private static final long serialVersionUID=19890604L;
 
 	public Sprite[] sprites;
 	public String palette;

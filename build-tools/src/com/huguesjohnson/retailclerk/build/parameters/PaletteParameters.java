@@ -29,7 +29,7 @@ import java.io.Serializable;
 import com.huguesjohnson.retailclerk.build.objects.PaletteMap;
 
 public class PaletteParameters implements Serializable{
-	private static final long serialVersionUID=666L;
+	private static final long serialVersionUID=1010011010L;
 
 	public PaletteMap[] paletteMap;
 	public String includeFilePath;

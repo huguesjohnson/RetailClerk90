@@ -68,24 +68,24 @@
 	dc.w	$0000 ; repeat=0
 	dc.l	VDP_VRAM_WRITE_B+$003C0000+$00000000 ; initial drawing location
 
-	; map icons
+	; map icon - you are here
 	dc.l	Pattern8x8
 	;		%pccvhnnnnnnnnnnn
 	dc.w	%0000000000001111 ; vdp pattern
 	dc.w	$0000 ; repeat=0
 	dc.l	VDP_VRAM_WRITE_B+$00020000+$09800000 ; initial drawing location
 
-	; map icons
+	; map icon - optional event
 	dc.l	Pattern8x8
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000000001111 ; vdp pattern
+	dc.w	%0000000000010000 ; vdp pattern
 	dc.w	$0000 ; repeat=0
 	dc.l	VDP_VRAM_WRITE_B+$00020000+$0A000000 ; initial drawing location
 
-	; map icons
+	; map icon - story event
 	dc.l	Pattern8x8
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000000001111 ; vdp pattern
+	dc.w	%0000000000010001 ; vdp pattern
 	dc.w	$0000 ; repeat=0
 	dc.l	VDP_VRAM_WRITE_B+$00020000+$0A800000 ; initial drawing location
 

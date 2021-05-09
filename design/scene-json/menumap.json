@@ -59,8 +59,9 @@
 		},
 		{
 			"patternName":"Pattern8x8",
-			"comment":"map icons",
+			"comment":"map icon - you are here",
 			"tilesetIndex":3,
+			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
@@ -70,8 +71,9 @@
 		},
 		{
 			"patternName":"Pattern8x8",
-			"comment":"map icons",
+			"comment":"map icon - optional event",
 			"tilesetIndex":3,
+			"tilesetOffset":1,
 			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
@@ -81,8 +83,9 @@
 		},
 		{
 			"patternName":"Pattern8x8",
-			"comment":"map icons",
+			"comment":"map icon - story event",
 			"tilesetIndex":3,
+			"tilesetOffset":2,
 			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,

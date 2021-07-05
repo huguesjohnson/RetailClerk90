@@ -1,0 +1,32 @@
+{
+   "name":"ItemName",
+   "lineLength":10,
+   "formLines":0,
+   "defaultTerminator":"OBJNAMEEND",
+   "defaultLineFeed":"LF",
+   "defaultFormFeed":"FF",
+   "lines":{
+      "ItemNameNothing":{"text":"Nothing"},
+      "ItemNameKeys":{"text":"Keys"},
+      "ItemNameScarf":{"text":"Scarf"},
+      "ItemNameSpecialOrder":{"text":"Book"},
+      "ItemNameVhsTape":{"text":"VHS Tape"},
+      "ItemNameHandwarmer":{"text":"Handwarmer"},
+      "ItemNameMooseAttractant":{"text":"Moose Att."},
+      "ItemNameLetter":{"text":"Letter"},
+      "ItemNameLipstick":{"text":"Lipstick"},
+      "ItemNameShirt":{"text":"Sm. Shirt"},
+      "ItemNameLunch1":{"text":"Lunch"},
+      "ItemNameLunch2":{"text":"Lunch"},
+      "ItemNameTickets":{"text":"Tickets"},
+      "ItemNameHeadband":{"text":"Radio Hdnd"},
+      "ItemNamePortableTv":{"text":"Port. TV"},
+      "ItemNameFmConverter":{"text":"FM Convert."},
+      "ItemNameFlannelShirt":{"text":"F. Shirt"},
+      "ItemNameCoupons":{"text":"Coupon"},
+      "ItemNameLps":{"text":"LPs"},
+      "ItemNameUtilityKnife":{"text":"Util Knife"},
+      "ItemNameMysteryBox":{"text":"MysteryBox"},
+      "ItemNameEarring":{"text":"Earring"}
+   }
+}

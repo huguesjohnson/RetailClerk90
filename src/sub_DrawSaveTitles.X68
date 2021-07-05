@@ -12,7 +12,7 @@ BuildSaveTitlesLoop:
 	bgt	.empty
 	; lookup text
 	mulu.w	#LWORD_SIZE,d6	; multiply by LWORD_SIZE to get offset
-	lea	SaveGameTitles,a5	; point a5 to the lookup table
+	lea	SaveGameTitlesTableStart,a5	; point a5 to the lookup table
 	adda.l	d6,a5	; move to offset
 	move.l	(a5),a0	; point a0 to the first character
 	bra.s	.buildtext

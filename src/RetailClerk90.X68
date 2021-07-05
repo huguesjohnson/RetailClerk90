@@ -178,8 +178,8 @@ TrapException:
 ;*******************************************************************************
 ; lookup tables for text
 ;*******************************************************************************
-	include	'text/table_Text.X68'
-	include	'text/table_CharacterNames.X68'
+	include	'text/table_Text.X68' ; text that is not generated yet
+	include	'text/table_text_gen.X68'
 
 ;*******************************************************************************
 ; action table
@@ -196,8 +196,8 @@ TrapException:
 ;*******************************************************************************
 ; text
 ;*******************************************************************************
-	include 'text/en-us/strings.X68'
-	include 'text/en-us/CharacterNames.X68'
+	include 'text/en-us/strings.X68' ; text that is not generated yet
+	include 'text/en-us/strings_gen.X68'
 
 ;*******************************************************************************
 ; background music

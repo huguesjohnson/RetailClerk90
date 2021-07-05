@@ -115,7 +115,7 @@ TestItemNameStart:
 	andi.w	#$0FFF,d6	; clear the base value
 	; object ID is in d6 now, find the address for the text
 	mulu.w	#LWORD_SIZE,d6	; multiply by LWORD_SIZE to get the offset
-	lea	ItemNameTable,a6	; point a6 to item name table
+	lea	ItemNameTableStart,a6	; point a6 to item name table
 	adda.l	d6,a6	; add offset
 	move.l	(a6),(MEM_DIALOG_TEXT)	; copy value at a6 to MEM_DIALOG_TEXT
 	bra.w	ExitProcessDialog	; exit

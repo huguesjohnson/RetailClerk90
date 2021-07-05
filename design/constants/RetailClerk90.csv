@@ -17,6 +17,9 @@
 ;-------------------------------------------------------------------------------
 FLAG_DAY00_EVENT00,$00,set after helping all customers in your store
 FLAG_DAY00_EVENT01,$01,set after visiting the info desk
+FLAG_NIGHT00_EVENT00,$02,set after scene in ee hall
+FLAG_NIGHT00_EVENT01,$03,set after delivering special order
+FLAG_NIGHT00_EVENT02,$04,set after scene in south hall
 ;
 ;-------------------------------------------------------------------------------
 ; mission event flags - used to track progress within sub-quests 
@@ -179,7 +182,27 @@ OBJ_SCENE_CAVERN_BACKROOM_LADDER,$103F
 ;-------------------------------------------------------------------------------
 OBJ_ITEM_BASE,$3000
 OBJ_ITEM_NOTHING,OBJ_ITEM_BASE
-OBJ_ITEM_KEYS,OBJ_ITEM_NOTHING+$0001
+OBJ_ITEM_KEYS,OBJ_ITEM_BASE+$0001
+OBJ_ITEM_SCARF,OBJ_ITEM_BASE+$0002
+OBJ_ITEM_SPECIAL_ORDER,OBJ_ITEM_BASE+$0003
+OBJ_ITEM_VHS_TAPE,OBJ_ITEM_BASE+$0004
+OBJ_ITEM_HANDWARMER,OBJ_ITEM_BASE+$0005
+OBJ_ITEM_MOOSE_ATTRACTANT,OBJ_ITEM_BASE+$0006
+OBJ_ITEM_LETTER,OBJ_ITEM_BASE+$0007
+OBJ_ITEM_LIPSTICK,OBJ_ITEM_BASE+$0008
+OBJ_ITEM_SHIRT,OBJ_ITEM_BASE+$0009
+OBJ_ITEM_LUNCH1,OBJ_ITEM_BASE+$000A
+OBJ_ITEM_LUNCH2,OBJ_ITEM_BASE+$000B
+OBJ_ITEM_TICKETS,OBJ_ITEM_BASE+$000C
+OBJ_ITEM_HEADBAND,OBJ_ITEM_BASE+$000D
+OBJ_ITEM_PORTABLE_TV,OBJ_ITEM_BASE+$000E
+OBJ_ITEM_FM_CONVERTER,OBJ_ITEM_BASE+$000F
+OBJ_ITEM_FLANNEL_SHIRT,OBJ_ITEM_BASE+$0010
+OBJ_ITEM_COUPONS,OBJ_ITEM_BASE+$0011
+OBJ_ITEM_LPS,OBJ_ITEM_BASE+$0012
+OBJ_ITEM_UTILITY_KNIFE,OBJ_ITEM_BASE+$0013
+OBJ_ITEM_MYSTERY_BOX,OBJ_ITEM_BASE+$0014
+OBJ_ITEM_EARRING_BOX,OBJ_ITEM_BASE+$0015
 ;
 ;*******************************************************************************
 ; objective ids

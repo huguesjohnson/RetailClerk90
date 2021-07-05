@@ -5,7 +5,7 @@ ShowDefaultText:
 	andi.w	#OBJ_SCENE_BASE,d6	; and d6 against base object value
 	beq.s	.npc	; branch if zero (not an object)
 	; object
-	lea	DefaultObjectDescriptionTable,a6	; point to default object text table
+	lea	DefaultObjectDescriptionTableStart,a6	; point to default object text table
 	; calculate and add offset to text pointer
 	clr d6	; out of paranoia
 	move.w	(MEM_ACTION_TARGET_OBJID),d6	; move target object ID to d6
@@ -17,10 +17,10 @@ ShowDefaultText:
 	; determine which text table to use	
 	cmpi.w	#PLAYER_SPRITE_ERYN,(MEM_PLAYER_SPRITE)
 	beq.s	.1
-	lea	CharacterInteractTextTablePlayer2Start,a6 ; player 2 text table (night)
+	lea	CharacterInteractTextPlayer2TableStart,a6 ; player 2 text table (night)
 	bra.s	.2
 .1
-	lea	CharacterInteractTextTablePlayer1Start,a6 ; player 2 text table (day)
+	lea	CharacterInteractTextPlayer1TableStart,a6 ; player 2 text table (day)
 .2
 	bset.l	#DIALOG_FLAG_STYLE_TITLED,d7	; set the titled flag
 	; calculate and add offset to text pointer

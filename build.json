@@ -2076,8 +2076,6 @@
 		"includeFilePath":"src/inc_SpriteTiles.X68",
 		"characterDefinitionFilePath":"src/data_CharacterDefinitions.X68",
 		"constantDefinitionPath":"src/const_CharacterIDs.X68",
-		"nameLookupTableFilePath":"src/text/table_CharacterNames.X68",
-		"nameFilePath":"src/text/en-us/CharacterNames.X68",
 		"baseId":"2000"
 	},
 	"scenes":{
@@ -2132,6 +2130,19 @@
 			"/design/scene-json/basementoffice.json"
 		],
 		"includeFilePath":"src/inc_Scenes.X68"
+	},
+	"text":{
+		"tableFilePath":"src/text/table_text_gen.X68",
+		"textFilePath":"src/text/en-us/strings_gen.X68",
+		"filePaths":[
+			"design/text/en-us/characternames.json",
+			"design/text/en-us/defaultobjectdescriptions.json",
+			"design/text/en-us/characterinteracttexttableplayer1.json",
+			"design/text/en-us/characterinteracttexttableplayer2.json",
+			"design/text/en-us/objectnames.json",
+			"design/text/en-us/itemnames.json",
+			"design/text/en-us/itemdescriptions.json"
+		]
 	},
 	"header":{
 		"filePath":"src/init_Header.X68",

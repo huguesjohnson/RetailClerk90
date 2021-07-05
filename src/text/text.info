@@ -2,22 +2,18 @@ There's a 0.000001% chance this will ever be translated to another language.
 (Almost) All the game text is in one folder to make it easier if that happens.
 
 The best way to go about it is:
-1) Copy the /en-us/ folder and rename to your preferred region+language combo
-2) Painfully change all the text
+1) Copy the design/text/en-us/ folder and rename to your preferred region+language combo
+2) Painfully change all the text in the json files
 3) Not rename any of the labels
-4) Also leave the table_whatever files in the /text/ root alone
-5) Change the include paths in the main file
-6) Change version in init_Header to avoid confusion
-7) NPC names need to be updated in the build file
-8) Rebuild
+4) Change the paths in the build file
+5) Change version in header (also in the build file) to avoid confusion
+6) Rebuild
 
 Things that will make translations difficult:
 1) In the overhead view, the dialog displays a fixed 22 chars per row
 2) Game font only includes ASCII, unused chars could be re-purposed though
 3) The game logo text is not in this file
 4) Character & item names are also restricted to small values
-5) Character names are set through build scripts, so they can be manually
-changed but that risks them being overridden if a full build is run
 
 The second item is the one I feel worst about..
 It makes adding non-English characters a complete nightmare.

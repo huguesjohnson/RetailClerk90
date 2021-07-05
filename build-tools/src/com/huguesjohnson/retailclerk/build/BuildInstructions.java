@@ -35,6 +35,7 @@ import com.huguesjohnson.retailclerk.build.parameters.PackageParameters;
 import com.huguesjohnson.retailclerk.build.parameters.PaletteParameters;
 import com.huguesjohnson.retailclerk.build.parameters.SceneParameters;
 import com.huguesjohnson.retailclerk.build.parameters.SpriteParameters;
+import com.huguesjohnson.retailclerk.build.parameters.TextParameters;
 import com.huguesjohnson.retailclerk.build.parameters.TilesetParameters;
 
 public class BuildInstructions implements Serializable{
@@ -84,6 +85,11 @@ public class BuildInstructions implements Serializable{
 	* Scene definitions
 	*********************************************************** */
 	public SceneParameters scenes;
+
+	/* ***********************************************************
+	* Text
+	*********************************************************** */
+	public TextParameters text;
 	
 	/* ***********************************************************
 	* Header

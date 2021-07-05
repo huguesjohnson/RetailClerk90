@@ -207,6 +207,15 @@ public class MainBuild{
 			}
 			
 			/* ***********************************************************
+			* Build text
+			*********************************************************** */
+			if(instructions.text!=null){
+				BuildText.build(basePath,instructions.text);
+			}else{
+				System.out.println("text not defined, skipping task.");
+			}
+			
+			/* ***********************************************************
 			* Generate header
 			*********************************************************** */
 			if(instructions.header!=null){

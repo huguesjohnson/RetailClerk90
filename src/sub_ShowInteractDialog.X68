@@ -5,10 +5,10 @@ ShowInteractDialog:
 	move.w	(MEM_ACTION_TARGET_OBJID),d6	; copy action target to d6
 	andi.w	#OBJ_SCENE_BASE,d6	; and against OBJ_SCENE_BASE
 	beq.s	ShowInteractDialogNPC	; if result is zero then this is not scenery
-	lea	ObjectNameTable,a6	; point to default object text table
+	lea	ObjectNameTableStart,a6	; point to default object text table
 	bra.s	ShowInteractDialogScenery	; branch to next step
 ShowInteractDialogNPC:	; target object is an NPC
-	lea	NPCNameTable,a6	; point to default npc text table
+	lea	CharacterNameTableStart,a6	; point to character name table
 ShowInteractDialogScenery:
 	adda.l	d7,a6	; add offset
 	move.l	(a6),(MEM_DIALOG_TEXT)	; copy value at a6 to MEM_DIALOG_TEXT

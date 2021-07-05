@@ -1,0 +1,32 @@
+{
+   "name":"ItemDescription",
+   "lineLength":18,
+   "formLines":0,
+   "defaultTerminator":"ETX",
+   "defaultLineFeed":"LF",
+   "defaultFormFeed":"FF",
+   "lines":{
+      "ItemDescriptionNothing":{"text":"A deep void in your pocket that yearns to be filled."},
+      "ItemDescriptionKeys":{"text":"Oversized keyring with keys to every store. Earned over the summer. These allow entry to stores after the mall is closed."},
+      "ItemDescriptionScarf":{"text":"Thick winter scarf."},
+      "ItemDescriptionSpecialOrder":{"text":"Special order book for Nicky at Sunset Video."},
+      "ItemDescriptionVhsTape":{"text":"'Nature's Greatest Maulings' VHS tape."},
+      "ItemDescriptionHandwarmer":{"text":"Electric handwarmer that was recalled for safefy concerns."},
+      "ItemDescriptionMooseAttractant":{"text":"A vial of moose attractant."},
+      "ItemDescriptionLetter":{"text":"Anonymous letter sent to Lisa warning that her store will close after this year."},
+      "ItemDescriptionLipstick":{"text":"Sealed tube of bright red lipstick."},
+      "ItemDescriptionShirt":{"text":"Polo shirt - size small."},
+      "ItemDescriptionLunch1":{"text":"Combo meal #1."},
+      "ItemDescriptionLunch2":{"text":"Combo meal #2"},
+      "ItemDescriptionTickets":{"text":"Tickets for a band called 'Green Day'. You've never heard of them."},
+      "ItemDescriptionHeadband":{"text":"Headband with an AM/FM radio attached."},
+      "ItemDescriptionPortableTv":{"text":"Portable B&W television. It only gets one station in the mall."},
+      "ItemDescriptionFmConverter":{"text":"FM converter for cars that only have AM radios."},
+      "ItemDescriptionFlannelShirt":{"text":"Flannel shirt - size large."},
+      "ItemDescriptionCoupons":{"text":"Coupon for 10% off any non-sale item, February 6th only."},
+      "ItemDescriptionLps":{"text":"Assortment of obsolete LP records."},
+      "ItemDescriptionUtilityKnife":{"text":"Utility knife with 27 different functions."},
+      "ItemDescriptionMysteryBox":{"text":"It's probably best to open this later."},
+      "ItemDescriptionEarring":{"text":"Earring that someone jammed in a coin slot."}
+   }
+}

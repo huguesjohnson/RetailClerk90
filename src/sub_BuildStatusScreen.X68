@@ -88,7 +88,7 @@ BuildStatusScreenObjectiveText:
 	cmpi.w	#MAX_OBJECTIVE,d6	; check against my own stupidity
 	bgt.s	BuildStatusScreenInventory
 	mulu.w	#LWORD_SIZE,d6	; multiply by LWORD_SIZE to get offset
-	lea	StatusScreenObjectives,a5	; point a5 to the lookup table
+	lea	StatusScreenObjectivesTableStart,a5	; point a5 to the lookup table
 	adda.l	d6,a5	; move to offset
 	move.l	(a5),a0	; point a0 to the first character
 	move.l	#STATUS_SCREEN_OBJECTIVE_VDP,d7	; d7 is used in the loop for LF
@@ -146,7 +146,7 @@ BuildStatusScreenInventoryLoop:
 	move.w	(a6),d6	; copy item number to d6
 	and.w	#$0FFF,d6	; clear out item mask
 	mulu.w	#LWORD_SIZE,d6	; addresses are 1 lword
-	lea	ItemNameTable,a6	; point a6 to the lookup table
+	lea	ItemNameTableStart,a6	; point a6 to the lookup table
 	adda.l	d6,a6	; move to offset
 	move.l	(a6),a0	; point a0 to the start of the next item name
 	; menu character for next item

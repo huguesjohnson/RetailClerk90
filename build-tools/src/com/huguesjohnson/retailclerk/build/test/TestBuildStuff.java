@@ -45,6 +45,7 @@ import com.huguesjohnson.retailclerk.build.parameters.PackageParameters;
 import com.huguesjohnson.retailclerk.build.parameters.PaletteParameters;
 import com.huguesjohnson.retailclerk.build.parameters.SceneParameters;
 import com.huguesjohnson.retailclerk.build.parameters.SpriteParameters;
+import com.huguesjohnson.retailclerk.build.parameters.TextParameters;
 import com.huguesjohnson.retailclerk.build.parameters.TilesetParameters;
 
 import junit.framework.TestCase;
@@ -225,8 +226,6 @@ class TestBuildStuff extends TestCase{
 		sprites.includeFilePath="src/inc_SpriteTiles.X68";
 		sprites.characterDefinitionFilePath="src/data_CharacterDefinitions.X68";
 		sprites.constantDefinitionPath="src/const_CharacterIDs.X68";
-		sprites.nameFilePath="src/text/en-us/CharacterNames.X68";
-		sprites.nameLookupTableFilePath="src/text/table_CharacterNames.X68";
 		sprites.baseId="2000";
 		sprites.sprites=new Sprite[2];
 		sprites.sprites[0]=new Sprite();
@@ -247,6 +246,16 @@ class TestBuildStuff extends TestCase{
 		scenes.scenePaths=new String[1];
 		scenes.scenePaths[0]="/design/scene-json/tbooks.json";
 		instructions.scenes=scenes;
+
+		/* ***********************************************************
+		* Text parameters
+		*********************************************************** */
+		TextParameters text=new TextParameters();
+		text.tableFilePath="src/text/table_text_gen.X68";
+		text.textFilePath="src/text/en-us/strings_gen.X68";
+		text.filePaths=new String[1];
+		text.filePaths[0]="design/text/characternames.json";
+		instructions.text=text;
 		
 		/* ***********************************************************
 		* Header parameters
@@ -309,7 +318,6 @@ class TestBuildStuff extends TestCase{
 		*********************************************************** */
 		String json=(new Gson()).toJson(instructions);
 		System.out.println(json);
-	
 	}
 
 }

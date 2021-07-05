@@ -313,7 +313,7 @@ ClearItemDescriptionColLoop:
 	move.w	(a6),d7	; copy item number to d6
 	and.w	#$0FFF,d7	; clear out item mask
 	mulu.w	#LWORD_SIZE,d7	; addresses are 1 lword
-	lea	ItemDescriptionTable,a6	; point a6 to the lookup table
+	lea	ItemDescriptionTableStart,a6	; point a6 to the lookup table
 	adda.l	d7,a6	; move to offset
 	move.l	(a6),a0	; point a0 to the first character
 	move.l	#STATUS_SCREEN_INVENTORY_DESCRIPTION_VDP,d7

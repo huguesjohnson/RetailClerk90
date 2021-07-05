@@ -25,58 +25,19 @@ THE SOFTWARE.
 package com.huguesjohnson.retailclerk.build.objects;
 
 import java.io.Serializable;
+import java.util.Map;
 
-public class Tile8x8 implements Serializable{
-	private static final long serialVersionUID=113970L;
+public class StringCollection implements Serializable{
+	private static final long serialVersionUID=113969L;
 
-	private final static String newLine=System.lineSeparator();
-
-	public int[][] pixels;
-	
-	public Tile8x8(){this.pixels=new int[8][8];}
-	
-	public String toAsmLines(){
-		StringBuffer lines=new StringBuffer();
-		for(int x=0;x<8;x++){
-			lines.append("\tdc.l\t$");
-			for(int y=0;y<8;y++){
-				lines.append(Integer.toHexString(this.pixels[x][y]).toUpperCase());
-			}
-			lines.append(newLine);
-		}
-		return(lines.toString());
-	}
-
-	@Override
-	public boolean equals(Object obj){
-		try{
-			Tile8x8 tobj=(Tile8x8)obj;
-			for(int x=0;x<8;x++){
-				for(int y=0;y<8;y++){
-					if(this.pixels[x][y]!=tobj.pixels[x][y]){return(false);}
-				}
-			}
-			return(true);
-		}catch(Exception x){
-			return(false);
-		}
-	}
-
-	@Override
-	public int hashCode(){
-		int hash=0;
-		for(int x=0;x<8;x++){
-			int i=0;
-			for(int y=0;y<8;y++){
-				i+=this.pixels[x][y];
-			}
-			hash+=(x*10)+i;
-		}
-		return(hash);
-	}
-
-	@Override
-	public String toString(){
-		return(this.toAsmLines());
-	}
+	public String name; //name of the text set
+	public String description=null; //longer description of the text set
+	public String skipTable=null; //'true' = do not create a lookup table
+	public int lineLength=22; //length before line feeds occur
+	public int formLines=0; //how many lines before a form feed 
+	public String defaultTerminator="ETX"; //how to end the final line of a text block
+	public String defaultLineFeed="LF"; //default line feed character
+	public String defaultFormFeed="FF"; //default form feed character
+	public char defaultNextPageChar='^'; //default character to indicate there is another page of text
+	public Map<String,TextLine> lines; //the actual lines of text
 }

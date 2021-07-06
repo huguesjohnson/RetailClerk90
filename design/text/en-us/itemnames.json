@@ -2,7 +2,7 @@
    "name":"ItemName",
    "lineLength":10,
    "formLines":0,
-   "defaultTerminator":"OBJNAMEEND",
+   "defaultTerminator":"ITEMNAMEEND",
    "defaultLineFeed":"LF",
    "defaultFormFeed":"FF",
    "lines":{

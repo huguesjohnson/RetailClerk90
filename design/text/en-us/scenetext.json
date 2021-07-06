@@ -1,0 +1,16 @@
+{
+   "name":"SceneText",
+   "description":"Text that appears in stores",
+   "lineLength":40,
+   "skipTable":"true",   
+   "formLines":0,
+   "defaultTerminator":"ETX",
+   "defaultLineFeed":"LF",
+   "defaultFormFeed":"FF",
+   "lines":{
+      "StoreSignFiction":{"text":"Fiction"},
+      "StoreSignRomance":{"text":"Romance"},
+      "StoreSignCooking":{"text":"Cooking"},
+      "StoreSignHistory":{"text":"History"}
+   }
+}

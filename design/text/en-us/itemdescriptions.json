@@ -1,7 +1,7 @@
 {
    "name":"ItemDescription",
    "lineLength":18,
-   "formLines":0,
+   "formLines":6,
    "defaultTerminator":"ETX",
    "defaultLineFeed":"LF",
    "defaultFormFeed":"FF",

@@ -44,6 +44,8 @@ public class BuildText{
 	public static void build(String basePath,TextParameters parameters){
 		FileWriter tableFileWriter=null;
 		FileWriter textFileWriter=null;
+		StringCollection stringCollection=null;
+		TextLine textLine=null;
 		try{
 			//setup table writer
 			tableFileWriter=new FileWriter(basePath+parameters.tableFilePath);
@@ -55,7 +57,7 @@ public class BuildText{
 			textFileWriter.write(newLine);
 			for(int fileIndex=0;fileIndex<parameters.filePaths.length;fileIndex++){
 				String textJson=Files.readString(Paths.get(basePath+parameters.filePaths[fileIndex]));
-				StringCollection stringCollection=(new Gson()).fromJson(textJson,StringCollection.class);
+				stringCollection=(new Gson()).fromJson(textJson,StringCollection.class);
 				boolean skipTable=false;
 				if((stringCollection.skipTable!=null)&&(stringCollection.skipTable.equals("true"))){
 					skipTable=true;
@@ -89,7 +91,7 @@ public class BuildText{
 				textFileWriter.write(newLine);
 				//loop through strings
 				for(String key:stringCollection.lines.keySet()){
-					TextLine textLine=stringCollection.lines.get(key);
+					textLine=stringCollection.lines.get(key);
 					String terminator=stringCollection.defaultTerminator;
 					if((textLine.terminator!=null)&&(textLine.terminator.length()>0)){terminator=textLine.terminator;}
 					String lineFeed=stringCollection.defaultLineFeed;
@@ -140,7 +142,7 @@ public class BuildText{
 							//remove the text that was written
 							sb.delete(0,lastIndex);
 							//trim leading spaces or breaks that remain
-							while((sb.charAt(0)==' ')||(sb.charAt(0)=='|')){
+							while((sb.length()>0)&&((sb.charAt(0)==' ')||(sb.charAt(0)=='|'))){
 								sb.deleteCharAt(0);
 							}
 						}
@@ -160,6 +162,12 @@ public class BuildText{
 			textFileWriter.write("\talign 2");
 		}catch(Exception x){
 			x.printStackTrace();
+			if(stringCollection!=null){
+				System.err.println("stringCollection.name="+stringCollection.name);
+				if(textLine!=null){
+					System.err.println("textLine.text="+textLine.text);
+				}
+			}
 		}finally{
 			try{if(tableFileWriter!=null){tableFileWriter.flush(); tableFileWriter.close();}}catch(Exception x){ }
 			try{if(textFileWriter!=null){textFileWriter.flush(); textFileWriter.close();}}catch(Exception x){ }

@@ -1,0 +1,17 @@
+{
+   "name":"TitleScreen",
+   "description":"Text used on the title screen",
+   "lineLength":38,
+   "skipTable":"true",
+   "formLines":0,
+   "defaultTerminator":"ETX",
+   "defaultLineFeed":"LF",
+   "defaultFormFeed":"FF",
+   "lines":{
+      "TitleScreenTextNewGame":{"text":"{New Game"},
+      "TitleScreenTextLoadGame":{"text":"{Load Game"},
+      "TitleScreenTextDebug":{"text":"{Debug"},
+      "TitleScreenTextFooter":{"text":"       Placeholder Title Screen"},
+      "TitleScreenTextFooterDebug":{"text":"       Placeholder Title Screen"}
+   }
+}

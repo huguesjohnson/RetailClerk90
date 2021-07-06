@@ -1,0 +1,21 @@
+{
+   "name":"EndScreen",
+   "description":"Text used on the ending scene",
+   "lineLength":40,
+   "skipTable":"true",   
+   "formLines":0,
+   "defaultTerminator":"ETX",
+   "defaultLineFeed":"LF",
+   "defaultFormFeed":"FF",
+   "lines":{
+      "EndScreenLine00BadEnding":{"text":"    Retail Clerk '90 - Bad Ending     "},
+      "EndScreenLine00GoodEnding":{"text":"    Retail Clerk '90 - Good Ending    "},
+      "EndScreenLine00PerfectEnding":{"text":"  Retail Clerk '90 - Perfect Ending   "},
+      "EndScreenTextLine1":{"text":"Thank you for trying this little demo!"},
+      "EndScreenTextLine2":{"text":" "},
+      "EndScreenTextLine3":{"text":"Check out my other projects over at"},
+      "EndScreenTextLine4":{"text":"https://HuguesJohnson.com/"},
+      "EndScreenTextLine5":{"text":" "},
+      "EndScreenTextLine6":{"text":"Press the start button to reset."}
+   }
+}

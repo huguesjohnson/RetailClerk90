@@ -2132,16 +2132,26 @@
 		"includeFilePath":"src/inc_Scenes.X68"
 	},
 	"text":{
-		"tableFilePath":"src/text/table_text_gen.X68",
-		"textFilePath":"src/text/en-us/strings_gen.X68",
+		"tableFilePath":"src/text/table_Text.X68",
+		"textFilePath":"src/text/en-us/strings.X68",
 		"filePaths":[
+			"design/text/en-us/generaltext.json",
+			"design/text/en-us/scenetext.json",
+			"design/text/en-us/menus.json",
 			"design/text/en-us/characternames.json",
 			"design/text/en-us/defaultobjectdescriptions.json",
 			"design/text/en-us/characterinteracttexttableplayer1.json",
 			"design/text/en-us/characterinteracttexttableplayer2.json",
 			"design/text/en-us/objectnames.json",
 			"design/text/en-us/itemnames.json",
-			"design/text/en-us/itemdescriptions.json"
+			"design/text/en-us/itemdescriptions.json",
+			"design/text/en-us/statusscreenobjectives.json",
+			"design/text/en-us/savegametitles.json",
+			"design/text/en-us/titlescreen.json",
+			"design/text/en-us/debugscreen.json",
+			"design/text/en-us/creditscreens.json",
+			"design/text/en-us/dayintros.json",
+			"design/text/en-us/legalscreen.json"
 		]
 	},
 	"header":{

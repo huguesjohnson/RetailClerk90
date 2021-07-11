@@ -31,4 +31,5 @@ public class SceneParameters implements Serializable{
 
 	public String[] scenePaths;
 	public String includeFilePath;
+	public String lookupTablePath;
 }

@@ -201,7 +201,7 @@ public class MainBuild{
 					String sceneJson=Files.readString(Paths.get(basePath+instructions.scenes.scenePaths[i]));
 					scenes[i]=(new Gson()).fromJson(sceneJson,Scene.class);
 				}
-				BuildScenes.build(basePath,basePath+instructions.scenes.includeFilePath,scenes,tileMap);
+				BuildScenes.build(basePath,basePath+instructions.scenes.includeFilePath,instructions.scenes.lookupTablePath,scenes,tileMap);
 			}else{
 				System.out.println("scenes not defined, skipping task.");
 			}

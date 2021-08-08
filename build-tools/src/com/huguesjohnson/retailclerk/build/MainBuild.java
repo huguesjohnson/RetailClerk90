@@ -38,8 +38,8 @@ import java.util.HashMap;
 import com.google.gson.Gson;
 import com.huguesjohnson.PathResolver;
 import com.huguesjohnson.ZipUtil;
+import com.huguesjohnson.retailclerk.build.objects.BuildInstructions;
 import com.huguesjohnson.retailclerk.build.objects.PaletteMap;
-import com.huguesjohnson.retailclerk.build.objects.Scene;
 import com.huguesjohnson.retailclerk.build.objects.Tileset;
 
 public class MainBuild{
@@ -128,10 +128,7 @@ public class MainBuild{
 			* Build memory map
 			*********************************************************** */
 			if(instructions.memoryMap!=null){
-				CSVMemoryMap.generateMemoryMap(
-						basePath+instructions.memoryMap.sourceFile,
-						basePath+instructions.memoryMap.destinationFile,
-						instructions.memoryMap.baseAddress);
+				BuildMemoryMap.build(basePath,instructions.memoryMap);
 			}else{
 				System.out.println("memoryMap not defined, skipping task.");
 			}
@@ -140,9 +137,7 @@ public class MainBuild{
 			* Build constants
 			*********************************************************** */
 			if(instructions.constants!=null){
-				BuildConstants.build(
-						basePath,
-						instructions.constants);
+				BuildConstants.build(basePath,instructions.constants);
 			}else{
 				System.out.println("constants not defined, skipping task.");
 			}
@@ -151,12 +146,18 @@ public class MainBuild{
 			* Build collision data
 			*********************************************************** */
 			if(instructions.collision!=null){
-				BMPtoCollisionData.generateCollisionData(
-						basePath,
-						instructions.collision.collisionMap,
-						instructions.collision.includeFilePath);
+				BuildCollisionData.build(basePath,instructions.collision);
 			}else{
 				System.out.println("collision not defined, skipping task.");
+			}
+
+			/* ***********************************************************
+			* Build scripted events data
+			*********************************************************** */
+			if(instructions.scriptedEvents!=null){
+				BuildScriptedEvents.build(basePath,instructions.scriptedEvents);
+			}else{
+				System.out.println("scriptedEvents not defined, skipping task.");
 			}
 			
 			/* ***********************************************************
@@ -164,10 +165,7 @@ public class MainBuild{
 			*********************************************************** */
 			HashMap<String,PaletteMap> paletteMap=new HashMap<String,PaletteMap>();
 			if(instructions.palettes!=null){
-				paletteMap=ExtractPalette.extract(
-						basePath,
-						instructions.palettes.paletteMap,
-						instructions.palettes.includeFilePath);
+				paletteMap=BuildPalette.build(basePath,instructions.palettes);
 			}else{
 				System.out.println("palettes not defined, skipping task.");
 			}
@@ -180,6 +178,15 @@ public class MainBuild{
 				tileMap=BuildTiles.build(basePath,instructions.tiles,paletteMap);
 			}else{
 				System.out.println("tiles not defined, skipping task.");
+			}
+
+			/* ***********************************************************
+			* Build movement patterns
+			*********************************************************** */
+			if(instructions.movementPatterns!=null){
+				BuildMovementPatterns.build(basePath,instructions.movementPatterns);
+			}else{
+				System.out.println("movementPatterns not defined, skipping task.");
 			}
 			
 			/* ***********************************************************
@@ -195,13 +202,7 @@ public class MainBuild{
 			* Build scenes
 			*********************************************************** */
 			if(instructions.scenes!=null){
-				int length=instructions.scenes.scenePaths.length;
-				Scene[] scenes=new Scene[length];
-				for(int i=0;i<length;i++){
-					String sceneJson=Files.readString(Paths.get(basePath+instructions.scenes.scenePaths[i]));
-					scenes[i]=(new Gson()).fromJson(sceneJson,Scene.class);
-				}
-				BuildScenes.build(basePath,basePath+instructions.scenes.includeFilePath,instructions.scenes.lookupTablePath,scenes,tileMap);
+				BuildScenes.build(basePath,instructions.scenes,tileMap);
 			}else{
 				System.out.println("scenes not defined, skipping task.");
 			}
@@ -219,7 +220,7 @@ public class MainBuild{
 			* Generate header
 			*********************************************************** */
 			if(instructions.header!=null){
-				GenerateHeader.write(basePath,instructions.header);
+				BuildHeader.build(basePath,instructions.header);
 			}else{
 				System.out.println("header not defined, skipping task.");
 			}

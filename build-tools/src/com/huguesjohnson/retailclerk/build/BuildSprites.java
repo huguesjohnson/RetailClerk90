@@ -34,9 +34,9 @@ import javax.imageio.ImageIO;
 import com.huguesjohnson.PathResolver;
 import com.huguesjohnson.retailclerk.build.objects.PaletteMap;
 import com.huguesjohnson.retailclerk.build.parameters.SpriteParameters;
+import com.huguesjohnson.retailclerk.build.util.ColorUtils;
 
-public abstract class BuildSprites{
-	private final static String newLine=System.lineSeparator();
+public abstract class BuildSprites extends BaseBuilder{
 	
 	@SuppressWarnings("resource") //everything is closed in finally block, Eclipse doesn't seem to understand that
 	public static void build(String basePath,SpriteParameters sprites,HashMap<String,PaletteMap> paletteMap){

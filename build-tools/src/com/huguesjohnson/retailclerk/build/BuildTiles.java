@@ -37,9 +37,9 @@ import com.huguesjohnson.retailclerk.build.objects.PaletteMap;
 import com.huguesjohnson.retailclerk.build.objects.Tile8x8;
 import com.huguesjohnson.retailclerk.build.objects.Tileset;
 import com.huguesjohnson.retailclerk.build.parameters.TilesetParameters;
+import com.huguesjohnson.retailclerk.build.util.ColorUtils;
 
-public class BuildTiles{
-	private final static String newLine=System.lineSeparator();
+public class BuildTiles extends BaseBuilder{
 
 	@SuppressWarnings("resource") //everything is closed in finally block, Eclipse doesn't seem to understand that
 	public static HashMap<String,Tileset> build(String basePath,TilesetParameters tiles,HashMap<String,PaletteMap> paletteMap){

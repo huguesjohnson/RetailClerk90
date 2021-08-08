@@ -1,0 +1,73 @@
+[
+   {
+      "name":"ExampleDialogWithMovement",
+      "actions":[
+         {
+            "comment":"npc1 sprite",
+            "intValue":3
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"DialogTextUnknownNPCNight00"
+         },
+         {
+            "comment":"move npc1 to the right",
+            "direction":"RIGHT",
+            "intValue":16
+         },
+         {
+            "comment":"switch to npc2 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":4
+         },
+         {
+            "comment":"have npc2 sprite face right",
+            "direction":"RIGHT",
+            "intValue":1
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"DialogTextUnknownNPCNight00"
+         },
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   },
+   {
+      "name":"ExampleSceneChange",
+      "actions":[
+         {
+            "comment":"player sprite",
+            "intValue":1
+         },
+         {
+            "comment":"move player sprite up",
+            "direction":"UP",
+            "intValue":50
+         },
+         {
+            "comment":"change player sprite",
+            "command":"CHANGE_CHANGE_PLAYER_SPRITE",
+            "intConst":"PLAYER_SPRITE_ERYN"
+         },
+         {
+            "comment":"change scene",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_VB"
+         },
+         {
+            "comment":"move player sprite up",
+            "direction":"UP",
+            "intValue":32
+         },
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   }
+]

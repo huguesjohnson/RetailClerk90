@@ -36,8 +36,7 @@ import javax.imageio.IIOException;
 import com.huguesjohnson.PathResolver;
 import com.huguesjohnson.retailclerk.build.parameters.ConstantFileParameters;
 
-public class BuildConstants{
-	private final static String newLine=System.lineSeparator();
+public class BuildConstants extends BaseBuilder{
 
 	public static void build(String basePath,ConstantFileParameters parameters){
 		//bail if there's nothing to do

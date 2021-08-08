@@ -38,8 +38,7 @@ import com.huguesjohnson.retailclerk.build.parameters.TextParameters;
 I'm sort of generally unhappy with how I implemented strings and this class exposes how overly complex I made them.
 */
 
-public class BuildText{
-	private final static String newLine=System.lineSeparator();
+public class BuildText extends BaseBuilder{
 	
 	public static void build(String basePath,TextParameters parameters){
 		FileWriter tableFileWriter=null;
@@ -90,6 +89,7 @@ public class BuildText{
 				textFileWriter.write(";-------------------------------------------------------------------------------");
 				textFileWriter.write(newLine);
 				//loop through strings
+				boolean realign=false; //text needs to be re-aligned if the previous line had a dialogTitle
 				for(String key:stringCollection.lines.keySet()){
 					textLine=stringCollection.lines.get(key);
 					String terminator=stringCollection.defaultTerminator;
@@ -104,13 +104,17 @@ public class BuildText{
 						tableFileWriter.write("\tdc.l\t"+key);
 						tableFileWriter.write(newLine);
 					}
-					if(textLine.align>0){
-						textFileWriter.write("\talign "+textLine.align);
+					//test for re-align
+					if(realign){
+						textFileWriter.write("\talign 2");
 						textFileWriter.write(newLine);
+						realign=false;
 					}
+					//string label
 					textFileWriter.write(key+":");
 					textFileWriter.write(newLine);
 					if((textLine.dialogTitle!=null)&&(textLine.dialogTitle.length()>0)){
+						realign=true;
 						textFileWriter.write("\tdc.w\t"+textLine.dialogTitle);
 						textFileWriter.write(newLine);
 					}
@@ -150,6 +154,11 @@ public class BuildText{
 						textFileWriter.write("\tdc.b\t\""+sb.toString()+"\","+terminator);
 						textFileWriter.write(newLine);
 					}
+				}
+				//test for re-align
+				if(realign){
+					textFileWriter.write("\talign 2");
+					textFileWriter.write(newLine);
 				}
 				//write end of table
 				if(!skipTable){

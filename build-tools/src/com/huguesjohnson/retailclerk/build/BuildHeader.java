@@ -32,10 +32,9 @@ import java.util.Date;
 
 import com.huguesjohnson.retailclerk.build.parameters.HeaderParameters;
 
-public abstract class GenerateHeader{
-	private final static String newLine=System.lineSeparator();
+public abstract class BuildHeader extends BaseBuilder{
 
-	public static void write(String basePath,HeaderParameters header){
+	public static void build(String basePath,HeaderParameters header){
 		FileWriter headerWriter=null;
 		try{
 			//Java is like 20 years older than VB6 now yet VB6 is still 1000x better at working with dates

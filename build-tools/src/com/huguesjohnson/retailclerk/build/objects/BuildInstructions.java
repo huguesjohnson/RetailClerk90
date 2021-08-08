@@ -22,7 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-package com.huguesjohnson.retailclerk.build;
+package com.huguesjohnson.retailclerk.build.objects;
 
 import java.io.Serializable;
 
@@ -31,6 +31,7 @@ import com.huguesjohnson.retailclerk.build.parameters.CollisionDataParameters;
 import com.huguesjohnson.retailclerk.build.parameters.ConstantFileParameters;
 import com.huguesjohnson.retailclerk.build.parameters.HeaderParameters;
 import com.huguesjohnson.retailclerk.build.parameters.MemoryMapParameters;
+import com.huguesjohnson.retailclerk.build.parameters.SimpleSourceDestinationParameters;
 import com.huguesjohnson.retailclerk.build.parameters.PackageParameters;
 import com.huguesjohnson.retailclerk.build.parameters.PaletteParameters;
 import com.huguesjohnson.retailclerk.build.parameters.SceneParameters;
@@ -90,6 +91,16 @@ public class BuildInstructions implements Serializable{
 	* Text
 	*********************************************************** */
 	public TextParameters text;
+
+	/* ***********************************************************
+	* Scripted events
+	*********************************************************** */
+	public SimpleSourceDestinationParameters scriptedEvents;
+	
+	/* ***********************************************************
+	* Movement patterns
+	*********************************************************** */
+	public SimpleSourceDestinationParameters movementPatterns;
 	
 	/* ***********************************************************
 	* Header

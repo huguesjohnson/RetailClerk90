@@ -30,9 +30,8 @@ import java.util.HashMap;
 import org.junit.jupiter.api.Test;
 
 import com.google.gson.Gson;
-import com.huguesjohnson.retailclerk.build.BuildInstructions;
 import com.huguesjohnson.retailclerk.build.BuildScenes;
-import com.huguesjohnson.retailclerk.build.ColorUtils;
+import com.huguesjohnson.retailclerk.build.objects.BuildInstructions;
 import com.huguesjohnson.retailclerk.build.objects.PaletteMap;
 import com.huguesjohnson.retailclerk.build.objects.Sprite;
 import com.huguesjohnson.retailclerk.build.objects.Tileset;
@@ -44,9 +43,11 @@ import com.huguesjohnson.retailclerk.build.parameters.MemoryMapParameters;
 import com.huguesjohnson.retailclerk.build.parameters.PackageParameters;
 import com.huguesjohnson.retailclerk.build.parameters.PaletteParameters;
 import com.huguesjohnson.retailclerk.build.parameters.SceneParameters;
+import com.huguesjohnson.retailclerk.build.parameters.SimpleSourceDestinationParameters;
 import com.huguesjohnson.retailclerk.build.parameters.SpriteParameters;
 import com.huguesjohnson.retailclerk.build.parameters.TextParameters;
 import com.huguesjohnson.retailclerk.build.parameters.TilesetParameters;
+import com.huguesjohnson.retailclerk.build.util.ColorUtils;
 
 import junit.framework.TestCase;
 
@@ -256,6 +257,22 @@ class TestBuildStuff extends TestCase{
 		text.filePaths=new String[1];
 		text.filePaths[0]="design/text/characternames.json";
 		instructions.text=text;
+		
+		/* ***********************************************************
+		* MovementPattern parameters
+		*********************************************************** */
+		SimpleSourceDestinationParameters mpp=new SimpleSourceDestinationParameters();
+		mpp.sourceFile="design/data/movementpatterns.json";
+		mpp.destinationFile="src/data_SpriteMovementPatterns.X68";
+		instructions.movementPatterns=mpp;
+
+		/* ***********************************************************
+		* ScriptedEvent parameters
+		*********************************************************** */
+		SimpleSourceDestinationParameters se=new SimpleSourceDestinationParameters();
+		se.sourceFile="design/data/scriptedevents.json";
+		se.destinationFile="src/data_ScriptedEvents.X68";
+		instructions.scriptedEvents=se;
 		
 		/* ***********************************************************
 		* Header parameters

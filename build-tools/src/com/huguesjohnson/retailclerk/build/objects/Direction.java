@@ -24,15 +24,23 @@ THE SOFTWARE.
 
 package com.huguesjohnson.retailclerk.build.objects;
 
-import java.io.Serializable;
-
-public class TextLine implements Serializable{
-	private static final long serialVersionUID=20000808064432L;
+public enum Direction{
+	DOWN(0),
+	UP(1),
+	LEFT(2),
+	RIGHT(3),
+	NULL(-1);
 	
-	public String text=""; //the actual text
-	public String dialogTitle=null; //if the dialog has a title this is where it goes
-	public String terminator=null; //override of default terminator
-	public String lineFeed=null; //override of default line feed
-	public String formFeed=null; //override of default form feed
-	public char nextPageChar='^'; //override of default character to indicate there is another page of text
+	private final int value;
+    Direction(final int value){this.value=value;}
+    public int getValue(){return(value);}
+
+    @Override
+	public String toString(){
+    	if(this.value==DOWN.getValue()){return("DIRECTION_DOWN");}
+    	if(this.value==UP.getValue()){return("DIRECTION_UP");}
+    	if(this.value==LEFT.getValue()){return("DIRECTION_LEFT");}
+    	if(this.value==RIGHT.getValue()){return("DIRECTION_RIGHT");}
+		return("DIRECTION_NULL");
+	}
 }

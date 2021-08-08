@@ -32,11 +32,15 @@ import java.io.FileWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public abstract class CSVMemoryMap{
-	private static final String newLine=System.lineSeparator();
+import com.huguesjohnson.retailclerk.build.parameters.MemoryMapParameters;
+
+public abstract class BuildMemoryMap extends BaseBuilder{
 
 	@SuppressWarnings("resource") //resources are closed in finally block but Eclipse still warns
-	public static void generateMemoryMap(String sourceFile,String destinationFile,String baseAddress){
+	public static void build(String basePath,MemoryMapParameters parameters){
+		String sourceFile=basePath+parameters.sourceFile;
+		String destinationFile=basePath+parameters.destinationFile;
+		String baseAddress=parameters.baseAddress;
 		BufferedReader bufferedReader=null;
 		OutputStreamWriter outputStreamWriter=null;
 		int lineNumber=0;

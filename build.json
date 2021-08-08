@@ -1854,6 +1854,14 @@
 		"tileIncludeFilePath":"src/inc_Tiles.X68",
 		"patternIncludeFilePath":"src/inc_PatternsGenerated.X68"
 	},
+	"scriptedEvents":{
+		"sourceFile":"design/data/scriptedevents.json",
+		"destinationFile":"src/data_ScriptedEvents.X68"
+	},	
+	"movementPatterns":{
+		"sourceFile":"design/data/movementpatterns.json",
+		"destinationFile":"src/data_SpriteMovementPatterns.X68"
+	},	
 	"sprites":{
 		"sprites":[
 			{

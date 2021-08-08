@@ -22,7 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-package com.huguesjohnson.retailclerk.build;
+package com.huguesjohnson.retailclerk.build.util;
 
 import java.awt.Color;
 import java.util.ArrayList;

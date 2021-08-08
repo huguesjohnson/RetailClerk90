@@ -416,30 +416,23 @@ ObjectDescriptionCavernBackroomLadder:
 ; CharacterInteractTextPlayer1
 ; Default character dialog for player 1 (daytime events)
 ;-------------------------------------------------------------------------------
-	align 2
 DialogTextUnknownNPCDay00:
 DialogTextUnknownNPCDay01:
 DialogTextUnknownNPCDay02:
 DialogTextUnknownNPCDay03:
 DialogTextUnknownNPCDay04:
 DialogTextUnknownNPCDay05:
-	align 2
 DialogTextUnknownNPCDay06:
-	dc.w	OBJ_NPC_HIDDENHJ
-	dc.b	"If you see this then",LF
-	dc.b	"I really messed up.",ETX
-	align 2
 DialogTextErynDay00:
 DialogTextErynDay01:
 DialogTextErynDay02:
 DialogTextErynDay03:
 DialogTextErynDay04:
 DialogTextErynDay05:
-	align 2
 DialogTextErynDay06:
-	dc.w	OBJ_NPC_ERYN
-	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.w	OBJ_NPC_HIDDENHJ
+	dc.b	"If you see this then",LF
+	dc.b	"I really messed up.",ETX
 	align 2
 DialogTextCarlDay00:
 DialogTextCarlDay01:
@@ -447,7 +440,6 @@ DialogTextCarlDay02:
 DialogTextCarlDay03:
 DialogTextCarlDay04:
 DialogTextCarlDay05:
-	align 2
 DialogTextCarlDay06:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"This is my default",LF
@@ -459,7 +451,6 @@ DialogTextFrankDay02:
 DialogTextFrankDay03:
 DialogTextFrankDay04:
 DialogTextFrankDay05:
-	align 2
 DialogTextFrankDay06:
 	dc.w	OBJ_NPC_FRANK
 	dc.b	"This is my default",LF
@@ -471,7 +462,6 @@ DialogTextCarolDay02:
 DialogTextCarolDay03:
 DialogTextCarolDay04:
 DialogTextCarolDay05:
-	align 2
 DialogTextCarolDay06:
 	dc.w	OBJ_NPC_CAROL
 	dc.b	"This is my default",LF
@@ -483,7 +473,6 @@ DialogTextLisaDay02:
 DialogTextLisaDay03:
 DialogTextLisaDay04:
 DialogTextLisaDay05:
-	align 2
 DialogTextLisaDay06:
 	dc.w	OBJ_NPC_LISA
 	dc.b	"This is my default",LF
@@ -495,7 +484,6 @@ DialogTextGrunbergDay02:
 DialogTextGrunbergDay03:
 DialogTextGrunbergDay04:
 DialogTextGrunbergDay05:
-	align 2
 DialogTextGrunbergDay06:
 	dc.w	OBJ_NPC_GRUNBERG
 	dc.b	"This is my default",LF
@@ -507,7 +495,6 @@ DialogTextJenDay02:
 DialogTextJenDay03:
 DialogTextJenDay04:
 DialogTextJenDay05:
-	align 2
 DialogTextJenDay06:
 	dc.w	OBJ_NPC_JEN
 	dc.b	"This is my default",LF
@@ -519,7 +506,6 @@ DialogTextGriffyDay02:
 DialogTextGriffyDay03:
 DialogTextGriffyDay04:
 DialogTextGriffyDay05:
-	align 2
 DialogTextGriffyDay06:
 	dc.w	OBJ_NPC_GRIFFY
 	dc.b	"This is my default",LF
@@ -531,7 +517,6 @@ DialogTextScottDay02:
 DialogTextScottDay03:
 DialogTextScottDay04:
 DialogTextScottDay05:
-	align 2
 DialogTextScottDay06:
 	dc.w	OBJ_NPC_SCOTT
 	dc.b	"This is my default",LF
@@ -543,7 +528,6 @@ DialogTextToddDay02:
 DialogTextToddDay03:
 DialogTextToddDay04:
 DialogTextToddDay05:
-	align 2
 DialogTextToddDay06:
 	dc.w	OBJ_NPC_TODD
 	dc.b	"This is my default",LF
@@ -555,7 +539,6 @@ DialogTextElizaDay02:
 DialogTextElizaDay03:
 DialogTextElizaDay04:
 DialogTextElizaDay05:
-	align 2
 DialogTextElizaDay06:
 	dc.w	OBJ_NPC_ELIZA
 	dc.b	"This is my default",LF
@@ -567,7 +550,6 @@ DialogTextBeckyDay02:
 DialogTextBeckyDay03:
 DialogTextBeckyDay04:
 DialogTextBeckyDay05:
-	align 2
 DialogTextBeckyDay06:
 	dc.w	OBJ_NPC_BECKY
 	dc.b	"This is my default",LF
@@ -579,7 +561,6 @@ DialogTextCharlesDay02:
 DialogTextCharlesDay03:
 DialogTextCharlesDay04:
 DialogTextCharlesDay05:
-	align 2
 DialogTextCharlesDay06:
 	dc.w	OBJ_NPC_CHARLES
 	dc.b	"This is my default",LF
@@ -591,7 +572,6 @@ DialogTextRandyDay02:
 DialogTextRandyDay03:
 DialogTextRandyDay04:
 DialogTextRandyDay05:
-	align 2
 DialogTextRandyDay06:
 	dc.w	OBJ_NPC_RANDY
 	dc.b	"This is my default",LF
@@ -603,7 +583,6 @@ DialogTextDBDay02:
 DialogTextDBDay03:
 DialogTextDBDay04:
 DialogTextDBDay05:
-	align 2
 DialogTextDBDay06:
 	dc.w	OBJ_NPC_DB
 	dc.b	"This is my default",LF
@@ -615,7 +594,6 @@ DialogTextDaniDay02:
 DialogTextDaniDay03:
 DialogTextDaniDay04:
 DialogTextDaniDay05:
-	align 2
 DialogTextDaniDay06:
 	dc.w	OBJ_NPC_DB
 	dc.b	"This is my default",LF
@@ -627,7 +605,6 @@ DialogTextGuardDay02:
 DialogTextGuardDay03:
 DialogTextGuardDay04:
 DialogTextGuardDay05:
-	align 2
 DialogTextGuardDay06:
 	dc.w	OBJ_NPC_GUARD
 	dc.b	"This is my default",LF
@@ -639,7 +616,6 @@ DialogTextBillyDay02:
 DialogTextBillyDay03:
 DialogTextBillyDay04:
 DialogTextBillyDay05:
-	align 2
 DialogTextBillyDay06:
 	dc.w	OBJ_NPC_BILLY
 	dc.b	"This is my default",LF
@@ -651,7 +627,6 @@ DialogTextAlDay02:
 DialogTextAlDay03:
 DialogTextAlDay04:
 DialogTextAlDay05:
-	align 2
 DialogTextAlDay06:
 	dc.w	OBJ_NPC_AL
 	dc.b	"This is my default",LF
@@ -663,7 +638,6 @@ DialogTextThomasDay02:
 DialogTextThomasDay03:
 DialogTextThomasDay04:
 DialogTextThomasDay05:
-	align 2
 DialogTextThomasDay06:
 	dc.w	OBJ_NPC_THOMAS
 	dc.b	"This is my default",LF
@@ -675,7 +649,6 @@ DialogTextHeatherDay02:
 DialogTextHeatherDay03:
 DialogTextHeatherDay04:
 DialogTextHeatherDay05:
-	align 2
 DialogTextHeatherDay06:
 	dc.w	OBJ_NPC_HEATHER
 	dc.b	"This is my default",LF
@@ -687,7 +660,6 @@ DialogTextGaryDay02:
 DialogTextGaryDay03:
 DialogTextGaryDay04:
 DialogTextGaryDay05:
-	align 2
 DialogTextGaryDay06:
 	dc.w	OBJ_NPC_GARY
 	dc.b	"This is my default",LF
@@ -699,7 +671,6 @@ DialogTextGrantDay02:
 DialogTextGrantDay03:
 DialogTextGrantDay04:
 DialogTextGrantDay05:
-	align 2
 DialogTextGrantDay06:
 	dc.w	OBJ_NPC_GRANT
 	dc.b	"This is my default",LF
@@ -711,7 +682,6 @@ DialogTextBrettDay02:
 DialogTextBrettDay03:
 DialogTextBrettDay04:
 DialogTextBrettDay05:
-	align 2
 DialogTextBrettDay06:
 	dc.w	OBJ_NPC_BRETT
 	dc.b	"This is my default",LF
@@ -723,7 +693,6 @@ DialogTextNickyDay02:
 DialogTextNickyDay03:
 DialogTextNickyDay04:
 DialogTextNickyDay05:
-	align 2
 DialogTextNickyDay06:
 	dc.w	OBJ_NPC_NICKY
 	dc.b	"This is my default",LF
@@ -735,7 +704,6 @@ DialogTextTanyaDay02:
 DialogTextTanyaDay03:
 DialogTextTanyaDay04:
 DialogTextTanyaDay05:
-	align 2
 DialogTextTanyaDay06:
 	dc.w	OBJ_NPC_TANYA
 	dc.b	"This is my default",LF
@@ -747,7 +715,6 @@ DialogTextCraigDay02:
 DialogTextCraigDay03:
 DialogTextCraigDay04:
 DialogTextCraigDay05:
-	align 2
 DialogTextCraigDay06:
 	dc.w	OBJ_NPC_CRAIG
 	dc.b	"This is my default",LF
@@ -759,7 +726,6 @@ DialogTextJuanDay02:
 DialogTextJuanDay03:
 DialogTextJuanDay04:
 DialogTextJuanDay05:
-	align 2
 DialogTextJuanDay06:
 	dc.w	OBJ_NPC_JUAN
 	dc.b	"This is my default",LF
@@ -771,7 +737,6 @@ DialogTextLauraDay02:
 DialogTextLauraDay03:
 DialogTextLauraDay04:
 DialogTextLauraDay05:
-	align 2
 DialogTextLauraDay06:
 	dc.w	OBJ_NPC_LAURA
 	dc.b	"This is my default",LF
@@ -783,7 +748,6 @@ DialogTextGinaDay02:
 DialogTextGinaDay03:
 DialogTextGinaDay04:
 DialogTextGinaDay05:
-	align 2
 DialogTextGinaDay06:
 	dc.w	OBJ_NPC_GINA
 	dc.b	"This is my default",LF
@@ -795,7 +759,6 @@ DialogTextSantaDay02:
 DialogTextSantaDay03:
 DialogTextSantaDay04:
 DialogTextSantaDay05:
-	align 2
 DialogTextSantaDay06:
 	dc.w	OBJ_NPC_SANTA
 	dc.b	"This is my default",LF
@@ -807,7 +770,6 @@ DialogTextLostGuyDay02:
 DialogTextLostGuyDay03:
 DialogTextLostGuyDay04:
 DialogTextLostGuyDay05:
-	align 2
 DialogTextLostGuyDay06:
 	dc.w	OBJ_NPC_LOSTGUY
 	dc.b	"This is my default",LF
@@ -819,7 +781,6 @@ DialogTextRockerDay02:
 DialogTextRockerDay03:
 DialogTextRockerDay04:
 DialogTextRockerDay05:
-	align 2
 DialogTextRockerDay06:
 	dc.w	OBJ_NPC_ROCKER
 	dc.b	"This is my default",LF
@@ -831,7 +792,6 @@ DialogTextShopperDay02:
 DialogTextShopperDay03:
 DialogTextShopperDay04:
 DialogTextShopperDay05:
-	align 2
 DialogTextShopperDay06:
 	dc.w	OBJ_NPC_SHOPPER
 	dc.b	"This is my default",LF
@@ -843,7 +803,6 @@ DialogTextBusyMomDay02:
 DialogTextBusyMomDay03:
 DialogTextBusyMomDay04:
 DialogTextBusyMomDay05:
-	align 2
 DialogTextBusyMomDay06:
 	dc.w	OBJ_NPC_BUSYMOM
 	dc.b	"This is my default",LF
@@ -855,7 +814,6 @@ DialogTextMallratDay02:
 DialogTextMallratDay03:
 DialogTextMallratDay04:
 DialogTextMallratDay05:
-	align 2
 DialogTextMallratDay06:
 	dc.w	OBJ_NPC_MALLRAT
 	dc.b	"This is my default",LF
@@ -867,7 +825,6 @@ DialogTextPreppyDay02:
 DialogTextPreppyDay03:
 DialogTextPreppyDay04:
 DialogTextPreppyDay05:
-	align 2
 DialogTextPreppyDay06:
 	dc.w	OBJ_NPC_PREPPY
 	dc.b	"This is my default",LF
@@ -879,7 +836,6 @@ DialogTextYuppieDay02:
 DialogTextYuppieDay03:
 DialogTextYuppieDay04:
 DialogTextYuppieDay05:
-	align 2
 DialogTextYuppieDay06:
 	dc.w	OBJ_NPC_YUPPIE
 	dc.b	"This is my default",LF
@@ -891,7 +847,6 @@ DialogTextNelsonDay02:
 DialogTextNelsonDay03:
 DialogTextNelsonDay04:
 DialogTextNelsonDay05:
-	align 2
 DialogTextNelsonDay06:
 	dc.w	OBJ_NPC_NELSON
 	dc.b	"This is my default",LF
@@ -903,7 +858,6 @@ DialogTextVictorDay02:
 DialogTextVictorDay03:
 DialogTextVictorDay04:
 DialogTextVictorDay05:
-	align 2
 DialogTextVictorDay06:
 	dc.w	OBJ_NPC_VICTOR
 	dc.b	"This is my default",LF
@@ -915,7 +869,6 @@ DialogTextAlOldDay02:
 DialogTextAlOldDay03:
 DialogTextAlOldDay04:
 DialogTextAlOldDay05:
-	align 2
 DialogTextAlOldDay06:
 	dc.w	OBJ_NPC_ALOLD
 	dc.b	"This is my default",LF
@@ -927,7 +880,6 @@ DialogTextHiddenHJDay02:
 DialogTextHiddenHJDay03:
 DialogTextHiddenHJDay04:
 DialogTextHiddenHJDay05:
-	align 2
 DialogTextHiddenHJDay06:
 	dc.w	OBJ_NPC_HIDDENHJ
 	dc.b	"It's too bad, I have",LF
@@ -941,26 +893,24 @@ DialogTextHiddenMJDay02:
 DialogTextHiddenMJDay03:
 DialogTextHiddenMJDay04:
 DialogTextHiddenMJDay05:
-	align 2
 DialogTextHiddenMJDay06:
 	dc.w	OBJ_NPC_HIDDENMJ
 	dc.b	"I came all the way",LF
 	dc.b	"here & still can't   ^",FF
 	dc.b	"find the Kathleen",LF
 	dc.b	"Sunfire book.",ETX
+	align 2
 
 ;-------------------------------------------------------------------------------
 ; CharacterInteractTextPlayer2
 ; Default character dialog for player 2 (nighttime events)
 ;-------------------------------------------------------------------------------
-	align 2
 DialogTextUnknownNPCNight00:
 DialogTextUnknownNPCNight01:
 DialogTextUnknownNPCNight02:
 DialogTextUnknownNPCNight03:
 DialogTextUnknownNPCNight04:
 DialogTextUnknownNPCNight05:
-	align 2
 DialogTextUnknownNPCNight06:
 	dc.w	OBJ_NPC_HIDDENHJ
 	dc.b	"If you see this then",LF
@@ -972,7 +922,6 @@ DialogTextErynNight02:
 DialogTextErynNight03:
 DialogTextErynNight04:
 DialogTextErynNight05:
-	align 2
 DialogTextErynNight06:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"This is my default",LF
@@ -984,7 +933,6 @@ DialogTextCarlNight02:
 DialogTextCarlNight03:
 DialogTextCarlNight04:
 DialogTextCarlNight05:
-	align 2
 DialogTextCarlNight06:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"This is my default",LF
@@ -996,7 +944,6 @@ DialogTextFrankNight02:
 DialogTextFrankNight03:
 DialogTextFrankNight04:
 DialogTextFrankNight05:
-	align 2
 DialogTextFrankNight06:
 	dc.w	OBJ_NPC_FRANK
 	dc.b	"This is my default",LF
@@ -1008,7 +955,6 @@ DialogTextCarolNight02:
 DialogTextCarolNight03:
 DialogTextCarolNight04:
 DialogTextCarolNight05:
-	align 2
 DialogTextCarolNight06:
 	dc.w	OBJ_NPC_CAROL
 	dc.b	"This is my default",LF
@@ -1020,7 +966,6 @@ DialogTextLisaNight02:
 DialogTextLisaNight03:
 DialogTextLisaNight04:
 DialogTextLisaNight05:
-	align 2
 DialogTextLisaNight06:
 	dc.w	OBJ_NPC_LISA
 	dc.b	"This is my default",LF
@@ -1032,7 +977,6 @@ DialogTextGrunbergNight02:
 DialogTextGrunbergNight03:
 DialogTextGrunbergNight04:
 DialogTextGrunbergNight05:
-	align 2
 DialogTextGrunbergNight06:
 	dc.w	OBJ_NPC_GRUNBERG
 	dc.b	"This is my default",LF
@@ -1044,7 +988,6 @@ DialogTextJenNight02:
 DialogTextJenNight03:
 DialogTextJenNight04:
 DialogTextJenNight05:
-	align 2
 DialogTextJenNight06:
 	dc.w	OBJ_NPC_JEN
 	dc.b	"This is my default",LF
@@ -1056,7 +999,6 @@ DialogTextGriffyNight02:
 DialogTextGriffyNight03:
 DialogTextGriffyNight04:
 DialogTextGriffyNight05:
-	align 2
 DialogTextGriffyNight06:
 	dc.w	OBJ_NPC_GRIFFY
 	dc.b	"This is my default",LF
@@ -1068,7 +1010,6 @@ DialogTextScottNight02:
 DialogTextScottNight03:
 DialogTextScottNight04:
 DialogTextScottNight05:
-	align 2
 DialogTextScottNight06:
 	dc.w	OBJ_NPC_SCOTT
 	dc.b	"This is my default",LF
@@ -1080,7 +1021,6 @@ DialogTextToddNight02:
 DialogTextToddNight03:
 DialogTextToddNight04:
 DialogTextToddNight05:
-	align 2
 DialogTextToddNight06:
 	dc.w	OBJ_NPC_TODD
 	dc.b	"This is my default",LF
@@ -1092,7 +1032,6 @@ DialogTextElizaNight02:
 DialogTextElizaNight03:
 DialogTextElizaNight04:
 DialogTextElizaNight05:
-	align 2
 DialogTextElizaNight06:
 	dc.w	OBJ_NPC_ELIZA
 	dc.b	"This is my default",LF
@@ -1104,7 +1043,6 @@ DialogTextBeckyNight02:
 DialogTextBeckyNight03:
 DialogTextBeckyNight04:
 DialogTextBeckyNight05:
-	align 2
 DialogTextBeckyNight06:
 	dc.w	OBJ_NPC_BECKY
 	dc.b	"This is my default",LF
@@ -1116,7 +1054,6 @@ DialogTextCharlesNight02:
 DialogTextCharlesNight03:
 DialogTextCharlesNight04:
 DialogTextCharlesNight05:
-	align 2
 DialogTextCharlesNight06:
 	dc.w	OBJ_NPC_CHARLES
 	dc.b	"This is my default",LF
@@ -1128,7 +1065,6 @@ DialogTextRandyNight02:
 DialogTextRandyNight03:
 DialogTextRandyNight04:
 DialogTextRandyNight05:
-	align 2
 DialogTextRandyNight06:
 	dc.w	OBJ_NPC_RANDY
 	dc.b	"This is my default",LF
@@ -1140,7 +1076,6 @@ DialogTextDBNight02:
 DialogTextDBNight03:
 DialogTextDBNight04:
 DialogTextDBNight05:
-	align 2
 DialogTextDBNight06:
 	dc.w	OBJ_NPC_DB
 	dc.b	"This is my default",LF
@@ -1152,7 +1087,6 @@ DialogTextDaniNight02:
 DialogTextDaniNight03:
 DialogTextDaniNight04:
 DialogTextDaniNight05:
-	align 2
 DialogTextDaniNight06:
 	dc.w	OBJ_NPC_DB
 	dc.b	"This is my default",LF
@@ -1164,7 +1098,6 @@ DialogTextGuardNight02:
 DialogTextGuardNight03:
 DialogTextGuardNight04:
 DialogTextGuardNight05:
-	align 2
 DialogTextGuardNight06:
 	dc.w	OBJ_NPC_GUARD
 	dc.b	"This is my default",LF
@@ -1176,7 +1109,6 @@ DialogTextBillyNight02:
 DialogTextBillyNight03:
 DialogTextBillyNight04:
 DialogTextBillyNight05:
-	align 2
 DialogTextBillyNight06:
 	dc.w	OBJ_NPC_BILLY
 	dc.b	"This is my default",LF
@@ -1188,7 +1120,6 @@ DialogTextAlNight02:
 DialogTextAlNight03:
 DialogTextAlNight04:
 DialogTextAlNight05:
-	align 2
 DialogTextAlNight06:
 	dc.w	OBJ_NPC_AL
 	dc.b	"This is my default",LF
@@ -1200,7 +1131,6 @@ DialogTextThomasNight02:
 DialogTextThomasNight03:
 DialogTextThomasNight04:
 DialogTextThomasNight05:
-	align 2
 DialogTextThomasNight06:
 	dc.w	OBJ_NPC_THOMAS
 	dc.b	"This is my default",LF
@@ -1212,7 +1142,6 @@ DialogTextHeatherNight02:
 DialogTextHeatherNight03:
 DialogTextHeatherNight04:
 DialogTextHeatherNight05:
-	align 2
 DialogTextHeatherNight06:
 	dc.w	OBJ_NPC_HEATHER
 	dc.b	"This is my default",LF
@@ -1224,7 +1153,6 @@ DialogTextGaryNight02:
 DialogTextGaryNight03:
 DialogTextGaryNight04:
 DialogTextGaryNight05:
-	align 2
 DialogTextGaryNight06:
 	dc.w	OBJ_NPC_GARY
 	dc.b	"This is my default",LF
@@ -1236,7 +1164,6 @@ DialogTextGrantNight02:
 DialogTextGrantNight03:
 DialogTextGrantNight04:
 DialogTextGrantNight05:
-	align 2
 DialogTextGrantNight06:
 	dc.w	OBJ_NPC_GRANT
 	dc.b	"This is my default",LF
@@ -1248,7 +1175,6 @@ DialogTextBrettNight02:
 DialogTextBrettNight03:
 DialogTextBrettNight04:
 DialogTextBrettNight05:
-	align 2
 DialogTextBrettNight06:
 	dc.w	OBJ_NPC_BRETT
 	dc.b	"This is my default",LF
@@ -1260,7 +1186,6 @@ DialogTextNickyNight02:
 DialogTextNickyNight03:
 DialogTextNickyNight04:
 DialogTextNickyNight05:
-	align 2
 DialogTextNickyNight06:
 	dc.w	OBJ_NPC_NICKY
 	dc.b	"This is my default",LF
@@ -1272,7 +1197,6 @@ DialogTextTanyaNight02:
 DialogTextTanyaNight03:
 DialogTextTanyaNight04:
 DialogTextTanyaNight05:
-	align 2
 DialogTextTanyaNight06:
 	dc.w	OBJ_NPC_TANYA
 	dc.b	"This is my default",LF
@@ -1284,7 +1208,6 @@ DialogTextCraigNight02:
 DialogTextCraigNight03:
 DialogTextCraigNight04:
 DialogTextCraigNight05:
-	align 2
 DialogTextCraigNight06:
 	dc.w	OBJ_NPC_CRAIG
 	dc.b	"This is my default",LF
@@ -1296,7 +1219,6 @@ DialogTextJuanNight02:
 DialogTextJuanNight03:
 DialogTextJuanNight04:
 DialogTextJuanNight05:
-	align 2
 DialogTextJuanNight06:
 	dc.w	OBJ_NPC_JUAN
 	dc.b	"This is my default",LF
@@ -1308,7 +1230,6 @@ DialogTextLauraNight02:
 DialogTextLauraNight03:
 DialogTextLauraNight04:
 DialogTextLauraNight05:
-	align 2
 DialogTextLauraNight06:
 	dc.w	OBJ_NPC_LAURA
 	dc.b	"This is my default",LF
@@ -1320,7 +1241,6 @@ DialogTextGinaNight02:
 DialogTextGinaNight03:
 DialogTextGinaNight04:
 DialogTextGinaNight05:
-	align 2
 DialogTextGinaNight06:
 	dc.w	OBJ_NPC_GINA
 	dc.b	"This is my default",LF
@@ -1332,7 +1252,6 @@ DialogTextSantaNight02:
 DialogTextSantaNight03:
 DialogTextSantaNight04:
 DialogTextSantaNight05:
-	align 2
 DialogTextSantaNight06:
 	dc.w	OBJ_NPC_SANTA
 	dc.b	"This is my default",LF
@@ -1344,7 +1263,6 @@ DialogTextLostGuyNight02:
 DialogTextLostGuyNight03:
 DialogTextLostGuyNight04:
 DialogTextLostGuyNight05:
-	align 2
 DialogTextLostGuyNight06:
 	dc.w	OBJ_NPC_LOSTGUY
 	dc.b	"This is my default",LF
@@ -1356,7 +1274,6 @@ DialogTextRockerNight02:
 DialogTextRockerNight03:
 DialogTextRockerNight04:
 DialogTextRockerNight05:
-	align 2
 DialogTextRockerNight06:
 	dc.w	OBJ_NPC_ROCKER
 	dc.b	"This is my default",LF
@@ -1368,7 +1285,6 @@ DialogTextShopperNight02:
 DialogTextShopperNight03:
 DialogTextShopperNight04:
 DialogTextShopperNight05:
-	align 2
 DialogTextShopperNight06:
 	dc.w	OBJ_NPC_SHOPPER
 	dc.b	"This is my default",LF
@@ -1380,7 +1296,6 @@ DialogTextBusyMomNight02:
 DialogTextBusyMomNight03:
 DialogTextBusyMomNight04:
 DialogTextBusyMomNight05:
-	align 2
 DialogTextBusyMomNight06:
 	dc.w	OBJ_NPC_BUSYMOM
 	dc.b	"This is my default",LF
@@ -1392,7 +1307,6 @@ DialogTextMallratNight02:
 DialogTextMallratNight03:
 DialogTextMallratNight04:
 DialogTextMallratNight05:
-	align 2
 DialogTextMallratNight06:
 	dc.w	OBJ_NPC_MALLRAT
 	dc.b	"This is my default",LF
@@ -1404,7 +1318,6 @@ DialogTextPreppyNight02:
 DialogTextPreppyNight03:
 DialogTextPreppyNight04:
 DialogTextPreppyNight05:
-	align 2
 DialogTextPreppyNight06:
 	dc.w	OBJ_NPC_PREPPY
 	dc.b	"This is my default",LF
@@ -1416,7 +1329,6 @@ DialogTextYuppieNight02:
 DialogTextYuppieNight03:
 DialogTextYuppieNight04:
 DialogTextYuppieNight05:
-	align 2
 DialogTextYuppieNight06:
 	dc.w	OBJ_NPC_YUPPIE
 	dc.b	"This is my default",LF
@@ -1428,7 +1340,6 @@ DialogTextNelsonNight02:
 DialogTextNelsonNight03:
 DialogTextNelsonNight04:
 DialogTextNelsonNight05:
-	align 2
 DialogTextNelsonNight06:
 	dc.w	OBJ_NPC_NELSON
 	dc.b	"This is my default",LF
@@ -1440,7 +1351,6 @@ DialogTextVictorNight02:
 DialogTextVictorNight03:
 DialogTextVictorNight04:
 DialogTextVictorNight05:
-	align 2
 DialogTextVictorNight06:
 	dc.w	OBJ_NPC_VICTOR
 	dc.b	"This is my default",LF
@@ -1452,7 +1362,6 @@ DialogTextAlOldNight02:
 DialogTextAlOldNight03:
 DialogTextAlOldNight04:
 DialogTextAlOldNight05:
-	align 2
 DialogTextAlOldNight06:
 	dc.w	OBJ_NPC_ALOLD
 	dc.b	"This is my default",LF
@@ -1464,7 +1373,6 @@ DialogTextHiddenHJNight02:
 DialogTextHiddenHJNight03:
 DialogTextHiddenHJNight04:
 DialogTextHiddenHJNight05:
-	align 2
 DialogTextHiddenHJNight06:
 	dc.w	OBJ_NPC_HIDDENHJ
 	dc.b	"This is my default",LF
@@ -1476,11 +1384,11 @@ DialogTextHiddenMJNight02:
 DialogTextHiddenMJNight03:
 DialogTextHiddenMJNight04:
 DialogTextHiddenMJNight05:
-	align 2
 DialogTextHiddenMJNight06:
 	dc.w	OBJ_NPC_HIDDENMJ
 	dc.b	"This is my default",LF
 	dc.b	"night text.",ETX
+	align 2
 
 ;-------------------------------------------------------------------------------
 ; ObjectName

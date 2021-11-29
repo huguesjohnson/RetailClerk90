@@ -2,7 +2,10 @@
 	"basePath":".",
 	"backupPath":"../../Backup/RetailClerk90/2021",
 	"memoryMap":{
-		"sourceFile":"design/constants/MemoryMap.csv",
+		"sourceFiles":[
+			"design/constants/MemoryMapRCBase.csv",
+			"design/constants/MemoryMapRC90.csv"
+		],
 		"destinationFile":"src/const_MemoryMap.X68",
 		"baseAddress":"FFFF0000"
 	},

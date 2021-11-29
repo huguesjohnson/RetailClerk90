@@ -14,6 +14,7 @@ Things that will make translations difficult:
 2) Game font only includes ASCII, unused chars could be re-purposed though
 3) The game logo text is not in this file
 4) Character & item names are also restricted to small values
+5) Right to left text rendering would be a code change (likely not complicated)
 
 The second item is the one I feel worst about..
 It makes adding non-English characters a complete nightmare.

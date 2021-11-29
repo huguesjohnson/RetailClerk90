@@ -1433,7 +1433,7 @@ ItemNameFmConverter:
 	dc.b	"FM       ^",FF
 	dc.b	"Convert.",ITEMNAMEEND
 ItemNameFlannelShirt:
-	dc.b	"F. Shirt",ITEMNAMEEND
+	dc.b	"Flannels",ITEMNAMEEND
 ItemNameCoupons:
 	dc.b	"Coupon",ITEMNAMEEND
 ItemNameLps:

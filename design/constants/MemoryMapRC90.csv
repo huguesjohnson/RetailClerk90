@@ -1,0 +1,14 @@
+;
+;*******************************************************************************
+; memory map for retail clerk 90 specific things
+;*******************************************************************************
+;
+;-------------------------------------------------------------------------------
+; relationship levels
+;-------------------------------------------------------------------------------
+MEM_PLAYER1_REL0,2,relationship score for p1 and npc0
+MEM_PLAYER1_REL1,2,relationship score for p1 and npc1
+MEM_PLAYER1_REL2,2,relationship score for p1 and npc2
+MEM_PLAYER2_REL0,2,relationship score for p2 and npc0
+MEM_PLAYER2_REL1,2,relationship score for p2 and npc1
+MEM_PLAYER2_REL2,2,relationship score for p2 and npc2

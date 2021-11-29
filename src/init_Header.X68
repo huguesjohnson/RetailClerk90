@@ -2,10 +2,10 @@
 
 	dc.b	'SEGA GENESIS    '	; console name
 	dc.b	'(C)HUJO '	; copyright
-	dc.b	'2021.AUG'	; date
+	dc.b	'2021.NOV'	; date
 	dc.b	'Retail Clerk 90                                 '	; cart name
 	dc.b	'Retail Clerk 90                                 '	; cart name (alt)
-	dc.b	'GM 20210808-16'	; program type / serial number / version
+	dc.b	'GM 20211128-13'	; program type / serial number / version
 	dc.w	$0000	; ROM checksum
 	dc.b	'J               '	; I/O device support (unused)
 	dc.l	$00000000	; address of ROM start

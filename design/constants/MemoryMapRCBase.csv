@@ -1,3 +1,7 @@
+;*******************************************************************************
+; memory map for the base retail clerk game engine
+;*******************************************************************************
+;
 ;-------------------------------------------------------------------------------
 ; debug registers
 ;-------------------------------------------------------------------------------
@@ -68,15 +72,6 @@ MEM_PLAYER1_ITEM_COUNT,2,how many items the player is holding
 MEM_PLAYER1_ITEMS,8,four items
 MEM_PLAYER2_ITEM_COUNT,2,how many items the player is holding
 MEM_PLAYER2_ITEMS,8,four items
-;-------------------------------------------------------------------------------
-; relationship levels
-;-------------------------------------------------------------------------------
-MEM_PLAYER1_REL0,2,relationship score for p1 and npc0
-MEM_PLAYER1_REL1,2,relationship score for p1 and npc1
-MEM_PLAYER1_REL2,2,relationship score for p1 and npc2
-MEM_PLAYER2_REL0,2,relationship score for p2 and npc0
-MEM_PLAYER2_REL1,2,relationship score for p2 and npc1
-MEM_PLAYER2_REL2,2,relationship score for p2 and npc2
 ;-------------------------------------------------------------------------------
 ; sprite management
 ;-------------------------------------------------------------------------------

@@ -116,9 +116,9 @@ TrapException:
 ;*******************************************************************************
 ; echo sound driver (https://github.com/sikthehedgehog/Echo)
 ;*******************************************************************************
-	include 'echo/echo_main.X68'
+	include 'lib/echo/echo_main.X68'
 
-	include	'echo/echo_list.X68'
+	include	'lib/echo/echo_list.X68'
 
 ;*******************************************************************************
 ; initialization data
@@ -234,7 +234,7 @@ BGM_Mystery:
 ;*******************************************************************************
 	org	ROM_ADDR_INSTRUMENTS
 
-	include 'echo/echo_instruments.X68'
+	include 'lib/echo/echo_instruments.X68'
 
 ;*******************************************************************************
 ; end of rom

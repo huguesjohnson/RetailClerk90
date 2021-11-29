@@ -2,9 +2,9 @@
 
 	include 'const_Characters.X68'
 
-	include 'const_MegaDrive.X68'
-
 	include 'const_RomMap.X68'
+
+	include 'const_MegaDrive.X68'
 
 	include 'const_RetailClerkBase.X68'
 

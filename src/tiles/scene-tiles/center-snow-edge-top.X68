@@ -3,20 +3,20 @@
 	; 0
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$00010200
-	dc.l	$12012100
-	dc.l	$11132120
-	dc.l	$12111111
-	dc.l	$31111121
-	dc.l	$11121111
+	dc.l	$000C0C00
+	dc.l	$CC0CCC00
+	dc.l	$CCCBCCC0
+	dc.l	$CCCCCCCC
+	dc.l	$BCCCCCCC
+	dc.l	$CCCCCCCC
 
 	; 1
 	dc.l	$00000000
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$00010200
-	dc.l	$10121103
-	dc.l	$12112111
-	dc.l	$31121111
-	dc.l	$11111311
+	dc.l	$000C0C00
+	dc.l	$C0CCCC0B
+	dc.l	$CCCCCCCC
+	dc.l	$BCCCCCCC
+	dc.l	$CCCCCBCC
 

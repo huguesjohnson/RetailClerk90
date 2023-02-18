@@ -4,12 +4,11 @@
 	"destinationFilePath":"src/scenes/DenimCountry.X68",
 	"tilesetNames":[
 		"TransparentTile",
-		"FloorWoodVert",
-		"FrameRect",
-		"CounterTop",
-		"CounterShelves",
-		"DenimCountryTableHigh",
-		"DenimCountryTableLow"
+		"FloorDenimCountry",
+		"Frame",
+		"Counter",
+		"DenimCountryTable32x24",
+		"DenimCountryClothes16x40"
 	],
 	"paletteNames":[
 		"PaletteDenimCountry00",
@@ -19,238 +18,190 @@
 	],
 	"scenery":[
 		{
-			"patternName":"PatternWoodFloorV",
-			"comment":"background",
+			"patternName":"Pattern16x16x304",
+			"comment":"floor",
 			"tilesetIndex":1,
 			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":0,
-			"repeat":13,
+			"repeat":12,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"00000000",
-			"column":"00000000"
-		},
-		{
-			"patternName":"PatternFrameSideLeftOpenTop",
-			"comment":"left entrance - top",
-			"tilesetIndex":2,
-			"tilesetOffset":0,
-			"highPriority":true,
-			"paletteNumber":0,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
 			"row":"00800000",
-			"column":"00000000"
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameSideLeftOpenBottom",
-			"comment":"left entrance - bottom",
+			"patternName":"PatternFrameWestOpen",
+			"comment":"west wall",
 			"tilesetIndex":2,
 			"tilesetOffset":0,
-			"highPriority":true,
+			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"09000000",
-			"column":"00000000"
+			"row":"02800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameSideClosedRight",
-			"comment":"right side",
+			"patternName":"PatternFrameEastClosed",
+			"comment":"east wall",
 			"tilesetIndex":2,
 			"tilesetOffset":0,
-			"highPriority":true,
+			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00800000",
-			"column":"004E0000"
+			"row":"02800000",
+			"column":"004A0000"
 		},
 		{
-			"patternName":"PatternFrameBottom",
+			"patternName":"PatternFrameSouthClosed",
 			"comment":"south wall",
 			"tilesetIndex":2,
 			"tilesetOffset":0,
-			"highPriority":true,
+			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"0D800000",
-			"column":"00000000"
+			"row":"0D000000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameTopOpenLeft",
-			"comment":"north wall - left side",
+			"patternName":"PatternFrameNorthOpenWestSide",
+			"comment":"north wall - west side",
 			"tilesetIndex":2,
 			"tilesetOffset":0,
-			"highPriority":true,
+			"highPriority":false,
 			"paletteNumber":0,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00000000",
-			"column":"00000000"
-		},
-		{
-			"patternName":"PatternFrameTopOpenRight",
-			"comment":"north wall - right side",
-			"tilesetIndex":2,
-			"tilesetOffset":0,
-			"highPriority":true,
-			"paletteNumber":0,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00360000",
-			"column":"00000000"
-		},
-		{
-			"patternName":"Pattern3Tile72x8",
-			"comment":"shelves under counter",
-			"tilesetIndex":4,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"04000000",
-			"column":"00080000"
-		},
-		{
-			"patternName":"Pattern3Tile72x8",
-			"tilesetIndex":4,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"04800000",
-			"column":"00080000"
-		},
-		{
-			"patternName":"PatternCounterSide24x64OpenLowerLeft",
-			"comment":"counter side",
-			"tilesetIndex":3,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"00800000",
-			"column":"00140000"
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternCounterHigh48x8OpenLowerRight",
-			"comment":"counter high",
+			"patternName":"PatternFrameNorthOpenEastSide",
+			"comment":"north wall - east side",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"00800000",
+			"column":"002E0000"
+		},	
+		{
+			"patternName":"PatternDenimCountryCounter",
+			"comment":"counter",
 			"tilesetIndex":3,
 			"tilesetOffset":0,
-			"highPriority":true,
+			"highPriority":false,
 			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"02800000",
-			"column":"00080000"
+			"row":"01800000",
+			"column":"000C0000"
 		},
 		{
-			"patternName":"PatternCounterLow48x24OpenTopRight",
-			"comment":"counter low",
-			"tilesetIndex":3,
+			"patternName":"Pattern32x24",
+			"comment":"table - 0",
+			"tilesetIndex":4,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"08800000",
+			"column":"00160000"
+		},
+		{
+			"patternName":"Pattern32x24",
+			"comment":"table - 1",
+			"tilesetIndex":4,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"08800000",
+			"column":"00200000"
+		},
+		{
+			"patternName":"Pattern32x24",
+			"comment":"table - 2",
+			"tilesetIndex":4,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"08800000",
+			"column":"002A0000"
+		},
+		{
+			"patternName":"Pattern32x24",
+			"comment":"table - 3",
+			"tilesetIndex":4,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"08800000",
+			"column":"00340000"
+		},
+		{
+			"patternName":"Pattern16x40",
+			"comment":"clothes rack - 0",
+			"tilesetIndex":5,
 			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"03000000",
-			"column":"00080000"
+			"row":"01000000",
+			"column":"00300000"
 		},
 		{
-			"patternName":"PatternDenimCountryTableHigh",
-			"comment":"tables",
+			"patternName":"Pattern16x40",
+			"comment":"clothes rack - 1",
 			"tilesetIndex":5,
 			"tilesetOffset":0,
-			"highPriority":true,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"02800000",
-			"column":"00360000"
-		},
-		{
-			"patternName":"PatternDenimCountryTableLow",
-			"tilesetIndex":6,
-			"tilesetOffset":0,
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"03000000",
-			"column":"00360000"
+			"row":"01000000",
+			"column":"003A0000"
 		},
 		{
-			"patternName":"PatternDenimCountryTableHigh",
+			"patternName":"Pattern16x40",
+			"comment":"clothes rack - 2",
 			"tilesetIndex":5,
 			"tilesetOffset":0,
-			"highPriority":true,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"06800000",
-			"column":"00360000"
-		},
-		{
-			"patternName":"PatternDenimCountryTableLow",
-			"tilesetIndex":6,
-			"tilesetOffset":0,
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"07000000",
-			"column":"00360000"
-		},
-		{
-			"patternName":"PatternDenimCountryTableHigh",
-			"tilesetIndex":5,
-			"tilesetOffset":0,
-			"highPriority":true,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"06800000",
-			"column":"00080000"
-		},
-		{
-			"patternName":"PatternDenimCountryTableLow",
-			"tilesetIndex":6,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"07000000",
-			"column":"00080000"
+			"row":"01000000",
+			"column":"00440000"
 		}
 	],
 	"objects":[
 		{
 			"id":"OBJ_SCENE_DC_MERCH",
-			"x":160,
-			"y":232,
-			"width":71,
-			"height":40
+			"x":216,
+			"y":264,
+			"width":70,
+			"height":16
 		},
 		{
 			"id":"OBJ_SCENE_DC_MERCH",
-			"x":344,
-			"y":168,
-			"width":71,
-			"height":40
+			"x":296,
+			"y":264,
+			"width":70,
+			"height":16
 		},
-		{
-			"id":"OBJ_SCENE_DC_MERCH",
-			"x":344,
-			"y":232,
-			"width":71,
-			"height":40
-		},
+		null,
 		null,
 		null,
 		null,
@@ -268,8 +219,8 @@
 	],
 	"npcLocations":[
 		{
-			"x":192,
-			"y":144,
+			"x":232,
+			"y":200,
 			"direction":"DIRECTION_DOWN",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"

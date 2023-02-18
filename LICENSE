@@ -6,6 +6,16 @@ The license summary for this project is:
 * CC BY-SA 4.0 for original characters, story, art, & other non-code things
 * 3rd party assets (code, graphics, music) are under their respective licenses
 
+The intent behind this is:
+* The game code is under a permissive license & can be reused with no drama
+  * For example - using any portion of this code to build a different game
+* Most of the graphics are based on (inexpensive) licensed tilesets
+  * They can not be used in derivative works without buying a license   
+* Anything reusing the scenario (characters, settings, story) is CC BY-SA 4.0
+  * For example - creating a sequel or spin-off
+  * Another example - porting this demo as-is to a different system
+  * I understand it's extremely unlikely anyone would ever want to do these
+  
 ********************************************************************************
 License for original source code
 ********************************************************************************
@@ -14,7 +24,7 @@ The MIT License:
 
  The MIT License (MIT)
 
-Copyright (c) 2020-2021 Hugues Johnson
+Copyright (c) 2020-2023 Hugues Johnson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files (the "Software"), to deal in 
@@ -63,23 +73,35 @@ freely, subject to the following restrictions:
 3. This notice may not be removed or altered from any source distribution.
 
 ********************************************************************************
-3rd party graphics
+3rd party graphics - free
 ********************************************************************************
 Logo font is based off Audiowide
- Copyright (c) 2012, Brian J. Bonislawsky DBA Astigmatic (AOETI)
- SIL Open Font License, Version 1.1
+* Copyright (c) 2012, Brian J. Bonislawsky DBA Astigmatic (AOETI)
+* SIL Open Font License, Version 1.1
 
 Dialog & menu font is based off Deathwake font by Zee-3
- http://www.zee-3.com/pickfordbros/archive/bitmapfonts.php
- "Feel free to use any of these fonts for whatever purpose you see fit."
+* http://www.zee-3.com/pickfordbros/archive/bitmapfonts.php
+* "Feel free to use any of these fonts for whatever purpose you see fit."
 
-Some scenery is based off tilesets created by Sithjester
- http://untamed.wild-refuge.net/rpgxp.php
- "Feel free to use my resources as you want, be it in free or commercial games,
- edited how you want, as bases for your own sprites, or for non-RPG Maker stuff"
+********************************************************************************
+3rd party graphics - commercial
+********************************************************************************
+Almost all of the graphics are based off the following licensed tilesets:
+* Modern exteriors: https://limezu.itch.io/modernexteriors
+* Modern interiors: https://limezu.itch.io/moderninteriors
+* Modern office: https://limezu.itch.io/modernoffice
+* Modern UI: https://limezu.itch.io/modernuserinterface
+All three were created by LimeZu (https://limezu.itch.io/)
 
-Some scenery is based off tilesets from Pixel Art World 
- http://yms.main.jp/page-s1/terms.html
+Some graphics are from the GameDev Market 8Bit/Pixelart Humble Bundle
+* https://www.humblebundle.com/software/8bit-pixel-game-dev-software
+* https://www.gamedevmarket.net/terms-conditions/#pro-licence
+
+The night sky on the title screen is from the Pixel Art Infinite Runner Pack
+* https://edermunizz.itch.io/infinite-runner
+
+If you want to use any of these in a project please purchase a license. 
+These are all inexpensive sets so just do it.
  
 ********************************************************************************
 Physical Redistribution

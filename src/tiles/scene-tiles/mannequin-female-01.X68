@@ -22,46 +22,46 @@
 
 	; 2
 	dc.l	$12444433
-	dc.l	$124CC433
-	dc.l	$122CEC33
-	dc.l	$12CCEECC
-	dc.l	$2CCCCEEE
-	dc.l	$23322CEE
-	dc.l	$23322CCE
-	dc.l	$23322CCC
+	dc.l	$124AA433
+	dc.l	$122A1A33
+	dc.l	$12AA11AA
+	dc.l	$2AAAA111
+	dc.l	$23322A11
+	dc.l	$23322AA1
+	dc.l	$23322AAA
 
 	; 3
 	dc.l	$33444211
-	dc.l	$33CC4211
-	dc.l	$3EECC211
-	dc.l	$EECCCC21
-	dc.l	$ECCC3321
-	dc.l	$CCC23321
-	dc.l	$ECC23321
-	dc.l	$EEC23321
+	dc.l	$33AA4211
+	dc.l	$311AA211
+	dc.l	$11AAAA21
+	dc.l	$1AAA3321
+	dc.l	$AAA23321
+	dc.l	$1AA23321
+	dc.l	$11A23321
 
 	; 4
-	dc.l	$23332CCC
-	dc.l	$12332CCC
-	dc.l	$11222EEE
-	dc.l	$11222CCC
-	dc.l	$112CCCCC
-	dc.l	$12CCCCCC
-	dc.l	$2CCCCCCC
-	dc.l	$2CCCCCCC
+	dc.l	$23332AAA
+	dc.l	$12332AAA
+	dc.l	$11222111
+	dc.l	$11222AAA
+	dc.l	$112AAAAA
+	dc.l	$12AAAAAA
+	dc.l	$2AAAAAAA
+	dc.l	$2AAAAAAA
 
 	; 5
-	dc.l	$CEE23321
-	dc.l	$CCE23321
-	dc.l	$EE212211
-	dc.l	$CC221111
-	dc.l	$CCCC2111
-	dc.l	$CCCCC211
-	dc.l	$CCCCCC21
-	dc.l	$CCCCCC21
+	dc.l	$A1123321
+	dc.l	$AA123321
+	dc.l	$11212211
+	dc.l	$AA221111
+	dc.l	$AAAA2111
+	dc.l	$AAAAA211
+	dc.l	$AAAAAA21
+	dc.l	$AAAAAA21
 
 	; 6
-	dc.l	$12C2C2C2
+	dc.l	$12A2A2A2
 	dc.l	$11212322
 	dc.l	$11112332
 	dc.l	$11112332
@@ -71,7 +71,7 @@
 	dc.l	$11122222
 
 	; 7
-	dc.l	$C2C2C211
+	dc.l	$A2A2A211
 	dc.l	$23212111
 	dc.l	$33211111
 	dc.l	$33211111

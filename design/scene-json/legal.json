@@ -15,7 +15,7 @@
 		{
 			"stringLabel":"LegalScreenLine00",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":1,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"00000000",
 			"column":"00000000"
@@ -23,7 +23,7 @@
 		{
 			"stringLabel":"LegalScreenLine01",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":1,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"00800000",
 			"column":"00000000"
@@ -31,7 +31,7 @@
 		{
 			"stringLabel":"LegalScreenLine02",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":1,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"01000000",
 			"column":"00000000"
@@ -39,7 +39,7 @@
 		{
 			"stringLabel":"LegalScreenLine03",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":1,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"01800000",
 			"column":"00000000"
@@ -47,7 +47,7 @@
 		{
 			"stringLabel":"LegalScreenLine04",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":1,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"02000000",
 			"column":"00000000"
@@ -55,7 +55,7 @@
 		{
 			"stringLabel":"LegalScreenLine05",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":1,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"02800000",
 			"column":"00000000"
@@ -63,7 +63,7 @@
 		{
 			"stringLabel":"LegalScreenLine06",
 			"highPriority":false,
-			"paletteNumber":1,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"03000000",
 			"column":"00000000"
@@ -71,7 +71,7 @@
 		{
 			"stringLabel":"LegalScreenLine07",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"03800000",
 			"column":"00000000"
@@ -79,7 +79,7 @@
 		{
 			"stringLabel":"LegalScreenLine08",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"04000000",
 			"column":"00000000"
@@ -87,7 +87,7 @@
 		{
 			"stringLabel":"LegalScreenLine09",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"04800000",
 			"column":"00000000"
@@ -95,7 +95,7 @@
 		{
 			"stringLabel":"LegalScreenLine10",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"05000000",
 			"column":"00000000"
@@ -103,7 +103,7 @@
 		{
 			"stringLabel":"LegalScreenLine11",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"05800000",
 			"column":"00000000"
@@ -111,7 +111,7 @@
 		{
 			"stringLabel":"LegalScreenLine12",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"06000000",
 			"column":"00000000"
@@ -119,7 +119,7 @@
 		{
 			"stringLabel":"LegalScreenLine13",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"06800000",
 			"column":"00000000"
@@ -127,7 +127,7 @@
 		{
 			"stringLabel":"LegalScreenLine14",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"07000000",
 			"column":"00000000"
@@ -135,7 +135,7 @@
 		{
 			"stringLabel":"LegalScreenLine15",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"07800000",
 			"column":"00000000"
@@ -143,7 +143,7 @@
 		{
 			"stringLabel":"LegalScreenLine16",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"08000000",
 			"column":"00000000"
@@ -151,7 +151,7 @@
 		{
 			"stringLabel":"LegalScreenLine17",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"08800000",
 			"column":"00000000"
@@ -159,7 +159,7 @@
 		{
 			"stringLabel":"LegalScreenLine18",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"09000000",
 			"column":"00000000"
@@ -167,7 +167,7 @@
 		{
 			"stringLabel":"LegalScreenLine19",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"09800000",
 			"column":"00000000"
@@ -175,7 +175,7 @@
 		{
 			"stringLabel":"LegalScreenLine20",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"0A000000",
 			"column":"00000000"
@@ -183,7 +183,7 @@
 		{
 			"stringLabel":"LegalScreenLine21",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"0A800000",
 			"column":"00000000"
@@ -191,7 +191,7 @@
 		{
 			"stringLabel":"LegalScreenLine22",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"0B000000",
 			"column":"00000000"
@@ -199,7 +199,7 @@
 		{
 			"stringLabel":"LegalScreenLine23",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"0B800000",
 			"column":"00000000"
@@ -207,7 +207,7 @@
 		{
 			"stringLabel":"LegalScreenLine24",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"0C000000",
 			"column":"00000000"
@@ -215,7 +215,7 @@
 		{
 			"stringLabel":"LegalScreenLine25",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"0C800000",
 			"column":"00000000"
@@ -223,7 +223,7 @@
 		{
 			"stringLabel":"LegalScreenLine26",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"0D000000",
 			"column":"00000000"
@@ -231,7 +231,7 @@
 		{
 			"stringLabel":"LegalScreenLine27",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"0D800000",
 			"column":"00000000"

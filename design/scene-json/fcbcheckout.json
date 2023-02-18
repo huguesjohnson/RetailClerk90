@@ -4,136 +4,137 @@
 	"destinationFilePath":"src/scenes/FCBCheckout.X68",
 	"tilesetNames":[
 		"TransparentTile",
-		"FloorStone",
-		"FrameWood",
-		"FCBPondLowerRight",
+		"FloorFCB",
+		"Frame",
+		"FCBPondSE",
 		"FCBPath",
-		"CounterTop",
-		"CounterShelves"
+		"Counter"
 	],
 	"paletteNames":[
 		"PaletteFCBFloorWall",
-		"PaletteFCBCheckout00",
-		"PaletteFCBCheckout01",
+		"PaletteFCBWoodWater",
+		"PaletteFCBCheckout",
 		"PalettePeople"
 	],
 	"scenery":[
 		{
-			"patternName":"Pattern32x32Tile",
-			"comment":"stone floor",
+			"patternName":"Pattern16x16x304",
+			"comment":"floor",
 			"tilesetIndex":1,
 			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":0,
-			"repeat":6,
+			"repeat":12,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"00000000",
-			"column":"00000000"
+			"row":"00800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameBottomLongLeft",
+			"patternName":"PatternFrameSouthClosedSolo",
 			"comment":"south wall",
 			"tilesetIndex":2,
 			"tilesetOffset":0,
-			"highPriority":true,
+			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"0D800000",
-			"column":"00000000"
+			"row":"0D000000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFCBFloorH",
+			"patternName":"Pattern16x16x240",
 			"comment":"wood path - east-west",
 			"tilesetIndex":4,
 			"tilesetOffset":0,
 			"highPriority":false,
-			"paletteNumber":0,
+			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"09800000",
-			"column":"00000000"
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFCBFloorVSouth",
+			"patternName":"Pattern16x16",
 			"comment":"wood path - north-south",
 			"tilesetIndex":4,
 			"tilesetOffset":0,
 			"highPriority":false,
-			"paletteNumber":0,
-			"repeat":0,
+			"paletteNumber":1,
+			"repeat":8,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"00380000",
-			"column":"00000000"
+			"row":"00800000",
+			"column":"003A0000"
 		},
 		{
-			"patternName":"PatternFCBFloorVSouth",
+			"patternName":"Pattern16x16",
+			"comment":"wood path - leading to pond",
 			"tilesetIndex":4,
 			"tilesetOffset":0,
 			"highPriority":false,
-			"paletteNumber":0,
-			"repeat":0,
+			"paletteNumber":1,
+			"repeat":4,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"00380000",
-			"column":"00000000"
+			"row":"05800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFCBPondLowerRight",
+			"patternName":"Pattern16x16",
+			"comment":"wood path - leading to pond",
+			"tilesetIndex":4,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":4,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"05800000",
+			"column":"00020000"
+		},
+		{
+			"patternName":"Pattern16x16",
+			"comment":"wood path - leading to pond",
+			"tilesetIndex":4,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":4,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"05800000",
+			"column":"00060000"
+		},
+		{
+			"patternName":"Pattern16x16",
+			"comment":"wood path - leading to pond",
+			"tilesetIndex":4,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":4,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"05800000",
+			"column":"00060000"
+		},			
+		{
+			"patternName":"PatternFCBPondSE",
 			"comment":"pond",
 			"tilesetIndex":3,
 			"tilesetOffset":0,
 			"highPriority":false,
-			"paletteNumber":0,
+			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"00000000",
-			"column":"00000000"
+			"row":"00800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"Pattern3Tile112x8",
-			"comment":"shelves under counter",
-			"tilesetIndex":6,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":0,
-			"repeat":1,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"08800000",
-			"column":"001C0000"
-		},
-		{
-			"patternName":"PatternCounterLow112x24Open",
-			"comment":"counter",
+			"patternName":"PatternFCBCounter",
 			"tilesetIndex":5,
 			"tilesetOffset":0,
 			"highPriority":false,
-			"paletteNumber":1,
+			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"07800000",
-			"column":"001C0000"
-		},
-		{
-			"patternName":"PatternCounterHigh112x8Open",
-			"tilesetIndex":5,
-			"tilesetOffset":0,
-			"highPriority":true,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"07000000",
-			"column":"001C0000"
-		},
-		{
-			"patternName":"PatternCounterSide32x64OpenLower",
-			"tilesetIndex":5,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"03800000",
-			"column":"00300000"
+			"row":"04800000",
+			"column":"00260000"
 		}
 	],
 	"objects":[
@@ -157,9 +158,9 @@
 	],
 	"npcLocations":[
 		{
-			"x":304,
-			"y":212,
-			"direction":"DIRECTION_DOWN",
+			"x":320,
+			"y":224,
+			"direction":"DIRECTION_RIGHT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},

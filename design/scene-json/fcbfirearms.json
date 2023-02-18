@@ -4,96 +4,138 @@
 	"destinationFilePath":"src/scenes/FCBFirearms.X68",
 	"tilesetNames":[
 		"TransparentTile",
-		"FloorStone",
-		"FrameWood",
-		"FCBPondTopRight",
+		"FloorFCB",
+		"Frame",
+		"FCBPondNE",
 		"FCBPath",
 		"FCBFirearmsHigh",
 		"FCBFirearmsLow"
 	],
 	"paletteNames":[
 		"PaletteFCBFloorWall",
-		"PaletteFCBFirearms00",
-		"PaletteFCBFirearms01",
+		"PaletteFCBWoodWater",
+		"PaletteFCBFirearms",
 		"PalettePeople"
 	],
 	"scenery":[
 		{
-			"patternName":"Pattern32x32Tile",
-			"comment":"stone floor",
+			"patternName":"Pattern16x16x304",
+			"comment":"floor",
 			"tilesetIndex":1,
+			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":0,
-			"repeat":6,
+			"repeat":12,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"00000000",
-			"column":"00000000"
+			"row":"00800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameTopLongLeft",
-			"comment":"north wall",
+			"patternName":"PatternFrameEastClosed",
+			"comment":"east wall",
 			"tilesetIndex":2,
-			"highPriority":true,
+			"tilesetOffset":0,
+			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00000000",
-			"column":"00000000"
+			"row":"02800000",
+			"column":"004A0000"
 		},
 		{
-			"patternName":"PatternFrameSideClosedRightWithEnd",
-			"comment":"right wall",
+			"patternName":"PatternFrameSEFill",
+			"comment":"east wall - south fill",
 			"tilesetIndex":2,
-			"highPriority":true,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"0D000000",
+			"column":"004A0000"
+		},			
+		{
+			"patternName":"PatternFrameNorthClosedWestOpen",
+			"comment":"north wall",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
+			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"00800000",
-			"column":"004E0000"
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFCBFloorH",
+			"patternName":"Pattern16x16x240",
 			"comment":"wood path - east-west",
 			"tilesetIndex":4,
+			"tilesetOffset":0,
 			"highPriority":false,
-			"paletteNumber":0,
+			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"09000000",
-			"column":"00000000"
+			"row":"0A000000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFCBFloorVNorth",
+			"patternName":"Pattern16x16",
 			"comment":"wood path - north-south",
 			"tilesetIndex":4,
+			"tilesetOffset":0,
 			"highPriority":false,
-			"paletteNumber":0,
+			"paletteNumber":1,
+			"repeat":1,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"0B000000",
+			"column":"003A0000"
+		},
+		{
+			"patternName":"Pattern16x8",
+			"comment":"wood path - north-south",
+			"tilesetIndex":4,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":1,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"0C800000",
+			"column":"003A0000"
+		},		
+		{
+			"patternName":"Pattern16x16",
+			"comment":"wood path - leading to pond",
+			"tilesetIndex":4,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"0B000000",
-			"column":"00380000"
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFCBFloorVNorth",
-			"comment":"wood path - north-south",
+			"patternName":"Pattern16x16",
+			"comment":"wood path - leading to pond",
 			"tilesetIndex":4,
+			"tilesetOffset":0,
 			"highPriority":false,
-			"paletteNumber":0,
+			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"0B000000",
-			"column":"00000000"
-		},
+			"column":"00060000"
+		},	
 		{
-			"patternName":"PatternFCBPondTopRight",
+			"patternName":"PatternFCBPondNE",
 			"comment":"pond",
 			"tilesetIndex":3,
 			"highPriority":false,
-			"paletteNumber":0,
+			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"0B800000",
-			"column":"00000000"
+			"column":"00020000"
 		},
 		{
 			"patternName":"PatternFCBFirearmsLow",

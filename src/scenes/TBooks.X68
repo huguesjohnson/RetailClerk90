@@ -8,51 +8,31 @@
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$000A ; tileset count - 1
+	dc.w	$0005 ; tileset count - 1
 
 	; tileset 0 - tiles start at [0] - tileset length [1]
 	dc.l	TransparentTileTilesStart
 	dc.l	TransparentTileTilesEnd
 
-	; tileset 1 - tiles start at [1] - tileset length [8]
-	dc.l	FloorWoodVertTilesStart
-	dc.l	FloorWoodVertTilesEnd
+	; tileset 1 - tiles start at [1] - tileset length [4]
+	dc.l	FloorTBooksTilesStart
+	dc.l	FloorTBooksTilesEnd
 
-	; tileset 2 - tiles start at [9] - tileset length [14]
-	dc.l	FrameRoundTilesStart
-	dc.l	FrameRoundTilesEnd
+	; tileset 2 - tiles start at [5] - tileset length [4D]
+	dc.l	FrameTilesStart
+	dc.l	FrameTilesEnd
 
-	; tileset 3 - tiles start at [1D] - tileset length [B]
-	dc.l	CounterTopTilesStart
-	dc.l	CounterTopTilesEnd
+	; tileset 3 - tiles start at [52] - tileset length [30]
+	dc.l	CounterTilesStart
+	dc.l	CounterTilesEnd
 
-	; tileset 4 - tiles start at [28] - tileset length [2]
-	dc.l	CounterTopNorthCornersTilesStart
-	dc.l	CounterTopNorthCornersTilesEnd
+	; tileset 4 - tiles start at [82] - tileset length [E]
+	dc.l	TBooksBookcaseHigh56x16TilesStart
+	dc.l	TBooksBookcaseHigh56x16TilesEnd
 
-	; tileset 5 - tiles start at [2A] - tileset length [3]
-	dc.l	CounterShelvesTilesStart
-	dc.l	CounterShelvesTilesEnd
-
-	; tileset 6 - tiles start at [2D] - tileset length [4]
-	dc.l	TBooksBookcaseTitleTilesStart
-	dc.l	TBooksBookcaseTitleTilesEnd
-
-	; tileset 7 - tiles start at [31] - tileset length [1B]
-	dc.l	TBooksBookcaseAHighTilesStart
-	dc.l	TBooksBookcaseAHighTilesEnd
-
-	; tileset 8 - tiles start at [4C] - tileset length [1B]
-	dc.l	TBooksBookcaseALowTilesStart
-	dc.l	TBooksBookcaseALowTilesEnd
-
-	; tileset 9 - tiles start at [67] - tileset length [1B]
-	dc.l	TBooksBookcaseBHighTilesStart
-	dc.l	TBooksBookcaseBHighTilesEnd
-
-	; tileset A - tiles start at [82] - tileset length [1B]
-	dc.l	TBooksBookcaseBLowTilesStart
-	dc.l	TBooksBookcaseBLowTilesEnd
+	; tileset 5 - tiles start at [90] - tileset length [15]
+	dc.l	TBooksBookcaseLow56x24TilesStart
+	dc.l	TBooksBookcaseLow56x24TilesEnd
 
 	;---------------------------------------------------------------------------
 	; palettes
@@ -65,175 +45,159 @@
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$0016 ; scenery count - 1
+	dc.w	$0014 ; scenery count - 1
 
-	; background
-	dc.l	PatternWoodFloorV
+	; floor
+	dc.l	Pattern16x16x304
 	;		%pccvhnnnnnnnnnnn
 	dc.w	%0000000000000001 ; vdp pattern
-	dc.w	$000D ; repeat=13
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$00000000 ; initial drawing location
+	dc.w	$000C ; repeat=12
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$00800000 ; initial drawing location
 
-	; left wall
-	dc.l	PatternFrameSideClosedLeft
+	; west wall
+	dc.l	PatternFrameWestClosed
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000001001 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$00800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$02800000 ; initial drawing location
 
-	; right side
-	dc.l	PatternFrameSideClosedRight
+	; east wall
+	dc.l	PatternFrameEastClosed
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000001001 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$004E0000+$00800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$004A0000+$02800000 ; initial drawing location
 
 	; south wall
-	dc.l	PatternFrameBottom
+	dc.l	PatternFrameSouthClosed
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000001001 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$0D800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$0D000000 ; initial drawing location
 
-	; north wall - left side
-	dc.l	PatternFrameTopOpenLeft
+	; north wall - west side
+	dc.l	PatternFrameNorthOpenWestSide
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000001001 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$00000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$00800000 ; initial drawing location
 
-	; north wall - right side
-	dc.l	PatternFrameTopOpenRight
+	; north wall - east side
+	dc.l	PatternFrameNorthOpenEastSide
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000001001 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$00360000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$002E0000+$00800000 ; initial drawing location
 
-	; shelves under counter
-	dc.l	Pattern24x8
+	; counter
+	dc.l	PatternTBooksCounter
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000000101010 ; vdp pattern
-	dc.w	$0001 ; repeat=1
-	dc.l	VDP_VRAM_WRITE_B+$001A0000+$07000000 ; initial drawing location
-
-	dc.l	Pattern24x8
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000000101010 ; vdp pattern
-	dc.w	$0001 ; repeat=1
-	dc.l	VDP_VRAM_WRITE_B+$00300000+$07000000 ; initial drawing location
-
-	; counter sides
-	dc.l	PatternCounterSide24x40ClosedBottom
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000000011101 ; vdp pattern
+	dc.w	%0010000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$001A0000+$05000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$001E0000+$04800000 ; initial drawing location
 
-	dc.l	PatternCounterSide24x40ClosedBottom
+	; bookcase - north west - high
+	dc.l	Pattern56x16
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000000011101 ; vdp pattern
+	dc.w	%1100000010000010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00300000+$05000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00060000+$01000000 ; initial drawing location
 
-	dc.l	PatternCounterLow112x24ClosedTop
+	; bookcase - north west - low
+	dc.l	Pattern56x24
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000000011101 ; vdp pattern
+	dc.w	%0100000010010000 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$001A0000+$03800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00060000+$02000000 ; initial drawing location
 
-	; bookshelves
-	dc.l	PatternTBooksBookcaseTitle
+	; bookcase - north east - high
+	dc.l	Pattern56x16
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000000101101 ; vdp pattern
+	dc.w	%1100000010000010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00020000+$07800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$003C0000+$01000000 ; initial drawing location
 
-	dc.l	Pattern72x24
+	; bookcase - north east - low
+	dc.l	Pattern56x24
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000000110001 ; vdp pattern
+	dc.w	%0100000010010000 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00020000+$08800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$003C0000+$02000000 ; initial drawing location
 
-	dc.l	Pattern72x24
+	; bookcase - center west - high
+	dc.l	Pattern56x16
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000001001100 ; vdp pattern
+	dc.w	%1100000010000010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00020000+$0A000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00060000+$05000000 ; initial drawing location
 
-	dc.l	PatternTBooksBookcaseTitle
+	; bookcase - center west - low
+	dc.l	Pattern56x24
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000000101101 ; vdp pattern
+	dc.w	%0100000010010000 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$003C0000+$02000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00060000+$06000000 ; initial drawing location
 
-	dc.l	Pattern72x24
+	; bookcase - center east - high
+	dc.l	Pattern56x16
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000001100111 ; vdp pattern
+	dc.w	%1100000010000010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$003C0000+$03000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$003C0000+$05000000 ; initial drawing location
 
-	dc.l	Pattern72x24
+	; bookcase - center east - low
+	dc.l	Pattern56x24
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000010000010 ; vdp pattern
+	dc.w	%0100000010010000 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$003C0000+$04800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$003C0000+$06000000 ; initial drawing location
 
-	dc.l	PatternTBooksBookcaseTitle
+	; bookcase - south west - high
+	dc.l	Pattern56x16
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000000101101 ; vdp pattern
+	dc.w	%1100000010000010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00020000+$02000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00060000+$09000000 ; initial drawing location
 
-	dc.l	Pattern72x24
+	; bookcase - south west - low
+	dc.l	Pattern56x24
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000000110001 ; vdp pattern
+	dc.w	%0100000010010000 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00020000+$03000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00060000+$0A000000 ; initial drawing location
 
-	dc.l	Pattern72x24
+	; bookcase - south east - high
+	dc.l	Pattern56x16
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000001001100 ; vdp pattern
+	dc.w	%1100000010000010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00020000+$04800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$003C0000+$09000000 ; initial drawing location
 
-	dc.l	PatternTBooksBookcaseTitle
+	; bookcase - south east - low
+	dc.l	Pattern56x24
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000000101101 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$003C0000+$07800000 ; initial drawing location
-
-	dc.l	Pattern72x24
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000001100111 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$003C0000+$08800000 ; initial drawing location
-
-	dc.l	Pattern72x24
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000010000010 ; vdp pattern
+	dc.w	%0100000010010000 ; vdp pattern
 	dc.w	$0000 ; repeat=0
 	dc.l	VDP_VRAM_WRITE_B+$003C0000+$0A000000 ; initial drawing location
+
+	; bookcase - south center - high
+	dc.l	Pattern56x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000010000010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00200000+$09000000 ; initial drawing location
+
+	; bookcase - south center - low
+	dc.l	Pattern56x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000010010000 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$00200000+$0A000000 ; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text
 	;---------------------------------------------------------------------------
-	dc.w	$0003 ; text count
-
-	dc.l	StoreSignFiction
-	dc.w	DIALOG_BASE_TILE+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00040000+$08000000 ; initial drawing location
-
-	dc.l	StoreSignCooking
-	dc.w	DIALOG_BASE_TILE+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$003E0000+$08000000 ; initial drawing location
-
-	dc.l	StoreSignRomance
-	dc.w	DIALOG_BASE_TILE+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00040000+$02800000 ; initial drawing location
-
-	dc.l	StoreSignHistory
-	dc.w	DIALOG_BASE_TILE+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$003E0000+$02800000 ; initial drawing location
+	dc.w	$FFFF ; no text
 
 	;---------------------------------------------------------------------------
 	; objects
@@ -250,45 +214,45 @@
 
 	dc.w	OBJ_SCENE_TBOOKS_FICTION
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%1000111010001000
+	dc.w	%0110111010011000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0101000100001000
+	dc.w	%0100000010010001
 
 	dc.w	OBJ_SCENE_TBOOKS_ROMANCE
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%1000111010001000
+	dc.w	%0110111101110000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0101000010110000
+	dc.w	%0100000010010001
 
 	dc.w	OBJ_SCENE_TBOOKS_HISTORY
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%1000111101110000
+	dc.w	%0110111010011000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0101000010110000
+	dc.w	%0100000011010001
 
 	dc.w	OBJ_SCENE_TBOOKS_COOKING
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%1000111101110000
+	dc.w	%0110111101110000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0101000100001000
+	dc.w	%0100000011010001
 
-	dc.w	OBJ_NOTHING
+	dc.w	OBJ_SCENE_TBOOKS_RPG
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0000000000000000
+	dc.w	%0110111010011000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0000000000000000
+	dc.w	%0100000100010001
 
-	dc.w	OBJ_NOTHING
+	dc.w	OBJ_SCENE_TBOOKS_NEWAGE
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0000000000000000
+	dc.w	%0110111100000000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0000000000000000
+	dc.w	%0100000100010001
 
-	dc.w	OBJ_NOTHING
+	dc.w	OBJ_SCENE_TBOOKS_TECHNOLOGY
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0000000000000000
+	dc.w	%0110111101110000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0000000000000000
+	dc.w	%0100000100010001
 
 	dc.w	OBJ_NOTHING
 	;		%wwwwwwwxxxxxxxxx
@@ -326,7 +290,7 @@
 	;---------------------------------------------------------------------------
 	dc.w	$0003 ; npc count - 1
 
-	dc.w	$00A2 ; starting x location of npc0
+	dc.w	$00DE ; starting x location of npc0
 	dc.w	$00DA ; starting y location of npc0
 	dc.w	DIRECTION_DOWN ; starting direction of npc0
 	dc.w	$FFFF ; movement frequency of npc0

@@ -9,7 +9,7 @@
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"DialogTextUnknownNPCNight00"
+            "label":"DialogTextUnknownNPCDay00"
          },
          {
             "comment":"move npc1 to the right",
@@ -29,7 +29,7 @@
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"DialogTextUnknownNPCNight00"
+            "label":"DialogTextUnknownNPCDay00"
          },
          {
             "comment":"end",

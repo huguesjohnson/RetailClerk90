@@ -15,24 +15,24 @@
 	dc.l	TransparentTileTilesEnd
 
 	; tileset 1 - tiles start at [1] - tileset length [4]
-	dc.l	FloorTileBasicTilesStart
-	dc.l	FloorTileBasicTilesEnd
+	dc.l	FloorCenterHallTilesStart
+	dc.l	FloorCenterHallTilesEnd
 
-	; tileset 2 - tiles start at [5] - tileset length [14]
-	dc.l	FrameRectTilesStart
-	dc.l	FrameRectTilesEnd
+	; tileset 2 - tiles start at [5] - tileset length [4D]
+	dc.l	FrameTilesStart
+	dc.l	FrameTilesEnd
 
-	; tileset 3 - tiles start at [19] - tileset length [16]
+	; tileset 3 - tiles start at [52] - tileset length [C]
 	dc.l	SHallPlantTilesStart
 	dc.l	SHallPlantTilesEnd
 
-	; tileset 4 - tiles start at [2F] - tileset length [6]
-	dc.l	SHallPhoneHighTilesStart
-	dc.l	SHallPhoneHighTilesEnd
+	; tileset 4 - tiles start at [5E] - tileset length [4]
+	dc.l	SHallPhoneHigh16x16TilesStart
+	dc.l	SHallPhoneHigh16x16TilesEnd
 
-	; tileset 5 - tiles start at [35] - tileset length [C]
-	dc.l	SHallPhoneLowTilesStart
-	dc.l	SHallPhoneLowTilesEnd
+	; tileset 5 - tiles start at [62] - tileset length [6]
+	dc.l	SHallPhoneLow16x24TilesStart
+	dc.l	SHallPhoneLow16x24TilesEnd
 
 	;---------------------------------------------------------------------------
 	; palettes
@@ -45,84 +45,112 @@
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$000A ; scenery count - 1
+	dc.w	$000E ; scenery count - 1
 
-	; background
-	dc.l	PatternTileFloor
+	; floor
+	dc.l	Pattern16x16x304
 	;		%pccvhnnnnnnnnnnn
 	dc.w	%0100000000000001 ; vdp pattern
-	dc.w	$000D ; repeat=13
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$00000000 ; initial drawing location
+	dc.w	$000C ; repeat=12
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$00800000 ; initial drawing location
 
 	; plant - left side
 	dc.l	PatternSHallPlant
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000000011001 ; vdp pattern
+	dc.w	%0100000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00020000+$0C800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00060000+$0C000000 ; initial drawing location
 
 	; plant - right side
 	dc.l	PatternSHallPlant
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000000011001 ; vdp pattern
+	dc.w	%0100000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00380000+$0C800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00320000+$0C000000 ; initial drawing location
 
-	; left entrance - top
-	dc.l	PatternFrameSideLeftOpenTopExterior
+	; west wall
+	dc.l	PatternFrameWestOpen
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000000101 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$00000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$02800000 ; initial drawing location
 
-	; left entrance - bottom
-	dc.l	PatternFrameSideLeftOpenBottomExterior
+	; west wall - north fill
+	dc.l	PatternFrameNWFill
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000000101 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$09000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$00800000 ; initial drawing location
 
-	; right entrance - top
-	dc.l	PatternFrameSideRightOpenTopExterior
+	; west wall - south fill
+	dc.l	PatternFrameSWFill
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1010000000000101 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$004E0000+$00000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$0D000000 ; initial drawing location
 
-	; right entrance - bottom
-	dc.l	PatternFrameSideRightOpenBottomExterior
+	; east wall
+	dc.l	PatternFrameEastOpen
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1010000000000101 ; vdp pattern
+	dc.w	%0010000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$004E0000+$09000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$004A0000+$02800000 ; initial drawing location
 
-	; phone high
-	dc.l	Pattern24x16
+	; east wall - north fill
+	dc.l	PatternFrameNEFill
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000000101111 ; vdp pattern
+	dc.w	%0010000000000101 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$004A0000+$00800000 ; initial drawing location
+
+	; east wall - south fill
+	dc.l	PatternFrameSEFill
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000000101 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$004A0000+$0D000000 ; initial drawing location
+
+	; phone high - west
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001011110 ; vdp pattern
 	dc.w	$0000 ; repeat=0
 	dc.l	VDP_VRAM_WRITE_A+$00200000+$04000000 ; initial drawing location
 
-	; phone low
-	dc.l	Pattern24x32
+	; phone low - west
+	dc.l	Pattern16x24
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000000110101 ; vdp pattern
+	dc.w	%0100000001100010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
 	dc.l	VDP_VRAM_WRITE_A+$00200000+$05000000 ; initial drawing location
 
-	; phone high
-	dc.l	Pattern24x16
+	; phone high - center
+	dc.l	Pattern16x16
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000000101111 ; vdp pattern
+	dc.w	%1100000001011110 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$002A0000+$04000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00260000+$04000000 ; initial drawing location
 
-	; phone low
-	dc.l	Pattern24x32
+	; phone low - center
+	dc.l	Pattern16x24
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000000110101 ; vdp pattern
+	dc.w	%0100000001100010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$002A0000+$05000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00260000+$05000000 ; initial drawing location
+
+	; phone high - east
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$002C0000+$04000000 ; initial drawing location
+
+	; phone low - east
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001100010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$002C0000+$05000000 ; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text
@@ -144,27 +172,27 @@
 
 	dc.w	OBJ_SCENE_SHALL_PHONE
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0011000100000000
+	dc.w	%1000001100000000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0110000011000000
-
-	dc.w	OBJ_SCENE_SHALL_PHONE
-	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0011000100101010
-	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0110000011000000
+	dc.w	%0011110011000010
 
 	dc.w	OBJ_SCENE_PLANT
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%1011000010001000
+	dc.w	%1011110010011000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011000101001010
+	dc.w	%0011000101000000
 
 	dc.w	OBJ_SCENE_PLANT
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%1011000101100000
+	dc.w	%1011110101001000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011000101001010
+	dc.w	%0011000101000000
+
+	dc.w	OBJ_NOTHING
+	;		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	;		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
 
 	dc.w	OBJ_NOTHING
 	;		%wwwwwwwxxxxxxxxx

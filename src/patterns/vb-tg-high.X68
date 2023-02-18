@@ -19,21 +19,21 @@ PatternVBTGHigh:
 	dc.w	$8
 	dc.w	$9
 	dc.w	$A
-	dc.w	$B
+	dc.w	$A
 	dc.w	$9
+	dc.w	$A
 	dc.w	$A
 	dc.w	$B
 	dc.w	$C
 	dc.w	$D
-	dc.w	$E
-	dc.w	$F
+	dc.w	$D
+	dc.w	$C
+	dc.w	$D
 	dc.w	$D
 	dc.w	$E
 	dc.w	$F
 	dc.w	$10
-	dc.w	$11
-	dc.w	$12
-	dc.w	$13
-	dc.w	$11
-	dc.w	$12
-	dc.w	$13
+	dc.w	$10
+	dc.w	$F
+	dc.w	$10
+	dc.w	$10

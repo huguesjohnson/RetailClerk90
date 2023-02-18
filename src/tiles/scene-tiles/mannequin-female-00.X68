@@ -24,58 +24,58 @@
 	dc.l	$11111233
 	dc.l	$11222333
 	dc.l	$12999933
-	dc.l	$129999C9
+	dc.l	$129999A9
 	dc.l	$129929A9
-	dc.l	$129929C9
 	dc.l	$129929A9
-	dc.l	$11293CCC
+	dc.l	$129929A9
+	dc.l	$11293AAA
 
 	; 3
 	dc.l	$32129921
 	dc.l	$33229921
 	dc.l	$39999921
-	dc.l	$C9999211
+	dc.l	$A9999211
 	dc.l	$A9992111
-	dc.l	$C9221111
+	dc.l	$A9221111
 	dc.l	$A9211111
-	dc.l	$CC211111
+	dc.l	$AA211111
 
 	; 4
-	dc.l	$11123CCC
-	dc.l	$11112CCC
-	dc.l	$11112CCC
-	dc.l	$11112CCC
-	dc.l	$11112CCC
-	dc.l	$11112CC2
-	dc.l	$11112CC2
-	dc.l	$11112CC2
+	dc.l	$11123AAA
+	dc.l	$11112AAA
+	dc.l	$11112AAA
+	dc.l	$11112AAA
+	dc.l	$11112AAA
+	dc.l	$11112AA2
+	dc.l	$11112AA2
+	dc.l	$11112AA2
 
 	; 5
-	dc.l	$CC211111
-	dc.l	$CC211111
-	dc.l	$CC211111
-	dc.l	$CC211111
-	dc.l	$CC211111
-	dc.l	$CC211111
-	dc.l	$CC211111
-	dc.l	$CC211111
+	dc.l	$AA211111
+	dc.l	$AA211111
+	dc.l	$AA211111
+	dc.l	$AA211111
+	dc.l	$AA211111
+	dc.l	$AA211111
+	dc.l	$AA211111
+	dc.l	$AA211111
 
 	; 6
-	dc.l	$11112CC2
-	dc.l	$11112CC2
-	dc.l	$11112CC2
-	dc.l	$11112CC2
-	dc.l	$11122CC2
+	dc.l	$11112AA2
+	dc.l	$11112AA2
+	dc.l	$11112AA2
+	dc.l	$11112AA2
+	dc.l	$11122AA2
 	dc.l	$11222332
 	dc.l	$11222222
 	dc.l	$11122222
 
 	; 7
-	dc.l	$CC211111
-	dc.l	$CC211111
-	dc.l	$CC211111
-	dc.l	$CC211111
-	dc.l	$CC221111
+	dc.l	$AA211111
+	dc.l	$AA211111
+	dc.l	$AA211111
+	dc.l	$AA211111
+	dc.l	$AA221111
 	dc.l	$33222111
 	dc.l	$22222111
 	dc.l	$22221111

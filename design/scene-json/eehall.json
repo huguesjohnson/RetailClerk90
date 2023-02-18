@@ -4,14 +4,12 @@
 	"destinationFilePath":"src/scenes/EEHall.X68",
 	"tilesetNames":[
 		"TransparentTile",
-		"FloorWoodDiag",
-		"FloorWoodHor",
-		"FrameRect",
-		"Glass",
-		"TransparentTile",
-		"FloorCarpetBlacklight",
-		"FloorTileBasic",
-		"CavernSign",
+		"FloorCavern",
+		"FloorTLodge",
+		"FloorEastHall",
+		"FloorHallTrim",
+		"Frame",
+		"CavernSign48x16",
 		"EEHallPlantHigh",
 		"EEHallPlantLow"
 	],
@@ -23,166 +21,139 @@
 	],
 	"scenery":[
 		{
-			"patternName":"Pattern32x32Tile",
-			"comment":"main floor",
+			"patternName":"Pattern16x16x304",
+			"comment":"north floor",
 			"tilesetIndex":1,
+			"tilesetOffset":0,
 			"highPriority":false,
-			"paletteNumber":2,
-			"repeat":4,
+			"paletteNumber":0,
+			"repeat":1,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"03000000",
-			"column":"00000000"
+			"row":"00800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternTileFloor",
+			"patternName":"Pattern16x16x304",
 			"comment":"south floor",
-			"tilesetIndex":7,
+			"tilesetIndex":2,
+			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"0D800000",
-			"column":"00000000"
+			"row":"0D000000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"Pattern32x32Tile",
-			"comment":"north floor",
-			"tilesetIndex":6,
+			"patternName":"Pattern16x16x304",
+			"comment":"main floor",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
 			"highPriority":false,
-			"paletteNumber":0,
-			"repeat":0,
+			"paletteNumber":2,
+			"repeat":8,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"00000000",
-			"column":"00000000"
+			"row":"03800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternWoodFloorH",
-			"comment":"top border",
-			"tilesetIndex":2,
+			"patternName":"Pattern16x16x304",
+			"comment":"main floor - north trim",
+			"tilesetIndex":4,
+			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"02000000",
-			"column":"00000000"
+			"row":"02800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternWoodFloorH",
-			"comment":"bottom border",
-			"tilesetIndex":2,
+			"patternName":"Pattern16x16x304",
+			"comment":"main floor - south trim",
+			"tilesetIndex":4,
+			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"0C800000",
-			"column":"00000000"
-		},
+			"column":"00020000"
+		},			
 		{
-			"patternName":"PatternFrameBottomOpenLeftExterior",
-			"comment":"south wall - left side",
-			"tilesetIndex":3,
-			"highPriority":true,
+			"patternName":"PatternFrameNorthOpen",
+			"comment":"south wall",
+			"tilesetIndex":5,
+			"tilesetOffset":0,
+			"highPriority":false,
 			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"0D800000",
-			"column":"00000000"
+			"row":"0D000000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameBottomOpenRightExterior",
-			"comment":"south wall - right side",
-			"tilesetIndex":3,
-			"highPriority":true,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"0D800000",
-			"column":"00360000"
-		},
-		{
-			"patternName":"PatternStoreFrontExteriorHigh",
-			"comment":"north frame - high",
-			"tilesetIndex":3,
-			"highPriority":true,
-			"paletteNumber":0,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00000000",
-			"column":"00000000"
-		},
-		{
-			"patternName":"PatternStoreFrontExteriorLow",
-			"comment":"north frame - low",
-			"tilesetIndex":3,
+			"patternName":"PatternFrameNorthEntrance",
+			"comment":"north wall",
+			"tilesetIndex":5,
+			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"00800000",
-			"column":"00000000"
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternCavernSign",
+			"patternName":"Pattern48x16",
 			"comment":"sign",
-			"tilesetIndex":8,
+			"tilesetIndex":6,
 			"highPriority":true,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"column":"001A0000",
-			"row":"00000000"
-		},
-		{
-			"patternName":"PatternEEHallPlantLow",
-			"comment":"plant",
-			"tilesetIndex":10,
-			"highPriority":false,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"07000000",
-			"column":"000C0000"
+			"column":"00220000",
+			"row":"00800000"
 		},
 		{
 			"patternName":"PatternEEHallPlantHigh",
-			"tilesetIndex":9,
+			"tilesetIndex":7,
 			"highPriority":true,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"06000000",
-			"column":"000C0000"
+			"column":"000E0000"
+		},	
+		{
+			"patternName":"PatternEEHallPlantLow",
+			"comment":"plant",
+			"tilesetIndex":8,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"06800000",
+			"column":"000E0000"
 		}
 	],
 	"objects":[
 		{
-			"id":"OBJ_SCENE_BENCH",
-			"x":176,
-			"y":256,
+			"id":"OBJ_SCENE_PLANT",
+			"x":184,
+			"y":231,
 			"width":114,
-			"height":16
-		},
-		{
-			"id":"OBJ_SCENE_BENCH",
-			"x":290,
-			"y":256,
-			"width":114,
-			"height":16
+			"height":17
 		},
 		{
 			"id":"OBJ_SCENE_PLANT",
-			"x":176,
-			"y":224,
-			"width":114,
-			"height":32
+			"x":296,
+			"y":231,
+			"width":90,
+			"height":17
 		},
-		{
-			"id":"OBJ_SCENE_PLANT",
-			"x":290,
-			"y":224,
-			"width":114,
-			"height":32
-		},
+		null,
+		null,
 		null,
 		null,
 		null,

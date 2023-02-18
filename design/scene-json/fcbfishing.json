@@ -4,198 +4,312 @@
 	"destinationFilePath":"src/scenes/FCBFishing.X68",
 	"tilesetNames":[
 		"TransparentTile",
-		"FloorStone",
-		"FrameWood",
-		"FCBPondLowerLeft",
+		"FloorFCB",
+		"Frame",
+		"FCBPondSW",
 		"FCBPath",
-		"FCBFishingPolesHigh",
-		"FCBFishingPolesA",
-		"FCBFishingPolesB"
+		"FCBFishingPoles32x48",
+		"FCBFishingPolesHigh32x8",
+		"FCBFishingPolesLow32x24"
 	],
 	"paletteNames":[
 		"PaletteFCBFloorWall",
-		"PaletteFCBFishing00",
-		"PaletteFCBFishing01",
+		"PaletteFCBWoodWater",
+		"PaletteFCBFishing",
 		"PalettePeople"
 	],
 	"scenery":[
 		{
-			"patternName":"Pattern32x32Tile",
-			"comment":"stone floor",
+			"patternName":"Pattern16x16x304",
+			"comment":"floor",
 			"tilesetIndex":1,
 			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":0,
-			"repeat":6,
+			"repeat":12,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"00000000",
-			"column":"00000000"
+			"row":"00800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameSideLeft",
-			"comment":"left wall",
+			"patternName":"PatternFrameWestClosed",
+			"comment":"west wall",
 			"tilesetIndex":2,
 			"tilesetOffset":0,
-			"highPriority":true,
+			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00000000",
-			"column":"00000000"
+			"row":"02800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameBottomLongRight",
+			"patternName":"PatternFrameNWFill",
+			"comment":"west wall - north fill",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"00800000",
+			"column":"00020000"
+		},
+		{
+			"patternName":"PatternFrameSouthClosedEastOpen",
 			"comment":"south wall",
 			"tilesetIndex":2,
 			"tilesetOffset":0,
-			"highPriority":true,
+			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"0D800000",
-			"column":"00000000"
+			"row":"0D000000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFCBFloorH",
+			"patternName":"Pattern16x16x240",
 			"comment":"wood path - east-west",
 			"tilesetIndex":4,
 			"tilesetOffset":0,
 			"highPriority":false,
-			"paletteNumber":0,
+			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"09800000",
-			"column":"00100000"
+			"column":"00120000"
 		},
 		{
-			"patternName":"PatternFCBFloorVSouth",
+			"patternName":"Pattern16x16",
 			"comment":"wood path - north-south",
 			"tilesetIndex":4,
 			"tilesetOffset":0,
 			"highPriority":false,
-			"paletteNumber":0,
-			"repeat":0,
+			"paletteNumber":1,
+			"repeat":8,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"00100000",
-			"column":"00000000"
+			"row":"00800000",
+			"column":"00120000"
 		},
 		{
-			"patternName":"PatternFCBFloorVSouth",
+			"patternName":"Pattern16x16",
+			"comment":"wood path - leading to pond",
 			"tilesetIndex":4,
 			"tilesetOffset":0,
 			"highPriority":false,
-			"paletteNumber":0,
-			"repeat":0,
+			"paletteNumber":1,
+			"repeat":4,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"00480000",
-			"column":"00000000"
+			"row":"05800000",
+			"column":"00460000"
 		},
 		{
-			"patternName":"PatternFCBPondLowerLeft",
+			"patternName":"Pattern16x16",
+			"comment":"wood path - leading to pond",
+			"tilesetIndex":4,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":4,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"05800000",
+			"column":"004A0000"
+		},		
+		{
+			"patternName":"PatternFCBPondSW",
 			"comment":"pond",
 			"tilesetIndex":3,
 			"tilesetOffset":0,
 			"highPriority":false,
-			"paletteNumber":0,
+			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"00300000",
-			"column":"00000000"
+			"row":"00800000",
+			"column":"002E0000"
 		},
 		{
-			"patternName":"PatternFCBFishingPolesHigh",
-			"comment":"fishing poles",
-			"tilesetIndex":5,
-			"tilesetOffset":0,
-			"highPriority":true,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"06000000",
-			"column":"001A0000"
-		},
-		{
-			"patternName":"PatternFCBFishingPolesA",
+			"patternName":"Pattern32x8",
+			"comment":"fishing poles - high",
 			"tilesetIndex":6,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"07000000",
-			"column":"001A0000"
-		},
-		{
-			"patternName":"PatternFCBFishingPolesHigh",
-			"tilesetIndex":5,
 			"tilesetOffset":0,
 			"highPriority":true,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"06000000",
-			"column":"00360000"
+			"row":"07000000",
+			"column":"00180000"
 		},
 		{
-			"patternName":"PatternFCBFishingPolesB",
+			"patternName":"Pattern32x24",
+			"comment":"fishing poles - low",
 			"tilesetIndex":7,
 			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"07000000",
-			"column":"00360000"
+			"row":"07800000",
+			"column":"00180000"
 		},
 		{
-			"patternName":"PatternFCBFishingPolesHigh",
-			"tilesetIndex":5,
+			"patternName":"Pattern32x8",
+			"comment":"fishing poles - high",
+			"tilesetIndex":6,
 			"tilesetOffset":0,
 			"highPriority":true,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"02000000",
-			"column":"001A0000"
+			"row":"07000000",
+			"column":"00220000"
 		},
 		{
-			"patternName":"PatternFCBFishingPolesB",
-			"tilesetIndex":6,
+			"patternName":"Pattern32x24",
+			"comment":"fishing poles - low",
+			"tilesetIndex":7,
 			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"03000000",
-			"column":"001A0000"
-		}
+			"row":"07800000",
+			"column":"00220000"
+		},
+		{
+			"patternName":"Pattern32x8",
+			"comment":"fishing poles - high",
+			"tilesetIndex":6,
+			"tilesetOffset":0,
+			"highPriority":true,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"07000000",
+			"column":"002C0000"
+		},
+		{
+			"patternName":"Pattern32x24",
+			"comment":"fishing poles - low",
+			"tilesetIndex":7,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"07800000",
+			"column":"002C0000"
+		},
+		{
+			"patternName":"Pattern32x8",
+			"comment":"fishing poles - high",
+			"tilesetIndex":6,
+			"tilesetOffset":0,
+			"highPriority":true,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"07000000",
+			"column":"00360000"
+		},
+		{
+			"patternName":"Pattern32x24",
+			"comment":"fishing poles - low",
+			"tilesetIndex":7,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"07800000",
+			"column":"00360000"
+		},			
+		{
+			"patternName":"Pattern32x48",
+			"comment":"fishing poles - vertical",			
+			"tilesetIndex":5,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"03800000",
+			"column":"00080000"
+		},
+		{
+			"patternName":"Pattern32x48",
+			"comment":"fishing poles - vertical",			
+			"tilesetIndex":5,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"03800000",
+			"column":"00180000"
+		},		
+		{
+			"patternName":"Pattern32x48",
+			"comment":"fishing poles - vertical",			
+			"tilesetIndex":5,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"07800000",
+			"column":"00080000"
+		}		
 	],
 	"objects":[
 		{
 			"id":"OBJ_SCENE_FCB_FISHINGPOLES",
-			"x":231,
-			"y":228,
-			"width":80,
-			"height":36
+			"x":160,
+			"y":184,
+			"width":31,
+			"height":46
 		},
 		{
 			"id":"OBJ_SCENE_FCB_FISHINGPOLES",
-			"x":231,
-			"y":164,
-			"width":80,
-			"height":36
+			"x":160,
+			"y":248,
+			"width":31,
+			"height":46
+		},
+		{
+			"id":"OBJ_SCENE_FCB_FISHINGPOLES",
+			"x":224,
+			"y":184,
+			"width":31,
+			"height":46
+		},		
+		{
+			"id":"OBJ_SCENE_FCB_FISHINGPOLES",
+			"x":220,
+			"y":248,
+			"width":36,
+			"height":16
+		},
+		{
+			"id":"OBJ_SCENE_FCB_FISHINGPOLES",
+			"x":260,
+			"y":248,
+			"width":36,
+			"height":16
+		},
+		{
+			"id":"OBJ_SCENE_FCB_FISHINGPOLES",
+			"x":300,
+			"y":248,
+			"width":36,
+			"height":16
 		},
 		{
 			"id":"OBJ_SCENE_FCB_FISHINGPOLES",
 			"x":340,
-			"y":228,
-			"width":83,
-			"height":36
-		},
-		null,
-		null,
-		null,
-		null,
+			"y":248,
+			"width":36,
+			"height":16
+		},						
 		null,
 		null,
 		null
@@ -209,8 +323,8 @@
 	],
 	"npcLocations":[
 		{
-			"x":240,
-			"y":272,
+			"x":386,
+			"y":240,
 			"direction":"DIRECTION_DOWN",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"

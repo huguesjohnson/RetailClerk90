@@ -14,33 +14,33 @@
 	dc.l	TransparentTileTilesStart
 	dc.l	TransparentTileTilesEnd
 
-	; tileset 1 - tiles start at [1] - tileset length [10]
-	dc.l	FloorPavementTilesStart
-	dc.l	FloorPavementTilesEnd
+	; tileset 1 - tiles start at [1] - tileset length [4]
+	dc.l	FloorBasementTilesStart
+	dc.l	FloorBasementTilesEnd
 
-	; tileset 2 - tiles start at [11] - tileset length [14]
-	dc.l	FrameRectTilesStart
-	dc.l	FrameRectTilesEnd
+	; tileset 2 - tiles start at [5] - tileset length [4D]
+	dc.l	FrameTilesStart
+	dc.l	FrameTilesEnd
 
-	; tileset 3 - tiles start at [25] - tileset length [18]
-	dc.l	BasementFloorLightTilesStart
-	dc.l	BasementFloorLightTilesEnd
-
-	; tileset 4 - tiles start at [3D] - tileset length [1C]
+	; tileset 3 - tiles start at [52] - tileset length [F]
 	dc.l	BasementBedTilesStart
 	dc.l	BasementBedTilesEnd
 
-	; tileset 5 - tiles start at [59] - tileset length [16]
-	dc.l	BasementLadderTilesStart
-	dc.l	BasementLadderTilesEnd
+	; tileset 4 - tiles start at [61] - tileset length [14]
+	dc.l	BasementDresser32x40TilesStart
+	dc.l	BasementDresser32x40TilesEnd
 
-	; tileset 6 - tiles start at [6F] - tileset length [4]
-	dc.l	BasementCrate16x16TilesStart
-	dc.l	BasementCrate16x16TilesEnd
+	; tileset 5 - tiles start at [75] - tileset length [F]
+	dc.l	BasementCouchLeft24x40TilesStart
+	dc.l	BasementCouchLeft24x40TilesEnd
 
-	; tileset 7 - tiles start at [73] - tileset length [10]
-	dc.l	BasementCrate32x32TilesStart
-	dc.l	BasementCrate32x32TilesEnd
+	; tileset 6 - tiles start at [84] - tileset length [F]
+	dc.l	BasementCouchRight24x40TilesStart
+	dc.l	BasementCouchRight24x40TilesEnd
+
+	; tileset 7 - tiles start at [93] - tileset length [C]
+	dc.l	BasementGlassTable32x24TilesStart
+	dc.l	BasementGlassTable32x24TilesEnd
 
 	;---------------------------------------------------------------------------
 	; palettes
@@ -53,179 +53,112 @@
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$001A ; scenery count - 1
+	dc.w	$000E ; scenery count - 1
 
 	; floor
-	dc.l	Pattern32x32Tile
+	dc.l	Pattern16x16x304
 	;		%pccvhnnnnnnnnnnn
 	dc.w	%0000000000000001 ; vdp pattern
-	dc.w	$0006 ; repeat=6
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$00000000 ; initial drawing location
+	dc.w	$000C ; repeat=12
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$00800000 ; initial drawing location
 
-	; left wall
-	dc.l	PatternFrameSideClosedLeft
+	; west wall
+	dc.l	PatternFrameWestClosed
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1010000000010001 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$00800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$02800000 ; initial drawing location
 
-	; right wall
-	dc.l	PatternFrameSideClosedRight
+	; east wall
+	dc.l	PatternFrameEastClosed
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1010000000010001 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$004E0000+$00800000 ; initial drawing location
-
-	; north wall - left side
-	dc.l	PatternFrameTopOpenLeft
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%1010000000010001 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$00000000 ; initial drawing location
-
-	; north wall - right side
-	dc.l	PatternFrameTopOpenRight
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%1010000000010001 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$00360000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$004A0000+$02800000 ; initial drawing location
 
 	; south wall
-	dc.l	PatternFrameBottom
+	dc.l	PatternFrameSouthClosed
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1010000000010001 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$0D800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$0D000000 ; initial drawing location
 
-	; lighting
-	dc.l	Pattern48x32
+	; north wall - west
+	dc.l	PatternFrameNorthOpenWestSide
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000000100101 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00160000+$02000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$00800000 ; initial drawing location
 
-	dc.l	Pattern48x32
+	; north wall - east
+	dc.l	PatternFrameNorthOpenEastSide
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000000100101 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$002E0000+$02000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$002E0000+$00800000 ; initial drawing location
 
-	dc.l	Pattern48x32
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000000100101 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00160000+$06000000 ; initial drawing location
-
-	dc.l	Pattern48x32
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000000100101 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$002E0000+$06000000 ; initial drawing location
-
-	dc.l	Pattern48x32
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000000100101 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00160000+$0A000000 ; initial drawing location
-
-	dc.l	Pattern48x32
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000000100101 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$002E0000+$0A000000 ; initial drawing location
-
-	; beds
+	; bed
 	dc.l	PatternBasementBed
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000000111101 ; vdp pattern
+	dc.w	%0100000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00020000+$01000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00060000+$01800000 ; initial drawing location
 
+	; dresser - west
+	dc.l	Pattern32x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001100001 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$000E0000+$01000000 ; initial drawing location
+
+	; bed
 	dc.l	PatternBasementBed
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000000111101 ; vdp pattern
+	dc.w	%0100000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00020000+$05800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00180000+$01800000 ; initial drawing location
 
+	; bed
 	dc.l	PatternBasementBed
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000000111101 ; vdp pattern
+	dc.w	%0100000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00020000+$0A000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00320000+$01800000 ; initial drawing location
 
-	; stairs
-	dc.l	PatternBasementLadder
+	; dresser - west
+	dc.l	Pattern32x40
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000001011001 ; vdp pattern
+	dc.w	%0100000001100001 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00480000+$00800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$003A0000+$01000000 ; initial drawing location
 
-	; crates
-	dc.l	Pattern32x32
+	; bed
+	dc.l	PatternBasementBed
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000001110011 ; vdp pattern
+	dc.w	%0100000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00400000+$00800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00440000+$01800000 ; initial drawing location
 
-	dc.l	Pattern16x16
+	; couch - right
+	dc.l	Pattern24x40
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000001101111 ; vdp pattern
+	dc.w	%0010000010000100 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00440000+$02800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$001C0000+$06800000 ; initial drawing location
 
-	dc.l	Pattern16x16
+	; couch - left
+	dc.l	Pattern24x40
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000001101111 ; vdp pattern
+	dc.w	%0010000001110101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00440000+$03800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$002E0000+$06800000 ; initial drawing location
 
-	dc.l	Pattern16x16
+	; glass table
+	dc.l	Pattern32x40
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000001101111 ; vdp pattern
+	dc.w	%0010000010010011 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00400000+$02800000 ; initial drawing location
-
-	dc.l	Pattern16x16
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000001101111 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00400000+$03800000 ; initial drawing location
-
-	dc.l	Pattern32x32
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000001110011 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00380000+$00800000 ; initial drawing location
-
-	dc.l	Pattern16x16
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000001101111 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$003C0000+$02800000 ; initial drawing location
-
-	dc.l	Pattern16x16
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000001101111 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$003C0000+$03800000 ; initial drawing location
-
-	dc.l	Pattern16x16
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000001101111 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00380000+$02800000 ; initial drawing location
-
-	dc.l	Pattern16x16
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000001101111 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00380000+$03800000 ; initial drawing location
-
-	dc.l	Pattern32x32
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000001110011 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00240000+$06000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00240000+$07800000 ; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text
@@ -247,39 +180,39 @@
 
 	dc.w	OBJ_SCENE_BASEMENT_BED
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0100111010000000
+	dc.w	%0010110010011000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0110000010010000
+	dc.w	%0100000010011000
 
 	dc.w	OBJ_SCENE_BASEMENT_BED
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0100111010000000
+	dc.w	%0010110011100000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0110000011011000
+	dc.w	%0100000010011000
 
 	dc.w	OBJ_SCENE_BASEMENT_BED
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0100111010000000
+	dc.w	%0010110101001010
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0110000100100000
+	dc.w	%0100000010011000
 
-	dc.w	OBJ_SCENE_BASEMENT_LADDER
+	dc.w	OBJ_SCENE_BASEMENT_BED
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0010111110100000
+	dc.w	%0010110110010010
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0110010010001000
+	dc.w	%0100000010011000
 
-	dc.w	OBJ_SCENE_BASEMENT_CRATE
+	dc.w	OBJ_NOTHING
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0111111101011110
+	dc.w	%0000000000000000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0111010010001000
+	dc.w	%0000000000000000
 
-	dc.w	OBJ_SCENE_BASEMENT_CRATE
+	dc.w	OBJ_NOTHING
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0011111100010000
+	dc.w	%0000000000000000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011000011100000
+	dc.w	%0000000000000000
 
 	dc.w	OBJ_NOTHING
 	;		%wwwwwwwxxxxxxxxx

@@ -55,8 +55,8 @@ TestTitleScreenDecrementSelector:
 	endif
 TestTitleScreenMoveSelector:
 	move.w	(MEM_MENU_SELECTION),d7	; menu position
-	mulu.w	#$10,d7	; 16 pixels
-	add.w	#$0118,d7	; starting y-coordinate
+	mulu.w	#TITLE_MENU_INC_Y,d7 ; increment
+	add.w	#TITLE_MENU_NEWGAME_Y,d7	; starting y-coordinate
 	move.l	#VDP_VRAM_WRITE_SPRITE,d6	; add to sprite table address
 	move.l	d6,(VDP_CONTROL)	; set write location in VDP
 	move.w	d7,(VDP_DATA)	; copy the new y-coordinate;

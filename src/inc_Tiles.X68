@@ -9,220 +9,220 @@ FontTilesStart:
 FontTilesEnd:
 
 DialogFrameTilesStart:
-	include 'tiles/font-tiles/dialog-frame.X68'
+	include 'tiles/scene-tiles/dialog-frame.X68'
 DialogFrameTilesEnd:
 
-TitleBackgroundTilesStart:
-	include 'tiles/scene-tiles/title-background.X68'
-TitleBackgroundTilesEnd:
+FrameTilesStart:
+	include 'tiles/scene-tiles/frame-tiles.X68'
+FrameTilesEnd:
+
+CounterTilesStart:
+	include 'tiles/scene-tiles/counter-tiles.X68'
+CounterTilesEnd:
+
+Floor00TilesStart:
+	include 'tiles/scene-tiles/floor00.X68'
+Floor00TilesEnd:
+
+FloorVBTilesStart:
+	include 'tiles/scene-tiles/floor-vb.X68'
+FloorVBTilesEnd:
+
+FloorNShackTilesStart:
+	include 'tiles/scene-tiles/floor-nshack.X68'
+FloorNShackTilesEnd:
+
+FloorTLodgeTilesStart:
+	include 'tiles/scene-tiles/floor-tlodge.X68'
+FloorTLodgeTilesEnd:
+
+FloorEastHallTilesStart:
+	include 'tiles/scene-tiles/floor-easthall.X68'
+FloorEastHallTilesEnd:
+
+FloorCPlanetTilesStart:
+	include 'tiles/scene-tiles/floor-cplanet.X68'
+FloorCPlanetTilesEnd:
+
+FloorCavernTilesStart:
+	include 'tiles/scene-tiles/floor-cavern.X68'
+FloorCavernTilesEnd:
+
+FloorCheckersTilesStart:
+	include 'tiles/scene-tiles/floor-checkers.X68'
+FloorCheckersTilesEnd:
+
+FloorDenimCountryTilesStart:
+	include 'tiles/scene-tiles/floor-denimcountry.X68'
+FloorDenimCountryTilesEnd:
+
+FloorBasementTilesStart:
+	include 'tiles/scene-tiles/floor-basement.X68'
+FloorBasementTilesEnd:
+
+FloorPogoDawgTilesStart:
+	include 'tiles/scene-tiles/floor-pogodawg.X68'
+FloorPogoDawgTilesEnd:
+
+FloorWestHallTilesStart:
+	include 'tiles/scene-tiles/floor-westhall.X68'
+FloorWestHallTilesEnd:
+
+FloorCNowTilesStart:
+	include 'tiles/scene-tiles/floor-cnow.X68'
+FloorCNowTilesEnd:
+
+FloorHallTrimTilesStart:
+	include 'tiles/scene-tiles/floor-halltrim.X68'
+FloorHallTrimTilesEnd:
+
+FloorWWTilesStart:
+	include 'tiles/scene-tiles/floor-ww.X68'
+FloorWWTilesEnd:
+
+FloorSVideoTilesStart:
+	include 'tiles/scene-tiles/floor-svideo.X68'
+FloorSVideoTilesEnd:
+
+FloorCenterHallTilesStart:
+	include 'tiles/scene-tiles/floor-centerhall.X68'
+FloorCenterHallTilesEnd:
+
+FloorTBooksTilesStart:
+	include 'tiles/scene-tiles/floor-tbooks.X68'
+FloorTBooksTilesEnd:
+
+FloorFCBTilesStart:
+	include 'tiles/scene-tiles/floor-fcb.X68'
+FloorFCBTilesEnd:
+
+TitleSkyTilesStart:
+	include 'tiles/scene-tiles/title-sky-40x24.X68'
+TitleSkyTilesEnd:
+
+TitleWallTilesStart:
+	include 'tiles/scene-tiles/wall-8x8.X68'
+TitleWallTilesEnd:
+
+TitleParkingTilesStart:
+	include 'tiles/scene-tiles/parking-16x16.X68'
+TitleParkingTilesEnd:
+
+TitleMallTilesTilesStart:
+	include 'tiles/scene-tiles/title-mall-tiles.X68'
+TitleMallTilesTilesEnd:
 
 TitleLogoTilesStart:
 	include 'tiles/scene-tiles/title-logo.X68'
 TitleLogoTilesEnd:
 
-TitleMenuBGTilesStart:
-	include 'tiles/scene-tiles/title-menu-bg.X68'
-TitleMenuBGTilesEnd:
-
-TitleBGTilesStart:
-	include 'tiles/scene-tiles/title-bg.X68'
-TitleBGTilesEnd:
-
-TitleMallTilesStart:
-	include 'tiles/scene-tiles/title-mall.X68'
-TitleMallTilesEnd:
-
 SpriteZeroTilesStart:
 	include 'tiles/sprite-tiles/sprite-zero.X68'
 SpriteZeroTilesEnd:
 
-FrameRectTilesStart:
-	include 'tiles/scene-tiles/frame-rect.X68'
-FrameRectTilesEnd:
+DenimCountryTable32x24TilesStart:
+	include 'tiles/scene-tiles/denim-country-table32x24.X68'
+DenimCountryTable32x24TilesEnd:
 
-GlassTilesStart:
-	include 'tiles/scene-tiles/glass.X68'
-GlassTilesEnd:
+DenimCountryClothes16x40TilesStart:
+	include 'tiles/scene-tiles/denim-country-clothes16x40.X68'
+DenimCountryClothes16x40TilesEnd:
 
-FrameRoundTilesStart:
-	include 'tiles/scene-tiles/frame-round.X68'
-FrameRoundTilesEnd:
+VBNesLeft8x32TilesStart:
+	include 'tiles/scene-tiles/vb-shelves-nes-left-8x32.X68'
+VBNesLeft8x32TilesEnd:
 
-FrameWoodTilesStart:
-	include 'tiles/scene-tiles/frame-wood.X68'
-FrameWoodTilesEnd:
+VBNesCenter16x32TilesStart:
+	include 'tiles/scene-tiles/vb-shelves-nes-center-16x32.X68'
+VBNesCenter16x32TilesEnd:
 
-FloorCarpetTilesStart:
-	include 'tiles/scene-tiles/floor-carpet.X68'
-FloorCarpetTilesEnd:
+VBNesRight8x32TilesStart:
+	include 'tiles/scene-tiles/vb-shelves-nes-right-8x32.X68'
+VBNesRight8x32TilesEnd:
 
-FloorCarpet70sTilesStart:
-	include 'tiles/scene-tiles/floor-carpet-70s.X68'
-FloorCarpet70sTilesEnd:
+VBSGHigh32x16TilesStart:
+	include 'tiles/scene-tiles/vb-shelves-sg-high-32x16.X68'
+VBSGHigh32x16TilesEnd:
 
-FloorCarpetBlacklightTilesStart:
-	include 'tiles/scene-tiles/floor-carpet-blacklight.X68'
-FloorCarpetBlacklightTilesEnd:
+VBSGLow32x24TilesStart:
+	include 'tiles/scene-tiles/vb-shelves-sg-low-32x24.X68'
+VBSGLow32x24TilesEnd:
 
-FloorPavementTilesStart:
-	include 'tiles/scene-tiles/floor-pavement.X68'
-FloorPavementTilesEnd:
+VBTGHigh32x16TilesStart:
+	include 'tiles/scene-tiles/vb-shelves-tg-high-32x16.X68'
+VBTGHigh32x16TilesEnd:
 
-FloorSnowTilesStart:
-	include 'tiles/scene-tiles/floor-snow.X68'
-FloorSnowTilesEnd:
+VBTGLow32x24TilesStart:
+	include 'tiles/scene-tiles/vb-shelves-tg-low-32x24.X68'
+VBTGLow32x24TilesEnd:
 
-FloorStoneTilesStart:
-	include 'tiles/scene-tiles/floor-stone.X68'
-FloorStoneTilesEnd:
+VBPCHigh32x16TilesStart:
+	include 'tiles/scene-tiles/vb-shelves-pc-high-32x16.X68'
+VBPCHigh32x16TilesEnd:
 
-FloorTile2ColorTilesStart:
-	include 'tiles/scene-tiles/floor-tile-2color.X68'
-FloorTile2ColorTilesEnd:
+VBPCLow32x24TilesStart:
+	include 'tiles/scene-tiles/vb-shelves-pc-low-32x24.X68'
+VBPCLow32x24TilesEnd:
 
-FloorTile4ColorTilesStart:
-	include 'tiles/scene-tiles/floor-tile-4color.X68'
-FloorTile4ColorTilesEnd:
+VBGBHigh32x16TilesStart:
+	include 'tiles/scene-tiles/vb-shelves-gb-high-32x16.X68'
+VBGBHigh32x16TilesEnd:
 
-FloorTileBasicTilesStart:
-	include 'tiles/scene-tiles/floor-tile-basic.X68'
-FloorTileBasicTilesEnd:
+VBGBLow32x24TilesStart:
+	include 'tiles/scene-tiles/vb-shelves-gb-low-32x24.X68'
+VBGBLow32x24TilesEnd:
 
-FloorTileDiamondTilesStart:
-	include 'tiles/scene-tiles/floor-tile-diamond.X68'
-FloorTileDiamondTilesEnd:
+FCBPondNETilesStart:
+	include 'tiles/scene-tiles/fcb-center-ne.X68'
+FCBPondNETilesEnd:
 
-FloorTileDiamondAccentTilesStart:
-	include 'tiles/scene-tiles/floor-tile-diamond-accent.X68'
-FloorTileDiamondAccentTilesEnd:
+FCBPondNWTilesStart:
+	include 'tiles/scene-tiles/fcb-center-nw.X68'
+FCBPondNWTilesEnd:
 
-FloorTileDiamondBrokenTilesStart:
-	include 'tiles/scene-tiles/floor-tile-diamond-broken.X68'
-FloorTileDiamondBrokenTilesEnd:
+FCBPondSETilesStart:
+	include 'tiles/scene-tiles/fcb-center-se.X68'
+FCBPondSETilesEnd:
 
-FloorTileSmallTilesStart:
-	include 'tiles/scene-tiles/floor-tile-small.X68'
-FloorTileSmallTilesEnd:
-
-FloorTileSquareTilesStart:
-	include 'tiles/scene-tiles/floor-tile-square.X68'
-FloorTileSquareTilesEnd:
-
-FloorTileSquareBrokenTilesStart:
-	include 'tiles/scene-tiles/floor-tile-square-broken.X68'
-FloorTileSquareBrokenTilesEnd:
-
-FloorWoodDiagTilesStart:
-	include 'tiles/scene-tiles/floor-wood-d.X68'
-FloorWoodDiagTilesEnd:
-
-FloorWoodHorTilesStart:
-	include 'tiles/scene-tiles/floor-wood-h.X68'
-FloorWoodHorTilesEnd:
-
-FloorWoodVertTilesStart:
-	include 'tiles/scene-tiles/floor-wood-v.X68'
-FloorWoodVertTilesEnd:
-
-CounterTopTilesStart:
-	include 'tiles/scene-tiles/countertop.X68'
-CounterTopTilesEnd:
-
-CounterTopNorthCornersTilesStart:
-	include 'tiles/scene-tiles/countertopncorners.X68'
-CounterTopNorthCornersTilesEnd:
-
-CounterTopSouthCornersTilesStart:
-	include 'tiles/scene-tiles/countertopscorners.X68'
-CounterTopSouthCornersTilesEnd:
-
-CounterShelvesTilesStart:
-	include 'tiles/scene-tiles/countershelves.X68'
-CounterShelvesTilesEnd:
-
-DenimCountryTableHighTilesStart:
-	include 'tiles/scene-tiles/denim-country-table-high.X68'
-DenimCountryTableHighTilesEnd:
-
-DenimCountryTableLowTilesStart:
-	include 'tiles/scene-tiles/denim-country-table-low.X68'
-DenimCountryTableLowTilesEnd:
-
-VBMagazinesTilesStart:
-	include 'tiles/scene-tiles/vb-magazines.X68'
-VBMagazinesTilesEnd:
-
-VBGamesTilesStart:
-	include 'tiles/scene-tiles/vb-games.X68'
-VBGamesTilesEnd:
-
-VBGenHighTilesStart:
-	include 'tiles/scene-tiles/vb-gen-high.X68'
-VBGenHighTilesEnd:
-
-VBGenLowTilesStart:
-	include 'tiles/scene-tiles/vb-gen-low.X68'
-VBGenLowTilesEnd:
-
-VBPCHighTilesStart:
-	include 'tiles/scene-tiles/vb-pc-high.X68'
-VBPCHighTilesEnd:
-
-VBPCLowTilesStart:
-	include 'tiles/scene-tiles/vb-pc-low.X68'
-VBPCLowTilesEnd:
-
-VBGBHighTilesStart:
-	include 'tiles/scene-tiles/vb-gb-high.X68'
-VBGBHighTilesEnd:
-
-VBGBLowTilesStart:
-	include 'tiles/scene-tiles/vb-gb-low.X68'
-VBGBLowTilesEnd:
-
-VBTGHighTilesStart:
-	include 'tiles/scene-tiles/vb-tg-high.X68'
-VBTGHighTilesEnd:
-
-VBTGLowTilesStart:
-	include 'tiles/scene-tiles/vb-tg-low.X68'
-VBTGLowTilesEnd:
-
-FCBPondTopRightTilesStart:
-	include 'tiles/scene-tiles/fcbcenter_topright.X68'
-FCBPondTopRightTilesEnd:
-
-FCBPondTopLeftTilesStart:
-	include 'tiles/scene-tiles/fcbcenter_topleft.X68'
-FCBPondTopLeftTilesEnd:
-
-FCBPondLowerRightTilesStart:
-	include 'tiles/scene-tiles/fcbcenter_lowerright.X68'
-FCBPondLowerRightTilesEnd:
-
-FCBPondLowerLeftTilesStart:
-	include 'tiles/scene-tiles/fcbcenter_lowerleft.X68'
-FCBPondLowerLeftTilesEnd:
+FCBPondSWTilesStart:
+	include 'tiles/scene-tiles/fcb-center-sw.X68'
+FCBPondSWTilesEnd:
 
 FCBPathTilesStart:
 	include 'tiles/scene-tiles/fcb-path.X68'
 FCBPathTilesEnd:
 
-FCBCampingCampsiteTilesStart:
-	include 'tiles/scene-tiles/fcb-camping-campsite.X68'
-FCBCampingCampsiteTilesEnd:
+FCBTent64x64TilesStart:
+	include 'tiles/scene-tiles/fcb-tent-64x64.X68'
+FCBTent64x64TilesEnd:
 
-FCBTentLargeTilesStart:
-	include 'tiles/scene-tiles/fcb-tent-large.X68'
-FCBTentLargeTilesEnd:
+FCBTent56x40TilesStart:
+	include 'tiles/scene-tiles/fcb-tent-56x40.X68'
+FCBTent56x40TilesEnd:
 
-FCBTentTallTilesStart:
-	include 'tiles/scene-tiles/fcb-tent-tall.X68'
-FCBTentTallTilesEnd:
+FCBFire32x32TilesStart:
+	include 'tiles/scene-tiles/fcb-fire-32x32.X68'
+FCBFire32x32TilesEnd:
 
-FCBTentMidTilesStart:
-	include 'tiles/scene-tiles/fcb-tent-mid.X68'
-FCBTentMidTilesEnd:
+FCBBench32x32TilesStart:
+	include 'tiles/scene-tiles/fcb-bench-32x32.X68'
+FCBBench32x32TilesEnd:
+
+FCBBench48x32TilesStart:
+	include 'tiles/scene-tiles/fcb-bench-48x32.X68'
+FCBBench48x32TilesEnd:
+
+FCBFishingPoles32x48TilesStart:
+	include 'tiles/scene-tiles/fcb-fishingpoles-32x48.X68'
+FCBFishingPoles32x48TilesEnd:
+
+FCBFishingPolesHigh32x8TilesStart:
+	include 'tiles/scene-tiles/fcb-fishingpoles-high-32x8.X68'
+FCBFishingPolesHigh32x8TilesEnd:
+
+FCBFishingPolesLow32x24TilesStart:
+	include 'tiles/scene-tiles/fcb-fishingpoles-low-32x24.X68'
+FCBFishingPolesLow32x24TilesEnd:
 
 FCBFirearmsHighTilesStart:
 	include 'tiles/scene-tiles/fcb-firearms-high.X68'
@@ -232,181 +232,141 @@ FCBFirearmsLowTilesStart:
 	include 'tiles/scene-tiles/fcb-firearms-low.X68'
 FCBFirearmsLowTilesEnd:
 
-FCBFishingPolesHighTilesStart:
-	include 'tiles/scene-tiles/fcb-fishingpoles-high.X68'
-FCBFishingPolesHighTilesEnd:
+SVideoRackHigh24x8TilesStart:
+	include 'tiles/scene-tiles/svideo-rack-high-24x8.X68'
+SVideoRackHigh24x8TilesEnd:
 
-FCBFishingPolesATilesStart:
-	include 'tiles/scene-tiles/fcb-fishingpoles-a.X68'
-FCBFishingPolesATilesEnd:
+SVideoRackLow24x24TilesStart:
+	include 'tiles/scene-tiles/svideo-rack-low-24x24.X68'
+SVideoRackLow24x24TilesEnd:
 
-FCBFishingPolesBTilesStart:
-	include 'tiles/scene-tiles/fcb-fishingpoles-b.X68'
-FCBFishingPolesBTilesEnd:
+SVideoBox16x16TilesStart:
+	include 'tiles/scene-tiles/svideo-box-16x16.X68'
+SVideoBox16x16TilesEnd:
 
-SVideoShelfHTilesStart:
-	include 'tiles/scene-tiles/svideo-shelf-h.X68'
-SVideoShelfHTilesEnd:
+SVideoBox16x24TilesStart:
+	include 'tiles/scene-tiles/svideo-box-16x24.X68'
+SVideoBox16x24TilesEnd:
 
-SVideoShelfMTilesStart:
-	include 'tiles/scene-tiles/svideo-shelf-m.X68'
-SVideoShelfMTilesEnd:
+CnowMannequin1High16x16TilesStart:
+	include 'tiles/scene-tiles/cnow-mannequin1-high-16x16.X68'
+CnowMannequin1High16x16TilesEnd:
 
-SVideoShelfLTilesStart:
-	include 'tiles/scene-tiles/svideo-shelf-l.X68'
-SVideoShelfLTilesEnd:
+CnowMannequin1Low16x24TilesStart:
+	include 'tiles/scene-tiles/cnow-mannequin1-low-16x24.X68'
+CnowMannequin1Low16x24TilesEnd:
 
-SVideoRackHighTilesStart:
-	include 'tiles/scene-tiles/svideo-rack-high.X68'
-SVideoRackHighTilesEnd:
+CnowMannequin2High16x16TilesStart:
+	include 'tiles/scene-tiles/cnow-mannequin2-high-16x16.X68'
+CnowMannequin2High16x16TilesEnd:
 
-SVideoRackLowTilesStart:
-	include 'tiles/scene-tiles/svideo-rack-low.X68'
-SVideoRackLowTilesEnd:
+CnowMannequin2Low16x24TilesStart:
+	include 'tiles/scene-tiles/cnow-mannequin21-low-16x24.X68'
+CnowMannequin2Low16x24TilesEnd:
 
-ParkingLotWallTilesStart:
-	include 'tiles/scene-tiles/parkinglot-wall.X68'
-ParkingLotWallTilesEnd:
+CnowMannequin3High16x16TilesStart:
+	include 'tiles/scene-tiles/cnow-mannequin3-high-16x16.X68'
+CnowMannequin3High16x16TilesEnd:
 
-ParkingLotSignTilesStart:
-	include 'tiles/scene-tiles/parkinglot-sign.X68'
-ParkingLotSignTilesEnd:
+CnowMannequin3Low16x24TilesStart:
+	include 'tiles/scene-tiles/cnow-mannequin3-low-16x24.X68'
+CnowMannequin3Low16x24TilesEnd:
 
-ParkingLotGrassLeftTilesStart:
-	include 'tiles/scene-tiles/parkinglot-grass-left.X68'
-ParkingLotGrassLeftTilesEnd:
+CnowBenchTilesStart:
+	include 'tiles/scene-tiles/cnow-bench.X68'
+CnowBenchTilesEnd:
 
-ParkingLotGrassRightTilesStart:
-	include 'tiles/scene-tiles/parkinglot-grass-right.X68'
-ParkingLotGrassRightTilesEnd:
+CnowRackHigh32x8TilesStart:
+	include 'tiles/scene-tiles/cnow-rack-high-32x8.X68'
+CnowRackHigh32x8TilesEnd:
 
-ParkingLotStripeTilesStart:
-	include 'tiles/scene-tiles/parkinglot-stripe.X68'
-ParkingLotStripeTilesEnd:
+CnowRackLow32x24TilesStart:
+	include 'tiles/scene-tiles/cnow-rack-low-32x24.X68'
+CnowRackLow32x24TilesEnd:
 
-MannequinMale00TilesStart:
-	include 'tiles/scene-tiles/mannequin-male-00.X68'
-MannequinMale00TilesEnd:
+CnowMirror16x32TilesStart:
+	include 'tiles/scene-tiles/cnow-mirror-16x32.X68'
+CnowMirror16x32TilesEnd:
 
-MannequinMale01TilesStart:
-	include 'tiles/scene-tiles/mannequin-male-01.X68'
-MannequinMale01TilesEnd:
+CheckersMirror16x32TilesStart:
+	include 'tiles/scene-tiles/cncheckersow-mirror-16x32.X68'
+CheckersMirror16x32TilesEnd:
 
-MannequinMale02TilesStart:
-	include 'tiles/scene-tiles/mannequin-male-02.X68'
-MannequinMale02TilesEnd:
+CheckersMannequin1High16x16TilesStart:
+	include 'tiles/scene-tiles/checkers-mannequin1-high-16x16.X68'
+CheckersMannequin1High16x16TilesEnd:
 
-MannequinMale03TilesStart:
-	include 'tiles/scene-tiles/mannequin-male-03.X68'
-MannequinMale03TilesEnd:
+CheckersMannequin1Low16x24TilesStart:
+	include 'tiles/scene-tiles/checkers-mannequin1-low-16x24.X68'
+CheckersMannequin1Low16x24TilesEnd:
 
-MannequinMale04TilesStart:
-	include 'tiles/scene-tiles/mannequin-male-04.X68'
-MannequinMale04TilesEnd:
+CheckersMannequin2High16x16TilesStart:
+	include 'tiles/scene-tiles/checkers-mannequin2-high-16x16.X68'
+CheckersMannequin2High16x16TilesEnd:
 
-MannequinMale05TilesStart:
-	include 'tiles/scene-tiles/mannequin-male-05.X68'
-MannequinMale05TilesEnd:
+CheckersMannequin2Low16x24TilesStart:
+	include 'tiles/scene-tiles/checkers-mannequin21-low-16x24.X68'
+CheckersMannequin2Low16x24TilesEnd:
 
-MannequinFemale00TilesStart:
-	include 'tiles/scene-tiles/mannequin-female-00.X68'
-MannequinFemale00TilesEnd:
+CheckersMannequin3High16x16TilesStart:
+	include 'tiles/scene-tiles/checkers-mannequin3-high-16x16.X68'
+CheckersMannequin3High16x16TilesEnd:
 
-MannequinFemale01TilesStart:
-	include 'tiles/scene-tiles/mannequin-female-01.X68'
-MannequinFemale01TilesEnd:
+CheckersMannequin3Low16x24TilesStart:
+	include 'tiles/scene-tiles/checkers-mannequin3-low-16x24.X68'
+CheckersMannequin3Low16x24TilesEnd:
 
-MannequinFemale02TilesStart:
-	include 'tiles/scene-tiles/mannequin-female-02.X68'
-MannequinFemale02TilesEnd:
+CheckersRack32x24TilesStart:
+	include 'tiles/scene-tiles/checkers-rack-32x24.X68'
+CheckersRack32x24TilesEnd:
 
-MannequinFemale03TilesStart:
-	include 'tiles/scene-tiles/mannequin-female-03.X68'
-MannequinFemale03TilesEnd:
+CPlanetCDCrateHigh24x8TilesStart:
+	include 'tiles/scene-tiles/cplanet-cd-crate-high-24x8.X68'
+CPlanetCDCrateHigh24x8TilesEnd:
 
-MannequinStandNarrowTilesStart:
-	include 'tiles/scene-tiles/mannequin-stand-narrow.X68'
-MannequinStandNarrowTilesEnd:
+CPlanetCDCrateLow24x24TilesStart:
+	include 'tiles/scene-tiles/cplanet-cd-crate-low-24x24.X68'
+CPlanetCDCrateLow24x24TilesEnd:
 
-MannequinStandWideTilesStart:
-	include 'tiles/scene-tiles/mannequin-stand-wide.X68'
-MannequinStandWideTilesEnd:
+CPlanetPoster124x32TilesStart:
+	include 'tiles/scene-tiles/cplanet-poster-1-24x24.X68'
+CPlanetPoster124x32TilesEnd:
 
-CheckersShelfHTilesStart:
-	include 'tiles/scene-tiles/checkers-shelf-h.X68'
-CheckersShelfHTilesEnd:
+CPlanetPoster224x32TilesStart:
+	include 'tiles/scene-tiles/cplanet-poster-2-24x24.X68'
+CPlanetPoster224x32TilesEnd:
 
-CheckersShelfMTilesStart:
-	include 'tiles/scene-tiles/checkers-shelf-m.X68'
-CheckersShelfMTilesEnd:
+CPlanetPoster324x32TilesStart:
+	include 'tiles/scene-tiles/cplanet-poster-3-24x24.X68'
+CPlanetPoster324x32TilesEnd:
 
-CheckersShelfLTilesStart:
-	include 'tiles/scene-tiles/checkers-shelf-l.X68'
-CheckersShelfLTilesEnd:
+ArcadeHigh24x16TilesStart:
+	include 'tiles/scene-tiles/cavern-cabinet-high-24x16.X68'
+ArcadeHigh24x16TilesEnd:
 
-CPlanetSignTilesStart:
-	include 'tiles/scene-tiles/cplanet-sign.X68'
-CPlanetSignTilesEnd:
+ArcadeLow24x24TilesStart:
+	include 'tiles/scene-tiles/cavern-cabinet-low-24x24.X68'
+ArcadeLow24x24TilesEnd:
 
-CPlanetPoster00TilesStart:
-	include 'tiles/scene-tiles/cplanet-poster-00.X68'
-CPlanetPoster00TilesEnd:
+ArcadeRightHigh24x8TilesStart:
+	include 'tiles/scene-tiles/cavern-cabinet-right-high-24x8.X68'
+ArcadeRightHigh24x8TilesEnd:
 
-CPlanetPoster01TilesStart:
-	include 'tiles/scene-tiles/cplanet-poster-01.X68'
-CPlanetPoster01TilesEnd:
+ArcadeRightLow24x24TilesStart:
+	include 'tiles/scene-tiles/cavern-cabinet-right-low-24x24.X68'
+ArcadeRightLow24x24TilesEnd:
 
-CPlanetPoster02TilesStart:
-	include 'tiles/scene-tiles/cplanet-poster-02.X68'
-CPlanetPoster02TilesEnd:
+ArcadeLeftHigh24x8TilesStart:
+	include 'tiles/scene-tiles/cavern-cabinet-left-high-24x8.X68'
+ArcadeLeftHigh24x8TilesEnd:
 
-CPlanetPoster03TilesStart:
-	include 'tiles/scene-tiles/cplanet-poster-03.X68'
-CPlanetPoster03TilesEnd:
+ArcadeLeftLow24x24TilesStart:
+	include 'tiles/scene-tiles/cavern-cabinet-left-low-24x24.X68'
+ArcadeLeftLow24x24TilesEnd:
 
-CPlanetTapesTilesStart:
-	include 'tiles/scene-tiles/cplanet-tapes.X68'
-CPlanetTapesTilesEnd:
-
-CPlanetCDsHighTilesStart:
-	include 'tiles/scene-tiles/cplanet-cds-high.X68'
-CPlanetCDsHighTilesEnd:
-
-CPlanetCDsLowTilesStart:
-	include 'tiles/scene-tiles/cplanet-cds-low.X68'
-CPlanetCDsLowTilesEnd:
-
-BenchTilesStart:
-	include 'tiles/scene-tiles/bench.X68'
-BenchTilesEnd:
-
-CavernSignTilesStart:
-	include 'tiles/scene-tiles/cavern-sign.X68'
-CavernSignTilesEnd:
-
-CavernArcadeBase00TilesStart:
-	include 'tiles/scene-tiles/cavern-arcade-base-00.X68'
-CavernArcadeBase00TilesEnd:
-
-CavernArcadeBase01TilesStart:
-	include 'tiles/scene-tiles/cavern-arcade-base-01.X68'
-CavernArcadeBase01TilesEnd:
-
-CavernArcadeBase02TilesStart:
-	include 'tiles/scene-tiles/cavern-arcade-base-02.X68'
-CavernArcadeBase02TilesEnd:
-
-CavernArcadeTop00TilesStart:
-	include 'tiles/scene-tiles/cavern-arcade-top-00.X68'
-CavernArcadeTop00TilesEnd:
-
-CavernArcadeTop01TilesStart:
-	include 'tiles/scene-tiles/cavern-arcade-top-01.X68'
-CavernArcadeTop01TilesEnd:
-
-CavernArcadeTop02TilesStart:
-	include 'tiles/scene-tiles/cavern-arcade-top-02.X68'
-CavernArcadeTop02TilesEnd:
+CavernSign48x16TilesStart:
+	include 'tiles/scene-tiles/cavernsign-48x16.X68'
+CavernSign48x16TilesEnd:
 
 EEHallPlantHighTilesStart:
 	include 'tiles/scene-tiles/eehall-plant-high.X68'
@@ -416,165 +376,161 @@ EEHallPlantLowTilesStart:
 	include 'tiles/scene-tiles/eehall-plant-low.X68'
 EEHallPlantLowTilesEnd:
 
-TBooksBookcaseTitleTilesStart:
-	include 'tiles/scene-tiles/tbooks-bookcase-title.X68'
-TBooksBookcaseTitleTilesEnd:
+TBooksBookcaseHigh56x16TilesStart:
+	include 'tiles/scene-tiles/bookcase-high-56x16.X68'
+TBooksBookcaseHigh56x16TilesEnd:
 
-TBooksBookcaseALowTilesStart:
-	include 'tiles/scene-tiles/tbooks-bookcase-a-low.X68'
-TBooksBookcaseALowTilesEnd:
+TBooksBookcaseLow56x24TilesStart:
+	include 'tiles/scene-tiles/bookcase-low-56x24.X68'
+TBooksBookcaseLow56x24TilesEnd:
 
-TBooksBookcaseAHighTilesStart:
-	include 'tiles/scene-tiles/tbooks-bookcase-a-high.X68'
-TBooksBookcaseAHighTilesEnd:
+TrashCan16x24TilesStart:
+	include 'tiles/scene-tiles/trashcan-16x24.X68'
+TrashCan16x24TilesEnd:
 
-TBooksBookcaseBLowTilesStart:
-	include 'tiles/scene-tiles/tbooks-bookcase-b-low.X68'
-TBooksBookcaseBLowTilesEnd:
+Bench32x16TilesStart:
+	include 'tiles/scene-tiles/bench-32x16.X68'
+Bench32x16TilesEnd:
 
-TBooksBookcaseBHighTilesStart:
-	include 'tiles/scene-tiles/tbooks-bookcase-b-high.X68'
-TBooksBookcaseBHighTilesEnd:
+VBSign48x16TilesStart:
+	include 'tiles/scene-tiles/vbsign-48x16.X68'
+VBSign48x16TilesEnd:
 
-TrashCanTilesStart:
-	include 'tiles/scene-tiles/trashcan.X68'
-TrashCanTilesEnd:
+CPlanetSign48x16TilesStart:
+	include 'tiles/scene-tiles/cplanetsign-48x16.X68'
+CPlanetSign48x16TilesEnd:
+
+WEHallCarpetTilesStart:
+	include 'tiles/scene-tiles/wehall-carpet.X68'
+WEHallCarpetTilesEnd:
+
+PogoDawgTrash16x16TilesStart:
+	include 'tiles/scene-tiles/pogodawg-trash16x16.X68'
+PogoDawgTrash16x16TilesEnd:
+
+PogoDawgTrashCan16x16TilesStart:
+	include 'tiles/scene-tiles/pogodawg-trashcan16x16.X68'
+PogoDawgTrashCan16x16TilesEnd:
+
+PogoDawgVending24x32TilesStart:
+	include 'tiles/scene-tiles/pogodawg-vending24x32.X68'
+PogoDawgVending24x32TilesEnd:
+
+PogoDawgChairLeft16x24TilesStart:
+	include 'tiles/scene-tiles/pogodawg-chair-left-16x24.X68'
+PogoDawgChairLeft16x24TilesEnd:
+
+PogoDawgChairRight16x24TilesStart:
+	include 'tiles/scene-tiles/pogodawg-chair-right-16x24.X68'
+PogoDawgChairRight16x24TilesEnd:
 
 PogoDawgTableTilesStart:
 	include 'tiles/scene-tiles/pogodawg-table.X68'
 PogoDawgTableTilesEnd:
 
-PogoDawgSeatTilesStart:
-	include 'tiles/scene-tiles/pogodawg-seat.X68'
-PogoDawgSeatTilesEnd:
+NShackDisplayTilesStart:
+	include 'tiles/scene-tiles/nshack-display.X68'
+NShackDisplayTilesEnd:
 
-PogoDawgTrashTilesStart:
-	include 'tiles/scene-tiles/pogodawg-trash.X68'
-PogoDawgTrashTilesEnd:
-
-NShackBarrelHighTilesStart:
+NShackBarrelHigh32x8TilesStart:
 	include 'tiles/scene-tiles/nshack-barrel-high.X68'
-NShackBarrelHighTilesEnd:
+NShackBarrelHigh32x8TilesEnd:
 
-NShackBarrelLowTilesStart:
+NShackBarrelLow32x24TilesStart:
 	include 'tiles/scene-tiles/nshack-barrel-low.X68'
-NShackBarrelLowTilesEnd:
+NShackBarrelLow32x24TilesEnd:
 
-NShackCaseHighTilesStart:
-	include 'tiles/scene-tiles/nshack-case-high.X68'
-NShackCaseHighTilesEnd:
+TLodgeShelvesHigh32x16TilesStart:
+	include 'tiles/scene-tiles/tlodge-shelves-high-32x16.X68'
+TLodgeShelvesHigh32x16TilesEnd:
 
-NShackCaseLowTilesStart:
-	include 'tiles/scene-tiles/nshack-case-low.X68'
-NShackCaseLowTilesEnd:
+TLodgeShelvesLow32x24TilesStart:
+	include 'tiles/scene-tiles/tlodge-shelves-low-32x24.X68'
+TLodgeShelvesLow32x24TilesEnd:
 
-TLodgeLargeRackLeftTilesStart:
-	include 'tiles/scene-tiles/tlodge-largerack-left.X68'
-TLodgeLargeRackLeftTilesEnd:
+TLodgeComputer24x24TilesStart:
+	include 'tiles/scene-tiles/tlodge-computer-24x24.X68'
+TLodgeComputer24x24TilesEnd:
 
-TLodgeLargeRackRightTilesStart:
-	include 'tiles/scene-tiles/tlodge-largerack-right.X68'
-TLodgeLargeRackRightTilesEnd:
+TLodgeBase24x8TilesStart:
+	include 'tiles/scene-tiles/tlodge-base-24x8.X68'
+TLodgeBase24x8TilesEnd:
 
-TLodgeSmallRackLeftHighTilesStart:
-	include 'tiles/scene-tiles/tlodge-smallrack-left-high.X68'
-TLodgeSmallRackLeftHighTilesEnd:
-
-TLodgeSmallRackLeftLowTilesStart:
-	include 'tiles/scene-tiles/tlodge-smallrack-left-low.X68'
-TLodgeSmallRackLeftLowTilesEnd:
-
-TLodgeSmallRackCenterHighTilesStart:
-	include 'tiles/scene-tiles/tlodge-smallrack-center-high.X68'
-TLodgeSmallRackCenterHighTilesEnd:
-
-TLodgeSmallRackCenterLowTilesStart:
-	include 'tiles/scene-tiles/tlodge-smallrack-center-low.X68'
-TLodgeSmallRackCenterLowTilesEnd:
-
-TLodgeSmallRackRightHighTilesStart:
-	include 'tiles/scene-tiles/tlodge-smallrack-right-high.X68'
-TLodgeSmallRackRightHighTilesEnd:
-
-TLodgeSmallRackRightLowTilesStart:
-	include 'tiles/scene-tiles/tlodge-smallrack-right-low.X68'
-TLodgeSmallRackRightLowTilesEnd:
+TLodgeRadio24x16TilesStart:
+	include 'tiles/scene-tiles/tlodge-radio-24x16.X68'
+TLodgeRadio24x16TilesEnd:
 
 SHallPlantTilesStart:
-	include 'tiles/scene-tiles/shall-plant.X68'
+	include 'tiles/scene-tiles/southhall-plant.X68'
 SHallPlantTilesEnd:
 
-SHallPhoneHighTilesStart:
-	include 'tiles/scene-tiles/shall-phone-high.X68'
-SHallPhoneHighTilesEnd:
+SHallPhoneHigh16x16TilesStart:
+	include 'tiles/scene-tiles/southhall-phone-high-16x16.X68'
+SHallPhoneHigh16x16TilesEnd:
 
-SHallPhoneLowTilesStart:
-	include 'tiles/scene-tiles/shall-phone-low.X68'
-SHallPhoneLowTilesEnd:
+SHallPhoneLow16x24TilesStart:
+	include 'tiles/scene-tiles/southhall-phone-low-16x24.X68'
+SHallPhoneLow16x24TilesEnd:
 
-CenterCarpetTilesStart:
-	include 'tiles/scene-tiles/center-carpet.X68'
-CenterCarpetTilesEnd:
+CenterPlatformTilesTilesStart:
+	include 'tiles/scene-tiles/center-platform-tiles.X68'
+CenterPlatformTilesTilesEnd:
 
-CenterFireplaceHighTilesStart:
-	include 'tiles/scene-tiles/center-fireplace-high.X68'
-CenterFireplaceHighTilesEnd:
+CenterSack24x16TilesStart:
+	include 'tiles/scene-tiles/center-sack-24x16.X68'
+CenterSack24x16TilesEnd:
 
-CenterFireplaceLowTilesStart:
-	include 'tiles/scene-tiles/center-fireplace-low.X68'
-CenterFireplaceLowTilesEnd:
+CenterFireplaceHigh32x8TilesStart:
+	include 'tiles/scene-tiles/center-fireplace-high-32x8.X68'
+CenterFireplaceHigh32x8TilesEnd:
 
-CenterFenceHighTilesStart:
-	include 'tiles/scene-tiles/center-fence-high.X68'
-CenterFenceHighTilesEnd:
+CenterFireplaceLow32x24TilesStart:
+	include 'tiles/scene-tiles/center-fireplace-low-32x24.X68'
+CenterFireplaceLow32x24TilesEnd:
 
-CenterFenceLowTilesStart:
-	include 'tiles/scene-tiles/center-fence-low.X68'
-CenterFenceLowTilesEnd:
+CenterChairHigh24x8TilesStart:
+	include 'tiles/scene-tiles/center-chair-high-24x8.X68'
+CenterChairHigh24x8TilesEnd:
 
-CenterChairHighTilesStart:
-	include 'tiles/scene-tiles/center-chair-high.X68'
-CenterChairHighTilesEnd:
+CenterChairLow24x24TilesStart:
+	include 'tiles/scene-tiles/center-chair-low-24x24.X68'
+CenterChairLow24x24TilesEnd:
 
-CenterChairLowTilesStart:
-	include 'tiles/scene-tiles/center-chair-low.X68'
-CenterChairLowTilesEnd:
+CenterTreeHigh32x16TilesStart:
+	include 'tiles/scene-tiles/center-tree-high-32x16.X68'
+CenterTreeHigh32x16TilesEnd:
 
-CenterSnowEdgeLeftTilesStart:
-	include 'tiles/scene-tiles/center-snow-edge-left.X68'
-CenterSnowEdgeLeftTilesEnd:
+CenterTreeLow32x24TilesStart:
+	include 'tiles/scene-tiles/center-tree-low-32x24.X68'
+CenterTreeLow32x24TilesEnd:
 
-CenterSnowEdgeRightTilesStart:
-	include 'tiles/scene-tiles/center-snow-edge-right.X68'
-CenterSnowEdgeRightTilesEnd:
+CenterMiniTree16x16TilesStart:
+	include 'tiles/scene-tiles/center-minitree-16x16.X68'
+CenterMiniTree16x16TilesEnd:
 
-CenterSnowEdgeTopTilesStart:
-	include 'tiles/scene-tiles/center-snow-edge-top.X68'
-CenterSnowEdgeTopTilesEnd:
+CenterNutcrackerHigh16x8TilesStart:
+	include 'tiles/scene-tiles/center-nutcracker-high-16x8.X68'
+CenterNutcrackerHigh16x8TilesEnd:
 
-CenterSnowEdgeBottomTilesStart:
-	include 'tiles/scene-tiles/center-snow-edge-bottom.X68'
-CenterSnowEdgeBottomTilesEnd:
+CenterNutcrackerLow16x24TilesStart:
+	include 'tiles/scene-tiles/center-nutcracker-low-16x24.X68'
+CenterNutcrackerLow16x24TilesEnd:
 
-CenterSnowEdgeCornersTilesStart:
-	include 'tiles/scene-tiles/center-snow-edge-corners.X68'
-CenterSnowEdgeCornersTilesEnd:
+CenterWWSign48x16TilesStart:
+	include 'tiles/scene-tiles/center-wwsign-48x16.X68'
+CenterWWSign48x16TilesEnd:
 
-CenterTreeHighTilesStart:
-	include 'tiles/scene-tiles/center-tree-high.X68'
-CenterTreeHighTilesEnd:
+EWHallCheckersSign48x16TilesStart:
+	include 'tiles/scene-tiles/ewhall-checkerssign-48x16.X68'
+EWHallCheckersSign48x16TilesEnd:
 
-CenterTreeLowTilesStart:
-	include 'tiles/scene-tiles/center-tree-low.X68'
-CenterTreeLowTilesEnd:
+EWHallTreeHigh32x32TilesStart:
+	include 'tiles/scene-tiles/ewhall-tree-high-32x32.X68'
+EWHallTreeHigh32x32TilesEnd:
 
-EWHallTreeHighTilesStart:
-	include 'tiles/scene-tiles/ewhall-tree-high.X68'
-EWHallTreeHighTilesEnd:
-
-EWHallTreeLowTilesStart:
-	include 'tiles/scene-tiles/ewhall-tree-low.X68'
-EWHallTreeLowTilesEnd:
+EWHallTreeLow32x32TilesStart:
+	include 'tiles/scene-tiles/ewhall-tree-low-32x32.X68'
+EWHallTreeLow32x32TilesEnd:
 
 InfoDeskHighTilesStart:
 	include 'tiles/scene-tiles/infodesk-high.X68'
@@ -584,129 +540,157 @@ InfoDeskLowTilesStart:
 	include 'tiles/scene-tiles/infodesk-low.X68'
 InfoDeskLowTilesEnd:
 
-LaserDiscsHighTilesStart:
-	include 'tiles/scene-tiles/laserdiscs-high.X68'
-LaserDiscsHighTilesEnd:
+InfoStandHigh16x8TilesStart:
+	include 'tiles/scene-tiles/infostand-high-16x8.X68'
+InfoStandHigh16x8TilesEnd:
 
-LaserDiscsLowTilesStart:
-	include 'tiles/scene-tiles/laserdiscs-low.X68'
-LaserDiscsLowTilesEnd:
+InfoStandLow16x24TilesStart:
+	include 'tiles/scene-tiles/infostand-low-16x24.X68'
+InfoStandLow16x24TilesEnd:
 
-TVLargeHighTilesStart:
-	include 'tiles/scene-tiles/tv-large-high.X68'
-TVLargeHighTilesEnd:
+LaserDiscsHigh64x8TilesStart:
+	include 'tiles/scene-tiles/laserdisc-high-64x8.X68'
+LaserDiscsHigh64x8TilesEnd:
 
-TVLargeLowTilesStart:
-	include 'tiles/scene-tiles/tv-large-low.X68'
-TVLargeLowTilesEnd:
+LaserDiscsLow64x24TilesStart:
+	include 'tiles/scene-tiles/laserdisc-low-64x24.X68'
+LaserDiscsLow64x24TilesEnd:
 
-WWTVWallTilesStart:
-	include 'tiles/scene-tiles/wwtvwall.X68'
-WWTVWallTilesEnd:
+SmallTVOff24x40TilesStart:
+	include 'tiles/scene-tiles/small-tv-off-24x40.X68'
+SmallTVOff24x40TilesEnd:
 
-WWAudioWallTilesStart:
-	include 'tiles/scene-tiles/wwaudiowall.X68'
-WWAudioWallTilesEnd:
+SmallTVOn24x40TilesStart:
+	include 'tiles/scene-tiles/small-tv-on-24x40.X68'
+SmallTVOn24x40TilesEnd:
 
-WWAudioStereoWoodHighTilesStart:
-	include 'tiles/scene-tiles/wwaudio-stereo-wood-high.X68'
-WWAudioStereoWoodHighTilesEnd:
+LargeTVHigh64x16TilesStart:
+	include 'tiles/scene-tiles/tv-large-high-64x16.X68'
+LargeTVHigh64x16TilesEnd:
 
-WWAudioStereoWoodLowTilesStart:
-	include 'tiles/scene-tiles/wwaudio-stereo-wood-low.X68'
-WWAudioStereoWoodLowTilesEnd:
+LargeTVLow64x40TilesStart:
+	include 'tiles/scene-tiles/tv-large-low-64x40.X68'
+LargeTVLow64x40TilesEnd:
 
-WWAudioStereoBlackHighTilesStart:
-	include 'tiles/scene-tiles/wwaudio-stereo-black-high.X68'
-WWAudioStereoBlackHighTilesEnd:
+AudioShelves64x40TilesStart:
+	include 'tiles/scene-tiles/audio-shelves-64x40.X68'
+AudioShelves64x40TilesEnd:
 
-WWAudioStereoBlackLowTilesStart:
-	include 'tiles/scene-tiles/wwaudio-stereo-black-low.X68'
-WWAudioStereoBlackLowTilesEnd:
+AudioBoxesHigh16x16TilesStart:
+	include 'tiles/scene-tiles/audio-boxes-high-16x16.X68'
+AudioBoxesHigh16x16TilesEnd:
 
-WWApplianceWallTilesStart:
-	include 'tiles/scene-tiles/wwappliancewall.X68'
-WWApplianceWallTilesEnd:
+AudioBoxesLow16x24TilesStart:
+	include 'tiles/scene-tiles/audio-boxes-low-16x24.X68'
+AudioBoxesLow16x24TilesEnd:
 
-WWApplianceFridgeHighTilesStart:
-	include 'tiles/scene-tiles/wwappliance-fridge-high.X68'
-WWApplianceFridgeHighTilesEnd:
+AudioBoxWithSpeakerHigh16x8TilesStart:
+	include 'tiles/scene-tiles/audio-box-with-speaker-high-16x8.X68'
+AudioBoxWithSpeakerHigh16x8TilesEnd:
 
-WWApplianceFridgeLowTilesStart:
-	include 'tiles/scene-tiles/wwappliance-fridge-low.X68'
-WWApplianceFridgeLowTilesEnd:
+AudioBoxWithSpeakeeLow16x24TilesStart:
+	include 'tiles/scene-tiles/audio-box-with-speaker-low-16x24.X68'
+AudioBoxWithSpeakeeLow16x24TilesEnd:
 
-WWApplianceFridgeGrayHighTilesStart:
-	include 'tiles/scene-tiles/wwappliance-fridge-gray-high.X68'
-WWApplianceFridgeGrayHighTilesEnd:
+AudioSpeakerHigh16x8TilesStart:
+	include 'tiles/scene-tiles/audio-speaker-high-16x8.X68'
+AudioSpeakerHigh16x8TilesEnd:
 
-WWApplianceFridgeGrayLowTilesStart:
-	include 'tiles/scene-tiles/wwappliance-fridge-gray-low.X68'
-WWApplianceFridgeGrayLowTilesEnd:
+AudioSpeakerLow16x24TilesStart:
+	include 'tiles/scene-tiles/audio-speaker-low-16x24.X68'
+AudioSpeakerLow16x24TilesEnd:
 
-BasementFloorLightTilesStart:
-	include 'tiles/scene-tiles/basement-floor-light.X68'
-BasementFloorLightTilesEnd:
+AudioBoxWithSubwooferHigh32x8TilesStart:
+	include 'tiles/scene-tiles/audio-box-with-subwoofer-high-32x8.X68'
+AudioBoxWithSubwooferHigh32x8TilesEnd:
 
-BasementBedTilesStart:
-	include 'tiles/scene-tiles/basement-bed.X68'
-BasementBedTilesEnd:
+AudioBoxWithSubwooferHighLow32x24TilesStart:
+	include 'tiles/scene-tiles/audio-box-with-subwoofer-low-32x24.X68'
+AudioBoxWithSubwooferHighLow32x24TilesEnd:
 
-BasementLadderTilesStart:
-	include 'tiles/scene-tiles/basement-ladder.X68'
-BasementLadderTilesEnd:
+Laundry24x32TilesStart:
+	include 'tiles/scene-tiles/laundry24x32.X68'
+Laundry24x32TilesEnd:
+
+FridgeHigh16x16TilesStart:
+	include 'tiles/scene-tiles/fridge-high-16x16.X68'
+FridgeHigh16x16TilesEnd:
+
+FridgeLow16x24TilesStart:
+	include 'tiles/scene-tiles/fridge-low-16x24.X68'
+FridgeLow16x24TilesEnd:
+
+Oven16x24TilesStart:
+	include 'tiles/scene-tiles/oven16x24.X68'
+Oven16x24TilesEnd:
+
+BasementPapers16x16TilesStart:
+	include 'tiles/scene-tiles/basement-papers-16x16.X68'
+BasementPapers16x16TilesEnd:
 
 BasementCrate16x16TilesStart:
 	include 'tiles/scene-tiles/basement-crate-16x16.X68'
 BasementCrate16x16TilesEnd:
 
-BasementCrate32x32TilesStart:
-	include 'tiles/scene-tiles/basement-crate-32x32.X68'
-BasementCrate32x32TilesEnd:
-
-BasementCafeRackTilesStart:
-	include 'tiles/scene-tiles/basement-cafe-rack.X68'
-BasementCafeRackTilesEnd:
-
 BasementCafeTableTilesStart:
 	include 'tiles/scene-tiles/basement-cafe-table.X68'
 BasementCafeTableTilesEnd:
 
-BasementComputerTilesStart:
-	include 'tiles/scene-tiles/basement-computer.X68'
-BasementComputerTilesEnd:
+BasementBedTilesStart:
+	include 'tiles/scene-tiles/basement-bed.X68'
+BasementBedTilesEnd:
 
-LadderTopTilesStart:
-	include 'tiles/scene-tiles/ladder-top.X68'
-LadderTopTilesEnd:
+BasementDresser32x40TilesStart:
+	include 'tiles/scene-tiles/basement-dresser-32x40.X68'
+BasementDresser32x40TilesEnd:
 
-LadderTopFrameTilesStart:
-	include 'tiles/scene-tiles/ladder-top-frame.X68'
-LadderTopFrameTilesEnd:
+BasementBunk40x40TilesStart:
+	include 'tiles/scene-tiles/basement-bunk40x40.X68'
+BasementBunk40x40TilesEnd:
 
-CavernBackroomDeadArcadeBase00TilesStart:
-	include 'tiles/scene-tiles/cavern-backroom-dead-arcade-base-00.X68'
-CavernBackroomDeadArcadeBase00TilesEnd:
+BasementPingPongTable32x48TilesStart:
+	include 'tiles/scene-tiles/basement-pingpongtable-32x48.png'
+BasementPingPongTable32x48TilesEnd:
 
-CavernBackroomDeadArcadeBase01TilesStart:
-	include 'tiles/scene-tiles/cavern-backroom-dead-arcade-base-01.X68'
-CavernBackroomDeadArcadeBase01TilesEnd:
+BasementCouchLeft24x40TilesStart:
+	include 'tiles/scene-tiles/basement-couch-left-24x40.png'
+BasementCouchLeft24x40TilesEnd:
 
-CavernBackroomDeadArcadeBase02TilesStart:
-	include 'tiles/scene-tiles/cavern-backroom-dead-arcade-base-02.X68'
-CavernBackroomDeadArcadeBase02TilesEnd:
+BasementCouchRight24x40TilesStart:
+	include 'tiles/scene-tiles/basement-couch-right-24x40.png'
+BasementCouchRight24x40TilesEnd:
 
-CavernBackroomDeadArcadeTop00TilesStart:
-	include 'tiles/scene-tiles/cavern-backroom-dead-arcade-top-00.X68'
-CavernBackroomDeadArcadeTop00TilesEnd:
+BasementGlassTable32x24TilesStart:
+	include 'tiles/scene-tiles/basement-glasstable-32x24.png'
+BasementGlassTable32x24TilesEnd:
 
-CavernBackroomDeadArcadeTop01TilesStart:
-	include 'tiles/scene-tiles/cavern-backroom-dead-arcade-top-01.X68'
-CavernBackroomDeadArcadeTop01TilesEnd:
+BasementCafeShelvesEmpty32x32TilesStart:
+	include 'tiles/scene-tiles/basement-emptyshelves-32x32.X68'
+BasementCafeShelvesEmpty32x32TilesEnd:
 
-CavernBackroomDeadArcadeTop02TilesStart:
-	include 'tiles/scene-tiles/cavern-backroom-dead-arcade-top-02.X68'
-CavernBackroomDeadArcadeTop02TilesEnd:
+BasementCafeShelvesFull32x32TilesStart:
+	include 'tiles/scene-tiles/basement-fullshelves-32x32.X68'
+BasementCafeShelvesFull32x32TilesEnd:
+
+BasementOfficeChairLeft16x24TilesStart:
+	include 'tiles/scene-tiles/basement-chair-left-16x24.X68'
+BasementOfficeChairLeft16x24TilesEnd:
+
+BasementOfficeMainframe32x32TilesStart:
+	include 'tiles/scene-tiles/basement-mainframe-32x32.X68'
+BasementOfficeMainframe32x32TilesEnd:
+
+BasementOfficePapers16x16TilesStart:
+	include 'tiles/scene-tiles/basement-papers-16x16.X68'
+BasementOfficePapers16x16TilesEnd:
+
+BasementOfficeDesk48x40TilesStart:
+	include 'tiles/scene-tiles/basement-desk-48x40.X68'
+BasementOfficeDesk48x40TilesEnd:
+
+CavernBackroomStairsTilesStart:
+	include 'tiles/scene-tiles/cavern-backroom-stairs.X68'
+CavernBackroomStairsTilesEnd:
 
 MenuNavTilesStart:
 	include 'tiles/scene-tiles/menu-nav.X68'

@@ -8,39 +8,55 @@
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0007 ; tileset count - 1
+	dc.w	$000B ; tileset count - 1
 
 	; tileset 0 - tiles start at [0] - tileset length [1]
 	dc.l	TransparentTileTilesStart
 	dc.l	TransparentTileTilesEnd
 
-	; tileset 1 - tiles start at [1] - tileset length [10]
-	dc.l	FloorTileSmallTilesStart
-	dc.l	FloorTileSmallTilesEnd
+	; tileset 1 - tiles start at [1] - tileset length [4]
+	dc.l	FloorWWTilesStart
+	dc.l	FloorWWTilesEnd
 
-	; tileset 2 - tiles start at [11] - tileset length [14]
-	dc.l	FrameRectTilesStart
-	dc.l	FrameRectTilesEnd
+	; tileset 2 - tiles start at [5] - tileset length [4D]
+	dc.l	FrameTilesStart
+	dc.l	FrameTilesEnd
 
-	; tileset 3 - tiles start at [25] - tileset length [6]
-	dc.l	WWAudioWallTilesStart
-	dc.l	WWAudioWallTilesEnd
+	; tileset 3 - tiles start at [52] - tileset length [28]
+	dc.l	AudioShelves64x40TilesStart
+	dc.l	AudioShelves64x40TilesEnd
 
-	; tileset 4 - tiles start at [2B] - tileset length [A]
-	dc.l	WWAudioStereoWoodHighTilesStart
-	dc.l	WWAudioStereoWoodHighTilesEnd
+	; tileset 4 - tiles start at [7A] - tileset length [4]
+	dc.l	AudioBoxesHigh16x16TilesStart
+	dc.l	AudioBoxesHigh16x16TilesEnd
 
-	; tileset 5 - tiles start at [35] - tileset length [15]
-	dc.l	WWAudioStereoWoodLowTilesStart
-	dc.l	WWAudioStereoWoodLowTilesEnd
+	; tileset 5 - tiles start at [7E] - tileset length [6]
+	dc.l	AudioBoxesLow16x24TilesStart
+	dc.l	AudioBoxesLow16x24TilesEnd
 
-	; tileset 6 - tiles start at [4A] - tileset length [8]
-	dc.l	WWAudioStereoBlackHighTilesStart
-	dc.l	WWAudioStereoBlackHighTilesEnd
+	; tileset 6 - tiles start at [84] - tileset length [2]
+	dc.l	AudioBoxWithSpeakerHigh16x8TilesStart
+	dc.l	AudioBoxWithSpeakerHigh16x8TilesEnd
 
-	; tileset 7 - tiles start at [52] - tileset length [C]
-	dc.l	WWAudioStereoBlackLowTilesStart
-	dc.l	WWAudioStereoBlackLowTilesEnd
+	; tileset 7 - tiles start at [86] - tileset length [6]
+	dc.l	AudioBoxWithSpeakeeLow16x24TilesStart
+	dc.l	AudioBoxWithSpeakeeLow16x24TilesEnd
+
+	; tileset 8 - tiles start at [8C] - tileset length [2]
+	dc.l	AudioSpeakerHigh16x8TilesStart
+	dc.l	AudioSpeakerHigh16x8TilesEnd
+
+	; tileset 9 - tiles start at [8E] - tileset length [6]
+	dc.l	AudioSpeakerLow16x24TilesStart
+	dc.l	AudioSpeakerLow16x24TilesEnd
+
+	; tileset A - tiles start at [94] - tileset length [4]
+	dc.l	AudioBoxWithSubwooferHigh32x8TilesStart
+	dc.l	AudioBoxWithSubwooferHigh32x8TilesEnd
+
+	; tileset B - tiles start at [98] - tileset length [C]
+	dc.l	AudioBoxWithSubwooferHighLow32x24TilesStart
+	dc.l	AudioBoxWithSubwooferHighLow32x24TilesEnd
 
 	;---------------------------------------------------------------------------
 	; palettes
@@ -53,93 +69,266 @@
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$000C ; scenery count - 1
+	dc.w	$0024 ; scenery count - 1
 
 	; floor
-	dc.l	Pattern32x32Tile
+	dc.l	Pattern16x16x304
 	;		%pccvhnnnnnnnnnnn
 	dc.w	%0000000000000001 ; vdp pattern
-	dc.w	$0006 ; repeat=6
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$00000000 ; initial drawing location
-
-	; shelves
-	dc.l	PatternShelvesHLWide
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000000100101 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$00800000 ; initial drawing location
-
-	dc.l	PatternShelvesMWide
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000000100101 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$01000000 ; initial drawing location
-
-	dc.l	PatternShelvesHLWide
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000000100101 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$01800000 ; initial drawing location
-
-	; north wall
-	dc.l	PatternFrameTopLongRight
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000010001 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$00000000 ; initial drawing location
-
-	; left wall
-	dc.l	PatternFrameSideClosedLeft
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000010001 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$00800000 ; initial drawing location
+	dc.w	$000C ; repeat=12
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$00800000 ; initial drawing location
 
 	; south wall
-	dc.l	PatternFrameBottom
+	dc.l	PatternFrameSouthClosedEastOpen
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000010001 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$0D800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$0D000000 ; initial drawing location
 
-	; wood stereo
-	dc.l	PatternWWAudioStereoWoodHigh
+	; north wall
+	dc.l	PatternFrameNorthClosedEastOpen
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1010000000101011 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00080000+$03000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$00800000 ; initial drawing location
 
-	dc.l	PatternWWAudioStereoWoodLow
+	; west wall
+	dc.l	PatternFrameWestClosed
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000000110101 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00080000+$04000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$02800000 ; initial drawing location
 
-	; black stereo
-	dc.l	PatternWWAudioStereoBlackHigh
+	; shelves with radios - 0
+	dc.l	Pattern64x40
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000001001010 ; vdp pattern
+	dc.w	%0010000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$001E0000+$03800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00060000+$01000000 ; initial drawing location
 
-	dc.l	PatternWWAudioStereoBlackLow
+	; shelves with radios - 1
+	dc.l	Pattern64x40
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000001010010 ; vdp pattern
+	dc.w	%0010000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$001E0000+$04800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00160000+$01000000 ; initial drawing location
 
-	; black stereo
-	dc.l	PatternWWAudioStereoBlackHigh
+	; shelves with radios - 2
+	dc.l	Pattern64x40
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000001001010 ; vdp pattern
+	dc.w	%0010000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00320000+$03800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00260000+$01000000 ; initial drawing location
 
-	dc.l	PatternWWAudioStereoBlackLow
+	; shelves with radios - 3
+	dc.l	Pattern64x40
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000001010010 ; vdp pattern
+	dc.w	%0010000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00320000+$04800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$002E0000+$01000000 ; initial drawing location
+
+	; shelves with radios - 4
+	dc.l	Pattern64x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001010010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$003E0000+$01000000 ; initial drawing location
+
+	; boxes - high - 0
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001111010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$000E0000+$04800000 ; initial drawing location
+
+	; boxes - low - 0
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001111110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$000E0000+$05800000 ; initial drawing location
+
+	; boxes - high - 1
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001111010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00120000+$04800000 ; initial drawing location
+
+	; boxes - low - 1
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001111110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00120000+$05800000 ; initial drawing location
+
+	; box with speaker - high - 0
+	dc.l	Pattern16x8
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000010000100 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00160000+$05000000 ; initial drawing location
+
+	; box with speaker - low - 0
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000010000110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00160000+$05800000 ; initial drawing location
+
+	; speaker - high - 0
+	dc.l	Pattern16x8
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000010001100 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00220000+$05000000 ; initial drawing location
+
+	; speaker - low - 0
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000010001110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00220000+$05800000 ; initial drawing location
+
+	; speaker - high - 1
+	dc.l	Pattern16x8
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000010001100 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00260000+$05000000 ; initial drawing location
+
+	; speaker - low - 1
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000010001110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00260000+$05800000 ; initial drawing location
+
+	; box with subwoofer - high - 0
+	dc.l	Pattern32x8
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000010010100 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00320000+$05000000 ; initial drawing location
+
+	; box with subwoofer - low - 0
+	dc.l	Pattern32x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000010011000 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00320000+$05800000 ; initial drawing location
+
+	; speaker - high - 2
+	dc.l	Pattern16x8
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000010001100 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$003A0000+$05000000 ; initial drawing location
+
+	; speaker - low - 2
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000010001110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$003A0000+$05800000 ; initial drawing location
+
+	; box with speaker - high - 1
+	dc.l	Pattern16x8
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000010000100 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$000E0000+$08000000 ; initial drawing location
+
+	; box with speaker - low - 1
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000010000110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$000E0000+$08800000 ; initial drawing location
+
+	; speaker - high - 3
+	dc.l	Pattern16x8
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000010001100 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00120000+$08000000 ; initial drawing location
+
+	; speaker - low - 3
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000010001110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00120000+$08800000 ; initial drawing location
+
+	; speaker - high - 4
+	dc.l	Pattern16x8
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000010001100 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00160000+$08000000 ; initial drawing location
+
+	; speaker - low - 4
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000010001110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00160000+$08800000 ; initial drawing location
+
+	; box with subwoofer - high - 1
+	dc.l	Pattern32x8
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000010010100 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00220000+$08000000 ; initial drawing location
+
+	; box with subwoofer - low - 1
+	dc.l	Pattern32x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000010011000 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00220000+$08800000 ; initial drawing location
+
+	; boxes - high - 2
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001111010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00320000+$07800000 ; initial drawing location
+
+	; boxes - low - 2
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001111110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00320000+$08800000 ; initial drawing location
+
+	; box with speaker - high - 2
+	dc.l	Pattern16x8
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000010000100 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00360000+$08000000 ; initial drawing location
+
+	; box with speaker - low - 2
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000010000110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00360000+$08800000 ; initial drawing location
+
+	; boxes - high - 3
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001111010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$003A0000+$07800000 ; initial drawing location
+
+	; boxes - low - 3
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001111110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$003A0000+$08800000 ; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text
@@ -161,39 +350,39 @@
 
 	dc.w	OBJ_SCENE_WWAUDIO_WALL
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%1100100010001000
+	dc.w	%1100100010010000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011000010001000
+	dc.w	%0011100010011000
 
 	dc.w	OBJ_SCENE_WWAUDIO_WALL
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%1100100011101100
+	dc.w	%1100100011110100
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011000010001000
+	dc.w	%0011100010011000
 
 	dc.w	OBJ_SCENE_WWAUDIO_WALL
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%1111111110000110
+	dc.w	%1111111101011000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0010000010001000
+	dc.w	%0011100010011000
 
-	dc.w	OBJ_SCENE_WWAUDIO_WOODSTEREO
+	dc.w	OBJ_NOTHING
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0111000010011110
+	dc.w	%0000000000000000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011000011000000
+	dc.w	%0000000000000000
 
-	dc.w	OBJ_SCENE_WWAUDIO_BLACKSTEREO
+	dc.w	OBJ_NOTHING
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0101111011111000
+	dc.w	%0000000000000000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011000011000000
+	dc.w	%0000000000000000
 
-	dc.w	OBJ_SCENE_WWAUDIO_BLACKSTEREO
+	dc.w	OBJ_NOTHING
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0110000101000110
+	dc.w	%0000000000000000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011000011000000
+	dc.w	%0000000000000000
 
 	dc.w	OBJ_NOTHING
 	;		%wwwwwwwxxxxxxxxx
@@ -237,8 +426,8 @@
 	;---------------------------------------------------------------------------
 	dc.w	$0003 ; npc count - 1
 
-	dc.w	$00B4 ; starting x location of npc0
-	dc.w	$00F0 ; starting y location of npc0
+	dc.w	$00A0 ; starting x location of npc0
+	dc.w	$00E6 ; starting y location of npc0
 	dc.w	DIRECTION_DOWN ; starting direction of npc0
 	dc.w	$FFFF ; movement frequency of npc0
 	dc.l	NullMovementStart ; location of movement pattern for npc0

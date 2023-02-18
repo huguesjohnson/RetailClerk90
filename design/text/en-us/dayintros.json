@@ -9,10 +9,10 @@
    "defaultFormFeed":"FF",
    "lines":{
       "Day00IntroText":{"text":"           November 18, 1990            "},
-      "Day00IntroTip0":{"text":"D-Pad: Move Player,change menu selection"},
-      "Day00IntroTip1":{"text":"A button: Interact with people & objects"},
+      "Day00IntroTip0":{"text":"D-Pad: Move Player, menu selection"},
+      "Day00IntroTip1":{"text":"A button: Interact"},
       "Day00IntroTip2":{"text":"C button: Open the menu screen"},
-      "Day00IntroTip3":{"text":"A or C button: Confirm menu selection"},
+      "Day00IntroTip3":{"text":"A/C button: Confirm menu selection"},
       "Day00IntroTip4":{"text":"B button: Cancel dialog, exit menu"},      
       "Day00IntroTip5":{"text":"Z button: Hold for fast-forward"},      
       "Day00IntroTip6":{"text":"Start: Pause, exit this screen"},      

@@ -4,22 +4,17 @@
 	"destinationFilePath":"src/scenes/Checkers.X68",
 	"tilesetNames":[
 		"TransparentTile",
-		"FloorTile4Color",
-		"FrameRect",
-		"Glass",
-		"TransparentTile",
-		"CounterTop",
-		"CounterShelves",
-		"CheckersShelfH",
-		"CheckersShelfM",
-		"CheckersShelfL",
-		"MannequinMale00",
-		"MannequinMale01",
-		"MannequinMale02",
-		"MannequinMale03",
-		"MannequinMale04",
-		"MannequinMale05",
-		"MannequinStandWide"
+		"FloorCheckers",
+		"Frame",
+		"Counter",
+		"CheckersMirror16x32",
+		"CheckersRack32x24",
+		"CheckersMannequin1High16x16",
+		"CheckersMannequin1Low16x24",
+		"CheckersMannequin2High16x16",
+		"CheckersMannequin2Low16x24",
+		"CheckersMannequin3High16x16",
+		"CheckersMannequin3Low16x24"
 	],
 	"paletteNames":[
 		"PaletteCheckers00",
@@ -29,108 +24,69 @@
 	],
 	"scenery":[
 		{
-			"patternName":"PatternTileFloorSimple",
+			"patternName":"Pattern16x16x304",
 			"comment":"floor",
 			"tilesetIndex":1,
+			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":0,
-			"repeat":13,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"00000000",
-			"column":"00000000"
-		},
-		{
-			"patternName":"PatternShelvesH",
-			"comment":"top shelf",
-			"tilesetIndex":7,
-			"highPriority":false,
-			"paletteNumber":0,
-			"repeat":0,
+			"repeat":12,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"00800000",
-			"column":"00000000"
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternShelvesH",
-			"comment":"middle shelf",
-			"tilesetIndex":8,
+			"patternName":"PatternFrameWestClosed",
+			"comment":"west wall",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"01000000",
-			"column":"00000000"
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"02800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternShelvesH",
-			"comment":"low shelf",
-			"tilesetIndex":9,
+			"patternName":"PatternFrameEastClosed",
+			"comment":"east wall",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"01800000",
-			"column":"00000000"
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"02800000",
+			"column":"004A0000"
 		},
 		{
-			"patternName":"PatternFrameTop",
+			"patternName":"PatternFrameSouthOpen",
+			"comment":"south wall",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"0D000000",
+			"column":"00020000"
+		},
+		{
+			"patternName":"PatternFrameNorthClosed",
 			"comment":"north wall",
 			"tilesetIndex":2,
-			"highPriority":true,
-			"paletteNumber":0,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00000000",
-			"column":"00000000"
-		},
-		{
-			"patternName":"PatternFrameSideClosedRight",
-			"comment":"right wall",
-			"tilesetIndex":2,
+			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"00800000",
-			"column":"004E0000"
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameSideClosedLeft",
-			"comment":"left wall",
-			"tilesetIndex":2,
-			"highPriority":false,
-			"paletteNumber":0,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"00800000",
-			"column":"00000000"
-		},
-		{
-			"patternName":"PatternStoreFront",
-			"comment":"store front",
-			"tilesetIndex":2,
-			"highPriority":true,
-			"paletteNumber":0,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"0C000000",
-			"column":"00000000"
-		},
-		{
-			"patternName":"Pattern3Tile112x8",
-			"comment":"shelves under counter",
-			"tilesetIndex":6,
-			"highPriority":false,
-			"paletteNumber":0,
-			"repeat":1,
-			"layer":"VDP_VRAM_WRITE_B",
-			"column":"001A0000",
-			"row":"04800000"
-		},
-		{
-			"patternName":"PatternCounterHigh112x8Closed",
+			"patternName":"PatternCheckersCounterHigh",
 			"comment":"counter",
-			"tilesetIndex":5,
+			"tilesetIndex":3,
 			"highPriority":true,
 			"paletteNumber":0,
 			"repeat":0,
@@ -139,8 +95,9 @@
 			"row":"03000000"
 		},
 		{
-			"patternName":"PatternCounterLow112x24Closed",
-			"tilesetIndex":5,
+			"patternName":"PatternCheckersCounterLow",
+			"comment":"counter",
+			"tilesetIndex":3,
 			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
@@ -149,221 +106,244 @@
 			"row":"03800000"
 		},
 		{
-			"patternName":"PatternMannequinStandWide",
-			"comment":"mannequin stands",
-			"tilesetIndex":16,
+			"patternName":"Pattern16x32",
+			"comment":"mirror - left side",
+			"tilesetIndex":4,
 			"highPriority":false,
-			"paletteNumber":1,
+			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
-			"column":"00080000",
-			"row":"07800000"
+			"column":"00100000",
+			"row":"00800000"
 		},
 		{
-			"patternName":"PatternMannequinStandWide",
-			"tilesetIndex":16,
+			"patternName":"Pattern32x24",
+			"comment":"rack - left side",
+			"tilesetIndex":5,
 			"highPriority":false,
 			"paletteNumber":1,
 			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
-			"column":"00380000",
-			"row":"07800000"
+			"layer":"VDP_VRAM_WRITE_A",
+			"column":"00060000",
+			"row":"01000000"
+		},
+		{
+			"patternName":"Pattern32x24",
+			"comment":"rack - right side",
+			"tilesetIndex":5,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"column":"00360000",
+			"row":"01000000"
+		},
+		{
+			"patternName":"Pattern32x24",
+			"comment":"rack - right side",
+			"tilesetIndex":5,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"column":"00400000",
+			"row":"01000000"
 		},
 		{
 			"patternName":"Pattern16x16",
-			"comment":"left stand - left mannequin",
+			"comment":"mannequin 3 - palette 1 - high",
 			"tilesetIndex":10,
 			"highPriority":true,
 			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
 			"column":"000A0000",
-			"row":"06800000"
+			"row":"07800000"
 		},
 		{
-			"patternName":"Pattern16x16",
-			"tilesetIndex":10,
-			"tilesetOffset":4,
-			"highPriority":true,
+			"patternName":"Pattern16x24",
+			"comment":"mannequin 3 - palette 1 - low",
+			"tilesetIndex":11,
+			"highPriority":false,
 			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
 			"column":"000A0000",
-			"row":"07800000"
+			"row":"08800000"
 		},
 		{
-			"patternName":"Pattern16x8",
-			"comment":"left stand - center mannequin",
-			"tilesetIndex":11,
+			"patternName":"Pattern16x16",
+			"comment":"mannequin 2 - palette 1 - high",
+			"tilesetIndex":8,
 			"highPriority":true,
 			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"column":"000E0000",
+			"column":"00100000",
+			"row":"06800000"
+		},
+		{
+			"patternName":"Pattern16x24",
+			"comment":"mannequin 2 - palette 1 - low",
+			"tilesetIndex":9,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"column":"00100000",
+			"row":"07800000"
+		},		
+		{
+			"patternName":"Pattern16x16",
+			"comment":"mannequin 1 - palette 1 - high",
+			"tilesetIndex":6,
+			"highPriority":true,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"column":"00160000",
+			"row":"07800000"
+		},
+		{
+			"patternName":"Pattern16x24",
+			"comment":"mannequin 1 - palette 1 - low",
+			"tilesetIndex":7,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"column":"00160000",
+			"row":"08800000"
+		},	
+		{
+			"patternName":"Pattern16x16",
+			"comment":"mannequin 1 - palette 2 - high",
+			"tilesetIndex":6,
+			"highPriority":true,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"column":"00360000",
+			"row":"06800000"
+		},
+		{
+			"patternName":"Pattern16x24",
+			"comment":"mannequin 1 - palette 1 - low",
+			"tilesetIndex":7,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"column":"00360000",
+			"row":"07800000"
+		},	
+		{
+			"patternName":"Pattern16x16",
+			"comment":"mannequin 2 - palette 2 - high",
+			"tilesetIndex":8,
+			"highPriority":true,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"column":"003C0000",
 			"row":"07000000"
 		},
 		{
 			"patternName":"Pattern16x24",
-			"tilesetIndex":11,
-			"tilesetOffset":2,
-			"highPriority":true,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"column":"000E0000",
-			"row":"07800000"
-		},
-		{
-			"patternName":"Pattern16x16",
-			"comment":"left stand - right mannequin",
-			"tilesetIndex":12,
-			"highPriority":true,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"column":"00120000",
-			"row":"06800000"
-		},
-		{
-			"patternName":"Pattern16x16",
-			"tilesetIndex":12,
-			"tilesetOffset":4,
-			"highPriority":true,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"column":"00120000",
-			"row":"07800000"
-		},
-		{
-			"patternName":"Pattern16x16",
-			"comment":"right stand - left mannequin",
-			"tilesetIndex":13,
-			"highPriority":true,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"column":"003A0000",
-			"row":"06800000"
-		},
-		{
-			"patternName":"Pattern16x16",
-			"tilesetIndex":13,
-			"tilesetOffset":4,
+			"comment":"mannequin 2 - palette 1 - low",
+			"tilesetIndex":9,
 			"highPriority":false,
-			"paletteNumber":1,
+			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"column":"003A0000",
-			"row":"07800000"
+			"column":"003C0000",
+			"row":"08000000"
 		},
 		{
-			"patternName":"Pattern16x8",
-			"comment":"right stand - center mannequin",
-			"tilesetIndex":15,
+			"patternName":"Pattern16x16",
+			"comment":"mannequin 3 - palette 2 - high",
+			"tilesetIndex":10,
 			"highPriority":true,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"column":"003E0000",
-			"row":"07000000"
+			"column":"00420000",
+			"row":"07800000"
 		},
 		{
 			"patternName":"Pattern16x24",
-			"tilesetIndex":15,
-			"tilesetOffset":2,
+			"comment":"mannequin 3 - palette 1 - low",
+			"tilesetIndex":11,
 			"highPriority":false,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"column":"003E0000",
-			"row":"07800000"
-		},
-		{
-			"patternName":"Pattern16x16",
-			"comment":"right stand - right mannequin",
-			"tilesetIndex":14,
-			"highPriority":true,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
 			"column":"00420000",
-			"row":"06800000"
-		},
-		{
-			"patternName":"Pattern16x16",
-			"tilesetIndex":14,
-			"tilesetOffset":4,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"column":"00420000",
-			"row":"07800000"
-		}
+			"row":"08800000"
+		}					
 	],
 	"objects":[
 		{
 			"id":"OBJ_SCENE_MANNEQUIN",
-			"x":164,
-			"y":232,
+			"x":170,
+			"y":258,
 			"width":16,
-			"height":40
+			"height":24
 		},
 		{
 			"id":"OBJ_SCENE_MANNEQUIN",
-			"x":184,
-			"y":240,
+			"x":194,
+			"y":248,
 			"width":16,
 			"height":32
 		},
 		{
 			"id":"OBJ_SCENE_MANNEQUIN",
-			"x":200,
-			"y":232,
+			"x":218,
+			"y":258,
 			"width":16,
 			"height":40
 		},
 		{
 			"id":"OBJ_SCENE_MANNEQUIN",
-			"x":360,
-			"y":232,
+			"x":346,
+			"y":246,
 			"width":7,
 			"height":40
 		},
 		{
 			"id":"OBJ_SCENE_MANNEQUIN",
-			"x":368,
-			"y":240,
+			"x":370,
+			"y":254,
 			"width":22,
 			"height":32
 		},
 		{
 			"id":"OBJ_SCENE_MANNEQUIN",
-			"x":392,
-			"y":232,
+			"x":394,
+			"y":260,
 			"width":16,
 			"height":40
 		},
 		{
 			"id":"OBJ_SCENE_CHECKERS_CLOTHING",
-			"x":136,
-			"y":136,
-			"width":100,
-			"height":24
+			"x":152,
+			"y":144,
+			"width":33,
+			"height":16
 		},
 		{
 			"id":"OBJ_SCENE_CHECKERS_CLOTHING",
-			"x":236,
-			"y":136,
-			"width":100,
-			"height":24
+			"x":344,
+			"y":144,
+			"width":33,
+			"height":16
 		},
 		{
 			"id":"OBJ_SCENE_CHECKERS_CLOTHING",
-			"x":390,
-			"y":136,
-			"width":127,
+			"x":382,
+			"y":144,
+			"width":33,
 			"height":16
 		},
 		null
@@ -377,8 +357,8 @@
 	],
 	"npcLocations":[
 		{
-			"x":298,
-			"y":152,
+			"x":316,
+			"y":198,
 			"direction":"DIRECTION_DOWN",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"

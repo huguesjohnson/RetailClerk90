@@ -11,7 +11,7 @@
       "TitleScreenTextNewGame":{"text":"{New Game"},
       "TitleScreenTextLoadGame":{"text":"{Load Game"},
       "TitleScreenTextDebug":{"text":"{Debug"},
-      "TitleScreenTextFooter":{"text":"       Placeholder Title Screen"},
-      "TitleScreenTextFooterDebug":{"text":"       Placeholder Title Screen"}
+      "TitleScreenTextTitle":{"text":"Jan23 Dev Build"},
+      "TitleScreenTextTitleDebug":{"text":"Jan23 Debug Build"}
    }
 }

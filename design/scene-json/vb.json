@@ -4,21 +4,20 @@
 	"destinationFilePath":"src/scenes/VB.X68",
 	"tilesetNames":[
 		"TransparentTile",
-		"FloorCarpet",
-		"FrameRect",
-		"Glass",
-		"TransparentTile",
-		"CounterTop",
-		"VBMagazines",
-		"VBGames",
-		"VBGenHigh",
-		"VBGenLow",
-		"VBPCHigh",
-		"VBPCLow",
-		"VBGBHigh",
-		"VBGBLow",
-		"VBTGHigh",
-		"VBTGLow"
+		"FloorVB",
+		"Frame",
+		"Counter",
+		"VBNesLeft8x32",
+		"VBNesCenter16x32",
+		"VBNesRight8x32",
+		"VBSGHigh32x16",
+		"VBSGLow32x24",
+		"VBTGHigh32x16",
+		"VBTGLow32x24",
+		"VBGBHigh32x16",
+		"VBGBLow32x24",
+		"VBPCHigh32x16",
+		"VBPCLow32x24"
 	],
 	"paletteNames":[
 		"PaletteVB00",
@@ -28,256 +27,305 @@
 	],
 	"scenery":[
 		{
-			"patternName":"PatternFloor",
+			"patternName":"Pattern16x16x304",
 			"comment":"floor",
 			"tilesetIndex":1,
 			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":0,
-			"repeat":31,
+			"repeat":12,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"00000000",
-			"column":"00000000"
+			"row":"00800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternShelvesH",
-			"comment":"top shelf",
-			"tilesetIndex":7,
+			"patternName":"PatternFrameWestClosed",
+			"comment":"west wall",
+			"tilesetIndex":2,
 			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"00800000",
-			"column":"00000000"
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"02800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternShelvesM",
-			"comment":"middle shelf",
-			"tilesetIndex":7,
+			"patternName":"PatternFrameEastClosed",
+			"comment":"east wall",
+			"tilesetIndex":2,
 			"tilesetOffset":0,
 			"highPriority":false,
-			"paletteNumber":1,
+			"paletteNumber":0,
 			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"01000000",
-			"column":"00000000"
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"02800000",
+			"column":"004A0000"
 		},
 		{
-			"patternName":"PatternShelvesL",
-			"comment":"low shelf",
-			"tilesetIndex":7,
+			"patternName":"PatternFrameSouthOpen",
+			"comment":"south wall",
+			"tilesetIndex":2,
 			"tilesetOffset":0,
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":0,
 			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"01800000",
-			"column":"00000000"
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"0D000000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameTop",
+			"patternName":"PatternFrameNorthClosed",
 			"comment":"north wall",
 			"tilesetIndex":2,
 			"tilesetOffset":0,
-			"highPriority":true,
-			"paletteNumber":0,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00000000",
-			"column":"00000000"
-		},
-		{
-			"patternName":"PatternFrameSideClosedRight",
-			"comment":"right wall",
-			"tilesetIndex":2,
-			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"00800000",
-			"column":"004E0000"
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameSideClosedLeft",
-			"comment":"left wall",
-			"tilesetIndex":2,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":0,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"00800000",
-			"column":"00000000"
-		},
-		{
-			"patternName":"PatternStoreFront",
-			"comment":"store front",
-			"tilesetIndex":2,
-			"tilesetOffset":0,
-			"highPriority":true,
-			"paletteNumber":0,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"0C000000",
-			"column":"00000000"
-		},
-		{
-			"patternName":"Pattern80x8",
-			"comment":"shelves under counter",
-			"tilesetIndex":6,
+			"patternName":"PatternVBCounter",
+			"comment":"counter",
+			"tilesetIndex":3,
 			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":1,
 			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
+			"layer":"VDP_VRAM_WRITE_A",
 			"row":"05000000",
-			"column":"00220000"
+			"column":"001E0000"
 		},
 		{
-			"patternName":"Pattern80x8",
+			"patternName":"Pattern8x32",
+			"comment":"nes games - west edge",
+			"tilesetIndex":4,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01800000",
+			"column":"00060000"
+		},
+		{
+			"patternName":"Pattern16x32x256x32",
+			"comment":"nes games - center",
+			"tilesetIndex":5,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01800000",
+			"column":"00080000"
+		},
+		{
+			"patternName":"Pattern8x32",
+			"comment":"nes games - east edge",
 			"tilesetIndex":6,
 			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":1,
 			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"05800000",
-			"column":"00220000"
-		},
-		{
-			"patternName":"PatternCounterSide24x64OpenLowerLeft",
-			"comment":"counter side",
-			"tilesetIndex":5,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
+			"layer":"VDP_VRAM_WRITE_A",
 			"row":"01800000",
-			"column":"00300000"
+			"column":"00480000"
 		},
 		{
-			"patternName":"PatternCounterHigh56x8OpenLowerRight",
-			"comment":"counter high",
-			"tilesetIndex":5,
+			"patternName":"Pattern32x16",
+			"comment":"pc games - west - high",
+			"tilesetIndex":13,
 			"tilesetOffset":0,
 			"highPriority":true,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"03800000",
-			"column":"00220000"
-		},
-		{
-			"patternName":"PatternCounterLow56x24OpenTopRight",
-			"comment":"counter low",
-			"tilesetIndex":5,
-			"tilesetOffset":0,
-			"highPriority":false,
 			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"04000000",
-			"column":"00220000"
+			"column":"00060000"
 		},
 		{
-			"patternName":"PatternVBGenLow",
-			"comment":"genesis rack - low",
-			"tilesetIndex":9,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"0A000000",
-			"column":"00020000"
-		},
-		{
-			"patternName":"PatternVBGenHigh",
-			"comment":"genesis rack - high",
-			"tilesetIndex":8,
-			"tilesetOffset":0,
-			"highPriority":true,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"07800000",
-			"column":"00020000"
-		},
-		{
-			"patternName":"PatternVBPCLow",
-			"comment":"pc games rack - low",
-			"tilesetIndex":11,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"05000000",
-			"column":"00020000"
-		},
-		{
-			"patternName":"PatternVBPCHigh",
-			"comment":"pc games rack - high",
-			"tilesetIndex":10,
-			"tilesetOffset":0,
-			"highPriority":true,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"02800000",
-			"column":"00020000"
-		},
-		{
-			"patternName":"PatternVBTGLow",
-			"comment":"tg rack - low",
-			"tilesetIndex":15,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"0A000000",
-			"column":"00400000"
-		},
-		{
-			"patternName":"PatternVBTGHigh",
-			"comment":"tg rack - high",
+			"patternName":"Pattern32x24",
+			"comment":"pc games - west - low",
 			"tilesetIndex":14,
 			"tilesetOffset":0,
-			"highPriority":true,
-			"paletteNumber":2,
+			"highPriority":false,
+			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"07800000",
-			"column":"00400000"
+			"row":"05000000",
+			"column":"00060000"
 		},
 		{
-			"patternName":"PatternVBGBLow",
-			"comment":"gb rack - low",
+			"patternName":"Pattern32x16",
+			"comment":"pc games - east - high",
 			"tilesetIndex":13,
+			"tilesetOffset":0,
+			"highPriority":true,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"04000000",
+			"column":"000E0000"
+		},
+		{
+			"patternName":"Pattern32x24",
+			"comment":"pc games - east - low",
+			"tilesetIndex":14,
 			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"05000000",
-			"column":"00400000"
-		},
+			"column":"000E0000"
+		},		
 		{
-			"patternName":"PatternVBGBHigh",
-			"comment":"gb rack - high",
-			"tilesetIndex":12,
+			"patternName":"Pattern32x16",
+			"comment":"gb games - west - high",
+			"tilesetIndex":11,
 			"tilesetOffset":0,
 			"highPriority":true,
 			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"02800000",
-			"column":"00400000"
-		}
+			"row":"04000000",
+			"column":"003A0000"
+		},
+		{
+			"patternName":"Pattern32x24",
+			"comment":"gb games - west - low",
+			"tilesetIndex":12,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"05000000",
+			"column":"003A0000"
+		},
+		{
+			"patternName":"Pattern32x16",
+			"comment":"gb games - east - high",
+			"tilesetIndex":11,
+			"tilesetOffset":0,
+			"highPriority":true,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"04000000",
+			"column":"00420000"
+		},
+		{
+			"patternName":"Pattern32x24",
+			"comment":"gb games - east - low",
+			"tilesetIndex":12,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"05000000",
+			"column":"00420000"
+		},		
+		{
+			"patternName":"Pattern32x16",
+			"comment":"sg games - west - high",
+			"tilesetIndex":7,
+			"tilesetOffset":0,
+			"highPriority":true,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"07800000",
+			"column":"00060000"
+		},
+		{
+			"patternName":"Pattern32x24",
+			"comment":"sg games - west - low",
+			"tilesetIndex":8,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"08800000",
+			"column":"00060000"
+		},
+		{
+			"patternName":"Pattern32x16",
+			"comment":"sg games - east - high",
+			"tilesetIndex":7,
+			"tilesetOffset":0,
+			"highPriority":true,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"07800000",
+			"column":"000E0000"
+		},
+		{
+			"patternName":"Pattern32x24",
+			"comment":"sg games - east - low",
+			"tilesetIndex":8,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"08800000",
+			"column":"000E0000"
+		},		
+		{
+			"patternName":"Pattern32x16",
+			"comment":"tg games - west - high",
+			"tilesetIndex":9,
+			"tilesetOffset":0,
+			"highPriority":true,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"07800000",
+			"column":"003A0000"
+		},
+		{
+			"patternName":"Pattern32x24",
+			"comment":"tg games - west - low",
+			"tilesetIndex":10,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"08800000",
+			"column":"003A0000"
+		},
+		{
+			"patternName":"Pattern32x16",
+			"comment":"tg games - east - high",
+			"tilesetIndex":9,
+			"tilesetOffset":0,
+			"highPriority":true,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"07800000",
+			"column":"00420000"
+		},
+		{
+			"patternName":"Pattern32x24",
+			"comment":"tg games - east - low",
+			"tilesetIndex":10,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"08800000",
+			"column":"00420000"
+		}		
 	],
 	"objects":[
 		{
@@ -285,57 +333,51 @@
 			"x":136,
 			"y":136,
 			"width":106,
-			"height":16
+			"height":40
 		},
 		{
 			"id":"OBJ_SCENE_VB_8BIT",
 			"x":242,
 			"y":136,
 			"width":79,
-			"height":16
+			"height":40
 		},
 		{
 			"id":"OBJ_SCENE_VB_8BIT",
 			"x":351,
 			"y":136,
 			"width":90,
-			"height":16
-		},
-		{
-			"id":"OBJ_SCENE_VB_MAGS",
-			"x":264,
-			"y":212,
-			"width":80,
-			"height":8
+			"height":40
 		},
 		{
 			"id":"OBJ_SCENE_VB_GEN",
 			"x":136,
 			"y":272,
-			"width":40,
-			"height":32
+			"width":76,
+			"height":8
 		},
 		{
 			"id":"OBJ_SCENE_VB_TG",
-			"x":390,
+			"x":355,
 			"y":272,
-			"width":40,
-			"height":32
+			"width":76,
+			"height":8
 		},
 		{
 			"id":"OBJ_SCENE_VB_GB",
-			"x":390,
-			"y":192,
-			"width":40,
-			"height":32
+			"x":355,
+			"y":216,
+			"width":76,
+			"height":8
 		},
 		{
 			"id":"OBJ_SCENE_VB_PC",
 			"x":136,
-			"y":192,
-			"width":40,
-			"height":32
+			"y":216,
+			"width":76,
+			"height":8
 		},
+		null,
 		null,
 		null
 	],
@@ -348,8 +390,8 @@
 	],
 	"npcLocations":[
 		{
-			"x":296,
-			"y":160,
+			"x":330,
+			"y":220,
 			"direction":"DIRECTION_DOWN",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"

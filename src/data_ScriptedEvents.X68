@@ -5,7 +5,7 @@ ExampleDialogWithMovementStart:
 	dc.w	$0003
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	DialogTextUnknownNPCNight00
+	dc.l	DialogTextUnknownNPCDay00
 	; move npc1 to the right
 	dc.w	DIRECTION_RIGHT
 	dc.w	$0010
@@ -17,7 +17,7 @@ ExampleDialogWithMovementStart:
 	dc.w	$0001
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	DialogTextUnknownNPCNight00
+	dc.l	DialogTextUnknownNPCDay00
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ExampleDialogWithMovementEnd:
@@ -29,7 +29,6 @@ ExampleSceneChangeStart:
 	dc.w	DIRECTION_UP
 	dc.w	$0032
 	; change player sprite
-	dc.w	SCRIPTED_EVENT_CHANGE_PLAYER_SPRITE
 	dc.w	PLAYER_SPRITE_ERYN
 	; change scene
 	dc.w	SCRIPTED_EVENT_CHANGE_SCENE

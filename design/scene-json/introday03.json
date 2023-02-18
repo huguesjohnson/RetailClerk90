@@ -4,23 +4,24 @@
 	"destinationFilePath":"src/scenes/IntroDay03.X68",
 	"tilesetNames":[
 		"TransparentTile",
-		"FloorCarpetBlacklight",
+		"FloorNShack",
 		"TitleLogo"
 	],
 	"paletteNames":[
 		"PaletteDayIntro00",
 		"PaletteDayIntro01",
 		"PaletteDayIntro02",
-		"PaletteTitle03"
+		"PaletteDayIntro03"
 	],
 	"scenery":[
 		{
-			"patternName":"Pattern32x32Tile",
-			"comment":"background",
+			"patternName":"Pattern16x16x320",
+			"comment":"title background",
 			"tilesetIndex":1,
+			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":0,
-			"repeat":2,
+			"repeat":5,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"00000000",
 			"column":"00000000"
@@ -30,7 +31,7 @@
 			"comment":"title - 90",
 			"tilesetIndex":2,
 			"highPriority":false,
-			"paletteNumber":3,
+			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"02800000",
@@ -41,7 +42,7 @@
 		{
 			"stringLabel":"Day03IntroText",
 			"highPriority":false,
-			"paletteNumber":1,
+			"paletteNumber":2,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"06000000",
 			"column":"00000000"
@@ -49,58 +50,58 @@
 		{
 			"stringLabel":"Day03IntroTip0",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"07000000",
-			"column":"00000000"
+			"column":"00020000"
 		},
 		{
 			"stringLabel":"Day03IntroTip1",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"08000000",
-			"column":"00000000"
+			"column":"00020000"
 		},
 		{
 			"stringLabel":"Day03IntroTip2",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"09000000",
-			"column":"00000000"
+			"column":"00020000"
 		},
 		{
 			"stringLabel":"Day03IntroTip3",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"0A000000",
-			"column":"00000000"
+			"column":"00020000"
 		},
 		{
 			"stringLabel":"Day03IntroTip4",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"0B000000",
-			"column":"00000000"
+			"column":"00020000"
 		},
 		{
 			"stringLabel":"Day03IntroTip5",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"0C000000",
-			"column":"00000000"
+			"column":"00020000"
 		},
 		{
 			"stringLabel":"Day03IntroTip6",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":3,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"0D000000",
-			"column":"00000000"
+			"column":"00020000"
 		}
 	],
 	"objects":[

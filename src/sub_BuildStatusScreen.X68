@@ -100,7 +100,7 @@ BuildStatusScreenObjectiveTextLoop:
 	beq.s	BuildStatusScreenInventory	; end of text, move on
 	cmpi.b	#LF,d6	; is this a line feed character?
 	bne.s	.1	; not a line feed character
-	add.l	#$00800000,d7	; move down one row
+	add.l	#$01000000,d7	; move down two rows
 	move.l	d7,(MEM_DIALOG_VDP)	; set new VDP write
 	bra.w	BuildStatusScreenObjectiveTextLoop
 .1
@@ -108,12 +108,12 @@ BuildStatusScreenObjectiveTextLoop:
 	sub.w	#$20,d6	; subtract 32 to get the character index
 	; first line uses a different palette
 	cmpi.l	#STATUS_SCREEN_OBJECTIVE_VDP,d7 ; first line?
-	bne.s	.2 ; if not, palette 1
+	bne.s	.2 ; if not, palette 3
 	; otherwise palette 2
-	add.w	#DIALOG_BASE_TILE_LOW+%0100000000000000,d6	; add the base tile
+	add.w	#FONT_BASE_TILE_LOW+%0100000000000000,d6	; add the base tile
 	bra.s	.3
 .2
-	add.w	#DIALOG_BASE_TILE_LOW+%0010000000000000,d6	; add the base tile
+	add.w	#FONT_BASE_TILE_LOW+%0110000000000000,d6	; add the base tile
 .3
 	move.l	(MEM_DIALOG_VDP),(VDP_CONTROL)	; set VDP address
 	move.w  d6,(VDP_DATA)	; copy the character to VDP
@@ -151,7 +151,7 @@ BuildStatusScreenInventoryLoop:
 	move.l	(a6),a0	; point a0 to the start of the next item name
 	; menu character for next item
 	clr	d6	; lazy way to prevent various bugs
-	move.w	#DIALOG_BASE_TILE_LOW+%0010000001011011,d6
+	move.w	#FONT_BASE_TILE_LOW+%0110000001011011,d6
 	move.l	(MEM_DIALOG_VDP),(VDP_CONTROL)	; set VDP address
 	add.l	#$00020000,(MEM_DIALOG_VDP)	; move to the next column
 	move.w  d6,(VDP_DATA)	; copy the character to VDP
@@ -161,7 +161,7 @@ BuildStatusScreenInventoryLoopNextChar:
 	cmpi.b	#ITEMNAMEEND,d6	; test if this is the end of the item name
 	beq.s	BuildStatusScreenInventoryLoopDec	; branch if end of name
 	sub.w	#$20,d6	; subtract 32 to get the character index
-	add.w	#DIALOG_BASE_TILE_LOW+%0010000000000000,d6	; add base tile
+	add.w	#FONT_BASE_TILE_LOW+%0110000000000000,d6	; add base tile
 	move.l	(MEM_DIALOG_VDP),(VDP_CONTROL)	; set VDP address
 	move.w  d6,(VDP_DATA)	; copy the character to VDP
 	add.l	#$00020000,(MEM_DIALOG_VDP)	; move to the next column

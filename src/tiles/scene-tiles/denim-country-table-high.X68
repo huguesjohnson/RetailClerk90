@@ -4,89 +4,89 @@
 	dc.l	$01111111
 	dc.l	$12555555
 	dc.l	$12111133
-	dc.l	$12111366
-	dc.l	$12113696
-	dc.l	$12136666
-	dc.l	$12136636
-	dc.l	$12136636
+	dc.l	$12111377
+	dc.l	$121137A7
+	dc.l	$12137777
+	dc.l	$12137737
+	dc.l	$12137737
 
 	; 1
 	dc.l	$11111111
 	dc.l	$55555555
 	dc.l	$11133111
-	dc.l	$33366311
-	dc.l	$99996931
-	dc.l	$99966663
-	dc.l	$99963663
-	dc.l	$99963693
+	dc.l	$33377311
+	dc.l	$AAAA7A31
+	dc.l	$AAA77773
+	dc.l	$AAA73773
+	dc.l	$AAA737A3
 
 	; 2
 	dc.l	$11111111
 	dc.l	$55555555
 	dc.l	$11133111
-	dc.l	$11377333
-	dc.l	$13776DDD
-	dc.l	$37768DDD
-	dc.l	$37737DDD
-	dc.l	$37737DDD
+	dc.l	$11388333
+	dc.l	$13887EEE
+	dc.l	$38879EEE
+	dc.l	$38838EEE
+	dc.l	$38838EEE
 
 	; 3
 	dc.l	$11111111
 	dc.l	$55555555
 	dc.l	$33111111
-	dc.l	$77311113
-	dc.l	$7773113A
-	dc.l	$777733AA
-	dc.l	$737733AA
-	dc.l	$738733AA
+	dc.l	$88311113
+	dc.l	$8883113B
+	dc.l	$888833BB
+	dc.l	$838833BB
+	dc.l	$839833BB
 
 	; 4
 	dc.l	$11111111
 	dc.l	$55555555
 	dc.l	$33111331
-	dc.l	$AA333AA3
-	dc.l	$AA999AAA
-	dc.l	$AA999AAA
-	dc.l	$39999A3A
-	dc.l	$3A999A39
+	dc.l	$BB333BB3
+	dc.l	$BBAAABBB
+	dc.l	$BBAAABBB
+	dc.l	$3AAAAB3B
+	dc.l	$3BAAAB3A
 
 	; 5
 	dc.l	$11111111
 	dc.l	$55555555
 	dc.l	$11111331
-	dc.l	$11113CC3
-	dc.l	$3113CCC9
-	dc.l	$A33CCCC9
-	dc.l	$A33CC3C9
-	dc.l	$A339C3C9
+	dc.l	$11113DD3
+	dc.l	$3113DDDA
+	dc.l	$B33DDDDA
+	dc.l	$B33DD3DA
+	dc.l	$B33AD3DA
 
 	; 6
 	dc.l	$11111111
 	dc.l	$55555555
 	dc.l	$11331111
-	dc.l	$33C93111
-	dc.l	$99CCC311
-	dc.l	$99CCCC33
-	dc.l	$99C3CC33
-	dc.l	$9993CC33
+	dc.l	$33DA3111
+	dc.l	$AADDD311
+	dc.l	$AADDDD33
+	dc.l	$AAD3DD33
+	dc.l	$AAA3DD33
 
 	; 7
 	dc.l	$11111111
 	dc.l	$55555555
 	dc.l	$11331113
-	dc.l	$13883339
-	dc.l	$38887778
-	dc.l	$88887778
-	dc.l	$89387778
-	dc.l	$89387778
+	dc.l	$1399333A
+	dc.l	$39998889
+	dc.l	$99998889
+	dc.l	$9A398889
+	dc.l	$9A398889
 
 	; 8
 	dc.l	$11111100
 	dc.l	$55555530
 	dc.l	$31111530
-	dc.l	$83111530
-	dc.l	$98311530
-	dc.l	$88831530
-	dc.l	$38831530
-	dc.l	$38831530
+	dc.l	$93111530
+	dc.l	$A9311530
+	dc.l	$99931530
+	dc.l	$39931530
+	dc.l	$39931530
 

@@ -4,11 +4,11 @@
 	"destinationFilePath":"src/scenes/SHall.X68",
 	"tilesetNames":[
 		"TransparentTile",
-		"FloorTileBasic",
-		"FrameRect",
+		"FloorCenterHall",
+		"Frame",
 		"SHallPlant",
-		"SHallPhoneHigh",
-		"SHallPhoneLow"
+		"SHallPhoneHigh16x16",
+		"SHallPhoneLow16x24"
 	],
 	"paletteNames":[
 		"PalettePogoDawg00",
@@ -18,85 +18,114 @@
 	],
 	"scenery":[
 		{
-			"patternName":"PatternTileFloor",
-			"comment":"background",
+			"patternName":"Pattern16x16x304",
+			"comment":"floor",
 			"tilesetIndex":1,
+			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":2,
-			"repeat":13,
+			"repeat":12,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"00000000",
-			"column":"00000000"
+			"row":"00800000",
+			"column":"00020000"
 		},
 		{
 			"patternName":"PatternSHallPlant",
 			"comment":"plant - left side",
 			"tilesetIndex":3,
-			"highPriority":true,
+			"highPriority":false,
 			"paletteNumber":2,
 			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"0C800000",
-			"column":"00020000"
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"0C000000",
+			"column":"00060000"
 		},
 		{
 			"patternName":"PatternSHallPlant",
 			"comment":"plant - right side",
 			"tilesetIndex":3,
-			"highPriority":true,
+			"highPriority":false,
 			"paletteNumber":2,
 			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"0C800000",
-			"column":"00380000"
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"0C000000",
+			"column":"00320000"
 		},
 		{
-			"patternName":"PatternFrameSideLeftOpenTopExterior",
-			"comment":"left entrance - top",
+			"patternName":"PatternFrameWestOpen",
+			"comment":"west wall",
 			"tilesetIndex":2,
-			"highPriority":true,
+			"tilesetOffset":0,
+			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00000000",
-			"column":"00000000"
+			"row":"02800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameSideLeftOpenBottomExterior",
-			"comment":"left entrance - bottom",
+			"patternName":"PatternFrameNWFill",
+			"comment":"west wall - north fill",
 			"tilesetIndex":2,
-			"highPriority":true,
+			"tilesetOffset":0,
+			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"09000000",
-			"column":"00000000"
+			"row":"00800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameSideRightOpenTopExterior",
-			"comment":"right entrance - top",
+			"patternName":"PatternFrameSWFill",
+			"comment":"west wall - south fill",
 			"tilesetIndex":2,
-			"highPriority":true,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"0D000000",
+			"column":"00020000"
+		},
+		{
+			"patternName":"PatternFrameEastOpen",
+			"comment":"east wall",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
+			"highPriority":false,
 			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"column":"004E0000",
-			"row":"00000000"
+			"row":"02800000",
+			"column":"004A0000"
 		},
 		{
-			"patternName":"PatternFrameSideRightOpenBottomExterior",
-			"comment":"right entrance - bottom",
+			"patternName":"PatternFrameNEFill",
+			"comment":"east wall - north fill",
 			"tilesetIndex":2,
-			"highPriority":true,
+			"tilesetOffset":0,
+			"highPriority":false,
 			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"09000000",
-			"column":"004E0000"
+			"row":"00800000",
+			"column":"004A0000"
 		},
 		{
-			"patternName":"Pattern24x16",
-			"comment":"phone high",
+			"patternName":"PatternFrameSEFill",
+			"comment":"east wall - south fill",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"0D000000",
+			"column":"004A0000"
+		},		
+		{
+			"patternName":"Pattern16x16",
+			"comment":"phone high - west",
 			"tilesetIndex":4,
 			"highPriority":true,
 			"paletteNumber":2,
@@ -106,8 +135,8 @@
 			"column":"00200000"
 		},
 		{
-			"patternName":"Pattern24x32",
-			"comment":"phone low",
+			"patternName":"Pattern16x24",
+			"comment":"phone low - west",
 			"tilesetIndex":5,
 			"highPriority":false,
 			"paletteNumber":2,
@@ -117,57 +146,74 @@
 			"column":"00200000"
 		},
 		{
-			"patternName":"Pattern24x16",
-			"comment":"phone high",
+			"patternName":"Pattern16x16",
+			"comment":"phone high - center",
 			"tilesetIndex":4,
 			"highPriority":true,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"04000000",
-			"column":"002A0000"
+			"column":"00260000"
 		},
 		{
-			"patternName":"Pattern24x32",
-			"comment":"phone low",
+			"patternName":"Pattern16x24",
+			"comment":"phone low - center",
 			"tilesetIndex":5,
 			"highPriority":false,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"05000000",
-			"column":"002A0000"
+			"column":"00260000"
+		},		
+		
+		{
+			"patternName":"Pattern16x16",
+			"comment":"phone high - east",
+			"tilesetIndex":4,
+			"highPriority":true,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"04000000",
+			"column":"002C0000"
+		},
+		{
+			"patternName":"Pattern16x24",
+			"comment":"phone low - east",
+			"tilesetIndex":5,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"05000000",
+			"column":"002C0000"
 		}
 	],
 	"objects":[
 		{
 			"id":"OBJ_SCENE_SHALL_PHONE",
 			"x":256,
-			"y":192,
-			"width":24,
-			"height":48
-		},
-		{
-			"id":"OBJ_SCENE_SHALL_PHONE",
-			"x":298,
-			"y":192,
-			"width":24,
-			"height":48
+			"y":194,
+			"width":65,
+			"height":30
 		},
 		{
 			"id":"OBJ_SCENE_PLANT",
-			"x":136,
-			"y":330,
-			"width":88,
+			"x":152,
+			"y":320,
+			"width":94,
 			"height":24
 		},
 		{
 			"id":"OBJ_SCENE_PLANT",
-			"x":352,
-			"y":330,
-			"width":88,
+			"x":328,
+			"y":320,
+			"width":94,
 			"height":24
 		},
+		null,
 		null,
 		null,
 		null,

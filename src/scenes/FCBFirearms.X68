@@ -14,27 +14,27 @@
 	dc.l	TransparentTileTilesStart
 	dc.l	TransparentTileTilesEnd
 
-	; tileset 1 - tiles start at [1] - tileset length [10]
-	dc.l	FloorStoneTilesStart
-	dc.l	FloorStoneTilesEnd
+	; tileset 1 - tiles start at [1] - tileset length [4]
+	dc.l	FloorFCBTilesStart
+	dc.l	FloorFCBTilesEnd
 
-	; tileset 2 - tiles start at [11] - tileset length [14]
-	dc.l	FrameWoodTilesStart
-	dc.l	FrameWoodTilesEnd
+	; tileset 2 - tiles start at [5] - tileset length [4D]
+	dc.l	FrameTilesStart
+	dc.l	FrameTilesEnd
 
-	; tileset 3 - tiles start at [25] - tileset length [25]
-	dc.l	FCBPondTopRightTilesStart
-	dc.l	FCBPondTopRightTilesEnd
+	; tileset 3 - tiles start at [52] - tileset length [17]
+	dc.l	FCBPondNETilesStart
+	dc.l	FCBPondNETilesEnd
 
-	; tileset 4 - tiles start at [4A] - tileset length [10]
+	; tileset 4 - tiles start at [69] - tileset length [4]
 	dc.l	FCBPathTilesStart
 	dc.l	FCBPathTilesEnd
 
-	; tileset 5 - tiles start at [5A] - tileset length [7]
+	; tileset 5 - tiles start at [6D] - tileset length [8]
 	dc.l	FCBFirearmsHighTilesStart
 	dc.l	FCBFirearmsHighTilesEnd
 
-	; tileset 6 - tiles start at [61] - tileset length [19]
+	; tileset 6 - tiles start at [75] - tileset length [19]
 	dc.l	FCBFirearmsLowTilesStart
 	dc.l	FCBFirearmsLowTilesEnd
 
@@ -42,75 +42,96 @@
 	; palettes
 	;---------------------------------------------------------------------------
 	dc.l	PaletteFCBFloorWall
-	dc.l	PaletteFCBFirearms00
-	dc.l	PaletteFCBFirearms01
+	dc.l	PaletteFCBWoodWater
+	dc.l	PaletteFCBFirearms
 	dc.l	PalettePeople
 
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$0008 ; scenery count - 1
+	dc.w	$000B ; scenery count - 1
 
-	; stone floor
-	dc.l	Pattern32x32Tile
+	; floor
+	dc.l	Pattern16x16x304
 	;		%pccvhnnnnnnnnnnn
 	dc.w	%0000000000000001 ; vdp pattern
-	dc.w	$0006 ; repeat=6
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$00000000 ; initial drawing location
+	dc.w	$000C ; repeat=12
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$00800000 ; initial drawing location
+
+	; east wall
+	dc.l	PatternFrameEastClosed
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000000000101 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$004A0000+$02800000 ; initial drawing location
+
+	; east wall - south fill
+	dc.l	PatternFrameSEFill
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000000000101 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$004A0000+$0D000000 ; initial drawing location
 
 	; north wall
-	dc.l	PatternFrameTopLongLeft
+	dc.l	PatternFrameNorthClosedWestOpen
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000010001 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$00000000 ; initial drawing location
-
-	; right wall
-	dc.l	PatternFrameSideClosedRightWithEnd
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000010001 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$004E0000+$00800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$00800000 ; initial drawing location
 
 	; wood path - east-west
-	dc.l	PatternFCBFloorH
+	dc.l	Pattern16x16x240
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000001001010 ; vdp pattern
+	dc.w	%0010000001101001 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$09000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$0A000000 ; initial drawing location
 
 	; wood path - north-south
-	dc.l	PatternFCBFloorVNorth
+	dc.l	Pattern16x16
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000001001010 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00380000+$0B000000 ; initial drawing location
+	dc.w	%0010000001101001 ; vdp pattern
+	dc.w	$0001 ; repeat=1
+	dc.l	VDP_VRAM_WRITE_B+$003A0000+$0B000000 ; initial drawing location
 
 	; wood path - north-south
-	dc.l	PatternFCBFloorVNorth
+	dc.l	Pattern16x8
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000001001010 ; vdp pattern
+	dc.w	%0010000001101001 ; vdp pattern
+	dc.w	$0001 ; repeat=1
+	dc.l	VDP_VRAM_WRITE_B+$003A0000+$0C800000 ; initial drawing location
+
+	; wood path - leading to pond
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001101001 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$0B000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$0B000000 ; initial drawing location
+
+	; wood path - leading to pond
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001101001 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$00060000+$0B000000 ; initial drawing location
 
 	; pond
-	dc.l	PatternFCBPondTopRight
+	dc.l	PatternFCBPondNE
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000000100101 ; vdp pattern
+	dc.w	%0010000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$0B800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$0B800000 ; initial drawing location
 
 	; firearms - low
 	dc.l	PatternFCBFirearmsLow
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000001100001 ; vdp pattern
+	dc.w	%0100000001110101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
 	dc.l	VDP_VRAM_WRITE_A+$000E0000+$00800000 ; initial drawing location
 
 	; firearms - high
 	dc.l	PatternFCBFirearmsHigh
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000001011010 ; vdp pattern
+	dc.w	%1100000001101101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
 	dc.l	VDP_VRAM_WRITE_A+$000E0000+$03800000 ; initial drawing location
 

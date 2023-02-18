@@ -1,7 +1,7 @@
 ProcessLoadScreen:
 	; process b press
 	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
-	andi.b	#BUTTON_B,d6	; test if the start button was pressed
+	andi.b	#BUTTON_B,d6	; test if the b button was pressed
 	beq.s	ProcessLoadScreenTestStart	; b not pressed, branch
 	move.w	#$0000,(MEM_MENU_SELECTION)	; prevents a bug on the title screen
 	bra.w	NewGame	; kick-off new game out of laziness
@@ -56,13 +56,13 @@ ProcessLoadScreenDecrementSelector:
 ProcessLoadScreenMoveSelector:
 	; move selector sprite based on menu selection
 	move.w	(MEM_MENU_SELECTION),d7	; copy current value to d7
-	mulu.w	#$0008,d7	; rows are 8 apart
-	add.w	#$00D0,d7	; first row is D0
+	mulu.w	#LOAD_MENU_INC_Y,d7	; row increment
+	add.w	#LOAD_MENU_SLOT0_Y,d7	; first row
 	move.l	#VDP_VRAM_WRITE_SPRITE,d6	; add to sprite table address
 	move.l	d6,(VDP_CONTROL)	; set write location in VDP
 	move.w	d7,(VDP_DATA)	; copy the new y-coordinate
 	add.l	#$00060000,d6	; move to x-coordinate
 	move.l	d6,(VDP_CONTROL)	; set write location in VDP
-	move.w	#$00C8,(VDP_DATA)	; copy the new x-coordinate
+	move.w	#LOAD_MENU_SLOT0_X,(VDP_DATA)	; copy the new x-coordinate
 ExitProcessProcessLoadScreen:
 	rts

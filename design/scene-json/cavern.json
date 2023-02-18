@@ -4,17 +4,14 @@
 	"destinationFilePath":"src/scenes/Cavern.X68",
 	"tilesetNames":[
 		"TransparentTile",
-		"FloorCarpetBlacklight",
-		"FrameRect",
-		"Glass",
-		"TransparentTile",
-		"CavernSign",
-		"CavernArcadeBase00",
-		"CavernArcadeBase01",
-		"CavernArcadeBase02",
-		"CavernArcadeTop00",
-		"CavernArcadeTop01",
-		"CavernArcadeTop02"
+		"FloorCavern",
+		"Frame",
+		"ArcadeHigh24x16",
+		"ArcadeLow24x24",
+		"ArcadeRightHigh24x8",
+		"ArcadeRightLow24x24",
+		"ArcadeLeftHigh24x8",
+		"ArcadeLeftLow24x24"		
 	],
 	"paletteNames":[
 		"PaletteCavern00",
@@ -24,661 +21,627 @@
 	],
 	"scenery":[
 		{
-			"patternName":"Pattern32x32Tile",
+			"patternName":"Pattern16x16x304",
 			"comment":"floor",
 			"tilesetIndex":1,
+			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":0,
-			"repeat":6,
+			"repeat":12,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"00000000",
-			"column":"00000000"
+			"row":"00800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameTopOpenLeft",
-			"comment":"north wall - left side",
+			"patternName":"PatternFrameWestClosed",
+			"comment":"west wall",
 			"tilesetIndex":2,
-			"highPriority":true,
+			"tilesetOffset":0,
+			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00000000",
-			"column":"00000000"
+			"row":"02800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameTopOpenRight",
-			"comment":"north wall - right side",
+			"patternName":"PatternFrameEastClosed",
+			"comment":"east wall",
 			"tilesetIndex":2,
-			"highPriority":true,
+			"tilesetOffset":0,
+			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"column":"00360000",
-			"row":"00000000"
+			"row":"02800000",
+			"column":"004A0000"
 		},
 		{
-			"patternName":"PatternFrameSideClosedRight",
-			"comment":"right wall",
+			"patternName":"PatternFrameSouthOpen",
+			"comment":"south wall",
 			"tilesetIndex":2,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"0D000000",
+			"column":"00020000"
+		},
+		{
+			"patternName":"PatternFrameNorthOpenWestSide",
+			"comment":"north wall - west",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"00800000",
-			"column":"004E0000"
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameSideClosedLeft",
-			"comment":"left wall",
+			"patternName":"PatternFrameNorthOpenEastSide",
+			"comment":"north wall - east",
 			"tilesetIndex":2,
+			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"00800000",
-			"column":"00000000"
+			"column":"002E0000"
 		},
 		{
-			"patternName":"PatternStoreFront",
-			"comment":"store front",
-			"tilesetIndex":2,
+			"patternName":"Pattern24x16",
+			"comment":"arcade cabinet - row 0 - west 0 - high",
+			"tilesetIndex":3,
 			"highPriority":true,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"0C000000",
-			"column":"00000000"
+			"row":"01000000",
+			"column":"00060000"
 		},
 		{
-			"patternName":"PatternCavernSign",
-			"comment":"sign",
+			"patternName":"Pattern24x24",
+			"comment":"arcade cabinet - row 0 - west 0 - low",
+			"tilesetIndex":4,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"02000000",
+			"column":"00060000"
+		},
+		{
+			"patternName":"Pattern24x16",
+			"comment":"arcade cabinet - row 0 - west 1 - high",
+			"tilesetIndex":3,
+			"highPriority":true,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01000000",
+			"column":"000C0000"
+		},
+		{
+			"patternName":"Pattern24x24",
+			"comment":"arcade cabinet - row 0 - west 1 - low",
+			"tilesetIndex":4,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"02000000",
+			"column":"000C0000"
+		},
+		{
+			"patternName":"Pattern24x16",
+			"comment":"arcade cabinet - row 0 - west 2 - high",
+			"tilesetIndex":3,
+			"highPriority":true,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01000000",
+			"column":"00120000"
+		},
+		{
+			"patternName":"Pattern24x24",
+			"comment":"arcade cabinet - row 0 - west 2 - low",
+			"tilesetIndex":4,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"02000000",
+			"column":"00120000"
+		},		
+		{
+			"patternName":"Pattern24x16",
+			"comment":"arcade cabinet - row 0 - west 3 - high",
+			"tilesetIndex":3,
+			"highPriority":true,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01000000",
+			"column":"00180000"
+		},
+		{
+			"patternName":"Pattern24x24",
+			"comment":"arcade cabinet - row 0 - west 3 - low",
+			"tilesetIndex":4,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"02000000",
+			"column":"00180000"
+		},
+		{
+			"patternName":"Pattern24x16",
+			"comment":"arcade cabinet - row 0 - east 0 - high",
+			"tilesetIndex":3,
+			"highPriority":true,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01000000",
+			"column":"00320000"
+		},
+		{
+			"patternName":"Pattern24x24",
+			"comment":"arcade cabinet - row 0 - east 0 - low",
+			"tilesetIndex":4,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"02000000",
+			"column":"00320000"
+		},
+		{
+			"patternName":"Pattern24x16",
+			"comment":"arcade cabinet - row 0 - east 1 - high",
+			"tilesetIndex":3,
+			"highPriority":true,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01000000",
+			"column":"00380000"
+		},
+		{
+			"patternName":"Pattern24x24",
+			"comment":"arcade cabinet - row 0 - east 1 - low",
+			"tilesetIndex":4,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"02000000",
+			"column":"00380000"
+		},			
+		{
+			"patternName":"Pattern24x16",
+			"comment":"arcade cabinet - row 0 - east 2 - high",
+			"tilesetIndex":3,
+			"highPriority":true,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01000000",
+			"column":"003E0000"
+		},
+		{
+			"patternName":"Pattern24x24",
+			"comment":"arcade cabinet - row 0 - east 2 - low",
+			"tilesetIndex":4,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"02000000",
+			"column":"003E0000"
+		},
+		{
+			"patternName":"Pattern24x16",
+			"comment":"arcade cabinet - row 0 - east 3 - high",
+			"tilesetIndex":3,
+			"highPriority":true,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01000000",
+			"column":"00440000"
+		},
+		{
+			"patternName":"Pattern24x24",
+			"comment":"arcade cabinet - row 0 - east 3 - low",
+			"tilesetIndex":4,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"02000000",
+			"column":"00440000"
+		},
+		
+		{
+			"patternName":"Pattern24x8",
+			"comment":"arcade cabinet - right - high",
+			"tilesetIndex":5,
+			"highPriority":true,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"06000000",
+			"column":"00060000"
+		},
+		{
+			"patternName":"Pattern24x24",
+			"comment":"arcade cabinet - right - low",
+			"tilesetIndex":6,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"06800000",
+			"column":"00060000"
+		},	
+				
+		{
+			"patternName":"Pattern24x8",
+			"comment":"arcade cabinet - right - high",
+			"tilesetIndex":5,
+			"highPriority":true,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"08800000",
+			"column":"00060000"
+		},
+		{
+			"patternName":"Pattern24x24",
+			"comment":"arcade cabinet - right - low",
+			"tilesetIndex":6,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"09000000",
+			"column":"00060000"
+		},
+		{
+			"patternName":"Pattern24x8",
+			"comment":"arcade cabinet - right - high",
 			"tilesetIndex":5,
 			"highPriority":true,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"0C000000",
-			"column":"001A0000"
+			"row":"05800000",
+			"column":"001C0000"
 		},
 		{
 			"patternName":"Pattern24x24",
-			"comment":"pattern 0 - palette 0 - base",
+			"comment":"arcade cabinet - right - low",
 			"tilesetIndex":6,
 			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"0A000000",
-			"column":"00020000"
-		},
-		{
-			"patternName":"Pattern24x24",
-			"comment":"pattern 0 - palette 0 - base",
-			"tilesetIndex":6,
-			"highPriority":false,
-			"paletteNumber":0,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"0A000000",
-			"column":"00080000"
-		},
-		{
-			"patternName":"Pattern24x24",
-			"comment":"pattern 0 - palette 1 - base",
-			"tilesetIndex":6,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"02000000",
-			"column":"00420000"
-		},
-		{
-			"patternName":"Pattern24x24",
-			"comment":"pattern 0 - palette 1 - base",
-			"tilesetIndex":6,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"02000000",
-			"column":"00480000"
-		},
-		{
-			"patternName":"Pattern24x24",
-			"comment":"pattern 0 - palette 2 - base",
-			"tilesetIndex":6,
-			"highPriority":false,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"02000000",
-			"column":"000E0000"
-		},
-		{
-			"patternName":"Pattern24x24",
-			"comment":"pattern 0 - palette 2 - base",
-			"tilesetIndex":6,
-			"highPriority":false,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"02000000",
-			"column":"00140000"
-		},
-		{
-			"patternName":"Pattern24x24",
-			"comment":"pattern 1 - palette 0 - base",
-			"tilesetIndex":7,
-			"highPriority":false,
-			"paletteNumber":0,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
 			"row":"06000000",
-			"column":"00360000"
+			"column":"001C0000"
 		},
 		{
-			"patternName":"Pattern24x24",
-			"comment":"pattern 1 - palette 0 - base",
-			"tilesetIndex":7,
-			"highPriority":false,
-			"paletteNumber":0,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"06000000",
-			"column":"003C0000"
-		},
-		{
-			"patternName":"Pattern24x24",
-			"comment":"pattern 1 - palette 1 - base",
-			"tilesetIndex":7,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"02000000",
-			"column":"00020000"
-		},
-		{
-			"patternName":"Pattern24x24",
-			"comment":"pattern 1 - palette 1 - base",
-			"tilesetIndex":7,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"02000000",
-			"column":"00080000"
-		},
-		{
-			"patternName":"Pattern24x24",
-			"comment":"pattern 1 - palette 2 - base",
-			"tilesetIndex":7,
-			"highPriority":false,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"06000000",
-			"column":"000E0000"
-		},
-		{
-			"patternName":"Pattern24x24",
-			"comment":"pattern 1 - palette 2 - base",
-			"tilesetIndex":7,
-			"highPriority":false,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"06000000",
-			"column":"00140000"
-		},
-		{
-			"patternName":"Pattern24x24",
-			"comment":"pattern 2 - palette 0 - base",
-			"tilesetIndex":8,
-			"highPriority":false,
-			"paletteNumber":0,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"02000000",
-			"column":"00360000"
-		},
-		{
-			"patternName":"Pattern24x24",
-			"comment":"pattern 2 - palette 0 - base",
-			"tilesetIndex":8,
-			"highPriority":false,
-			"paletteNumber":0,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"02000000",
-			"column":"003C0000"
-		},
-		{
-			"patternName":"Pattern24x24",
-			"comment":"pattern 2 - palette 1 - base",
-			"tilesetIndex":8,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"06000000",
-			"column":"00220000"
-		},
-		{
-			"patternName":"Pattern24x24",
-			"comment":"pattern 2 - palette 1 - base",
-			"tilesetIndex":8,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"06000000",
-			"column":"00280000"
-		},
-		{
-			"patternName":"Pattern24x24",
-			"comment":"pattern 2 - palette 2 - base",
-			"tilesetIndex":8,
-			"highPriority":false,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"0A000000",
-			"column":"00420000"
-		},
-		{
-			"patternName":"Pattern24x24",
-			"comment":"pattern 2 - palette 2 - base",
-			"tilesetIndex":8,
-			"highPriority":false,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"0A000000",
-			"column":"00480000"
-		},
-		{
-			"patternName":"Pattern24x16",
-			"comment":"pattern 0 - palette 0 - high",
-			"tilesetIndex":9,
+			"patternName":"Pattern24x8",
+			"comment":"arcade cabinet - right - high",
+			"tilesetIndex":5,
 			"highPriority":true,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"08000000",
+			"column":"001C0000"
+		},
+		{
+			"patternName":"Pattern24x24",
+			"comment":"arcade cabinet - right - low",
+			"tilesetIndex":6,
+			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"08800000",
-			"column":"00020000"
+			"column":"001C0000"
+		},				
+
+		{
+			"patternName":"Pattern24x8",
+			"comment":"arcade cabinet - left - high",
+			"tilesetIndex":7,
+			"highPriority":true,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"05800000",
+			"column":"00160000"
+		},
+		{
+			"patternName":"Pattern24x24",
+			"comment":"arcade cabinet - left - low",
+			"tilesetIndex":8,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"06000000",
+			"column":"00160000"
 		},
 		{
 			"patternName":"Pattern24x8",
-			"comment":"pattern 0 - palette 0 - low",
-			"tilesetIndex":9,
-			"tilesetOffset":6,
+			"comment":"arcade cabinet - left - high",
+			"tilesetIndex":7,
 			"highPriority":true,
-			"paletteNumber":0,
+			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"09800000",
-			"column":"00020000"
+			"row":"08000000",
+			"column":"00160000"
 		},
 		{
-			"patternName":"Pattern24x16",
-			"comment":"pattern 0 - palette 0 - high",
-			"tilesetIndex":9,
-			"highPriority":true,
-			"paletteNumber":0,
+			"patternName":"Pattern24x24",
+			"comment":"arcade cabinet - left - low",
+			"tilesetIndex":8,
+			"highPriority":false,
+			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"08800000",
-			"column":"00080000"
-		},
+			"column":"00160000"
+		},		
 		{
 			"patternName":"Pattern24x8",
-			"comment":"pattern 0 - palette 0 - low",
-			"tilesetIndex":9,
-			"tilesetOffset":6,
-			"highPriority":false,
-			"paletteNumber":0,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"09800000",
-			"column":"00080000"
-		},
-		{
-			"patternName":"Pattern24x24",
-			"comment":"pattern 0 - palette 1 - low",
-			"tilesetIndex":9,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00800000",
-			"column":"00420000"
-		},
-		{
-			"patternName":"Pattern24x24",
-			"comment":"pattern 0 - palette 1 - low",
-			"tilesetIndex":9,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00800000",
-			"column":"00480000"
-		},
-		{
-			"patternName":"Pattern24x24",
-			"comment":"pattern 0 - palette 2 - low",
-			"tilesetIndex":9,
-			"highPriority":false,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00800000",
-			"column":"000E0000"
-		},
-		{
-			"patternName":"Pattern24x24",
-			"tilesetIndex":9,
-			"highPriority":false,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00800000",
-			"column":"00140000"
-		},
-		{
-			"patternName":"Pattern24x16",
-			"comment":"pattern 1 - palette 0 - high",
-			"tilesetIndex":10,
+			"comment":"arcade cabinet - right - high",
+			"tilesetIndex":5,
 			"highPriority":true,
-			"paletteNumber":0,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"04800000",
-			"column":"00360000"
-		},
-		{
-			"patternName":"Pattern24x8",
-			"comment":"pattern 1 - palette 0 - low",
-			"tilesetIndex":10,
-			"tilesetOffset":6,
-			"highPriority":false,
-			"paletteNumber":0,
+			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"05800000",
-			"column":"00360000"
+			"column":"00340000"
 		},
 		{
-			"patternName":"Pattern24x16",
-			"comment":"pattern 1 - palette 0 - high",
-			"tilesetIndex":10,
-			"highPriority":true,
-			"paletteNumber":0,
+			"patternName":"Pattern24x24",
+			"comment":"arcade cabinet - right - low",
+			"tilesetIndex":6,
+			"highPriority":false,
+			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"04800000",
-			"column":"003C0000"
+			"row":"06000000",
+			"column":"00340000"
 		},
 		{
 			"patternName":"Pattern24x8",
-			"comment":"pattern 1 - palette 0 - low",
-			"tilesetIndex":10,
-			"tilesetOffset":6,
-			"highPriority":false,
-			"paletteNumber":0,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"05800000",
-			"column":"003C0000"
-		},
-		{
-			"patternName":"Pattern24x24",
-			"comment":"pattern 1 - palette 1 - low",
-			"tilesetIndex":10,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00800000",
-			"column":"00020000"
-		},
-		{
-			"patternName":"Pattern24x24",
-			"comment":"pattern 1 - palette 1 - low",
-			"tilesetIndex":10,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00800000",
-			"column":"00080000"
-		},
-		{
-			"patternName":"Pattern24x16",
-			"comment":"pattern 1 - palette 2 - high",
-			"tilesetIndex":10,
+			"comment":"arcade cabinet - right - high",
+			"tilesetIndex":5,
 			"highPriority":true,
 			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"04800000",
-			"column":"000E0000"
+			"row":"08000000",
+			"column":"00340000"
 		},
 		{
-			"patternName":"Pattern24x8",
-			"comment":"pattern 1 - palette 2 - low",
-			"tilesetIndex":10,
-			"tilesetOffset":6,
+			"patternName":"Pattern24x24",
+			"comment":"arcade cabinet - right - low",
+			"tilesetIndex":6,
 			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"08800000",
+			"column":"00340000"
+		},				
+		{
+			"patternName":"Pattern24x8",
+			"comment":"arcade cabinet - left - high",
+			"tilesetIndex":7,
+			"highPriority":true,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"05800000",
-			"column":"000E0000"
+			"column":"002E0000"
 		},
 		{
-			"patternName":"Pattern24x16",
-			"comment":"pattern 1 - palette 2 - high",
-			"tilesetIndex":10,
-			"highPriority":true,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"04800000",
-			"column":"00140000"
-		},
-		{
-			"patternName":"Pattern24x8",
-			"comment":"pattern 1 - palette 2 - low",
-			"tilesetIndex":10,
-			"tilesetOffset":6,
+			"patternName":"Pattern24x24",
+			"comment":"arcade cabinet - left - low",
+			"tilesetIndex":8,
 			"highPriority":false,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"05800000",
-			"column":"00140000"
+			"row":"06000000",
+			"column":"002E0000"
+		},
+		{
+			"patternName":"Pattern24x8",
+			"comment":"arcade cabinet - left - high",
+			"tilesetIndex":7,
+			"highPriority":true,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"08000000",
+			"column":"002E0000"
 		},
 		{
 			"patternName":"Pattern24x24",
-			"comment":"pattern 2 - palette 0 - low",
-			"tilesetIndex":11,
+			"comment":"arcade cabinet - left - low",
+			"tilesetIndex":8,
 			"highPriority":false,
-			"paletteNumber":0,
+			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00800000",
-			"column":"00360000"
-		},
+			"row":"08800000",
+			"column":"002E0000"
+		},		
 		{
-			"patternName":"Pattern24x24",
-			"tilesetIndex":11,
-			"highPriority":false,
-			"paletteNumber":0,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00800000",
-			"column":"003C0000"
-		},
-		{
-			"patternName":"Pattern24x16",
-			"comment":"pattern 2 - palette 1 - high",
-			"tilesetIndex":11,
+			"patternName":"Pattern24x8",
+			"comment":"arcade cabinet - right - high",
+			"tilesetIndex":5,
 			"highPriority":true,
 			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"04800000",
-			"column":"00220000"
+			"row":"0B000000",
+			"column":"00060000"
 		},
 		{
-			"patternName":"Pattern24x8",
-			"comment":"pattern 2 - palette 1 - low",
-			"tilesetIndex":11,
-			"tilesetOffset":6,
+			"patternName":"Pattern24x24",
+			"comment":"arcade cabinet - right - low",
+			"tilesetIndex":6,
 			"highPriority":false,
 			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"05800000",
-			"column":"00220000"
+			"row":"0B800000",
+			"column":"00060000"
 		},
+
 		{
-			"patternName":"Pattern24x16",
-			"comment":"pattern 2 - palette 1 - high",
-			"tilesetIndex":11,
+			"patternName":"Pattern24x8",
+			"comment":"arcade cabinet - left - high",
+			"tilesetIndex":7,
 			"highPriority":true,
-			"paletteNumber":1,
+			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"04800000",
-			"column":"00280000"
+			"row":"06000000",
+			"column":"00440000"
+		},
+		{
+			"patternName":"Pattern24x24",
+			"comment":"arcade cabinet - row 2 - east 3 - low",
+			"tilesetIndex":8,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"06800000",
+			"column":"00440000"
 		},
 		{
 			"patternName":"Pattern24x8",
-			"comment":"pattern 2 - palette 1 - low",
-			"tilesetIndex":11,
-			"tilesetOffset":6,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"05800000",
-			"column":"00280000"
-		},
-		{
-			"patternName":"Pattern24x16",
-			"comment":"pattern 2 - palette 2 - high",
-			"tilesetIndex":11,
+			"comment":"arcade cabinet - left - high",
+			"tilesetIndex":7,
 			"highPriority":true,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"08800000",
-			"column":"00420000"
+			"column":"00440000"
 		},
 		{
-			"patternName":"Pattern24x8",
-			"comment":"pattern 2 - palette 2 - low",
-			"tilesetIndex":11,
-			"tilesetOffset":6,
+			"patternName":"Pattern24x24",
+			"comment":"arcade cabinet - row 2 - east 3 - low",
+			"tilesetIndex":8,
 			"highPriority":false,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"09800000",
-			"column":"00420000"
-		},
+			"row":"09000000",
+			"column":"00440000"
+		},		
+
+		
+		
 		{
-			"patternName":"Pattern24x16",
-			"comment":"pattern 2 - palette 2 - high",
-			"tilesetIndex":11,
+			"patternName":"Pattern24x8",
+			"comment":"arcade cabinet - left - high",
+			"tilesetIndex":7,
 			"highPriority":true,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"08800000",
-			"column":"00480000"
+			"row":"0B000000",
+			"column":"00440000"
 		},
 		{
-			"patternName":"Pattern24x8",
-			"comment":"pattern 2 - palette 2 - low",
-			"tilesetIndex":11,
-			"tilesetOffset":6,
+			"patternName":"Pattern24x24",
+			"comment":"arcade cabinet - row 2 - east 3 - low",
+			"tilesetIndex":8,
 			"highPriority":false,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"09800000",
-			"column":"00480000"
-		}
+			"row":"0B800000",
+			"column":"00440000"
+		}		
 	],
 	"objects":[
 		{
 			"id":"OBJ_SCENE_CAVERN_ARCADE0",
-			"x":135,
-			"y":264,
-			"width":48,
-			"height":40
+			"x":155,
+			"y":148,
+			"width":92,
+			"height":28
 		},
 		{
 			"id":"OBJ_SCENE_CAVERN_ARCADE1",
-			"x":392,
-			"y":264,
-			"width":48,
-			"height":40
+			"x":331,
+			"y":148,
+			"width":92,
+			"height":28
 		},
 		{
 			"id":"OBJ_SCENE_CAVERN_ARCADE2",
-			"x":183,
-			"y":200,
-			"width":48,
-			"height":40
+			"x":155,
+			"y":226,
+			"width":20,
+			"height":110
 		},
 		{
 			"id":"OBJ_SCENE_CAVERN_ARCADE3",
-			"x":263,
-			"y":200,
-			"width":48,
-			"height":40
+			"x":224,
+			"y":216,
+			"width":16,
+			"height":72
 		},
 		{
 			"id":"OBJ_SCENE_CAVERN_ARCADE4",
-			"x":343,
-			"y":200,
-			"width":48,
-			"height":40
+			"x":244,
+			"y":216,
+			"width":16,
+			"height":72
 		},
 		{
 			"id":"OBJ_SCENE_CAVERN_ARCADE5",
-			"x":136,
-			"y":136,
-			"width":48,
-			"height":40
+			"x":316,
+			"y":216,
+			"width":16,
+			"height":72
 		},
 		{
 			"id":"OBJ_SCENE_CAVERN_ARCADE6",
-			"x":183,
-			"y":136,
-			"width":48,
-			"height":40
+			"x":340,
+			"y":216,
+			"width":16,
+			"height":72
 		},
 		{
 			"id":"OBJ_SCENE_CAVERN_ARCADE7",
-			"x":343,
-			"y":136,
-			"width":48,
-			"height":40
+			"x":400,
+			"y":226,
+			"width":18,
+			"height":110
 		},
-		{
-			"id":"OBJ_SCENE_CAVERN_ARCADE8",
-			"x":392,
-			"y":136,
-			"width":48,
-			"height":40
-		},
+		null,
 		null
 	],
 	"collisionDataName":"CavernCollisionStart",
@@ -690,8 +653,8 @@
 	],
 	"npcLocations":[
 		{
-			"x":204,
-			"y":240,
+			"x":250,
+			"y":170,
 			"direction":"DIRECTION_DOWN",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"

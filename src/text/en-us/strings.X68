@@ -44,6 +44,14 @@ StatusScreenSave:
 	dc.b	"Save",ETX
 StatusScreenLoad:
 	dc.b	"Load",ETX
+StatusScreenSaveTip0:
+	dc.b	"Press A to save game",ETX
+StatusScreenSaveTip1:
+	dc.b	"Overwrites existing save",ETX
+StatusScreenLoadTip0:
+	dc.b	"Press A to load game",ETX
+StatusScreenLoadTip1:
+	dc.b	"Unsaved progress is lost",ETX
 StatusScreenInventory:
 	dc.b	"Inventory",ETX
 StatusScreenMapLegend:
@@ -73,17 +81,17 @@ StatusScreenMapFastTravel06:
 StatusScreenMapFastTravel07:
 	dc.b	"{Mall exit",ETX
 StatusScreenHelpControls:
-	dc.b	"                Controls                ",ETX
+	dc.b	"               Controls               ",ETX
 StatusScreenHelpTip6:
 	dc.b	"Start: Pause",ETX
 StatusScreenHelpHints:
-	dc.b	"                 Events                 ",ETX
+	dc.b	"                Events                ",ETX
 StatusScreenHelpHints00:
-	dc.b	"Completing story events advances time.",ETX
+	dc.b	"Completing story events advances time",ETX
 StatusScreenHelpHints01:
-	dc.b	"Optional events do not advance time but",ETX
+	dc.b	"and may expire optional events.",ETX
 StatusScreenHelpHints02:
-	dc.b	"not all can be completed in one day.",ETX
+	dc.b	"Optional events do not advance time.",ETX
 StatusScreenEmptySave:
 	dc.b	"{(empty)             ",ETX
 StatusScreenDefaultSave:
@@ -201,8 +209,7 @@ ObjectDescriptionDCMerch:
 	dc.b	"neatly folded.",ETX
 ObjectDescriptionVB8Bit:
 	dc.b	"There must be over",LF
-	dc.b	"100 Nintendo games   ^",FF
-	dc.b	"here.",ETX
+	dc.b	"100 NES games here.",ETX
 ObjectDescriptionVBMags:
 	dc.b	"Below the counter are",LF
 	dc.b	"various magazines.",ETX
@@ -305,19 +312,30 @@ ObjectDescriptionTBooksFiction:
 	dc.b	"Just over 90% Stephen",LF
 	dc.b	"King books.",ETX
 ObjectDescriptionTBooksRomance:
-	dc.b	"If you enjoy romance ",LF
+	dc.b	"If you enjoy romance",LF
 	dc.b	"books then check out ^",FF
 	dc.b	"'Too Good Too Be",LF
 	dc.b	"Real' by Melonie     ^",FF
-	dc.b	"Johnson.",LF
-	dc.b	"Due in stores summer ^",FF
-	dc.b	"2021.",ETX
+	dc.b	"Johnson.",ETX
 ObjectDescriptionTBooksHistory:
 	dc.b	"There might be a",LF
 	dc.b	"useful reference here.",ETX
 ObjectDescriptionTBooksCooking:
 	dc.b	"Low-fat cooking seems",LF
 	dc.b	"to be the hot fad.",ETX
+ObjectDescriptionTBooksRPG:
+	dc.b	"So there's a second",LF
+	dc.b	"edition now..        ^",FF
+	dc.b	"Wait, did I know",LF
+	dc.b	"there was a first    ^",FF
+	dc.b	"edition?",ETX
+ObjectDescriptionTBooksNewAge:
+	dc.b	"This the crystals and",LF
+	dc.b	"alien abuduction     ^",FF
+	dc.b	"section.",ETX
+ObjectDescriptionTBooksTechnology:
+	dc.b	"C++ programming looks",LF
+	dc.b	"too high level.",ETX
 ObjectDescriptionTrashCan:
 	dc.b	"It looks really gross",LF
 	dc.b	"in there.",ETX
@@ -413,8 +431,8 @@ ObjectDescriptionCavernBackroomLadder:
 	dc.b	"to a basement level.",ETX
 
 ;-------------------------------------------------------------------------------
-; CharacterInteractTextPlayer1
-; Default character dialog for player 1 (daytime events)
+; CharacterInteractText
+; Default character dialog
 ;-------------------------------------------------------------------------------
 DialogTextUnknownNPCDay00:
 DialogTextUnknownNPCDay01:
@@ -423,6 +441,17 @@ DialogTextUnknownNPCDay03:
 DialogTextUnknownNPCDay04:
 DialogTextUnknownNPCDay05:
 DialogTextUnknownNPCDay06:
+DialogTextUnknownNPCDay07:
+DialogTextUnknownNPCDay08:
+DialogTextUnknownNPCDay09:
+DialogTextUnknownNPCDay0A:
+DialogTextUnknownNPCDay0B:
+DialogTextUnknownNPCDay0C:
+DialogTextUnknownNPCDay0D:
+	dc.w	OBJ_NPC_HIDDENHJ
+	dc.b	"If you see this then",LF
+	dc.b	"I really messed up.",ETX
+	align 2
 DialogTextErynDay00:
 DialogTextErynDay01:
 DialogTextErynDay02:
@@ -430,9 +459,16 @@ DialogTextErynDay03:
 DialogTextErynDay04:
 DialogTextErynDay05:
 DialogTextErynDay06:
-	dc.w	OBJ_NPC_HIDDENHJ
-	dc.b	"If you see this then",LF
-	dc.b	"I really messed up.",ETX
+DialogTextErynDay07:
+DialogTextErynDay08:
+DialogTextErynDay09:
+DialogTextErynDay0A:
+DialogTextErynDay0B:
+DialogTextErynDay0C:
+DialogTextErynDay0D:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
 	align 2
 DialogTextCarlDay00:
 DialogTextCarlDay01:
@@ -441,9 +477,16 @@ DialogTextCarlDay03:
 DialogTextCarlDay04:
 DialogTextCarlDay05:
 DialogTextCarlDay06:
+DialogTextCarlDay07:
+DialogTextCarlDay08:
+DialogTextCarlDay09:
+DialogTextCarlDay0A:
+DialogTextCarlDay0B:
+DialogTextCarlDay0C:
+DialogTextCarlDay0D:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextFrankDay00:
 DialogTextFrankDay01:
@@ -452,9 +495,16 @@ DialogTextFrankDay03:
 DialogTextFrankDay04:
 DialogTextFrankDay05:
 DialogTextFrankDay06:
+DialogTextFrankDay07:
+DialogTextFrankDay08:
+DialogTextFrankDay09:
+DialogTextFrankDay0A:
+DialogTextFrankDay0B:
+DialogTextFrankDay0C:
+DialogTextFrankDay0D:
 	dc.w	OBJ_NPC_FRANK
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextCarolDay00:
 DialogTextCarolDay01:
@@ -463,9 +513,16 @@ DialogTextCarolDay03:
 DialogTextCarolDay04:
 DialogTextCarolDay05:
 DialogTextCarolDay06:
+DialogTextCarolDay07:
+DialogTextCarolDay08:
+DialogTextCarolDay09:
+DialogTextCarolDay0A:
+DialogTextCarolDay0B:
+DialogTextCarolDay0C:
+DialogTextCarolDay0D:
 	dc.w	OBJ_NPC_CAROL
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextLisaDay00:
 DialogTextLisaDay01:
@@ -474,9 +531,16 @@ DialogTextLisaDay03:
 DialogTextLisaDay04:
 DialogTextLisaDay05:
 DialogTextLisaDay06:
+DialogTextLisaDay07:
+DialogTextLisaDay08:
+DialogTextLisaDay09:
+DialogTextLisaDay0A:
+DialogTextLisaDay0B:
+DialogTextLisaDay0C:
+DialogTextLisaDay0D:
 	dc.w	OBJ_NPC_LISA
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextGrunbergDay00:
 DialogTextGrunbergDay01:
@@ -485,9 +549,16 @@ DialogTextGrunbergDay03:
 DialogTextGrunbergDay04:
 DialogTextGrunbergDay05:
 DialogTextGrunbergDay06:
+DialogTextGrunbergDay07:
+DialogTextGrunbergDay08:
+DialogTextGrunbergDay09:
+DialogTextGrunbergDay0A:
+DialogTextGrunbergDay0B:
+DialogTextGrunbergDay0C:
+DialogTextGrunbergDay0D:
 	dc.w	OBJ_NPC_GRUNBERG
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextJenDay00:
 DialogTextJenDay01:
@@ -496,9 +567,16 @@ DialogTextJenDay03:
 DialogTextJenDay04:
 DialogTextJenDay05:
 DialogTextJenDay06:
+DialogTextJenDay07:
+DialogTextJenDay08:
+DialogTextJenDay09:
+DialogTextJenDay0A:
+DialogTextJenDay0B:
+DialogTextJenDay0C:
+DialogTextJenDay0D:
 	dc.w	OBJ_NPC_JEN
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextGriffyDay00:
 DialogTextGriffyDay01:
@@ -507,9 +585,16 @@ DialogTextGriffyDay03:
 DialogTextGriffyDay04:
 DialogTextGriffyDay05:
 DialogTextGriffyDay06:
+DialogTextGriffyDay07:
+DialogTextGriffyDay08:
+DialogTextGriffyDay09:
+DialogTextGriffyDay0A:
+DialogTextGriffyDay0B:
+DialogTextGriffyDay0C:
+DialogTextGriffyDay0D:
 	dc.w	OBJ_NPC_GRIFFY
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextScottDay00:
 DialogTextScottDay01:
@@ -518,9 +603,16 @@ DialogTextScottDay03:
 DialogTextScottDay04:
 DialogTextScottDay05:
 DialogTextScottDay06:
+DialogTextScottDay07:
+DialogTextScottDay08:
+DialogTextScottDay09:
+DialogTextScottDay0A:
+DialogTextScottDay0B:
+DialogTextScottDay0C:
+DialogTextScottDay0D:
 	dc.w	OBJ_NPC_SCOTT
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextToddDay00:
 DialogTextToddDay01:
@@ -529,9 +621,16 @@ DialogTextToddDay03:
 DialogTextToddDay04:
 DialogTextToddDay05:
 DialogTextToddDay06:
+DialogTextToddDay07:
+DialogTextToddDay08:
+DialogTextToddDay09:
+DialogTextToddDay0A:
+DialogTextToddDay0B:
+DialogTextToddDay0C:
+DialogTextToddDay0D:
 	dc.w	OBJ_NPC_TODD
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextElizaDay00:
 DialogTextElizaDay01:
@@ -540,9 +639,16 @@ DialogTextElizaDay03:
 DialogTextElizaDay04:
 DialogTextElizaDay05:
 DialogTextElizaDay06:
+DialogTextElizaDay07:
+DialogTextElizaDay08:
+DialogTextElizaDay09:
+DialogTextElizaDay0A:
+DialogTextElizaDay0B:
+DialogTextElizaDay0C:
+DialogTextElizaDay0D:
 	dc.w	OBJ_NPC_ELIZA
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextBeckyDay00:
 DialogTextBeckyDay01:
@@ -551,9 +657,16 @@ DialogTextBeckyDay03:
 DialogTextBeckyDay04:
 DialogTextBeckyDay05:
 DialogTextBeckyDay06:
+DialogTextBeckyDay07:
+DialogTextBeckyDay08:
+DialogTextBeckyDay09:
+DialogTextBeckyDay0A:
+DialogTextBeckyDay0B:
+DialogTextBeckyDay0C:
+DialogTextBeckyDay0D:
 	dc.w	OBJ_NPC_BECKY
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextCharlesDay00:
 DialogTextCharlesDay01:
@@ -562,9 +675,16 @@ DialogTextCharlesDay03:
 DialogTextCharlesDay04:
 DialogTextCharlesDay05:
 DialogTextCharlesDay06:
+DialogTextCharlesDay07:
+DialogTextCharlesDay08:
+DialogTextCharlesDay09:
+DialogTextCharlesDay0A:
+DialogTextCharlesDay0B:
+DialogTextCharlesDay0C:
+DialogTextCharlesDay0D:
 	dc.w	OBJ_NPC_CHARLES
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextRandyDay00:
 DialogTextRandyDay01:
@@ -573,9 +693,16 @@ DialogTextRandyDay03:
 DialogTextRandyDay04:
 DialogTextRandyDay05:
 DialogTextRandyDay06:
+DialogTextRandyDay07:
+DialogTextRandyDay08:
+DialogTextRandyDay09:
+DialogTextRandyDay0A:
+DialogTextRandyDay0B:
+DialogTextRandyDay0C:
+DialogTextRandyDay0D:
 	dc.w	OBJ_NPC_RANDY
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextDBDay00:
 DialogTextDBDay01:
@@ -584,9 +711,16 @@ DialogTextDBDay03:
 DialogTextDBDay04:
 DialogTextDBDay05:
 DialogTextDBDay06:
+DialogTextDBDay07:
+DialogTextDBDay08:
+DialogTextDBDay09:
+DialogTextDBDay0A:
+DialogTextDBDay0B:
+DialogTextDBDay0C:
+DialogTextDBDay0D:
 	dc.w	OBJ_NPC_DB
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextDaniDay00:
 DialogTextDaniDay01:
@@ -595,9 +729,16 @@ DialogTextDaniDay03:
 DialogTextDaniDay04:
 DialogTextDaniDay05:
 DialogTextDaniDay06:
-	dc.w	OBJ_NPC_DB
+DialogTextDaniDay07:
+DialogTextDaniDay08:
+DialogTextDaniDay09:
+DialogTextDaniDay0A:
+DialogTextDaniDay0B:
+DialogTextDaniDay0C:
+DialogTextDaniDay0D:
+	dc.w	OBJ_NPC_DANI
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextGuardDay00:
 DialogTextGuardDay01:
@@ -606,9 +747,16 @@ DialogTextGuardDay03:
 DialogTextGuardDay04:
 DialogTextGuardDay05:
 DialogTextGuardDay06:
+DialogTextGuardDay07:
+DialogTextGuardDay08:
+DialogTextGuardDay09:
+DialogTextGuardDay0A:
+DialogTextGuardDay0B:
+DialogTextGuardDay0C:
+DialogTextGuardDay0D:
 	dc.w	OBJ_NPC_GUARD
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextBillyDay00:
 DialogTextBillyDay01:
@@ -617,9 +765,16 @@ DialogTextBillyDay03:
 DialogTextBillyDay04:
 DialogTextBillyDay05:
 DialogTextBillyDay06:
+DialogTextBillyDay07:
+DialogTextBillyDay08:
+DialogTextBillyDay09:
+DialogTextBillyDay0A:
+DialogTextBillyDay0B:
+DialogTextBillyDay0C:
+DialogTextBillyDay0D:
 	dc.w	OBJ_NPC_BILLY
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextAlDay00:
 DialogTextAlDay01:
@@ -628,9 +783,16 @@ DialogTextAlDay03:
 DialogTextAlDay04:
 DialogTextAlDay05:
 DialogTextAlDay06:
+DialogTextAlDay07:
+DialogTextAlDay08:
+DialogTextAlDay09:
+DialogTextAlDay0A:
+DialogTextAlDay0B:
+DialogTextAlDay0C:
+DialogTextAlDay0D:
 	dc.w	OBJ_NPC_AL
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextThomasDay00:
 DialogTextThomasDay01:
@@ -639,9 +801,16 @@ DialogTextThomasDay03:
 DialogTextThomasDay04:
 DialogTextThomasDay05:
 DialogTextThomasDay06:
+DialogTextThomasDay07:
+DialogTextThomasDay08:
+DialogTextThomasDay09:
+DialogTextThomasDay0A:
+DialogTextThomasDay0B:
+DialogTextThomasDay0C:
+DialogTextThomasDay0D:
 	dc.w	OBJ_NPC_THOMAS
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextHeatherDay00:
 DialogTextHeatherDay01:
@@ -650,9 +819,16 @@ DialogTextHeatherDay03:
 DialogTextHeatherDay04:
 DialogTextHeatherDay05:
 DialogTextHeatherDay06:
+DialogTextHeatherDay07:
+DialogTextHeatherDay08:
+DialogTextHeatherDay09:
+DialogTextHeatherDay0A:
+DialogTextHeatherDay0B:
+DialogTextHeatherDay0C:
+DialogTextHeatherDay0D:
 	dc.w	OBJ_NPC_HEATHER
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextGaryDay00:
 DialogTextGaryDay01:
@@ -661,9 +837,16 @@ DialogTextGaryDay03:
 DialogTextGaryDay04:
 DialogTextGaryDay05:
 DialogTextGaryDay06:
+DialogTextGaryDay07:
+DialogTextGaryDay08:
+DialogTextGaryDay09:
+DialogTextGaryDay0A:
+DialogTextGaryDay0B:
+DialogTextGaryDay0C:
+DialogTextGaryDay0D:
 	dc.w	OBJ_NPC_GARY
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextGrantDay00:
 DialogTextGrantDay01:
@@ -672,9 +855,16 @@ DialogTextGrantDay03:
 DialogTextGrantDay04:
 DialogTextGrantDay05:
 DialogTextGrantDay06:
+DialogTextGrantDay07:
+DialogTextGrantDay08:
+DialogTextGrantDay09:
+DialogTextGrantDay0A:
+DialogTextGrantDay0B:
+DialogTextGrantDay0C:
+DialogTextGrantDay0D:
 	dc.w	OBJ_NPC_GRANT
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextBrettDay00:
 DialogTextBrettDay01:
@@ -683,9 +873,16 @@ DialogTextBrettDay03:
 DialogTextBrettDay04:
 DialogTextBrettDay05:
 DialogTextBrettDay06:
+DialogTextBrettDay07:
+DialogTextBrettDay08:
+DialogTextBrettDay09:
+DialogTextBrettDay0A:
+DialogTextBrettDay0B:
+DialogTextBrettDay0C:
+DialogTextBrettDay0D:
 	dc.w	OBJ_NPC_BRETT
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextNickyDay00:
 DialogTextNickyDay01:
@@ -694,9 +891,16 @@ DialogTextNickyDay03:
 DialogTextNickyDay04:
 DialogTextNickyDay05:
 DialogTextNickyDay06:
+DialogTextNickyDay07:
+DialogTextNickyDay08:
+DialogTextNickyDay09:
+DialogTextNickyDay0A:
+DialogTextNickyDay0B:
+DialogTextNickyDay0C:
+DialogTextNickyDay0D:
 	dc.w	OBJ_NPC_NICKY
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextTanyaDay00:
 DialogTextTanyaDay01:
@@ -705,9 +909,16 @@ DialogTextTanyaDay03:
 DialogTextTanyaDay04:
 DialogTextTanyaDay05:
 DialogTextTanyaDay06:
+DialogTextTanyaDay07:
+DialogTextTanyaDay08:
+DialogTextTanyaDay09:
+DialogTextTanyaDay0A:
+DialogTextTanyaDay0B:
+DialogTextTanyaDay0C:
+DialogTextTanyaDay0D:
 	dc.w	OBJ_NPC_TANYA
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextCraigDay00:
 DialogTextCraigDay01:
@@ -716,9 +927,16 @@ DialogTextCraigDay03:
 DialogTextCraigDay04:
 DialogTextCraigDay05:
 DialogTextCraigDay06:
+DialogTextCraigDay07:
+DialogTextCraigDay08:
+DialogTextCraigDay09:
+DialogTextCraigDay0A:
+DialogTextCraigDay0B:
+DialogTextCraigDay0C:
+DialogTextCraigDay0D:
 	dc.w	OBJ_NPC_CRAIG
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextJuanDay00:
 DialogTextJuanDay01:
@@ -727,9 +945,16 @@ DialogTextJuanDay03:
 DialogTextJuanDay04:
 DialogTextJuanDay05:
 DialogTextJuanDay06:
+DialogTextJuanDay07:
+DialogTextJuanDay08:
+DialogTextJuanDay09:
+DialogTextJuanDay0A:
+DialogTextJuanDay0B:
+DialogTextJuanDay0C:
+DialogTextJuanDay0D:
 	dc.w	OBJ_NPC_JUAN
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextLauraDay00:
 DialogTextLauraDay01:
@@ -738,9 +963,16 @@ DialogTextLauraDay03:
 DialogTextLauraDay04:
 DialogTextLauraDay05:
 DialogTextLauraDay06:
+DialogTextLauraDay07:
+DialogTextLauraDay08:
+DialogTextLauraDay09:
+DialogTextLauraDay0A:
+DialogTextLauraDay0B:
+DialogTextLauraDay0C:
+DialogTextLauraDay0D:
 	dc.w	OBJ_NPC_LAURA
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextGinaDay00:
 DialogTextGinaDay01:
@@ -749,9 +981,16 @@ DialogTextGinaDay03:
 DialogTextGinaDay04:
 DialogTextGinaDay05:
 DialogTextGinaDay06:
+DialogTextGinaDay07:
+DialogTextGinaDay08:
+DialogTextGinaDay09:
+DialogTextGinaDay0A:
+DialogTextGinaDay0B:
+DialogTextGinaDay0C:
+DialogTextGinaDay0D:
 	dc.w	OBJ_NPC_GINA
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextSantaDay00:
 DialogTextSantaDay01:
@@ -760,9 +999,16 @@ DialogTextSantaDay03:
 DialogTextSantaDay04:
 DialogTextSantaDay05:
 DialogTextSantaDay06:
+DialogTextSantaDay07:
+DialogTextSantaDay08:
+DialogTextSantaDay09:
+DialogTextSantaDay0A:
+DialogTextSantaDay0B:
+DialogTextSantaDay0C:
+DialogTextSantaDay0D:
 	dc.w	OBJ_NPC_SANTA
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextLostGuyDay00:
 DialogTextLostGuyDay01:
@@ -771,9 +1017,16 @@ DialogTextLostGuyDay03:
 DialogTextLostGuyDay04:
 DialogTextLostGuyDay05:
 DialogTextLostGuyDay06:
+DialogTextLostGuyDay07:
+DialogTextLostGuyDay08:
+DialogTextLostGuyDay09:
+DialogTextLostGuyDay0A:
+DialogTextLostGuyDay0B:
+DialogTextLostGuyDay0C:
+DialogTextLostGuyDay0D:
 	dc.w	OBJ_NPC_LOSTGUY
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextRockerDay00:
 DialogTextRockerDay01:
@@ -782,9 +1035,16 @@ DialogTextRockerDay03:
 DialogTextRockerDay04:
 DialogTextRockerDay05:
 DialogTextRockerDay06:
+DialogTextRockerDay07:
+DialogTextRockerDay08:
+DialogTextRockerDay09:
+DialogTextRockerDay0A:
+DialogTextRockerDay0B:
+DialogTextRockerDay0C:
+DialogTextRockerDay0D:
 	dc.w	OBJ_NPC_ROCKER
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextShopperDay00:
 DialogTextShopperDay01:
@@ -793,9 +1053,16 @@ DialogTextShopperDay03:
 DialogTextShopperDay04:
 DialogTextShopperDay05:
 DialogTextShopperDay06:
+DialogTextShopperDay07:
+DialogTextShopperDay08:
+DialogTextShopperDay09:
+DialogTextShopperDay0A:
+DialogTextShopperDay0B:
+DialogTextShopperDay0C:
+DialogTextShopperDay0D:
 	dc.w	OBJ_NPC_SHOPPER
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextBusyMomDay00:
 DialogTextBusyMomDay01:
@@ -804,9 +1071,16 @@ DialogTextBusyMomDay03:
 DialogTextBusyMomDay04:
 DialogTextBusyMomDay05:
 DialogTextBusyMomDay06:
+DialogTextBusyMomDay07:
+DialogTextBusyMomDay08:
+DialogTextBusyMomDay09:
+DialogTextBusyMomDay0A:
+DialogTextBusyMomDay0B:
+DialogTextBusyMomDay0C:
+DialogTextBusyMomDay0D:
 	dc.w	OBJ_NPC_BUSYMOM
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextMallratDay00:
 DialogTextMallratDay01:
@@ -815,9 +1089,16 @@ DialogTextMallratDay03:
 DialogTextMallratDay04:
 DialogTextMallratDay05:
 DialogTextMallratDay06:
+DialogTextMallratDay07:
+DialogTextMallratDay08:
+DialogTextMallratDay09:
+DialogTextMallratDay0A:
+DialogTextMallratDay0B:
+DialogTextMallratDay0C:
+DialogTextMallratDay0D:
 	dc.w	OBJ_NPC_MALLRAT
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextPreppyDay00:
 DialogTextPreppyDay01:
@@ -826,9 +1107,16 @@ DialogTextPreppyDay03:
 DialogTextPreppyDay04:
 DialogTextPreppyDay05:
 DialogTextPreppyDay06:
+DialogTextPreppyDay07:
+DialogTextPreppyDay08:
+DialogTextPreppyDay09:
+DialogTextPreppyDay0A:
+DialogTextPreppyDay0B:
+DialogTextPreppyDay0C:
+DialogTextPreppyDay0D:
 	dc.w	OBJ_NPC_PREPPY
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextYuppieDay00:
 DialogTextYuppieDay01:
@@ -837,9 +1125,16 @@ DialogTextYuppieDay03:
 DialogTextYuppieDay04:
 DialogTextYuppieDay05:
 DialogTextYuppieDay06:
+DialogTextYuppieDay07:
+DialogTextYuppieDay08:
+DialogTextYuppieDay09:
+DialogTextYuppieDay0A:
+DialogTextYuppieDay0B:
+DialogTextYuppieDay0C:
+DialogTextYuppieDay0D:
 	dc.w	OBJ_NPC_YUPPIE
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextNelsonDay00:
 DialogTextNelsonDay01:
@@ -848,9 +1143,16 @@ DialogTextNelsonDay03:
 DialogTextNelsonDay04:
 DialogTextNelsonDay05:
 DialogTextNelsonDay06:
+DialogTextNelsonDay07:
+DialogTextNelsonDay08:
+DialogTextNelsonDay09:
+DialogTextNelsonDay0A:
+DialogTextNelsonDay0B:
+DialogTextNelsonDay0C:
+DialogTextNelsonDay0D:
 	dc.w	OBJ_NPC_NELSON
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextVictorDay00:
 DialogTextVictorDay01:
@@ -859,9 +1161,16 @@ DialogTextVictorDay03:
 DialogTextVictorDay04:
 DialogTextVictorDay05:
 DialogTextVictorDay06:
+DialogTextVictorDay07:
+DialogTextVictorDay08:
+DialogTextVictorDay09:
+DialogTextVictorDay0A:
+DialogTextVictorDay0B:
+DialogTextVictorDay0C:
+DialogTextVictorDay0D:
 	dc.w	OBJ_NPC_VICTOR
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextAlOldDay00:
 DialogTextAlOldDay01:
@@ -870,9 +1179,16 @@ DialogTextAlOldDay03:
 DialogTextAlOldDay04:
 DialogTextAlOldDay05:
 DialogTextAlOldDay06:
+DialogTextAlOldDay07:
+DialogTextAlOldDay08:
+DialogTextAlOldDay09:
+DialogTextAlOldDay0A:
+DialogTextAlOldDay0B:
+DialogTextAlOldDay0C:
+DialogTextAlOldDay0D:
 	dc.w	OBJ_NPC_ALOLD
 	dc.b	"This is my default",LF
-	dc.b	"day text.",ETX
+	dc.b	"text.",ETX
 	align 2
 DialogTextHiddenHJDay00:
 DialogTextHiddenHJDay01:
@@ -881,6 +1197,13 @@ DialogTextHiddenHJDay03:
 DialogTextHiddenHJDay04:
 DialogTextHiddenHJDay05:
 DialogTextHiddenHJDay06:
+DialogTextHiddenHJDay07:
+DialogTextHiddenHJDay08:
+DialogTextHiddenHJDay09:
+DialogTextHiddenHJDay0A:
+DialogTextHiddenHJDay0B:
+DialogTextHiddenHJDay0C:
+DialogTextHiddenHJDay0D:
 	dc.w	OBJ_NPC_HIDDENHJ
 	dc.b	"It's too bad, I have",LF
 	dc.b	"all of these already.^",FF
@@ -894,500 +1217,18 @@ DialogTextHiddenMJDay03:
 DialogTextHiddenMJDay04:
 DialogTextHiddenMJDay05:
 DialogTextHiddenMJDay06:
+DialogTextHiddenMJDay07:
+DialogTextHiddenMJDay08:
+DialogTextHiddenMJDay09:
+DialogTextHiddenMJDay0A:
+DialogTextHiddenMJDay0B:
+DialogTextHiddenMJDay0C:
+DialogTextHiddenMJDay0D:
 	dc.w	OBJ_NPC_HIDDENMJ
 	dc.b	"I came all the way",LF
 	dc.b	"here & still can't   ^",FF
 	dc.b	"find the Kathleen",LF
 	dc.b	"Sunfire book.",ETX
-	align 2
-
-;-------------------------------------------------------------------------------
-; CharacterInteractTextPlayer2
-; Default character dialog for player 2 (nighttime events)
-;-------------------------------------------------------------------------------
-DialogTextUnknownNPCNight00:
-DialogTextUnknownNPCNight01:
-DialogTextUnknownNPCNight02:
-DialogTextUnknownNPCNight03:
-DialogTextUnknownNPCNight04:
-DialogTextUnknownNPCNight05:
-DialogTextUnknownNPCNight06:
-	dc.w	OBJ_NPC_HIDDENHJ
-	dc.b	"If you see this then",LF
-	dc.b	"I really messed up.",ETX
-	align 2
-DialogTextErynNight00:
-DialogTextErynNight01:
-DialogTextErynNight02:
-DialogTextErynNight03:
-DialogTextErynNight04:
-DialogTextErynNight05:
-DialogTextErynNight06:
-	dc.w	OBJ_NPC_ERYN
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextCarlNight00:
-DialogTextCarlNight01:
-DialogTextCarlNight02:
-DialogTextCarlNight03:
-DialogTextCarlNight04:
-DialogTextCarlNight05:
-DialogTextCarlNight06:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextFrankNight00:
-DialogTextFrankNight01:
-DialogTextFrankNight02:
-DialogTextFrankNight03:
-DialogTextFrankNight04:
-DialogTextFrankNight05:
-DialogTextFrankNight06:
-	dc.w	OBJ_NPC_FRANK
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextCarolNight00:
-DialogTextCarolNight01:
-DialogTextCarolNight02:
-DialogTextCarolNight03:
-DialogTextCarolNight04:
-DialogTextCarolNight05:
-DialogTextCarolNight06:
-	dc.w	OBJ_NPC_CAROL
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextLisaNight00:
-DialogTextLisaNight01:
-DialogTextLisaNight02:
-DialogTextLisaNight03:
-DialogTextLisaNight04:
-DialogTextLisaNight05:
-DialogTextLisaNight06:
-	dc.w	OBJ_NPC_LISA
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextGrunbergNight00:
-DialogTextGrunbergNight01:
-DialogTextGrunbergNight02:
-DialogTextGrunbergNight03:
-DialogTextGrunbergNight04:
-DialogTextGrunbergNight05:
-DialogTextGrunbergNight06:
-	dc.w	OBJ_NPC_GRUNBERG
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextJenNight00:
-DialogTextJenNight01:
-DialogTextJenNight02:
-DialogTextJenNight03:
-DialogTextJenNight04:
-DialogTextJenNight05:
-DialogTextJenNight06:
-	dc.w	OBJ_NPC_JEN
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextGriffyNight00:
-DialogTextGriffyNight01:
-DialogTextGriffyNight02:
-DialogTextGriffyNight03:
-DialogTextGriffyNight04:
-DialogTextGriffyNight05:
-DialogTextGriffyNight06:
-	dc.w	OBJ_NPC_GRIFFY
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextScottNight00:
-DialogTextScottNight01:
-DialogTextScottNight02:
-DialogTextScottNight03:
-DialogTextScottNight04:
-DialogTextScottNight05:
-DialogTextScottNight06:
-	dc.w	OBJ_NPC_SCOTT
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextToddNight00:
-DialogTextToddNight01:
-DialogTextToddNight02:
-DialogTextToddNight03:
-DialogTextToddNight04:
-DialogTextToddNight05:
-DialogTextToddNight06:
-	dc.w	OBJ_NPC_TODD
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextElizaNight00:
-DialogTextElizaNight01:
-DialogTextElizaNight02:
-DialogTextElizaNight03:
-DialogTextElizaNight04:
-DialogTextElizaNight05:
-DialogTextElizaNight06:
-	dc.w	OBJ_NPC_ELIZA
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextBeckyNight00:
-DialogTextBeckyNight01:
-DialogTextBeckyNight02:
-DialogTextBeckyNight03:
-DialogTextBeckyNight04:
-DialogTextBeckyNight05:
-DialogTextBeckyNight06:
-	dc.w	OBJ_NPC_BECKY
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextCharlesNight00:
-DialogTextCharlesNight01:
-DialogTextCharlesNight02:
-DialogTextCharlesNight03:
-DialogTextCharlesNight04:
-DialogTextCharlesNight05:
-DialogTextCharlesNight06:
-	dc.w	OBJ_NPC_CHARLES
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextRandyNight00:
-DialogTextRandyNight01:
-DialogTextRandyNight02:
-DialogTextRandyNight03:
-DialogTextRandyNight04:
-DialogTextRandyNight05:
-DialogTextRandyNight06:
-	dc.w	OBJ_NPC_RANDY
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextDBNight00:
-DialogTextDBNight01:
-DialogTextDBNight02:
-DialogTextDBNight03:
-DialogTextDBNight04:
-DialogTextDBNight05:
-DialogTextDBNight06:
-	dc.w	OBJ_NPC_DB
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextDaniNight00:
-DialogTextDaniNight01:
-DialogTextDaniNight02:
-DialogTextDaniNight03:
-DialogTextDaniNight04:
-DialogTextDaniNight05:
-DialogTextDaniNight06:
-	dc.w	OBJ_NPC_DB
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextGuardNight00:
-DialogTextGuardNight01:
-DialogTextGuardNight02:
-DialogTextGuardNight03:
-DialogTextGuardNight04:
-DialogTextGuardNight05:
-DialogTextGuardNight06:
-	dc.w	OBJ_NPC_GUARD
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextBillyNight00:
-DialogTextBillyNight01:
-DialogTextBillyNight02:
-DialogTextBillyNight03:
-DialogTextBillyNight04:
-DialogTextBillyNight05:
-DialogTextBillyNight06:
-	dc.w	OBJ_NPC_BILLY
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextAlNight00:
-DialogTextAlNight01:
-DialogTextAlNight02:
-DialogTextAlNight03:
-DialogTextAlNight04:
-DialogTextAlNight05:
-DialogTextAlNight06:
-	dc.w	OBJ_NPC_AL
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextThomasNight00:
-DialogTextThomasNight01:
-DialogTextThomasNight02:
-DialogTextThomasNight03:
-DialogTextThomasNight04:
-DialogTextThomasNight05:
-DialogTextThomasNight06:
-	dc.w	OBJ_NPC_THOMAS
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextHeatherNight00:
-DialogTextHeatherNight01:
-DialogTextHeatherNight02:
-DialogTextHeatherNight03:
-DialogTextHeatherNight04:
-DialogTextHeatherNight05:
-DialogTextHeatherNight06:
-	dc.w	OBJ_NPC_HEATHER
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextGaryNight00:
-DialogTextGaryNight01:
-DialogTextGaryNight02:
-DialogTextGaryNight03:
-DialogTextGaryNight04:
-DialogTextGaryNight05:
-DialogTextGaryNight06:
-	dc.w	OBJ_NPC_GARY
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextGrantNight00:
-DialogTextGrantNight01:
-DialogTextGrantNight02:
-DialogTextGrantNight03:
-DialogTextGrantNight04:
-DialogTextGrantNight05:
-DialogTextGrantNight06:
-	dc.w	OBJ_NPC_GRANT
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextBrettNight00:
-DialogTextBrettNight01:
-DialogTextBrettNight02:
-DialogTextBrettNight03:
-DialogTextBrettNight04:
-DialogTextBrettNight05:
-DialogTextBrettNight06:
-	dc.w	OBJ_NPC_BRETT
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextNickyNight00:
-DialogTextNickyNight01:
-DialogTextNickyNight02:
-DialogTextNickyNight03:
-DialogTextNickyNight04:
-DialogTextNickyNight05:
-DialogTextNickyNight06:
-	dc.w	OBJ_NPC_NICKY
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextTanyaNight00:
-DialogTextTanyaNight01:
-DialogTextTanyaNight02:
-DialogTextTanyaNight03:
-DialogTextTanyaNight04:
-DialogTextTanyaNight05:
-DialogTextTanyaNight06:
-	dc.w	OBJ_NPC_TANYA
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextCraigNight00:
-DialogTextCraigNight01:
-DialogTextCraigNight02:
-DialogTextCraigNight03:
-DialogTextCraigNight04:
-DialogTextCraigNight05:
-DialogTextCraigNight06:
-	dc.w	OBJ_NPC_CRAIG
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextJuanNight00:
-DialogTextJuanNight01:
-DialogTextJuanNight02:
-DialogTextJuanNight03:
-DialogTextJuanNight04:
-DialogTextJuanNight05:
-DialogTextJuanNight06:
-	dc.w	OBJ_NPC_JUAN
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextLauraNight00:
-DialogTextLauraNight01:
-DialogTextLauraNight02:
-DialogTextLauraNight03:
-DialogTextLauraNight04:
-DialogTextLauraNight05:
-DialogTextLauraNight06:
-	dc.w	OBJ_NPC_LAURA
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextGinaNight00:
-DialogTextGinaNight01:
-DialogTextGinaNight02:
-DialogTextGinaNight03:
-DialogTextGinaNight04:
-DialogTextGinaNight05:
-DialogTextGinaNight06:
-	dc.w	OBJ_NPC_GINA
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextSantaNight00:
-DialogTextSantaNight01:
-DialogTextSantaNight02:
-DialogTextSantaNight03:
-DialogTextSantaNight04:
-DialogTextSantaNight05:
-DialogTextSantaNight06:
-	dc.w	OBJ_NPC_SANTA
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextLostGuyNight00:
-DialogTextLostGuyNight01:
-DialogTextLostGuyNight02:
-DialogTextLostGuyNight03:
-DialogTextLostGuyNight04:
-DialogTextLostGuyNight05:
-DialogTextLostGuyNight06:
-	dc.w	OBJ_NPC_LOSTGUY
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextRockerNight00:
-DialogTextRockerNight01:
-DialogTextRockerNight02:
-DialogTextRockerNight03:
-DialogTextRockerNight04:
-DialogTextRockerNight05:
-DialogTextRockerNight06:
-	dc.w	OBJ_NPC_ROCKER
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextShopperNight00:
-DialogTextShopperNight01:
-DialogTextShopperNight02:
-DialogTextShopperNight03:
-DialogTextShopperNight04:
-DialogTextShopperNight05:
-DialogTextShopperNight06:
-	dc.w	OBJ_NPC_SHOPPER
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextBusyMomNight00:
-DialogTextBusyMomNight01:
-DialogTextBusyMomNight02:
-DialogTextBusyMomNight03:
-DialogTextBusyMomNight04:
-DialogTextBusyMomNight05:
-DialogTextBusyMomNight06:
-	dc.w	OBJ_NPC_BUSYMOM
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextMallratNight00:
-DialogTextMallratNight01:
-DialogTextMallratNight02:
-DialogTextMallratNight03:
-DialogTextMallratNight04:
-DialogTextMallratNight05:
-DialogTextMallratNight06:
-	dc.w	OBJ_NPC_MALLRAT
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextPreppyNight00:
-DialogTextPreppyNight01:
-DialogTextPreppyNight02:
-DialogTextPreppyNight03:
-DialogTextPreppyNight04:
-DialogTextPreppyNight05:
-DialogTextPreppyNight06:
-	dc.w	OBJ_NPC_PREPPY
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextYuppieNight00:
-DialogTextYuppieNight01:
-DialogTextYuppieNight02:
-DialogTextYuppieNight03:
-DialogTextYuppieNight04:
-DialogTextYuppieNight05:
-DialogTextYuppieNight06:
-	dc.w	OBJ_NPC_YUPPIE
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextNelsonNight00:
-DialogTextNelsonNight01:
-DialogTextNelsonNight02:
-DialogTextNelsonNight03:
-DialogTextNelsonNight04:
-DialogTextNelsonNight05:
-DialogTextNelsonNight06:
-	dc.w	OBJ_NPC_NELSON
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextVictorNight00:
-DialogTextVictorNight01:
-DialogTextVictorNight02:
-DialogTextVictorNight03:
-DialogTextVictorNight04:
-DialogTextVictorNight05:
-DialogTextVictorNight06:
-	dc.w	OBJ_NPC_VICTOR
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextAlOldNight00:
-DialogTextAlOldNight01:
-DialogTextAlOldNight02:
-DialogTextAlOldNight03:
-DialogTextAlOldNight04:
-DialogTextAlOldNight05:
-DialogTextAlOldNight06:
-	dc.w	OBJ_NPC_ALOLD
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextHiddenHJNight00:
-DialogTextHiddenHJNight01:
-DialogTextHiddenHJNight02:
-DialogTextHiddenHJNight03:
-DialogTextHiddenHJNight04:
-DialogTextHiddenHJNight05:
-DialogTextHiddenHJNight06:
-	dc.w	OBJ_NPC_HIDDENHJ
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
-	align 2
-DialogTextHiddenMJNight00:
-DialogTextHiddenMJNight01:
-DialogTextHiddenMJNight02:
-DialogTextHiddenMJNight03:
-DialogTextHiddenMJNight04:
-DialogTextHiddenMJNight05:
-DialogTextHiddenMJNight06:
-	dc.w	OBJ_NPC_HIDDENMJ
-	dc.b	"This is my default",LF
-	dc.b	"night text.",ETX
 	align 2
 
 ;-------------------------------------------------------------------------------
@@ -1660,10 +1501,10 @@ TitleScreenTextLoadGame:
 	dc.b	"{Load Game",ETX
 TitleScreenTextDebug:
 	dc.b	"{Debug",ETX
-TitleScreenTextFooter:
-	dc.b	"       Placeholder Title Screen",ETX
-TitleScreenTextFooterDebug:
-	dc.b	"       Placeholder Title Screen",ETX
+TitleScreenTextTitle:
+	dc.b	"Jan23 Dev Build",ETX
+TitleScreenTextTitleDebug:
+	dc.b	"Jan23 Debug Build",ETX
 
 ;-------------------------------------------------------------------------------
 ; DebugScreen
@@ -1833,13 +1674,13 @@ CreditsScreen03Line0B:
 Day00IntroText:
 	dc.b	"           November 18, 1990            ",ETX
 Day00IntroTip0:
-	dc.b	"D-Pad: Move Player,change menu selection",ETX
+	dc.b	"D-Pad: Move Player, menu selection",ETX
 Day00IntroTip1:
-	dc.b	"A button: Interact with people & objects",ETX
+	dc.b	"A button: Interact",ETX
 Day00IntroTip2:
 	dc.b	"C button: Open the menu screen",ETX
 Day00IntroTip3:
-	dc.b	"A or C button: Confirm menu selection",ETX
+	dc.b	"A/C button: Confirm menu selection",ETX
 Day00IntroTip4:
 	dc.b	"B button: Cancel dialog, exit menu",ETX
 Day00IntroTip5:
@@ -1958,63 +1799,39 @@ LegalScreenLine03:
 LegalScreenLine04:
 	dc.b	" ",ETX
 LegalScreenLine05:
-	dc.b	" ",ETX
-LegalScreenLine06:
 	dc.b	"           Retail Clerk '90           ",ETX
+LegalScreenLine06:
+	dc.b	" ",ETX
 LegalScreenLine07:
 	dc.b	" ",ETX
 LegalScreenLine08:
-	dc.b	" ",ETX
+	dc.b	" Copyright (c) 2019-2022",ETX
 LegalScreenLine09:
-	dc.b	" ",ETX
-LegalScreenLine0A:
-	dc.b	" ",ETX
-LegalScreenLine0B:
-	dc.b	" ",ETX
-LegalScreenLine0C:
-	dc.b	" ",ETX
-LegalScreenLine0D:
-	dc.b	" ",ETX
-LegalScreenLine0E:
-	dc.b	" ",ETX
-LegalScreenLine0F:
-	dc.b	" ",ETX
+	dc.b	" Hugues Johnson (HuguesJohnson.com)",ETX
 LegalScreenLine10:
-	dc.b	" ",ETX
+	dc.b	" Licensed under CC BY-SA 4.0",ETX
 LegalScreenLine11:
 	dc.b	" ",ETX
 LegalScreenLine12:
 	dc.b	" ",ETX
 LegalScreenLine13:
-	dc.b	" ",ETX
+	dc.b	" This demo is not licensed by Sega.",ETX
 LegalScreenLine14:
-	dc.b	" ",ETX
+	dc.b	" There is no relationship between the",ETX
 LegalScreenLine15:
-	dc.b	" Copyright (c) 2019-2021",ETX
+	dc.b	" author of this demo and Sega.",ETX
 LegalScreenLine16:
-	dc.b	" Hugues Johnson (HuguesJohnson.com)",ETX
+	dc.b	" ",ETX
 LegalScreenLine17:
 	dc.b	" ",ETX
 LegalScreenLine18:
-	dc.b	" This demo is not licensed by Sega.",ETX
+	dc.b	" If you paid money for this game",ETX
 LegalScreenLine19:
-	dc.b	" ",ETX
-LegalScreenLine1A:
-	dc.b	" ",ETX
-LegalScreenLine1B:
-	dc.b	" ",ETX
-LegalScreenLine1C:
-	dc.b	" ",ETX
-LegalScreenLine1D:
-	dc.b	" ",ETX
-LegalScreenLine1E:
-	dc.b	" ",ETX
-LegalScreenLine1F:
-	dc.b	" ",ETX
+	dc.b	" you were ripped-off.",ETX
 LegalScreenLine20:
-	dc.b	" There is no relationship between the",ETX
+	dc.b	" Please don't support",ETX
 LegalScreenLine21:
-	dc.b	" author of this demo and Sega.",ETX
+	dc.b	" cartridge counterfeiters.",ETX
 LegalScreenLine22:
 	dc.b	" ",ETX
 LegalScreenLine23:

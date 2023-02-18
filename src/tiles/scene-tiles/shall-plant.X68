@@ -2,221 +2,221 @@
 
 	; 0
 	dc.l	$00000000
-	dc.l	$00049940
-	dc.l	$0004FF40
-	dc.l	$0004FF40
-	dc.l	$04B94499
-	dc.l	$04BB4499
-	dc.l	$04444494
-	dc.l	$08844447
+	dc.l	$000AAAA0
+	dc.l	$000AAAA0
+	dc.l	$000AAAA0
+	dc.l	$0ACAAAAA
+	dc.l	$0ACCAAAA
+	dc.l	$0AAAAAAA
+	dc.l	$0AAAAAA9
 
 	; 1
 	dc.l	$00000000
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$00440000
-	dc.l	$40994004
-	dc.l	$44494444
-	dc.l	$49949944
-	dc.l	$49949949
+	dc.l	$00AA0000
+	dc.l	$A0AAA00A
+	dc.l	$AAAAAAAA
+	dc.l	$AAAAAAAA
+	dc.l	$AAAAAAAA
 
 	; 2
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$00994004
-	dc.l	$04994444
-	dc.l	$44AA4FF4
-	dc.l	$994AAF94
-	dc.l	$99A94444
-	dc.l	$4FF9ABB4
+	dc.l	$00AAA00A
+	dc.l	$0AAAAAAA
+	dc.l	$AABBAAAA
+	dc.l	$AAABBAAA
+	dc.l	$AABAAAAA
+	dc.l	$AAAABCCA
 
 	; 3
 	dc.l	$00000000
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$04400000
-	dc.l	$09940044
-	dc.l	$44944449
-	dc.l	$99499449
-	dc.l	$99499494
+	dc.l	$0AA00000
+	dc.l	$0AAA00AA
+	dc.l	$AAAAAAAA
+	dc.l	$AAAAAAAA
+	dc.l	$AAAAAAAA
 
 	; 4
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$09940040
-	dc.l	$49944440
-	dc.l	$4AA4FF44
-	dc.l	$94AAF944
-	dc.l	$9A944444
-	dc.l	$FF9ABB44
+	dc.l	$0AAA00A0
+	dc.l	$AAAAAAA0
+	dc.l	$ABBAAAAA
+	dc.l	$AABBAAAA
+	dc.l	$ABAAAAAA
+	dc.l	$AAABCCAA
 
 	; 5
 	dc.l	$00000000
-	dc.l	$00000004
-	dc.l	$00000009
-	dc.l	$04400009
-	dc.l	$0994004A
-	dc.l	$44944444
-	dc.l	$99499444
-	dc.l	$99499494
+	dc.l	$0000000A
+	dc.l	$0000000A
+	dc.l	$0AA0000A
+	dc.l	$0AAA00AB
+	dc.l	$AAAAAAAA
+	dc.l	$AAAAAAAA
+	dc.l	$AAAAAAAA
 
 	; 6
 	dc.l	$00000000
-	dc.l	$40000000
-	dc.l	$A0044000
-	dc.l	$94499400
-	dc.l	$A449A400
-	dc.l	$444A4000
-	dc.l	$44440000
-	dc.l	$4A9A4000
+	dc.l	$A0000000
+	dc.l	$B00AA000
+	dc.l	$AAAAAA00
+	dc.l	$BAAABA00
+	dc.l	$AAABA000
+	dc.l	$AAAA0000
+	dc.l	$ABABA000
 
 	; 7
-	dc.l	$22146647
-	dc.l	$49946944
-	dc.l	$49944444
-	dc.l	$7444444A
-	dc.l	$44444A99
-	dc.l	$9444444A
-	dc.l	$9944AA44
-	dc.l	$4444AA44
+	dc.l	$AACABBA9
+	dc.l	$AAAABAAA
+	dc.l	$AAAAAAAA
+	dc.l	$9AAAAAAB
+	dc.l	$AAAAABAA
+	dc.l	$AAAAAAAB
+	dc.l	$AAAABBAA
+	dc.l	$AAAABBAA
 
 	; 8
-	dc.l	$44449499
-	dc.l	$AA44499F
-	dc.l	$AA4A99AF
-	dc.l	$444A99A9
-	dc.l	$449944A4
-	dc.l	$44994694
-	dc.l	$47744994
-	dc.l	$444BB446
+	dc.l	$AAAAAAAA
+	dc.l	$BBAAAAAA
+	dc.l	$BBABAABA
+	dc.l	$AAABAABA
+	dc.l	$AAAAAABA
+	dc.l	$AAAAABAA
+	dc.l	$A99AAAAA
+	dc.l	$AAACCAAB
 
 	; 9
-	dc.l	$9FF9A997
-	dc.l	$F99FFAA7
-	dc.l	$F99FF44A
-	dc.l	$9449994A
-	dc.l	$46944944
-	dc.l	$4994A9A7
-	dc.l	$44444947
-	dc.l	$44444444
+	dc.l	$AAAABAA9
+	dc.l	$AAAAABB9
+	dc.l	$AAAAAAAB
+	dc.l	$AAAAAAAB
+	dc.l	$ABAAAAAA
+	dc.l	$AAAABAB9
+	dc.l	$AAAAAAA9
+	dc.l	$AAAAAAAA
 
 	; A
-	dc.l	$44449499
-	dc.l	$AA444996
-	dc.l	$AA4A99A6
-	dc.l	$444A99A9
-	dc.l	$449944A4
-	dc.l	$44994694
-	dc.l	$47744994
-	dc.l	$444BB446
+	dc.l	$AAAAAAAA
+	dc.l	$BBAAAAAB
+	dc.l	$BBABAABB
+	dc.l	$AAABAABA
+	dc.l	$AAAAAABA
+	dc.l	$AAAAABAA
+	dc.l	$A99AAAAA
+	dc.l	$AAACCAAB
 
 	; B
-	dc.l	$44494999
-	dc.l	$A44499FF
-	dc.l	$A4A99AFF
-	dc.l	$44A99A99
-	dc.l	$49944A44
-	dc.l	$49946944
-	dc.l	$77449944
-	dc.l	$44BB4464
+	dc.l	$AAAAAAAA
+	dc.l	$BAAAAAAA
+	dc.l	$BABAABAA
+	dc.l	$AABAABAA
+	dc.l	$AAAAABAA
+	dc.l	$AAAABAAA
+	dc.l	$99AAAAAA
+	dc.l	$AACCAABA
 
 	; C
-	dc.l	$FF9A9974
-	dc.l	$99FFAA7A
-	dc.l	$99FF44AA
-	dc.l	$449994A4
-	dc.l	$69449444
-	dc.l	$994A9A74
-	dc.l	$44449474
-	dc.l	$44444444
+	dc.l	$AAABAA9A
+	dc.l	$AAAABB9B
+	dc.l	$AAAAAABB
+	dc.l	$AAAAAABA
+	dc.l	$BAAAAAAA
+	dc.l	$AAABAB9A
+	dc.l	$AAAAAA9A
+	dc.l	$AAAAAAAA
 
 	; D
-	dc.l	$44494997
-	dc.l	$A4449964
-	dc.l	$A4A99A6A
-	dc.l	$44A99A9A
-	dc.l	$49944A44
-	dc.l	$49946947
-	dc.l	$77449944
-	dc.l	$44BB4464
+	dc.l	$AAAAAAA9
+	dc.l	$BAAAAABA
+	dc.l	$BABAABBB
+	dc.l	$AABAABAB
+	dc.l	$AAAAABAA
+	dc.l	$AAAABAA9
+	dc.l	$99AAAAAA
+	dc.l	$AACCAABA
 
 	; E
-	dc.l	$499A4000
-	dc.l	$44440440
-	dc.l	$444A4440
-	dc.l	$74A9A440
-	dc.l	$744A4440
-	dc.l	$44444400
-	dc.l	$44444440
-	dc.l	$44444440
+	dc.l	$AAABA000
+	dc.l	$AAAA0AA0
+	dc.l	$AAABAAA0
+	dc.l	$9ABABAA0
+	dc.l	$9AABAAA0
+	dc.l	$AAAAAA00
+	dc.l	$AAAAAAA0
+	dc.l	$AAAAAAA0
 
 	; F
-	dc.l	$29944476
-	dc.l	$29AA9439
-	dc.l	$27499734
-	dc.l	$29A44474
-	dc.l	$2994777A
-	dc.l	$2447223A
-	dc.l	$27732373
-	dc.l	$22222222
+	dc.l	$AAAAAA9B
+	dc.l	$AABBAABA
+	dc.l	$A9AAA9BA
+	dc.l	$AABAAA9A
+	dc.l	$AAAA999B
+	dc.l	$AAA9AABB
+	dc.l	$A99BAB9B
+	dc.l	$AAAAAAAA
 
 	; 10
-	dc.l	$944BB449
-	dc.l	$94744749
-	dc.l	$44774444
-	dc.l	$A4444444
-	dc.l	$94444447
-	dc.l	$9474964C
-	dc.l	$4947694C
-	dc.l	$49A44422
+	dc.l	$AAACCAAA
+	dc.l	$AA9AA9AA
+	dc.l	$AA99AAAA
+	dc.l	$BAAAAAAA
+	dc.l	$AAAAAAA9
+	dc.l	$AA9AABAD
+	dc.l	$AAA9BAAD
+	dc.l	$AABAAAAA
 
 	; 11
-	dc.l	$94444477
-	dc.l	$97444474
-	dc.l	$77444447
-	dc.l	$494B74AA
-	dc.l	$664777AA
-	dc.l	$66424444
-	dc.l	$44249646
-	dc.l	$22249996
+	dc.l	$AAAAAA99
+	dc.l	$A9AAAA9A
+	dc.l	$99AAAAA9
+	dc.l	$AAAC9ABB
+	dc.l	$BBA999BB
+	dc.l	$BBAAAAAA
+	dc.l	$AAAAABAB
+	dc.l	$AAAAAAAB
 
 	; 12
-	dc.l	$44BB4499
-	dc.l	$47447499
-	dc.l	$47744447
-	dc.l	$44444444
-	dc.l	$44444476
-	dc.l	$474964C6
-	dc.l	$947694C4
-	dc.l	$9A444222
+	dc.l	$AACCAAAA
+	dc.l	$A9AA9AAA
+	dc.l	$A99AAAA9
+	dc.l	$AAAAAAAA
+	dc.l	$AAAAAA9B
+	dc.l	$A9AABADB
+	dc.l	$AA9BAADA
+	dc.l	$ABAAAAAA
 
 	; 13
-	dc.l	$44444779
-	dc.l	$74444749
-	dc.l	$74444474
-	dc.l	$94B74AAA
-	dc.l	$64777AA9
-	dc.l	$64244449
-	dc.l	$42496464
-	dc.l	$22499964
+	dc.l	$AAAAA99A
+	dc.l	$9AAAA9AA
+	dc.l	$9AAAAA9A
+	dc.l	$AAC9ABBB
+	dc.l	$BA999BBA
+	dc.l	$BAAAAAAA
+	dc.l	$AAAABABA
+	dc.l	$AAAAAABA
 
 	; 14
-	dc.l	$44BB4494
-	dc.l	$47447497
-	dc.l	$47744447
-	dc.l	$44444444
-	dc.l	$44444474
-	dc.l	$474964C7
-	dc.l	$947694C6
-	dc.l	$9A444229
+	dc.l	$AACCAAAA
+	dc.l	$A9AA9AA9
+	dc.l	$A99AAAA9
+	dc.l	$AAAAAAAA
+	dc.l	$AAAAAA9A
+	dc.l	$A9AABAD9
+	dc.l	$AA9BAADB
+	dc.l	$ABAAAAAA
 
 	; 15
-	dc.l	$4744AA40
-	dc.l	$7444AA70
-	dc.l	$44447700
-	dc.l	$4A444200
-	dc.l	$49747200
-	dc.l	$47277200
-	dc.l	$42777200
-	dc.l	$42222200
+	dc.l	$A9AABBA0
+	dc.l	$9AAABB90
+	dc.l	$AAAA9900
+	dc.l	$ABAAAA00
+	dc.l	$AA9A9A00
+	dc.l	$A9A99A00
+	dc.l	$AA999A00
+	dc.l	$AAAAAA00
 

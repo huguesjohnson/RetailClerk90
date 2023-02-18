@@ -29,6 +29,14 @@ PatternNShackCaseLow:
 	dc.w	$10
 	dc.w	$11
 	dc.w	$12
+	dc.w	$13
+	dc.w	$14
+	dc.w	$15
+	dc.w	$16
+	dc.w	$17
+	dc.w	$18
+	dc.w	$19
+	dc.w	$1A
 	dc.w	$14
 	dc.w	$15
 	dc.w	$16
@@ -37,38 +45,30 @@ PatternNShackCaseLow:
 	dc.w	$19
 	dc.w	$1A
 	dc.w	$1B
-	dc.w	$15
-	dc.w	$16
-	dc.w	$17
-	dc.w	$18
-	dc.w	$19
-	dc.w	$1A
 	dc.w	$1C
 	dc.w	$1D
 	dc.w	$1E
 	dc.w	$1F
+	dc.w	$1C
 	dc.w	$20
-	dc.w	$21
-	dc.w	$1E
-	dc.w	$22
+	dc.w	$1B
+	dc.w	$1C
 	dc.w	$1D
 	dc.w	$1E
 	dc.w	$1F
+	dc.w	$1C
 	dc.w	$20
 	dc.w	$21
-	dc.w	$1E
+	dc.w	$22
 	dc.w	$23
+	dc.w	$22
+	dc.w	$22
+	dc.w	$22
 	dc.w	$24
-	dc.w	$25
-	dc.w	$26
-	dc.w	$27
-	dc.w	$28
-	dc.w	$25
-	dc.w	$29
+	dc.w	$21
+	dc.w	$22
+	dc.w	$23
+	dc.w	$22
+	dc.w	$22
+	dc.w	$22
 	dc.w	$24
-	dc.w	$25
-	dc.w	$26
-	dc.w	$27
-	dc.w	$28
-	dc.w	$25
-	dc.w	$2A

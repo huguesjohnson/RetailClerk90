@@ -7,7 +7,7 @@
    "defaultLineFeed":"LF",
    "defaultFormFeed":"FF",
    "lines":{
-      "StatusScreenDay00Objective00":{"text":"November 18, 1990: Evening|Help the customers in your store.|Use the A button to interact.|Press A to confirm a choice.|Press B to cancel a dialog."},
+      "StatusScreenDay00Objective00":{"text":"November 18, 1990: Evening|Help the customers in your store.| Use the A button to interact.||Press A to confirm a choice.|Press B to cancel a dialog."},
       "StatusScreenDay00Objective01":{"text":""},
       "StatusScreenDay00Objective02":{"text":""},
       "StatusScreenDay00Objective03":{"text":""},

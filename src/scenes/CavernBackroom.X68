@@ -8,63 +8,47 @@
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$000D ; tileset count - 1
+	dc.w	$0009 ; tileset count - 1
 
 	; tileset 0 - tiles start at [0] - tileset length [1]
 	dc.l	TransparentTileTilesStart
 	dc.l	TransparentTileTilesEnd
 
-	; tileset 1 - tiles start at [1] - tileset length [10]
-	dc.l	FloorCarpetBlacklightTilesStart
-	dc.l	FloorCarpetBlacklightTilesEnd
+	; tileset 1 - tiles start at [1] - tileset length [4]
+	dc.l	FloorCavernTilesStart
+	dc.l	FloorCavernTilesEnd
 
-	; tileset 2 - tiles start at [11] - tileset length [14]
-	dc.l	FrameRectTilesStart
-	dc.l	FrameRectTilesEnd
+	; tileset 2 - tiles start at [5] - tileset length [4D]
+	dc.l	FrameTilesStart
+	dc.l	FrameTilesEnd
 
-	; tileset 3 - tiles start at [25] - tileset length [F]
-	dc.l	GlassTilesStart
-	dc.l	GlassTilesEnd
+	; tileset 3 - tiles start at [52] - tileset length [6]
+	dc.l	ArcadeHigh24x16TilesStart
+	dc.l	ArcadeHigh24x16TilesEnd
 
-	; tileset 4 - tiles start at [34] - tileset length [1]
-	dc.l	TransparentTileTilesStart
-	dc.l	TransparentTileTilesEnd
+	; tileset 4 - tiles start at [58] - tileset length [9]
+	dc.l	ArcadeLow24x24TilesStart
+	dc.l	ArcadeLow24x24TilesEnd
 
-	; tileset 5 - tiles start at [35] - tileset length [1C]
-	dc.l	CavernSignTilesStart
-	dc.l	CavernSignTilesEnd
+	; tileset 5 - tiles start at [61] - tileset length [3]
+	dc.l	ArcadeRightHigh24x8TilesStart
+	dc.l	ArcadeRightHigh24x8TilesEnd
 
-	; tileset 6 - tiles start at [51] - tileset length [9]
-	dc.l	CavernBackroomDeadArcadeBase00TilesStart
-	dc.l	CavernBackroomDeadArcadeBase00TilesEnd
+	; tileset 6 - tiles start at [64] - tileset length [9]
+	dc.l	ArcadeRightLow24x24TilesStart
+	dc.l	ArcadeRightLow24x24TilesEnd
 
-	; tileset 7 - tiles start at [5A] - tileset length [9]
-	dc.l	CavernBackroomDeadArcadeBase01TilesStart
-	dc.l	CavernBackroomDeadArcadeBase01TilesEnd
+	; tileset 7 - tiles start at [6D] - tileset length [3]
+	dc.l	ArcadeLeftHigh24x8TilesStart
+	dc.l	ArcadeLeftHigh24x8TilesEnd
 
-	; tileset 8 - tiles start at [63] - tileset length [9]
-	dc.l	CavernBackroomDeadArcadeBase02TilesStart
-	dc.l	CavernBackroomDeadArcadeBase02TilesEnd
+	; tileset 8 - tiles start at [70] - tileset length [9]
+	dc.l	ArcadeLeftLow24x24TilesStart
+	dc.l	ArcadeLeftLow24x24TilesEnd
 
-	; tileset 9 - tiles start at [6C] - tileset length [9]
-	dc.l	CavernBackroomDeadArcadeTop00TilesStart
-	dc.l	CavernBackroomDeadArcadeTop00TilesEnd
-
-	; tileset A - tiles start at [75] - tileset length [9]
-	dc.l	CavernBackroomDeadArcadeTop01TilesStart
-	dc.l	CavernBackroomDeadArcadeTop01TilesEnd
-
-	; tileset B - tiles start at [7E] - tileset length [9]
-	dc.l	CavernBackroomDeadArcadeTop02TilesStart
-	dc.l	CavernBackroomDeadArcadeTop02TilesEnd
-
-	; tileset C - tiles start at [87] - tileset length [9]
-	dc.l	LadderTopTilesStart
-	dc.l	LadderTopTilesEnd
-
-	; tileset D - tiles start at [90] - tileset length [19]
-	dc.l	LadderTopFrameTilesStart
-	dc.l	LadderTopFrameTilesEnd
+	; tileset 9 - tiles start at [79] - tileset length [8]
+	dc.l	CavernBackroomStairsTilesStart
+	dc.l	CavernBackroomStairsTilesEnd
 
 	;---------------------------------------------------------------------------
 	; palettes
@@ -77,231 +61,133 @@
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$001F ; scenery count - 1
+	dc.w	$0011 ; scenery count - 1
 
 	; floor
-	dc.l	Pattern32x32Tile
+	dc.l	Pattern16x16x304
 	;		%pccvhnnnnnnnnnnn
 	dc.w	%0000000000000001 ; vdp pattern
-	dc.w	$0006 ; repeat=6
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$00000000 ; initial drawing location
+	dc.w	$000C ; repeat=12
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$00800000 ; initial drawing location
+
+	; stairs
+	dc.l	PatternCavernBackroomStairs
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000001111001 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$003C0000+$0B000000 ; initial drawing location
+
+	; west wall
+	dc.l	PatternFrameWestClosed
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000000000101 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$02800000 ; initial drawing location
+
+	; east wall
+	dc.l	PatternFrameEastClosed
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000000000101 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$004A0000+$02800000 ; initial drawing location
+
+	; south wall
+	dc.l	PatternFrameSouthOpen
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1000000000000101 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$0D000000 ; initial drawing location
 
 	; north wall
-	dc.l	PatternFrameTop
+	dc.l	PatternFrameNorthClosed
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000010001 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$00000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$00800000 ; initial drawing location
 
-	; right wall
-	dc.l	PatternFrameSideClosedRight
+	; arcade cabinet - right - high
+	dc.l	Pattern24x8
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000000010001 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$004E0000+$00800000 ; initial drawing location
-
-	; left wall
-	dc.l	PatternFrameSideClosedLeft
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000000010001 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$00800000 ; initial drawing location
-
-	; south wall - left side
-	dc.l	PatternFrameBottomOpenLeft
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000010001 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$0D800000 ; initial drawing location
-
-	; south wall - right side
-	dc.l	PatternFrameBottomOpenRight
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000010001 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00360000+$0D800000 ; initial drawing location
-
-	; ladder frame
-	dc.l	Pattern40x40
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000010010000 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00440000+$00800000 ; initial drawing location
-
-	; ladder
-	dc.l	Pattern24x24
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000010000111 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00460000+$01000000 ; initial drawing location
-
-	; pattern 0 - palette 0 - high
-	dc.l	Pattern24x16
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000001101100 ; vdp pattern
+	dc.w	%1010000001100001 ; vdp pattern
 	dc.w	$0000 ; repeat=0
 	dc.l	VDP_VRAM_WRITE_A+$00080000+$01800000 ; initial drawing location
 
-	; pattern 0 - palette 0 - low
-	dc.l	Pattern24x8
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000001110010 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00080000+$02800000 ; initial drawing location
-
-	; pattern 0 - palette 0 - base
+	; arcade cabinet - right - low
 	dc.l	Pattern24x24
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000001010001 ; vdp pattern
+	dc.w	%0010000001100100 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00080000+$03000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00080000+$02000000 ; initial drawing location
 
-	; pattern 0 - palette 0 - high
-	dc.l	Pattern24x16
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000001101100 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00460000+$03800000 ; initial drawing location
-
-	; pattern 0 - palette 0 - low
+	; arcade cabinet - right - high
 	dc.l	Pattern24x8
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000001110010 ; vdp pattern
+	dc.w	%1100000001100001 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00460000+$04800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00140000+$07800000 ; initial drawing location
 
-	; pattern 0 - palette 0 - base
+	; arcade cabinet - right - low
 	dc.l	Pattern24x24
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000001010001 ; vdp pattern
+	dc.w	%0100000001100100 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00460000+$05000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00140000+$08000000 ; initial drawing location
 
-	; pattern 1 - palette 1 - high
-	dc.l	Pattern24x16
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%1010000001110101 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00380000+$04800000 ; initial drawing location
-
-	; pattern 1 - palette 1 - low
+	; arcade cabinet - left - high
 	dc.l	Pattern24x8
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000001111011 ; vdp pattern
+	dc.w	%1000000001101101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00380000+$05800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00180000+$03000000 ; initial drawing location
 
-	; pattern 1 - palette 1 - base
+	; arcade cabinet - left - low
 	dc.l	Pattern24x24
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000001011010 ; vdp pattern
+	dc.w	%0000000001110000 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00380000+$06000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00180000+$03800000 ; initial drawing location
 
-	; pattern 1 - palette 1 - high
-	dc.l	Pattern24x16
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%1010000001110101 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00040000+$09800000 ; initial drawing location
-
-	; pattern 1 - palette 1 - low
+	; arcade cabinet - left - high
 	dc.l	Pattern24x8
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000001111011 ; vdp pattern
+	dc.w	%1000000001101101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00040000+$0A800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00180000+$03000000 ; initial drawing location
 
-	; pattern 1 - palette 1 - base
+	; arcade cabinet - left - low
 	dc.l	Pattern24x24
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000001011010 ; vdp pattern
+	dc.w	%0100000001110000 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00040000+$0B000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$003A0000+$01800000 ; initial drawing location
 
-	; pattern 2 - palette 2 - high
-	dc.l	Pattern24x16
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000001111110 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00140000+$04000000 ; initial drawing location
-
-	; pattern 2 - palette 2 - low
+	; arcade cabinet - left - high
 	dc.l	Pattern24x8
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000010000100 ; vdp pattern
+	dc.w	%1100000001101101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00140000+$05000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$003A0000+$01000000 ; initial drawing location
 
-	; pattern 2 - palette 2 - base
+	; arcade cabinet - left - low
 	dc.l	Pattern24x24
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000001100011 ; vdp pattern
+	dc.w	%0000000001110000 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00140000+$05800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00180000+$03800000 ; initial drawing location
 
-	; pattern 2 - palette 0 - high
-	dc.l	Pattern24x16
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000001111110 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$002A0000+$01000000 ; initial drawing location
-
-	; pattern 2 - palette 0 - low
+	; arcade cabinet - right - high
 	dc.l	Pattern24x8
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000010000100 ; vdp pattern
+	dc.w	%1000000001100001 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$002A0000+$02000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00440000+$04800000 ; initial drawing location
 
-	; pattern 2 - palette 0 - base
+	; arcade cabinet - right - low
 	dc.l	Pattern24x24
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000001100011 ; vdp pattern
+	dc.w	%0000000001100100 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$002A0000+$02800000 ; initial drawing location
-
-	; pattern 2 - palette 2 - high
-	dc.l	Pattern24x16
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000001111110 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00420000+$07800000 ; initial drawing location
-
-	; pattern 2 - palette 2 - low
-	dc.l	Pattern24x8
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000010000100 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00420000+$08800000 ; initial drawing location
-
-	; pattern 2 - palette 2 - base
-	dc.l	Pattern24x24
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000001100011 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00420000+$09000000 ; initial drawing location
-
-	; pattern 1 - palette 0 - high
-	dc.l	Pattern24x16
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000001110101 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$001E0000+$01800000 ; initial drawing location
-
-	; pattern 1 - palette 0 - low
-	dc.l	Pattern24x8
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000001111011 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$001E0000+$02800000 ; initial drawing location
-
-	; pattern 1 - palette 0 - base
-	dc.l	Pattern24x24
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000001011010 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$001E0000+$03000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00440000+$05000000 ; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text
@@ -323,57 +209,57 @@
 
 	dc.w	OBJ_SCENE_DEAD_ARCADE_GAME
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0011010010001101
+	dc.w	%0010100011010011
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011111100100001
+	dc.w	%0011110011111010
 
 	dc.w	OBJ_SCENE_DEAD_ARCADE_GAME
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0011010010011101
+	dc.w	%0010100010100100
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011111010100001
+	dc.w	%0011110010011010
 
 	dc.w	OBJ_SCENE_DEAD_ARCADE_GAME
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0011010011001101
+	dc.w	%0010100011100011
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011111011001001
+	dc.w	%0011110010110010
 
 	dc.w	OBJ_SCENE_DEAD_ARCADE_GAME
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0011010011110101
+	dc.w	%0010100110010100
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011111010100010
+	dc.w	%0011110011001010
 
 	dc.w	OBJ_SCENE_DEAD_ARCADE_GAME
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0011010100101000
+	dc.w	%0010100101101011
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011111010011001
-
-	dc.w	OBJ_SCENE_DEAD_ARCADE_GAME
-	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0011010101100000
-	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011111011010001
-
-	dc.w	OBJ_SCENE_DEAD_ARCADE_GAME
-	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0011010110001000
-	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011111100000001
-
-	dc.w	OBJ_SCENE_DEAD_ARCADE_GAME
-	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0011010110011000
-	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011111011000001
+	dc.w	%0011110010010010
 
 	dc.w	OBJ_SCENE_CAVERN_BACKROOM_LADDER
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0100100110010110
+	dc.w	%0111000101110000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011000010001000
+	dc.w	%0100010100110000
+
+	dc.w	OBJ_NOTHING
+	;		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	;		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
+
+	dc.w	OBJ_NOTHING
+	;		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	;		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
+
+	dc.w	OBJ_NOTHING
+	;		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	;		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
 
 	dc.w	OBJ_NOTHING
 	;		%wwwwwwwxxxxxxxxx
@@ -399,8 +285,8 @@
 	;---------------------------------------------------------------------------
 	dc.w	$0003 ; npc count - 1
 
-	dc.w	$00CC ; starting x location of npc0
-	dc.w	$00F0 ; starting y location of npc0
+	dc.w	$0000 ; starting x location of npc0
+	dc.w	$0000 ; starting y location of npc0
 	dc.w	DIRECTION_DOWN ; starting direction of npc0
 	dc.w	$FFFF ; movement frequency of npc0
 	dc.l	NullMovementStart ; location of movement pattern for npc0

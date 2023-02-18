@@ -15,13 +15,13 @@ ShowDefaultText:
 	bra.s	.setupdialog
 .npc	; npc
 	; determine which text table to use	
-	cmpi.w	#PLAYER_SPRITE_ERYN,(MEM_PLAYER_SPRITE)
-	beq.s	.1
-	lea	CharacterInteractTextPlayer2TableStart,a6 ; player 2 text table (night)
-	bra.s	.2
-.1
-	lea	CharacterInteractTextPlayer1TableStart,a6 ; player 2 text table (day)
-.2
+;	cmpi.w	#PLAYER_SPRITE_ERYN,(MEM_PLAYER_SPRITE)
+;	beq.s	.1
+	lea	CharacterInteractTextTableStart,a6 ; player 2 text table (night)
+;	bra.s	.2
+;.1
+;	lea	CharacterInteractTextPlayer1TableStart,a6 ; player 2 text table (day)
+;.2
 	bset.l	#DIALOG_FLAG_STYLE_TITLED,d7	; set the titled flag
 	; calculate and add offset to text pointer
 	; something like ((CharacterId*NumberOfDays)+(CurrentDay*LWORD_SIZE))

@@ -3,7 +3,7 @@
 	;---------------------------------------------------------------------------
 	; scene ID
 	;---------------------------------------------------------------------------
-	dc.w	$FFFF
+	dc.w	SCENE_ID_MENU_MAP_NOTRAVEL
 
 	;---------------------------------------------------------------------------
 	; tiles
@@ -14,19 +14,19 @@
 	dc.l	TransparentTileTilesStart
 	dc.l	TransparentTileTilesEnd
 
-	; tileset 1 - tiles start at [1] - tileset length [8]
+	; tileset 1 - tiles start at [1] - tileset length [9]
 	dc.l	MenuNavTilesStart
 	dc.l	MenuNavTilesEnd
 
-	; tileset 2 - tiles start at [9] - tileset length [6]
+	; tileset 2 - tiles start at [A] - tileset length [9]
 	dc.l	MenuNavSelectedTilesStart
 	dc.l	MenuNavSelectedTilesEnd
 
-	; tileset 3 - tiles start at [F] - tileset length [3]
+	; tileset 3 - tiles start at [13] - tileset length [3]
 	dc.l	MenuMapIconsTilesStart
 	dc.l	MenuMapIconsTilesEnd
 
-	; tileset 4 - tiles start at [12] - tileset length [28]
+	; tileset 4 - tiles start at [16] - tileset length [28]
 	dc.l	MenuMapTilesStart
 	dc.l	MenuMapTilesEnd
 
@@ -46,96 +46,91 @@
 	; navigation
 	dc.l	PatternMenuNavSelected
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0110000000001001 ; vdp pattern
+	dc.w	%0100000000001010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$00000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00040000+$00000000 ; initial drawing location
 
 	dc.l	PatternMenuNav
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000000000001 ; vdp pattern
+	dc.w	%0010000000000001 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00140000+$00000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00160000+$00000000 ; initial drawing location
 
 	dc.l	PatternMenuNav
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000000000001 ; vdp pattern
+	dc.w	%0010000000000001 ; vdp pattern
 	dc.w	$0000 ; repeat=0
 	dc.l	VDP_VRAM_WRITE_B+$00280000+$00000000 ; initial drawing location
 
 	dc.l	PatternMenuNav
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000000000001 ; vdp pattern
+	dc.w	%0010000000000001 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$003C0000+$00000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$003A0000+$00000000 ; initial drawing location
 
 	; map icon - you are here
 	dc.l	Pattern8x8
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000000001111 ; vdp pattern
+	dc.w	%0000000000010011 ; vdp pattern
 	dc.w	$0000 ; repeat=0
 	dc.l	VDP_VRAM_WRITE_B+$00020000+$09800000 ; initial drawing location
 
 	; map icon - optional event
 	dc.l	Pattern8x8
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000000010000 ; vdp pattern
+	dc.w	%0000000000010100 ; vdp pattern
 	dc.w	$0000 ; repeat=0
 	dc.l	VDP_VRAM_WRITE_B+$00020000+$0A000000 ; initial drawing location
 
 	; map icon - story event
 	dc.l	Pattern8x8
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000000010001 ; vdp pattern
+	dc.w	%0000000000010101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
 	dc.l	VDP_VRAM_WRITE_B+$00020000+$0A800000 ; initial drawing location
 
 	; map
 	dc.l	PatternMenuMap
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000000010010 ; vdp pattern
+	dc.w	%0000000000010110 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$01800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$02000000 ; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text
 	;---------------------------------------------------------------------------
-	dc.w	$0007 ; text count
+	dc.w	$0006 ; text count
 
 	; map
 	dc.l	MenuScreenNavMap
-	dc.w	DIALOG_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_B+$00060000+$00800000 ; initial drawing location
+	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
+	dc.l	VDP_VRAM_WRITE_B+$00080000+$00800000 ; initial drawing location
 
 	; status
 	dc.l	MenuScreenNavStatus
-	dc.w	DIALOG_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_B+$00180000+$00800000 ; initial drawing location
 
 	; data
 	dc.l	MenuScreenNavData
-	dc.w	DIALOG_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_B+$002C0000+$00800000 ; initial drawing location
 
 	; help
 	dc.l	MenuScreenNavHelp
-	dc.w	DIALOG_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_B+$00400000+$00800000 ; initial drawing location
-
-	; mall legend
-	dc.l	StatusScreenMapLegend
-	dc.w	DIALOG_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_B+$00020000+$09000000 ; initial drawing location
+	dc.w	FONT_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
+	dc.l	VDP_VRAM_WRITE_B+$003E0000+$00800000 ; initial drawing location
 
 	dc.l	StatusScreenMapYouAreHere
-	dc.w	DIALOG_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_B+$00040000+$09800000 ; initial drawing location
 
 	dc.l	StatusScreenMapOptionalEvent
-	dc.w	DIALOG_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_B+$00040000+$0A000000 ; initial drawing location
 
 	dc.l	StatusScreenMapStoryEvent
-	dc.w	DIALOG_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_B+$00040000+$0A800000 ; initial drawing location
 
 	;---------------------------------------------------------------------------

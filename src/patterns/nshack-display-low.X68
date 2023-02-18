@@ -1,0 +1,39 @@
+PatternNShackDisplayLow:
+	dc.w	$2	; 3 rows
+	dc.w	$B	; 12 columns
+	dc.w	$3
+	dc.w	$4
+	dc.w	$4
+	dc.w	$4
+	dc.w	$4
+	dc.w	$4
+	dc.w	$4
+	dc.w	$4
+	dc.w	$4
+	dc.w	$4
+	dc.w	$4
+	dc.w	$5
+	dc.w	$6
+	dc.w	$7
+	dc.w	$7
+	dc.w	$7
+	dc.w	$7
+	dc.w	$7
+	dc.w	$7
+	dc.w	$7
+	dc.w	$7
+	dc.w	$7
+	dc.w	$7
+	dc.w	$8
+	dc.w	$9
+	dc.w	$A
+	dc.w	$A
+	dc.w	$A
+	dc.w	$A
+	dc.w	$A
+	dc.w	$A
+	dc.w	$A
+	dc.w	$A
+	dc.w	$A
+	dc.w	$A
+	dc.w	$B

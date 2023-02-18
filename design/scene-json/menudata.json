@@ -1,11 +1,12 @@
 {
 	"name":"SceneMenuData",
-	"id":"$FFFF",
+	"id":"SCENE_ID_MENU_DATA",
 	"destinationFilePath":"src/scenes/MenuData.X68",
 	"tilesetNames":[
 		"TransparentTile",
 		"MenuNav",
-		"MenuNavSelected"
+		"MenuNavSelected",
+		"DialogFrame"
 	],
 	"paletteNames":[
 		"PaletteMenu00",
@@ -19,27 +20,27 @@
 			"comment":"navigation",
 			"tilesetIndex":1,
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"00000000",
-			"column":"00000000"
+			"column":"00040000"
 		},
 		{
 			"patternName":"PatternMenuNav",
 			"tilesetIndex":1,
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"00000000",
-			"column":"00140000"
+			"column":"00160000"
 		},
 		{
 			"patternName":"PatternMenuNavSelected",
 			"tilesetIndex":2,
 			"highPriority":false,
-			"paletteNumber":3,
+			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"00000000",
@@ -49,154 +50,50 @@
 			"patternName":"PatternMenuNav",
 			"tilesetIndex":1,
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"00000000",
-			"column":"003C0000"
+			"column":"003A0000"
+		},
+		{
+			"patternName":"PatternSaveLoadFrame",
+			"comment":"save frame",
+			"tilesetIndex":3,
+			"highPriority":false,
+			"paletteNumber":3,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"02800000",
+			"column":"00100000"
+		},	
+		{
+			"patternName":"PatternSaveLoadFrame",
+			"comment":"load",
+			"tilesetIndex":3,
+			"highPriority":false,
+			"paletteNumber":3,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"07800000",
+			"column":"00100000"
 		}
 	],
 	"text":[
 		{
-			"stringLabel":"PatternStatusSaveRow0",
-			"comment":"frame around load menu - line 0",
-			"highPriority":false,
-			"paletteNumber":1,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"07800000",
-			"column":"00100000"
-		},
-		{
-			"stringLabel":"PatternStatusSaveRow1",
-			"comment":"frame around load menu - line 1",
-			"highPriority":false,
-			"paletteNumber":1,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"08000000",
-			"column":"00100000"
-		},
-		{
-			"stringLabel":"PatternStatusSaveRow2",
-			"comment":"frame around load menu - line 2",
-			"highPriority":false,
-			"paletteNumber":1,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"08800000",
-			"column":"00100000"
-		},
-		{
-			"stringLabel":"PatternStatusSaveRow3",
-			"comment":"frame around load menu - line 3",
-			"highPriority":false,
-			"paletteNumber":1,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"09000000",
-			"column":"00100000"
-		},
-		{
-			"stringLabel":"PatternStatusSaveRow4",
-			"comment":"frame around load menu - line 4",
-			"highPriority":false,
-			"paletteNumber":1,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"09800000",
-			"column":"00100000"
-		},
-		{
-			"stringLabel":"PatternStatusSaveRow5",
-			"comment":"frame around load menu - line 5",
-			"highPriority":false,
-			"paletteNumber":1,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"0A000000",
-			"column":"00100000"
-		},
-		{
-			"stringLabel":"PatternStatusSaveRow6",
-			"comment":"frame around load menu - line 6",
-			"highPriority":false,
-			"paletteNumber":1,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"0A800000",
-			"column":"00100000"
-		},
-		{
-			"stringLabel":"PatternStatusSaveRow0",
-			"comment":"frame around save menu - line 0",
-			"highPriority":false,
-			"paletteNumber":1,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"02800000",
-			"column":"00100000"
-		},
-		{
-			"stringLabel":"PatternStatusSaveRow1",
-			"comment":"frame around save menu - line 1",
-			"highPriority":false,
-			"paletteNumber":1,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"03000000",
-			"column":"00100000"
-		},
-		{
-			"stringLabel":"PatternStatusSaveRow2",
-			"comment":"frame around save menu - line 2",
-			"highPriority":false,
-			"paletteNumber":1,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"03800000",
-			"column":"00100000"
-		},
-		{
-			"stringLabel":"PatternStatusSaveRow3",
-			"comment":"frame around save menu - line 3",
-			"highPriority":false,
-			"paletteNumber":1,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"04000000",
-			"column":"00100000"
-		},
-		{
-			"stringLabel":"PatternStatusSaveRow4",
-			"comment":"frame around save menu - line 4",
-			"highPriority":false,
-			"paletteNumber":1,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"04800000",
-			"column":"00100000"
-		},
-		{
-			"stringLabel":"PatternStatusSaveRow5",
-			"comment":"frame around save menu - line 5",
-			"highPriority":false,
-			"paletteNumber":1,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"05000000",
-			"column":"00100000"
-		},
-		{
-			"stringLabel":"PatternStatusSaveRow6",
-			"comment":"frame around save menu - line 6",
-			"highPriority":false,
-			"paletteNumber":1,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"05800000",
-			"column":"00100000"
-		},
-		{
 			"stringLabel":"MenuScreenNavMap",
 			"comment":"map",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":1,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"00800000",
-			"column":"00060000"
+			"column":"00080000"
 		},
 		{
 			"stringLabel":"MenuScreenNavStatus",
 			"comment":"status",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":1,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"00800000",
 			"column":"00180000"
@@ -205,7 +102,7 @@
 			"stringLabel":"MenuScreenNavData",
 			"comment":"data",
 			"highPriority":false,
-			"paletteNumber":3,
+			"paletteNumber":2,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"00800000",
 			"column":"002C0000"
@@ -214,28 +111,64 @@
 			"stringLabel":"MenuScreenNavHelp",
 			"comment":"help",
 			"highPriority":false,
-			"paletteNumber":2,
+			"paletteNumber":1,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"00800000",
-			"column":"00400000"
+			"column":"003E0000"
 		},
 		{
 			"stringLabel":"StatusScreenSave",
-			"comment":"save",
+			"comment":"save label",
 			"highPriority":false,
-			"paletteNumber":1,
-			"layer":"VDP_VRAM_WRITE_A",
+			"paletteNumber":3,
+			"layer":"VDP_VRAM_WRITE_B",
 			"row":"03000000",
 			"column":"00120000"
 		},
 		{
-			"stringLabel":"StatusScreenLoad",
-			"comment":"load",
+			"stringLabel":"StatusScreenSaveTip0",
+			"comment":"save help - line 0",
 			"highPriority":false,
-			"paletteNumber":1,
-			"layer":"VDP_VRAM_WRITE_A",
+			"paletteNumber":3,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"06000000",
+			"column":"00120000"
+		},
+		{
+			"stringLabel":"StatusScreenSaveTip1",
+			"comment":"save help - line 1",
+			"highPriority":false,
+			"paletteNumber":3,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"06800000",
+			"column":"00120000"
+		},		
+		{
+			"stringLabel":"StatusScreenLoad",
+			"comment":"load label",
+			"highPriority":false,
+			"paletteNumber":3,
+			"layer":"VDP_VRAM_WRITE_B",
 			"row":"08000000",
 			"column":"00120000"
-		}
+		},
+		{
+			"stringLabel":"StatusScreenLoadTip0",
+			"comment":"load help - line 0",
+			"highPriority":false,
+			"paletteNumber":3,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"0B000000",
+			"column":"00120000"
+		},			
+		{
+			"stringLabel":"StatusScreenLoadTip1",
+			"comment":"load help - line 1",
+			"highPriority":false,
+			"paletteNumber":3,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"0B800000",
+			"column":"00120000"
+		}		
 	]
 }

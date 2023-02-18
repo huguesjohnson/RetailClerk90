@@ -1,338 +1,2240 @@
-;-------------------------------------------------------------------------------
-; action table for player 1 (daytime events)
-;-------------------------------------------------------------------------------
-ActionTablePlayer1Start:
-	;---------------------------------------------------------------------------
-	; day 00
-	;---------------------------------------------------------------------------
-	; SCENE_ID_VB=$0000
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_WWHALL=$0001
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_WWHALL=$0001
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_WEHALL=$0002
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_CENTER=$0003
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_SHALL=$0004
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_PARKINGLOT=$0005
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_EWHALL=$0006
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_EEHALL=$0007
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_DENIMCOUNTRY=$0008
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_CHECKERS=$0009
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_TLODGE=$000A
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_CAVERN=$000B
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_SVIDEO=$000C
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_NSHACK=$000D
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_POGODAWG=$000E
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_CPLANET=$000F
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_CNOW=$0010
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_TBOOKS=$0011
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_FCBCHECKOUT=$0012
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_FCBFIREARMS=$0013
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_FCBFISHING=$0014
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_FCBCAMPING=$0015
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_SOUTH_CENTER=$0016
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_WWCHECKOUT=$0017
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_WWTV=$0018
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_WWAUDIO=$0019
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_WWAPPLIANCES=$001A
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_BASEMENTWDORM=$001B
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_BASEMENTMDORM=$001C
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_BASEMENTCAFE=$001D
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_BASEMENTOFFICE=$001E
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-ActionTablePlayer1End:
+; generated by build tools
 
-;-------------------------------------------------------------------------------
-; action table for player 2 (nighttime events)
-;-------------------------------------------------------------------------------
-ActionTablePlayer2Start:
-	;---------------------------------------------------------------------------
-	; day 00
-	;---------------------------------------------------------------------------
-	; SCENE_ID_VB=$0000
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_WWHALL=$0001
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_WWHALL=$0001
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_WEHALL=$0002
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_CENTER=$0003
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_SHALL=$0004
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_PARKINGLOT=$0005
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_EWHALL=$0006
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_EEHALL=$0007
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_DENIMCOUNTRY=$0008
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_CHECKERS=$0009
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_TLODGE=$000A
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_CAVERN=$000B
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_SVIDEO=$000C
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_NSHACK=$000D
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_POGODAWG=$000E
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_CPLANET=$000F
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_CNOW=$0010
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_TBOOKS=$0011
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_FCBCHECKOUT=$0012
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_FCBFIREARMS=$0013
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_FCBFISHING=$0014
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_FCBCAMPING=$0015
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_SOUTH_CENTER=$0016
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_WWCHECKOUT=$0017
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_WWTV=$0018
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_WWAUDIO=$0019
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_WWAPPLIANCES=$001A
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_BASEMENTWDORM=$001B
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_BASEMENTMDORM=$001C
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_BASEMENTCAFE=$001D
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-	; SCENE_ID_BASEMENTOFFICE=$001E
-	dc.l	ActionScriptDefaultInteract	; ACTION_INTERACT
-	dc.l	ActionScriptNullEvent	; ACTION_RESPOND
-	dc.l	DefaultExitScene	; ACTION_EXIT_SCENE
-	dc.l	DefaultEnterScene	; ACTION_ENTER_SCENE
-ActionTablePlayer2End:
+;---------------------------------------------------------------------------
+; action table constants
+;---------------------------------------------------------------------------
+SCENE_COUNT=$001F ; total number of scenes
+ACTION_COUNT=$0004 ; total number of actions
+DAY_COUNT=$000E ; total number of days
+ACTION_COUNT_X4=(ACTION_COUNT*4)
+SCENE_COUNT_X_ACTION_COUNT_X4=(SCENE_COUNT*ACTION_COUNT_X4)
+DAY_COUNT_X4=(DAY_COUNT*4)
 
+ActionTableStart:
+;---------------------------------------------------------------------------
+; day 0
+;---------------------------------------------------------------------------
+; scene 0
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 1
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 2
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 3
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 4
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 5
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	ActionScriptExitCavernBackroom ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 6
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 7
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 8
+	dc.l	ActionScriptDay00Scene08Interact ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 9
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 10
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 11
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 12
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 13
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 14
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 15
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 16
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 17
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 18
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 19
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 20
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 21
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 22
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 23
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 24
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 25
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 26
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 27
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 28
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 29
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 30
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+
+;---------------------------------------------------------------------------
+; day 1
+;---------------------------------------------------------------------------
+; scene 0
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 1
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 2
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 3
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 4
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 5
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	ActionScriptExitCavernBackroom ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 6
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 7
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 8
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 9
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 10
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 11
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 12
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 13
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 14
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 15
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 16
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 17
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 18
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 19
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 20
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 21
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 22
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 23
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 24
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 25
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 26
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 27
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 28
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 29
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 30
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+
+;---------------------------------------------------------------------------
+; day 2
+;---------------------------------------------------------------------------
+; scene 0
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 1
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 2
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 3
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 4
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 5
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	ActionScriptExitCavernBackroom ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 6
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 7
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 8
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 9
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 10
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 11
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 12
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 13
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 14
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 15
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 16
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 17
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 18
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 19
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 20
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 21
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 22
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 23
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 24
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 25
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 26
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 27
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 28
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 29
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 30
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+
+;---------------------------------------------------------------------------
+; day 3
+;---------------------------------------------------------------------------
+; scene 0
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 1
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 2
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 3
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 4
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 5
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	ActionScriptExitCavernBackroom ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 6
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 7
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 8
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 9
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 10
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 11
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 12
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 13
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 14
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 15
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 16
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 17
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 18
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 19
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 20
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 21
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 22
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 23
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 24
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 25
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 26
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 27
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 28
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 29
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 30
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+
+;---------------------------------------------------------------------------
+; day 4
+;---------------------------------------------------------------------------
+; scene 0
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 1
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 2
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 3
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 4
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 5
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	ActionScriptExitCavernBackroom ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 6
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 7
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 8
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 9
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 10
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 11
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 12
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 13
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 14
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 15
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 16
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 17
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 18
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 19
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 20
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 21
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 22
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 23
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 24
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 25
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 26
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 27
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 28
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 29
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 30
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+
+;---------------------------------------------------------------------------
+; day 5
+;---------------------------------------------------------------------------
+; scene 0
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 1
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 2
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 3
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 4
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 5
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	ActionScriptExitCavernBackroom ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 6
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 7
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 8
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 9
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 10
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 11
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 12
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 13
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 14
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 15
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 16
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 17
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 18
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 19
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 20
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 21
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 22
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 23
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 24
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 25
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 26
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 27
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 28
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 29
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 30
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+
+;---------------------------------------------------------------------------
+; day 6
+;---------------------------------------------------------------------------
+; scene 0
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 1
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 2
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 3
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 4
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 5
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	ActionScriptExitCavernBackroom ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 6
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 7
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 8
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 9
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 10
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 11
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 12
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 13
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 14
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 15
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 16
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 17
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 18
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 19
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 20
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 21
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 22
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 23
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 24
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 25
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 26
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 27
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 28
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 29
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 30
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+
+;---------------------------------------------------------------------------
+; day 7
+;---------------------------------------------------------------------------
+; scene 0
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 1
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 2
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 3
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 4
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 5
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	ActionScriptExitCavernBackroom ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 6
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 7
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 8
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 9
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 10
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 11
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 12
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 13
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 14
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 15
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 16
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 17
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 18
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 19
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 20
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 21
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 22
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 23
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 24
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 25
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 26
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 27
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 28
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 29
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 30
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+
+;---------------------------------------------------------------------------
+; day 8
+;---------------------------------------------------------------------------
+; scene 0
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 1
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 2
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 3
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 4
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 5
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	ActionScriptExitCavernBackroom ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 6
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 7
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 8
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 9
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 10
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 11
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 12
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 13
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 14
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 15
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 16
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 17
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 18
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 19
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 20
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 21
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 22
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 23
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 24
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 25
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 26
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 27
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 28
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 29
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 30
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+
+;---------------------------------------------------------------------------
+; day 9
+;---------------------------------------------------------------------------
+; scene 0
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 1
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 2
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 3
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 4
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 5
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	ActionScriptExitCavernBackroom ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 6
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 7
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 8
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 9
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 10
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 11
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 12
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 13
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 14
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 15
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 16
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 17
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 18
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 19
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 20
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 21
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 22
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 23
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 24
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 25
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 26
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 27
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 28
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 29
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 30
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+
+;---------------------------------------------------------------------------
+; day 10
+;---------------------------------------------------------------------------
+; scene 0
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 1
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 2
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 3
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 4
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 5
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	ActionScriptExitCavernBackroom ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 6
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 7
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 8
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 9
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 10
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 11
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 12
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 13
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 14
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 15
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 16
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 17
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 18
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 19
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 20
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 21
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 22
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 23
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 24
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 25
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 26
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 27
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 28
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 29
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 30
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+
+;---------------------------------------------------------------------------
+; day 11
+;---------------------------------------------------------------------------
+; scene 0
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 1
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 2
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 3
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 4
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 5
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	ActionScriptExitCavernBackroom ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 6
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 7
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 8
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 9
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 10
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 11
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 12
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 13
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 14
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 15
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 16
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 17
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 18
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 19
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 20
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 21
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 22
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 23
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 24
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 25
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 26
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 27
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 28
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 29
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 30
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+
+;---------------------------------------------------------------------------
+; day 12
+;---------------------------------------------------------------------------
+; scene 0
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 1
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 2
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 3
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 4
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 5
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	ActionScriptExitCavernBackroom ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 6
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 7
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 8
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 9
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 10
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 11
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 12
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 13
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 14
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 15
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 16
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 17
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 18
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 19
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 20
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 21
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 22
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 23
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 24
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 25
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 26
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 27
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 28
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 29
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 30
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+
+;---------------------------------------------------------------------------
+; day 13
+;---------------------------------------------------------------------------
+; scene 0
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 1
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 2
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 3
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 4
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 5
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	ActionScriptExitCavernBackroom ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 6
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 7
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 8
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 9
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 10
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 11
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 12
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 13
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 14
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 15
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 16
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 17
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 18
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 19
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 20
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 21
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 22
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 23
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 24
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 25
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 26
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 27
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 28
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 29
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+; scene 30
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	DefaultExitScene ; ExitScene
+	dc.l	DefaultEnterScene ; EnterScene
+
+ActionTableEnd:

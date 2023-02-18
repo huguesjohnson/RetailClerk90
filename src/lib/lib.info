@@ -1,13 +1,10 @@
 This folder contains libraries that are maintained outside of this project.
 
 For practical purposes the code is copied here vs compiling & linking to object code.
-(OK, I'm just being lazy and need to start using vlink)
+-This is not purely laziness. 
 
 The libraries are:
 
 echo: See CREDITS.
 
-dubbel: My library of code to build Retail Clerk like games. 
--Calling it an 'engine' is giving it too much credit.
--I can't stand when projects call themselves 'frameworks' because they rarely are.
--So it's just a bunch of code - that's as fancy a name as I'm willing to give it.
+retailclerk: My library of code to build Retail Clerk like games. 

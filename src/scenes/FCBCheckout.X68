@@ -8,42 +8,38 @@
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0006 ; tileset count - 1
+	dc.w	$0005 ; tileset count - 1
 
 	; tileset 0 - tiles start at [0] - tileset length [1]
 	dc.l	TransparentTileTilesStart
 	dc.l	TransparentTileTilesEnd
 
-	; tileset 1 - tiles start at [1] - tileset length [10]
-	dc.l	FloorStoneTilesStart
-	dc.l	FloorStoneTilesEnd
+	; tileset 1 - tiles start at [1] - tileset length [4]
+	dc.l	FloorFCBTilesStart
+	dc.l	FloorFCBTilesEnd
 
-	; tileset 2 - tiles start at [11] - tileset length [14]
-	dc.l	FrameWoodTilesStart
-	dc.l	FrameWoodTilesEnd
+	; tileset 2 - tiles start at [5] - tileset length [4D]
+	dc.l	FrameTilesStart
+	dc.l	FrameTilesEnd
 
-	; tileset 3 - tiles start at [25] - tileset length [27]
-	dc.l	FCBPondLowerRightTilesStart
-	dc.l	FCBPondLowerRightTilesEnd
+	; tileset 3 - tiles start at [52] - tileset length [17]
+	dc.l	FCBPondSETilesStart
+	dc.l	FCBPondSETilesEnd
 
-	; tileset 4 - tiles start at [4C] - tileset length [10]
+	; tileset 4 - tiles start at [69] - tileset length [4]
 	dc.l	FCBPathTilesStart
 	dc.l	FCBPathTilesEnd
 
-	; tileset 5 - tiles start at [5C] - tileset length [B]
-	dc.l	CounterTopTilesStart
-	dc.l	CounterTopTilesEnd
-
-	; tileset 6 - tiles start at [67] - tileset length [3]
-	dc.l	CounterShelvesTilesStart
-	dc.l	CounterShelvesTilesEnd
+	; tileset 5 - tiles start at [6D] - tileset length [30]
+	dc.l	CounterTilesStart
+	dc.l	CounterTilesEnd
 
 	;---------------------------------------------------------------------------
 	; palettes
 	;---------------------------------------------------------------------------
 	dc.l	PaletteFCBFloorWall
-	dc.l	PaletteFCBCheckout00
-	dc.l	PaletteFCBCheckout01
+	dc.l	PaletteFCBWoodWater
+	dc.l	PaletteFCBCheckout
 	dc.l	PalettePeople
 
 	;---------------------------------------------------------------------------
@@ -51,72 +47,74 @@
 	;---------------------------------------------------------------------------
 	dc.w	$0009 ; scenery count - 1
 
-	; stone floor
-	dc.l	Pattern32x32Tile
+	; floor
+	dc.l	Pattern16x16x304
 	;		%pccvhnnnnnnnnnnn
 	dc.w	%0000000000000001 ; vdp pattern
-	dc.w	$0006 ; repeat=6
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$00000000 ; initial drawing location
+	dc.w	$000C ; repeat=12
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$00800000 ; initial drawing location
 
 	; south wall
-	dc.l	PatternFrameBottomLongLeft
+	dc.l	PatternFrameSouthClosedSolo
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000010001 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$0D800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$0D000000 ; initial drawing location
 
 	; wood path - east-west
-	dc.l	PatternFCBFloorH
+	dc.l	Pattern16x16x240
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000001001100 ; vdp pattern
+	dc.w	%0010000001101001 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$09800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$09800000 ; initial drawing location
 
 	; wood path - north-south
-	dc.l	PatternFCBFloorVSouth
+	dc.l	Pattern16x16
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000001001100 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$00380000 ; initial drawing location
+	dc.w	%0010000001101001 ; vdp pattern
+	dc.w	$0008 ; repeat=8
+	dc.l	VDP_VRAM_WRITE_B+$003A0000+$00800000 ; initial drawing location
 
-	dc.l	PatternFCBFloorVSouth
+	; wood path - leading to pond
+	dc.l	Pattern16x16
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000001001100 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$00380000 ; initial drawing location
+	dc.w	%0010000001101001 ; vdp pattern
+	dc.w	$0004 ; repeat=4
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$05800000 ; initial drawing location
+
+	; wood path - leading to pond
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001101001 ; vdp pattern
+	dc.w	$0004 ; repeat=4
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$05800000 ; initial drawing location
+
+	; wood path - leading to pond
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001101001 ; vdp pattern
+	dc.w	$0004 ; repeat=4
+	dc.l	VDP_VRAM_WRITE_B+$00060000+$05800000 ; initial drawing location
+
+	; wood path - leading to pond
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001101001 ; vdp pattern
+	dc.w	$0004 ; repeat=4
+	dc.l	VDP_VRAM_WRITE_B+$00060000+$05800000 ; initial drawing location
 
 	; pond
-	dc.l	PatternFCBPondLowerRight
+	dc.l	PatternFCBPondSE
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000000100101 ; vdp pattern
+	dc.w	%0010000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$00000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$00800000 ; initial drawing location
 
-	; shelves under counter
-	dc.l	Pattern3Tile112x8
+	dc.l	PatternFCBCounter
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000001100111 ; vdp pattern
-	dc.w	$0001 ; repeat=1
-	dc.l	VDP_VRAM_WRITE_B+$001C0000+$08800000 ; initial drawing location
-
-	; counter
-	dc.l	PatternCounterLow112x24Open
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000001011100 ; vdp pattern
+	dc.w	%0100000001101101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$001C0000+$07800000 ; initial drawing location
-
-	dc.l	PatternCounterHigh112x8Open
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%1010000001011100 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$001C0000+$07000000 ; initial drawing location
-
-	dc.l	PatternCounterSide32x64OpenLower
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000001011100 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00300000+$03800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00260000+$04800000 ; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text
@@ -214,9 +212,9 @@
 	;---------------------------------------------------------------------------
 	dc.w	$0003 ; npc count - 1
 
-	dc.w	$0130 ; starting x location of npc0
-	dc.w	$00D4 ; starting y location of npc0
-	dc.w	DIRECTION_DOWN ; starting direction of npc0
+	dc.w	$0140 ; starting x location of npc0
+	dc.w	$00E0 ; starting y location of npc0
+	dc.w	DIRECTION_RIGHT ; starting direction of npc0
 	dc.w	$FFFF ; movement frequency of npc0
 	dc.l	NullMovementStart ; location of movement pattern for npc0
 	dc.w	(NullMovementEnd-NullMovementStart-1) ; movement pattern length

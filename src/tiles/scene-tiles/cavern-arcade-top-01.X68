@@ -2,32 +2,32 @@
 
 	; 0
 	dc.l	$01111111
-	dc.l	$01188888
-	dc.l	$01881188
-	dc.l	$01444D44
-	dc.l	$01444141
-	dc.l	$0133D333
-	dc.l	$01133333
+	dc.l	$011EEEEE
+	dc.l	$01EE11EE
+	dc.l	$01222F22
+	dc.l	$01222121
+	dc.l	$01CCFCCC
+	dc.l	$011CCCCC
 	dc.l	$01111111
 
 	; 1
 	dc.l	$11111111
-	dc.l	$88888888
-	dc.l	$18188188
-	dc.l	$D44D4D44
-	dc.l	$44414414
-	dc.l	$D33D3D33
-	dc.l	$33333333
+	dc.l	$EEEEEEEE
+	dc.l	$1E1EE1EE
+	dc.l	$F22F2F22
+	dc.l	$22212212
+	dc.l	$FCCFCFCC
+	dc.l	$CCCCCCCC
 	dc.l	$11111111
 
 	; 2
 	dc.l	$11111110
-	dc.l	$88888110
-	dc.l	$81818810
-	dc.l	$D44D4410
-	dc.l	$41411410
-	dc.l	$D33D3310
-	dc.l	$33333110
+	dc.l	$EEEEE110
+	dc.l	$E1E1EE10
+	dc.l	$F22F2210
+	dc.l	$21211210
+	dc.l	$FCCFCC10
+	dc.l	$CCCCC110
 	dc.l	$11111110
 
 	; 3
@@ -37,18 +37,18 @@
 	dc.l	$0000E1B1
 	dc.l	$0000E111
 	dc.l	$0000E111
-	dc.l	$0000E11C
+	dc.l	$0000E117
 	dc.l	$0000E111
 
 	; 4
 	dc.l	$11111111
 	dc.l	$11111111
 	dc.l	$11111111
-	dc.l	$1171511C
-	dc.l	$D1111711
-	dc.l	$11B111F1
+	dc.l	$11B15117
+	dc.l	$F1111B11
+	dc.l	$11B11181
 	dc.l	$11111111
-	dc.l	$F171C111
+	dc.l	$81B17111
 
 	; 5
 	dc.l	$11111000
@@ -57,36 +57,36 @@
 	dc.l	$111E0000
 	dc.l	$1B1E0000
 	dc.l	$111E0000
-	dc.l	$D11E0000
+	dc.l	$F11E0000
 	dc.l	$111E0000
 
 	; 6
-	dc.l	$0000E117
+	dc.l	$0000E11B
 	dc.l	$0000E111
 	dc.l	$0000E111
 	dc.l	$0000E111
-	dc.l	$0000E16C
-	dc.l	$0000E166
+	dc.l	$0000E177
+	dc.l	$0000E177
 	dc.l	$0000E111
 	dc.l	$00011111
 
 	; 7
-	dc.l	$11111171
-	dc.l	$15117111
+	dc.l	$111111B1
+	dc.l	$1511B111
 	dc.l	$11111111
-	dc.l	$CCCCCCCC
-	dc.l	$CCCCCCCC
-	dc.l	$66666666
+	dc.l	$77777777
+	dc.l	$77777777
+	dc.l	$77777777
 	dc.l	$11111111
-	dc.l	$7A511117
+	dc.l	$B061111B
 
 	; 8
 	dc.l	$111E0000
 	dc.l	$511E0000
 	dc.l	$111E0000
 	dc.l	$111E0000
-	dc.l	$C61E0000
-	dc.l	$661E0000
+	dc.l	$771E0000
+	dc.l	$771E0000
 	dc.l	$111E0000
-	dc.l	$A5111000
+	dc.l	$06111000
 

@@ -86,15 +86,15 @@ LoadSpriteZeroLoop:
 	;---------------------------------------------------------------------------
 	; update y
 	;---------------------------------------------------------------------------
-	move.l	#VDP_VRAM_WRITE_SPRITE,d6	; add to sprite table address
-	move.l	d6,(VDP_CONTROL)	; set write location in VDP
-	move.w	#$0118,(VDP_DATA)	; copy the new y-coordinate
+	move.l	#VDP_VRAM_WRITE_SPRITE,d6 ; add to sprite table address
+	move.l	d6,(VDP_CONTROL) ; set write location in VDP
+	move.w	#TITLE_MENU_NEWGAME_Y,(VDP_DATA) ; copy the new y-coordinate
 	;---------------------------------------------------------------------------
 	; update x
 	;---------------------------------------------------------------------------
-	add.l	#$00060000,d6	; move to x-coordinate
-	move.l	d6,(VDP_CONTROL)	; set write location in VDP
-	move.w	#$0170,(VDP_DATA)	; copy the new x-coordinate
+	add.l	#$00060000,d6 ; move to x-coordinate
+	move.l	d6,(VDP_CONTROL) ; set write location in VDP
+	move.w	#TITLE_MENU_NEWGAME_X,(VDP_DATA) ; copy the new x-coordinate
 
 InitPlayerSprite:
 	; player	

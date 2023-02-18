@@ -285,7 +285,7 @@ ProcessStatusScreenStatus:
 ClearItemDescriptionRowLoop:
 	move.w	#STATUS_SCREEN_INVENTORY_DESCRIPTION_COLS,d5
 ClearItemDescriptionColLoop:
-	move.w	#DIALOG_BASE_TILE_LOW+%0010000000000000,d6 ; base tile
+	move.w	#FONT_BASE_TILE_LOW+%0110000000000000,d6 ; base tile
 	move.l	(MEM_DIALOG_VDP),(VDP_CONTROL) ; set VDP address
 	move.w  d6,(VDP_DATA) ; copy the character to VDP
 	; draw the next character
@@ -334,7 +334,7 @@ BuildItemDescriptionTextLoop:
 .1
 	; update d6 to point to the tile ID
 	sub.w	#$20,d6	; subtract 32 to get the character index
-	add.w	#DIALOG_BASE_TILE_LOW+%0010000000000000,d6	; add the base tile
+	add.w	#FONT_BASE_TILE_LOW+%0110000000000000,d6	; add the base tile
 	move.l	(MEM_DIALOG_VDP),(VDP_CONTROL)	; set VDP address
 	move.w  d6,(VDP_DATA)	; copy the character to VDP
 	; draw the next character

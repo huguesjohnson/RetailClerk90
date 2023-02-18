@@ -4,13 +4,13 @@
 	"destinationFilePath":"src/scenes/BasementWDorm.X68",
 	"tilesetNames":[
 		"TransparentTile",
-		"FloorPavement",
-		"FrameRect",
-		"BasementFloorLight",
+		"FloorBasement",
+		"Frame",
 		"BasementBed",
-		"BasementLadder",
-		"BasementCrate16x16",
-		"BasementCrate32x32"
+		"BasementDresser32x40",
+		"BasementCouchLeft24x40",
+		"BasementCouchRight24x40",
+		"BasementGlassTable32x24"
 	],
 	"paletteNames":[
 		"PaletteBasementFloor",
@@ -20,147 +20,92 @@
 	],
 	"scenery":[
 		{
-			"patternName":"Pattern32x32Tile",
+			"patternName":"Pattern16x16x304",
 			"comment":"floor",
 			"tilesetIndex":1,
 			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":0,
-			"repeat":6,
+			"repeat":12,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"00000000",
-			"column":"00000000"
-		},
-		{
-			"patternName":"PatternFrameSideClosedLeft",
-			"comment":"left wall",
-			"tilesetIndex":2,
-			"tilesetOffset":0,
-			"highPriority":true,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
 			"row":"00800000",
-			"column":"00000000"
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameSideClosedRight",
-			"comment":"right wall",
+			"patternName":"PatternFrameWestClosed",
+			"comment":"west wall",
 			"tilesetIndex":2,
 			"tilesetOffset":0,
-			"highPriority":true,
-			"paletteNumber":1,
+			"highPriority":false,
+			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00800000",
-			"column":"004E0000"
+			"row":"02800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameTopOpenLeft",
-			"comment":"north wall - left side",
+			"patternName":"PatternFrameEastClosed",
+			"comment":"east wall",
 			"tilesetIndex":2,
 			"tilesetOffset":0,
-			"highPriority":true,
-			"paletteNumber":1,
+			"highPriority":false,
+			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00000000",
-			"column":"00000000"
+			"row":"02800000",
+			"column":"004A0000"
 		},
 		{
-			"patternName":"PatternFrameTopOpenRight",
-			"comment":"north wall - right side",
-			"tilesetIndex":2,
-			"tilesetOffset":0,
-			"highPriority":true,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00360000",
-			"column":"00000000"
-		},
-		{
-			"patternName":"PatternFrameBottom",
+			"patternName":"PatternFrameSouthClosed",
 			"comment":"south wall",
 			"tilesetIndex":2,
 			"tilesetOffset":0,
-			"highPriority":true,
-			"paletteNumber":1,
+			"highPriority":false,
+			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"0D800000",
-			"column":"00000000"
+			"row":"0D000000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"Pattern48x32",
-			"comment":"lighting",
-			"tilesetIndex":3,
+			"patternName":"PatternFrameNorthOpenWestSide",
+			"comment":"north wall - west",
+			"tilesetIndex":2,
 			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"02000000",
-			"column":"00160000"
+			"row":"00800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"Pattern48x32",
-			"tilesetIndex":3,
+			"patternName":"PatternFrameNorthOpenEastSide",
+			"comment":"north wall - east",
+			"tilesetIndex":2,
 			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"02000000",
-			"column":"002E0000"
-		},
-		{
-			"patternName":"Pattern48x32",
-			"tilesetIndex":3,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":0,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"06000000",
-			"column":"00160000"
-		},
-		{
-			"patternName":"Pattern48x32",
-			"tilesetIndex":3,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":0,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"06000000",
-			"column":"002E0000"
-		},
-		{
-			"patternName":"Pattern48x32",
-			"tilesetIndex":3,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":0,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"0A000000",
-			"column":"00160000"
-		},
-		{
-			"patternName":"Pattern48x32",
-			"tilesetIndex":3,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":0,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"0A000000",
+			"row":"00800000",
 			"column":"002E0000"
 		},
 		{
 			"patternName":"PatternBasementBed",
-			"comment":"beds",
+			"comment":"bed",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01800000",
+			"column":"00060000"
+		},
+		{
+			"patternName":"Pattern32x40",
+			"comment":"dresser - west",
 			"tilesetIndex":4,
 			"tilesetOffset":0,
 			"highPriority":false,
@@ -168,208 +113,125 @@
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"01000000",
-			"column":"00020000"
+			"column":"000E0000"
 		},
 		{
 			"patternName":"PatternBasementBed",
+			"comment":"bed",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01800000",
+			"column":"00180000"
+		},		
+		
+		{
+			"patternName":"PatternBasementBed",
+			"comment":"bed",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01800000",
+			"column":"00320000"
+		},
+		{
+			"patternName":"Pattern32x40",
+			"comment":"dresser - west",
 			"tilesetIndex":4,
 			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"05800000",
-			"column":"00020000"
+			"row":"01000000",
+			"column":"003A0000"
 		},
 		{
 			"patternName":"PatternBasementBed",
-			"tilesetIndex":4,
+			"comment":"bed",
+			"tilesetIndex":3,
 			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"0A000000",
-			"column":"00020000"
+			"row":"01800000",
+			"column":"00440000"
 		},
 		{
-			"patternName":"PatternBasementLadder",
-			"comment":"stairs",
+			"patternName":"Pattern24x40",
+			"comment":"couch - right",
+			"tilesetIndex":6,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"06800000",
+			"column":"001C0000"
+		},
+		{
+			"patternName":"Pattern24x40",
+			"comment":"couch - left",
 			"tilesetIndex":5,
 			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00800000",
-			"column":"00480000"
-		},
+			"row":"06800000",
+			"column":"002E0000"
+		},	
 		{
-			"patternName":"Pattern32x32",
-			"comment":"crates",
+			"patternName":"Pattern32x40",
+			"comment":"glass table",
 			"tilesetIndex":7,
 			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00800000",
-			"column":"00400000"
-		},
-		{
-			"patternName":"Pattern16x16",
-			"tilesetIndex":6,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"02800000",
-			"column":"00440000"
-		},
-		{
-			"patternName":"Pattern16x16",
-			"tilesetIndex":6,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"03800000",
-			"column":"00440000"
-		},
-		{
-			"patternName":"Pattern16x16",
-			"tilesetIndex":6,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"02800000",
-			"column":"00400000"
-		},
-		{
-			"patternName":"Pattern16x16",
-			"tilesetIndex":6,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"03800000",
-			"column":"00400000"
-		},
-		{
-			"patternName":"Pattern32x32",
-			"tilesetIndex":7,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00800000",
-			"column":"00380000"
-		},
-		{
-			"patternName":"Pattern16x16",
-			"tilesetIndex":6,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"02800000",
-			"column":"003C0000"
-		},
-		{
-			"patternName":"Pattern16x16",
-			"tilesetIndex":6,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"03800000",
-			"column":"003C0000"
-		},
-		{
-			"patternName":"Pattern16x16",
-			"tilesetIndex":6,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"02800000",
-			"column":"00380000"
-		},
-		{
-			"patternName":"Pattern16x16",
-			"tilesetIndex":6,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"03800000",
-			"column":"00380000"
-		},
-		{
-			"patternName":"Pattern32x32",
-			"tilesetIndex":7,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"06000000",
+			"row":"07800000",
 			"column":"00240000"
-		}
+		}		
 	],
 	"objects":[
 		{
 			"id":"OBJ_SCENE_BASEMENT_BED",
-			"x":128,
-			"y":144,
-			"width":39,
-			"height":48
+			"x":152,
+			"y":152,
+			"width":22,
+			"height":32
 		},
 		{
 			"id":"OBJ_SCENE_BASEMENT_BED",
-			"x":128,
-			"y":216,
-			"width":39,
-			"height":48
+			"x":224,
+			"y":152,
+			"width":22,
+			"height":32
 		},
 		{
 			"id":"OBJ_SCENE_BASEMENT_BED",
-			"x":128,
-			"y":288,
-			"width":39,
-			"height":48
+			"x":330,
+			"y":152,
+			"width":22,
+			"height":32
 		},
 		{
-			"id":"OBJ_SCENE_BASEMENT_LADDER",
-			"x":416,
-			"y":136,
-			"width":23,
-			"height":50
+			"id":"OBJ_SCENE_BASEMENT_BED",
+			"x":402,
+			"y":152,
+			"width":22,
+			"height":32
 		},
-		{
-			"id":"OBJ_SCENE_BASEMENT_CRATE",
-			"x":350,
-			"y":136,
-			"width":63,
-			"height":58
-		},
-		{
-			"id":"OBJ_SCENE_BASEMENT_CRATE",
-			"x":272,
-			"y":224,
-			"width":31,
-			"height":24
-		},
+		null,
+		null,
 		null,
 		null,
 		null,

@@ -4,11 +4,12 @@
 	"destinationFilePath":"src/scenes/WWTV.X68",
 	"tilesetNames":[
 		"TransparentTile",
-		"FloorTileSmall",
-		"FrameRect",
-		"TVLargeHigh",
-		"TVLargeLow",
-		"WWTVWall"
+		"FloorWW",
+		"Frame",
+		"SmallTVOff24x40",
+		"SmallTVOn24x40",
+		"LargeTVHigh64x16",
+		"LargeTVLow64x40"
 	],
 	"paletteNames":[
 		"PaletteWWFloorWall",
@@ -18,181 +19,284 @@
 	],
 	"scenery":[
 		{
-			"patternName":"Pattern32x32Tile",
+			"patternName":"Pattern16x16x304",
 			"comment":"floor",
 			"tilesetIndex":1,
 			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":0,
-			"repeat":6,
+			"repeat":12,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"00000000",
-			"column":"00000000"
+			"row":"00800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternShelves24x64",
-			"comment":"shelves",
+			"patternName":"PatternFrameNorthClosedEastWestOpen",
+			"comment":"north wall",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"00800000",
+			"column":"00020000"
+		},
+		{
+			"patternName":"PatternWWTVSouthWestCorner",
+			"comment":"southwest corner",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"0D000000",
+			"column":"00020000"
+		},
+		{
+			"patternName":"PatternWWTVSouthEastCorner",
+			"comment":"southeast corner",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"0D000000",
+			"column":"004A0000"
+		},
+		{
+			"patternName":"Pattern24x40",
+			"comment":"tv along north wall - 0",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01000000",
+			"column":"00040000"
+		},
+		{
+			"patternName":"Pattern24x40",
+			"comment":"tv along north wall - 1",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01000000",
+			"column":"000A0000"
+		},		
+		{
+			"patternName":"Pattern24x40",
+			"comment":"tv along north wall - 2",
+			"tilesetIndex":4,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01000000",
+			"column":"00100000"
+		},
+		{
+			"patternName":"Pattern24x40",
+			"comment":"tv along north wall - 3",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01000000",
+			"column":"00160000"
+		},
+		{
+			"patternName":"Pattern24x40",
+			"comment":"tv along north wall - 4",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01000000",
+			"column":"001C0000"
+		},
+		{
+			"patternName":"Pattern24x40",
+			"comment":"tv along north wall - 5",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01000000",
+			"column":"00220000"
+		},
+		{
+			"patternName":"Pattern24x40",
+			"comment":"tv along north wall - 6",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01000000",
+			"column":"00280000"
+		},
+		{
+			"patternName":"Pattern24x40",
+			"comment":"tv along north wall - 7",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01000000",
+			"column":"002E0000"
+		},
+		{
+			"patternName":"Pattern24x40",
+			"comment":"tv along north wall - 8",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01000000",
+			"column":"00340000"
+		},
+		{
+			"patternName":"Pattern24x40",
+			"comment":"tv along north wall - 9",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01000000",
+			"column":"003A0000"
+		},
+		{
+			"patternName":"Pattern24x40",
+			"comment":"tv along north wall - 10",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01000000",
+			"column":"00400000"
+		},	
+		{
+			"patternName":"Pattern24x40",
+			"comment":"tv along north wall - 11",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01000000",
+			"column":"00460000"
+		},							
+		{
+			"patternName":"Pattern64x16",
+			"comment":"large tv - west - high",
 			"tilesetIndex":5,
+			"tilesetOffset":0,
+			"highPriority":true,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"05800000",
+			"column":"00140000"
+		},	
+		{
+			"patternName":"Pattern64x40",
+			"comment":"large tv - west - low",
+			"tilesetIndex":6,
 			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00800000",
-			"column":"00000000"
+			"row":"06800000",
+			"column":"00140000"
 		},
 		{
-			"patternName":"PatternFrameTopLong",
-			"comment":"north wall",
-			"tilesetIndex":2,
+			"patternName":"Pattern64x16",
+			"comment":"large tv - west - high",
+			"tilesetIndex":5,
 			"tilesetOffset":0,
 			"highPriority":true,
-			"paletteNumber":0,
+			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00000000",
-			"column":"00000000"
-		},
+			"row":"05800000",
+			"column":"002E0000"
+		},	
 		{
-			"patternName":"Pattern24x16",
-			"comment":"large tvs",
-			"tilesetIndex":3,
-			"tilesetOffset":0,
-			"highPriority":true,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"04000000",
-			"column":"000E0000"
-		},
-		{
-			"patternName":"Pattern24x32",
-			"tilesetIndex":4,
+			"patternName":"Pattern64x40",
+			"comment":"large tv - west - low",
+			"tilesetIndex":6,
 			"tilesetOffset":0,
 			"highPriority":false,
-			"paletteNumber":1,
+			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"05000000",
-			"column":"000E0000"
-		},
-		{
-			"patternName":"Pattern24x16",
-			"tilesetIndex":3,
-			"tilesetOffset":0,
-			"highPriority":true,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"04000000",
-			"column":"001E0000"
-		},
-		{
-			"patternName":"Pattern24x32",
-			"tilesetIndex":4,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"05000000",
-			"column":"001E0000"
-		},
-		{
-			"patternName":"Pattern24x16",
-			"tilesetIndex":3,
-			"tilesetOffset":0,
-			"highPriority":true,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"04000000",
-			"column":"002C0000"
-		},
-		{
-			"patternName":"Pattern24x32",
-			"tilesetIndex":4,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"05000000",
-			"column":"002C0000"
-		},
-		{
-			"patternName":"Pattern24x16",
-			"tilesetIndex":3,
-			"tilesetOffset":0,
-			"highPriority":true,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"04000000",
-			"column":"003C0000"
-		},
-		{
-			"patternName":"Pattern24x32",
-			"tilesetIndex":4,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"05000000",
-			"column":"003C0000"
+			"row":"06800000",
+			"column":"002E0000"
 		}
 	],
 	"objects":[
 		{
 			"id":"OBJ_SCENE_WWTV_LARGETV",
-			"x":182,
-			"y":208,
-			"width":25,
-			"height":24
+			"x":208,
+			"y":216,
+			"width":60,
+			"height":56
 		},
 		{
 			"id":"OBJ_SCENE_WWTV_LARGETV",
-			"x":246,
-			"y":208,
-			"width":25,
-			"height":24
-		},
-		{
-			"id":"OBJ_SCENE_WWTV_LARGETV",
-			"x":302,
-			"y":208,
-			"width":25,
-			"height":24
-		},
-		{
-			"id":"OBJ_SCENE_WWTV_LARGETV",
-			"x":366,
-			"y":208,
-			"width":25,
-			"height":24
+			"x":312,
+			"y":216,
+			"width":60,
+			"height":56
 		},
 		{
 			"id":"OBJ_SCENE_WWTV_TVWALL",
-			"x":136,
-			"y":136,
+			"x":144,
+			"y":152,
 			"width":100,
-			"height":24
+			"height":28
 		},
 		{
 			"id":"OBJ_SCENE_WWTV_TVWALL",
-			"x":236,
-			"y":136,
+			"x":244,
+			"y":152,
 			"width":100,
-			"height":24
+			"height":28
 		},
 		{
 			"id":"OBJ_SCENE_WWTV_TVWALL",
-			"x":390,
-			"y":136,
+			"x":344,
+			"y":152,
 			"width":127,
-			"height":16
+			"height":28
 		},
+		null,
+		null,
 		null,
 		null,
 		null
@@ -206,8 +310,8 @@
 	],
 	"npcLocations":[
 		{
-			"x":240,
-			"y":240,
+			"x":220,
+			"y":260,
 			"direction":"DIRECTION_DOWN",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"

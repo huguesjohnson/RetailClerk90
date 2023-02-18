@@ -45,38 +45,38 @@ PatternFCBTentLarge:
 	dc.w	$1A
 	dc.w	$1B
 	dc.w	$1C
+	dc.w	$1B
 	dc.w	$1D
 	dc.w	$1E
 	dc.w	$1F
 	dc.w	$20
 	dc.w	$21
-	dc.w	$22
 	dc.w	$1B
-	dc.w	$23
+	dc.w	$22
 	dc.w	$0
+	dc.w	$23
 	dc.w	$24
 	dc.w	$25
 	dc.w	$26
 	dc.w	$27
+	dc.w	$1E
+	dc.w	$1E
 	dc.w	$28
-	dc.w	$1F
-	dc.w	$1F
+	dc.w	$1B
 	dc.w	$29
 	dc.w	$2A
 	dc.w	$2B
 	dc.w	$2C
 	dc.w	$2D
 	dc.w	$2E
+	dc.w	$2E
 	dc.w	$2F
 	dc.w	$30
-	dc.w	$30
+	dc.w	$31
+	dc.w	$31
 	dc.w	$31
 	dc.w	$32
 	dc.w	$33
-	dc.w	$33
-	dc.w	$33
+	dc.w	$2E
+	dc.w	$2E
 	dc.w	$34
-	dc.w	$35
-	dc.w	$30
-	dc.w	$30
-	dc.w	$36

@@ -8,130 +8,186 @@
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0008 ; tileset count - 1
+	dc.w	$0009 ; tileset count - 1
 
 	; tileset 0 - tiles start at [0] - tileset length [1]
 	dc.l	TransparentTileTilesStart
 	dc.l	TransparentTileTilesEnd
 
-	; tileset 1 - tiles start at [1] - tileset length [10]
-	dc.l	FloorStoneTilesStart
-	dc.l	FloorStoneTilesEnd
+	; tileset 1 - tiles start at [1] - tileset length [4]
+	dc.l	FloorFCBTilesStart
+	dc.l	FloorFCBTilesEnd
 
-	; tileset 2 - tiles start at [11] - tileset length [14]
-	dc.l	FrameWoodTilesStart
-	dc.l	FrameWoodTilesEnd
+	; tileset 2 - tiles start at [5] - tileset length [4D]
+	dc.l	FrameTilesStart
+	dc.l	FrameTilesEnd
 
-	; tileset 3 - tiles start at [25] - tileset length [25]
-	dc.l	FCBPondTopLeftTilesStart
-	dc.l	FCBPondTopLeftTilesEnd
+	; tileset 3 - tiles start at [52] - tileset length [17]
+	dc.l	FCBPondNWTilesStart
+	dc.l	FCBPondNWTilesEnd
 
-	; tileset 4 - tiles start at [4A] - tileset length [10]
+	; tileset 4 - tiles start at [69] - tileset length [4]
 	dc.l	FCBPathTilesStart
 	dc.l	FCBPathTilesEnd
 
-	; tileset 5 - tiles start at [5A] - tileset length [15]
-	dc.l	FCBCampingCampsiteTilesStart
-	dc.l	FCBCampingCampsiteTilesEnd
+	; tileset 5 - tiles start at [6D] - tileset length [40]
+	dc.l	FCBTent64x64TilesStart
+	dc.l	FCBTent64x64TilesEnd
 
-	; tileset 6 - tiles start at [6F] - tileset length [37]
-	dc.l	FCBTentLargeTilesStart
-	dc.l	FCBTentLargeTilesEnd
+	; tileset 6 - tiles start at [AD] - tileset length [23]
+	dc.l	FCBTent56x40TilesStart
+	dc.l	FCBTent56x40TilesEnd
 
-	; tileset 7 - tiles start at [A6] - tileset length [20]
-	dc.l	FCBTentTallTilesStart
-	dc.l	FCBTentTallTilesEnd
+	; tileset 7 - tiles start at [D0] - tileset length [10]
+	dc.l	FCBFire32x32TilesStart
+	dc.l	FCBFire32x32TilesEnd
 
-	; tileset 8 - tiles start at [C6] - tileset length [19]
-	dc.l	FCBTentMidTilesStart
-	dc.l	FCBTentMidTilesEnd
+	; tileset 8 - tiles start at [E0] - tileset length [10]
+	dc.l	FCBBench32x32TilesStart
+	dc.l	FCBBench32x32TilesEnd
+
+	; tileset 9 - tiles start at [F0] - tileset length [18]
+	dc.l	FCBBench48x32TilesStart
+	dc.l	FCBBench48x32TilesEnd
 
 	;---------------------------------------------------------------------------
 	; palettes
 	;---------------------------------------------------------------------------
 	dc.l	PaletteFCBFloorWall
-	dc.l	PaletteFCBCamping00
-	dc.l	PaletteFCBCamping01
+	dc.l	PaletteFCBWoodWater
+	dc.l	PaletteFCBCamping
 	dc.l	PalettePeople
 
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$000A ; scenery count - 1
+	dc.w	$0011 ; scenery count - 1
 
-	; stone floor
-	dc.l	Pattern32x32Tile
+	; floor
+	dc.l	Pattern16x16x304
 	;		%pccvhnnnnnnnnnnn
 	dc.w	%0000000000000001 ; vdp pattern
-	dc.w	$0006 ; repeat=6
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$00000000 ; initial drawing location
+	dc.w	$000C ; repeat=12
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$00800000 ; initial drawing location
 
-	; left wall
-	dc.l	PatternFrameSideLeft
+	; west wall
+	dc.l	PatternFrameWestClosed
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000010001 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$00800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$02800000 ; initial drawing location
 
 	; north wall
-	dc.l	PatternFrameTopLongRight
+	dc.l	PatternFrameNorthClosedEastOpen
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000010001 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$00000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$00800000 ; initial drawing location
+
+	; west wall - south fill
+	dc.l	PatternFrameSWFill
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000000000101 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$0D000000 ; initial drawing location
 
 	; wood path - east-west
-	dc.l	PatternFCBFloorH
+	dc.l	Pattern16x16x240
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000001001010 ; vdp pattern
+	dc.w	%0010000001101001 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00100000+$09000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00120000+$0A000000 ; initial drawing location
 
 	; wood path - north-south
-	dc.l	PatternFCBFloorVNorth
+	dc.l	Pattern16x16
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000001001010 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00100000+$0B000000 ; initial drawing location
+	dc.w	%0010000001101001 ; vdp pattern
+	dc.w	$0001 ; repeat=1
+	dc.l	VDP_VRAM_WRITE_B+$00120000+$0B000000 ; initial drawing location
 
-	dc.l	PatternFCBFloorVNorth
+	; wood path - north-south
+	dc.l	Pattern16x8
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000001001010 ; vdp pattern
+	dc.w	%0010000001101001 ; vdp pattern
+	dc.w	$0001 ; repeat=1
+	dc.l	VDP_VRAM_WRITE_B+$00120000+$0C800000 ; initial drawing location
+
+	; wood path - leading to pond
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001101001 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00480000+$0B000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00460000+$0B000000 ; initial drawing location
+
+	; wood path - leading to pond
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001101001 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$004A0000+$0B000000 ; initial drawing location
 
 	; pond
-	dc.l	PatternFCBPondTopLeft
+	dc.l	PatternFCBPondNW
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000000100101 ; vdp pattern
+	dc.w	%0010000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00300000+$0B800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$002E0000+$0B800000 ; initial drawing location
 
-	; campsite
-	dc.l	PatternFCBCampingCampsite
+	; bench - west
+	dc.l	Pattern32x32
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000001011010 ; vdp pattern
+	dc.w	%0010000011100000 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$001A0000+$04800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00180000+$05000000 ; initial drawing location
 
-	; tents
-	dc.l	PatternFCBTentLarge
+	; fire at campsite
+	dc.l	Pattern32x32
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000001101111 ; vdp pattern
+	dc.w	%0100000011010000 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$001C0000+$00800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00240000+$05000000 ; initial drawing location
 
-	dc.l	PatternFCBTentTall
+	; bench - east
+	dc.l	Pattern48x32
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000010100110 ; vdp pattern
+	dc.w	%0010000011110000 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00060000+$00800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00300000+$05000000 ; initial drawing location
 
-	dc.l	PatternFCBTentMid
+	; tent - west
+	dc.l	Pattern56x40
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000011000110 ; vdp pattern
+	dc.w	%0100000010101101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$003C0000+$01800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00060000+$02800000 ; initial drawing location
+
+	; tent - west
+	dc.l	Pattern56x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000010101101 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00140000+$02800000 ; initial drawing location
+
+	; tent - center
+	dc.l	Pattern64x64
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001101101 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00220000+$01000000 ; initial drawing location
+
+	; tent - east
+	dc.l	Pattern64x64
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001101101 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00300000+$01000000 ; initial drawing location
+
+	; tent - east
+	dc.l	Pattern56x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000010101101 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$003E0000+$02800000 ; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text
@@ -153,39 +209,39 @@
 
 	dc.w	OBJ_SCENE_BENCH
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0001111011101000
+	dc.w	%0100000011100000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0111000011001000
+	dc.w	%0011000011010001
 
 	dc.w	OBJ_SCENE_BENCH
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0001111101001000
+	dc.w	%0110000101000000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0111000011001000
+	dc.w	%0011000011010001
 
 	dc.w	OBJ_SCENE_FCB_FIREPIT
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0011111100010000
+	dc.w	%0011111100010100
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011000011011000
+	dc.w	%0011000011010001
 
 	dc.w	OBJ_SCENE_FCB_TENT
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%1011000011110110
+	dc.w	%1101110010010110
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0101000010001000
+	dc.w	%0100000010101000
 
 	dc.w	OBJ_SCENE_FCB_TENT
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0110111010011000
+	dc.w	%1010000100001010
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0101000010001000
+	dc.w	%0100000010101000
 
 	dc.w	OBJ_SCENE_FCB_TENT
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0110111101110000
+	dc.w	%0110010101111010
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011000010011000
+	dc.w	%0100000010101000
 
 	dc.w	OBJ_NOTHING
 	;		%wwwwwwwxxxxxxxxx
@@ -229,8 +285,8 @@
 	;---------------------------------------------------------------------------
 	dc.w	$0003 ; npc count - 1
 
-	dc.w	$00FA ; starting x location of npc0
-	dc.w	$00D8 ; starting y location of npc0
+	dc.w	$00C0 ; starting x location of npc0
+	dc.w	$00DC ; starting y location of npc0
 	dc.w	DIRECTION_DOWN ; starting direction of npc0
 	dc.w	$FFFF ; movement frequency of npc0
 	dc.l	NullMovementStart ; location of movement pattern for npc0

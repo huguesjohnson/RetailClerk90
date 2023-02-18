@@ -1,0 +1,8 @@
+PatternPogoDawgTableHigh:
+	dc.w	$0	; 1 rows
+	dc.w	$4	; 5 columns
+	dc.w	$0
+	dc.w	$1
+	dc.w	$1
+	dc.w	$1
+	dc.w	$2

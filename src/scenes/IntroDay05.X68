@@ -14,11 +14,11 @@
 	dc.l	TransparentTileTilesStart
 	dc.l	TransparentTileTilesEnd
 
-	; tileset 1 - tiles start at [1] - tileset length [10]
-	dc.l	FloorCarpetBlacklightTilesStart
-	dc.l	FloorCarpetBlacklightTilesEnd
+	; tileset 1 - tiles start at [1] - tileset length [4]
+	dc.l	FloorBasementTilesStart
+	dc.l	FloorBasementTilesEnd
 
-	; tileset 2 - tiles start at [11] - tileset length [30]
+	; tileset 2 - tiles start at [5] - tileset length [30]
 	dc.l	TitleLogoTilesStart
 	dc.l	TitleLogoTilesEnd
 
@@ -28,24 +28,24 @@
 	dc.l	PaletteDayIntro00
 	dc.l	PaletteDayIntro01
 	dc.l	PaletteDayIntro02
-	dc.l	PaletteTitle03
+	dc.l	PaletteDayIntro03
 
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
 	dc.w	$0001 ; scenery count - 1
 
-	; background
-	dc.l	Pattern32x32Tile
+	; title background
+	dc.l	Pattern16x16x320
 	;		%pccvhnnnnnnnnnnn
 	dc.w	%0000000000000001 ; vdp pattern
-	dc.w	$0002 ; repeat=2
+	dc.w	$0005 ; repeat=5
 	dc.l	VDP_VRAM_WRITE_B+$00000000+$00000000 ; initial drawing location
 
 	; title - 90
 	dc.l	Pattern192x16
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0110000000010001 ; vdp pattern
+	dc.w	%0010000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
 	dc.l	VDP_VRAM_WRITE_A+$00100000+$02800000 ; initial drawing location
 
@@ -55,36 +55,36 @@
 	dc.w	$0007 ; text count
 
 	dc.l	Day05IntroText
-	dc.w	DIALOG_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_A+$00000000+$06000000 ; initial drawing location
 
 	dc.l	Day05IntroTip0
-	dc.w	DIALOG_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$07000000 ; initial drawing location
+	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$07000000 ; initial drawing location
 
 	dc.l	Day05IntroTip1
-	dc.w	DIALOG_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$08000000 ; initial drawing location
+	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$08000000 ; initial drawing location
 
 	dc.l	Day05IntroTip2
-	dc.w	DIALOG_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$09000000 ; initial drawing location
+	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$09000000 ; initial drawing location
 
 	dc.l	Day05IntroTip3
-	dc.w	DIALOG_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$0A000000 ; initial drawing location
+	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$0A000000 ; initial drawing location
 
 	dc.l	Day05IntroTip4
-	dc.w	DIALOG_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$0B000000 ; initial drawing location
+	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$0B000000 ; initial drawing location
 
 	dc.l	Day05IntroTip5
-	dc.w	DIALOG_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$0C000000 ; initial drawing location
+	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$0C000000 ; initial drawing location
 
 	dc.l	Day05IntroTip6
-	dc.w	DIALOG_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$0D000000 ; initial drawing location
+	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$0D000000 ; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; objects

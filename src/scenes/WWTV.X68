@@ -8,31 +8,35 @@
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0005 ; tileset count - 1
+	dc.w	$0006 ; tileset count - 1
 
 	; tileset 0 - tiles start at [0] - tileset length [1]
 	dc.l	TransparentTileTilesStart
 	dc.l	TransparentTileTilesEnd
 
-	; tileset 1 - tiles start at [1] - tileset length [10]
-	dc.l	FloorTileSmallTilesStart
-	dc.l	FloorTileSmallTilesEnd
+	; tileset 1 - tiles start at [1] - tileset length [4]
+	dc.l	FloorWWTilesStart
+	dc.l	FloorWWTilesEnd
 
-	; tileset 2 - tiles start at [11] - tileset length [14]
-	dc.l	FrameRectTilesStart
-	dc.l	FrameRectTilesEnd
+	; tileset 2 - tiles start at [5] - tileset length [4D]
+	dc.l	FrameTilesStart
+	dc.l	FrameTilesEnd
 
-	; tileset 3 - tiles start at [25] - tileset length [6]
-	dc.l	TVLargeHighTilesStart
-	dc.l	TVLargeHighTilesEnd
+	; tileset 3 - tiles start at [52] - tileset length [F]
+	dc.l	SmallTVOff24x40TilesStart
+	dc.l	SmallTVOff24x40TilesEnd
 
-	; tileset 4 - tiles start at [2B] - tileset length [C]
-	dc.l	TVLargeLowTilesStart
-	dc.l	TVLargeLowTilesEnd
+	; tileset 4 - tiles start at [61] - tileset length [F]
+	dc.l	SmallTVOn24x40TilesStart
+	dc.l	SmallTVOn24x40TilesEnd
 
-	; tileset 5 - tiles start at [37] - tileset length [18]
-	dc.l	WWTVWallTilesStart
-	dc.l	WWTVWallTilesEnd
+	; tileset 5 - tiles start at [70] - tileset length [10]
+	dc.l	LargeTVHigh64x16TilesStart
+	dc.l	LargeTVHigh64x16TilesEnd
+
+	; tileset 6 - tiles start at [80] - tileset length [28]
+	dc.l	LargeTVLow64x40TilesStart
+	dc.l	LargeTVLow64x40TilesEnd
 
 	;---------------------------------------------------------------------------
 	; palettes
@@ -45,77 +49,147 @@
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$000A ; scenery count - 1
+	dc.w	$0013 ; scenery count - 1
 
 	; floor
-	dc.l	Pattern32x32Tile
+	dc.l	Pattern16x16x304
 	;		%pccvhnnnnnnnnnnn
 	dc.w	%0000000000000001 ; vdp pattern
-	dc.w	$0006 ; repeat=6
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$00000000 ; initial drawing location
-
-	; shelves
-	dc.l	PatternShelves24x64
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000000110111 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$00800000 ; initial drawing location
+	dc.w	$000C ; repeat=12
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$00800000 ; initial drawing location
 
 	; north wall
-	dc.l	PatternFrameTopLong
+	dc.l	PatternFrameNorthClosedEastWestOpen
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000010001 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$00000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$00800000 ; initial drawing location
 
-	; large tvs
-	dc.l	Pattern24x16
+	; southwest corner
+	dc.l	PatternWWTVSouthWestCorner
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1010000000100101 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$000E0000+$04000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$0D000000 ; initial drawing location
 
-	dc.l	Pattern24x32
+	; southeast corner
+	dc.l	PatternWWTVSouthEastCorner
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000000101011 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$000E0000+$05000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$004A0000+$0D000000 ; initial drawing location
 
-	dc.l	Pattern24x16
+	; tv along north wall - 0
+	dc.l	Pattern24x40
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1010000000100101 ; vdp pattern
+	dc.w	%0010000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$001E0000+$04000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00040000+$01000000 ; initial drawing location
 
-	dc.l	Pattern24x32
+	; tv along north wall - 1
+	dc.l	Pattern24x40
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000000101011 ; vdp pattern
+	dc.w	%0010000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$001E0000+$05000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$000A0000+$01000000 ; initial drawing location
 
-	dc.l	Pattern24x16
+	; tv along north wall - 2
+	dc.l	Pattern24x40
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1010000000100101 ; vdp pattern
+	dc.w	%0010000001100001 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$002C0000+$04000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00100000+$01000000 ; initial drawing location
 
-	dc.l	Pattern24x32
+	; tv along north wall - 3
+	dc.l	Pattern24x40
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000000101011 ; vdp pattern
+	dc.w	%0010000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$002C0000+$05000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00160000+$01000000 ; initial drawing location
 
-	dc.l	Pattern24x16
+	; tv along north wall - 4
+	dc.l	Pattern24x40
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1010000000100101 ; vdp pattern
+	dc.w	%0010000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$003C0000+$04000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$001C0000+$01000000 ; initial drawing location
 
-	dc.l	Pattern24x32
+	; tv along north wall - 5
+	dc.l	Pattern24x40
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000000101011 ; vdp pattern
+	dc.w	%0010000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$003C0000+$05000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00220000+$01000000 ; initial drawing location
+
+	; tv along north wall - 6
+	dc.l	Pattern24x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001010010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00280000+$01000000 ; initial drawing location
+
+	; tv along north wall - 7
+	dc.l	Pattern24x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001010010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$002E0000+$01000000 ; initial drawing location
+
+	; tv along north wall - 8
+	dc.l	Pattern24x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001010010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00340000+$01000000 ; initial drawing location
+
+	; tv along north wall - 9
+	dc.l	Pattern24x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001010010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$003A0000+$01000000 ; initial drawing location
+
+	; tv along north wall - 10
+	dc.l	Pattern24x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001010010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00400000+$01000000 ; initial drawing location
+
+	; tv along north wall - 11
+	dc.l	Pattern24x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001010010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00460000+$01000000 ; initial drawing location
+
+	; large tv - west - high
+	dc.l	Pattern64x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001110000 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00140000+$05800000 ; initial drawing location
+
+	; large tv - west - low
+	dc.l	Pattern64x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000010000000 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00140000+$06800000 ; initial drawing location
+
+	; large tv - west - high
+	dc.l	Pattern64x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001110000 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$002E0000+$05800000 ; initial drawing location
+
+	; large tv - west - low
+	dc.l	Pattern64x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000010000000 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$002E0000+$06800000 ; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text
@@ -137,45 +211,45 @@
 
 	dc.w	OBJ_SCENE_WWTV_LARGETV
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0011001010110110
+	dc.w	%0111100011010000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011000011010000
+	dc.w	%0111000011011000
 
 	dc.w	OBJ_SCENE_WWTV_LARGETV
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0011001011110110
+	dc.w	%0111100100111000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011000011010000
-
-	dc.w	OBJ_SCENE_WWTV_LARGETV
-	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0011001100101110
-	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011000011010000
-
-	dc.w	OBJ_SCENE_WWTV_LARGETV
-	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0011001101101110
-	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011000011010000
+	dc.w	%0111000011011000
 
 	dc.w	OBJ_SCENE_WWTV_TVWALL
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%1100100010001000
+	dc.w	%1100100010010000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011000010001000
+	dc.w	%0011100010011000
 
 	dc.w	OBJ_SCENE_WWTV_TVWALL
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%1100100011101100
+	dc.w	%1100100011110100
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011000010001000
+	dc.w	%0011100010011000
 
 	dc.w	OBJ_SCENE_WWTV_TVWALL
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%1111111110000110
+	dc.w	%1111111101011000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0010000010001000
+	dc.w	%0011100010011000
+
+	dc.w	OBJ_NOTHING
+	;		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	;		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
+
+	dc.w	OBJ_NOTHING
+	;		%wwwwwwwxxxxxxxxx
+	dc.w	%0000000000000000
+	;		%hhhhhhhyyyyyyyyy
+	dc.w	%0000000000000000
 
 	dc.w	OBJ_NOTHING
 	;		%wwwwwwwxxxxxxxxx
@@ -213,8 +287,8 @@
 	;---------------------------------------------------------------------------
 	dc.w	$0003 ; npc count - 1
 
-	dc.w	$00F0 ; starting x location of npc0
-	dc.w	$00F0 ; starting y location of npc0
+	dc.w	$00DC ; starting x location of npc0
+	dc.w	$0104 ; starting y location of npc0
 	dc.w	DIRECTION_DOWN ; starting direction of npc0
 	dc.w	$FFFF ; movement frequency of npc0
 	dc.l	NullMovementStart ; location of movement pattern for npc0

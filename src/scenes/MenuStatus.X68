@@ -3,24 +3,28 @@
 	;---------------------------------------------------------------------------
 	; scene ID
 	;---------------------------------------------------------------------------
-	dc.w	$FFFF
+	dc.w	SCENE_ID_MENU_STATUS
 
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0002 ; tileset count - 1
+	dc.w	$0003 ; tileset count - 1
 
 	; tileset 0 - tiles start at [0] - tileset length [1]
 	dc.l	TransparentTileTilesStart
 	dc.l	TransparentTileTilesEnd
 
-	; tileset 1 - tiles start at [1] - tileset length [8]
+	; tileset 1 - tiles start at [1] - tileset length [9]
 	dc.l	MenuNavTilesStart
 	dc.l	MenuNavTilesEnd
 
-	; tileset 2 - tiles start at [9] - tileset length [6]
+	; tileset 2 - tiles start at [A] - tileset length [9]
 	dc.l	MenuNavSelectedTilesStart
 	dc.l	MenuNavSelectedTilesEnd
+
+	; tileset 3 - tiles start at [13] - tileset length [D]
+	dc.l	DialogFrameTilesStart
+	dc.l	DialogFrameTilesEnd
 
 	;---------------------------------------------------------------------------
 	; palettes
@@ -33,96 +37,67 @@
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$0003 ; scenery count - 1
+	dc.w	$0004 ; scenery count - 1
 
 	; navigation
 	dc.l	PatternMenuNav
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000000000001 ; vdp pattern
+	dc.w	%0010000000000001 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$00000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00040000+$00000000 ; initial drawing location
 
 	dc.l	PatternMenuNavSelected
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0110000000001001 ; vdp pattern
+	dc.w	%0100000000001010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00140000+$00000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00160000+$00000000 ; initial drawing location
 
 	dc.l	PatternMenuNav
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000000000001 ; vdp pattern
+	dc.w	%0010000000000001 ; vdp pattern
 	dc.w	$0000 ; repeat=0
 	dc.l	VDP_VRAM_WRITE_B+$00280000+$00000000 ; initial drawing location
 
 	dc.l	PatternMenuNav
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000000000001 ; vdp pattern
+	dc.w	%0010000000000001 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$003C0000+$00000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$003A0000+$00000000 ; initial drawing location
+
+	dc.l	PatternInventoryFrame
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0110000000010011 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$0A000000 ; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text
 	;---------------------------------------------------------------------------
-	dc.w	$000B ; text count
-
-	; frame for inventory - row 0
-	dc.l	PatternStatusItemsRow0
-	dc.w	DIALOG_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_B+$00020000+$0A000000 ; initial drawing location
-
-	; frame for inventory - row 1
-	dc.l	PatternStatusItemsRow1
-	dc.w	DIALOG_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_B+$00020000+$0A800000 ; initial drawing location
-
-	; frame for inventory - row 2
-	dc.l	PatternStatusItemsRow2
-	dc.w	DIALOG_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_B+$00020000+$0B000000 ; initial drawing location
-
-	; frame for inventory - row 3
-	dc.l	PatternStatusItemsRow3
-	dc.w	DIALOG_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_B+$00020000+$0B800000 ; initial drawing location
-
-	; frame for inventory - row 4
-	dc.l	PatternStatusItemsRow4
-	dc.w	DIALOG_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_B+$00020000+$0C000000 ; initial drawing location
-
-	; frame for inventory - row 5
-	dc.l	PatternStatusItemsRow5
-	dc.w	DIALOG_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_B+$00020000+$0C800000 ; initial drawing location
-
-	; frame for inventory - row 6
-	dc.l	PatternStatusItemsRow6
-	dc.w	DIALOG_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_B+$00020000+$0D000000 ; initial drawing location
+	dc.w	$0004 ; text count
 
 	; map
 	dc.l	MenuScreenNavMap
-	dc.w	DIALOG_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_B+$00060000+$00800000 ; initial drawing location
+	dc.w	FONT_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
+	dc.l	VDP_VRAM_WRITE_B+$00080000+$00800000 ; initial drawing location
 
 	; status
 	dc.l	MenuScreenNavStatus
-	dc.w	DIALOG_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_B+$00180000+$00800000 ; initial drawing location
 
 	; data
 	dc.l	MenuScreenNavData
-	dc.w	DIALOG_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_B+$002C0000+$00800000 ; initial drawing location
 
 	; help
 	dc.l	MenuScreenNavHelp
-	dc.w	DIALOG_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_B+$00400000+$00800000 ; initial drawing location
+	dc.w	FONT_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
+	dc.l	VDP_VRAM_WRITE_B+$003E0000+$00800000 ; initial drawing location
 
-	; inventory caption
+	; inventory label
 	dc.l	StatusScreenInventory
-	dc.w	DIALOG_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_B+$00040000+$0A800000 ; initial drawing location
 
 	;---------------------------------------------------------------------------

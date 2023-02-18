@@ -53,25 +53,22 @@ DIALOG_FLAG_TEXT_CLOSING,$1F,dialog is closing
 ; dialog settings
 ;-------------------------------------------------------------------------------
 DIALOG_PATTERN_SIZE,$0124,size of dialog pattern (#tiles*2+4 for loop ctrl)
-DIALOG_BASE_TILE_LOW,FONT_VDP/$0020,base tile for dialogs (low)
+DIALOG_BASE_TILE_LOW,FONT_BASE_TILE_LOW+$005F,base tile for dialogs (low)
 DIALOG_BASE_TILE,DIALOG_BASE_TILE_LOW+$8000,base tile for dialogs
-DIALOG_ROWCOL,$09100000,row 18 column 16,(128*18)+16,2320,910
-DIALOG_TEXT_AREA_ROWCOL,$0A900000,DIALOG_ROWCOL + 3 rows
-DIALOG_TEXT_ROWCOL,$0A920000,DIALOG_ROWCOL + 3 rows + 1 column
-DIALOG_TITLE_ROWCOL,$09940000,DIALOG_ROWCOL + 1 row + 2 columns
+DIALOG_ROWCOL,$0A100000,two rows down from rc89
+DIALOG_TEXT_AREA_ROWCOL,$0B900000,two rows down from rc89
+DIALOG_TEXT_ROWCOL,$0B920000,two rows down from rc89
+DIALOG_TITLE_ROWCOL,$0A940000,two rows down from rc89
 DIALOG_FRAME_COUNT,$000B,number of animation frames for dialogs
 DIALOG_MENU_INIT_SELECTION_X,$C8,x coordinate of initial menu selection
 DIALOG_MENU_INIT_SELECTION_Y,$128,y coordinate of initial menu selection
 DIALOG_NO_RESPONSE,$FFFF,no response or dialog cancelled 
 ;
 ;-------------------------------------------------------------------------------
-; menu pages
+; font settings
 ;-------------------------------------------------------------------------------
-MENU_PAGE_MAP,$0000
-MENU_PAGE_STATUS,$0001
-MENU_PAGE_DATA,$0002
-MENU_PAGE_HELP,$0003
-MAX_MENU_PAGE,MENU_PAGE_HELP
+FONT_BASE_TILE_LOW,FONT_VDP/$0020,base tile for dialogs (low)
+FONT_BASE_TILE,FONT_BASE_TILE_LOW+$8000,base tile for dialogs
 ;
 ;-------------------------------------------------------------------------------
 ; scripted event commands
@@ -186,15 +183,20 @@ CREDITS_SCREEN_LOOP,$0258,how long to display the credits screen
 ;-------------------------------------------------------------------------------
 MAP_MID_X,$100,mid-point of map - used for collision detection
 ; scene exit points
-SCENE_EXIT_TOP,$0000+SPRITE_PLANE_OFFSET_TOP
-SCENE_EXIT_BOTTOM,$00D0+SPRITE_PLANE_OFFSET_TOP
-SCENE_EXIT_LEFT,$0000+SPRITE_PLANE_OFFSET_LEFT
-SCENE_EXIT_RIGHT,$013A+SPRITE_PLANE_OFFSET_LEFT
+SCENE_EDGE_PAD,$0008
+SCENE_EXIT_TOP,SPRITE_PLANE_OFFSET_TOP+SCENE_EDGE_PAD
+SCENE_EXIT_BOTTOM,DISPLAY_PIXELS_Y+SPRITE_PLANE_OFFSET_TOP-SCENE_EDGE_PAD-DEFAULT_SPRITE_HEIGHT
+SCENE_EXIT_LEFT,SPRITE_PLANE_OFFSET_LEFT+SCENE_EDGE_PAD
+SCENE_EXIT_RIGHT,DISPLAY_PIXELS_X+SPRITE_PLANE_OFFSET_LEFT-SCENE_EDGE_PAD-DEFAULT_SPRITE_WIDTH
 ; position where the player enters a scene
-SCENE_ENTER_TOP,SPRITE_PLANE_OFFSET_TOP+$0008
-SCENE_ENTER_BOTTOM,SPRITE_PLANE_OFFSET_TOP+DISPLAY_PIXELS_Y-$0010
-SCENE_ENTER_LEFT,SPRITE_PLANE_OFFSET_LEFT+$0008
-SCENE_ENTER_RIGHT,SPRITE_PLANE_OFFSET_LEFT+DISPLAY_PIXELS_X-$0008
+SCENE_ENTER_TOP,SCENE_EXIT_TOP
+SCENE_ENTER_BOTTOM,SCENE_EXIT_BOTTOM
+SCENE_ENTER_LEFT,SCENE_EXIT_LEFT
+SCENE_ENTER_RIGHT,SCENE_EXIT_RIGHT
+;SCENE_ENTER_TOP,SPRITE_PLANE_OFFSET_TOP+DEFAULT_SPRITE_HEIGHT
+;SCENE_ENTER_BOTTOM,SPRITE_PLANE_OFFSET_TOP+DISPLAY_PIXELS_Y-DEFAULT_SPRITE_HEIGHT
+;SCENE_ENTER_LEFT,SPRITE_PLANE_OFFSET_LEFT+DEFAULT_SPRITE_WIDTH
+;SCENE_ENTER_RIGHT,SPRITE_PLANE_OFFSET_LEFT+DISPLAY_PIXELS_X-DEFAULT_SPRITE_WIDTH
 ;
 ;-------------------------------------------------------------------------------
 ; object/NPC list settings
@@ -236,25 +238,6 @@ NPC2_SPRITE_VDP_X,NPC1_SPRITE_VDP_X+$00080000,npc2 sprite x vdp
 NPC2_SPRITE_VDP_Y,NPC1_SPRITE_VDP_Y+$00080000,npc2 sprite y vdp
 NPC3_SPRITE_VDP_X,NPC2_SPRITE_VDP_X+$00080000,npc3 sprite x vdp
 NPC3_SPRITE_VDP_Y,NPC2_SPRITE_VDP_Y+$00080000,npc3 sprite y vdp
-;
-;-------------------------------------------------------------------------------
-; status screen settings
-;-------------------------------------------------------------------------------
-STATUS_SCREEN_MAP_ICON_BASE_PATTERN,%1000000000001111
-STATUS_SCREEN_MAP_ICON_STORY_EVENT_BASE_PATTERN,%1000000000010001
-STATUS_SCREEN_MAP_ICON_OPTIONAL_EVENT_PATTERN,%1000000000010000
-STATUS_SCREEN_OBJECTIVE_VDP,VDP_VRAM_WRITE_B+$00000000+$02000000
-STATUS_SCREEN_INVENTORY_VDP,VDP_VRAM_WRITE_B+$00040000+$0B000000
-STATUS_SCREEN_INVENTORY_DESCRIPTION_VDP,VDP_VRAM_WRITE_B+$002A0000+$0A000000
-STATUS_SCREEN_SAVE0_VDP,VDP_VRAM_WRITE_B+$03800000+$00120000
-STATUS_SCREEN_LOAD0_VDP,VDP_VRAM_WRITE_B+$08800000+$00120000
-STATUS_SCREEN_INVENTORY_DESCRIPTION_ROWS,$0006
-STATUS_SCREEN_INVENTORY_DESCRIPTION_COLS,$0011
-;
-;-------------------------------------------------------------------------------
-; load screen settings
-;-------------------------------------------------------------------------------
-LOAD_SCREEN_SAVE0_VDP,VDP_VRAM_WRITE_B+$05000000+$00120000
 ;
 ;-------------------------------------------------------------------------------
 ; other display settings

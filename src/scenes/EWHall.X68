@@ -8,47 +8,43 @@
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0009 ; tileset count - 1
+	dc.w	$0008 ; tileset count - 1
 
 	; tileset 0 - tiles start at [0] - tileset length [1]
 	dc.l	TransparentTileTilesStart
 	dc.l	TransparentTileTilesEnd
 
-	; tileset 1 - tiles start at [1] - tileset length [10]
-	dc.l	FloorWoodDiagTilesStart
-	dc.l	FloorWoodDiagTilesEnd
+	; tileset 1 - tiles start at [1] - tileset length [4]
+	dc.l	FloorCheckersTilesStart
+	dc.l	FloorCheckersTilesEnd
 
-	; tileset 2 - tiles start at [11] - tileset length [8]
-	dc.l	FloorWoodHorTilesStart
-	dc.l	FloorWoodHorTilesEnd
+	; tileset 2 - tiles start at [5] - tileset length [4]
+	dc.l	FloorDenimCountryTilesStart
+	dc.l	FloorDenimCountryTilesEnd
 
-	; tileset 3 - tiles start at [19] - tileset length [14]
-	dc.l	FrameRectTilesStart
-	dc.l	FrameRectTilesEnd
+	; tileset 3 - tiles start at [9] - tileset length [4]
+	dc.l	FloorEastHallTilesStart
+	dc.l	FloorEastHallTilesEnd
 
-	; tileset 4 - tiles start at [2D] - tileset length [F]
-	dc.l	GlassTilesStart
-	dc.l	GlassTilesEnd
+	; tileset 4 - tiles start at [D] - tileset length [4]
+	dc.l	FloorHallTrimTilesStart
+	dc.l	FloorHallTrimTilesEnd
 
-	; tileset 5 - tiles start at [3C] - tileset length [1]
-	dc.l	TransparentTileTilesStart
-	dc.l	TransparentTileTilesEnd
+	; tileset 5 - tiles start at [11] - tileset length [C]
+	dc.l	EWHallCheckersSign48x16TilesStart
+	dc.l	EWHallCheckersSign48x16TilesEnd
 
-	; tileset 6 - tiles start at [3D] - tileset length [2]
-	dc.l	FloorTile4ColorTilesStart
-	dc.l	FloorTile4ColorTilesEnd
+	; tileset 6 - tiles start at [1D] - tileset length [4D]
+	dc.l	FrameTilesStart
+	dc.l	FrameTilesEnd
 
-	; tileset 7 - tiles start at [3F] - tileset length [8]
-	dc.l	FloorWoodVertTilesStart
-	dc.l	FloorWoodVertTilesEnd
+	; tileset 7 - tiles start at [6A] - tileset length [10]
+	dc.l	EWHallTreeHigh32x32TilesStart
+	dc.l	EWHallTreeHigh32x32TilesEnd
 
-	; tileset 8 - tiles start at [47] - tileset length [14]
-	dc.l	EWHallTreeHighTilesStart
-	dc.l	EWHallTreeHighTilesEnd
-
-	; tileset 9 - tiles start at [5B] - tileset length [C]
-	dc.l	EWHallTreeLowTilesStart
-	dc.l	EWHallTreeLowTilesEnd
+	; tileset 8 - tiles start at [7A] - tileset length [10]
+	dc.l	EWHallTreeLow32x32TilesStart
+	dc.l	EWHallTreeLow32x32TilesEnd
 
 	;---------------------------------------------------------------------------
 	; palettes
@@ -61,95 +57,91 @@
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$000C ; scenery count - 1
-
-	; main floor
-	dc.l	Pattern32x32Tile
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000000000001 ; vdp pattern
-	dc.w	$0004 ; repeat=4
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$03000000 ; initial drawing location
-
-	; south floor
-	dc.l	PatternWoodFloorV
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000000111111 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$0D800000 ; initial drawing location
+	dc.w	$000B ; scenery count - 1
 
 	; north floor
-	dc.l	PatternTileFloorSimple
+	dc.l	Pattern16x16x304
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000000111101 ; vdp pattern
+	dc.w	%0000000000000001 ; vdp pattern
 	dc.w	$0001 ; repeat=1
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$00000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$00800000 ; initial drawing location
 
-	; top border
-	dc.l	PatternWoodFloorH
+	; south floor
+	dc.l	Pattern16x16x304
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000000010001 ; vdp pattern
+	dc.w	%0010000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$02000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$0D000000 ; initial drawing location
 
-	; bottom border
-	dc.l	PatternWoodFloorH
+	; main floor
+	dc.l	Pattern16x16x304
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000000010001 ; vdp pattern
+	dc.w	%0100000000001001 ; vdp pattern
+	dc.w	$0008 ; repeat=8
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$03800000 ; initial drawing location
+
+	; main floor - north trim
+	dc.l	Pattern16x16x304
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000000001101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$0C800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$02800000 ; initial drawing location
 
-	; south wall - left side
-	dc.l	PatternFrameBottomOpenLeftExterior
+	; main floor - south trim
+	dc.l	Pattern16x16x304
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1010000000011001 ; vdp pattern
+	dc.w	%0100000000001101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$0D800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$0C800000 ; initial drawing location
 
-	; south wall - right side
-	dc.l	PatternFrameBottomOpenRightExterior
+	; south wall
+	dc.l	PatternFrameNorthOpen
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1010000000011001 ; vdp pattern
+	dc.w	%0010000000011101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00360000+$0D800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$0D000000 ; initial drawing location
 
-	; north frame - high
-	dc.l	PatternStoreFrontExteriorHigh
+	; north wall
+	dc.l	PatternFrameNorthEntrance
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000011001 ; vdp pattern
+	dc.w	%0000000000011101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$00000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$00800000 ; initial drawing location
 
-	; north frame - low
-	dc.l	PatternStoreFrontExteriorLow
+	; sign above checkers
+	dc.l	Pattern48x16
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000000011001 ; vdp pattern
+	dc.w	%1000000000010001 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$00800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00220000+$00800000 ; initial drawing location
 
-	; trees
-	dc.l	Pattern32x40
+	; tree - left - high
+	dc.l	Pattern32x32
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000001000111 ; vdp pattern
+	dc.w	%1100000001101010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
 	dc.l	VDP_VRAM_WRITE_A+$00100000+$05000000 ; initial drawing location
 
-	dc.l	Pattern32x24
+	; tree - left - low
+	dc.l	Pattern32x32
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000001011011 ; vdp pattern
+	dc.w	%0100000001111010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00100000+$07800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00100000+$07000000 ; initial drawing location
 
-	dc.l	Pattern32x40
+	; tree - right - high
+	dc.l	Pattern32x32
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000001000111 ; vdp pattern
+	dc.w	%1100000001101010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
 	dc.l	VDP_VRAM_WRITE_A+$00380000+$05000000 ; initial drawing location
 
-	dc.l	Pattern32x24
+	; tree - left - low
+	dc.l	Pattern32x32
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000001011011 ; vdp pattern
+	dc.w	%0100000001111010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00380000+$07800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00380000+$07000000 ; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text

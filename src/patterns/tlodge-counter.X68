@@ -1,0 +1,39 @@
+PatternTLodgeCounter:
+	dc.w	$B	; 12 rows
+	dc.w	$2	; 3 columns
+	dc.w	$17
+	dc.w	$3
+	dc.w	$18
+	dc.w	$21
+	dc.w	$22
+	dc.w	$9
+	dc.w	$23
+	dc.w	$24
+	dc.w	$9
+	dc.w	$B
+	dc.w	$1
+	dc.w	$9
+	dc.w	$21
+	dc.w	$22
+	dc.w	$9
+	dc.w	$23
+	dc.w	$24
+	dc.w	$9
+	dc.w	$B
+	dc.w	$1
+	dc.w	$9
+	dc.w	$21
+	dc.w	$22
+	dc.w	$9
+	dc.w	$23
+	dc.w	$24
+	dc.w	$9
+	dc.w	$B
+	dc.w	$1
+	dc.w	$9
+	dc.w	$B
+	dc.w	$1
+	dc.w	$F
+	dc.w	$2E
+	dc.w	$7
+	dc.w	$11

@@ -4,6 +4,7 @@ PatternFCBPondTopRight:
 	dc.w	$F	; 16 columns
 	dc.w	$0
 	dc.w	$1
+	dc.w	$1
 	dc.w	$2
 	dc.w	$3
 	dc.w	$4
@@ -13,72 +14,71 @@ PatternFCBPondTopRight:
 	dc.w	$8
 	dc.w	$9
 	dc.w	$A
-	dc.w	$B
+	dc.w	$3
 	dc.w	$4
 	dc.w	$5
-	dc.w	$6
+	dc.w	$B
 	dc.w	$C
 	dc.w	$D
-	dc.w	$E
-	dc.w	$F
-	dc.w	$10
-	dc.w	$11
-	dc.w	$12
-	dc.w	$13
-	dc.w	$14
-	dc.w	$11
-	dc.w	$12
-	dc.w	$13
-	dc.w	$14
-	dc.w	$11
-	dc.w	$12
-	dc.w	$13
-	dc.w	$15
-	dc.w	$0
-	dc.w	$1
-	dc.w	$2
-	dc.w	$3
-	dc.w	$16
-	dc.w	$17
-	dc.w	$18
-	dc.w	$19
-	dc.w	$16
-	dc.w	$17
-	dc.w	$18
-	dc.w	$19
-	dc.w	$16
-	dc.w	$17
-	dc.w	$18
-	dc.w	$1A
 	dc.w	$D
 	dc.w	$E
 	dc.w	$F
 	dc.w	$10
-	dc.w	$1B
-	dc.w	$1C
-	dc.w	$1D
-	dc.w	$1E
-	dc.w	$1B
-	dc.w	$1C
-	dc.w	$1D
-	dc.w	$1E
-	dc.w	$1B
-	dc.w	$1C
-	dc.w	$1D
-	dc.w	$1F
+	dc.w	$11
+	dc.w	$12
+	dc.w	$F
+	dc.w	$10
+	dc.w	$11
+	dc.w	$12
+	dc.w	$F
+	dc.w	$10
+	dc.w	$11
+	dc.w	$13
 	dc.w	$0
 	dc.w	$1
+	dc.w	$1
 	dc.w	$2
-	dc.w	$3
+	dc.w	$14
+	dc.w	$15
+	dc.w	$16
+	dc.w	$17
+	dc.w	$14
+	dc.w	$15
+	dc.w	$16
+	dc.w	$17
+	dc.w	$14
+	dc.w	$15
+	dc.w	$16
+	dc.w	$18
+	dc.w	$C
+	dc.w	$D
+	dc.w	$D
+	dc.w	$E
+	dc.w	$19
+	dc.w	$1A
+	dc.w	$1B
+	dc.w	$1C
+	dc.w	$19
+	dc.w	$1A
+	dc.w	$1B
+	dc.w	$1C
+	dc.w	$19
+	dc.w	$1A
+	dc.w	$1B
+	dc.w	$1D
+	dc.w	$0
+	dc.w	$1
+	dc.w	$1
+	dc.w	$2
+	dc.w	$1E
+	dc.w	$1F
 	dc.w	$20
 	dc.w	$21
-	dc.w	$22
-	dc.w	$23
+	dc.w	$1E
+	dc.w	$1F
 	dc.w	$20
 	dc.w	$21
-	dc.w	$22
-	dc.w	$23
+	dc.w	$1E
+	dc.w	$1F
 	dc.w	$20
-	dc.w	$21
 	dc.w	$22
-	dc.w	$24

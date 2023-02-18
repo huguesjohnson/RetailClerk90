@@ -48,6 +48,9 @@ PaletteDayIntro01:
 PaletteDayIntro02:
 	include 'palettes/DayIntro02.X68'
 
+PaletteDayIntro03:
+	include 'palettes/DayIntro03.X68'
+
 PaletteBasementFloor:
 	include 'palettes/BasementFloor.X68'
 
@@ -135,29 +138,20 @@ PaletteEWHall:
 PaletteFCBFloorWall:
 	include 'palettes/FCBFloorWall.X68'
 
-PaletteFCBCamping00:
-	include 'palettes/FCBCamping00.X68'
+PaletteFCBWoodWater:
+	include 'palettes/FCBWoodWater.X68'
 
-PaletteFCBCamping01:
-	include 'palettes/FCBCamping01.X68'
+PaletteFCBCamping:
+	include 'palettes/FCBCamping.X68'
 
-PaletteFCBCheckout00:
-	include 'palettes/FCBCheckout00.X68'
+PaletteFCBCheckout:
+	include 'palettes/FCBCheckout.X68'
 
-PaletteFCBCheckout01:
-	include 'palettes/FCBCheckout01.X68'
+PaletteFCBFirearms:
+	include 'palettes/FCBFirearms.X68'
 
-PaletteFCBFirearms00:
-	include 'palettes/FCBFirearms00.X68'
-
-PaletteFCBFirearms01:
-	include 'palettes/FCBFirearms01.X68'
-
-PaletteFCBFishing00:
-	include 'palettes/FCBFishing00.X68'
-
-PaletteFCBFishing01:
-	include 'palettes/FCBFishing01.X68'
+PaletteFCBFishing:
+	include 'palettes/FCBFishing.X68'
 
 PaletteNShack00:
 	include 'palettes/NShack00.X68'
@@ -167,15 +161,6 @@ PaletteNShack01:
 
 PaletteNShack02:
 	include 'palettes/NShack02.X68'
-
-PaletteParkingLot00:
-	include 'palettes/ParkingLot00.X68'
-
-PaletteParkingLot01:
-	include 'palettes/ParkingLot01.X68'
-
-PaletteParkingLot02:
-	include 'palettes/ParkingLot02.X68'
 
 PalettePogoDawg00:
 	include 'palettes/PogoDawg00.X68'

@@ -1,0 +1,45 @@
+PatternFrameEastOpen:
+	dc.w	$14	; 21 rows
+	dc.w	$1	; 2 columns
+	dc.w	$1A
+	dc.w	$18
+	dc.w	$1A
+	dc.w	$18
+	dc.w	$1A
+	dc.w	$18
+	dc.w	$1A
+	dc.w	$37
+	dc.w	$35
+	dc.w	$36
+	dc.w	$34
+	dc.w	$2E
+	dc.w	$33
+	dc.w	$A
+	dc.w	$0
+	dc.w	$0
+	dc.w	$0
+	dc.w	$0
+	dc.w	$0
+	dc.w	$0
+	dc.w	$0
+	dc.w	$0
+	dc.w	$0
+	dc.w	$0
+	dc.w	$0
+	dc.w	$0
+	dc.w	$0
+	dc.w	$0
+	dc.w	$22
+	dc.w	$23
+	dc.w	$24
+	dc.w	$18
+	dc.w	$1A
+	dc.w	$18
+	dc.w	$1A
+	dc.w	$18
+	dc.w	$1A
+	dc.w	$18
+	dc.w	$1A
+	dc.w	$18
+	dc.w	$1A
+	dc.w	$18

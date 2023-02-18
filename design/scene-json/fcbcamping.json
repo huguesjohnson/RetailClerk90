@@ -4,194 +4,282 @@
 	"destinationFilePath":"src/scenes/FCBCamping.X68",
 	"tilesetNames":[
 		"TransparentTile",
-		"FloorStone",
-		"FrameWood",
-		"FCBPondTopLeft",
+		"FloorFCB",
+		"Frame",
+		"FCBPondNW",
 		"FCBPath",
-		"FCBCampingCampsite",
-		"FCBTentLarge",
-		"FCBTentTall",
-		"FCBTentMid"
+		"FCBTent64x64",
+		"FCBTent56x40",
+		"FCBFire32x32",
+		"FCBBench32x32",
+		"FCBBench48x32"
 	],
 	"paletteNames":[
 		"PaletteFCBFloorWall",
-		"PaletteFCBCamping00",
-		"PaletteFCBCamping01",
+		"PaletteFCBWoodWater",
+		"PaletteFCBCamping",
 		"PalettePeople"
 	],
 	"scenery":[
 		{
-			"patternName":"Pattern32x32Tile",
-			"comment":"stone floor",
+			"patternName":"Pattern16x16x304",
+			"comment":"floor",
 			"tilesetIndex":1,
 			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":0,
-			"repeat":6,
+			"repeat":12,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"00000000",
-			"column":"00000000"
+			"row":"00800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameSideLeft",
-			"comment":"left wall",
+			"patternName":"PatternFrameWestClosed",
+			"comment":"west wall",
 			"tilesetIndex":2,
 			"tilesetOffset":0,
-			"highPriority":true,
+			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00800000",
-			"column":"00000000"
+			"row":"02800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameTopLongRight",
+			"patternName":"PatternFrameNorthClosedEastOpen",
 			"comment":"north wall",
 			"tilesetIndex":2,
 			"tilesetOffset":0,
-			"highPriority":true,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"00800000",
+			"column":"00020000"
+		},
+		{
+			"patternName":"PatternFrameSWFill",
+			"comment":"west wall - south fill",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
+			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00000000",
-			"column":"00000000"
-		},
+			"row":"0D000000",
+			"column":"00020000"
+		},		
 		{
-			"patternName":"PatternFCBFloorH",
+			"patternName":"Pattern16x16x240",
 			"comment":"wood path - east-west",
 			"tilesetIndex":4,
 			"tilesetOffset":0,
 			"highPriority":false,
-			"paletteNumber":0,
+			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"09000000",
-			"column":"00100000"
+			"row":"0A000000",
+			"column":"00120000"
 		},
 		{
-			"patternName":"PatternFCBFloorVNorth",
+			"patternName":"Pattern16x16",
 			"comment":"wood path - north-south",
 			"tilesetIndex":4,
 			"tilesetOffset":0,
 			"highPriority":false,
-			"paletteNumber":0,
-			"repeat":0,
+			"paletteNumber":1,
+			"repeat":1,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"0B000000",
-			"column":"00100000"
+			"column":"00120000"
 		},
 		{
-			"patternName":"PatternFCBFloorVNorth",
+			"patternName":"Pattern16x8",
+			"comment":"wood path - north-south",
 			"tilesetIndex":4,
 			"tilesetOffset":0,
 			"highPriority":false,
-			"paletteNumber":0,
+			"paletteNumber":1,
+			"repeat":1,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"0C800000",
+			"column":"00120000"
+		},		
+		{
+			"patternName":"Pattern16x16",
+			"comment":"wood path - leading to pond",
+			"tilesetIndex":4,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"0B000000",
-			"column":"00480000"
+			"column":"00460000"
 		},
 		{
-			"patternName":"PatternFCBPondTopLeft",
+			"patternName":"Pattern16x16",
+			"comment":"wood path - leading to pond",
+			"tilesetIndex":4,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"0B000000",
+			"column":"004A0000"
+		},		
+		{
+			"patternName":"PatternFCBPondNW",
 			"comment":"pond",
 			"tilesetIndex":3,
 			"tilesetOffset":0,
 			"highPriority":false,
-			"paletteNumber":0,
+			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"0B800000",
-			"column":"00300000"
+			"column":"002E0000"
 		},
 		{
-			"patternName":"PatternFCBCampingCampsite",
-			"comment":"campsite",
-			"tilesetIndex":5,
+			"patternName":"Pattern32x32",
+			"comment":"bench - west",
+			"tilesetIndex":8,
 			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"04800000",
-			"column":"001A0000"
-		},
+			"row":"05000000",
+			"column":"00180000"
+		},		
 		{
-			"patternName":"PatternFCBTentLarge",
-			"comment":"tents",
-			"tilesetIndex":6,
-			"tilesetOffset":0,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00800000",
-			"column":"001C0000"
-		},
-		{
-			"patternName":"PatternFCBTentTall",
+			"patternName":"Pattern32x32",
+			"comment":"fire at campsite",
 			"tilesetIndex":7,
 			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00800000",
-			"column":"00060000"
+			"row":"05000000",
+			"column":"00240000"
 		},
 		{
-			"patternName":"PatternFCBTentMid",
-			"tilesetIndex":8,
+			"patternName":"Pattern48x32",
+			"comment":"bench - east",
+			"tilesetIndex":9,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"05000000",
+			"column":"00300000"
+		},		
+		{
+			"patternName":"Pattern56x40",
+			"comment":"tent - west",
+			"tilesetIndex":6,
 			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"01800000",
-			"column":"003C0000"
-		}
+			"row":"02800000",
+			"column":"00060000"
+		},
+		{
+			"patternName":"Pattern56x40",
+			"comment":"tent - west",
+			"tilesetIndex":6,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"02800000",
+			"column":"00140000"
+		},		
+		{
+			"patternName":"Pattern64x64",
+			"comment":"tent - center",
+			"tilesetIndex":5,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01000000",
+			"column":"00220000"
+		},
+		{
+			"patternName":"Pattern64x64",
+			"comment":"tent - east",
+			"tilesetIndex":5,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01000000",
+			"column":"00300000"
+		},
+		{
+			"patternName":"Pattern56x40",
+			"comment":"tent - east",
+			"tilesetIndex":6,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"02800000",
+			"column":"003E0000"
+		}		
 	],
 	"objects":[
 		{
 			"id":"OBJ_SCENE_BENCH",
-			"x":232,
-			"y":200,
-			"width":15,
-			"height":56
+			"x":224,
+			"y":209,
+			"width":32,
+			"height":24
 		},
 		{
 			"id":"OBJ_SCENE_BENCH",
-			"x":328,
-			"y":200,
-			"width":15,
-			"height":56
+			"x":320,
+			"y":209,
+			"width":48,
+			"height":24
 		},
 		{
 			"id":"OBJ_SCENE_FCB_FIREPIT",
-			"x":272,
-			"y":216,
+			"x":276,
+			"y":209,
 			"width":31,
 			"height":24
 		},
 		{
 			"id":"OBJ_SCENE_FCB_TENT",
-			"x":246,
-			"y":136,
-			"width":88,
-			"height":40
+			"x":150,
+			"y":168,
+			"width":110,
+			"height":32
 		},
 		{
 			"id":"OBJ_SCENE_FCB_TENT",
-			"x":152,
-			"y":136,
-			"width":55,
-			"height":40
+			"x":266,
+			"y":168,
+			"width":80,
+			"height":32
 		},
 		{
 			"id":"OBJ_SCENE_FCB_TENT",
-			"x":368,
-			"y":152,
-			"width":55,
-			"height":24
+			"x":378,
+			"y":168,
+			"width":50,
+			"height":32
 		},
 		null,
 		null,
@@ -207,8 +295,8 @@
 	],
 	"npcLocations":[
 		{
-			"x":250,
-			"y":216,
+			"x":192,
+			"y":220,
 			"direction":"DIRECTION_DOWN",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"

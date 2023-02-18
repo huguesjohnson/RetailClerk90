@@ -2,81 +2,11 @@
 
 	; 0
 	dc.l	$00000000
-	dc.l	$00000022
-	dc.l	$00000233
-	dc.l	$00002333
-	dc.l	$00002333
-	dc.l	$00002331
-	dc.l	$00002331
-	dc.l	$00002333
-
-	; 1
 	dc.l	$00000000
-	dc.l	$22200000
-	dc.l	$33320000
-	dc.l	$33332000
-	dc.l	$33332000
-	dc.l	$31332000
-	dc.l	$31332000
-	dc.l	$33332000
-
-	; 2
-	dc.l	$00000233
-	dc.l	$00002AA3
-	dc.l	$0002AAA6
-	dc.l	$002AAAA2
-	dc.l	$002AA2A6
-	dc.l	$002AA2A6
-	dc.l	$002AA2A6
-	dc.l	$002AA2A6
-
-	; 3
-	dc.l	$33320000
-	dc.l	$33AA2000
-	dc.l	$36AAA200
-	dc.l	$62AAAA20
-	dc.l	$26A2AA20
-	dc.l	$26A2AA20
-	dc.l	$26A2AA20
-	dc.l	$26A2AA20
-
-	; 4
-	dc.l	$112AA2A6
-	dc.l	$112AA211
-	dc.l	$112332CC
-	dc.l	$111222CC
-	dc.l	$111112CC
-	dc.l	$111112CC
-	dc.l	$111112CC
-	dc.l	$111112CC
-
-	; 5
-	dc.l	$26A2AA21
-	dc.l	$1112AA21
-	dc.l	$CCC23321
-	dc.l	$CCC22211
-	dc.l	$2CC21111
-	dc.l	$2CC21111
-	dc.l	$2CC21111
-	dc.l	$2CC21111
-
-	; 6
-	dc.l	$111112CC
-	dc.l	$111112CC
-	dc.l	$111112CC
-	dc.l	$111112CC
-	dc.l	$111122CC
-	dc.l	$11122211
-	dc.l	$11122222
-	dc.l	$11112222
-
-	; 7
-	dc.l	$2CC21111
-	dc.l	$2CC21111
-	dc.l	$2CC21111
-	dc.l	$2CC21111
-	dc.l	$2CC22111
-	dc.l	$21122211
-	dc.l	$22222211
-	dc.l	$22222111
+	dc.l	$00000000
+	dc.l	$00000000
+	dc.l	$00000000
+	dc.l	$00000000
+	dc.l	$00000000
+	dc.l	$00000000
 

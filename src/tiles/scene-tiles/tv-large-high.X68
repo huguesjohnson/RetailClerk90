@@ -2,17 +2,17 @@
 
 	; 0
 	dc.l	$11111111
-	dc.l	$11EEEEEE
-	dc.l	$1EBB2222
-	dc.l	$1EBB2222
-	dc.l	$1EB22222
-	dc.l	$1EB22222
-	dc.l	$1EB22222
-	dc.l	$1EB22222
+	dc.l	$11FFFFFF
+	dc.l	$1FBB2222
+	dc.l	$1FBB2222
+	dc.l	$1FB22222
+	dc.l	$1FB22222
+	dc.l	$1FB22222
+	dc.l	$1FB22222
 
 	; 1
 	dc.l	$11111111
-	dc.l	$EEEEEEEE
+	dc.l	$FFFFFFFF
 	dc.l	$22222222
 	dc.l	$22222222
 	dc.l	$22222222
@@ -22,23 +22,23 @@
 
 	; 2
 	dc.l	$11111111
-	dc.l	$EEEEEE11
-	dc.l	$222222E1
-	dc.l	$222222E1
-	dc.l	$222222E1
-	dc.l	$222222E1
-	dc.l	$222222E1
-	dc.l	$222222E1
+	dc.l	$FFFFFF11
+	dc.l	$222222F1
+	dc.l	$222222F1
+	dc.l	$222222F1
+	dc.l	$222222F1
+	dc.l	$222222F1
+	dc.l	$222222F1
 
 	; 3
-	dc.l	$1EB22222
-	dc.l	$1EB22222
-	dc.l	$1EB22222
-	dc.l	$1EB22222
-	dc.l	$1E222222
-	dc.l	$1EB22222
-	dc.l	$1EBB2222
-	dc.l	$1EBBB22B
+	dc.l	$1FB22222
+	dc.l	$1FB22222
+	dc.l	$1FB22222
+	dc.l	$1FB22222
+	dc.l	$1F222222
+	dc.l	$1FB22222
+	dc.l	$1FBB2222
+	dc.l	$1FBBB22B
 
 	; 4
 	dc.l	$22222222
@@ -48,15 +48,15 @@
 	dc.l	$22222222
 	dc.l	$22222222
 	dc.l	$22222222
-	dc.l	$B2D22BBB
+	dc.l	$B2E22BBB
 
 	; 5
-	dc.l	$222222E1
-	dc.l	$222222E1
-	dc.l	$222222E1
-	dc.l	$222222E1
-	dc.l	$22222BE1
-	dc.l	$222BBAE1
-	dc.l	$22BBA8E1
-	dc.l	$BBA887E1
+	dc.l	$222222F1
+	dc.l	$222222F1
+	dc.l	$222222F1
+	dc.l	$222222F1
+	dc.l	$22222BF1
+	dc.l	$222BBAF1
+	dc.l	$22BBA8F1
+	dc.l	$BBA887F1
 

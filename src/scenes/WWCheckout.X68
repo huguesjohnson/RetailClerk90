@@ -8,43 +8,31 @@
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0008 ; tileset count - 1
+	dc.w	$0005 ; tileset count - 1
 
 	; tileset 0 - tiles start at [0] - tileset length [1]
 	dc.l	TransparentTileTilesStart
 	dc.l	TransparentTileTilesEnd
 
-	; tileset 1 - tiles start at [1] - tileset length [10]
-	dc.l	FloorTileSmallTilesStart
-	dc.l	FloorTileSmallTilesEnd
+	; tileset 1 - tiles start at [1] - tileset length [4]
+	dc.l	FloorWWTilesStart
+	dc.l	FloorWWTilesEnd
 
-	; tileset 2 - tiles start at [11] - tileset length [14]
-	dc.l	FrameRectTilesStart
-	dc.l	FrameRectTilesEnd
+	; tileset 2 - tiles start at [5] - tileset length [4D]
+	dc.l	FrameTilesStart
+	dc.l	FrameTilesEnd
 
-	; tileset 3 - tiles start at [25] - tileset length [F]
-	dc.l	GlassTilesStart
-	dc.l	GlassTilesEnd
+	; tileset 3 - tiles start at [52] - tileset length [30]
+	dc.l	CounterTilesStart
+	dc.l	CounterTilesEnd
 
-	; tileset 4 - tiles start at [34] - tileset length [1]
-	dc.l	TransparentTileTilesStart
-	dc.l	TransparentTileTilesEnd
+	; tileset 4 - tiles start at [82] - tileset length [8]
+	dc.l	LaserDiscsHigh64x8TilesStart
+	dc.l	LaserDiscsHigh64x8TilesEnd
 
-	; tileset 5 - tiles start at [35] - tileset length [B]
-	dc.l	CounterTopTilesStart
-	dc.l	CounterTopTilesEnd
-
-	; tileset 6 - tiles start at [40] - tileset length [3]
-	dc.l	CounterShelvesTilesStart
-	dc.l	CounterShelvesTilesEnd
-
-	; tileset 7 - tiles start at [43] - tileset length [10]
-	dc.l	LaserDiscsHighTilesStart
-	dc.l	LaserDiscsHighTilesEnd
-
-	; tileset 8 - tiles start at [53] - tileset length [12]
-	dc.l	LaserDiscsLowTilesStart
-	dc.l	LaserDiscsLowTilesEnd
+	; tileset 5 - tiles start at [8A] - tileset length [18]
+	dc.l	LaserDiscsLow64x24TilesStart
+	dc.l	LaserDiscsLow64x24TilesEnd
 
 	;---------------------------------------------------------------------------
 	; palettes
@@ -57,97 +45,119 @@
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$000C ; scenery count - 1
+	dc.w	$000F ; scenery count - 1
 
 	; floor
-	dc.l	Pattern32x32Tile
+	dc.l	Pattern16x16x304
 	;		%pccvhnnnnnnnnnnn
 	dc.w	%0000000000000001 ; vdp pattern
-	dc.w	$0006 ; repeat=6
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$00000000 ; initial drawing location
+	dc.w	$000C ; repeat=12
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$00800000 ; initial drawing location
 
-	; right wall
-	dc.l	PatternFrameSideClosedRight
+	; west wall
+	dc.l	PatternFrameWestClosed
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000000010001 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$004E0000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$02800000 ; initial drawing location
 
-	; left wall
-	dc.l	PatternFrameSideClosedLeft
+	; east wall
+	dc.l	PatternFrameEastClosed
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0000000000010001 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$00000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$004A0000+$02800000 ; initial drawing location
 
-	; store front
-	dc.l	PatternStoreFront
+	; south wall
+	dc.l	PatternFrameSouthOpen
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000010001 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$0C000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$0D000000 ; initial drawing location
 
-	; shelves under counter
-	dc.l	Pattern3Tile208x8
+	; west wall - north fill
+	dc.l	PatternFrameNWFill
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000001000000 ; vdp pattern
-	dc.w	$0001 ; repeat=1
-	dc.l	VDP_VRAM_WRITE_B+$000E0000+$08000000 ; initial drawing location
+	dc.w	%0000000000000101 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$00800000 ; initial drawing location
+
+	; east wall - north fill
+	dc.l	PatternFrameNEFill
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000000000101 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$004A0000+$00800000 ; initial drawing location
 
 	; counter
-	dc.l	PatternCounterHigh208x8Closed
+	dc.l	PatternWWCounterHigh
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1010000000110101 ; vdp pattern
+	dc.w	%1010000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$000E0000+$06800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00140000+$07800000 ; initial drawing location
 
-	dc.l	PatternCounterLow208x24Closed
+	; counter
+	dc.l	PatternWWCounterLow
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000000110101 ; vdp pattern
+	dc.w	%0010000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$000E0000+$07000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00140000+$08000000 ; initial drawing location
 
-	; laserdisc - left high
-	dc.l	PatternLaserDiscsHigh
+	; counter
+	dc.l	PatternWWCounterHigh
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1010000001000011 ; vdp pattern
+	dc.w	%1010000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00080000+$02000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00280000+$07800000 ; initial drawing location
 
-	; laserdisc - left low
-	dc.l	PatternLaserDiscsLow
+	; counter
+	dc.l	PatternWWCounterLow
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000001010011 ; vdp pattern
+	dc.w	%0010000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00080000+$03000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00280000+$08000000 ; initial drawing location
+
+	; laserdisc - west high
+	dc.l	Pattern64x8
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000010000010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$000E0000+$03000000 ; initial drawing location
+
+	; laserdisc - west low
+	dc.l	Pattern64x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000010001010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$000E0000+$03800000 ; initial drawing location
 
 	; laserdisc - center high
-	dc.l	PatternLaserDiscsHigh
+	dc.l	Pattern64x8
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000001000011 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00200000+$02000000 ; initial drawing location
-
-	; laserdisc - center low
-	dc.l	PatternLaserDiscsLow
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000001010011 ; vdp pattern
+	dc.w	%1100000010000010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
 	dc.l	VDP_VRAM_WRITE_B+$00200000+$03000000 ; initial drawing location
 
-	; laserdisc - right high
-	dc.l	PatternLaserDiscsHigh
+	; laserdisc - center low
+	dc.l	Pattern64x24
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1010000001000011 ; vdp pattern
+	dc.w	%0100000010001010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00380000+$02000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00200000+$03800000 ; initial drawing location
 
-	; laserdisc - right low
-	dc.l	PatternLaserDiscsLow
+	; laserdisc - east high
+	dc.l	Pattern64x8
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000001010011 ; vdp pattern
+	dc.w	%1100000010000010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00380000+$03000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00320000+$03000000 ; initial drawing location
+
+	; laserdisc - east low
+	dc.l	Pattern64x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000010001010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$00320000+$03800000 ; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text
@@ -169,21 +179,21 @@
 
 	dc.w	OBJ_SCENE_WWCHECKOUT_LASERDISCS
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0111110010100000
+	dc.w	%1101000010111000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011100010100100
+	dc.w	%0011100010110010
 
 	dc.w	OBJ_SCENE_WWCHECKOUT_LASERDISCS
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0111110100000000
+	dc.w	%1100110100100000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011100010100100
+	dc.w	%0011100010110010
 
-	dc.w	OBJ_SCENE_WWCHECKOUT_LASERDISCS
+	dc.w	OBJ_NOTHING
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0111110101100000
+	dc.w	%0000000000000000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011100010100100
+	dc.w	%0000000000000000
 
 	dc.w	OBJ_NOTHING
 	;		%wwwwwwwxxxxxxxxx
@@ -245,8 +255,8 @@
 	;---------------------------------------------------------------------------
 	dc.w	$0003 ; npc count - 1
 
-	dc.w	$00E8 ; starting x location of npc0
-	dc.w	$00D0 ; starting y location of npc0
+	dc.w	$00EE ; starting x location of npc0
+	dc.w	$00E2 ; starting y location of npc0
 	dc.w	DIRECTION_DOWN ; starting direction of npc0
 	dc.w	$FFFF ; movement frequency of npc0
 	dc.l	NullMovementStart ; location of movement pattern for npc0

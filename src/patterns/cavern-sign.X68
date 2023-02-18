@@ -30,17 +30,17 @@ PatternCavernSign:
 	dc.w	$16
 	dc.w	$17
 	dc.w	$18
+	dc.w	$16
 	dc.w	$19
 	dc.w	$1A
-	dc.w	$1B
-	dc.w	$1B
-	dc.w	$1B
-	dc.w	$1B
-	dc.w	$1B
-	dc.w	$1B
-	dc.w	$1B
-	dc.w	$1B
-	dc.w	$1B
-	dc.w	$1B
+	dc.w	$1A
+	dc.w	$1A
+	dc.w	$1A
+	dc.w	$1A
+	dc.w	$1A
+	dc.w	$1A
+	dc.w	$1A
+	dc.w	$1A
+	dc.w	$1A
 	dc.w	$18
-	dc.w	$19
+	dc.w	$16

@@ -5,16 +5,11 @@
 	"tilesetNames":
 	[
 		"TransparentTile",
-		"FloorWoodVert",
-		"FrameRound",
-		"CounterTop",
-		"CounterTopNorthCorners",
-		"CounterShelves",
-		"TBooksBookcaseTitle",
-		"TBooksBookcaseAHigh",
-		"TBooksBookcaseALow",
-		"TBooksBookcaseBHigh",
-		"TBooksBookcaseBLow"
+		"FloorTBooks",
+		"Frame",
+		"Counter",
+		"TBooksBookcaseHigh56x16",
+		"TBooksBookcaseLow56x24"
 	],
 	"paletteNames":
 	[
@@ -26,313 +21,294 @@
 	"scenery":
 	[
 		{
-			"patternName":"PatternWoodFloorV",
-			"comment":"background",
+			"patternName":"Pattern16x16x304",
+			"comment":"floor",
 			"tilesetIndex":1,
+			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":0,
-			"repeat":13,
+			"repeat":12,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"00000000",
-			"column":"00000000"
+			"row":"00800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameSideClosedLeft",
-			"comment":"left wall",
+			"patternName":"PatternFrameWestClosed",
+			"comment":"west wall",
 			"tilesetIndex":2,
-			"highPriority":true,
+			"tilesetOffset":0,
+			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00800000",
-			"column":"00000000"
+			"row":"02800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameSideClosedRight",
-			"comment":"right side",
+			"patternName":"PatternFrameEastClosed",
+			"comment":"east wall",
 			"tilesetIndex":2,
-			"highPriority":true,
+			"tilesetOffset":0,
+			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00800000",
-			"column":"004E0000"
+			"row":"02800000",
+			"column":"004A0000"
 		},
 		{
-			"patternName":"PatternFrameBottom",
+			"patternName":"PatternFrameSouthClosed",
 			"comment":"south wall",
 			"tilesetIndex":2,
-			"highPriority":true,
+			"tilesetOffset":0,
+			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"0D800000",
-			"column":"00000000"
+			"row":"0D000000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameTopOpenLeft",
-			"comment":"north wall - left side",
+			"patternName":"PatternFrameNorthOpenWestSide",
+			"comment":"north wall - west side",
 			"tilesetIndex":2,
-			"highPriority":true,
+			"tilesetOffset":0,
+			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00000000",
-			"column":"00000000"
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"00800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameTopOpenRight",
-			"comment":"north wall - right side",
+			"patternName":"PatternFrameNorthOpenEastSide",
+			"comment":"north wall - east side",
 			"tilesetIndex":2,
-			"highPriority":true,
+			"tilesetOffset":0,
+			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00360000",
-			"column":"00000000"
-		},
-		{
-			"patternName":"Pattern24x8",
-			"comment":"shelves under counter",
-			"tilesetIndex":5,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":1,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"07000000",
-			"column":"001A0000"
-		},
+			"row":"00800000",
+			"column":"002E0000"
+		},		
 		{
-			"patternName":"Pattern24x8",
-			"tilesetIndex":5,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":1,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"07000000",
-			"column":"00300000"
-		},
-		{
-			"patternName":"PatternCounterSide24x40ClosedBottom",
-			"comment":"counter sides",
-			"tilesetIndex":3,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"05000000",
-			"column":"001A0000"
-		},
-		{
-			"patternName":"PatternCounterSide24x40ClosedBottom",
-			"tilesetIndex":3,
-			"highPriority":false,
-			"paletteNumber":1,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"05000000",
-			"column":"00300000"
-		},
-		{
-			"patternName":"PatternCounterLow112x24ClosedTop",
+			"patternName":"PatternTBooksCounter",
+			"comment":"counter",			
 			"tilesetIndex":3,
 			"highPriority":false,
 			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"03800000",
-			"column":"001A0000"
+			"row":"04800000",
+			"column":"001E0000"
 		},
 		{
-			"patternName":"PatternTBooksBookcaseTitle",
-			"comment":"bookshelves",
-			"tilesetIndex":6,
+			"patternName":"Pattern56x16",
+			"comment":"bookcase - north west - high",
+			"tilesetIndex":4,
 			"highPriority":true,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"07800000",
-			"column":"00020000"
+			"row":"01000000",
+			"column":"00060000"
 		},
 		{
-			"patternName":"Pattern72x24",
-			"tilesetIndex":7,
-			"highPriority":true,
+			"patternName":"Pattern56x24",
+			"comment":"bookcase - north west - low",
+			"tilesetIndex":5,
+			"highPriority":false,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"08800000",
-			"column":"00020000"
+			"row":"02000000",
+			"column":"00060000"
 		},
 		{
-			"patternName":"Pattern72x24",
-			"tilesetIndex":8,
+			"patternName":"Pattern56x16",
+			"comment":"bookcase - north east - high",
+			"tilesetIndex":4,
+			"highPriority":true,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01000000",
+			"column":"003C0000"
+		},
+		{
+			"patternName":"Pattern56x24",
+			"comment":"bookcase - north east - low",
+			"tilesetIndex":5,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"02000000",
+			"column":"003C0000"
+		},
+		{
+			"patternName":"Pattern56x16",
+			"comment":"bookcase - center west - high",
+			"tilesetIndex":4,
+			"highPriority":true,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"05000000",
+			"column":"00060000"
+		},
+		{
+			"patternName":"Pattern56x24",
+			"comment":"bookcase - center west - low",
+			"tilesetIndex":5,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"06000000",
+			"column":"00060000"
+		},
+		{
+			"patternName":"Pattern56x16",
+			"comment":"bookcase - center east - high",
+			"tilesetIndex":4,
+			"highPriority":true,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"05000000",
+			"column":"003C0000"
+		},
+		{
+			"patternName":"Pattern56x24",
+			"comment":"bookcase - center east - low",
+			"tilesetIndex":5,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"06000000",
+			"column":"003C0000"
+		},		
+		{
+			"patternName":"Pattern56x16",
+			"comment":"bookcase - south west - high",
+			"tilesetIndex":4,
+			"highPriority":true,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"09000000",
+			"column":"00060000"
+		},
+		{
+			"patternName":"Pattern56x24",
+			"comment":"bookcase - south west - low",
+			"tilesetIndex":5,
 			"highPriority":false,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"0A000000",
-			"column":"00020000"
+			"column":"00060000"
 		},
 		{
-			"patternName":"PatternTBooksBookcaseTitle",
-			"tilesetIndex":6,
+			"patternName":"Pattern56x16",
+			"comment":"bookcase - south east - high",
+			"tilesetIndex":4,
 			"highPriority":true,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"02000000",
+			"row":"09000000",
 			"column":"003C0000"
 		},
 		{
-			"patternName":"Pattern72x24",
-			"tilesetIndex":9,
-			"highPriority":true,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"03000000",
-			"column":"003C0000"
-		},
-		{
-			"patternName":"Pattern72x24",
-			"tilesetIndex":10,
-			"highPriority":false,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"04800000",
-			"column":"003C0000"
-		},
-		{
-			"patternName":"PatternTBooksBookcaseTitle",
-			"tilesetIndex":6,
-			"highPriority":true,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"02000000",
-			"column":"00020000"
-		},
-		{
-			"patternName":"Pattern72x24",
-			"tilesetIndex":7,
-			"highPriority":true,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"03000000",
-			"column":"00020000"
-		},
-		{
-			"patternName":"Pattern72x24",
-			"tilesetIndex":8,
-			"highPriority":false,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"04800000",
-			"column":"00020000"
-		},
-		{
-			"patternName":"PatternTBooksBookcaseTitle",
-			"tilesetIndex":6,
-			"highPriority":true,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"07800000",
-			"column":"003C0000"
-		},
-		{
-			"patternName":"Pattern72x24",
-			"tilesetIndex":9,
-			"highPriority":true,
-			"paletteNumber":2,
-			"repeat":0,
-			"layer":"VDP_VRAM_WRITE_B",
-			"row":"08800000",
-			"column":"003C0000"
-		},
-		{
-			"patternName":"Pattern72x24",
-			"tilesetIndex":10,
+			"patternName":"Pattern56x24",
+			"comment":"bookcase - south east - low",
+			"tilesetIndex":5,
 			"highPriority":false,
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"0A000000",
 			"column":"003C0000"
-		}
-	],
-	"text":
-	[
-		{
-			"stringLabel":"StoreSignFiction",
-			"highPriority":true,
-			"paletteNumber":2,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"08000000",
-			"column":"00040000"
 		},
 		{
-			"stringLabel":"StoreSignCooking",
+			"patternName":"Pattern56x16",
+			"comment":"bookcase - south center - high",
+			"tilesetIndex":4,
 			"highPriority":true,
 			"paletteNumber":2,
+			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"08000000",
-			"column":"003E0000"
+			"row":"09000000",
+			"column":"00200000"
 		},
 		{
-			"stringLabel":"StoreSignRomance",
-			"highPriority":true,
+			"patternName":"Pattern56x24",
+			"comment":"bookcase - south center - low",
+			"tilesetIndex":5,
+			"highPriority":false,
 			"paletteNumber":2,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"02800000",
-			"column":"00040000"
-		},
-		{
-			"stringLabel":"StoreSignHistory",
-			"highPriority":true,
-			"paletteNumber":2,
-			"layer":"VDP_VRAM_WRITE_A",
-			"row":"02800000",
-			"column":"003E0000"
-		}
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"0A000000",
+			"column":"00200000"
+		}				
 	],
 	"objects":
 	[
 		{
 			"id":"OBJ_SCENE_TBOOKS_FICTION",
-			"x":136,
-			"y":264,
-			"width":71,
-			"height":40
+			"x":152,
+			"y":145,
+			"width":55,
+			"height":32
 		},
 		{
 			"id":"OBJ_SCENE_TBOOKS_ROMANCE",
-			"x":136,
-			"y":176,
-			"width":71,
-			"height":40
+			"x":368,
+			"y":145,
+			"width":55,
+			"height":32
 		},
 		{
 			"id":"OBJ_SCENE_TBOOKS_HISTORY",
-			"x":368,
-			"y":176,
-			"width":71,
-			"height":40
+			"x":152,
+			"y":209,
+			"width":55,
+			"height":32
 		},
 		{
 			"id":"OBJ_SCENE_TBOOKS_COOKING",
 			"x":368,
-			"y":264,
-			"width":71,
-			"height":40
+			"y":209,
+			"width":55,
+			"height":32
 		},
-		null,
-		null,
-		null,
+		{
+			"id":"OBJ_SCENE_TBOOKS_RPG",
+			"x":152,
+			"y":273,
+			"width":55,
+			"height":32
+		},
+		{
+			"id":"OBJ_SCENE_TBOOKS_NEWAGE",
+			"x":256,
+			"y":273,
+			"width":55,
+			"height":32
+		},
+		{
+			"id":"OBJ_SCENE_TBOOKS_TECHNOLOGY",
+			"x":368,
+			"y":273,
+			"width":55,
+			"height":32
+		},
 		null,
 		null,
 		null
@@ -348,7 +324,7 @@
 	"npcLocations":
 	[
 		{
-			"x":162,
+			"x":222,
 			"y":218,
 			"direction":"DIRECTION_DOWN",
 			"movementFrequency":65535,

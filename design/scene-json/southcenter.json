@@ -4,10 +4,12 @@
 	"destinationFilePath":"src/scenes/SouthCenter.X68",
 	"tilesetNames":[
 		"TransparentTile",
-		"FloorTileBasic",
-		"FrameRect",
+		"FloorCenterHall",
+		"Frame",
 		"InfoDeskHigh",
-		"InfoDeskLow"
+		"InfoDeskLow",
+		"InfoStandHigh16x8",
+		"InfoStandLow16x24"
 	],
 	"paletteNames":[
 		"PaletteCNow00",
@@ -17,60 +19,89 @@
 	],
 	"scenery":[
 		{
-			"patternName":"PatternTileFloor",
-			"comment":"background",
+			"patternName":"Pattern16x16x304",
+			"comment":"floor",
 			"tilesetIndex":1,
+			"tilesetOffset":0,
 			"highPriority":false,
 			"paletteNumber":2,
-			"repeat":13,
+			"repeat":12,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"00000000",
-			"column":"00000000"
+			"row":"00800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameSideLeftOpenTopExterior",
-			"comment":"left entrance - top",
+			"patternName":"PatternFrameWestOpen",
+			"comment":"west wall",
 			"tilesetIndex":2,
-			"highPriority":true,
+			"tilesetOffset":0,
+			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"00000000",
-			"column":"00000000"
+			"row":"02800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameSideLeftOpenBottomExterior",
-			"comment":"left entrance - bottom",
+			"patternName":"PatternFrameNWFill",
+			"comment":"west wall - north fill",
 			"tilesetIndex":2,
-			"highPriority":true,
+			"tilesetOffset":0,
+			"highPriority":false,
 			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"09000000",
-			"column":"00000000"
+			"row":"00800000",
+			"column":"00020000"
 		},
 		{
-			"patternName":"PatternFrameSideRightOpenTopExterior",
-			"comment":"right entrance - top",
+			"patternName":"PatternFrameSWFill",
+			"comment":"west wall - south fill",
 			"tilesetIndex":2,
-			"highPriority":true,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"0D000000",
+			"column":"00020000"
+		},
+		{
+			"patternName":"PatternFrameEastOpen",
+			"comment":"east wall",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
+			"highPriority":false,
 			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"004E0000",
-			"column":"00000000"
+			"row":"02800000",
+			"column":"004A0000"
 		},
 		{
-			"patternName":"PatternFrameSideRightOpenBottomExterior",
-			"comment":"right entrance - bottom",
+			"patternName":"PatternFrameNEFill",
+			"comment":"east wall - north fill",
 			"tilesetIndex":2,
-			"highPriority":true,
+			"tilesetOffset":0,
+			"highPriority":false,
 			"paletteNumber":1,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"09000000",
-			"column":"004E0000"
+			"row":"00800000",
+			"column":"004A0000"
 		},
+		{
+			"patternName":"PatternFrameSEFill",
+			"comment":"east wall - south fill",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"0D000000",
+			"column":"004A0000"
+		},		
 		{
 			"patternName":"PatternInfoDeskLow",
 			"comment":"infodesk low",
@@ -79,8 +110,8 @@
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"03000000",
-			"column":"001A0000"
+			"row":"05800000",
+			"column":"00200000"
 		},
 		{
 			"patternName":"PatternInfoDeskHigh",
@@ -90,15 +121,59 @@
 			"paletteNumber":2,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
-			"row":"06000000",
-			"column":"001E0000"
-		}
+			"row":"02000000",
+			"column":"00200000"
+		},
+		{
+			"patternName":"Pattern16x8",
+			"comment":"infostand - west - high",
+			"tilesetIndex":5,
+			"highPriority":true,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"05000000",
+			"column":"001C0000"
+		},
+		{
+			"patternName":"Pattern16x24",
+			"comment":"infostand - west - low",
+			"tilesetIndex":6,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"05800000",
+			"column":"001C0000"
+		},
+		{
+			"patternName":"Pattern16x8",
+			"comment":"infostand - east - high",
+			"tilesetIndex":5,
+			"highPriority":true,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"05000000",
+			"column":"00300000"
+		},
+		{
+			"patternName":"Pattern16x24",
+			"comment":"infostand - east - low",
+			"tilesetIndex":6,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"05800000",
+			"column":"00300000"
+		}						
 	],
 	"objects":[
 		{
 			"id":"OBJ_NPC_GINA",
 			"x":276,
-			"y":232,
+			"y":216,
 			"width":32,
 			"height":24
 		},
@@ -122,7 +197,7 @@
 	"npcLocations":[
 		{
 			"x":280,
-			"y":208,
+			"y":184,
 			"direction":"DIRECTION_DOWN",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"

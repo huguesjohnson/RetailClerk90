@@ -3,40 +3,40 @@
 	; 0
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$000000FD
-	dc.l	$00000FD6
-	dc.l	$00000FD6
-	dc.l	$0000FD6B
-	dc.l	$0000FD67
-	dc.l	$0000CD7B
+	dc.l	$00000057
+	dc.l	$0000057C
+	dc.l	$0000057C
+	dc.l	$000057CB
+	dc.l	$000057CB
+	dc.l	$000047BB
 
 	; 1
-	dc.l	$00FFDDDD
-	dc.l	$FDDD7B76
-	dc.l	$D6666B67
-	dc.l	$7B7BAA66
-	dc.l	$67676AAA
-	dc.l	$AAAAA6A6
-	dc.l	$67B7B77B
-	dc.l	$76767667
+	dc.l	$00557777
+	dc.l	$5777BBBC
+	dc.l	$7CCCCBCB
+	dc.l	$BBBBDDCC
+	dc.l	$CBCBCDDD
+	dc.l	$DDDDDCDC
+	dc.l	$CBBBBBBB
+	dc.l	$BCBCBCCB
 
 	; 2
-	dc.l	$DDDFF000
-	dc.l	$666DDDF0
-	dc.l	$B7B666DD
-	dc.l	$76767B76
-	dc.l	$AAAA6766
-	dc.l	$677B7AA7
-	dc.l	$77676766
-	dc.l	$66AAA7AA
+	dc.l	$77755000
+	dc.l	$CCC77500
+	dc.l	$BBBCC775
+	dc.l	$BCBCBBC7
+	dc.l	$DDDDCCC7
+	dc.l	$CBBBBDBC
+	dc.l	$BBCBCCCB
+	dc.l	$CCDDDDDD
 
 	; 3
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$F0000000
-	dc.l	$DF000000
-	dc.l	$DF000000
-	dc.l	$6DF00000
-	dc.l	$7DF00000
-	dc.l	$ADCF0000
+	dc.l	$00000000
+	dc.l	$50000000
+	dc.l	$50000000
+	dc.l	$75000000
+	dc.l	$75000000
+	dc.l	$74500000
 

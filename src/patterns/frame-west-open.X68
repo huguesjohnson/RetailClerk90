@@ -1,0 +1,45 @@
+PatternFrameWestOpen:
+	dc.w	$14	; 21 rows
+	dc.w	$1	; 2 columns
+	dc.w	$2
+	dc.w	$19
+	dc.w	$2
+	dc.w	$19
+	dc.w	$2
+	dc.w	$19
+	dc.w	$32
+	dc.w	$19
+	dc.w	$30
+	dc.w	$31
+	dc.w	$2E
+	dc.w	$2F
+	dc.w	$2C
+	dc.w	$2D
+	dc.w	$0
+	dc.w	$0
+	dc.w	$0
+	dc.w	$0
+	dc.w	$0
+	dc.w	$0
+	dc.w	$0
+	dc.w	$0
+	dc.w	$0
+	dc.w	$0
+	dc.w	$0
+	dc.w	$0
+	dc.w	$0
+	dc.w	$0
+	dc.w	$1D
+	dc.w	$1E
+	dc.w	$2
+	dc.w	$1F
+	dc.w	$2
+	dc.w	$19
+	dc.w	$2
+	dc.w	$19
+	dc.w	$2
+	dc.w	$19
+	dc.w	$2
+	dc.w	$19
+	dc.w	$2
+	dc.w	$19

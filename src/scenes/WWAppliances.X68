@@ -8,39 +8,35 @@
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0007 ; tileset count - 1
+	dc.w	$0006 ; tileset count - 1
 
 	; tileset 0 - tiles start at [0] - tileset length [1]
 	dc.l	TransparentTileTilesStart
 	dc.l	TransparentTileTilesEnd
 
-	; tileset 1 - tiles start at [1] - tileset length [10]
-	dc.l	FloorTileSmallTilesStart
-	dc.l	FloorTileSmallTilesEnd
+	; tileset 1 - tiles start at [1] - tileset length [4]
+	dc.l	FloorWWTilesStart
+	dc.l	FloorWWTilesEnd
 
-	; tileset 2 - tiles start at [11] - tileset length [14]
-	dc.l	FrameRectTilesStart
-	dc.l	FrameRectTilesEnd
+	; tileset 2 - tiles start at [5] - tileset length [4D]
+	dc.l	FrameTilesStart
+	dc.l	FrameTilesEnd
 
-	; tileset 3 - tiles start at [25] - tileset length [18]
-	dc.l	WWApplianceWallTilesStart
-	dc.l	WWApplianceWallTilesEnd
+	; tileset 3 - tiles start at [52] - tileset length [C]
+	dc.l	Laundry24x32TilesStart
+	dc.l	Laundry24x32TilesEnd
 
-	; tileset 4 - tiles start at [3D] - tileset length [6]
-	dc.l	WWApplianceFridgeHighTilesStart
-	dc.l	WWApplianceFridgeHighTilesEnd
+	; tileset 4 - tiles start at [5E] - tileset length [4]
+	dc.l	FridgeHigh16x16TilesStart
+	dc.l	FridgeHigh16x16TilesEnd
 
-	; tileset 5 - tiles start at [43] - tileset length [9]
-	dc.l	WWApplianceFridgeLowTilesStart
-	dc.l	WWApplianceFridgeLowTilesEnd
+	; tileset 5 - tiles start at [62] - tileset length [6]
+	dc.l	FridgeLow16x24TilesStart
+	dc.l	FridgeLow16x24TilesEnd
 
-	; tileset 6 - tiles start at [4C] - tileset length [6]
-	dc.l	WWApplianceFridgeGrayHighTilesStart
-	dc.l	WWApplianceFridgeGrayHighTilesEnd
-
-	; tileset 7 - tiles start at [52] - tileset length [9]
-	dc.l	WWApplianceFridgeGrayLowTilesStart
-	dc.l	WWApplianceFridgeGrayLowTilesEnd
+	; tileset 6 - tiles start at [68] - tileset length [6]
+	dc.l	Oven16x24TilesStart
+	dc.l	Oven16x24TilesEnd
 
 	;---------------------------------------------------------------------------
 	; palettes
@@ -53,115 +49,392 @@
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$0010 ; scenery count - 1
+	dc.w	$0036 ; scenery count - 1
 
 	; floor
-	dc.l	Pattern32x32Tile
+	dc.l	Pattern16x16x304
 	;		%pccvhnnnnnnnnnnn
 	dc.w	%0000000000000001 ; vdp pattern
-	dc.w	$0006 ; repeat=6
-	dc.l	VDP_VRAM_WRITE_B+$00000000+$00000000 ; initial drawing location
-
-	; shelves
-	dc.l	PatternShelves24x64
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0010000000100101 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$00800000 ; initial drawing location
-
-	; north wall
-	dc.l	PatternFrameTopLongLeft
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000010001 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$00000000 ; initial drawing location
-
-	; right wall
-	dc.l	PatternFrameSideClosedRight
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000010001 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$004E0000+$00800000 ; initial drawing location
+	dc.w	$000C ; repeat=12
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$00800000 ; initial drawing location
 
 	; south wall
-	dc.l	PatternFrameBottomClosedLeft
+	dc.l	PatternFrameSouthClosedWestOpen
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1000000000010001 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$0D800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$0D000000 ; initial drawing location
 
-	; fridges
-	dc.l	Pattern24x16
+	; north wall
+	dc.l	PatternFrameNorthClosedWestOpen
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000000111101 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00420000+$03000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_B+$00020000+$00800000 ; initial drawing location
 
-	dc.l	Pattern24x24
+	; east wall
+	dc.l	PatternFrameEastClosed
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000001000011 ; vdp pattern
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00420000+$04000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$004A0000+$02800000 ; initial drawing location
 
-	dc.l	Pattern24x16
+	; laundry machine - 0
+	dc.l	Pattern24x32
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000000111101 ; vdp pattern
+	dc.w	%0010000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00360000+$03000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$01800000 ; initial drawing location
 
-	dc.l	Pattern24x24
+	; laundry machine - 1
+	dc.l	Pattern24x32
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000001000011 ; vdp pattern
+	dc.w	%0010000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00360000+$04000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00080000+$01800000 ; initial drawing location
 
-	dc.l	Pattern24x16
+	; laundry machine - 2
+	dc.l	Pattern24x32
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000000111101 ; vdp pattern
+	dc.w	%0010000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$002A0000+$03000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$000E0000+$01800000 ; initial drawing location
 
-	dc.l	Pattern24x24
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%0100000001000011 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$002A0000+$04000000 ; initial drawing location
-
-	dc.l	Pattern24x16
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000001001100 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$001E0000+$03000000 ; initial drawing location
-
-	dc.l	Pattern24x24
+	; laundry machine - 3
+	dc.l	Pattern24x32
 	;		%pccvhnnnnnnnnnnn
 	dc.w	%0100000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$001E0000+$04000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00140000+$01800000 ; initial drawing location
 
-	dc.l	Pattern24x16
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000001001100 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00120000+$03000000 ; initial drawing location
-
-	dc.l	Pattern24x24
+	; laundry machine - 3
+	dc.l	Pattern24x32
 	;		%pccvhnnnnnnnnnnn
 	dc.w	%0100000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00120000+$04000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00140000+$01800000 ; initial drawing location
 
-	dc.l	Pattern24x16
-	;		%pccvhnnnnnnnnnnn
-	dc.w	%1100000001001100 ; vdp pattern
-	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00060000+$03000000 ; initial drawing location
-
-	dc.l	Pattern24x24
+	; laundry machine - 4
+	dc.l	Pattern24x32
 	;		%pccvhnnnnnnnnnnn
 	dc.w	%0100000001010010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00060000+$04000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$001A0000+$01800000 ; initial drawing location
+
+	; laundry machine - 5
+	dc.l	Pattern24x32
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001010010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00200000+$01800000 ; initial drawing location
+
+	; laundry machine - 6
+	dc.l	Pattern24x32
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001010010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00260000+$01800000 ; initial drawing location
+
+	; laundry machine - 7
+	dc.l	Pattern24x32
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001010010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$002C0000+$01800000 ; initial drawing location
+
+	; oven - 0
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001101000 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00320000+$02000000 ; initial drawing location
+
+	; oven - 0
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001101000 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00360000+$02000000 ; initial drawing location
+
+	; oven - 0
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001101000 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$003A0000+$02000000 ; initial drawing location
+
+	; oven - 0
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001101000 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$003E0000+$02000000 ; initial drawing location
+
+	; oven - 1
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001101000 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00420000+$02000000 ; initial drawing location
+
+	; oven - x
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001101000 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00460000+$02000000 ; initial drawing location
+
+	; fridge high - 0
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00100000+$04800000 ; initial drawing location
+
+	; fridge low - 0
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001100010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$00100000+$05800000 ; initial drawing location
+
+	; fridge high - 1
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00160000+$04800000 ; initial drawing location
+
+	; fridge low - 1
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001100010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$00160000+$05800000 ; initial drawing location
+
+	; fridge high - 2
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1010000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$001C0000+$04800000 ; initial drawing location
+
+	; fridge low - 2
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001100010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$001C0000+$05800000 ; initial drawing location
+
+	; fridge high - 3
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1010000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00220000+$04800000 ; initial drawing location
+
+	; fridge low - 3
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001100010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$00220000+$05800000 ; initial drawing location
+
+	; fridge high - 4
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00280000+$04800000 ; initial drawing location
+
+	; fridge low - 4
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001100010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$00280000+$05800000 ; initial drawing location
+
+	; fridge high - 5
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$002E0000+$04800000 ; initial drawing location
+
+	; fridge low - 5
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001100010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$002E0000+$05800000 ; initial drawing location
+
+	; fridge high - 6
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1010000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00340000+$04800000 ; initial drawing location
+
+	; fridge low - 6
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001100010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$00340000+$05800000 ; initial drawing location
+
+	; fridge high - 7
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1010000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$003A0000+$04800000 ; initial drawing location
+
+	; fridge low - 7
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001100010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$003A0000+$05800000 ; initial drawing location
+
+	; fridge high - 8
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00400000+$04800000 ; initial drawing location
+
+	; fridge low - 8
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001100010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$00400000+$05800000 ; initial drawing location
+
+	; fridge high - 9
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00100000+$08800000 ; initial drawing location
+
+	; fridge low - 9
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001100010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$00100000+$09800000 ; initial drawing location
+
+	; fridge high - 10
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00160000+$08800000 ; initial drawing location
+
+	; fridge low - 10
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001100010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$00160000+$09800000 ; initial drawing location
+
+	; fridge high - 11
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1010000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$001C0000+$08800000 ; initial drawing location
+
+	; fridge low - 11
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001100010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$001C0000+$09800000 ; initial drawing location
+
+	; fridge high - 12
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1010000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00220000+$08800000 ; initial drawing location
+
+	; fridge low - 12
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001100010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$00220000+$09800000 ; initial drawing location
+
+	; fridge high - 13
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00280000+$08800000 ; initial drawing location
+
+	; fridge low - 13
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001100010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$00280000+$09800000 ; initial drawing location
+
+	; fridge high - 14
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$002E0000+$08800000 ; initial drawing location
+
+	; fridge low - 14
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001100010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$002E0000+$09800000 ; initial drawing location
+
+	; fridge high - 15
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1010000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00340000+$08800000 ; initial drawing location
+
+	; fridge low - 15
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001100010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$00340000+$09800000 ; initial drawing location
+
+	; fridge high - 16
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1010000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$003A0000+$08800000 ; initial drawing location
+
+	; fridge low - 16
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001100010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$003A0000+$09800000 ; initial drawing location
+
+	; fridge high - 17
+	dc.l	Pattern16x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00400000+$08800000 ; initial drawing location
+
+	; fridge low - 17
+	dc.l	Pattern16x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001100010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$00400000+$09800000 ; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text
@@ -183,57 +456,57 @@
 
 	dc.w	OBJ_SCENE_WWAPPLIANCES_WALL
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%1100100010001000
+	dc.w	%1100100010010000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011000010001000
+	dc.w	%0011100010011000
 
 	dc.w	OBJ_SCENE_WWAPPLIANCES_WALL
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%1100100011101100
+	dc.w	%1100100011110100
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0011000010001000
+	dc.w	%0011100010011000
 
 	dc.w	OBJ_SCENE_WWAPPLIANCES_WALL
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%1111111110000110
+	dc.w	%1111111101011000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0010000010001000
+	dc.w	%0011100010011000
 
 	dc.w	OBJ_SCENE_WWAPPLIANCES_FRIDGE
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0011011010010000
+	dc.w	%1011010011000000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0010000011000000
+	dc.w	%0011110011001101
 
 	dc.w	OBJ_SCENE_WWAPPLIANCES_FRIDGE
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0011011011000000
+	dc.w	%1000110100011010
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0010000011000000
+	dc.w	%0011110011001101
 
 	dc.w	OBJ_SCENE_WWAPPLIANCES_FRIDGE
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0011011011110000
+	dc.w	%0110000101100000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0010000011000000
+	dc.w	%0011110011001101
 
 	dc.w	OBJ_SCENE_WWAPPLIANCES_FRIDGE
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0011011100100000
+	dc.w	%1011010011000000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0010000011000000
+	dc.w	%0011110100001101
 
 	dc.w	OBJ_SCENE_WWAPPLIANCES_FRIDGE
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0011011101010000
+	dc.w	%1000110100011010
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0010000011000000
+	dc.w	%0011110100001101
 
 	dc.w	OBJ_SCENE_WWAPPLIANCES_FRIDGE
 	;		%wwwwwwwxxxxxxxxx
-	dc.w	%0011011110000000
+	dc.w	%0110000101100000
 	;		%hhhhhhhyyyyyyyyy
-	dc.w	%0010000011000000
+	dc.w	%0011110100001101
 
 	dc.w	OBJ_NOTHING
 	;		%wwwwwwwxxxxxxxxx
@@ -260,7 +533,7 @@
 	dc.w	$0003 ; npc count - 1
 
 	dc.w	$0104 ; starting x location of npc0
-	dc.w	$00F0 ; starting y location of npc0
+	dc.w	$00EC ; starting y location of npc0
 	dc.w	DIRECTION_DOWN ; starting direction of npc0
 	dc.w	$FFFF ; movement frequency of npc0
 	dc.l	NullMovementStart ; location of movement pattern for npc0

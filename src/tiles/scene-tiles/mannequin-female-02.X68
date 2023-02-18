@@ -21,27 +21,27 @@
 	dc.l	$33400000
 
 	; 2
-	dc.l	$0002F333
-	dc.l	$0222DDDD
-	dc.l	$2FFFFFFF
-	dc.l	$2DD2DDDD
-	dc.l	$2F22FFFF
-	dc.l	$2DD22DDD
-	dc.l	$2F332FFF
-	dc.l	$02332DDD
+	dc.l	$00023333
+	dc.l	$02221111
+	dc.l	$23333333
+	dc.l	$21121111
+	dc.l	$23223333
+	dc.l	$21122111
+	dc.l	$23332333
+	dc.l	$02332111
 
 	; 3
-	dc.l	$33F22000
-	dc.l	$DDDD2200
-	dc.l	$FFFFFF20
-	dc.l	$DDD2DD20
-	dc.l	$FFF22F20
-	dc.l	$DD22DD20
-	dc.l	$FF233F20
-	dc.l	$DD233200
+	dc.l	$33322000
+	dc.l	$11112200
+	dc.l	$33333320
+	dc.l	$11121120
+	dc.l	$33322320
+	dc.l	$11221120
+	dc.l	$33233320
+	dc.l	$11233200
 
 	; 4
-	dc.l	$11222FFF
+	dc.l	$11222333
 	dc.l	$11112AAA
 	dc.l	$11112AAA
 	dc.l	$11112AAA
@@ -51,7 +51,7 @@
 	dc.l	$11112AA2
 
 	; 5
-	dc.l	$FF222111
+	dc.l	$33222111
 	dc.l	$AA211111
 	dc.l	$AA211111
 	dc.l	$AA211111

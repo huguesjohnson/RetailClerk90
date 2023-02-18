@@ -106,6 +106,7 @@ EndGame:
 ;*******************************************************************************
 ; day specific events
 ;*******************************************************************************
-;	include	'actionscript/ActionScriptDay00.X68'
+	include	'actionscript/ActionScriptAllDay.X68'
+	include	'actionscript/ActionScriptDay00.X68'
 
 

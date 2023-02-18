@@ -5,75 +5,75 @@ Shopper_Frame0Start:
 
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$00000111
-	dc.l	$00001555
-	dc.l	$00015222
-	dc.l	$00152222
-	dc.l	$00122222
-	dc.l	$001222D2
+	dc.l	$00000DDD
+	dc.l	$0000D222
+	dc.l	$000D2444
+	dc.l	$00D24444
+	dc.l	$00D44444
+	dc.l	$00D444F4
 
-	dc.l	$00122252
-	dc.l	$00122222
-	dc.l	$00122222
-	dc.l	$00012222
-	dc.l	$00111C22
-	dc.l	$011111CC
-	dc.l	$01111111
-	dc.l	$01EE1111
+	dc.l	$00D44424
+	dc.l	$00D44444
+	dc.l	$00D44444
+	dc.l	$000D4444
+	dc.l	$00DDD844
+	dc.l	$0DDDDD88
+	dc.l	$0DDDDDDD
+	dc.l	$0DAADDDD
 
-	dc.l	$01EE1111
-	dc.l	$01881111
-	dc.l	$01881111
-	dc.l	$01221111
-	dc.l	$00111AAA
-	dc.l	$00001AA1
-	dc.l	$00001AA1
-	dc.l	$00001AA1
+	dc.l	$0DAADDDD
+	dc.l	$0D55DDDD
+	dc.l	$0D55DDDD
+	dc.l	$0D44DDDD
+	dc.l	$00DDDEEE
+	dc.l	$0000DEED
+	dc.l	$0000DEED
+	dc.l	$0000DEED
 
-	dc.l	$00001AA1
-	dc.l	$00001AA1
-	dc.l	$00001AA1
-	dc.l	$00001AA1
-	dc.l	$00011AA1
-	dc.l	$00111DD1
-	dc.l	$00111111
-	dc.l	$00011111
+	dc.l	$0000DEED
+	dc.l	$0000DEED
+	dc.l	$0000DEED
+	dc.l	$0000DEED
+	dc.l	$000DDEED
+	dc.l	$00DDDFFD
+	dc.l	$00DDDDDD
+	dc.l	$000DDDDD
 
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$11000000
-	dc.l	$55100000
-	dc.l	$22510000
-	dc.l	$22251000
-	dc.l	$22221000
-	dc.l	$D2221000
+	dc.l	$DD000000
+	dc.l	$22D00000
+	dc.l	$442D0000
+	dc.l	$4442D000
+	dc.l	$4444D000
+	dc.l	$F444D000
 
-	dc.l	$52221000
-	dc.l	$22221000
-	dc.l	$22221000
-	dc.l	$22210000
-	dc.l	$2C111000
-	dc.l	$C1111100
-	dc.l	$11111100
-	dc.l	$111EE100
+	dc.l	$2444D000
+	dc.l	$4444D000
+	dc.l	$4444D000
+	dc.l	$444D0000
+	dc.l	$48DDD000
+	dc.l	$8DDDDD00
+	dc.l	$DDDDDD00
+	dc.l	$DDDAAD00
 
-	dc.l	$111EE100
-	dc.l	$11188100
-	dc.l	$11188100
-	dc.l	$11122100
-	dc.l	$AA111000
-	dc.l	$AA100000
-	dc.l	$AA100000
-	dc.l	$AA100000
+	dc.l	$DDDAAD00
+	dc.l	$DDD55D00
+	dc.l	$DDD55D00
+	dc.l	$DDD44D00
+	dc.l	$EEDDD000
+	dc.l	$EED00000
+	dc.l	$EED00000
+	dc.l	$EED00000
 
-	dc.l	$AA100000
-	dc.l	$AA100000
-	dc.l	$AA100000
-	dc.l	$AA100000
-	dc.l	$AA110000
-	dc.l	$DD111000
-	dc.l	$11111000
-	dc.l	$11110000
+	dc.l	$EED00000
+	dc.l	$EED00000
+	dc.l	$EED00000
+	dc.l	$EED00000
+	dc.l	$EEDD0000
+	dc.l	$FFDDD000
+	dc.l	$DDDDD000
+	dc.l	$DDDD0000
 
 Shopper_Frame0End:
 
@@ -82,73 +82,73 @@ Shopper_Frame1Start:
 	dc.l	$00000000
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$00000111
-	dc.l	$00001555
-	dc.l	$00015222
-	dc.l	$00152222
-	dc.l	$00122222
+	dc.l	$00000DDD
+	dc.l	$0000D222
+	dc.l	$000D2444
+	dc.l	$00D24444
+	dc.l	$00D44444
 
-	dc.l	$001222D2
-	dc.l	$00122252
-	dc.l	$00122222
-	dc.l	$00122222
-	dc.l	$00012222
-	dc.l	$00111C22
-	dc.l	$011111CC
-	dc.l	$01111111
+	dc.l	$00D444F4
+	dc.l	$00D44424
+	dc.l	$00D44444
+	dc.l	$00D44444
+	dc.l	$000D4444
+	dc.l	$00DDD844
+	dc.l	$0DDDDD88
+	dc.l	$0DDDDDDD
 
-	dc.l	$01EE1111
-	dc.l	$01EE1111
-	dc.l	$01881111
-	dc.l	$01211111
-	dc.l	$00101111
-	dc.l	$00001AAA
-	dc.l	$00001AA1
-	dc.l	$00001AA1
+	dc.l	$0DAADDDD
+	dc.l	$0DAADDDD
+	dc.l	$0D55DDDD
+	dc.l	$0D4DDDDD
+	dc.l	$00D0DDDD
+	dc.l	$0000DEEE
+	dc.l	$0000DEED
+	dc.l	$0000DEED
 
-	dc.l	$00001AA1
-	dc.l	$00001AA1
-	dc.l	$00001AA1
-	dc.l	$00001AA1
-	dc.l	$00011AA1
-	dc.l	$00111DD1
-	dc.l	$00111111
-	dc.l	$00011111
+	dc.l	$0000DEED
+	dc.l	$0000DEED
+	dc.l	$0000DEED
+	dc.l	$0000DEED
+	dc.l	$000DDEED
+	dc.l	$00DDDFFD
+	dc.l	$00DDDDDD
+	dc.l	$000DDDDD
 
 	dc.l	$00000000
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$11000000
-	dc.l	$55100000
-	dc.l	$22510000
-	dc.l	$22251000
-	dc.l	$22221000
+	dc.l	$DD000000
+	dc.l	$22D00000
+	dc.l	$442D0000
+	dc.l	$4442D000
+	dc.l	$4444D000
 
-	dc.l	$D2221000
-	dc.l	$52221000
-	dc.l	$22221000
-	dc.l	$22221000
-	dc.l	$22210000
-	dc.l	$2C111000
-	dc.l	$C1111100
-	dc.l	$11111100
+	dc.l	$F444D000
+	dc.l	$2444D000
+	dc.l	$4444D000
+	dc.l	$4444D000
+	dc.l	$444D0000
+	dc.l	$48DDD000
+	dc.l	$8DDDDD00
+	dc.l	$DDDDDD00
 
-	dc.l	$1111EE10
-	dc.l	$1111EE10
-	dc.l	$11118810
-	dc.l	$11112210
-	dc.l	$11101100
-	dc.l	$AA100000
-	dc.l	$AA100000
-	dc.l	$AA100000
+	dc.l	$DDDDAAD0
+	dc.l	$DDDDAAD0
+	dc.l	$DDDD55D0
+	dc.l	$DDDD44D0
+	dc.l	$DDD0DD00
+	dc.l	$EED00000
+	dc.l	$EED00000
+	dc.l	$EED00000
 
-	dc.l	$AA100000
-	dc.l	$AA100000
-	dc.l	$AA110000
-	dc.l	$DD111000
-	dc.l	$11111000
-	dc.l	$11110000
-	dc.l	$11000000
+	dc.l	$EED00000
+	dc.l	$EED00000
+	dc.l	$EEDD0000
+	dc.l	$FFDDD000
+	dc.l	$DDDDD000
+	dc.l	$DDDD0000
+	dc.l	$DD000000
 	dc.l	$00000000
 
 Shopper_Frame1End:
@@ -158,74 +158,74 @@ Shopper_Frame2Start:
 	dc.l	$00000000
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$00000011
-	dc.l	$00000155
-	dc.l	$00001522
-	dc.l	$00015222
-	dc.l	$00012222
+	dc.l	$000000DD
+	dc.l	$00000D22
+	dc.l	$0000D244
+	dc.l	$000D2444
+	dc.l	$000D4444
 
-	dc.l	$0001222D
-	dc.l	$00012225
-	dc.l	$00012222
-	dc.l	$00012222
-	dc.l	$00001222
-	dc.l	$000111C2
-	dc.l	$0011111C
-	dc.l	$00111111
+	dc.l	$000D444F
+	dc.l	$000D4442
+	dc.l	$000D4444
+	dc.l	$000D4444
+	dc.l	$0000D444
+	dc.l	$000DDD84
+	dc.l	$00DDDDD8
+	dc.l	$00DDDDDD
 
-	dc.l	$01EE1111
-	dc.l	$01881111
-	dc.l	$01881111
-	dc.l	$01221111
-	dc.l	$00111111
-	dc.l	$00001AAA
-	dc.l	$00001AA1
-	dc.l	$00001AA1
+	dc.l	$0DAADDDD
+	dc.l	$0D55DDDD
+	dc.l	$0D55DDDD
+	dc.l	$0D44DDDD
+	dc.l	$00DDDDDD
+	dc.l	$0000DEEE
+	dc.l	$0000DEED
+	dc.l	$0000DEED
 
-	dc.l	$00001AA1
-	dc.l	$00001AA1
-	dc.l	$00011AA1
-	dc.l	$00111DD1
-	dc.l	$00111111
-	dc.l	$00011111
-	dc.l	$00000111
-	dc.l	$00000001
+	dc.l	$0000DEED
+	dc.l	$0000DEED
+	dc.l	$000DDEED
+	dc.l	$00DDDFFD
+	dc.l	$00DDDDDD
+	dc.l	$000DDDDD
+	dc.l	$00000DDD
+	dc.l	$0000000D
 
 	dc.l	$00000000
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$11100000
-	dc.l	$55510000
-	dc.l	$22251000
-	dc.l	$22225100
-	dc.l	$22222100
+	dc.l	$DDD00000
+	dc.l	$222D0000
+	dc.l	$4442D000
+	dc.l	$44442D00
+	dc.l	$44444D00
 
-	dc.l	$2D222100
-	dc.l	$25222100
-	dc.l	$22222100
-	dc.l	$22222100
-	dc.l	$22221000
-	dc.l	$22C11100
-	dc.l	$CC111110
-	dc.l	$11111110
+	dc.l	$4F444D00
+	dc.l	$42444D00
+	dc.l	$44444D00
+	dc.l	$44444D00
+	dc.l	$4444D000
+	dc.l	$448DDD00
+	dc.l	$88DDDDD0
+	dc.l	$DDDDDDD0
 
-	dc.l	$1111EE10
-	dc.l	$11118100
-	dc.l	$11121000
-	dc.l	$11110000
-	dc.l	$11100000
-	dc.l	$AA100000
-	dc.l	$AA100000
-	dc.l	$AA100000
+	dc.l	$DDDDAAD0
+	dc.l	$DDDD5D00
+	dc.l	$DDD4D000
+	dc.l	$DDDD0000
+	dc.l	$DDD00000
+	dc.l	$EED00000
+	dc.l	$EED00000
+	dc.l	$EED00000
 
-	dc.l	$AA100000
-	dc.l	$AA100000
-	dc.l	$AA100000
-	dc.l	$AA100000
-	dc.l	$AA110000
-	dc.l	$DD111000
-	dc.l	$11111000
-	dc.l	$11110000
+	dc.l	$EED00000
+	dc.l	$EED00000
+	dc.l	$EED00000
+	dc.l	$EED00000
+	dc.l	$EEDD0000
+	dc.l	$FFDDD000
+	dc.l	$DDDDD000
+	dc.l	$DDDD0000
 
 Shopper_Frame2End:
 
@@ -233,75 +233,75 @@ Shopper_Frame3Start:
 
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$00000111
-	dc.l	$00001555
-	dc.l	$00015555
-	dc.l	$00155555
-	dc.l	$00122222
-	dc.l	$00122222
+	dc.l	$00000DDD
+	dc.l	$0000D222
+	dc.l	$000D2222
+	dc.l	$00D22222
+	dc.l	$00D44444
+	dc.l	$00D44444
 
-	dc.l	$00122222
-	dc.l	$00122222
-	dc.l	$00122222
-	dc.l	$00012222
-	dc.l	$00111CCC
-	dc.l	$01111111
-	dc.l	$01111111
-	dc.l	$01EE1111
+	dc.l	$00D44444
+	dc.l	$00D44444
+	dc.l	$00D44444
+	dc.l	$000D4444
+	dc.l	$00DDD888
+	dc.l	$0DDDDDDD
+	dc.l	$0DDDDDDD
+	dc.l	$0DAADDDD
 
-	dc.l	$01EE1111
-	dc.l	$01881111
-	dc.l	$01881111
-	dc.l	$01221111
-	dc.l	$00111AAA
-	dc.l	$00001AA1
-	dc.l	$00001AA1
-	dc.l	$00001AA1
+	dc.l	$0DAADDDD
+	dc.l	$0D55DDDD
+	dc.l	$0D55DDDD
+	dc.l	$0D44DDDD
+	dc.l	$00DDDEEE
+	dc.l	$0000DEED
+	dc.l	$0000DEED
+	dc.l	$0000DEED
 
-	dc.l	$00001AA1
-	dc.l	$00001AA1
-	dc.l	$00001AA1
-	dc.l	$00001AA1
-	dc.l	$00011AA1
-	dc.l	$00111DD1
-	dc.l	$00111111
-	dc.l	$00011111
+	dc.l	$0000DEED
+	dc.l	$0000DEED
+	dc.l	$0000DEED
+	dc.l	$0000DEED
+	dc.l	$000DDEED
+	dc.l	$00DDDFFD
+	dc.l	$00DDDDDD
+	dc.l	$000DDDDD
 
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$11000000
-	dc.l	$55100000
-	dc.l	$55510000
-	dc.l	$55551000
-	dc.l	$22221000
-	dc.l	$22221000
+	dc.l	$DD000000
+	dc.l	$22D00000
+	dc.l	$222D0000
+	dc.l	$2222D000
+	dc.l	$4444D000
+	dc.l	$4444D000
 
-	dc.l	$22221000
-	dc.l	$22221000
-	dc.l	$22221000
-	dc.l	$22210000
-	dc.l	$CC111000
-	dc.l	$11111100
-	dc.l	$11111100
-	dc.l	$111EE100
+	dc.l	$4444D000
+	dc.l	$4444D000
+	dc.l	$4444D000
+	dc.l	$444D0000
+	dc.l	$88DDD000
+	dc.l	$DDDDDD00
+	dc.l	$DDDDDD00
+	dc.l	$DDDAAD00
 
-	dc.l	$111EE100
-	dc.l	$11188100
-	dc.l	$11188100
-	dc.l	$11122100
-	dc.l	$AA111000
-	dc.l	$AA100000
-	dc.l	$AA100000
-	dc.l	$AA100000
+	dc.l	$DDDAAD00
+	dc.l	$DDD55D00
+	dc.l	$DDD55D00
+	dc.l	$DDD44D00
+	dc.l	$EEDDD000
+	dc.l	$EED00000
+	dc.l	$EED00000
+	dc.l	$EED00000
 
-	dc.l	$AA100000
-	dc.l	$AA100000
-	dc.l	$AA100000
-	dc.l	$AA100000
-	dc.l	$AA110000
-	dc.l	$DD111000
-	dc.l	$11111000
-	dc.l	$11110000
+	dc.l	$EED00000
+	dc.l	$EED00000
+	dc.l	$EED00000
+	dc.l	$EED00000
+	dc.l	$EEDD0000
+	dc.l	$FFDDD000
+	dc.l	$DDDDD000
+	dc.l	$DDDD0000
 
 Shopper_Frame3End:
 
@@ -310,73 +310,73 @@ Shopper_Frame4Start:
 	dc.l	$00000000
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$00000111
-	dc.l	$00001555
-	dc.l	$00015555
-	dc.l	$00155555
-	dc.l	$00122222
+	dc.l	$00000DDD
+	dc.l	$0000D222
+	dc.l	$000D2222
+	dc.l	$00D22222
+	dc.l	$00D44444
 
-	dc.l	$00122222
-	dc.l	$00122222
-	dc.l	$00122222
-	dc.l	$00122222
-	dc.l	$00012222
-	dc.l	$00111CCC
-	dc.l	$01111111
-	dc.l	$01111111
+	dc.l	$00D44444
+	dc.l	$00D44444
+	dc.l	$00D44444
+	dc.l	$00D44444
+	dc.l	$000D4444
+	dc.l	$00DDD888
+	dc.l	$0DDDDDDD
+	dc.l	$0DDDDDDD
 
-	dc.l	$01EE1111
-	dc.l	$01EE1111
-	dc.l	$00181111
-	dc.l	$00011111
-	dc.l	$00001111
-	dc.l	$00001AAA
-	dc.l	$00001AA1
-	dc.l	$00001AA1
+	dc.l	$0DAADDDD
+	dc.l	$0DAADDDD
+	dc.l	$00D5DDDD
+	dc.l	$000DDDDD
+	dc.l	$0000DDDD
+	dc.l	$0000DEEE
+	dc.l	$0000DEED
+	dc.l	$0000DEED
 
-	dc.l	$00001AA1
-	dc.l	$00001AA1
-	dc.l	$00001AA1
-	dc.l	$00001AA1
-	dc.l	$00011111
-	dc.l	$00111DD1
-	dc.l	$00111111
-	dc.l	$00011111
+	dc.l	$0000DEED
+	dc.l	$0000DEED
+	dc.l	$0000DEED
+	dc.l	$0000DEED
+	dc.l	$000DDDDD
+	dc.l	$00DDDFFD
+	dc.l	$00DDDDDD
+	dc.l	$000DDDDD
 
 	dc.l	$00000000
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$11000000
-	dc.l	$55100000
-	dc.l	$55510000
-	dc.l	$55551000
-	dc.l	$22221000
+	dc.l	$DD000000
+	dc.l	$22D00000
+	dc.l	$222D0000
+	dc.l	$2222D000
+	dc.l	$4444D000
 
-	dc.l	$22221000
-	dc.l	$22221000
-	dc.l	$22221000
-	dc.l	$22221000
-	dc.l	$22210000
-	dc.l	$CC111000
-	dc.l	$11111100
-	dc.l	$111EE100
+	dc.l	$4444D000
+	dc.l	$4444D000
+	dc.l	$4444D000
+	dc.l	$4444D000
+	dc.l	$444D0000
+	dc.l	$88DDD000
+	dc.l	$DDDDDD00
+	dc.l	$DDDAAD00
 
-	dc.l	$111EEE10
-	dc.l	$11118810
-	dc.l	$11118810
-	dc.l	$11112210
-	dc.l	$11111100
-	dc.l	$AA100000
-	dc.l	$AA100000
-	dc.l	$AA100000
+	dc.l	$DDDAAAD0
+	dc.l	$DDDD55D0
+	dc.l	$DDDD55D0
+	dc.l	$DDDD44D0
+	dc.l	$DDDDDD00
+	dc.l	$EED00000
+	dc.l	$EED00000
+	dc.l	$EED00000
 
-	dc.l	$AA100000
-	dc.l	$AA100000
-	dc.l	$AA110000
-	dc.l	$AA111000
-	dc.l	$11111000
-	dc.l	$11110000
-	dc.l	$11000000
+	dc.l	$EED00000
+	dc.l	$EED00000
+	dc.l	$EEDD0000
+	dc.l	$EEDDD000
+	dc.l	$DDDDD000
+	dc.l	$DDDD0000
+	dc.l	$DD000000
 	dc.l	$00000000
 
 Shopper_Frame4End:
@@ -386,74 +386,74 @@ Shopper_Frame5Start:
 	dc.l	$00000000
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$00000111
-	dc.l	$00001555
-	dc.l	$00015555
-	dc.l	$00155555
-	dc.l	$00122222
+	dc.l	$00000DDD
+	dc.l	$0000D222
+	dc.l	$000D2222
+	dc.l	$00D22222
+	dc.l	$00D44444
 
-	dc.l	$00122222
-	dc.l	$00122222
-	dc.l	$00122222
-	dc.l	$00122222
-	dc.l	$00012222
-	dc.l	$00111CCC
-	dc.l	$01111111
-	dc.l	$01EE1111
+	dc.l	$00D44444
+	dc.l	$00D44444
+	dc.l	$00D44444
+	dc.l	$00D44444
+	dc.l	$000D4444
+	dc.l	$00DDD888
+	dc.l	$0DDDDDDD
+	dc.l	$0DAADDDD
 
-	dc.l	$01E11111
-	dc.l	$18811111
-	dc.l	$18811111
-	dc.l	$12211111
-	dc.l	$01111111
-	dc.l	$00001AAA
-	dc.l	$00001AA1
-	dc.l	$00001AA1
+	dc.l	$0DADDDDD
+	dc.l	$D55DDDDD
+	dc.l	$D55DDDDD
+	dc.l	$D44DDDDD
+	dc.l	$0DDDDDDD
+	dc.l	$0000DEEE
+	dc.l	$0000DEED
+	dc.l	$0000DEED
 
-	dc.l	$00001AA1
-	dc.l	$00001AA1
-	dc.l	$00001AA1
-	dc.l	$00011AA1
-	dc.l	$00111111
-	dc.l	$00111111
-	dc.l	$00011111
-	dc.l	$00000111
+	dc.l	$0000DEED
+	dc.l	$0000DEED
+	dc.l	$0000DEED
+	dc.l	$000DDEED
+	dc.l	$00DDDDDD
+	dc.l	$00DDDDDD
+	dc.l	$000DDDDD
+	dc.l	$00000DDD
 
 	dc.l	$00000000
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$11000000
-	dc.l	$55100000
-	dc.l	$55510000
-	dc.l	$55551000
-	dc.l	$22221000
+	dc.l	$DD000000
+	dc.l	$22D00000
+	dc.l	$222D0000
+	dc.l	$2222D000
+	dc.l	$4444D000
 
-	dc.l	$22221000
-	dc.l	$22221000
-	dc.l	$22221000
-	dc.l	$22221000
-	dc.l	$22210000
-	dc.l	$CC111000
-	dc.l	$11111100
-	dc.l	$11111100
+	dc.l	$4444D000
+	dc.l	$4444D000
+	dc.l	$4444D000
+	dc.l	$4444D000
+	dc.l	$444D0000
+	dc.l	$88DDD000
+	dc.l	$DDDDDD00
+	dc.l	$DDDDDD00
 
-	dc.l	$111EE100
-	dc.l	$111EE100
-	dc.l	$11181000
-	dc.l	$11110000
-	dc.l	$11100000
-	dc.l	$AA100000
-	dc.l	$AA100000
-	dc.l	$AA100000
+	dc.l	$DDDAAD00
+	dc.l	$DDDAAD00
+	dc.l	$DDD5D000
+	dc.l	$DDDD0000
+	dc.l	$DDD00000
+	dc.l	$EED00000
+	dc.l	$EED00000
+	dc.l	$EED00000
 
-	dc.l	$AA100000
-	dc.l	$AA100000
-	dc.l	$AA100000
-	dc.l	$AA100000
-	dc.l	$11110000
-	dc.l	$DD111000
-	dc.l	$11111000
-	dc.l	$11110000
+	dc.l	$EED00000
+	dc.l	$EED00000
+	dc.l	$EED00000
+	dc.l	$EED00000
+	dc.l	$DDDD0000
+	dc.l	$FFDDD000
+	dc.l	$DDDDD000
+	dc.l	$DDDD0000
 
 Shopper_Frame5End:
 
@@ -461,75 +461,75 @@ Shopper_Frame6Start:
 
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$00000011
-	dc.l	$00000155
-	dc.l	$00001555
-	dc.l	$00001222
-	dc.l	$00001222
-	dc.l	$000012D2
+	dc.l	$000000DD
+	dc.l	$00000D22
+	dc.l	$0000D222
+	dc.l	$0000D444
+	dc.l	$0000D444
+	dc.l	$0000D4F4
 
-	dc.l	$00001252
-	dc.l	$00001222
-	dc.l	$00000122
-	dc.l	$00000012
-	dc.l	$000001CC
-	dc.l	$00000111
-	dc.l	$00000111
-	dc.l	$00000111
+	dc.l	$0000D424
+	dc.l	$0000D444
+	dc.l	$00000D44
+	dc.l	$000000D4
+	dc.l	$00000D88
+	dc.l	$00000DDD
+	dc.l	$00000DDD
+	dc.l	$00000DDD
 
-	dc.l	$00000111
-	dc.l	$00000111
-	dc.l	$00000111
-	dc.l	$00000111
-	dc.l	$00000011
-	dc.l	$0000001A
-	dc.l	$0000001A
-	dc.l	$0000001A
+	dc.l	$00000DDD
+	dc.l	$00000DDD
+	dc.l	$00000DDD
+	dc.l	$00000DDD
+	dc.l	$000000DD
+	dc.l	$000000DE
+	dc.l	$000000DE
+	dc.l	$000000DE
 
-	dc.l	$0000001A
-	dc.l	$0000001A
-	dc.l	$0000001A
-	dc.l	$0000001A
-	dc.l	$0000011A
-	dc.l	$000011DD
-	dc.l	$00001111
-	dc.l	$00000111
+	dc.l	$000000DE
+	dc.l	$000000DE
+	dc.l	$000000DE
+	dc.l	$000000DE
+	dc.l	$00000DDE
+	dc.l	$0000DDFF
+	dc.l	$0000DDDD
+	dc.l	$00000DDD
 
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$11100000
-	dc.l	$55510000
-	dc.l	$55551000
-	dc.l	$22221000
-	dc.l	$22221000
-	dc.l	$22221000
+	dc.l	$DDD00000
+	dc.l	$222D0000
+	dc.l	$2222D000
+	dc.l	$4444D000
+	dc.l	$4444D000
+	dc.l	$4444D000
 
-	dc.l	$22221000
-	dc.l	$22221000
-	dc.l	$22221000
-	dc.l	$22210000
-	dc.l	$11110000
-	dc.l	$11110000
-	dc.l	$11110000
-	dc.l	$1EE10000
+	dc.l	$4444D000
+	dc.l	$4444D000
+	dc.l	$4444D000
+	dc.l	$444D0000
+	dc.l	$DDDD0000
+	dc.l	$DDDD0000
+	dc.l	$DDDD0000
+	dc.l	$DAAD0000
 
-	dc.l	$1EE10000
-	dc.l	$18810000
-	dc.l	$18810000
-	dc.l	$12210000
-	dc.l	$11100000
-	dc.l	$AA100000
-	dc.l	$AA100000
-	dc.l	$AA100000
+	dc.l	$DAAD0000
+	dc.l	$D55D0000
+	dc.l	$D55D0000
+	dc.l	$D44D0000
+	dc.l	$DDD00000
+	dc.l	$EED00000
+	dc.l	$EED00000
+	dc.l	$EED00000
 
-	dc.l	$AA100000
-	dc.l	$AA100000
-	dc.l	$AA100000
-	dc.l	$AA100000
-	dc.l	$DD110000
-	dc.l	$DD111000
-	dc.l	$11111000
-	dc.l	$11110000
+	dc.l	$EED00000
+	dc.l	$EED00000
+	dc.l	$EED00000
+	dc.l	$EED00000
+	dc.l	$FFDD0000
+	dc.l	$FFDDD000
+	dc.l	$DDDDD000
+	dc.l	$DDDD0000
 
 Shopper_Frame6End:
 
@@ -538,74 +538,74 @@ Shopper_Frame7Start:
 	dc.l	$00000000
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$00000011
-	dc.l	$00000155
-	dc.l	$00001555
-	dc.l	$00001222
-	dc.l	$00001222
+	dc.l	$000000DD
+	dc.l	$00000D22
+	dc.l	$0000D222
+	dc.l	$0000D444
+	dc.l	$0000D444
 
-	dc.l	$000012D2
-	dc.l	$00001252
-	dc.l	$00001222
-	dc.l	$00000122
-	dc.l	$00000012
-	dc.l	$000001CC
-	dc.l	$00000111
-	dc.l	$00000111
+	dc.l	$0000D4F4
+	dc.l	$0000D424
+	dc.l	$0000D444
+	dc.l	$00000D44
+	dc.l	$000000D4
+	dc.l	$00000D88
+	dc.l	$00000DDD
+	dc.l	$00000DDD
 
-	dc.l	$00000111
-	dc.l	$00000118
-	dc.l	$00001288
-	dc.l	$00001281
-	dc.l	$00000111
-	dc.l	$00001AAA
-	dc.l	$0001AAAA
-	dc.l	$0001AAA1
+	dc.l	$00000DDD
+	dc.l	$00000DD5
+	dc.l	$0000D455
+	dc.l	$0000D45D
+	dc.l	$00000DDD
+	dc.l	$0000DEEE
+	dc.l	$000DEEEE
+	dc.l	$000DEEED
 
-	dc.l	$0001AAA1
-	dc.l	$0001AAA1
-	dc.l	$0001AAA1
-	dc.l	$0011AAA1
-	dc.l	$0111ADD1
-	dc.l	$011DDDD1
-	dc.l	$00111111
-	dc.l	$00011111
+	dc.l	$000DEEED
+	dc.l	$000DEEED
+	dc.l	$000DEEED
+	dc.l	$00DDEEED
+	dc.l	$0DDDEFFD
+	dc.l	$0DDFFFFD
+	dc.l	$00DDDDDD
+	dc.l	$000DDDDD
 
 	dc.l	$00000000
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$11100000
-	dc.l	$55510000
-	dc.l	$55551000
-	dc.l	$22221000
-	dc.l	$22221000
+	dc.l	$DDD00000
+	dc.l	$222D0000
+	dc.l	$2222D000
+	dc.l	$4444D000
+	dc.l	$4444D000
 
-	dc.l	$22221000
-	dc.l	$22221000
-	dc.l	$22221000
-	dc.l	$22221000
-	dc.l	$22210000
-	dc.l	$11110000
-	dc.l	$11111000
-	dc.l	$11111100
+	dc.l	$4444D000
+	dc.l	$4444D000
+	dc.l	$4444D000
+	dc.l	$4444D000
+	dc.l	$444D0000
+	dc.l	$DDDD0000
+	dc.l	$DDDDD000
+	dc.l	$DDDDDD00
 
-	dc.l	$E111E100
-	dc.l	$EE11E100
-	dc.l	$E1118100
-	dc.l	$11111000
-	dc.l	$11100000
-	dc.l	$AAA10000
-	dc.l	$1AA10000
-	dc.l	$1AAA1000
+	dc.l	$ADDDAD00
+	dc.l	$AADDAD00
+	dc.l	$ADDD5D00
+	dc.l	$DDDDD000
+	dc.l	$DDD00000
+	dc.l	$EEED0000
+	dc.l	$DEED0000
+	dc.l	$DEEED000
 
-	dc.l	$1AAA1000
-	dc.l	$1AAA1000
-	dc.l	$01AAA100
-	dc.l	$01AAA110
-	dc.l	$11ADD110
-	dc.l	$1DDDD110
-	dc.l	$11111100
-	dc.l	$11111000
+	dc.l	$DEEED000
+	dc.l	$DEEED000
+	dc.l	$0DEEED00
+	dc.l	$0DEEEDD0
+	dc.l	$DDEFFDD0
+	dc.l	$DFFFFDD0
+	dc.l	$DDDDDD00
+	dc.l	$DDDDD000
 
 Shopper_Frame7End:
 
@@ -614,74 +614,74 @@ Shopper_Frame8Start:
 	dc.l	$00000000
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$00000011
-	dc.l	$00000155
-	dc.l	$00001555
-	dc.l	$00001222
-	dc.l	$00001222
+	dc.l	$000000DD
+	dc.l	$00000D22
+	dc.l	$0000D222
+	dc.l	$0000D444
+	dc.l	$0000D444
 
-	dc.l	$000012D2
-	dc.l	$00001252
-	dc.l	$00001222
-	dc.l	$00000122
-	dc.l	$00000012
-	dc.l	$000001CC
-	dc.l	$00000111
-	dc.l	$00000111
+	dc.l	$0000D4F4
+	dc.l	$0000D424
+	dc.l	$0000D444
+	dc.l	$00000D44
+	dc.l	$000000D4
+	dc.l	$00000D88
+	dc.l	$00000DDD
+	dc.l	$00000DDD
 
-	dc.l	$00000111
-	dc.l	$00001111
-	dc.l	$00012111
-	dc.l	$00012111
-	dc.l	$00001111
-	dc.l	$00000111
-	dc.l	$00001AAA
-	dc.l	$0001AAA1
+	dc.l	$00000DDD
+	dc.l	$0000DDDD
+	dc.l	$000D4DDD
+	dc.l	$000D4DDD
+	dc.l	$0000DDDD
+	dc.l	$00000DDD
+	dc.l	$0000DEEE
+	dc.l	$000DEEED
 
-	dc.l	$0001AAA1
-	dc.l	$0001AAA1
-	dc.l	$0001AAA1
-	dc.l	$0001AAA1
-	dc.l	$0011ADD1
-	dc.l	$011DDDD1
-	dc.l	$01111111
-	dc.l	$00111111
+	dc.l	$000DEEED
+	dc.l	$000DEEED
+	dc.l	$000DEEED
+	dc.l	$000DEEED
+	dc.l	$00DDEFFD
+	dc.l	$0DDFFFFD
+	dc.l	$0DDDDDDD
+	dc.l	$00DDDDDD
 
 	dc.l	$00000000
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$11100000
-	dc.l	$55510000
-	dc.l	$55551000
-	dc.l	$22221000
-	dc.l	$22221000
+	dc.l	$DDD00000
+	dc.l	$222D0000
+	dc.l	$2222D000
+	dc.l	$4444D000
+	dc.l	$4444D000
 
-	dc.l	$22221000
-	dc.l	$22221000
-	dc.l	$22221000
-	dc.l	$22221000
-	dc.l	$22210000
-	dc.l	$11110000
-	dc.l	$11110000
-	dc.l	$11EE1000
+	dc.l	$4444D000
+	dc.l	$4444D000
+	dc.l	$4444D000
+	dc.l	$4444D000
+	dc.l	$444D0000
+	dc.l	$DDDD0000
+	dc.l	$DDDD0000
+	dc.l	$DDAAD000
 
-	dc.l	$11EEE100
-	dc.l	$11188100
-	dc.l	$11188100
-	dc.l	$11122100
-	dc.l	$11111000
-	dc.l	$11100000
-	dc.l	$1AA10000
-	dc.l	$AAA10000
+	dc.l	$DDAAAD00
+	dc.l	$DDD55D00
+	dc.l	$DDD55D00
+	dc.l	$DDD44D00
+	dc.l	$DDDDD000
+	dc.l	$DDD00000
+	dc.l	$DEED0000
+	dc.l	$EEED0000
 
-	dc.l	$AAA10000
-	dc.l	$1AAA1000
-	dc.l	$01AAA100
-	dc.l	$01AAA100
-	dc.l	$11ADD110
-	dc.l	$1DDDD110
-	dc.l	$11111110
-	dc.l	$11111100
+	dc.l	$EEED0000
+	dc.l	$DEEED000
+	dc.l	$0DEEED00
+	dc.l	$0DEEED00
+	dc.l	$DDEFFDD0
+	dc.l	$DFFFFDD0
+	dc.l	$DDDDDDD0
+	dc.l	$DDDDDD00
 
 Shopper_Frame8End:
 
@@ -689,75 +689,75 @@ Shopper_Frame9Start:
 
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$00000111
-	dc.l	$00001555
-	dc.l	$00015555
-	dc.l	$00012222
-	dc.l	$00012222
-	dc.l	$00012222
+	dc.l	$00000DDD
+	dc.l	$0000D222
+	dc.l	$000D2222
+	dc.l	$000D4444
+	dc.l	$000D4444
+	dc.l	$000D4444
 
-	dc.l	$00012222
-	dc.l	$00012222
-	dc.l	$00012222
-	dc.l	$00001222
-	dc.l	$00001111
-	dc.l	$00001111
-	dc.l	$00001111
-	dc.l	$00001EE1
+	dc.l	$000D4444
+	dc.l	$000D4444
+	dc.l	$000D4444
+	dc.l	$0000D444
+	dc.l	$0000DDDD
+	dc.l	$0000DDDD
+	dc.l	$0000DDDD
+	dc.l	$0000DAAD
 
-	dc.l	$00001EE1
-	dc.l	$00001881
-	dc.l	$00001881
-	dc.l	$00001221
-	dc.l	$00000111
-	dc.l	$000001AA
-	dc.l	$000001AA
-	dc.l	$000001AA
+	dc.l	$0000DAAD
+	dc.l	$0000D55D
+	dc.l	$0000D55D
+	dc.l	$0000D44D
+	dc.l	$00000DDD
+	dc.l	$00000DEE
+	dc.l	$00000DEE
+	dc.l	$00000DEE
 
-	dc.l	$000001AA
-	dc.l	$000001AA
-	dc.l	$000001AA
-	dc.l	$000001AA
-	dc.l	$000011DD
-	dc.l	$000111DD
-	dc.l	$00011111
-	dc.l	$00001111
+	dc.l	$00000DEE
+	dc.l	$00000DEE
+	dc.l	$00000DEE
+	dc.l	$00000DEE
+	dc.l	$0000DDFF
+	dc.l	$000DDDFF
+	dc.l	$000DDDDD
+	dc.l	$0000DDDD
 
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$11000000
-	dc.l	$55100000
-	dc.l	$55510000
-	dc.l	$22210000
-	dc.l	$22210000
-	dc.l	$2D210000
+	dc.l	$DD000000
+	dc.l	$22D00000
+	dc.l	$222D0000
+	dc.l	$444D0000
+	dc.l	$444D0000
+	dc.l	$4F4D0000
 
-	dc.l	$25210000
-	dc.l	$22210000
-	dc.l	$22100000
-	dc.l	$21000000
-	dc.l	$CC100000
-	dc.l	$11100000
-	dc.l	$11100000
-	dc.l	$11100000
+	dc.l	$424D0000
+	dc.l	$444D0000
+	dc.l	$44D00000
+	dc.l	$4D000000
+	dc.l	$88D00000
+	dc.l	$DDD00000
+	dc.l	$DDD00000
+	dc.l	$DDD00000
 
-	dc.l	$11100000
-	dc.l	$11100000
-	dc.l	$11100000
-	dc.l	$11100000
-	dc.l	$11000000
-	dc.l	$A1000000
-	dc.l	$A1000000
-	dc.l	$A1000000
+	dc.l	$DDD00000
+	dc.l	$DDD00000
+	dc.l	$DDD00000
+	dc.l	$DDD00000
+	dc.l	$DD000000
+	dc.l	$ED000000
+	dc.l	$ED000000
+	dc.l	$ED000000
 
-	dc.l	$A1000000
-	dc.l	$A1000000
-	dc.l	$A1000000
-	dc.l	$A1000000
-	dc.l	$A1100000
-	dc.l	$DD110000
-	dc.l	$11110000
-	dc.l	$11100000
+	dc.l	$ED000000
+	dc.l	$ED000000
+	dc.l	$ED000000
+	dc.l	$ED000000
+	dc.l	$EDD00000
+	dc.l	$FFDD0000
+	dc.l	$DDDD0000
+	dc.l	$DDD00000
 
 Shopper_Frame9End:
 
@@ -766,74 +766,74 @@ Shopper_Frame10Start:
 	dc.l	$00000000
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$00000111
-	dc.l	$00001555
-	dc.l	$00015555
-	dc.l	$00012222
-	dc.l	$00012222
+	dc.l	$00000DDD
+	dc.l	$0000D222
+	dc.l	$000D2222
+	dc.l	$000D4444
+	dc.l	$000D4444
 
-	dc.l	$00012222
-	dc.l	$00012222
-	dc.l	$00012222
-	dc.l	$00012222
-	dc.l	$00001222
-	dc.l	$00001111
-	dc.l	$00011111
-	dc.l	$00111111
+	dc.l	$000D4444
+	dc.l	$000D4444
+	dc.l	$000D4444
+	dc.l	$000D4444
+	dc.l	$0000D444
+	dc.l	$0000DDDD
+	dc.l	$000DDDDD
+	dc.l	$00DDDDDD
 
-	dc.l	$001E1111
-	dc.l	$001E11EE
-	dc.l	$0018111E
-	dc.l	$00011111
-	dc.l	$00000111
-	dc.l	$00001AAA
-	dc.l	$00001AA1
-	dc.l	$0001AAA1
+	dc.l	$00DADDDD
+	dc.l	$00DADDAA
+	dc.l	$00D5DDDA
+	dc.l	$000DDDDD
+	dc.l	$00000DDD
+	dc.l	$0000DEEE
+	dc.l	$0000DEED
+	dc.l	$000DEEED
 
-	dc.l	$0001AAA1
-	dc.l	$0001AAA1
-	dc.l	$001AAA10
-	dc.l	$011AAA10
-	dc.l	$011DDA11
-	dc.l	$011DDDD1
-	dc.l	$00111111
-	dc.l	$00011111
+	dc.l	$000DEEED
+	dc.l	$000DEEED
+	dc.l	$00DEEED0
+	dc.l	$0DDEEED0
+	dc.l	$0DDFFEDD
+	dc.l	$0DDFFFFD
+	dc.l	$00DDDDDD
+	dc.l	$000DDDDD
 
 	dc.l	$00000000
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$11000000
-	dc.l	$55100000
-	dc.l	$55510000
-	dc.l	$22210000
-	dc.l	$22210000
+	dc.l	$DD000000
+	dc.l	$22D00000
+	dc.l	$222D0000
+	dc.l	$444D0000
+	dc.l	$444D0000
 
-	dc.l	$2D210000
-	dc.l	$25210000
-	dc.l	$22210000
-	dc.l	$22100000
-	dc.l	$21000000
-	dc.l	$CC100000
-	dc.l	$11100000
-	dc.l	$11100000
+	dc.l	$4F4D0000
+	dc.l	$424D0000
+	dc.l	$444D0000
+	dc.l	$44D00000
+	dc.l	$4D000000
+	dc.l	$88D00000
+	dc.l	$DDD00000
+	dc.l	$DDD00000
 
-	dc.l	$11100000
-	dc.l	$81100000
-	dc.l	$88210000
-	dc.l	$18210000
-	dc.l	$11100000
-	dc.l	$AAA10000
-	dc.l	$AAAA1000
-	dc.l	$1AAA1000
+	dc.l	$DDD00000
+	dc.l	$5DD00000
+	dc.l	$554D0000
+	dc.l	$D54D0000
+	dc.l	$DDD00000
+	dc.l	$EEED0000
+	dc.l	$EEEED000
+	dc.l	$DEEED000
 
-	dc.l	$1AAA1000
-	dc.l	$1AAA1000
-	dc.l	$1AAA1000
-	dc.l	$1AAA1100
-	dc.l	$1DDA1110
-	dc.l	$1DDDD110
-	dc.l	$11111100
-	dc.l	$11111000
+	dc.l	$DEEED000
+	dc.l	$DEEED000
+	dc.l	$DEEED000
+	dc.l	$DEEEDD00
+	dc.l	$DFFEDDD0
+	dc.l	$DFFFFDD0
+	dc.l	$DDDDDD00
+	dc.l	$DDDDD000
 
 Shopper_Frame10End:
 
@@ -842,73 +842,73 @@ Shopper_Frame11Start:
 	dc.l	$00000000
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$00000111
-	dc.l	$00001555
-	dc.l	$00015555
-	dc.l	$00012222
-	dc.l	$00012222
+	dc.l	$00000DDD
+	dc.l	$0000D222
+	dc.l	$000D2222
+	dc.l	$000D4444
+	dc.l	$000D4444
 
-	dc.l	$00012222
-	dc.l	$00012222
-	dc.l	$00012222
-	dc.l	$00012222
-	dc.l	$00001222
-	dc.l	$00001111
-	dc.l	$00001111
-	dc.l	$0001E111
+	dc.l	$000D4444
+	dc.l	$000D4444
+	dc.l	$000D4444
+	dc.l	$000D4444
+	dc.l	$0000D444
+	dc.l	$0000DDDD
+	dc.l	$0000DDDD
+	dc.l	$000DADDD
 
-	dc.l	$001EEE11
-	dc.l	$00188111
-	dc.l	$00188111
-	dc.l	$00122111
-	dc.l	$00011111
-	dc.l	$00000111
-	dc.l	$00001AA1
-	dc.l	$00001AAA
+	dc.l	$00DAAADD
+	dc.l	$00D55DDD
+	dc.l	$00D55DDD
+	dc.l	$00D44DDD
+	dc.l	$000DDDDD
+	dc.l	$00000DDD
+	dc.l	$0000DEED
+	dc.l	$0000DEEE
 
-	dc.l	$00001AAA
-	dc.l	$0001AAA1
-	dc.l	$001AAA10
-	dc.l	$001AAA10
-	dc.l	$011DDA11
-	dc.l	$011DDDD1
-	dc.l	$01111111
-	dc.l	$00111111
+	dc.l	$0000DEEE
+	dc.l	$000DEEED
+	dc.l	$00DEEED0
+	dc.l	$00DEEED0
+	dc.l	$0DDFFEDD
+	dc.l	$0DDFFFFD
+	dc.l	$0DDDDDDD
+	dc.l	$00DDDDDD
 
 	dc.l	$00000000
 	dc.l	$00000000
 	dc.l	$00000000
-	dc.l	$11000000
-	dc.l	$55100000
-	dc.l	$55510000
-	dc.l	$22210000
-	dc.l	$22210000
+	dc.l	$DD000000
+	dc.l	$22D00000
+	dc.l	$222D0000
+	dc.l	$444D0000
+	dc.l	$444D0000
 
-	dc.l	$2D210000
-	dc.l	$25210000
-	dc.l	$22210000
-	dc.l	$22100000
-	dc.l	$21000000
-	dc.l	$CC100000
-	dc.l	$11100000
-	dc.l	$11100000
+	dc.l	$4F4D0000
+	dc.l	$424D0000
+	dc.l	$444D0000
+	dc.l	$44D00000
+	dc.l	$4D000000
+	dc.l	$88D00000
+	dc.l	$DDD00000
+	dc.l	$DDD00000
 
-	dc.l	$11100000
-	dc.l	$11110000
-	dc.l	$11121000
-	dc.l	$11121000
-	dc.l	$11110000
-	dc.l	$11100000
-	dc.l	$AAA10000
-	dc.l	$1AAA1000
+	dc.l	$DDD00000
+	dc.l	$DDDD0000
+	dc.l	$DDD4D000
+	dc.l	$DDD4D000
+	dc.l	$DDDD0000
+	dc.l	$DDD00000
+	dc.l	$EEED0000
+	dc.l	$DEEED000
 
-	dc.l	$1AAA1000
-	dc.l	$1AAA1000
-	dc.l	$1AAA1000
-	dc.l	$1AAA1000
-	dc.l	$1DDA1100
-	dc.l	$1DDDD110
-	dc.l	$11111110
-	dc.l	$11111100
+	dc.l	$DEEED000
+	dc.l	$DEEED000
+	dc.l	$DEEED000
+	dc.l	$DEEED000
+	dc.l	$DFFEDD00
+	dc.l	$DFFFFDD0
+	dc.l	$DDDDDDD0
+	dc.l	$DDDDDD00
 
 Shopper_Frame11End:

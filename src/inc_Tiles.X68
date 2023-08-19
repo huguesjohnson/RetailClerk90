@@ -708,3 +708,7 @@ MenuMapTilesStart:
 	include 'tiles/scene-tiles/menu-map.X68'
 MenuMapTilesEnd:
 
+EndingFrameTilesStart:
+	include 'tiles/scene-tiles/ending-frame.X68'
+EndingFrameTilesEnd:
+

@@ -42,6 +42,8 @@
 
 	include 'patterns/menu-map.X68'
 
+	include 'patterns/ending-frame.X68'
+
 
 	;---------------------------------------------------------------------------
 	; patterns generated from tilesets

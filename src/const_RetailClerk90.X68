@@ -17,11 +17,47 @@
 ;-------------------------------------------------------------------------------
 ; day event flags - used to track events in the current day 
 ;-------------------------------------------------------------------------------
-FLAG_DAY00_EVENT00=$00 ; set after helping all customers in your store
-FLAG_DAY00_EVENT01=$01 ; set after visiting the info desk
-FLAG_NIGHT00_EVENT00=$02 ; set after scene in ee hall
-FLAG_NIGHT00_EVENT01=$03 ; set after delivering special order
-FLAG_NIGHT00_EVENT02=$04 ; set after scene in south hall
+FLAG_DAY00_EVENT00_CUSTOMER0=$00 ; set after helping one customer in your store
+FLAG_DAY00_EVENT01_CUSTOMER1=$01 ; set after helping second customer in your store
+FLAG_DAY00_EVENT02_CANEXITDC=$02 ; set after helping all customers
+FLAG_DAY00_EVENT03_INFODESKVISITED=$03 ; set after visiting the info desk
+FLAG_DAY00_EVENT04_STORYEVENTSDONE=$04 ; set after story events for the day are done
+FLAG_NIGHT00_EVENT00_EEHALL=$05 ; set after viewing the scene in eehall
+FLAG_NIGHT00_EVENT01_SVIDEO=$06 ; set after making the special delivery
+FLAG_NIGHT00_EVENT02_STORYEVENTSDONE=$07 ; set after story events for the day are done
+FLAG_DAY01_EVENT00_CPLANET=$00 ; set after event in cplanet
+FLAG_DAY01_EVENT01_WWAPPLIANCES=$01 ; set after event in wwappliances
+FLAG_DAY01_EVENT02_RUMORSDONE=$02 ; set after completing both previous events
+FLAG_NIGHT_01_EVENT00_CAVERN=$03 ; set after event in the cavern
+FLAG_NIGHT_01_EVENT01_EEHALL=$04 ; set after event in eehall
+FLAG_NIGHT_01_EVENT02_STORYEVENTSDONE=$05 ; set after story events for the day are done
+FLAG_DAY02_EVENT00_TLODGE=$00 ; set after dialog in tlodge
+FLAG_DAY02_EVENT01_TBOOKS=$01 ; set after dialog in tbooks
+FLAG_DAY02_EVENT02_TALKEDTOPEOPLE=$02 ; set after completing both previous events
+FLAG_DAY02_EVENT03_DENIMCOUNTRY=$03 ; set after completing all daytime events
+FLAG_NIGHT02_EVENT00_FCBCAMPING=$04 ; set after dialog in fcbcamping
+FLAG_NIGHT02_EVENT01_NSHACK=$05 ; set after dialog in nshack
+FLAG_NIGHT02_EVENT02_WWHALL=$06 ; set after dialog in wwhall
+FLAG_DAY03_EVENT00_POGODAWG=$00 ; set after event in pogodag
+FLAG_DAY03_EVENT01_CHECKERS=$01 ; set after event in checkers
+FLAG_DAY03_EVENT02_CLOTHESNOW=$02 ; set after event in clothesnow
+FLAG_DAY03_EVENT03_LUNCHESDELIVERED=$03 ; set after completing the 3 previous events
+FLAG_DAY03_EVENT03_SOUTHHALL=$04 ; set after event in southhall
+FLAG_DAY03_EVENT04_STORYEVENTSDONE=$05 ; set after story events for the day are done
+FLAG_NIGHT03_EVENT00_TLODGE=$06 ; set after event in tlodge
+FLAG_NIGHT03_EVENT01_CNOW=$07 ; set after event in cnow
+FLAG_NIGHT03_EVENT02_NSHACK=$08 ; set after event in nshack
+FLAG_DAY04_EVENT00_CAVERN=$00 ; set after event in cavern 
+FLAG_NIGHT04_EVENT00_NSHACKNIGHT=$01 ; set after event in nshack
+FLAG_NIGHT04_EVENT01_CAVERNBACKROOM=$02 ; set after event in the cavern backroom
+FLAG_DAY05_EVENT00_FCBFIREARMS=$00 ; set after event in fcbfirearms
+FLAG_DAY05_EVENT01_WWAUDIO=$01 ; set after event wwaudio
+FLAG_DAY05_EVENT02_CONTESTDONE=$02 ; set after completing both previous events
+FLAG_NIGHT05_EVENT00_CAVERN=$03 ; set after event in the cavern
+FLAG_NIGHT05_EVENT01_BASEMENTMDORM=$04 ; set after event in the basement dorm
+FLAG_NIGHT05_EVENT02_BASEMENTOFFICE=$05 ; set after event in the basement office
+FLAG_NIGHT05_EVENT03_BASEMENTDONE=$06 ; set after all the required events are done
+FLAG_NIGHT06_EVENT00_BASEMENTKITCHEN=$00 ; set after final scene in the basement
 ;
 ;-------------------------------------------------------------------------------
 ; mission event flags - used to track progress within sub-quests 
@@ -138,62 +174,62 @@ OBJ_ITEM_EARRING_BOX=OBJ_ITEM_BASE+$0015
 ;-------------------------------------------------------------------------------
 ; day 00
 ;-------------------------------------------------------------------------------
-OBJECTIVE_D00_O00=$0000
-OBJECTIVE_D00_O01=$0001
-OBJECTIVE_D00_O02=$0002
-OBJECTIVE_D00_O03=$0003
-OBJECTIVE_D00_O04=$0004
+OBJECTIVE_D00_O00_HelpCustomers=$0000
+OBJECTIVE_D00_O01_VisitInfo=$0001
+OBJECTIVE_D00_O02_LeaveWhenReady=$0002
+OBJECTIVE_D00_O03_SVideo=$0003
+OBJECTIVE_D00_O04_Leave=$0004
 ;
 ;-------------------------------------------------------------------------------
 ; day 01
 ;-------------------------------------------------------------------------------
-OBJECTIVE_D01_O00=$0005
-OBJECTIVE_D01_O01=$0006
-OBJECTIVE_D01_O02=$0007
-OBJECTIVE_D01_O03=$0008
+OBJECTIVE_D01_O00_RumorSearch=$0005
+OBJECTIVE_D01_O01_ReportBack=$0006
+OBJECTIVE_D01_O02_FollowGuy=$0007
+OBJECTIVE_D01_O03_Leave=$0008
 OBJECTIVE_D01_O04=$0009
 ;
 ;-------------------------------------------------------------------------------
 ; day 02
 ;-------------------------------------------------------------------------------
-OBJECTIVE_D02_O00=$000A
-OBJECTIVE_D02_O01=$000B
-OBJECTIVE_D02_O02=$000C
-OBJECTIVE_D02_O03=$000D
-OBJECTIVE_D02_O04=$000E
+OBJECTIVE_D02_O00_TalkToEmployees=$000A
+OBJECTIVE_D02_O01_ReportBack=$000B
+OBJECTIVE_D02_O02_VisitNS=$000C
+OBJECTIVE_D02_O03_Investigate=$000D
+OBJECTIVE_D02_O04_Leave=$000E
 ;
 ;-------------------------------------------------------------------------------
 ; day 03
 ;-------------------------------------------------------------------------------
-OBJECTIVE_D03_O00=$000F
-OBJECTIVE_D03_O01=$0010
-OBJECTIVE_D03_O02=$0011
-OBJECTIVE_D03_O03=$0012
-OBJECTIVE_D03_O04=$0013
+OBJECTIVE_D03_O00_VisitPogoDawg=$000F
+OBJECTIVE_D03_O01_DeliverLunches=$0010
+OBJECTIVE_D03_O02_ReportBack=$0011
+OBJECTIVE_D03_O03_Revist=$0012
+OBJECTIVE_D03_O04_CheckIn=$0013
 ;
 ;-------------------------------------------------------------------------------
 ; day 04
 ;-------------------------------------------------------------------------------
-OBJECTIVE_D04_O00=$0014
-OBJECTIVE_D04_O01=$0015
-OBJECTIVE_D04_O02=$0016
-OBJECTIVE_D04_O03=$0017
-OBJECTIVE_D04_O04=$0018
+OBJECTIVE_D04_O00_Cavern=$0014
+OBJECTIVE_D04_O01_NShack=$0015
+OBJECTIVE_D04_O02_CheckIn=$0016
+OBJECTIVE_D04_O03_Cavern=$0017
+OBJECTIVE_D04_O04_Leave=$0018
 ;
 ;-------------------------------------------------------------------------------
 ; day 05
 ;-------------------------------------------------------------------------------
-OBJECTIVE_D05_O00=$0019
-OBJECTIVE_D05_O01=$001A
-OBJECTIVE_D05_O02=$001B
-OBJECTIVE_D05_O03=$001C
-OBJECTIVE_D05_O04=$001D
+OBJECTIVE_D05_O00_Contest=$0019
+OBJECTIVE_D05_O01_ReportBack=$001A
+OBJECTIVE_D05_O02_LastYear=$001B
+OBJECTIVE_D05_O03_Basement=$001C
+OBJECTIVE_D05_O04_Leave=$001D
 ;
 ;-------------------------------------------------------------------------------
 ; day 06
 ;-------------------------------------------------------------------------------
-OBJECTIVE_D06_O00=$001E
-OBJECTIVE_D06_O01=$001F
+OBJECTIVE_D06_O00_GoingAwayGift=$001E
+OBJECTIVE_D06_O01_FinalDay=$001F
 OBJECTIVE_D06_O02=$0020
 OBJECTIVE_D06_O03=$0021
 OBJECTIVE_D06_O04=$0022
@@ -296,4 +332,10 @@ MEM_NPC_LOCATION_BASEMENTOFFICE=MEM_NPC_LOCATION_BASEMENTCAFE+$00000004
 ;-------------------------------------------------------------------------------
 PLAYER_SPRITE_ERYN=$0000 ; use tiles for Eryn as player sprite
 PLAYER_SPRITE_CARL=$0001 ; use tiles for Carl as player sprite
+SPRITE_PLAYER_INIT_X=$0114 ; starting x location of player sprite
+SPRITE_PLAYER_INIT_Y=$00E0 ; starting y location of player sprite
+;
+;-------------------------------------------------------------------------------
+; max store id - used to check if a lookup is out of range
+;-------------------------------------------------------------------------------
 MAX_STORE_ID=SCENE_ID_BASEMENTOFFICE

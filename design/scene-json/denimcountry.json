@@ -219,29 +219,29 @@
 	],
 	"npcLocations":[
 		{
-			"x":232,
-			"y":200,
+			"x":194,
+			"y":180,
 			"direction":"DIRECTION_DOWN",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":208,
-			"y":208,
-			"direction":"DIRECTION_DOWN",
+			"x":198,
+			"y":258,
+			"direction":"DIRECTION_RIGHT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":288,
-			"y":192,
-			"direction":"DIRECTION_DOWN",
+			"x":340,
+			"y":156,
+			"direction":"DIRECTION_LEFT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":328,
-			"y":288,
+			"x":0,
+			"y":0,
 			"direction":"DIRECTION_DOWN",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"

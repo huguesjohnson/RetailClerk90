@@ -44,6 +44,7 @@
 	include	'lib/retailclerk/dialog/sub_ProcessDialog.X68'
 	include	'lib/retailclerk/dialog/sub_ResetDialog.X68'
 	include	'lib/retailclerk/dialog/sub_SetDialogOpening.X68'
+	include	'lib/retailclerk/dialog/sub_ShowDialog.X68'
 	include	'lib/retailclerk/dialog/sub_ShowInteractDialog.X68'
 	; inventory handling
 	include	'lib/retailclerk/inventory/sub_ClearPlayerInventory.X68'

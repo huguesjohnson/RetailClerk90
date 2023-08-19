@@ -62,7 +62,7 @@ DrawEventIcon:
 	cmpi.w	#MAX_STORE_ID,d7 ; check against my own stupidity
 	bgt.s	ExitDrawEventIcon ; exit if I did something really bad
 	mulu.w	#LWORD_SIZE,d7 ; multiply by LWORD_SIZE to get offset
-	lea	MenuMapIconLocationTable,a6	; point a6 to the lookup table
+	lea	MenuMapEventIconLocationTable,a6	; point a6 to the lookup table
 	adda.l	d7,a6 ; move to offset
 	move.l	(a6),d7 ; copy value at a6 to d7
 	cmp.w	d5,d6 ; current scene id = event scene id?

@@ -88,7 +88,10 @@
             "dialogTitle":"OBJ_NPC_CAROL",
             "text":"This is my default text.",
             "align":2},
-      "DialogTextLisaDay00":{"text":""},
+      "DialogTextLisaDay00":{
+            "dialogTitle":"OBJ_NPC_LISA",
+            "text":"It's way too slow here tonight.",
+            "align":2},       
       "DialogTextLisaDay01":{"text":""},
       "DialogTextLisaDay02":{"text":""},
       "DialogTextLisaDay03":{"text":""},

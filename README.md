@@ -1,9 +1,9 @@
 # Retail Clerk '90
 A work in-progress casual adventure game for the Sega Genesis written in 68000 assembly. 
 
-This is a sequel to Retail Clerk '89. Since it's possible nobody played that, Retail Clerk '90 is a mostly independent story. Playing the first game wouldn't hurt though. I guess it might hurt a little if you don't enjoy it.
+This is a sequel to Retail Clerk '89. It's possible nobody played that but I made a sequel anyway. The story is fairly connected to the first game. The plot might not make sense without playing Retail Clerk '89. It also might not make sense even if you do because I'm not a good writer.
 
-The main goal of this demo is to improve on the engine and tooling developed for Retail Clerk '89. I have this ill-conceived idea for a set of tools to build adventure-like games for classic consoles. If I accidentally produce an OK game along the way I guess that's nice. The Genesis is the first console I'm trying this idea on because.. well, I don't recall why I chose it. Assuming I stick with this then Retail Clerk '90 will be on multiple consoles.
+This isn't really about making an awesome Genesis game though. The main goal of this demo is to improve on the engine and tooling developed for Retail Clerk '89. I have this ill-conceived idea for a set of tools to build adventure-like games for classic consoles. If I accidentally produce an OK game along the way I guess that's nice. The Genesis is the first console I'm trying this idea on because.. well, I don't recall why I chose it. Assuming I stick with this then maybe I'll port all of this to another console.
 
 The rough list of planed enhancements from Retail Clerk '89 -> '90 includes:
 
@@ -16,7 +16,7 @@ The rough list of planed enhancements from Retail Clerk '89 -> '90 includes:
 
 **Development Status**
 
-All the previously listed improvements are done. The game script itself is not close to being done. The current code just loads up the mall and has a ton of placeholder text. I'd like to finish the script in 2021 but no promises.
+All the previously listed improvements are done. The game script itself is close to being done. The current code just loads up the mall and has a ton of placeholder text. I'd like to be done with this in 2023 but no promises.
 
 **Links**
 

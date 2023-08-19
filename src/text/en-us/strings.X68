@@ -525,6 +525,10 @@ DialogTextCarolDay0D:
 	dc.b	"text.",ETX
 	align 2
 DialogTextLisaDay00:
+	dc.w	OBJ_NPC_LISA
+	dc.b	"It's way too slow",LF
+	dc.b	"here tonight.",ETX
+	align 2
 DialogTextLisaDay01:
 DialogTextLisaDay02:
 DialogTextLisaDay03:
@@ -1396,44 +1400,105 @@ StatusScreenDay00Objective00:
 	dc.b	"Press A to confirm a choice.",LF
 	dc.b	"Press B to cancel a dialog.",ETX
 StatusScreenDay00Objective01:
+	dc.b	"November 18, 1990: Evening",LF
+	dc.b	"Visit the info desk.",ETX
 StatusScreenDay00Objective02:
+	dc.b	"November 18, 1990: Evening",LF
+	dc.b	"Leave when you're ready.",ETX
 StatusScreenDay00Objective03:
+	dc.b	"November 18, 1990: Night",LF
+	dc.b	"Deliver the special order.",ETX
 StatusScreenDay00Objective04:
-	dc.b	"November 18, 1990: ????",ETX
+	dc.b	"November 18, 1990: Evening",LF
+	dc.b	"Leave when you're ready.",ETX
 StatusScreenDay01Objective00:
+	dc.b	"November 23, 1990: Day",LF
+	dc.b	"Look into rumors.",ETX
 StatusScreenDay01Objective01:
+	dc.b	"November 23, 1990: Day",LF
+	dc.b	"Report back on what you heard.",ETX
 StatusScreenDay01Objective02:
+	dc.b	"November 23, 1990: Night",LF
+	dc.b	"Where did that guy go?",ETX
 StatusScreenDay01Objective03:
+	dc.b	"November 23, 1990: Night",LF
+	dc.b	"Leave when you're ready.",ETX
 StatusScreenDay01Objective04:
 	dc.b	"November 23, 1990: ????",ETX
 StatusScreenDay02Objective00:
+	dc.b	"December 4, 1990: Day",LF
+	dc.b	"Talk to employees who",LF
+	dc.b	"have worked at the mall a while.",ETX
 StatusScreenDay02Objective01:
+	dc.b	"December 4, 1990: Day",LF
+	dc.b	"Report back on what you heard.",ETX
 StatusScreenDay02Objective02:
+	dc.b	"December 4, 1990: Day",LF
+	dc.b	"Stop by Nut Shack on your way out.",ETX
 StatusScreenDay02Objective03:
+	dc.b	"December 4, 1990: Night",LF
+	dc.b	"Investigate the camping section",LF
+	dc.b	"at Fish or Cut Bait.",ETX
 StatusScreenDay02Objective04:
-	dc.b	"December 4, 1990: ????",ETX
+	dc.b	"December 4, 1990: Night",LF
+	dc.b	"Leave when you're ready",ETX
 StatusScreenDay03Objective00:
+	dc.b	"December 16, 1990: Day",LF
+	dc.b	"Visit Pogo Dawg.",ETX
 StatusScreenDay03Objective01:
+	dc.b	"December 16, 1990: Day",LF
+	dc.b	"Deliver lunches.",ETX
 StatusScreenDay03Objective02:
+	dc.b	"December 16, 1990: Day",LF
+	dc.b	"Report back at your store.",ETX
 StatusScreenDay03Objective03:
+	dc.b	"December 16, 1990: Night",LF
+	dc.b	"Where did you that guy before?",ETX
 StatusScreenDay03Objective04:
-	dc.b	"December 16, 1990: ????",ETX
+	dc.b	"December 16, 1990: Night",LF
+	dc.b	"Check-in with your friends.",ETX
 StatusScreenDay04Objective00:
+	dc.b	"December 20, 1990: Evening",LF
+	dc.b	"Something is up at the arcade.",ETX
 StatusScreenDay04Objective01:
+	dc.b	"December 20, 1990: Evening",LF
+	dc.b	"Wait for your ride at the usual spot.",ETX
 StatusScreenDay04Objective02:
+	dc.b	"December 20, 1990: Evening",LF
+	dc.b	"Check-in with your friends.",ETX
 StatusScreenDay04Objective03:
+	dc.b	"December 20, 1990: Evening",LF
+	dc.b	"Visit the Cavern.",ETX
 StatusScreenDay04Objective04:
-	dc.b	"December 20, 1990: ????",ETX
+	dc.b	"December 20, 1990: Evening",LF
+	dc.b	"Leave when you're ready.",ETX
 StatusScreenDay05Objective00:
+	dc.b	"December 24, 1990: Day",LF
+	dc.b	"Refer shoppers to your store.",ETX
 StatusScreenDay05Objective01:
+	dc.b	"December 24, 1990: Day",LF
+	dc.b	"See who won the contest.",ETX
 StatusScreenDay05Objective02:
+	dc.b	"December 24, 1990: Night",LF
+	dc.b	"What happened last year?",ETX
 StatusScreenDay05Objective03:
+	dc.b	"December 24, 1990: Night",LF
+	dc.b	"Checkout the basement.",ETX
 StatusScreenDay05Objective04:
-	dc.b	"December 24, 1990: ????",ETX
+	dc.b	"December 24, 1990: Night",LF
+	dc.b	"Leave when you're ready.",ETX
 StatusScreenDay06Objective00:
+	dc.b	"December 31, 1990: Morning",LF
+	dc.b	"Don't forget your going away gift.",ETX
 StatusScreenDay06Objective01:
+	dc.b	"December 31, 1990: Afternoon",LF
+	dc.b	"It's your last day at Bayhurst.",LF
+	dc.b	"Say goodbye to all the friends you",LF
+	dc.b	"made.",ETX
 StatusScreenDay06Objective02:
+	dc.b	"December 31, 1990: ????",ETX
 StatusScreenDay06Objective03:
+	dc.b	"December 31, 1990: ????",ETX
 StatusScreenDay06Objective04:
 	dc.b	"December 31, 1990: ????",ETX
 
@@ -1513,59 +1578,55 @@ TitleScreenTextTitleDebug:
 DebugScreenLine00:
 	dc.b	"Debug menu",ETX
 DebugScreenLine01:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine02:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine03:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine04:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine05:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine06:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine07:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine08:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine09:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine0A:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine0B:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine0C:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine0D:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine0E:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine0F:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine10:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine11:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine12:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine13:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine14:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine15:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine16:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine17:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine18:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine19:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
-DebugScreenLine1A:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
-DebugScreenLine1B:
-	dc.b	"{(not implemented)  {(not implemented)",ETX
+	dc.b	"{(not implemented) {(not implemented)",ETX
 
 ;-------------------------------------------------------------------------------
 ; CreditsScreens
@@ -1598,27 +1659,27 @@ CreditsScreen00Line0B:
 CreditsScreen01Line00:
 	dc.b	"               Graphics               ",ETX
 CreditsScreen01Line01:
-	dc.b	" ",ETX
+	dc.b	"Nearly all graphics are based off",ETX
 CreditsScreen01Line02:
-	dc.b	"Logo font based on Audiowide",ETX
+	dc.b	"the modern tilesets by LimeZu:",ETX
 CreditsScreen01Line03:
-	dc.b	"Copyright (c) 2012 Brian J Bonislawsky",ETX
+	dc.b	"https://limezu.itch.io/",ETX
 CreditsScreen01Line04:
 	dc.b	" ",ETX
 CreditsScreen01Line05:
-	dc.b	"Some scenery is based on tilesets",ETX
+	dc.b	"Logo font based on Audiowide",ETX
 CreditsScreen01Line06:
-	dc.b	"created by Sithjester",ETX
+	dc.b	"Copyright (c) 2012 Brian J Bonislawsky",ETX
 CreditsScreen01Line07:
-	dc.b	"untamed.wild-refuge.net/rpgxp.php",ETX
-CreditsScreen01Line08:
 	dc.b	" ",ETX
+CreditsScreen01Line08:
+	dc.b	"Additional graphics from:",ETX
 CreditsScreen01Line09:
-	dc.b	"Some scenery is based off tilesets",ETX
+	dc.b	"http://zee-3.com/pickfordbros/archive/",ETX
 CreditsScreen01Line0A:
-	dc.b	"from Pixel Art World",ETX
+	dc.b	"GameDev Market 8Bit/Pixelart Bundle",ETX
 CreditsScreen01Line0B:
-	dc.b	"http://yms.main.jp/page-s1/terms.html",ETX
+	dc.b	"Pixel Art Infinite Runner Pack",ETX
 CreditsScreen02Line00:
 	dc.b	"                Audio                 ",ETX
 CreditsScreen02Line01:
@@ -1636,36 +1697,66 @@ CreditsScreen02Line06:
 CreditsScreen02Line07:
 	dc.b	" ",ETX
 CreditsScreen02Line08:
-	dc.b	" ",ETX
+	dc.b	"I'll try for better music next time.",ETX
 CreditsScreen02Line09:
 	dc.b	" ",ETX
 CreditsScreen02Line0A:
-	dc.b	" ",ETX
+	dc.b	"Maybe I'll write my own sound driver.",ETX
 CreditsScreen02Line0B:
+	dc.b	"Who knows?",ETX
+
+;-------------------------------------------------------------------------------
+; EndScreen
+; Text used on the ending scene
+;-------------------------------------------------------------------------------
+EndScreenLine00BadEnding:
+	dc.b	"    Retail Clerk '90 - Bad Ending     ",ETX
+EndScreenLine00GoodEnding:
+	dc.b	"    Retail Clerk '90 - Good Ending    ",ETX
+EndScreenLine00PerfectEnding:
+	dc.b	"  Retail Clerk '90 - Perfect Ending   ",ETX
+EndScreenBadTextLine1:
 	dc.b	" ",ETX
-CreditsScreen03Line00:
-CreditsScreen03Line01:
+EndScreenBadTextLine2:
+	dc.b	"You finished the main story.",ETX
+EndScreenBadTextLine3:
+	dc.b	"You didn't make any new friends.",ETX
+EndScreenBadTextLine4:
+	dc.b	"You didn't finish the side quests.",ETX
+EndScreenBadTextLine5:
+	dc.b	"Aren't those the whole point of life?",ETX
+EndScreenBadTextLine6:
 	dc.b	" ",ETX
-CreditsScreen03Line02:
+EndScreenBadTextLine7:
+	dc.b	"Press the start button to reset.",ETX
+EndScreenGoodTextLine1:
+	dc.b	"You finished the main story",ETX
+EndScreenGoodTextLine2:
+	dc.b	"You made a new friend along the way.",ETX
+EndScreenGoodTextLine3:
+	dc.b	"You didn't do everything though.",ETX
+EndScreenGoodTextLine4:
+	dc.b	"That's OK, life at the mall is busy.",ETX
+EndScreenGoodTextLine5:
+	dc.b	"Maybe you'll try again later.",ETX
+EndScreenGoodTextLine6:
 	dc.b	" ",ETX
-CreditsScreen03Line03:
+EndScreenGoodTextLine7:
+	dc.b	"Press the start button to reset.",ETX
+EndScreenPerfectTextLine1:
+	dc.b	"You did all the things.",ETX
+EndScreenPerfectTextLine2:
+	dc.b	"You made many new friends.",ETX
+EndScreenPerfectTextLine3:
+	dc.b	"You helped your fellow mall employees.",ETX
+EndScreenPerfectTextLine4:
+	dc.b	"You were the model 1990 mall person.",ETX
+EndScreenPerfectTextLine5:
+	dc.b	"Congratulations, see you next time.",ETX
+EndScreenPerfectTextLine6:
 	dc.b	" ",ETX
-CreditsScreen03Line04:
-	dc.b	" ",ETX
-CreditsScreen03Line05:
-	dc.b	" ",ETX
-CreditsScreen03Line06:
-	dc.b	" ",ETX
-CreditsScreen03Line07:
-	dc.b	" ",ETX
-CreditsScreen03Line08:
-	dc.b	" ",ETX
-CreditsScreen03Line09:
-	dc.b	" ",ETX
-CreditsScreen03Line0A:
-	dc.b	" ",ETX
-CreditsScreen03Line0B:
-	dc.b	" ",ETX
+EndScreenPerfectTextLine7:
+	dc.b	"Press the start button to reset.",ETX
 
 ;-------------------------------------------------------------------------------
 ; DayIntros
@@ -1844,5 +1935,915 @@ LegalScreenLine26:
 	dc.b	" and places are purely fictitious.",ETX
 LegalScreenLine27:
 	dc.b	" ",ETX
+
+;-------------------------------------------------------------------------------
+; StoryText
+; Text from the main story
+;-------------------------------------------------------------------------------
+StoryTextErynSpeechless:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"...",ETX
+	align 2
+StoryTextDay00CantExit:
+	dc.w	OBJ_NPC_LISA
+	dc.b	"It's not time for",LF
+	dc.b	"your break yet.",ETX
+	align 2
+StoryTextDay00NPC0Customers:
+	dc.w	OBJ_NPC_LISA
+	dc.b	"We really need to",LF
+	dc.b	"make some sales.     ^",FF
+	dc.b	"Please help each",LF
+	dc.b	"customer.",ETX
+	align 2
+StoryTextDay00NPC1Choice:
+	dc.w	OBJ_NPC_BUSYMOM
+	dc.b	"Do you think this",LF
+	dc.b	"will fit my husband? ^",FFR
+	dc.b	"{ Uh..               ",LF
+	dc.b	"{ Yes, of course",ETX
+	align 2
+StoryTextDay00NPC1Choice0Line0:
+	dc.w	OBJ_NPC_BUSYMOM
+	dc.b	"Well you're no help.",ETX
+	align 2
+StoryTextDay00NPC1Choice1Line0:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"These are one size",LF
+	dc.b	"fits all.",ETX
+	align 2
+StoryTextDay00NPC1Choice1Line1:
+	dc.w	OBJ_NPC_BUSYMOM
+	dc.b	"These say 38x34",LF
+	dc.b	"that's not his size  ^",FF
+	dc.b	"You're trying to",LF
+	dc.b	"trick me.",ETX
+	align 2
+StoryTextDay00NPC2Choice:
+	dc.w	OBJ_NPC_ROCKER
+	dc.b	"Are these all the",LF
+	dc.b	"shirts you have?     ^",FFR
+	dc.b	"{ Yes                ",LF
+	dc.b	"{ Define 'all'",ETX
+	align 2
+StoryTextDay00NPC2Choice0Line0:
+	dc.w	OBJ_NPC_ROCKER
+	dc.b	"Aren't there more in",LF
+	dc.b	"back?",ETX
+	align 2
+StoryTextDay00NPC2Choice0Line1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"We don't even have a",LF
+	dc.b	"back.",ETX
+	align 2
+StoryTextDay00NPC2Choice0Line2:
+	dc.w	OBJ_NPC_ROCKER
+	dc.b	"Oh, OK. Well these",LF
+	dc.b	"aren't what I'm      ^",FF
+	dc.b	"looking for.",ETX
+	align 2
+StoryTextDay00NPC2Choice1Line0:
+	dc.w	OBJ_NPC_ROCKER
+	dc.b	"I mean, like are",LF
+	dc.b	"there others         ^",FF
+	dc.b	"somewhere else?",ETX
+	align 2
+StoryTextDay00NPC2Choice1Line1:
+	dc.w	OBJ_NPC_ROCKER
+	dc.b	"Like not on these",LF
+	dc.b	"racks right here?",ETX
+	align 2
+StoryTextDay00NPC2Choice1Line2:
+	dc.w	OBJ_NPC_ROCKER
+	dc.b	"Like in some other",LF
+	dc.b	"location?",ETX
+	align 2
+StoryTextDay00NPC2Choice1Line3:
+	dc.w	OBJ_NPC_ROCKER
+	dc.b	"This a dumb question",LF
+	dc.b	"right?",ETX
+	align 2
+StoryTextDay00NPC2Choice1Line4:
+	dc.w	OBJ_NPC_ROCKER
+	dc.b	"I'll just go now.",ETX
+	align 2
+StoryTextDay00LisaWorriedLine0:
+	dc.w	OBJ_NPC_LISA
+	dc.b	"Neither of them",LF
+	dc.b	"wanted anything?     ^",FF
+	dc.b	"It's not your fault,",LF
+	dc.b	"sales are terrible   ^",FF
+	dc.b	"lately.",LF
+	dc.b	"This is bad. If we   ^",FF
+	dc.b	"close that's bad for",LF
+	dc.b	"the whole mall. You  ^",FF
+	dc.b	"might as well leave",LF
+	dc.b	"early since it's dead^",FF
+	dc.b	"here.",ETX
+	align 2
+StoryTextDay00LisaWorriedLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"My ride isn't coming",LF
+	dc.b	"for an hour.",ETX
+	align 2
+StoryTextDay00LisaWorriedLine2:
+	dc.w	OBJ_NPC_LISA
+	dc.b	"Consider it a favor.",LF
+	dc.b	"You don't want to be ^",FF
+	dc.b	"here after closing",LF
+	dc.b	"time. There's some   ^",FF
+	dc.b	"weird guy wandering",LF
+	dc.b	"around late. I asked ^",FF
+	dc.b	"Todd to walk me to my",LF
+	dc.b	"car every night. Why ^",FF
+	dc.b	"don't you stop by the",LF
+	dc.b	"info desk if you have^",FF
+	dc.b	"time. It's a good",LF
+	dc.b	"place to learn about ^",FF
+	dc.b	"the mall. Stop by a",LF
+	dc.b	"few stores if you    ^",FF
+	dc.b	"want. I'll leave you",LF
+	dc.b	"on the clock.",ETX
+	align 2
+StoryTextDay00InfoDeskLine1:
+	dc.w	OBJ_NPC_GINA
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay00InfoDeskLine2:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay00InfoDeskLine3:
+	dc.w	OBJ_NPC_GINA
+	dc.b	"line3.",ETX
+	align 2
+StoryTextDay00SouthHallLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay00SouthHallLine2:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay00VBLine1:
+	dc.w	OBJ_NPC_DB
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay00VBLine2:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay00SVideoLine1:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay00SVideoLine2:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight00TBooksLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight00TBooksLine2:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight00EEHallLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight00EEHallLine2:
+	dc.w	OBJ_NPC_GUARD
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight00SVideoLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight00SVideoLine2:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight00SouthHallLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight00SouthHallLine2:
+	dc.w	OBJ_NPC_VICTOR
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight00VBLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight00VBLine2:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight00CPlanetLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight00CPlanetLine2:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay01DenimCountryLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay01DenimCountryLine2:
+	dc.w	OBJ_NPC_LISA
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay01CPlanetLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay01CPlanetLine2:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay01WWAppliancesLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay01WWAppliancesLine2:
+	dc.w	OBJ_NPC_LAURA
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay01DenimCountry2Line1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay01DenimCountry2Line2:
+	dc.w	OBJ_NPC_LISA
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay01CavernLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay01CavernLine2:
+	dc.w	OBJ_NPC_DB
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay01FCBCampingLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay01FCBCampingLine2:
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight01WEHallLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight01WEHallLine2:
+	dc.w	OBJ_NPC_GUARD
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight01CavernLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight01CavernLine2:
+	dc.w	OBJ_NPC_DB
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight01EEHallLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight01EEHallLine2:
+	dc.w	OBJ_NPC_VICTOR
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight01SouthHallLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight01SouthHallLine2:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight01WWAppliancesLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight01WWAppliancesLine2:
+	dc.w	OBJ_NPC_LAURA
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight01VBLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight01VBLine2:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay02VBLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay02VBLine2:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay02TLodgeLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay02TLodgeLine2:
+	dc.w	OBJ_NPC_SCOTT
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay02TBooksLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay02TBooksLine2:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay02DenimCountryLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay02DenimCountryLine2:
+	dc.w	OBJ_NPC_LISA
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay02NShackLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay02NShackLine2:
+	dc.w	OBJ_NPC_JEN
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay02SVideoLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay02SVideoLine2:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay02FCBCampingLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay02FCBCampingLine2:
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight02TBooksLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight02TBooksLine2:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight02FCBCampingLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight02FCBCampingLine2:
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight02NShackLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight02NShackLine2:
+	dc.w	OBJ_NPC_JEN
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight02WWHallLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight02WWHallLine2:
+	dc.w	OBJ_NPC_VICTOR
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight02VisionLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight02VisionLine2:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight02VBLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight02VBLine2:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight02CPlanetLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight02CPlanetLine2:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay03DenimCountryLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay03DenimCountryLine2:
+	dc.w	OBJ_NPC_LISA
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay03PogoDawgLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay03PogoDawgLine2:
+	dc.w	OBJ_NPC_GRIFFY
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay03CheckersLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay03CheckersLine2:
+	dc.w	OBJ_NPC_TODD
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay03CNowLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay03CNowLine2:
+	dc.w	OBJ_NPC_BECKY
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay03SouthHallLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay03SouthHallLine2:
+	dc.w	OBJ_NPC_BRETT
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay03PogoDawg2Line1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay03PogoDawg2Line2:
+	dc.w	OBJ_NPC_GRIFFY
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay03CavernLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay03CavernLine2:
+	dc.w	OBJ_NPC_DB
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay03SVideoLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay03SVideoLine2:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight03TBooksLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight03TBooksLine2:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight03TLodgeLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight03TLodgeLine2:
+	dc.w	OBJ_NPC_SCOTT
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight03CNowLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight03CNowLine2:
+	dc.w	OBJ_NPC_BECKY
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight03CNowAltLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight03CNowAltLine2:
+	dc.w	OBJ_NPC_BECKY
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight03NShackLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight03NShackLine2:
+	dc.w	OBJ_NPC_JEN
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight03WWAppliancesLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight03WWAppliancesLine2:
+	dc.w	OBJ_NPC_LAURA
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight03CPlanetLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight03CPlanetLine2:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay04EWHallLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay04EWHallLine2:
+	dc.w	OBJ_NPC_BRETT
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay04CavernLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay04CavernLine2:
+	dc.w	OBJ_NPC_DB
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay04NShackLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay04NShackLine2:
+	dc.w	OBJ_NPC_JEN
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay04SVideoLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay04SVideoLine2:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay04FCBCampingLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay04FCBCampingLine2:
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight04TBooksLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight04TBooksLine2:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight04NShackLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight04NShackLine2:
+	dc.w	OBJ_NPC_JEN
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight04CavernLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight04CavernLine2:
+	dc.w	OBJ_NPC_JEN
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight04SouthHallLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight04SouthHallLine2:
+	dc.w	OBJ_NPC_VICTOR
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight04WWAppliancesLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight04WWAppliancesLine2:
+	dc.w	OBJ_NPC_LAURA
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight04VBLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight04VBLine2:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay05DenimCountryLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay05DenimCountryLine2:
+	dc.w	OBJ_NPC_DANI
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay05FCBFirearmsLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay05FCBFirearmsLine2:
+	dc.w	OBJ_NPC_RANDY
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay05WWAudioLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay05WWAudioLine2:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay05DenimCountry2Line1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay05DenimCountry2Line2:
+	dc.w	OBJ_NPC_DANI
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay05CavernLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay05CavernLine2:
+	dc.w	OBJ_NPC_DB
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay05FCBCampingLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay05FCBCampingLine2:
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight05TBooksLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight05TBooksLine2:
+	dc.w	OBJ_NPC_CHARLES
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight05CavernLine1:
+	dc.w	OBJ_NPC_DANI
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight05CavernLine2:
+	dc.w	OBJ_NPC_DB
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight05BasementMDormLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight05BasementMDormLine2:
+	dc.w	OBJ_NPC_BRETT
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight05BasementOfficeLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight05BasementOfficeLine2:
+	dc.w	OBJ_NPC_AL
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight05SouthHallLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight05SouthHallLine2:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight05WWAppliancesLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight05WWAppliancesLine2:
+	dc.w	OBJ_NPC_LAURA
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight05CPlanetLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight05CPlanetLine2:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay06DemimCountryLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay06DemimCountryLine2:
+	dc.w	OBJ_NPC_LISA
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay06NShackLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay06NShackLine2:
+	dc.w	OBJ_NPC_JEN
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay06CavernLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay06CavernLine2:
+	dc.w	OBJ_NPC_DB
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay06SVideoLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay06SVideoLine2:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay06FCBCampingLine1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay06FCBCampingLine2:
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight06TBooksLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight06TBooksLine2:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight06BasementKitchenLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight06BasementKitchenLine2:
+	dc.w	OBJ_NPC_BRETT
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight06WWAppliancesLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight06WWAppliancesLine2:
+	dc.w	OBJ_NPC_LAURA
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight06CPlanetLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight06CPlanetLine2:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight06VBLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight06VBLine2:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"line2.",ETX
+	align 2
+StoryTextEndGoodLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextEndGoodLine2:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line2.",ETX
+	align 2
+StoryTextEndBadLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextEndBadLine2:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line2.",ETX
+	align 2
+StoryTextEndPerfectLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextEndPerfectLine2:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line2.",ETX
+	align 2
+StoryTextTradingSequenceInfoDek:
+	dc.w	OBJ_NPC_GINA
+	dc.b	"whatever",ETX
+	align 2
+StoryTextTradingSequenceSVideo:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"whatever",ETX
+	align 2
+StoryTextTradingSequenceFCBFishing:
+	dc.w	OBJ_NPC_HEATHER
+	dc.b	"whatever",ETX
+	align 2
+StoryTextTradingSequenceFCBFirearms:
+	dc.w	OBJ_NPC_RANDY
+	dc.b	"whatever",ETX
+	align 2
+StoryTextTradingSequenceWWAppliances:
+	dc.w	OBJ_NPC_LAURA
+	dc.b	"whatever",ETX
+	align 2
+StoryTextTradingSequenceCheckers:
+	dc.w	OBJ_NPC_TODD
+	dc.b	"whatever",ETX
+	align 2
+StoryTextTradingSequenceCPlanet:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"whatever",ETX
+	align 2
+StoryTextTradingSequenceWWAudio:
+	dc.w	OBJ_NPC_CRAIG
+	dc.b	"whatever",ETX
+	align 2
+StoryTextTradingSequenceWWVideo:
+	dc.w	OBJ_NPC_JUAN
+	dc.b	"whatever",ETX
+	align 2
+StoryTextTradingSequenceTLodge:
+	dc.w	OBJ_NPC_SCOTT
+	dc.b	"whatever",ETX
+	align 2
+StoryTextTradingSequenceCNow:
+	dc.w	OBJ_NPC_BECKY
+	dc.b	"whatever",ETX
+	align 2
+StoryTextTradingSequenceFCBCheckout:
+	dc.w	OBJ_NPC_THOMAS
+	dc.b	"whatever",ETX
+	align 2
+StoryTextTradingSequenceWWCheckout:
+	dc.w	OBJ_NPC_TANYA
+	dc.b	"whatever",ETX
+	align 2
+StoryTextTradingSequenceFCBCamping:
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"whatever",ETX
+	align 2
+StoryTextTradingSequencePogoDawg:
+	dc.w	OBJ_NPC_GRIFFY
+	dc.b	"whatever",ETX
+	align 2
+StoryTextTradingSequenceVB:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"whatever",ETX
+	align 2
+StoryTextTradingSequenceCavern:
+	dc.w	OBJ_NPC_DB
+	dc.b	"whatever",ETX
+	align 2
+StoryTextTradingSequenceDenimCountry:
+	dc.w	OBJ_NPC_LISA
+	dc.b	"whatever",ETX
+	align 2
 
 	align 2

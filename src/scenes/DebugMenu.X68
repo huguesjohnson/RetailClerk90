@@ -19,8 +19,8 @@
 	;---------------------------------------------------------------------------
 	dc.l	PaletteBlack
 	dc.l	PaletteText00
-	dc.l	PaletteText01
 	dc.l	PaletteText02
+	dc.l	PalettePeople
 
 	;---------------------------------------------------------------------------
 	; scenery
@@ -30,119 +30,111 @@
 	;---------------------------------------------------------------------------
 	; text
 	;---------------------------------------------------------------------------
-	dc.w	$001B ; text count
+	dc.w	$0019 ; text count
 
 	dc.l	DebugScreenLine00
 	dc.w	FONT_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$00000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$00800000 ; initial drawing location
 
 	dc.l	DebugScreenLine01
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$00800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$01000000 ; initial drawing location
 
 	dc.l	DebugScreenLine02
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$01000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$01800000 ; initial drawing location
 
 	dc.l	DebugScreenLine03
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$01800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$02000000 ; initial drawing location
 
 	dc.l	DebugScreenLine04
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$02000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$02800000 ; initial drawing location
 
 	dc.l	DebugScreenLine05
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$02800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$03000000 ; initial drawing location
 
 	dc.l	DebugScreenLine06
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$03000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$03800000 ; initial drawing location
 
 	dc.l	DebugScreenLine07
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$03800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$04000000 ; initial drawing location
 
 	dc.l	DebugScreenLine08
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$04000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$04800000 ; initial drawing location
 
 	dc.l	DebugScreenLine09
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$04800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$05000000 ; initial drawing location
 
 	dc.l	DebugScreenLine0A
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$05000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$05800000 ; initial drawing location
 
 	dc.l	DebugScreenLine0B
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$05800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$06000000 ; initial drawing location
 
 	dc.l	DebugScreenLine0C
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$06000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$06800000 ; initial drawing location
 
 	dc.l	DebugScreenLine0D
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$06800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$07000000 ; initial drawing location
 
 	dc.l	DebugScreenLine0E
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$07000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$07800000 ; initial drawing location
 
 	dc.l	DebugScreenLine0F
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$07800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$08000000 ; initial drawing location
 
 	dc.l	DebugScreenLine10
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$08000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$08800000 ; initial drawing location
 
 	dc.l	DebugScreenLine11
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$08800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$09000000 ; initial drawing location
 
 	dc.l	DebugScreenLine12
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$09000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$09800000 ; initial drawing location
 
 	dc.l	DebugScreenLine13
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$09800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$0A000000 ; initial drawing location
 
 	dc.l	DebugScreenLine14
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$0A000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$0A800000 ; initial drawing location
 
 	dc.l	DebugScreenLine15
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$0A800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$0B000000 ; initial drawing location
 
 	dc.l	DebugScreenLine16
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$0B000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$0B800000 ; initial drawing location
 
 	dc.l	DebugScreenLine17
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$0B800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$0C000000 ; initial drawing location
 
 	dc.l	DebugScreenLine18
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$0C000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$0C800000 ; initial drawing location
 
 	dc.l	DebugScreenLine19
 	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$0C800000 ; initial drawing location
-
-	dc.l	DebugScreenLine1A
-	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$0D000000 ; initial drawing location
-
-	dc.l	DebugScreenLine1B
-	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
-	dc.l	VDP_VRAM_WRITE_A+$00000000+$0D800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00020000+$0D000000 ; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; objects

@@ -76,7 +76,7 @@ TestTitleLoadSelectedScreen:
 	; --------------------------------------------------------------------------
 	bclr.l	#STATE_FLAG_TITLE_SCREEN,d7 ; clear game state flag
 	tst.w	(MEM_MENU_SELECTION)	; which item was selected?
-	beq.s	TestTitleLoadNewGame	; new game selected
+	beq.w	TestTitleLoadNewGame	; new game selected
 	if _DEBUG_
 	cmpi.w	#$0002,(MEM_MENU_SELECTION)	; debug menu selected?
 	beq.s	TestTitleLoadDebugMenu	; branch to debug menu
@@ -103,13 +103,21 @@ TestTitleLoadDebugMenu:
 	move.l	d7,(MEM_GAME_STATE)	; save updated game state
 	lea	SceneDebugMenu,a6	; address of the scene for the debug menu
 	bsr.w	LoadScene	; branch to LoadScene subroutine
-	bsr.w	LoadPlayerSprite	; load the player sprite (also loads sprite 0)
+	bsr.w	LoadPlayerSprite ; load the player sprite (also loads sprite 0)
+	; hide the player sprite
+	move.w	#$0000,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0000,(MEM_PLAYER_SPRITE_Y)
+	bsr.w	FixSprites	
 	bsr.w	FadeIn	; fade in to the new scene
 	bra.s	ExitProcessTitleScreen	;	return to start of game loop
 	endif
 TestTitleLoadNewGame:
 	bset.l	#STATE_FLAG_INTRO_SCREEN,d7 ; set intro screen flag
 	move.l	d7,(MEM_GAME_STATE)	; save updated game state
+	; set the objective
+	
+	; set the initial story event
+	move.w	#SCENE_ID_DENIMCOUNTRY,(MEM_STORY_EVENT1_SCENE_ID)
 	; set the intro screen counter
 	move.w	#INTRO_SCREEN_COUNTER_START,(MEM_INTRO_SCENE_COUNTER)
 	lea	SceneIntroDay00,a6	; address of the scene for the title screen

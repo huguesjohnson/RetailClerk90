@@ -209,10 +209,10 @@ BGM_DayIntro:
 BGM_Mall:
 	incbin	'music/track2.esf'
 
-BGM_End_Bad:
+BGM_Dark:
 	incbin	'music/track3.esf'
 
-BGM_End_Good:
+BGM_End:
 	incbin	'music/track4.esf'
 
 BGM_Mystery:

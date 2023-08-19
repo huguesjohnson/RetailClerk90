@@ -108,5 +108,19 @@ EndGame:
 ;*******************************************************************************
 	include	'actionscript/ActionScriptAllDay.X68'
 	include	'actionscript/ActionScriptDay00.X68'
-
+	include	'actionscript/ActionScriptNight00.X68'
+	include	'actionscript/ActionScriptDay01.X68'
+	include	'actionscript/ActionScriptNight01.X68'
+	include	'actionscript/ActionScriptDay02.X68'
+	include	'actionscript/ActionScriptNight02.X68'
+	include	'actionscript/ActionScriptDay03.X68'
+	include	'actionscript/ActionScriptNight03.X68'
+	include	'actionscript/ActionScriptDay04.X68'
+	include	'actionscript/ActionScriptNight04.X68'
+	include	'actionscript/ActionScriptDay05.X68'
+	include	'actionscript/ActionScriptNight05.X68'
+	include	'actionscript/ActionScriptDay06.X68'
+	include	'actionscript/ActionScriptNight06.X68'
+	include	'actionscript/ActionScriptDayTrading.X68'
+	include	'actionscript/ActionScriptNightTrading.X68'
 

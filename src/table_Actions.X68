@@ -55,9 +55,9 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 8
-	dc.l	ActionScriptDay00Scene08Interact ; Interact
-	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptDay00SceneDenimCountyInteract ; Interact
+	dc.l	ActionScriptDay00SceneDenimCountryRespond ; Respond
+	dc.l	ActionScriptDay00SceneDenimCountryExit ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 9
 	dc.l	ActionScriptDefaultInteract ; Interact
@@ -433,7 +433,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 20
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay01SceneFCBFishingTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -587,7 +587,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 19
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight01SceneFCBFirearmsTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -751,7 +751,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 20
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay01SceneFCBFishingTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -781,7 +781,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 26
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay02SceneWWAppliancesTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -855,7 +855,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 9
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight02SceneCheckersTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -905,7 +905,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 19
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight01SceneFCBFirearmsTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1044,7 +1044,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 15
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay03SceneCPlanetTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1069,7 +1069,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 20
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay01SceneFCBFishingTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1099,7 +1099,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 26
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay02SceneWWAppliancesTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1173,7 +1173,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 9
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight02SceneCheckersTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1223,7 +1223,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 19
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight01SceneFCBFirearmsTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1253,7 +1253,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 25
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight03SceneWWAudioTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1362,7 +1362,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 15
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay03SceneCPlanetTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1387,7 +1387,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 20
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay01SceneFCBFishingTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1407,7 +1407,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 24
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay04SceneWWTVTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1417,7 +1417,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 26
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay02SceneWWAppliancesTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1491,12 +1491,12 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 9
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight02SceneCheckersTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 10
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight04SceneTLodgeTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1526,7 +1526,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 16
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight04SceneCNowTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1541,7 +1541,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 19
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight01SceneFCBFirearmsTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1571,7 +1571,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 25
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight03SceneWWAudioTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1680,7 +1680,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 15
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay03SceneCPlanetTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1695,7 +1695,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 18
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay05SceneFCBCheckoutTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1705,7 +1705,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 20
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay01SceneFCBFishingTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1720,12 +1720,12 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 23
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay05SceneWWCheckoutTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 24
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay04SceneWWTVTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1735,7 +1735,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 26
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay02SceneWWAppliancesTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1809,12 +1809,12 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 9
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight02SceneCheckersTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 10
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight04SceneTLodgeTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1844,7 +1844,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 16
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight04SceneCNowTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1859,7 +1859,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 19
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight01SceneFCBFirearmsTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1869,7 +1869,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 21
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight05SceneFCBCampingTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1889,7 +1889,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 25
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight03SceneWWAudioTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1923,7 +1923,7 @@ ActionTableStart:
 ; day 12
 ;---------------------------------------------------------------------------
 ; scene 0
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay06SceneVBTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -1993,12 +1993,12 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 14
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay06ScenePogoDawgTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 15
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay03SceneCPlanetTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -2013,7 +2013,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 18
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay05SceneFCBCheckoutTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -2023,7 +2023,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 20
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay01SceneFCBFishingTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -2038,12 +2038,12 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 23
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay05SceneWWCheckoutTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 24
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay04SceneWWTVTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -2053,7 +2053,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 26
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay02SceneWWAppliancesTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -2122,22 +2122,22 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 8
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight06SceneDenimCountryTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 9
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight02SceneCheckersTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 10
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight04SceneTLodgeTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 11
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight06SceneCavernTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -2162,7 +2162,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 16
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight04SceneCNowTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -2177,7 +2177,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 19
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight01SceneFCBFirearmsTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -2187,7 +2187,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 21
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight05SceneFCBCampingTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -2207,7 +2207,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 25
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNight03SceneWWAudioTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene

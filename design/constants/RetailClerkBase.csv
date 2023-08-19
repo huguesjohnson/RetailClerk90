@@ -61,7 +61,7 @@ DIALOG_TEXT_ROWCOL,$0B920000,two rows down from rc89
 DIALOG_TITLE_ROWCOL,$0A940000,two rows down from rc89
 DIALOG_FRAME_COUNT,$000B,number of animation frames for dialogs
 DIALOG_MENU_INIT_SELECTION_X,$C8,x coordinate of initial menu selection
-DIALOG_MENU_INIT_SELECTION_Y,$128,y coordinate of initial menu selection
+DIALOG_MENU_INIT_SELECTION_Y,$138,y coordinate of initial menu selection
 DIALOG_NO_RESPONSE,$FFFF,no response or dialog cancelled 
 ;
 ;-------------------------------------------------------------------------------
@@ -134,8 +134,6 @@ SPRITE_STEP_PIXELS,$0001,how many pixels to move on each sprite step
 SPRITE_PLAYER_PATTERN,SPRITE_BASE_PATTERN+$1,base pattern for player sprite
 SPRITE_PLAYER_HEIGHT,DEFAULT_SPRITE_HEIGHT,player sprite height
 SPRITE_PLAYER_WIDTH,DEFAULT_SPRITE_WIDTH,player sprite 
-SPRITE_PLAYER_INIT_X,$0100,starting x location of player sprite
-SPRITE_PLAYER_INIT_Y,$0100,starting y location of player sprite
 SPRITE_DEF_WORD2_BASE,$0700,width,16,height,32 - low byte has link field
 ; used for sprite collision tests - top edge of bottom 1/2 of sprite
 SPRITE_COLLISION_Y,(DEFAULT_SPRITE_HEIGHT-(DEFAULT_SPRITE_HEIGHT/2))

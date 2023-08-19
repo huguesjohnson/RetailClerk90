@@ -281,7 +281,7 @@
 	dc.w	$0002 ; text count
 
 	; title
-	dc.l	TitleScreenTextTitleDebug
+	dc.l	TitleScreenTextTitle
 	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_A+$00140000+$09800000 ; initial drawing location
 

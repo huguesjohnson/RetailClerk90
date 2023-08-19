@@ -373,7 +373,7 @@
 	],
 	"text":[
 		{
-			"stringLabel":"TitleScreenTextTitleDebug",
+			"stringLabel":"TitleScreenTextTitle",
 			"comment":"title",
 			"highPriority":false,
 			"paletteNumber":3,

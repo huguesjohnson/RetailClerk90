@@ -84,55 +84,71 @@ ProcessDebugScreenTestDpad:
 	bne.s	ProcessDebugScreenIncrementSelector	; down pressed, branch
 	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
 	andi.b	#BUTTON_LEFT,d6	; test if the left button was pressed
-	bne.s	ProcessDebugScreenLeftRight	; left pressed, branch
+	bne.w	ProcessDebugScreenLeftRight	; left pressed, branch
 	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
 	andi.b	#BUTTON_RIGHT,d6	; test if the right button was pressed
 	bne.s	ProcessDebugScreenLeftRight	; right pressed, branch
 	bra.w	ProcessDebugScreenMoveSelector
-ProcessDebugScreenIncrementSelector:
-	cmpi.w	#$001A,(MEM_MENU_SELECTION)
-	bne.s	.1
+ProcessDebugScreenIncrementSelector: ; down pressed
+	; are we at the last item in the left column?
+	cmpi.w	#$0018,(MEM_MENU_SELECTION)
+	bne.s	.1 ; not at the last item in the left column
 	move.w	#$0000,(MEM_MENU_SELECTION)
 	bra.w	ProcessDebugScreenMoveSelector
 .1
+	; are we at the last item in the right column?
+	cmpi.w	#$0031,(MEM_MENU_SELECTION)
+	bne.s	.2 ; not at the last item in the right column
+	move.w	#$0019,(MEM_MENU_SELECTION)
+	bra.w	ProcessDebugScreenMoveSelector
+.2
+	; default increment
 	add.w	#$0001,(MEM_MENU_SELECTION)
 	bra.w	ProcessDebugScreenMoveSelector
-ProcessDebugScreenDecrementSelector:
+ProcessDebugScreenDecrementSelector: ; up pressed
+	; are we at the first item in the left column?
 	cmpi.w	#$0000,(MEM_MENU_SELECTION)
-	bne.s	.1
-	move.w	#$001A,(MEM_MENU_SELECTION)
+	bne.s	.1 ; not at the first item in the left column
+	move.w	#$0018,(MEM_MENU_SELECTION)
 	bra.w	ProcessDebugScreenMoveSelector
 .1
+	; are we at the first item in the right column?
+	cmpi.w	#$0019,(MEM_MENU_SELECTION)
+	bne.s	.2 ; not at the first item in the right column
+	move.w	#$0031,(MEM_MENU_SELECTION)
+	bra.w	ProcessDebugScreenMoveSelector
+.2
+	; default decrement
 	sub.w	#$0001,(MEM_MENU_SELECTION)
 	bra.w	ProcessDebugScreenMoveSelector
-ProcessDebugScreenLeftRight:
-	cmpi.w	#$001A,(MEM_MENU_SELECTION)
+ProcessDebugScreenLeftRight: ; l/r pressed
+	cmpi.w	#$0018,(MEM_MENU_SELECTION)
 	bgt.s	.1
-	add.w	#$001B,(MEM_MENU_SELECTION)
+	add.w	#$0019,(MEM_MENU_SELECTION)
 	bra.w	ProcessDebugScreenMoveSelector
 .1
-	sub.w	#$001B,(MEM_MENU_SELECTION)
+	sub.w	#$0019,(MEM_MENU_SELECTION)
 	bra.w	ProcessDebugScreenMoveSelector
 ProcessDebugScreenMoveSelector:
 	; move selector sprite based on menu selection
 	move.w	(MEM_MENU_SELECTION),d7	; copy current value to d7
-	cmpi.w	#$001B,d7
-	blt.s	.1
-	sub.w	#$001B,d7
+	cmpi.w	#$0019,d7 ; test if in the right or left column
+	blt.s	.1 ; left column
+	sub.w	#$0019,d7 ; subtract number of items before mulu
 .1
 	mulu.w	#$0008,d7	; rows are 8 apart
-	add.w	#$0088,d7	; first row is 128
+	add.w	#$0090,d7	; first row 
 	move.l	#VDP_VRAM_WRITE_SPRITE,d6	; add to sprite table address
 	move.l	d6,(VDP_CONTROL)	; set write location in VDP
 	move.w	d7,(VDP_DATA)	; copy the new y-coordinate
 	add.l	#$00060000,d6	; move to x-coordinate
 	move.l	d6,(VDP_CONTROL)	; set write location in VDP
-	cmpi.w	#$001B,(MEM_MENU_SELECTION)
+	cmpi.w	#$0019,(MEM_MENU_SELECTION)
 	blt.s	.2
 	move.w	#$0120,(VDP_DATA)	; copy the new x-coordinate
 	bra.s	ExitProcessDebugScreen
 .2
-	move.w	#$0080,(VDP_DATA)	; copy the new x-coordinate
+	move.w	#$0088,(VDP_DATA)	; copy the new x-coordinate
 ExitProcessDebugScreen:
 	rts
 
@@ -191,10 +207,7 @@ LaunchDebug51:
 LaunchDebug52:
 LaunchDebug53:
 DebugNotImplemented:
-	; prevent freezing - also this will be throwaway later
-	move.l	(MEM_GAME_STATE),d7	; copy game state to d7
-	bset.l	#STATE_FLAG_DEBUG_MENU,d7 ; set debug menu flag
-	move.l	d7,(MEM_GAME_STATE)	; save updated game state
-	bra.w	MainGameLoop
+	; prevent freezing in case I messed up
+	bra.w	NewGame
 
 	endif

@@ -17,7 +17,7 @@ InitGameState:
 	bset.l	#STATE_FLAG_TITLE_SCREEN,d0	; set title screen flag
 	move.l	d0,(MEM_GAME_STATE)	; save game state
 	move.w	#$0000,(MEM_DAY)	; starting day is zero
-	move.w	#OBJECTIVE_D00_O00,(MEM_OBJECTIVE)	; initial objective
+	move.w	#OBJECTIVE_D00_O00_HelpCustomers,(MEM_OBJECTIVE) ; initial objective
 	and.l	#$00000000,(MEM_GLOBAL_EVENT_FLAGS)	; clear event flags
 	and.l	#$00000000,(MEM_DAY_EVENT_FLAGS)	; clear event flags
 	and.l	#$00000000,(MEM_SCENE_BGM)	; clear BGM
@@ -39,7 +39,10 @@ InitGameState:
 ;-------------------------------------------------------------------------------
 ; load the initial NPC locations
 ;-------------------------------------------------------------------------------
-	bsr.w	InitNPCLocations
+	bsr.w	InitNPCLocationsDay ; moves all npcs back to their starting point
+	; add the two npcs that need to be present at the start
+	lea MEM_NPC_LOCATION_DENIMCOUNTRY,a0
+	move.l	#$05232100,(a0)
 
 	move.w	#$2000,sr		; re-enable interrupts
 ;-------------------------------------------------------------------------------
@@ -107,6 +110,5 @@ InitPlayerSprite:
 	; setting SPRITE_STEP_COUNTER to SPRITE_ANIMATION_STEPS forces movement
 	; animation to trigger the next time the sprite moves
 	move.w	#SPRITE_ANIMATION_STEPS,(MEM_PLAYER_SPRITE_STEP_COUNTER)
-;	lea	(MEM_PLAYER_SPRITE_ID),a6	; setup call to FlipSpriteMapPosition
 
 	move.w	#$2000,sr		; re-enable interrupts

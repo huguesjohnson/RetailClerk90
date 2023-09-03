@@ -1,5 +1,9 @@
 ;*******************************************************************************
-; scene 08 - Denim Country
+; Day 0 is Day 0 in the action script
+;*******************************************************************************
+
+;*******************************************************************************
+; SCENE_ID_DENIMCOUNTRY
 ;*******************************************************************************
 ActionScriptDay00SceneDenimCountyInteract:
 	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
@@ -114,4 +118,45 @@ ActionScriptDay00SceneDenimCountryExit:
 	lea Day00WestExitBlockedStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 	rts
+	
+;*******************************************************************************
+; SCENE_ID_CENTER
+;*******************************************************************************
+ActionScriptDay00InfoDeskInteract:	
+	bsr.w ShowDefaultText
+	rts	
+	
+;*******************************************************************************
+; SCENE_ID_SHALL
+;*******************************************************************************
+ActionScriptDay00SouthHallExit:	
+	bsr.w ShowDefaultText
+	rts		
+
+ActionScriptDay00SouthHallRespond:	
+	bsr.w ShowDefaultText
+	rts		
+	
+;*******************************************************************************
+; SCENE_ID_CAVERN
+;*******************************************************************************
+ActionScriptDay00CavernInteract:	
+	bsr.w ShowDefaultText
+	rts		
+
+ActionScriptDay00CavernRespond:	
+	bsr.w ShowDefaultText
+	rts	
+	
+;*******************************************************************************
+; SCENE_ID_SVIDEO
+;*******************************************************************************
+ActionScriptDay00SVideoInteract:	
+	bsr.w ShowDefaultText
+	rts		
+
+ActionScriptDay00SVideoRespond:	
+	bsr.w ShowDefaultText
+	rts		
+	
 	

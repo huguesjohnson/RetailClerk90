@@ -173,19 +173,6 @@ ScriptedEventDay00_01_InfoDeskStart:
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay00_01_InfoDeskEnd:
 
-ScriptedEventDay00_01_SouthHallStart:
-	; NPC0 sprite
-	dc.w	$0002
-	; dialog
-	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextDay00SouthHallLine1
-	; dialog
-	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextDay00SouthHallLine2
-	; end
-	dc.w	SCRIPTED_EVENT_END
-ScriptedEventDay00_01_SouthHallEnd:
-
 ScriptedEventDay00_Optional00_DBStart:
 	; NPC0 sprite
 	dc.w	$0002
@@ -1303,6 +1290,123 @@ ScriptedEventEndPerfectStart:
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventEndPerfectEnd:
+
+ScriptedEventNotTimeToLeaveErynStart:
+	; player sprite
+	dc.w	$0001
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNotTimeToLeaveEryn
+	; move player sprite up
+	dc.w	DIRECTION_UP
+	dc.w	$0004
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventNotTimeToLeaveErynEnd:
+
+ScriptedEventNotTimeToLeaveCarlStart:
+	; player sprite
+	dc.w	$0001
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNotTimeToLeaveCarl
+	; move player sprite up
+	dc.w	DIRECTION_UP
+	dc.w	$0004
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventNotTimeToLeaveCarlEnd:
+
+ScriptedEventCantEnterCavernBackroomErynStart:
+	; NPC0 sprite
+	dc.w	$0002
+	; have NPC face up
+	dc.w	DIRECTION_UP
+	dc.w	$0000
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextCantEnterCavernBackroomEryn
+	; change to player sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0001
+	; move player sprite down
+	dc.w	DIRECTION_DOWN
+	dc.w	$0004
+	; change to npc0 sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0002
+	; have NPC face down
+	dc.w	DIRECTION_DOWN
+	dc.w	$0000
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventCantEnterCavernBackroomErynEnd:
+
+ScriptedEventCantEnterCavernBackroomCarlStart:
+	; player sprite
+	dc.w	$0001
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextCantEnterCavernBackroomCarl
+	; move player sprite down
+	dc.w	DIRECTION_DOWN
+	dc.w	$0004
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventCantEnterCavernBackroomCarlEnd:
+
+ScriptedEventCantEnterBasementShowerStart:
+	; player sprite
+	dc.w	$0001
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextCantEnterBasementShower
+	; move player sprite right
+	dc.w	DIRECTION_RIGHT
+	dc.w	$0004
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventCantEnterBasementShowerEnd:
+
+ScriptedEventPlayerSpriteUp4Start:
+	; player sprite
+	dc.w	$0001
+	; move player sprite up
+	dc.w	DIRECTION_UP
+	dc.w	$0004
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventPlayerSpriteUp4End:
+
+ScriptedEventPlayerSpriteDown4Start:
+	; player sprite
+	dc.w	$0001
+	; move player sprite down
+	dc.w	DIRECTION_DOWN
+	dc.w	$0004
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventPlayerSpriteDown4End:
+
+ScriptedEventPlayerSpriteRight4Start:
+	; player sprite
+	dc.w	$0001
+	; move player sprite right
+	dc.w	DIRECTION_RIGHT
+	dc.w	$0004
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventPlayerSpriteRight4End:
+
+ScriptedEventPlayerSpriteLeft4Start:
+	; player sprite
+	dc.w	$0001
+	; move player sprite left
+	dc.w	DIRECTION_LEFT
+	dc.w	$0004
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventPlayerSpriteLeft4End:
 
 ExampleSceneChangeStart:
 	; player sprite

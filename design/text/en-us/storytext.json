@@ -13,6 +13,35 @@
          "text":"...",
          "align":2
          },
+      "StoryTextNotTimeToLeaveEryn":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"There's something I still have to do.",
+         "align":2
+         },
+      "StoryTextNotTimeToLeaveCarl":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I think I forgot something.",
+         "align":2
+         },
+      "StoryTextFirstTimeLeaving":{
+         "text":"Leaving the mall will advance the story.|Unfinished optional events will be lost.",
+         "align":2
+         },
+      "StoryTextCantEnterCavernBackroomEryn":{
+         "dialogTitle":"OBJ_NPC_DB",
+         "text":"Sorry, employees only.",
+         "align":2
+         },
+      "StoryTextCantEnterCavernBackroomCarl":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I shouldn't poke around.",
+         "align":2
+         },
+      "StoryTextCantEnterBasementShower":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"This leads to the showers. No thanks.",
+         "align":2
+         },                  
       "StoryTextDay00CantExit":{
          "dialogTitle":"OBJ_NPC_LISA",
          "text":"It's not time for your break yet.",
@@ -120,16 +149,6 @@
          "text":"line3.",
          "align":2
          },
-      "StoryTextDay00SouthHallLine1":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
-         "align":2
-         },
-      "StoryTextDay00SouthHallLine2":{
-         "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"line2.",
-         "align":2
-         },         
       "StoryTextDay00VBLine1":{
          "dialogTitle":"OBJ_NPC_DB",
          "text":"line1.",

@@ -8,6 +8,12 @@
 ;*******************************************************************************
 ActionScriptDay01DenimCountryInteract:	
 	bsr.w ShowDefaultText
+;-------------------------------------------------------------------------------
+; TODO
+;-------------------------------------------------------------------------------
+;Denim Country - talk to Lisa if FLAG_DAY01_EVENT02_RumorsDone not set
+;[ScriptedEventDay01_02_ReportBack]
+
 	rts
 
 ;*******************************************************************************
@@ -15,6 +21,13 @@ ActionScriptDay01DenimCountryInteract:
 ;*******************************************************************************
 ActionScriptDay01CPlanetInteract:	
 	bsr.w ShowDefaultText
+;-------------------------------------------------------------------------------
+; TODO
+;-------------------------------------------------------------------------------
+;CPlanet - talk to Eliza if FLAG_DAY01_EVENT00_CPlanet not set
+;[set FLAG_DAY01_EVENT00_CPlanet]
+;[ScriptedEventDay01_01_CPlanet]
+
 	rts
 
 ;*******************************************************************************
@@ -22,6 +35,18 @@ ActionScriptDay01CPlanetInteract:
 ;*******************************************************************************
 ActionScriptDay01WWAppliancesInteract:	
 	bsr.w ShowDefaultText
+;-------------------------------------------------------------------------------
+; TODO
+;-------------------------------------------------------------------------------
+;WW Appliances - talk to Laura if FLAG_DAY01_EVENT01_WWAppliances not set
+;[set FLAG_DAY01_EVENT01_WWAppliances]
+;[ScriptedEventDay01_02_WWAppliances]
+;After each - check if both flags FLAG_DAY01_EVENT00_CPlanet and FLAG_DAY01_EVENT01_WWAppliances are set and change objective if so
+;[Set objective to OBJECTIVE_D01_O01_ReportBack]
+;[set story event at denim country]
+;[set FLAG_DAY01_EVENT02_RumorsDone]
+
+
 	rts
 		
 ;*******************************************************************************
@@ -29,6 +54,12 @@ ActionScriptDay01WWAppliancesInteract:
 ;*******************************************************************************
 ActionScriptDay01CavernInteract:	
 	bsr.w ShowDefaultText
+
+;-------------------------------------------------------------------------------
+; TODO
+;-------------------------------------------------------------------------------
+; dialog and prompt for optional event
+
 	rts		
 
 ActionScriptDay01CavernRespond:	
@@ -40,6 +71,12 @@ ActionScriptDay01CavernRespond:
 ;*******************************************************************************
 ActionScriptDay01FCBCampingInteract:	
 	bsr.w ShowDefaultText
+
+;-------------------------------------------------------------------------------
+; TODO
+;-------------------------------------------------------------------------------
+; dialog and prompt for optional event
+
 	rts		
 
 ActionScriptDay01FCBCampingRespond:	

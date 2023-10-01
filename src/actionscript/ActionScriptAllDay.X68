@@ -17,3 +17,46 @@ ActionScriptExitCavernBackroom:
 	;---------------------------------------------------------------------------
 	bsr.w	DefaultExitSceneLoadNewScene
 	rts
+	
+;-------------------------------------------------------------------------------
+; the west exit in this scene doesn't lead anywhere (on purpose)
+;-------------------------------------------------------------------------------
+ActionScriptExitBasementCafe:
+	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d7 ; copy player sprite direction to d7
+	cmpi.w	#DIRECTION_LEFT,d7 ; is the player facing west?
+	bne.s	.default ; branch if not
+	lea ScriptedEventCantEnterBasementShowerStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event	
+	rts	
+.default
+	bsr.w	DefaultExitScene ; default scene exit
+	rts	
+
+;-------------------------------------------------------------------------------
+; Eryn can't enter the cavern backroom ever
+;-------------------------------------------------------------------------------
+ActionScriptExitCavernEryn:
+	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d7 ; copy player sprite direction to d7
+	cmpi.w	#DIRECTION_UP,d7 ; is the player facing north?
+	bne.s	.default ; branch if not
+	lea ScriptedEventCantEnterCavernBackroomErynStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event	
+	rts	
+.default
+	bsr.w	DefaultExitScene ; default scene exit
+	rts	
+
+;-------------------------------------------------------------------------------
+; Carl can't enter the cavern backroom on most nights
+;-------------------------------------------------------------------------------
+ActionScriptExitCavernCarl:
+	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d7 ; copy player sprite direction to d7
+	cmpi.w	#DIRECTION_UP,d7 ; is the player facing north?
+	bne.s	.default ; branch if not
+	lea ScriptedEventCantEnterCavernBackroomCarlStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event	
+	rts	
+.default
+	bsr.w	DefaultExitScene ; default scene exit
+	rts	
+

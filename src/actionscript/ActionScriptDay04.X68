@@ -8,6 +8,14 @@
 ;*******************************************************************************
 ActionScriptDay04CavernInteract:	
 	bsr.w ShowDefaultText
+;-------------------------------------------------------------------------------
+; TODO
+;-------------------------------------------------------------------------------
+;[Story event at The Cavern - D.B. - explains about the basement or maybe doesn't yet]
+;[ScriptedEventDay04_01_Cavern]
+;[Set objective to OBJECTIVE_D04_O01_NShack]
+;[set FLAG_DAY04_EVENT00_Cavern]
+
 	rts		
 
 ;*******************************************************************************
@@ -15,6 +23,13 @@ ActionScriptDay04CavernInteract:
 ;*******************************************************************************
 ActionScriptDay04NShackInteract:	
 	bsr.w ShowDefaultText
+;-------------------------------------------------------------------------------
+; TODO
+;-------------------------------------------------------------------------------
+;[ScriptedEventDay04_02_NShack]
+;[Story event at Nut Shack - likely a conversation about the letter and complaining about Lisa]
+;Transition to night
+
 	rts		
 
 ;*******************************************************************************
@@ -22,6 +37,12 @@ ActionScriptDay04NShackInteract:
 ;*******************************************************************************
 ActionScriptDay04SVideoInteract:	
 	bsr.w ShowDefaultText
+
+;-------------------------------------------------------------------------------
+; TODO
+;-------------------------------------------------------------------------------
+; dialog and prompt for optional event
+
 	rts		
 
 ActionScriptDay04SVideoRespond:	
@@ -33,6 +54,12 @@ ActionScriptDay04SVideoRespond:
 ;*******************************************************************************
 ActionScriptDay04FCBCampingInteract:	
 	bsr.w ShowDefaultText
+
+;-------------------------------------------------------------------------------
+; TODO
+;-------------------------------------------------------------------------------
+; dialog and prompt for optional event
+
 	rts		
 
 ActionScriptDay04FCBCampingRespond:	

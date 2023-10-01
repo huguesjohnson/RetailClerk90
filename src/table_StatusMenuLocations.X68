@@ -293,4 +293,32 @@ FastTravelSceneIDTable:
 	dc.w	SCENE_ID_TBOOKS
 	dc.w	SCENE_ID_SHALL
 
+FastTravelSpriteXY:
+	; SCENE_ID_WWHALL
+	dc.w	$0118	; x
+	dc.w	$0100	; y
+	; SCENE_ID_EEHALL
+	dc.w	$0118	; x
+	dc.w	$0100	; y
+	; SCENE_ID_WWCHECKOUT
+	dc.w	$0118	; x
+	dc.w	$0120	; y
+	; SCENE_ID_SOUTH_CENTER
+	dc.w	$0118	; x
+	dc.w	$0100	; y
+	; SCENE_ID_CAVERN
+	dc.w	$0118	; x
+	dc.w	$0130	; y
+	; SCENE_ID_DENIMCOUNTRY
+	dc.w	$0118	; x
+	dc.w	$00C0	; y
+	; SCENE_ID_TBOOKS
+	dc.w	$0118	; x
+	dc.w	$0090	; y
+	; SCENE_ID_SHALL
+	dc.w	$0118	; x
+	dc.w	$0100	; y
+	
+	
+	
 

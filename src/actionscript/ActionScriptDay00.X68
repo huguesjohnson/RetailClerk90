@@ -15,9 +15,9 @@ ActionScriptDay00SceneDenimCountyInteract:
 	; they could be swapped for other shoppers with no changes here
 	;---------------------------------------------------------------
 	cmpi.w	#$0002,d7 ; test for npc2
-	beq.s	ActionScriptDay00SceneDenimCountryInteractNPC2
+	beq.w	ActionScriptDay00SceneDenimCountryInteractNPC2
 	cmpi.w	#$0001,d7 ; test for npc1
-	beq.s	ActionScriptDay00SceneDenimCountryInteractNPC1
+	beq.w	ActionScriptDay00SceneDenimCountryInteractNPC1
 	; else default to npc0
 ActionScriptDay00SceneDenimCountryInteractNPC0: ; lisa
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
@@ -29,8 +29,13 @@ ActionScriptDay00SceneDenimCountryInteractNPC0: ; lisa
 	bne.s	.default
 	bset.l	#FLAG_DAY00_EVENT02_CANEXITDC,d7 ; update the state
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; copy the updated state back
+	move.l	(MEM_GAME_STATE),d7 ; copy game state to d7
+	bset.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is now available
+	move.l	d7,(MEM_GAME_STATE) ; save updated state
 	move.w	#OBJECTIVE_D00_O01_VisitInfo,(MEM_OBJECTIVE) ; update the objective
 	move.w	#SCENE_ID_SOUTH_CENTER,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
+	move.w	#SCENE_ID_CAVERN,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; update optional event
+	move.w	#SCENE_ID_SVIDEO,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; update optional event
 	move.l	#$05000000,(MEM_NPC_LOCATION_DENIMCOUNTRY) ; update npcs in denim country
 	lea	StoryTextDay00LisaWorriedLine0,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
@@ -120,28 +125,62 @@ ActionScriptDay00SceneDenimCountryExit:
 	rts
 	
 ;*******************************************************************************
-; SCENE_ID_CENTER
+; SCENE_ID_SOUTH_CENTER
 ;*******************************************************************************
 ActionScriptDay00InfoDeskInteract:	
-	bsr.w ShowDefaultText
-	rts	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_DAY00_EVENT03_INFODESKVISITED,d7 ; test if event already ran
+	beq.s	.scriptedevent ; if not, branch to run the scripted event
+	bsr.w ShowDefaultText ; show default text by default
+	rts
+.scriptedevent
+	bset.l	#FLAG_DAY00_EVENT03_INFODESKVISITED,d7 ; set event flag
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
+	; add item that is received during the scripted event
+	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
+	move.w	#OBJ_ITEM_SCARF,d7 ; add item from trading sequence
+	bsr.w	AddItem ; add item to inventory	
+	move.w	#OBJECTIVE_D00_O02_LeaveWhenReady,(MEM_OBJECTIVE) ; update the objective		
+	lea ScriptedEventDay00_01_InfoDeskStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts
 	
 ;*******************************************************************************
 ; SCENE_ID_SHALL
 ;*******************************************************************************
 ActionScriptDay00SouthHallExit:	
-	bsr.w ShowDefaultText
-	rts		
+	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d7 ; copy player sprite direction to d7
+	cmpi.w	#DIRECTION_DOWN,d7 ; is the player facing south?
+	beq.s	.south ; branch if so
+	bsr.w	DefaultExitScene ; default scene exit
+	rts	
+.south
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_DAY00_EVENT03_INFODESKVISITED,d7 ; test if the mandatory event is complete
+	beq.s	.cantleave ; branch if not
+;-------------------------------------------------------------------------------
+; TODO - should be day transition here
+;-------------------------------------------------------------------------------	
+	bsr.w	DefaultExitScene ; default scene exit
+	rts	
+.cantleave
+	lea ScriptedEventNotTimeToLeaveErynStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event	
+	rts
 
-ActionScriptDay00SouthHallRespond:	
-	bsr.w ShowDefaultText
-	rts		
 	
 ;*******************************************************************************
 ; SCENE_ID_CAVERN
 ;*******************************************************************************
-ActionScriptDay00CavernInteract:	
+ActionScriptDay00CavernInteract:
 	bsr.w ShowDefaultText
+
+;-------------------------------------------------------------------------------
+; TODO
+;-------------------------------------------------------------------------------
+; dialog and prompt for optional event
+
 	rts		
 
 ActionScriptDay00CavernRespond:	
@@ -153,6 +192,12 @@ ActionScriptDay00CavernRespond:
 ;*******************************************************************************
 ActionScriptDay00SVideoInteract:	
 	bsr.w ShowDefaultText
+
+;-------------------------------------------------------------------------------
+; TODO
+;-------------------------------------------------------------------------------
+; dialog and prompt for optional event
+
 	rts		
 
 ActionScriptDay00SVideoRespond:	

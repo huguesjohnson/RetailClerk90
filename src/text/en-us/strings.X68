@@ -1578,9 +1578,9 @@ TitleScreenTextTitleDebug:
 DebugScreenLine00:
 	dc.b	"Debug menu",ETX
 DebugScreenLine01:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{Day0 @info desk   {(not implemented)",ETX
 DebugScreenLine02:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{Day0 @south hall  {(not implemented)",ETX
 DebugScreenLine03:
 	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine04:
@@ -1944,6 +1944,35 @@ StoryTextErynSpeechless:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"...",ETX
 	align 2
+StoryTextNotTimeToLeaveEryn:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"There's something I",LF
+	dc.b	"still have to do.",ETX
+	align 2
+StoryTextNotTimeToLeaveCarl:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"I think I forgot",LF
+	dc.b	"something.",ETX
+	align 2
+StoryTextFirstTimeLeaving:
+	dc.b	"Leaving the mall will",LF
+	dc.b	"advance the story.   ^",FF
+	dc.b	"Unfinished optional",LF
+	dc.b	"events will be lost.",ETX
+StoryTextCantEnterCavernBackroomEryn:
+	dc.w	OBJ_NPC_DB
+	dc.b	"Sorry, employees only.",ETX
+	align 2
+StoryTextCantEnterCavernBackroomCarl:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"I shouldn't poke",LF
+	dc.b	"around.",ETX
+	align 2
+StoryTextCantEnterBasementShower:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"This leads to the",LF
+	dc.b	"showers. No thanks.",ETX
+	align 2
 StoryTextDay00CantExit:
 	dc.w	OBJ_NPC_LISA
 	dc.b	"It's not time for",LF
@@ -2076,14 +2105,6 @@ StoryTextDay00InfoDeskLine2:
 StoryTextDay00InfoDeskLine3:
 	dc.w	OBJ_NPC_GINA
 	dc.b	"line3.",ETX
-	align 2
-StoryTextDay00SouthHallLine1:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
-	align 2
-StoryTextDay00SouthHallLine2:
-	dc.w	OBJ_NPC_ERYN
-	dc.b	"line2.",ETX
 	align 2
 StoryTextDay00VBLine1:
 	dc.w	OBJ_NPC_DB

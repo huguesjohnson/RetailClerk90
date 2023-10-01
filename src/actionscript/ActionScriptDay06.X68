@@ -8,13 +8,38 @@
 ;*******************************************************************************
 ActionScriptDay06SHallExit:	
 	bsr.w ShowDefaultText
+;-------------------------------------------------------------------------------
+; TODO
+;-------------------------------------------------------------------------------
+; Should be prompted before entering NShack
+
 	rts	
+
+ActionScriptDay06SHallRespond:	
+	bsr.w ShowDefaultText
+;-------------------------------------------------------------------------------
+; TODO
+;-------------------------------------------------------------------------------
+; Should be prompted before entering NShack
+;
+;[Story event on enter]
+;[ScriptedEventDay06_01_NShack]
+;Transition to night
+
+	rts	
+
 
 ;*******************************************************************************
 ; SCENE_ID_CAVERN
 ;*******************************************************************************
 ActionScriptDay06CavernInteract:	
 	bsr.w ShowDefaultText
+
+;-------------------------------------------------------------------------------
+; TODO
+;-------------------------------------------------------------------------------
+; dialog and prompt for optional event
+
 	rts		
 
 ActionScriptDay06CavernRespond:	
@@ -26,6 +51,12 @@ ActionScriptDay06CavernRespond:
 ;*******************************************************************************
 ActionScriptDay06SVideoInteract:	
 	bsr.w ShowDefaultText
+
+;-------------------------------------------------------------------------------
+; TODO
+;-------------------------------------------------------------------------------
+; dialog and prompt for optional event
+
 	rts		
 
 ActionScriptDay06SVideoRespond:	
@@ -37,6 +68,12 @@ ActionScriptDay06SVideoRespond:
 ;*******************************************************************************
 ActionScriptDay06FCBCampingInteract:	
 	bsr.w ShowDefaultText
+
+;-------------------------------------------------------------------------------
+; TODO
+;-------------------------------------------------------------------------------
+; dialog and prompt for optional event
+
 	rts		
 
 ActionScriptDay06FCBCampingRespond:	

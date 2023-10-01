@@ -298,30 +298,7 @@
          }
       ]
    },
-   {
-      "name":"ScriptedEventDay00_01_SouthHall",
-      "actions":[
-         {
-            "comment":"NPC0 sprite",
-            "intValue":2
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay00SouthHallLine1"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay00SouthHallLine2"
-         },
-         {
-            "comment":"end",
-            "command":"END"
-         }
-      ]
-   },    
-   {
+    {
       "name":"ScriptedEventDay00_Optional00_DB",
       "actions":[
          {
@@ -2298,7 +2275,214 @@
             "command":"END"
          }
       ]
+   },
+   {
+      "name":"ScriptedEventNotTimeToLeaveEryn",
+      "actions":[
+         {
+            "comment":"player sprite",
+            "intValue":1
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNotTimeToLeaveEryn"
+         },
+         {
+            "comment":"move player sprite up",
+            "direction":"UP",
+            "intValue":4
+         },
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
    },   
+   {
+      "name":"ScriptedEventNotTimeToLeaveCarl",
+      "actions":[
+         {
+            "comment":"player sprite",
+            "intValue":1
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNotTimeToLeaveCarl"
+         },
+         {
+            "comment":"move player sprite up",
+            "direction":"UP",
+            "intValue":4
+         },
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   },  
+   {
+      "name":"ScriptedEventCantEnterCavernBackroomEryn",
+      "actions":[
+         {
+            "comment":"NPC0 sprite",
+            "intValue":2
+         },
+         {
+            "comment":"have NPC face up",
+            "direction":"UP",
+            "intValue":0
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextCantEnterCavernBackroomEryn"
+         },
+         {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         },
+         {
+            "comment":"move player sprite down",
+            "direction":"DOWN",
+            "intValue":4
+         },
+         {
+            "comment":"change to npc0 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         },
+         {
+            "comment":"have NPC face down",
+            "direction":"DOWN",
+            "intValue":0
+         },                  
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   }, 
+   {
+      "name":"ScriptedEventCantEnterCavernBackroomCarl",
+      "actions":[
+         {
+            "comment":"player sprite",
+            "intValue":1
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextCantEnterCavernBackroomCarl"
+         },
+         {
+            "comment":"move player sprite down",
+            "direction":"DOWN",
+            "intValue":4
+         },
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   },
+   {
+      "name":"ScriptedEventCantEnterBasementShower",
+      "actions":[
+         {
+            "comment":"player sprite",
+            "intValue":1
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextCantEnterBasementShower"
+         },
+         {
+            "comment":"move player sprite right",
+            "direction":"RIGHT",
+            "intValue":4
+         },
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   },     
+   {
+      "name":"ScriptedEventPlayerSpriteUp4",
+      "actions":[
+         {
+            "comment":"player sprite",
+            "intValue":1
+         },
+         {
+            "comment":"move player sprite up",
+            "direction":"UP",
+            "intValue":4
+         },
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   },
+   {
+      "name":"ScriptedEventPlayerSpriteDown4",
+      "actions":[
+         {
+            "comment":"player sprite",
+            "intValue":1
+         },
+         {
+            "comment":"move player sprite down",
+            "direction":"DOWN",
+            "intValue":4
+         },
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   },
+   {
+      "name":"ScriptedEventPlayerSpriteRight4",
+      "actions":[
+         {
+            "comment":"player sprite",
+            "intValue":1
+         },
+         {
+            "comment":"move player sprite right",
+            "direction":"RIGHT",
+            "intValue":4
+         },
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   },
+   {
+      "name":"ScriptedEventPlayerSpriteLeft4",
+      "actions":[
+         {
+            "comment":"player sprite",
+            "intValue":1
+         },
+         {
+            "comment":"move player sprite left",
+            "direction":"LEFT",
+            "intValue":4
+         },
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   },    
    {
       "name":"ExampleSceneChange",
       "actions":[

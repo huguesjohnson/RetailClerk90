@@ -152,8 +152,78 @@ ProcessDebugScreenMoveSelector:
 ExitProcessDebugScreen:
 	rts
 
-LaunchDebug00:
-LaunchDebug01:
+LaunchDebug00: ; day00 - after initial event
+	;---------------------------------------------------------------------------
+	; global events
+	;---------------------------------------------------------------------------
+	move.l	(MEM_GAME_STATE),d7	; copy game state to d7
+	bset.l	#STATE_FLAG_EXPLORING,d7 ; set exploring flag
+	bset.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is available
+	move.l	d7,(MEM_GAME_STATE)	; save updated game state
+	;---------------------------------------------------------------------------
+	; day events
+	;---------------------------------------------------------------------------
+	move.w	#$0000,(MEM_DAY)
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	bset.l	#FLAG_DAY00_EVENT00_CUSTOMER0,d7 ; set the flag for talking to npc1
+	bset.l	#FLAG_DAY00_EVENT01_CUSTOMER1,d7 ; set the flag for talking to npc2
+	bset.l	#FLAG_DAY00_EVENT02_CANEXITDC,d7 ; set the flag for completing the first events
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; copy the updated state back	
+	move.w	#SCENE_ID_SOUTH_CENTER,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
+	move.w	#SCENE_ID_CAVERN,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; update optional event
+	move.w	#SCENE_ID_SVIDEO,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; update optional event
+	move.l	#$05000000,(MEM_NPC_LOCATION_DENIMCOUNTRY) ; update npcs in denim country
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneSouthCenter,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
+	rts	
+	
+LaunchDebug01: ; day00 - after visiting info desk
+	;---------------------------------------------------------------------------
+	; global events
+	;---------------------------------------------------------------------------
+	move.l	(MEM_GAME_STATE),d7	; copy game state to d7
+	bset.l	#STATE_FLAG_EXPLORING,d7 ; set exploring flag
+	bset.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is available
+	move.l	d7,(MEM_GAME_STATE)	; save updated game state
+	;---------------------------------------------------------------------------
+	; day events
+	;---------------------------------------------------------------------------
+	move.w	#$0000,(MEM_DAY)
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	bset.l	#FLAG_DAY00_EVENT00_CUSTOMER0,d7 ; set the flag for talking to npc1
+	bset.l	#FLAG_DAY00_EVENT01_CUSTOMER1,d7 ; set the flag for talking to npc2
+	bset.l	#FLAG_DAY00_EVENT02_CANEXITDC,d7 ; set the flag for completing the first events
+	bset.l	#FLAG_DAY00_EVENT03_INFODESKVISITED,d7 ; set event flag for visiting info desk	
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; copy the updated state back	
+	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
+	move.w	#SCENE_ID_CAVERN,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; update optional event
+	move.w	#SCENE_ID_SVIDEO,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; update optional event
+	move.l	#$05000000,(MEM_NPC_LOCATION_DENIMCOUNTRY) ; update npcs in denim country
+	; add item that is received during the scripted event
+	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
+	move.w	#OBJ_ITEM_SCARF,d7 ; add item from trading sequence
+	bsr.w	AddItem ; add item to inventory	
+	move.w	#OBJECTIVE_D00_O02_LeaveWhenReady,(MEM_OBJECTIVE) ; update the objective			
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneSHall,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
+	rts	
+
 LaunchDebug02:
 LaunchDebug03:
 LaunchDebug04:

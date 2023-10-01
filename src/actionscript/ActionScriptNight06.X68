@@ -8,6 +8,13 @@
 ;*******************************************************************************
 ActionScriptNight06BasementCafeInteract:	
 	bsr.w ShowDefaultText
+;-------------------------------------------------------------------------------
+; TODO
+;-------------------------------------------------------------------------------
+;[Story event in basement - Brett is moving out]
+;[ScriptedEventNight06_01_BasementKitchen]
+;[set FLAG_NIGHT06_EVENT00_BasementKitchen]
+
 	rts		
 
 
@@ -16,6 +23,17 @@ ActionScriptNight06BasementCafeInteract:
 ;*******************************************************************************
 ActionScriptNight06SHallExit:	
 	bsr.w ShowDefaultText
+;-------------------------------------------------------------------------------
+; TODO
+;-------------------------------------------------------------------------------
+; south exit should be blocked
+;
+;2) Final event is in Nut Shack - triggered on enter
+;Entrance to NShack should be blocked until other things are complete or you should be prompted before entering if [FLAG_NIGHT06_EVENT00_BasementKitchen] is set
+;[ScriptedEventEndGood]
+;[ScriptedEventEndBad]
+;[ScriptedEventEndPerfect]
+
 	rts	
 
 
@@ -24,6 +42,12 @@ ActionScriptNight06SHallExit:
 ;*******************************************************************************
 ActionScriptNight06CPlanetInteract:	
 	bsr.w ShowDefaultText
+
+;-------------------------------------------------------------------------------
+; TODO
+;-------------------------------------------------------------------------------
+; dialog and prompt for optional event
+
 	rts		
 
 ActionScriptNight06CPlanetRespond:	
@@ -35,6 +59,12 @@ ActionScriptNight06CPlanetRespond:
 ;*******************************************************************************
 ActionScriptNight06VBInteract:	
 	bsr.w ShowDefaultText
+
+;-------------------------------------------------------------------------------
+; TODO
+;-------------------------------------------------------------------------------
+; dialog and prompt for optional event
+
 	rts		
 
 ActionScriptNight06VBRespond:	
@@ -46,6 +76,12 @@ ActionScriptNight06VBRespond:
 ;*******************************************************************************
 ActionScriptNight06WWAppliancesInteract:	
 	bsr.w ShowDefaultText
+
+;-------------------------------------------------------------------------------
+; TODO
+;-------------------------------------------------------------------------------
+; dialog and prompt for optional event
+
 	rts		
 
 ActionScriptNight06WWAppliancesRespond:	

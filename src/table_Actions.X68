@@ -30,13 +30,13 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 3
-	dc.l	ActionScriptDay00InfoDeskInteract ; Interact
+	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 4
 	dc.l	ActionScriptDefaultInteract ; Interact
-	dc.l	ActionScriptDay00SouthHallRespond ; Respond
+	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	ActionScriptDay00SouthHallExit ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 5
@@ -72,7 +72,7 @@ ActionTableStart:
 ; scene 11
 	dc.l	ActionScriptDay00CavernInteract ; Interact
 	dc.l	ActionScriptDay00CavernRespond ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitCavernEryn ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 12
 	dc.l	ActionScriptDay00SVideoInteract ; Interact
@@ -125,7 +125,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 22
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay00InfoDeskInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -162,7 +162,7 @@ ActionTableStart:
 ; scene 29
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitBasementCafe ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 30
 	dc.l	ActionScriptDefaultInteract ; Interact
@@ -231,7 +231,7 @@ ActionTableStart:
 ; scene 11
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitCavernCarl ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 12
 	dc.l	ActionScriptNight00SVideoInteract ; Interact
@@ -321,7 +321,7 @@ ActionTableStart:
 ; scene 29
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitBasementCafe ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 30
 	dc.l	ActionScriptDefaultInteract ; Interact
@@ -390,7 +390,7 @@ ActionTableStart:
 ; scene 11
 	dc.l	ActionScriptDay01CavernInteract ; Interact
 	dc.l	ActionScriptDay01FCBCampingRespond ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitCavernEryn ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 12
 	dc.l	ActionScriptDefaultInteract ; Interact
@@ -480,7 +480,7 @@ ActionTableStart:
 ; scene 29
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitBasementCafe ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 30
 	dc.l	ActionScriptDefaultInteract ; Interact
@@ -512,10 +512,10 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 4
-	dc.l	ActionScriptNight01SHallInteract ; Interact
+	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	ActionScriptNight01SHallExit ; ExitScene
-	dc.l	DefaultEnterScene ; EnterScene
+	dc.l	ActionScriptNight01SHallEnter ; EnterScene
 ; scene 5
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
@@ -549,7 +549,7 @@ ActionTableStart:
 ; scene 11
 	dc.l	ActionScriptNight01CavernInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitCavernCarl ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 12
 	dc.l	ActionScriptDefaultInteract ; Interact
@@ -639,7 +639,7 @@ ActionTableStart:
 ; scene 29
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitBasementCafe ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 30
 	dc.l	ActionScriptDefaultInteract ; Interact
@@ -708,7 +708,7 @@ ActionTableStart:
 ; scene 11
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitCavernEryn ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 12
 	dc.l	ActionScriptDay02SVideoInteract ; Interact
@@ -798,7 +798,7 @@ ActionTableStart:
 ; scene 29
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitBasementCafe ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 30
 	dc.l	ActionScriptDefaultInteract ; Interact
@@ -867,7 +867,7 @@ ActionTableStart:
 ; scene 11
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitCavernCarl ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 12
 	dc.l	ActionScriptDefaultInteract ; Interact
@@ -957,7 +957,7 @@ ActionTableStart:
 ; scene 29
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitBasementCafe ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 30
 	dc.l	ActionScriptDefaultInteract ; Interact
@@ -1026,7 +1026,7 @@ ActionTableStart:
 ; scene 11
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitCavernEryn ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 12
 	dc.l	ActionScriptDay03SVideoInteract ; Interact
@@ -1116,7 +1116,7 @@ ActionTableStart:
 ; scene 29
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitBasementCafe ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 30
 	dc.l	ActionScriptDefaultInteract ; Interact
@@ -1185,7 +1185,7 @@ ActionTableStart:
 ; scene 11
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitCavernCarl ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 12
 	dc.l	ActionScriptDefaultInteract ; Interact
@@ -1275,7 +1275,7 @@ ActionTableStart:
 ; scene 29
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitBasementCafe ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 30
 	dc.l	ActionScriptDefaultInteract ; Interact
@@ -1344,7 +1344,7 @@ ActionTableStart:
 ; scene 11
 	dc.l	ActionScriptDay04CavernInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitCavernEryn ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 12
 	dc.l	ActionScriptDay04SVideoInteract ; Interact
@@ -1434,7 +1434,7 @@ ActionTableStart:
 ; scene 29
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitBasementCafe ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 30
 	dc.l	ActionScriptDefaultInteract ; Interact
@@ -1503,7 +1503,7 @@ ActionTableStart:
 ; scene 11
 	dc.l	ActionScriptNight04CavernInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitCavernCarl ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 12
 	dc.l	ActionScriptDefaultInteract ; Interact
@@ -1593,7 +1593,7 @@ ActionTableStart:
 ; scene 29
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitBasementCafe ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 30
 	dc.l	ActionScriptDefaultInteract ; Interact
@@ -1648,7 +1648,7 @@ ActionTableStart:
 	dc.l	ActionScriptDay05DenimCountryInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
-	dc.l	DefaultEnterScene ; EnterScene
+	dc.l	ActionScriptDay05DenimCountryEnter ; EnterScene
 ; scene 9
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
@@ -1662,7 +1662,7 @@ ActionTableStart:
 ; scene 11
 	dc.l	ActionScriptDay05CavernInteract ; Interact
 	dc.l	ActionScriptDay05CavernRespond ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitCavernEryn ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 12
 	dc.l	ActionScriptDefaultInteract ; Interact
@@ -1752,7 +1752,7 @@ ActionTableStart:
 ; scene 29
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitBasementCafe ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 30
 	dc.l	ActionScriptDefaultInteract ; Interact
@@ -1821,7 +1821,7 @@ ActionTableStart:
 ; scene 11
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitCavernCarl ; ExitScene
 	dc.l	ActionScriptNight05CavernEnter ; EnterScene
 ; scene 12
 	dc.l	ActionScriptDefaultInteract ; Interact
@@ -1911,7 +1911,7 @@ ActionTableStart:
 ; scene 29
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitBasementCafe ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 30
 	dc.l	ActionScriptDefaultInteract ; Interact
@@ -1944,7 +1944,7 @@ ActionTableStart:
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 4
 	dc.l	ActionScriptDefaultInteract ; Interact
-	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	ActionScriptDay06SHallRespond ; Respond
 	dc.l	ActionScriptDay06SHallExit ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 5
@@ -1980,7 +1980,7 @@ ActionTableStart:
 ; scene 11
 	dc.l	ActionScriptDay06CavernInteract ; Interact
 	dc.l	ActionScriptDay06CavernRespond ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitCavernEryn ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 12
 	dc.l	ActionScriptDay06SVideoInteract ; Interact
@@ -2070,7 +2070,7 @@ ActionTableStart:
 ; scene 29
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitBasementCafe ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 30
 	dc.l	ActionScriptDefaultInteract ; Interact
@@ -2139,7 +2139,7 @@ ActionTableStart:
 ; scene 11
 	dc.l	ActionScriptNight06SceneCavernTrading ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitCavernCarl ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 12
 	dc.l	ActionScriptDefaultInteract ; Interact
@@ -2229,7 +2229,7 @@ ActionTableStart:
 ; scene 29
 	dc.l	ActionScriptNight06BasementCafeInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptExitBasementCafe ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 30
 	dc.l	ActionScriptDefaultInteract ; Interact

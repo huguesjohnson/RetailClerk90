@@ -114,8 +114,6 @@ TestTitleLoadDebugMenu:
 TestTitleLoadNewGame:
 	bset.l	#STATE_FLAG_INTRO_SCREEN,d7 ; set intro screen flag
 	move.l	d7,(MEM_GAME_STATE)	; save updated game state
-	; set the objective
-	
 	; set the initial story event
 	move.w	#SCENE_ID_DENIMCOUNTRY,(MEM_STORY_EVENT1_SCENE_ID)
 	; set the intro screen counter

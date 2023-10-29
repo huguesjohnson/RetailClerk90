@@ -224,16 +224,16 @@
 	;---------------------------------------------------------------------------
 	dc.w	$0003 ; npc count - 1
 
-	dc.w	$0000 ; starting x location of npc0
-	dc.w	$0000 ; starting y location of npc0
-	dc.w	DIRECTION_DOWN ; starting direction of npc0
+	dc.w	$00E6 ; starting x location of npc0
+	dc.w	$00B4 ; starting y location of npc0
+	dc.w	DIRECTION_RIGHT ; starting direction of npc0
 	dc.w	$FFFF ; movement frequency of npc0
 	dc.l	NullMovementStart ; location of movement pattern for npc0
 	dc.w	(NullMovementEnd-NullMovementStart-1) ; movement pattern length
 
-	dc.w	$0000 ; starting x location of npc1
-	dc.w	$0000 ; starting y location of npc1
-	dc.w	DIRECTION_DOWN ; starting direction of npc1
+	dc.w	$00FA ; starting x location of npc1
+	dc.w	$00B4 ; starting y location of npc1
+	dc.w	DIRECTION_LEFT ; starting direction of npc1
 	dc.w	$FFFF ; movement frequency of npc1
 	dc.l	NullMovementStart ; location of movement pattern for npc1
 	dc.w	(NullMovementEnd-NullMovementStart-1) ; movement pattern length

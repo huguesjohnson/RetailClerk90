@@ -178,10 +178,10 @@ ScriptedEventDay00_Optional00_DBStart:
 	dc.w	$0002
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextDay00VBLine1
+	dc.l	StoryTextDay00CavernLine1
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextDay00VBLine2
+	dc.l	StoryTextDay00CavernLine2
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay00_Optional00_DBEnd:
@@ -202,6 +202,11 @@ ScriptedEventDay00_Optional01_NickyEnd:
 ScriptedEventNight00_00_IntroStart:
 	; NPC0 sprite
 	dc.w	$0002
+	; fade out
+	dc.w	SCRIPTED_EVENT_FADE_BLACK
+	; change scene to tbooks
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_TBOOKS
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight00TBooksLine1

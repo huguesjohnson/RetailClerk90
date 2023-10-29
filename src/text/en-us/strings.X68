@@ -1404,7 +1404,10 @@ StatusScreenDay00Objective01:
 	dc.b	"Visit the info desk.",ETX
 StatusScreenDay00Objective02:
 	dc.b	"November 18, 1990: Evening",LF
-	dc.b	"Leave when you're ready.",ETX
+	dc.b	"Leave when you're ready.",LF
+	dc.b	"Leaving advances the story.",LF
+	dc.b	"Any unfinished optional or hidden",LF
+	dc.b	"events will be lost.",ETX
 StatusScreenDay00Objective03:
 	dc.b	"November 18, 1990: Night",LF
 	dc.b	"Deliver the special order.",ETX
@@ -1567,9 +1570,9 @@ TitleScreenTextLoadGame:
 TitleScreenTextDebug:
 	dc.b	"{Debug",ETX
 TitleScreenTextTitle:
-	dc.b	"Jan23 Dev Build",ETX
+	dc.b	"Oct23 Dev Build",ETX
 TitleScreenTextTitleDebug:
-	dc.b	"Jan23 Debug Build",ETX
+	dc.b	"Oct23 Debug Build",ETX
 
 ;-------------------------------------------------------------------------------
 ; DebugScreen
@@ -1582,7 +1585,7 @@ DebugScreenLine01:
 DebugScreenLine02:
 	dc.b	"{Day0 @south hall  {(not implemented)",ETX
 DebugScreenLine03:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{Night0 start      {(not implemented)",ETX
 DebugScreenLine04:
 	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine05:
@@ -2106,13 +2109,43 @@ StoryTextDay00InfoDeskLine3:
 	dc.w	OBJ_NPC_GINA
 	dc.b	"line3.",ETX
 	align 2
-StoryTextDay00VBLine1:
+StoryTextDay00CavernChoice:
+	dc.w	OBJ_NPC_DB
+	dc.b	"Do this event or",LF
+	dc.b	"whatever?            ^",FFR
+	dc.b	"{ Sure               ",LF
+	dc.b	"{ Maybe later",ETX
+	align 2
+StoryTextDay00CavernChoice0:
+	dc.w	OBJ_NPC_DB
+	dc.b	"choice 0",ETX
+	align 2
+StoryTextDay00CavernChoice1:
+	dc.w	OBJ_NPC_DB
+	dc.b	"choice 1",ETX
+	align 2
+StoryTextDay00CavernLine1:
 	dc.w	OBJ_NPC_DB
 	dc.b	"line1.",ETX
 	align 2
-StoryTextDay00VBLine2:
+StoryTextDay00CavernLine2:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"line2.",ETX
+	align 2
+StoryTextDay00SVideoChoice:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"Do this event or",LF
+	dc.b	"whatever?            ^",FFR
+	dc.b	"{ Sure               ",LF
+	dc.b	"{ Maybe later",ETX
+	align 2
+StoryTextDay00SVideoChoice0:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"choice 0",ETX
+	align 2
+StoryTextDay00SVideoChoice1:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"choice 1",ETX
 	align 2
 StoryTextDay00SVideoLine1:
 	dc.w	OBJ_NPC_NICKY
@@ -2154,6 +2187,21 @@ StoryTextNight00SouthHallLine2:
 	dc.w	OBJ_NPC_VICTOR
 	dc.b	"line2.",ETX
 	align 2
+StoryTextNight00VBChoice:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"Do this event or",LF
+	dc.b	"whatever?            ^",FFR
+	dc.b	"{ Sure               ",LF
+	dc.b	"{ Maybe later",ETX
+	align 2
+StoryTextNight00VBChoice0:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"choice 0",ETX
+	align 2
+StoryTextNight00VBChoice1:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"choice 1",ETX
+	align 2
 StoryTextNight00VBLine1:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"line1.",ETX
@@ -2161,6 +2209,21 @@ StoryTextNight00VBLine1:
 StoryTextNight00VBLine2:
 	dc.w	OBJ_NPC_GRUNBERG
 	dc.b	"line2.",ETX
+	align 2
+StoryTextNight00CPlanetChoice:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"Do this event or",LF
+	dc.b	"whatever?            ^",FFR
+	dc.b	"{ Sure               ",LF
+	dc.b	"{ Maybe later",ETX
+	align 2
+StoryTextNight00CPlanetChoice0:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"choice 0",ETX
+	align 2
+StoryTextNight00CPlanetChoice1:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"choice 1",ETX
 	align 2
 StoryTextNight00CPlanetLine1:
 	dc.w	OBJ_NPC_CARL
@@ -2202,6 +2265,21 @@ StoryTextDay01DenimCountry2Line2:
 	dc.w	OBJ_NPC_LISA
 	dc.b	"line2.",ETX
 	align 2
+StoryTextDay01CavernChoice:
+	dc.w	OBJ_NPC_DB
+	dc.b	"Do this event or",LF
+	dc.b	"whatever?            ^",FFR
+	dc.b	"{ Sure               ",LF
+	dc.b	"{ Maybe later",ETX
+	align 2
+StoryTextDay01CavernChoice0:
+	dc.w	OBJ_NPC_DB
+	dc.b	"choice 0",ETX
+	align 2
+StoryTextDay01CavernChoice1:
+	dc.w	OBJ_NPC_DB
+	dc.b	"choice 1",ETX
+	align 2
 StoryTextDay01CavernLine1:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"line1.",ETX
@@ -2209,6 +2287,21 @@ StoryTextDay01CavernLine1:
 StoryTextDay01CavernLine2:
 	dc.w	OBJ_NPC_DB
 	dc.b	"line2.",ETX
+	align 2
+StoryTextDay01FCBCampingChoice:
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"Do this event or",LF
+	dc.b	"whatever?            ^",FFR
+	dc.b	"{ Sure               ",LF
+	dc.b	"{ Maybe later",ETX
+	align 2
+StoryTextDay01FCBCampingChoice0:
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"choice 0",ETX
+	align 2
+StoryTextDay01FCBCampingChoice1:
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"choice 1",ETX
 	align 2
 StoryTextDay01FCBCampingLine1:
 	dc.w	OBJ_NPC_ERYN
@@ -2250,6 +2343,21 @@ StoryTextNight01SouthHallLine2:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"line2.",ETX
 	align 2
+StoryTextNight01WWAppliancesChoice:
+	dc.w	OBJ_NPC_LAURA
+	dc.b	"Do this event or",LF
+	dc.b	"whatever?            ^",FFR
+	dc.b	"{ Sure               ",LF
+	dc.b	"{ Maybe later",ETX
+	align 2
+StoryTextNight01WWAppliancesChoice0:
+	dc.w	OBJ_NPC_LAURA
+	dc.b	"choice 0",ETX
+	align 2
+StoryTextNight01WWAppliancesChoice1:
+	dc.w	OBJ_NPC_LAURA
+	dc.b	"choice 1",ETX
+	align 2
 StoryTextNight01WWAppliancesLine1:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"line1.",ETX
@@ -2258,8 +2366,23 @@ StoryTextNight01WWAppliancesLine2:
 	dc.w	OBJ_NPC_LAURA
 	dc.b	"line2.",ETX
 	align 2
-StoryTextNight01VBLine1:
+StoryTextNight01VBChoice:
 	dc.w	OBJ_NPC_CARL
+	dc.b	"Do this event or",LF
+	dc.b	"whatever?            ^",FFR
+	dc.b	"{ Sure               ",LF
+	dc.b	"{ Maybe later",ETX
+	align 2
+StoryTextNight01VBChoice0:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"choice 0",ETX
+	align 2
+StoryTextNight01VBChoice1:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"choice 1",ETX
+	align 2
+StoryTextNight01VBLine1:
+	dc.w	OBJ_NPC_GRUNBERG
 	dc.b	"line1.",ETX
 	align 2
 StoryTextNight01VBLine2:
@@ -2306,6 +2429,21 @@ StoryTextDay02NShackLine2:
 	dc.w	OBJ_NPC_JEN
 	dc.b	"line2.",ETX
 	align 2
+StoryTextDay02SVideoChoice:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"Do this event or",LF
+	dc.b	"whatever?            ^",FFR
+	dc.b	"{ Sure               ",LF
+	dc.b	"{ Maybe later",ETX
+	align 2
+StoryTextDay02SVideoChoice0:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"choice 0",ETX
+	align 2
+StoryTextDay02SVideoChoice1:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"choice 1",ETX
+	align 2
 StoryTextDay02SVideoLine1:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"line1.",ETX
@@ -2313,6 +2451,21 @@ StoryTextDay02SVideoLine1:
 StoryTextDay02SVideoLine2:
 	dc.w	OBJ_NPC_NICKY
 	dc.b	"line2.",ETX
+	align 2
+StoryTextDay02FCBCampingChoice:
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"Do this event or",LF
+	dc.b	"whatever?            ^",FFR
+	dc.b	"{ Sure               ",LF
+	dc.b	"{ Maybe later",ETX
+	align 2
+StoryTextDay02FCBCampingChoice0:
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"choice 0",ETX
+	align 2
+StoryTextDay02FCBCampingChoice1:
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"choice 1",ETX
 	align 2
 StoryTextDay02FCBCampingLine1:
 	dc.w	OBJ_NPC_ERYN
@@ -2362,6 +2515,21 @@ StoryTextNight02VisionLine2:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"line2.",ETX
 	align 2
+StoryTextNight02VBChoice:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"Do this event or",LF
+	dc.b	"whatever?            ^",FFR
+	dc.b	"{ Sure               ",LF
+	dc.b	"{ Maybe later",ETX
+	align 2
+StoryTextNight02VBChoice0:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"choice 0",ETX
+	align 2
+StoryTextNight02VBChoice1:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"choice 1",ETX
+	align 2
 StoryTextNight02VBLine1:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"line1.",ETX
@@ -2369,6 +2537,21 @@ StoryTextNight02VBLine1:
 StoryTextNight02VBLine2:
 	dc.w	OBJ_NPC_GRUNBERG
 	dc.b	"line2.",ETX
+	align 2
+StoryTextNight02CPlanetChoice:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"Do this event or",LF
+	dc.b	"whatever?            ^",FFR
+	dc.b	"{ Sure               ",LF
+	dc.b	"{ Maybe later",ETX
+	align 2
+StoryTextNight02CPlanetChoice0:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"choice 0",ETX
+	align 2
+StoryTextNight02CPlanetChoice1:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"choice 1",ETX
 	align 2
 StoryTextNight02CPlanetLine1:
 	dc.w	OBJ_NPC_CARL
@@ -2426,6 +2609,21 @@ StoryTextDay03PogoDawg2Line2:
 	dc.w	OBJ_NPC_GRIFFY
 	dc.b	"line2.",ETX
 	align 2
+StoryTextDay03CavernChoice:
+	dc.w	OBJ_NPC_DB
+	dc.b	"Do this event or",LF
+	dc.b	"whatever?            ^",FFR
+	dc.b	"{ Sure               ",LF
+	dc.b	"{ Maybe later",ETX
+	align 2
+StoryTextDay03CavernChoice0:
+	dc.w	OBJ_NPC_DB
+	dc.b	"choice 0",ETX
+	align 2
+StoryTextDay03CavernChoice1:
+	dc.w	OBJ_NPC_DB
+	dc.b	"choice 1",ETX
+	align 2
 StoryTextDay03CavernLine1:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"line1.",ETX
@@ -2433,6 +2631,21 @@ StoryTextDay03CavernLine1:
 StoryTextDay03CavernLine2:
 	dc.w	OBJ_NPC_DB
 	dc.b	"line2.",ETX
+	align 2
+StoryTextDay03SVideoChoice:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"Do this event or",LF
+	dc.b	"whatever?            ^",FFR
+	dc.b	"{ Sure               ",LF
+	dc.b	"{ Maybe later",ETX
+	align 2
+StoryTextDay03SVideoChoice0:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"choice 0",ETX
+	align 2
+StoryTextDay03SVideoChoice1:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"choice 1",ETX
 	align 2
 StoryTextDay03SVideoLine1:
 	dc.w	OBJ_NPC_ERYN
@@ -2482,6 +2695,21 @@ StoryTextNight03NShackLine2:
 	dc.w	OBJ_NPC_JEN
 	dc.b	"line2.",ETX
 	align 2
+StoryTextNight03WWAppliancesChoice:
+	dc.w	OBJ_NPC_LAURA
+	dc.b	"Do this event or",LF
+	dc.b	"whatever?            ^",FFR
+	dc.b	"{ Sure               ",LF
+	dc.b	"{ Maybe later",ETX
+	align 2
+StoryTextNight03WWAppliancesChoice0:
+	dc.w	OBJ_NPC_LAURA
+	dc.b	"choice 0",ETX
+	align 2
+StoryTextNight03WWAppliancesChoice1:
+	dc.w	OBJ_NPC_LAURA
+	dc.b	"choice 1",ETX
+	align 2
 StoryTextNight03WWAppliancesLine1:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"line1.",ETX
@@ -2489,6 +2717,21 @@ StoryTextNight03WWAppliancesLine1:
 StoryTextNight03WWAppliancesLine2:
 	dc.w	OBJ_NPC_LAURA
 	dc.b	"line2.",ETX
+	align 2
+StoryTextNight03CPlanetChoice:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"Do this event or",LF
+	dc.b	"whatever?            ^",FFR
+	dc.b	"{ Sure               ",LF
+	dc.b	"{ Maybe later",ETX
+	align 2
+StoryTextNight03CPlanetChoice0:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"choice 0",ETX
+	align 2
+StoryTextNight03CPlanetChoice1:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"choice 1",ETX
 	align 2
 StoryTextNight03CPlanetLine1:
 	dc.w	OBJ_NPC_CARL
@@ -2522,6 +2765,21 @@ StoryTextDay04NShackLine2:
 	dc.w	OBJ_NPC_JEN
 	dc.b	"line2.",ETX
 	align 2
+StoryTextDay04SVideoChoice:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"Do this event or",LF
+	dc.b	"whatever?            ^",FFR
+	dc.b	"{ Sure               ",LF
+	dc.b	"{ Maybe later",ETX
+	align 2
+StoryTextDay04SVideoChoice0:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"choice 0",ETX
+	align 2
+StoryTextDay04SVideoChoice1:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"choice 1",ETX
+	align 2
 StoryTextDay04SVideoLine1:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"line1.",ETX
@@ -2529,6 +2787,21 @@ StoryTextDay04SVideoLine1:
 StoryTextDay04SVideoLine2:
 	dc.w	OBJ_NPC_NICKY
 	dc.b	"line2.",ETX
+	align 2
+StoryTextDay04FCBCampingChoice:
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"Do this event or",LF
+	dc.b	"whatever?            ^",FFR
+	dc.b	"{ Sure               ",LF
+	dc.b	"{ Maybe later",ETX
+	align 2
+StoryTextDay04FCBCampingChoice0:
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"choice 0",ETX
+	align 2
+StoryTextDay04FCBCampingChoice1:
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"choice 1",ETX
 	align 2
 StoryTextDay04FCBCampingLine1:
 	dc.w	OBJ_NPC_ERYN
@@ -2570,6 +2843,21 @@ StoryTextNight04SouthHallLine2:
 	dc.w	OBJ_NPC_VICTOR
 	dc.b	"line2.",ETX
 	align 2
+StoryTextNight04WWAppliancesChoice:
+	dc.w	OBJ_NPC_LAURA
+	dc.b	"Do this event or",LF
+	dc.b	"whatever?            ^",FFR
+	dc.b	"{ Sure               ",LF
+	dc.b	"{ Maybe later",ETX
+	align 2
+StoryTextNight04WWAppliancesChoice0:
+	dc.w	OBJ_NPC_LAURA
+	dc.b	"choice 0",ETX
+	align 2
+StoryTextNight04WWAppliancesChoice1:
+	dc.w	OBJ_NPC_LAURA
+	dc.b	"choice 1",ETX
+	align 2
 StoryTextNight04WWAppliancesLine1:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"line1.",ETX
@@ -2577,6 +2865,21 @@ StoryTextNight04WWAppliancesLine1:
 StoryTextNight04WWAppliancesLine2:
 	dc.w	OBJ_NPC_LAURA
 	dc.b	"line2.",ETX
+	align 2
+StoryTextNight04VBChoice:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"Do this event or",LF
+	dc.b	"whatever?            ^",FFR
+	dc.b	"{ Sure               ",LF
+	dc.b	"{ Maybe later",ETX
+	align 2
+StoryTextNight04VBChoice0:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"choice 0",ETX
+	align 2
+StoryTextNight04VBChoice1:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"choice 1",ETX
 	align 2
 StoryTextNight04VBLine1:
 	dc.w	OBJ_NPC_CARL
@@ -2618,6 +2921,21 @@ StoryTextDay05DenimCountry2Line2:
 	dc.w	OBJ_NPC_DANI
 	dc.b	"line2.",ETX
 	align 2
+StoryTextDay05CavernChoice:
+	dc.w	OBJ_NPC_DB
+	dc.b	"Do this event or",LF
+	dc.b	"whatever?            ^",FFR
+	dc.b	"{ Sure               ",LF
+	dc.b	"{ Maybe later",ETX
+	align 2
+StoryTextDay05CavernChoice0:
+	dc.w	OBJ_NPC_DB
+	dc.b	"choice 0",ETX
+	align 2
+StoryTextDay05CavernChoice1:
+	dc.w	OBJ_NPC_DB
+	dc.b	"choice 1",ETX
+	align 2
 StoryTextDay05CavernLine1:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"line1.",ETX
@@ -2625,6 +2943,21 @@ StoryTextDay05CavernLine1:
 StoryTextDay05CavernLine2:
 	dc.w	OBJ_NPC_DB
 	dc.b	"line2.",ETX
+	align 2
+StoryTextDay05FCBCampingChoice:
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"Do this event or",LF
+	dc.b	"whatever?            ^",FFR
+	dc.b	"{ Sure               ",LF
+	dc.b	"{ Maybe later",ETX
+	align 2
+StoryTextDay05FCBCampingChoice0:
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"choice 0",ETX
+	align 2
+StoryTextDay05FCBCampingChoice1:
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"choice 1",ETX
 	align 2
 StoryTextDay05FCBCampingLine1:
 	dc.w	OBJ_NPC_ERYN
@@ -2674,6 +3007,21 @@ StoryTextNight05SouthHallLine2:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"line2.",ETX
 	align 2
+StoryTextNight05WWAppliancesChoice:
+	dc.w	OBJ_NPC_LAURA
+	dc.b	"Do this event or",LF
+	dc.b	"whatever?            ^",FFR
+	dc.b	"{ Sure               ",LF
+	dc.b	"{ Maybe later",ETX
+	align 2
+StoryTextNight05WWAppliancesChoice0:
+	dc.w	OBJ_NPC_LAURA
+	dc.b	"choice 0",ETX
+	align 2
+StoryTextNight05WWAppliancesChoice1:
+	dc.w	OBJ_NPC_LAURA
+	dc.b	"choice 1",ETX
+	align 2
 StoryTextNight05WWAppliancesLine1:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"line1.",ETX
@@ -2685,6 +3033,21 @@ StoryTextNight05WWAppliancesLine2:
 StoryTextNight05CPlanetLine1:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"line1.",ETX
+	align 2
+StoryTextNight05CPlanetChoice:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"Do this event or",LF
+	dc.b	"whatever?            ^",FFR
+	dc.b	"{ Sure               ",LF
+	dc.b	"{ Maybe later",ETX
+	align 2
+StoryTextNight05CPlanetChoice0:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"choice 0",ETX
+	align 2
+StoryTextNight05CPlanetChoice1:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"choice 1",ETX
 	align 2
 StoryTextNight05CPlanetLine2:
 	dc.w	OBJ_NPC_ELIZA

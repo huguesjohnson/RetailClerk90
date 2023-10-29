@@ -87,3 +87,11 @@ ActionScriptNight06WWAppliancesInteract:
 ActionScriptNight06WWAppliancesRespond:	
 	bsr.w ShowDefaultText
 	rts		
+	
+;*******************************************************************************
+; End of the day
+;*******************************************************************************
+EndNight06:
+	rts	
+	
+	

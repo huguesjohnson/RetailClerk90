@@ -969,8 +969,8 @@ ActionTableStart:
 ; day 6
 ;---------------------------------------------------------------------------
 ; scene 0
-	dc.l	ActionScriptDay03VBInteract ; Interact
-	dc.l	ActionScriptDay03VBRespond ; Respond
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 1
@@ -1024,8 +1024,8 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 11
-	dc.l	ActionScriptDefaultInteract ; Interact
-	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	ActionScriptDay03CavernInteract ; Interact
+	dc.l	ActionScriptDay03CavernRespond ; Respond
 	dc.l	ActionScriptExitCavernEryn ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 12

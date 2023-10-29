@@ -74,32 +74,87 @@ ActionScriptNight01SHallExit:
 ; SCENE_ID_WWAPPLIANCES
 ;*******************************************************************************
 ActionScriptNight01WWAppliancesInteract:	
-
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-; dialog and prompt for optional event
-
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT01_OPTIONAL1,d7 ; test if the optional event is complete
+	bne.s	.default ; show default text if the event is complete
+	lea	StoryTextNight01WWAppliancesChoice,a6 ; load dialog text	
+	bsr.w	Show2ChoiceDialog ; prompt to do the event
+	rts	
+.default
 	bsr.w ShowDefaultText
-	rts		
+	rts	
 
 ActionScriptNight01WWAppliancesRespond:	
-	bsr.w ShowDefaultText
+	bsr.w	ResetDialog
+	cmpi.w	#$0000,(MEM_MENU_RESPONSE) ; is the menu selection 0?
+	beq.s	.yes
+	; else show message
+	lea	StoryTextNight01WWAppliancesChoice1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first response
 	rts
+.yes
+	addq	#$1,(MEM_REL_LAURA) ; increment the relationship score
+	; update day state
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	bset.l	#FLAG_NIGHT01_OPTIONAL1,d7 ; test if the optional event is complete	
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	; clear the map icon
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT1_SCENE_ID)
+	; setup the scripted event
+	lea	StoryTextNight01WWAppliancesChoice0,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventNight01_Optional01Start,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts	
+
 	
 ;*******************************************************************************
 ; SCENE_ID_VB
 ;*******************************************************************************
 ActionScriptNight01VBInteract:	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT01_OPTIONAL2,d7 ; test if the optional event is complete
+	bne.s	.default ; show default text if the event is complete
+	lea	StoryTextNight01VBChoice,a6 ; load dialog text	
+	bsr.w	Show2ChoiceDialog ; prompt to do the event
+	rts	
+.default
 	bsr.w ShowDefaultText
-
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-; dialog and prompt for optional event
-
-	rts		
+	rts	
 
 ActionScriptNight01VBRespond:	
-	bsr.w ShowDefaultText
-	rts		
+	bsr.w	ResetDialog
+	cmpi.w	#$0000,(MEM_MENU_RESPONSE) ; is the menu selection 0?
+	beq.s	.yes
+	; else show message
+	lea	StoryTextNight01VBChoice1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first response
+	rts
+.yes
+	addq	#$1,(MEM_REL_GRUNBERG) ; increment the relationship score
+	; update day state
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	bset.l	#FLAG_NIGHT01_OPTIONAL2,d7 ; test if the optional event is complete	
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	; clear the map icon
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT2_SCENE_ID)
+	; setup the scripted event
+	lea	StoryTextNight01VBChoice0,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventNight01_Optional01Start,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts	
+	
+;*******************************************************************************
+; End of the day
+;*******************************************************************************
+EndNight01:
+;[ScriptedEventDay02_00_Intro]
+;"Why are you asking me about this?" with Grunberg - response about needing to talk to people here a long time - response about how the store only opened 2 years ago and which stores have been there since 1975
+;[Set objective to OBJECTIVE_D02_O00_TalkToEmployees]
+;[set Story event at TLodge]
+;[set Story event at TBooks]
+
+
+	rts	
+		

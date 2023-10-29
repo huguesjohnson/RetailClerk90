@@ -278,6 +278,14 @@ ProcessStatusScreenMap:
 	bsr.w	LoadPlayerSprite ; load the player sprite
 	bsr.w	FixSprites ; move player sprite and reset sprite links
 	bsr.w	FadeIn ; fade in to the new scene
+	;---------------------------------------------------------------------------
+	; force enter scene action
+	;---------------------------------------------------------------------------
+	move.l	(MEM_GAME_STATE),d7 ; copy game state to d7
+	bset.l	#STATE_FLAG_ACTION,d7 ; set the action flag
+	move.l	d7,(MEM_GAME_STATE) ; save it back
+	move.w	#ACTION_ENTER_SCENE,(MEM_ACTION_ID) ; set the action id
+	move.w	#$FFFF,(MEM_ACTION_TARGET_NPCID)
 	bra.w	ExitProcessStatusScreen
 ProcessStatusScreenStatus:
 	move.w	#$2700,sr ; disable interrupts

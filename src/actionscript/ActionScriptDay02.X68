@@ -70,33 +70,89 @@ ActionScriptDay02DenimCountryInteract:
 ; SCENE_ID_SVIDEO
 ;*******************************************************************************
 ActionScriptDay02SVideoInteract:	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_DAY02_OPTIONAL1,d7 ; test if the optional event is complete
+	bne.s	.default ; show default text if the event is complete
+	lea	StoryTextDay02SVideoChoice,a6 ; load dialog text	
+	bsr.w	Show2ChoiceDialog ; prompt to do the event
+	rts	
+.default
 	bsr.w ShowDefaultText
-
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-; dialog and prompt for optional event
-
-	rts		
+	rts	
 
 ActionScriptDay02SVideoRespond:	
-	bsr.w ShowDefaultText
+	bsr.w	ResetDialog
+	cmpi.w	#$0000,(MEM_MENU_RESPONSE) ; is the menu selection 0?
+	beq.s	.yes
+	; else show message
+	lea	StoryTextDay02SVideoChoice1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first response
 	rts
+.yes
+	addq	#$1,(MEM_REL_NICKY) ; increment the relationship score
+	; update day state
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	bset.l	#FLAG_DAY02_OPTIONAL1,d7 ; test if the optional event is complete	
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	; clear the map icon
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT1_SCENE_ID)
+	; setup the scripted event
+	lea	StoryTextDay02SVideoChoice0,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventDay02_Optional00Start,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts	
 	
 ;*******************************************************************************
 ; SCENE_ID_FCBCAMPING
 ;*******************************************************************************
 ActionScriptDay02FCBCampingInteract:	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_DAY02_OPTIONAL2,d7 ; test if the optional event is complete
+	bne.s	.default ; show default text if the event is complete
+	lea	StoryTextDay02FCBCampingChoice,a6 ; load dialog text	
+	bsr.w	Show2ChoiceDialog ; prompt to do the event
+	rts	
+.default
 	bsr.w ShowDefaultText
-
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-; dialog and prompt for optional event
-
-	rts		
+	rts	
 
 ActionScriptDay02FCBCampingRespond:	
-	bsr.w ShowDefaultText
-	rts			
+	bsr.w	ResetDialog
+	cmpi.w	#$0000,(MEM_MENU_RESPONSE) ; is the menu selection 0?
+	beq.s	.yes
+	; else show message
+	lea	StoryTextDay02FCBCampingChoice1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first response
+	rts
+.yes
+	addq	#$1,(MEM_REL_GRANT) ; increment the relationship score
+	; update day state
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	bset.l	#FLAG_DAY02_OPTIONAL2,d7 ; test if the optional event is complete	
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	; clear the map icon
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT2_SCENE_ID)
+	; setup the scripted event
+	lea	StoryTextDay02FCBCampingChoice0,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventDay02_Optional01Start,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts	
+	
+;*******************************************************************************
+; End of the day
+;*******************************************************************************
+EndDay02:
+
+;[ScriptedEventNight02_00_Intro]
+;something to make you think of going to the camping section
+;[Set objective to OBJECTIVE_D02_O03_Investigate]
+;[set Story event at FCBCamping]
+;[set Story event at NShack]
+;[Move Victor to WWHall]
+
+
+	rts	
+			
 		

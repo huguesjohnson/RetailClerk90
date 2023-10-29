@@ -224,7 +224,49 @@ LaunchDebug01: ; day00 - after visiting info desk
 	bsr.w FadeIn
 	rts	
 
-LaunchDebug02:
+LaunchDebug02: ; night 00 - start
+	; add item that is received during the 1st trading sequence event
+	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
+	move.w	#OBJ_ITEM_SCARF,d7 ; add item from trading sequence
+	bsr.w	AddItem ; add item to inventory
+	;---------------------------------------------------------------------------
+	; global events
+	;---------------------------------------------------------------------------
+	move.l	(MEM_GAME_STATE),d7	; copy game state to d7
+	bset.l	#STATE_FLAG_EXPLORING,d7 ; set exploring flag
+	bset.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is available
+	move.l	d7,(MEM_GAME_STATE)	; save updated game state
+	;---------------------------------------------------------------------------	
+	; setup the next day
+	;---------------------------------------------------------------------------	
+	move.w	#$0001,(MEM_DAY) ; increment day
+	move.w	#OBJECTIVE_D00_O03_SVideo,(MEM_OBJECTIVE) ; initial objective
+	and.l	#$00000000,(MEM_GLOBAL_EVENT_FLAGS)	; clear event flags
+	and.l	#$00000000,(MEM_DAY_EVENT_FLAGS) ; clear event flags
+	move.w	#SCENE_ID_SVIDEO,(MEM_STORY_EVENT1_SCENE_ID) ; initial story event
+	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; no 2nd story event
+	move.w	#SCENE_ID_VB,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
+	move.w	#SCENE_ID_CPLANET,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
+	move.w	#PLAYER_SPRITE_CARL,(MEM_PLAYER_SPRITE) ; initial sprite
+	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
+	move.w	#$00DE,(MEM_PLAYER_SPRITE_X)
+	move.w	#$00EE,(MEM_PLAYER_SPRITE_Y)
+	;---------------------------------------------------------------------------	
+	; update NPC locations
+	;---------------------------------------------------------------------------	
+	bsr.w	InitNPCLocationsNight ; reset the NPC locations
+	move.l	#$03000000,(MEM_NPC_LOCATION_TBOOKS)
+	move.l	#$11180000,(MEM_NPC_LOCATION_EEHALL)		
+	;---------------------------------------------------------------------------	
+	; queue the introduction
+	;---------------------------------------------------------------------------	
+	lea ScriptedEventNight00_00_IntroStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts
+
+
+
 LaunchDebug03:
 LaunchDebug04:
 LaunchDebug05:

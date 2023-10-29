@@ -308,12 +308,12 @@
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"StoryTextDay00VBLine1"
+            "label":"StoryTextDay00CavernLine1"
          },
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"StoryTextDay00VBLine2"
+            "label":"StoryTextDay00CavernLine2"
          },
          {
             "comment":"end",
@@ -350,6 +350,15 @@
          {
             "comment":"NPC0 sprite",
             "intValue":2
+         },
+         {
+            "comment":"fade out",
+            "command":"FADE_BLACK"
+         },
+         {
+            "comment":"change scene to tbooks",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_TBOOKS"
          },
          {
             "comment":"dialog",

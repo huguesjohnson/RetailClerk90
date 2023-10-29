@@ -78,5 +78,20 @@ ActionScriptDay06FCBCampingInteract:
 
 ActionScriptDay06FCBCampingRespond:	
 	bsr.w ShowDefaultText
-	rts			
+	rts
+	
+;*******************************************************************************
+; End of the day
+;*******************************************************************************
+EndDay06:
+
+;Intro scene - 
+;[ScriptedEventNight06_00_Intro]
+;Scene where he's training his replacement and can now leave before closing for the first time.
+;[Set objective to OBJECTIVE_D06_O01_FinalDay]
+;[set story event at BasementKitchen]
+
+
+	rts	
+		
 		

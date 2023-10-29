@@ -194,10 +194,10 @@ MEM_COLLISION_DATA=$FFFF02D0	; collision data for the current map
 ;-------------------------------------------------------------------------------
 ; relationship levels
 ;-------------------------------------------------------------------------------
-MEM_PLAYER1_REL0=$FFFF03D0	; relationship score for p1 and npc0
-MEM_PLAYER1_REL1=$FFFF03D2	; relationship score for p1 and npc1
-MEM_PLAYER1_REL2=$FFFF03D4	; relationship score for p1 and npc2
-MEM_PLAYER2_REL0=$FFFF03D6	; relationship score for p2 and npc0
-MEM_PLAYER2_REL1=$FFFF03D8	; relationship score for p2 and npc1
-MEM_PLAYER2_REL2=$FFFF03DA	; relationship score for p2 and npc2
-MEM_END=$FFFF03DC
+MEM_PLAYER1_REL0=$FFFF0470	; relationship score for p1 and npc0
+MEM_PLAYER1_REL1=$FFFF0472	; relationship score for p1 and npc1
+MEM_PLAYER1_REL2=$FFFF0474	; relationship score for p1 and npc2
+MEM_PLAYER2_REL0=$FFFF0476	; relationship score for p2 and npc0
+MEM_PLAYER2_REL1=$FFFF0478	; relationship score for p2 and npc1
+MEM_PLAYER2_REL2=$FFFF047A	; relationship score for p2 and npc2
+MEM_END=$FFFF047C

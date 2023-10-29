@@ -41,8 +41,8 @@ InitGameState:
 ;-------------------------------------------------------------------------------
 	bsr.w	InitNPCLocationsDay ; moves all npcs back to their starting point
 	; add the two npcs that need to be present at the start
-	lea MEM_NPC_LOCATION_DENIMCOUNTRY,a0
-	move.l	#$05232100,(a0)
+	move.l	#$05232100,(MEM_NPC_LOCATION_DENIMCOUNTRY)	
+	move.l	#$02240000,(MEM_NPC_LOCATION_TBOOKS)	
 
 	move.w	#$2000,sr		; re-enable interrupts
 ;-------------------------------------------------------------------------------

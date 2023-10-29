@@ -182,4 +182,4 @@ MEM_ACTIVE_SPRITE_HIGH_RIGHT,2,high right row of active sprite
 MEM_ACTIVE_SPRITE_LOW_RIGHT,2,low right row of active sprite
 MEM_COLLISION_MAP_ROW,4,row of map data
 MEM_COLLISION_RESULT,2,result of collision test
-MEM_COLLISION_DATA,256,collision data for the current map
+MEM_COLLISION_DATA,416,collision data for the current map

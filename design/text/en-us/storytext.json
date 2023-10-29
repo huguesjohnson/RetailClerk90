@@ -149,16 +149,48 @@
          "text":"line3.",
          "align":2
          },
-      "StoryTextDay00VBLine1":{
+      "StoryTextDay00CavernChoice":{
+            "dialogTitle":"OBJ_NPC_DB",
+            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "formFeed":"FFR",
+            "align":2
+         },         
+      "StoryTextDay00CavernChoice0":{
+            "dialogTitle":"OBJ_NPC_DB",
+            "text":"choice 0",
+            "align":2
+         },         
+      "StoryTextDay00CavernChoice1":{
+            "dialogTitle":"OBJ_NPC_DB",
+            "text":"choice 1",
+            "align":2
+         },         
+      "StoryTextDay00CavernLine1":{
          "dialogTitle":"OBJ_NPC_DB",
          "text":"line1.",
          "align":2
          },
-      "StoryTextDay00VBLine2":{
+      "StoryTextDay00CavernLine2":{
          "dialogTitle":"OBJ_NPC_ERYN",
          "text":"line2.",
          "align":2
          },
+      "StoryTextDay00SVideoChoice":{
+            "dialogTitle":"OBJ_NPC_NICKY",
+            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "formFeed":"FFR",
+            "align":2
+         },         
+      "StoryTextDay00SVideoChoice0":{
+            "dialogTitle":"OBJ_NPC_NICKY",
+            "text":"choice 0",
+            "align":2
+         },         
+      "StoryTextDay00SVideoChoice1":{
+            "dialogTitle":"OBJ_NPC_NICKY",
+            "text":"choice 1",
+            "align":2
+         },         
       "StoryTextDay00SVideoLine1":{
          "dialogTitle":"OBJ_NPC_NICKY",
          "text":"line1.",
@@ -209,6 +241,22 @@
          "text":"line2.",
          "align":2
          },
+      "StoryTextNight00VBChoice":{
+            "dialogTitle":"OBJ_NPC_GRUNBERG",
+            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "formFeed":"FFR",
+            "align":2
+         },         
+      "StoryTextNight00VBChoice0":{
+            "dialogTitle":"OBJ_NPC_GRUNBERG",
+            "text":"choice 0",
+            "align":2
+         },         
+      "StoryTextNight00VBChoice1":{
+            "dialogTitle":"OBJ_NPC_GRUNBERG",
+            "text":"choice 1",
+            "align":2
+         },          
       "StoryTextNight00VBLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
          "text":"line1.",
@@ -219,6 +267,22 @@
          "text":"line2.",
          "align":2
          },
+      "StoryTextNight00CPlanetChoice":{
+            "dialogTitle":"OBJ_NPC_ELIZA",
+            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "formFeed":"FFR",
+            "align":2
+         },         
+      "StoryTextNight00CPlanetChoice0":{
+            "dialogTitle":"OBJ_NPC_ELIZA",
+            "text":"choice 0",
+            "align":2
+         },         
+      "StoryTextNight00CPlanetChoice1":{
+            "dialogTitle":"OBJ_NPC_ELIZA",
+            "text":"choice 1",
+            "align":2
+         },            
       "StoryTextNight00CPlanetLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
          "text":"line1.",
@@ -269,6 +333,22 @@
          "text":"line2.",
          "align":2
          },
+      "StoryTextDay01CavernChoice":{
+            "dialogTitle":"OBJ_NPC_DB",
+            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "formFeed":"FFR",
+            "align":2
+         },         
+      "StoryTextDay01CavernChoice0":{
+            "dialogTitle":"OBJ_NPC_DB",
+            "text":"choice 0",
+            "align":2
+         },         
+      "StoryTextDay01CavernChoice1":{
+            "dialogTitle":"OBJ_NPC_DB",
+            "text":"choice 1",
+            "align":2
+         },           
       "StoryTextDay01CavernLine1":{
          "dialogTitle":"OBJ_NPC_ERYN",
          "text":"line1.",
@@ -279,6 +359,22 @@
          "text":"line2.",
          "align":2
          },  
+      "StoryTextDay01FCBCampingChoice":{
+            "dialogTitle":"OBJ_NPC_GRANT",
+            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "formFeed":"FFR",
+            "align":2
+         },         
+      "StoryTextDay01FCBCampingChoice0":{
+            "dialogTitle":"OBJ_NPC_GRANT",
+            "text":"choice 0",
+            "align":2
+         },         
+      "StoryTextDay01FCBCampingChoice1":{
+            "dialogTitle":"OBJ_NPC_GRANT",
+            "text":"choice 1",
+            "align":2
+         },          
       "StoryTextDay01FCBCampingLine1":{
          "dialogTitle":"OBJ_NPC_ERYN",
          "text":"line1.",
@@ -328,7 +424,23 @@
          "dialogTitle":"OBJ_NPC_ERYN",
          "text":"line2.",
          "align":2
-         },      
+         },
+      "StoryTextNight01WWAppliancesChoice":{
+            "dialogTitle":"OBJ_NPC_LAURA",
+            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "formFeed":"FFR",
+            "align":2
+         },         
+      "StoryTextNight01WWAppliancesChoice0":{
+            "dialogTitle":"OBJ_NPC_LAURA",
+            "text":"choice 0",
+            "align":2
+         },         
+      "StoryTextNight01WWAppliancesChoice1":{
+            "dialogTitle":"OBJ_NPC_LAURA",
+            "text":"choice 1",
+            "align":2
+         },          
       "StoryTextNight01WWAppliancesLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
          "text":"line1.",
@@ -338,9 +450,25 @@
          "dialogTitle":"OBJ_NPC_LAURA",
          "text":"line2.",
          "align":2
-         },      
+         },
+      "StoryTextNight01VBChoice":{
+            "dialogTitle":"OBJ_NPC_CARL",
+            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "formFeed":"FFR",
+            "align":2
+         },         
+      "StoryTextNight01VBChoice0":{
+            "dialogTitle":"OBJ_NPC_GRUNBERG",
+            "text":"choice 0",
+            "align":2
+         },         
+      "StoryTextNight01VBChoice1":{
+            "dialogTitle":"OBJ_NPC_GRUNBERG",
+            "text":"choice 1",
+            "align":2
+         },
       "StoryTextNight01VBLine1":{
-         "dialogTitle":"OBJ_NPC_CARL",
+         "dialogTitle":"OBJ_NPC_GRUNBERG",
          "text":"line1.",
          "align":2
          },
@@ -398,7 +526,23 @@
          "dialogTitle":"OBJ_NPC_JEN",
          "text":"line2.",
          "align":2
-         },   
+         },
+      "StoryTextDay02SVideoChoice":{
+            "dialogTitle":"OBJ_NPC_NICKY",
+            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "formFeed":"FFR",
+            "align":2
+         },        
+      "StoryTextDay02SVideoChoice0":{
+            "dialogTitle":"OBJ_NPC_NICKY",
+            "text":"choice 0",
+            "align":2
+         },         
+      "StoryTextDay02SVideoChoice1":{
+            "dialogTitle":"OBJ_NPC_NICKY",
+            "text":"choice 1",
+            "align":2
+         },
       "StoryTextDay02SVideoLine1":{
          "dialogTitle":"OBJ_NPC_ERYN",
          "text":"line1.",
@@ -409,6 +553,22 @@
          "text":"line2.",
          "align":2
          },    
+      "StoryTextDay02FCBCampingChoice":{
+            "dialogTitle":"OBJ_NPC_GRANT",
+            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "formFeed":"FFR",
+            "align":2
+         },        
+      "StoryTextDay02FCBCampingChoice0":{
+            "dialogTitle":"OBJ_NPC_GRANT",
+            "text":"choice 0",
+            "align":2
+         },         
+      "StoryTextDay02FCBCampingChoice1":{
+            "dialogTitle":"OBJ_NPC_GRANT",
+            "text":"choice 1",
+            "align":2
+         },         
       "StoryTextDay02FCBCampingLine1":{
          "dialogTitle":"OBJ_NPC_ERYN",
          "text":"line1.",
@@ -469,6 +629,22 @@
          "text":"line2.",
          "align":2
          },
+      "StoryTextNight02VBChoice":{
+            "dialogTitle":"OBJ_NPC_GRUNBERG",
+            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "formFeed":"FFR",
+            "align":2
+         },        
+      "StoryTextNight02VBChoice0":{
+            "dialogTitle":"OBJ_NPC_GRUNBERG",
+            "text":"choice 0",
+            "align":2
+         },         
+      "StoryTextNight02VBChoice1":{
+            "dialogTitle":"OBJ_NPC_GRUNBERG",
+            "text":"choice 1",
+            "align":2
+         },         
       "StoryTextNight02VBLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
          "text":"line1.",
@@ -479,6 +655,22 @@
          "text":"line2.",
          "align":2
          },   
+      "StoryTextNight02CPlanetChoice":{
+            "dialogTitle":"OBJ_NPC_ELIZA",
+            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "formFeed":"FFR",
+            "align":2
+         },        
+      "StoryTextNight02CPlanetChoice0":{
+            "dialogTitle":"OBJ_NPC_ELIZA",
+            "text":"choice 0",
+            "align":2
+         },         
+      "StoryTextNight02CPlanetChoice1":{
+            "dialogTitle":"OBJ_NPC_ELIZA",
+            "text":"choice 1",
+            "align":2
+         },         
       "StoryTextNight02CPlanetLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
          "text":"line1.",
@@ -549,6 +741,22 @@
          "text":"line2.",
          "align":2
          },
+      "StoryTextDay03CavernChoice":{
+            "dialogTitle":"OBJ_NPC_DB",
+            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "formFeed":"FFR",
+            "align":2
+         },        
+      "StoryTextDay03CavernChoice0":{
+            "dialogTitle":"OBJ_NPC_DB",
+            "text":"choice 0",
+            "align":2
+         },         
+      "StoryTextDay03CavernChoice1":{
+            "dialogTitle":"OBJ_NPC_DB",
+            "text":"choice 1",
+            "align":2
+         },         
       "StoryTextDay03CavernLine1":{
          "dialogTitle":"OBJ_NPC_ERYN",
          "text":"line1.",
@@ -558,6 +766,22 @@
          "dialogTitle":"OBJ_NPC_DB",
          "text":"line2.",
          "align":2
+         },
+      "StoryTextDay03SVideoChoice":{
+            "dialogTitle":"OBJ_NPC_NICKY",
+            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "formFeed":"FFR",
+            "align":2
+         },        
+      "StoryTextDay03SVideoChoice0":{
+            "dialogTitle":"OBJ_NPC_NICKY",
+            "text":"choice 0",
+            "align":2
+         },         
+      "StoryTextDay03SVideoChoice1":{
+            "dialogTitle":"OBJ_NPC_NICKY",
+            "text":"choice 1",
+            "align":2
          },         
       "StoryTextDay03SVideoLine1":{
          "dialogTitle":"OBJ_NPC_ERYN",
@@ -619,6 +843,22 @@
          "text":"line2.",
          "align":2
          }, 
+      "StoryTextNight03WWAppliancesChoice":{
+            "dialogTitle":"OBJ_NPC_LAURA",
+            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "formFeed":"FFR",
+            "align":2
+         },        
+      "StoryTextNight03WWAppliancesChoice0":{
+            "dialogTitle":"OBJ_NPC_LAURA",
+            "text":"choice 0",
+            "align":2
+         },         
+      "StoryTextNight03WWAppliancesChoice1":{
+            "dialogTitle":"OBJ_NPC_LAURA",
+            "text":"choice 1",
+            "align":2
+         },         
       "StoryTextNight03WWAppliancesLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
          "text":"line1.",
@@ -628,7 +868,23 @@
          "dialogTitle":"OBJ_NPC_LAURA",
          "text":"line2.",
          "align":2
-         },      
+         },
+      "StoryTextNight03CPlanetChoice":{
+            "dialogTitle":"OBJ_NPC_ELIZA",
+            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "formFeed":"FFR",
+            "align":2
+         },        
+      "StoryTextNight03CPlanetChoice0":{
+            "dialogTitle":"OBJ_NPC_ELIZA",
+            "text":"choice 0",
+            "align":2
+         },         
+      "StoryTextNight03CPlanetChoice1":{
+            "dialogTitle":"OBJ_NPC_ELIZA",
+            "text":"choice 1",
+            "align":2
+         },         
       "StoryTextNight03CPlanetLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
          "text":"line1.",
@@ -648,7 +904,7 @@
          "dialogTitle":"OBJ_NPC_BRETT",
          "text":"line2.",
          "align":2
-         },      
+         },
       "StoryTextDay04CavernLine1":{
          "dialogTitle":"OBJ_NPC_ERYN",
          "text":"line1.",
@@ -669,6 +925,22 @@
          "text":"line2.",
          "align":2
          },
+      "StoryTextDay04SVideoChoice":{
+            "dialogTitle":"OBJ_NPC_NICKY",
+            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "formFeed":"FFR",
+            "align":2
+         },        
+      "StoryTextDay04SVideoChoice0":{
+            "dialogTitle":"OBJ_NPC_NICKY",
+            "text":"choice 0",
+            "align":2
+         },         
+      "StoryTextDay04SVideoChoice1":{
+            "dialogTitle":"OBJ_NPC_NICKY",
+            "text":"choice 1",
+            "align":2
+         },          
       "StoryTextDay04SVideoLine1":{
          "dialogTitle":"OBJ_NPC_ERYN",
          "text":"line1.",
@@ -679,6 +951,22 @@
          "text":"line2.",
          "align":2
          },  
+      "StoryTextDay04FCBCampingChoice":{
+            "dialogTitle":"OBJ_NPC_GRANT",
+            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "formFeed":"FFR",
+            "align":2
+         },        
+      "StoryTextDay04FCBCampingChoice0":{
+            "dialogTitle":"OBJ_NPC_GRANT",
+            "text":"choice 0",
+            "align":2
+         },         
+      "StoryTextDay04FCBCampingChoice1":{
+            "dialogTitle":"OBJ_NPC_GRANT",
+            "text":"choice 1",
+            "align":2
+         },
       "StoryTextDay04FCBCampingLine1":{
          "dialogTitle":"OBJ_NPC_ERYN",
          "text":"line1.",
@@ -729,6 +1017,22 @@
          "text":"line2.",
          "align":2
          },    
+      "StoryTextNight04WWAppliancesChoice":{
+            "dialogTitle":"OBJ_NPC_LAURA",
+            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "formFeed":"FFR",
+            "align":2
+         },        
+      "StoryTextNight04WWAppliancesChoice0":{
+            "dialogTitle":"OBJ_NPC_LAURA",
+            "text":"choice 0",
+            "align":2
+         },         
+      "StoryTextNight04WWAppliancesChoice1":{
+            "dialogTitle":"OBJ_NPC_LAURA",
+            "text":"choice 1",
+            "align":2
+         },
       "StoryTextNight04WWAppliancesLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
          "text":"line1.",
@@ -739,6 +1043,22 @@
          "text":"line2.",
          "align":2
          },  
+      "StoryTextNight04VBChoice":{
+            "dialogTitle":"OBJ_NPC_GRUNBERG",
+            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "formFeed":"FFR",
+            "align":2
+         },        
+      "StoryTextNight04VBChoice0":{
+            "dialogTitle":"OBJ_NPC_GRUNBERG",
+            "text":"choice 0",
+            "align":2
+         },         
+      "StoryTextNight04VBChoice1":{
+            "dialogTitle":"OBJ_NPC_GRUNBERG",
+            "text":"choice 1",
+            "align":2
+         },         
       "StoryTextNight04VBLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
          "text":"line1.",
@@ -788,7 +1108,23 @@
          "dialogTitle":"OBJ_NPC_DANI",
          "text":"line2.",
          "align":2
-         },     
+         },
+      "StoryTextDay05CavernChoice":{
+            "dialogTitle":"OBJ_NPC_DB",
+            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "formFeed":"FFR",
+            "align":2
+         },        
+      "StoryTextDay05CavernChoice0":{
+            "dialogTitle":"OBJ_NPC_DB",
+            "text":"choice 0",
+            "align":2
+         },         
+      "StoryTextDay05CavernChoice1":{
+            "dialogTitle":"OBJ_NPC_DB",
+            "text":"choice 1",
+            "align":2
+         },  
       "StoryTextDay05CavernLine1":{
          "dialogTitle":"OBJ_NPC_ERYN",
          "text":"line1.",
@@ -798,6 +1134,22 @@
          "dialogTitle":"OBJ_NPC_DB",
          "text":"line2.",
          "align":2
+         },  
+      "StoryTextDay05FCBCampingChoice":{
+            "dialogTitle":"OBJ_NPC_GRANT",
+            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "formFeed":"FFR",
+            "align":2
+         },        
+      "StoryTextDay05FCBCampingChoice0":{
+            "dialogTitle":"OBJ_NPC_GRANT",
+            "text":"choice 0",
+            "align":2
+         },         
+      "StoryTextDay05FCBCampingChoice1":{
+            "dialogTitle":"OBJ_NPC_GRANT",
+            "text":"choice 1",
+            "align":2
          },  
       "StoryTextDay05FCBCampingLine1":{
          "dialogTitle":"OBJ_NPC_ERYN",
@@ -858,7 +1210,23 @@
          "dialogTitle":"OBJ_NPC_CARL",
          "text":"line2.",
          "align":2
-         },    
+         },
+      "StoryTextNight05WWAppliancesChoice":{
+            "dialogTitle":"OBJ_NPC_LAURA",
+            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "formFeed":"FFR",
+            "align":2
+         },        
+      "StoryTextNight05WWAppliancesChoice0":{
+            "dialogTitle":"OBJ_NPC_LAURA",
+            "text":"choice 0",
+            "align":2
+         },         
+      "StoryTextNight05WWAppliancesChoice1":{
+            "dialogTitle":"OBJ_NPC_LAURA",
+            "text":"choice 1",
+            "align":2
+         },          
       "StoryTextNight05WWAppliancesLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
          "text":"line1.",
@@ -874,6 +1242,22 @@
          "text":"line1.",
          "align":2
          },
+      "StoryTextNight05CPlanetChoice":{
+            "dialogTitle":"OBJ_NPC_ELIZA",
+            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "formFeed":"FFR",
+            "align":2
+         },        
+      "StoryTextNight05CPlanetChoice0":{
+            "dialogTitle":"OBJ_NPC_ELIZA",
+            "text":"choice 0",
+            "align":2
+         },         
+      "StoryTextNight05CPlanetChoice1":{
+            "dialogTitle":"OBJ_NPC_ELIZA",
+            "text":"choice 1",
+            "align":2
+         },          
       "StoryTextNight05CPlanetLine2":{
          "dialogTitle":"OBJ_NPC_ELIZA",
          "text":"line2.",

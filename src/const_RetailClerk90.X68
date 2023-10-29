@@ -22,42 +22,72 @@ FLAG_DAY00_EVENT01_CUSTOMER1=$01 ; set after helping second customer in your sto
 FLAG_DAY00_EVENT02_CANEXITDC=$02 ; set after helping all customers
 FLAG_DAY00_EVENT03_INFODESKVISITED=$03 ; set after visiting the info desk
 FLAG_DAY00_EVENT04_STORYEVENTSDONE=$04 ; set after story events for the day are done
+FLAG_DAY00_OPTIONAL1=$0C ; set after optional event
+FLAG_DAY00_OPTIONAL2=$0D ; set after optional event
 FLAG_NIGHT00_EVENT00_EEHALL=$05 ; set after viewing the scene in eehall
 FLAG_NIGHT00_EVENT01_SVIDEO=$06 ; set after making the special delivery
 FLAG_NIGHT00_EVENT02_STORYEVENTSDONE=$07 ; set after story events for the day are done
+FLAG_NIGHT00_OPTIONAL1=$0E ; set after optional event
+FLAG_NIGHT00_OPTIONAL2=$0F ; set after optional event
 FLAG_DAY01_EVENT00_CPLANET=$00 ; set after event in cplanet
 FLAG_DAY01_EVENT01_WWAPPLIANCES=$01 ; set after event in wwappliances
 FLAG_DAY01_EVENT02_RUMORSDONE=$02 ; set after completing both previous events
+FLAG_DAY01_OPTIONAL1=$0C ; set after optional event
+FLAG_DAY01_OPTIONAL2=$0D ; set after optional event
 FLAG_NIGHT_01_EVENT00_CAVERN=$03 ; set after event in the cavern
 FLAG_NIGHT_01_EVENT01_EEHALL=$04 ; set after event in eehall
 FLAG_NIGHT_01_EVENT02_STORYEVENTSDONE=$05 ; set after story events for the day are done
+FLAG_NIGHT01_OPTIONAL1=$0E ; set after optional event
+FLAG_NIGHT01_OPTIONAL2=$0F ; set after optional event
 FLAG_DAY02_EVENT00_TLODGE=$00 ; set after dialog in tlodge
 FLAG_DAY02_EVENT01_TBOOKS=$01 ; set after dialog in tbooks
 FLAG_DAY02_EVENT02_TALKEDTOPEOPLE=$02 ; set after completing both previous events
 FLAG_DAY02_EVENT03_DENIMCOUNTRY=$03 ; set after completing all daytime events
+FLAG_DAY02_OPTIONAL1=$0C ; set after optional event
+FLAG_DAY02_OPTIONAL2=$0D ; set after optional event
 FLAG_NIGHT02_EVENT00_FCBCAMPING=$04 ; set after dialog in fcbcamping
 FLAG_NIGHT02_EVENT01_NSHACK=$05 ; set after dialog in nshack
 FLAG_NIGHT02_EVENT02_WWHALL=$06 ; set after dialog in wwhall
+FLAG_NIGHT02_OPTIONAL1=$0E ; set after optional event
+FLAG_NIGHT02_OPTIONAL2=$0F ; set after optional event
 FLAG_DAY03_EVENT00_POGODAWG=$00 ; set after event in pogodag
 FLAG_DAY03_EVENT01_CHECKERS=$01 ; set after event in checkers
 FLAG_DAY03_EVENT02_CLOTHESNOW=$02 ; set after event in clothesnow
 FLAG_DAY03_EVENT03_LUNCHESDELIVERED=$03 ; set after completing the 3 previous events
 FLAG_DAY03_EVENT03_SOUTHHALL=$04 ; set after event in southhall
 FLAG_DAY03_EVENT04_STORYEVENTSDONE=$05 ; set after story events for the day are done
+FLAG_DAY03_OPTIONAL1=$0C ; set after optional event
+FLAG_DAY03_OPTIONAL2=$0D ; set after optional event
 FLAG_NIGHT03_EVENT00_TLODGE=$06 ; set after event in tlodge
 FLAG_NIGHT03_EVENT01_CNOW=$07 ; set after event in cnow
 FLAG_NIGHT03_EVENT02_NSHACK=$08 ; set after event in nshack
+FLAG_NIGHT03_OPTIONAL1=$0E ; set after optional event
+FLAG_NIGHT03_OPTIONAL2=$0F ; set after optional event
 FLAG_DAY04_EVENT00_CAVERN=$00 ; set after event in cavern 
+FLAG_DAY04_OPTIONAL1=$0C ; set after optional event
+FLAG_DAY04_OPTIONAL2=$0D ; set after optional event
 FLAG_NIGHT04_EVENT00_NSHACKNIGHT=$01 ; set after event in nshack
 FLAG_NIGHT04_EVENT01_CAVERNBACKROOM=$02 ; set after event in the cavern backroom
+FLAG_NIGHT04_OPTIONAL1=$0E ; set after optional event
+FLAG_NIGHT04_OPTIONAL2=$0F ; set after optional event
 FLAG_DAY05_EVENT00_FCBFIREARMS=$00 ; set after event in fcbfirearms
 FLAG_DAY05_EVENT01_WWAUDIO=$01 ; set after event wwaudio
 FLAG_DAY05_EVENT02_CONTESTDONE=$02 ; set after completing both previous events
+FLAG_DAY05_OPTIONAL1=$0C ; set after optional event
+FLAG_DAY05_OPTIONAL2=$0D ; set after optional event
 FLAG_NIGHT05_EVENT00_CAVERN=$03 ; set after event in the cavern
 FLAG_NIGHT05_EVENT01_BASEMENTMDORM=$04 ; set after event in the basement dorm
 FLAG_NIGHT05_EVENT02_BASEMENTOFFICE=$05 ; set after event in the basement office
 FLAG_NIGHT05_EVENT03_BASEMENTDONE=$06 ; set after all the required events are done
+FLAG_NIGHT05_OPTIONAL1=$0E ; set after optional event
+FLAG_NIGHT05_OPTIONAL2=$0F ; set after optional event
+FLAG_DAY06_OPTIONAL1=$0A ; set after optional event
+FLAG_DAY06_OPTIONAL2=$0B ; set after optional event
+FLAG_DAY06_OPTIONAL3=$0C ; set after optional event
 FLAG_NIGHT06_EVENT00_BASEMENTKITCHEN=$00 ; set after final scene in the basement
+FLAG_NIGHT06_OPTIONAL1=$0D ; set after optional event
+FLAG_NIGHT06_OPTIONAL2=$0E ; set after optional event
+FLAG_NIGHT06_OPTIONAL3=$0F ; set after optional event
 ;
 ;-------------------------------------------------------------------------------
 ; mission event flags - used to track progress within sub-quests 
@@ -307,8 +337,7 @@ MEM_NPC_LOCATION_CHECKERS=MEM_NPC_LOCATION_DENIMCOUNTRY+$00000004
 MEM_NPC_LOCATION_TLODGE=MEM_NPC_LOCATION_CHECKERS+$00000004
 MEM_NPC_LOCATION_CAVERN=MEM_NPC_LOCATION_TLODGE+$00000004
 MEM_NPC_LOCATION_SVIDEO=MEM_NPC_LOCATION_CAVERN+$00000004
-MEM_NPC_LOCATION_WORKSHOP=MEM_NPC_LOCATION_SVIDEO+$00000004
-MEM_NPC_LOCATION_NSHACK=MEM_NPC_LOCATION_WORKSHOP+$00000004
+MEM_NPC_LOCATION_NSHACK=MEM_NPC_LOCATION_SVIDEO+$00000004
 MEM_NPC_LOCATION_POGODAWG=MEM_NPC_LOCATION_NSHACK+$00000004
 MEM_NPC_LOCATION_CPLANET=MEM_NPC_LOCATION_POGODAWG+$00000004
 MEM_NPC_LOCATION_CNOW=MEM_NPC_LOCATION_CPLANET+$00000004
@@ -334,6 +363,16 @@ PLAYER_SPRITE_ERYN=$0000 ; use tiles for Eryn as player sprite
 PLAYER_SPRITE_CARL=$0001 ; use tiles for Carl as player sprite
 SPRITE_PLAYER_INIT_X=$0114 ; starting x location of player sprite
 SPRITE_PLAYER_INIT_Y=$00E0 ; starting y location of player sprite
+;
+;-------------------------------------------------------------------------------
+; maybe should have named it like these in the memory map to begin with
+;-------------------------------------------------------------------------------
+MEM_REL_DB=MEM_PLAYER1_REL0
+MEM_REL_GRANT=MEM_PLAYER1_REL1
+MEM_REL_NICKY=MEM_PLAYER1_REL2
+MEM_REL_GRUNBERG=MEM_PLAYER2_REL0
+MEM_REL_ELIZA=MEM_PLAYER2_REL1
+MEM_REL_LAURA=MEM_PLAYER2_REL2
 ;
 ;-------------------------------------------------------------------------------
 ; max store id - used to check if a lookup is out of range

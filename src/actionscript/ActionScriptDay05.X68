@@ -154,14 +154,30 @@ ActionScriptDay05FCBCampingRespond:
 ; End of the day
 ;*******************************************************************************
 EndDay05:
-
-;Intro scene - 
-;[ScriptedEventNight05_00_Intro]
-;Carl and Charles reflect on stuff, Carl asks about last xmas
-;[Set objective to OBJECTIVE_D05_O02_LastYear]
-;[set story event at Cavern]
-
-
-
-	rts	
+	;---------------------------------------------------------------------------	
+	; setup the next day
+	;---------------------------------------------------------------------------	
+	move.w	#$000B,(MEM_DAY) ; increment day
+	move.w	#OBJECTIVE_D05_O02_LastYear,(MEM_OBJECTIVE) ; initial objective
+	and.l	#$00000000,(MEM_DAY_EVENT_FLAGS) ; clear event flags
+	move.w	#SCENE_ID_CAVERN,(MEM_STORY_EVENT1_SCENE_ID) ; initial story event
+	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; no 2nd story event
+	move.w	#SCENE_ID_CPLANET,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
+	move.w	#SCENE_ID_WWAPPLIANCES,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
+	move.w	#PLAYER_SPRITE_CARL,(MEM_PLAYER_SPRITE) ; initial sprite
+	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
+	move.w	#$00DE,(MEM_PLAYER_SPRITE_X)
+	move.w	#$00EE,(MEM_PLAYER_SPRITE_Y)
+	;---------------------------------------------------------------------------	
+	; update NPC locations
+	;---------------------------------------------------------------------------	
+	bsr.w	InitNPCLocationsNight ; reset the NPC locations
+	move.l	#$0D000000,(MEM_NPC_LOCATION_TBOOKS)
+	;---------------------------------------------------------------------------	
+	; queue the introduction
+	;---------------------------------------------------------------------------	
+	lea ScriptedEventNight05_00_IntroStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts
 		

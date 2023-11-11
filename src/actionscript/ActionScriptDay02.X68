@@ -144,15 +144,30 @@ ActionScriptDay02FCBCampingRespond:
 ; End of the day
 ;*******************************************************************************
 EndDay02:
-
-;[ScriptedEventNight02_00_Intro]
-;something to make you think of going to the camping section
-;[Set objective to OBJECTIVE_D02_O03_Investigate]
-;[set Story event at FCBCamping]
-;[set Story event at NShack]
-;[Move Victor to WWHall]
-
-
-	rts	
-			
+	;---------------------------------------------------------------------------	
+	; setup the next day
+	;---------------------------------------------------------------------------	
+	move.w	#$0005,(MEM_DAY) ; increment day
+	move.w	#OBJECTIVE_D02_O03_Investigate,(MEM_OBJECTIVE) ; initial objective
+	and.l	#$00000000,(MEM_DAY_EVENT_FLAGS) ; clear event flags
+	move.w	#SCENE_ID_FCBCAMPING,(MEM_STORY_EVENT1_SCENE_ID) ; 1st story event
+	move.w	#SCENE_ID_NSHACK,(MEM_STORY_EVENT2_SCENE_ID) ; 2nd story event
+	move.w	#SCENE_ID_CPLANET,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
+	move.w	#SCENE_ID_VB,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
+	move.w	#PLAYER_SPRITE_CARL,(MEM_PLAYER_SPRITE) ; initial sprite
+	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
+	move.w	#$00DE,(MEM_PLAYER_SPRITE_X)
+	move.w	#$00EE,(MEM_PLAYER_SPRITE_Y)
+	;---------------------------------------------------------------------------	
+	; update NPC locations
+	;---------------------------------------------------------------------------	
+	bsr.w	InitNPCLocationsNight ; reset the NPC locations
+	move.l	#$22000000,(MEM_NPC_LOCATION_WWHALL)	
+	;---------------------------------------------------------------------------	
+	; queue the introduction
+	;---------------------------------------------------------------------------	
+	lea ScriptedEventNight02_00_IntroStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts
 		

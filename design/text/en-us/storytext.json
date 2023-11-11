@@ -293,9 +293,14 @@
          "text":"line2.",
          "align":2
          },
+      "StoryTextDay01DenimCountryNotDone":{
+         "dialogTitle":"OBJ_NPC_LISA",
+         "text":"events not done message",
+         "align":2
+         },
       "StoryTextDay01DenimCountryLine1":{
-         "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"line1.",
+         "dialogTitle":"OBJ_NPC_LISA",
+         "text":"line2.",
          "align":2
          },
       "StoryTextDay01DenimCountryLine2":{

@@ -4,78 +4,107 @@
 ;*******************************************************************************
 
 ;*******************************************************************************
+; SCENE_ID_TBOOKS
+;*******************************************************************************
+ActionScriptNight00TBooksExit:
+	move.l	#$00000000,(MEM_NPC_LOCATION_TBOOKS)
+	bsr.w	DefaultExitScene ; default scene exit
+	rts
+
+;*******************************************************************************
 ; SCENE_ID_EEHALL
 ;*******************************************************************************
 ActionScriptNight00EEHallEnter:	
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;Event on entering EE Hall if FLAG_NIGHT00_EVENT00_EEHall not set
-;Security guard hassles Brett for loitering after close
-;[Run ScriptedEventNight00_01_EEHall]
-;[set FLAG_NIGHT00_EVENT00_EEHall]
-
-	bsr.w ShowDefaultText
-	rts		
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy flags to d7
+	btst.l	#FLAG_NIGHT00_EVENT00_EEHALL,d7 ; test if event ran already
+	beq.s	.event ; branch if not set
+	rts ; otherwise exit
+.event
+	bset.l	#FLAG_NIGHT00_EVENT00_EEHALL,d7 ; set that event ran
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags	
+	; the npcs in the area are different after the event
+	move.l	#$11000000,(MEM_NPC_LOCATION_EEHALL)			
+	; run the scripted event
+	lea	StoryTextNight00EEHallLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea	ScriptedEventNight00_01_EEHallStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts
 	
 ;*******************************************************************************
 ; SCENE_ID_SVIDEO
 ;*******************************************************************************
 ActionScriptNight00SVideoInteract:	
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;1) Deliver special order to SVideo
-;[Story Event in SVideo]
-;[Run ScriptedEventNight00_01_SVideo]
-;[set FLAG_NIGHT00_EVENT01_SVideo]
-;Delivering the special order also begins Carl's trading sequence  
-;[Move Victor to South Hall]
-;[Story event at south hall]
-;[Set objective to OBJECTIVE_D00_O04_Leave] 
-
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy flags to d7
+	btst.l	#FLAG_NIGHT00_EVENT01_SVIDEO,d7 ; test if event ran already
+	beq.s	.event ; branch if not set
+.default
 	bsr.w ShowDefaultText
-	rts		
+	rts	
+.event	
+	bset.l	#FLAG_NIGHT00_EVENT01_SVIDEO,d7 ; set that event ran
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags		
+	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
+	move.l	#$28000000,(MEM_NPC_LOCATION_SHALL) ; move victor to the south hall
+	move.w	#OBJECTIVE_D00_O04_Leave,(MEM_OBJECTIVE) ; update the objective		
+	; remove item that is given during the scripted event
+	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 1st pc inventory
+	move.w	#OBJ_ITEM_SPECIAL_ORDER,d7 ; add item from trading sequence
+	bsr.w	RemoveItem ; add item to inventory	
+	; add item that is received during the scripted event
+	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 1st pc inventory
+	move.w	#OBJ_ITEM_VHS_TAPE,d7 ; add item from trading sequence
+	bsr.w	AddItem ; add item to inventory	
+	; run the scripted event
+	lea	StoryTextNight00SVideoLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea	ScriptedEventNight00_01_SVideoStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts
 
 ;*******************************************************************************
 ; SCENE_ID_SHALL
 ;*******************************************************************************
 ActionScriptNight00SouthHallEnter:
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT00_EVENT02_STORYEVENTSDONE,d7 ; test if required event ran
+	bne.s	.default
 	btst.l	#FLAG_NIGHT00_EVENT00_EEHALL,d7 ; test if required event ran
-	beq.s	.exit
+	beq.s	.default
 	btst.l	#FLAG_NIGHT00_EVENT01_SVIDEO,d7 ; test if required event ran
-	beq.s	.exit
-.event	;TODO
-	bsr.w ShowDefaultText
+	bne.s	.event
+.default	
+	rts
+.event	
+	bset.l	#FLAG_NIGHT00_EVENT02_STORYEVENTSDONE,d7 ; set that required event ran
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.l	#$00000000,(MEM_NPC_LOCATION_SHALL) ; no npcs in south hall after the event
+	; run the scripted event
+	lea	StoryTextNight00SouthHallLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea	ScriptedEventNight00_02_VictorEncounterStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
 	rts		
 
-.exit	
-	rts
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;Enter south hall with FLAG_NIGHT00_EVENT00_EEHall set and FLAG_NIGHT00_EVENT01_SVideo set
-;[Run ScriptedEventNight00_02_VictorEncounter]
-;scene with Victor where it's clear he recognizes you but you aren't sure where you know him from - like he gives you some kind of good night message and Carl's like "I don't remember him being a customer" - Carl reflects on how weird the mall is at night
-;[set FLAG_NIGHT00_EVENT02_StoryEventsDone]
-
-ActionScriptNight00SouthHallExit:	
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;If FLAG_NIGHT00_EVENT02_StoryEventsDone is set, transition to the next day
-;Otherwise blocked with message (also a reusable message)
-
-	bsr.w ShowDefaultText
-	rts
-	
-ActionScriptNight00SouthHallRespond:
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-; is this really needed?
-	bsr.w ShowDefaultText
+ActionScriptNight00SouthHallExit:
+	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d7 ; copy player sprite direction to d7
+	cmpi.w	#DIRECTION_DOWN,d7 ; is the player facing south?
+	beq.s	.south ; branch if so
+	bsr.w	DefaultExitScene ; default scene exit
+	rts	
+.south
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT00_EVENT00_EEHALL,d7 ; test if the mandatory event is complete
+	beq.s	.cantleave ; branch if not
+	btst.l	#FLAG_NIGHT00_EVENT01_SVIDEO,d7 ; test if the mandatory event is complete
+	beq.s	.cantleave ; branch if not
+	btst.l	#FLAG_NIGHT00_EVENT02_STORYEVENTSDONE,d7 ; test if the mandatory event is complete
+	beq.s	.cantleave ; branch if not
+	bsr.w	EndNight00 ; transition to night
+	rts	
+.cantleave
+	lea ScriptedEventNotTimeToLeaveCarlStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event	
 	rts
 	
 ;*******************************************************************************
@@ -156,13 +185,38 @@ ActionScriptNight00CPlanetRespond:
 ; End of the day
 ;*******************************************************************************
 EndNight00:
-
-;[ScriptedEventDay01_00_Intro]
-;Lisa is sending you to bug other stores for rumors
-;[Set objective to OBJECTIVE_D01_O00_RumorSearch]
-;[set story events at cplanet and wwappliances]
-
-
+	;---------------------------------------------------------------------------	
+	; setup the next day
+	;---------------------------------------------------------------------------	
+	move.w	#$0002,(MEM_DAY) ; increment day
+	move.w	#OBJECTIVE_D01_O00_RumorSearch,(MEM_OBJECTIVE) ; initial objective
+	and.l	#$00000000,(MEM_DAY_EVENT_FLAGS) ; clear day event flags
+	move.w	#SCENE_ID_CPLANET,(MEM_STORY_EVENT1_SCENE_ID) ; story event 1
+	move.w	#SCENE_ID_WWAPPLIANCES,(MEM_STORY_EVENT2_SCENE_ID) ; story event 2
+	move.w	#SCENE_ID_CAVERN,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
+	move.w	#SCENE_ID_FCBCAMPING,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
+	move.w	#PLAYER_SPRITE_ERYN,(MEM_PLAYER_SPRITE) ; initial sprite
+	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
+	move.w	#$00C2,(MEM_PLAYER_SPRITE_X)
+	move.w	#$00D0,(MEM_PLAYER_SPRITE_Y)
+	;---------------------------------------------------------------------------	
+	; update NPC locations
+	;---------------------------------------------------------------------------	
+	bsr.w	InitNPCLocationsDay ; reset the NPC locations
+	;---------------------------------------------------------------------------	
+	; set the intro screen
+	;---------------------------------------------------------------------------	
+	move.l	(MEM_GAME_STATE),d7	; copy game state
+	bset.l	#STATE_FLAG_INTRO_SCREEN,d7 ; set intro screen flag
+	move.l	d7,(MEM_GAME_STATE)	; save updated game state
+	; set the intro screen counter
+	move.w	#INTRO_SCREEN_COUNTER_START,(MEM_INTRO_SCENE_COUNTER)
+	lea	SceneIntroDay01,a6	; address of the scene for the title screen
+	bsr.w	LoadScene	; branch to LoadScene subroutine
+	bsr.w	FadeIn	; fade in to the new scene
+	; queue scripted event to launch
+	lea ScriptedEventDay01_00_IntroStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
 	rts	
-		
 

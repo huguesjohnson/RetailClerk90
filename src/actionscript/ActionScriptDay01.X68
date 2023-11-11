@@ -6,47 +6,75 @@
 ;*******************************************************************************
 ; SCENE_ID_DENIMCOUNTRY
 ;*******************************************************************************
-ActionScriptDay01DenimCountryInteract:	
+ActionScriptDay01DenimCountryInteract:
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_DAY01_EVENT00_CPLANET,d7 ; test if event is done
+	beq.s	.notdone
+	btst.l	#FLAG_DAY01_EVENT01_WWAPPLIANCES,d7 ; test if event is done
+	beq.s	.notdone
+	; subtasks are done - so this part of the day is over
+	bsr.w	EndDay01
+	rts		
+.notdone:
+	lea	StoryTextDay01DenimCountryNotDone,a6 ; text to display
+	bsr.w	ShowDialog ; show the first response
+	rts
+.default:	
 	bsr.w ShowDefaultText
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;Denim Country - talk to Lisa if FLAG_DAY01_EVENT02_RumorsDone not set
-;[ScriptedEventDay01_02_ReportBack]
-
 	rts
 
 ;*******************************************************************************
 ; SCENE_ID_CPLANET
 ;*******************************************************************************
 ActionScriptDay01CPlanetInteract:	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_DAY01_EVENT00_CPLANET,d7 ; test if event is done
+	bne.s	.default ; event is done
+	bset.l	#FLAG_DAY01_EVENT00_CPLANET,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#$FFFF,(MEM_STORY_EVENT1_SCENE_ID) ; clear story event	
+	bsr.w	TestDay01Events ; text if all events are complete
+	; setup scripted event
+	lea	StoryTextDay01CPlanetLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventDay01_01_CPlanetStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts	
+.default:
 	bsr.w ShowDefaultText
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;CPlanet - talk to Eliza if FLAG_DAY01_EVENT00_CPlanet not set
-;[set FLAG_DAY01_EVENT00_CPlanet]
-;[ScriptedEventDay01_01_CPlanet]
-
 	rts
 
 ;*******************************************************************************
 ; SCENE_ID_WWAPPLIANCES
 ;*******************************************************************************
 ActionScriptDay01WWAppliancesInteract:	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_DAY01_EVENT01_WWAPPLIANCES,d7 ; test if event is done
+	bne.s	.default ; event is done
+	bset.l	#FLAG_DAY01_EVENT01_WWAPPLIANCES,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; clear story event	
+	bsr.w	TestDay01Events ; text if all events are complete
+	; setup scripted event
+	lea	StoryTextDay01WWAppliancesLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventDay01_02_WWAppliancesStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts	
+.default:
 	bsr.w ShowDefaultText
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;WW Appliances - talk to Laura if FLAG_DAY01_EVENT01_WWAppliances not set
-;[set FLAG_DAY01_EVENT01_WWAppliances]
-;[ScriptedEventDay01_02_WWAppliances]
-;After each - check if both flags FLAG_DAY01_EVENT00_CPlanet and FLAG_DAY01_EVENT01_WWAppliances are set and change objective if so
-;[Set objective to OBJECTIVE_D01_O01_ReportBack]
-;[set story event at denim country]
-;[set FLAG_DAY01_EVENT02_RumorsDone]
+	rts
 
-
+TestDay01Events:
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_DAY01_EVENT00_CPLANET,d7 ; test if the event is complete
+	beq.s	.exit ; exit if not complete
+	btst.l	#FLAG_DAY01_EVENT01_WWAPPLIANCES,d7 ; test if the event is complete
+	beq.s	.exit ; exit if not complete
+	; both events are complete
+	move.w	#SCENE_ID_DENIMCOUNTRY,(MEM_STORY_EVENT1_SCENE_ID) ; 1st story event
+	move.w	#OBJECTIVE_D01_O01_ReportBack,(MEM_OBJECTIVE) ; update objective
+.exit
 	rts
 		
 ;*******************************************************************************
@@ -127,12 +155,32 @@ ActionScriptDay01FCBCampingRespond:
 ; End of the day
 ;*******************************************************************************
 EndDay01:
-
-;Intro scene
-;[ScriptedEventNight01_00_Intro]
-;Dialog with guard, maybe in WE hall, about encounter with Brett last week - "He just took off, I don't know where he went"
-;[Set objective to OBJECTIVE_D01_O02_FollowGuy]
-
-
+	;---------------------------------------------------------------------------	
+	; setup the next day
+	;---------------------------------------------------------------------------	
+	move.w	#$0003,(MEM_DAY) ; increment day
+	move.w	#OBJECTIVE_D01_O02_FollowGuy,(MEM_OBJECTIVE) ; initial objective
+	and.l	#$00000000,(MEM_DAY_EVENT_FLAGS) ; clear event flags
+	move.w	#SCENE_ID_CAVERN,(MEM_STORY_EVENT1_SCENE_ID) ; initial story event
+	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; no 2nd story event
+	move.w	#SCENE_ID_WWAPPLIANCES,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
+	move.w	#SCENE_ID_VB,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
+	move.w	#PLAYER_SPRITE_CARL,(MEM_PLAYER_SPRITE) ; initial sprite
+	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
+	move.w	#$00DE,(MEM_PLAYER_SPRITE_X)
+	move.w	#$00EE,(MEM_PLAYER_SPRITE_Y)
+	;---------------------------------------------------------------------------	
+	; update NPC locations
+	;---------------------------------------------------------------------------	
+	bsr.w	InitNPCLocationsNight ; reset the NPC locations
+	move.l	#$18000000,(MEM_NPC_LOCATION_WEHALL)	
+	;---------------------------------------------------------------------------	
+	; queue the ending dialog and transition to night
+	;---------------------------------------------------------------------------	
+	lea	StoryTextDay01DenimCountry2Line1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog	
+	lea ScriptedEventNight01_00_IntroStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
 	rts	
 		

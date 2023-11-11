@@ -165,13 +165,42 @@ ActionScriptNight04WWAppliancesRespond:
 ; End of the day
 ;*******************************************************************************
 EndNight04:
-
-;Intro scene - 
-;[ScriptedEventDay05_00_Intro]
-;Dani is visiting the store. You need to round up some last minute shoppers. Dani mentions she is a pro. Awkward conversation between Lisa and Dani. Maybe Dani suggests a contest.
-;[Set objective to OBJECTIVE_D05_O00_Contest]
-;[set story events at FCBFirearms and WWAudio]
-
-
+	;---------------------------------------------------------------------------	
+	; setup the next day
+	;---------------------------------------------------------------------------	
+	move.w	#$000A,(MEM_DAY) ; increment day
+	move.w	#OBJECTIVE_D05_O00_Contest,(MEM_OBJECTIVE) ; initial objective
+	and.l	#$00000000,(MEM_DAY_EVENT_FLAGS) ; clear day event flags
+	move.w	#SCENE_ID_FCBFIREARMS,(MEM_STORY_EVENT1_SCENE_ID) ; story event 1
+	move.w	#SCENE_ID_WWAUDIO,(MEM_STORY_EVENT2_SCENE_ID) ; story event 2
+	move.w	#SCENE_ID_CAVERN,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
+	move.w	#SCENE_ID_FCBCAMPING,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
+	move.w	#PLAYER_SPRITE_ERYN,(MEM_PLAYER_SPRITE) ; initial sprite
+	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
+	move.w	#$00C2,(MEM_PLAYER_SPRITE_X)
+	move.w	#$00D0,(MEM_PLAYER_SPRITE_Y)
+	;---------------------------------------------------------------------------	
+	; update NPC locations
+	;---------------------------------------------------------------------------	
+	bsr.w	InitNPCLocationsDay ; reset the NPC locations
+	move.l	#$060D0000,(MEM_NPC_LOCATION_VB)	
+	move.l	#$05100000,(MEM_NPC_LOCATION_DENIMCOUNTRY)
+	move.l	#$0E000000,(MEM_NPC_LOCATION_FCBFIREARMS)
+	move.l	#$1B250000,(MEM_NPC_LOCATION_WWAUDIO)
+	;---------------------------------------------------------------------------	
+	; set the intro screen
+	;---------------------------------------------------------------------------	
+	move.l	(MEM_GAME_STATE),d7	; copy game state
+	bset.l	#STATE_FLAG_INTRO_SCREEN,d7 ; set intro screen flag
+	move.l	d7,(MEM_GAME_STATE)	; save updated game state
+	; set the intro screen counter
+	move.w	#INTRO_SCREEN_COUNTER_START,(MEM_INTRO_SCENE_COUNTER)
+	lea	SceneIntroDay05,a6	; address of the scene for the title screen
+	bsr.w	LoadScene	; branch to LoadScene subroutine
+	bsr.w	FadeIn	; fade in to the new scene
+	; queue scripted event to launch
+	lea ScriptedEventDay05_00_IntroStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
 	rts	
-		
+

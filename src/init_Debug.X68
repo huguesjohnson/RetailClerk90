@@ -225,10 +225,10 @@ LaunchDebug01: ; day00 - after visiting info desk
 	rts	
 
 LaunchDebug02: ; night 00 - start
-	; add item that is received during the 1st trading sequence event
-	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_SCARF,d7 ; add item from trading sequence
-	bsr.w	AddItem ; add item to inventory
+	; add item that is needed for the first trading sequence
+	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 1st pc inventory
+	move.w	#OBJ_ITEM_SPECIAL_ORDER,d7 ; add item for the trading sequence
+	bsr.w	AddItem ; add item to inventory	
 	;---------------------------------------------------------------------------
 	; global events
 	;---------------------------------------------------------------------------
@@ -265,12 +265,192 @@ LaunchDebug02: ; night 00 - start
 	bsr.w QueueScriptedEvent ; queue the event
 	rts
 
+LaunchDebug03: ; night 00 - after trading sequence
+	; add item that is gained after first trading sequence
+	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 1st pc inventory
+	move.w	#OBJ_ITEM_VHS_TAPE,d7 ; add item from the trading sequence
+	bsr.w	AddItem ; add item to inventory	
+	;---------------------------------------------------------------------------
+	; global events
+	;---------------------------------------------------------------------------
+	move.l	(MEM_GAME_STATE),d7	; copy game state to d7
+	bset.l	#STATE_FLAG_EXPLORING,d7 ; set exploring flag
+	bset.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is available
+	move.l	d7,(MEM_GAME_STATE)	; save updated game state
+	;---------------------------------------------------------------------------	
+	; setup events complete
+	;---------------------------------------------------------------------------	
+	and.l	#$00000000,d7 ; clear out d7
+	bset.l	#FLAG_NIGHT00_EVENT00_EEHALL,d7
+	bset.l	#FLAG_NIGHT00_EVENT01_SVIDEO,d7
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; update event flags
+	;---------------------------------------------------------------------------	
+	; setup the day
+	;---------------------------------------------------------------------------	
+	move.w	#$0001,(MEM_DAY) ; increment day
+	move.w	#OBJECTIVE_D00_O04_Leave,(MEM_OBJECTIVE) ; initial objective
+	and.l	#$00000000,(MEM_GLOBAL_EVENT_FLAGS)	; clear event flags
+	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
+	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; no 2nd story event
+	move.w	#SCENE_ID_VB,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
+	move.w	#SCENE_ID_CPLANET,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
+	move.w	#PLAYER_SPRITE_CARL,(MEM_PLAYER_SPRITE) ; initial sprite
+	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
+	move.w	#$00DE,(MEM_PLAYER_SPRITE_X)
+	move.w	#$00EE,(MEM_PLAYER_SPRITE_Y)
+	;---------------------------------------------------------------------------	
+	; update NPC locations
+	;---------------------------------------------------------------------------	
+	bsr.w	InitNPCLocationsNight ; reset the NPC locations
+	move.l	#$00000000,(MEM_NPC_LOCATION_TBOOKS)
+	move.l	#$11000000,(MEM_NPC_LOCATION_EEHALL)	
+	move.l	#$28000000,(MEM_NPC_LOCATION_SHALL)		
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneSVideo,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
+	rts	
 
+LaunchDebug04: ; night 00 - after required events are done
+	; add item that is gained after first trading sequence
+	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 1st pc inventory
+	move.w	#OBJ_ITEM_VHS_TAPE,d7 ; add item from the trading sequence
+	bsr.w	AddItem ; add item to inventory	
+	;---------------------------------------------------------------------------
+	; global events
+	;---------------------------------------------------------------------------
+	move.l	(MEM_GAME_STATE),d7	; copy game state to d7
+	bset.l	#STATE_FLAG_EXPLORING,d7 ; set exploring flag
+	bset.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is available
+	move.l	d7,(MEM_GAME_STATE)	; save updated game state
+	;---------------------------------------------------------------------------	
+	; setup events complete
+	;---------------------------------------------------------------------------	
+	and.l	#$00000000,d7 ; clear out d7
+	bset.l	#FLAG_NIGHT00_EVENT00_EEHALL,d7
+	bset.l	#FLAG_NIGHT00_EVENT01_SVIDEO,d7
+	bset.l	#FLAG_NIGHT00_EVENT02_STORYEVENTSDONE,d7
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; update event flags
+	;---------------------------------------------------------------------------	
+	; setup the day
+	;---------------------------------------------------------------------------	
+	move.w	#$0001,(MEM_DAY) ; increment day
+	move.w	#OBJECTIVE_D00_O04_Leave,(MEM_OBJECTIVE) ; initial objective
+	and.l	#$00000000,(MEM_GLOBAL_EVENT_FLAGS)	; clear event flags
+	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
+	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; no 2nd story event
+	move.w	#SCENE_ID_VB,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
+	move.w	#SCENE_ID_CPLANET,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
+	move.w	#PLAYER_SPRITE_CARL,(MEM_PLAYER_SPRITE) ; initial sprite
+	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
+	move.w	#$00DE,(MEM_PLAYER_SPRITE_X)
+	move.w	#$00EE,(MEM_PLAYER_SPRITE_Y)
+	;---------------------------------------------------------------------------	
+	; update NPC locations
+	;---------------------------------------------------------------------------	
+	bsr.w	InitNPCLocationsNight ; reset the NPC locations
+	move.l	#$00000000,(MEM_NPC_LOCATION_TBOOKS)
+	move.l	#$11000000,(MEM_NPC_LOCATION_EEHALL)	
+	move.l	#$00000000,(MEM_NPC_LOCATION_SHALL)		
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneSHall,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
+	rts	
+	
+LaunchDebug05: ; day 01 - at the start
+	;---------------------------------------------------------------------------
+	; global events
+	;---------------------------------------------------------------------------
+	move.l	(MEM_GAME_STATE),d7	; copy game state to d7
+	bset.l	#STATE_FLAG_EXPLORING,d7 ; set exploring flag
+	bset.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is available
+	move.l	d7,(MEM_GAME_STATE)	; save updated game state
+	;---------------------------------------------------------------------------	
+	; setup the day
+	;---------------------------------------------------------------------------	
+	move.w	#$0002,(MEM_DAY) ; increment day
+	move.w	#OBJECTIVE_D01_O00_RumorSearch,(MEM_OBJECTIVE) ; initial objective
+	and.l	#$00000000,(MEM_DAY_EVENT_FLAGS) ; clear day event flags
+	move.w	#SCENE_ID_CPLANET,(MEM_STORY_EVENT1_SCENE_ID) ; story event 1
+	move.w	#SCENE_ID_WWAPPLIANCES,(MEM_STORY_EVENT2_SCENE_ID) ; story event 2
+	move.w	#SCENE_ID_CAVERN,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
+	move.w	#SCENE_ID_FCBCAMPING,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
+	move.w	#PLAYER_SPRITE_ERYN,(MEM_PLAYER_SPRITE) ; initial sprite
+	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
+	move.w	#$00C2,(MEM_PLAYER_SPRITE_X)
+	move.w	#$00D0,(MEM_PLAYER_SPRITE_Y)
+	;---------------------------------------------------------------------------	
+	; update NPC locations
+	;---------------------------------------------------------------------------	
+	bsr.w	InitNPCLocationsDay ; reset the NPC locations
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneDenimCountry,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
+	; queue scripted event to launch
+	lea ScriptedEventDay01_00_IntroStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts	
 
-LaunchDebug03:
-LaunchDebug04:
-LaunchDebug05:
-LaunchDebug06:
+LaunchDebug06: ; day 01 - after required events are done
+	;---------------------------------------------------------------------------
+	; global events
+	;---------------------------------------------------------------------------
+	move.l	(MEM_GAME_STATE),d7	; copy game state to d7
+	bset.l	#STATE_FLAG_EXPLORING,d7 ; set exploring flag
+	bset.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is available
+	move.l	d7,(MEM_GAME_STATE)	; save updated game state
+	;---------------------------------------------------------------------------	
+	; setup the day
+	;---------------------------------------------------------------------------	
+	move.w	#$0002,(MEM_DAY) ; increment day
+	and.l	#$00000000,d7
+	bset.l	#FLAG_DAY01_EVENT00_CPLANET,d7
+	bset.l	#FLAG_DAY01_EVENT01_WWAPPLIANCES,d7	
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; set day event flags
+	bsr.w	TestDay01Events
+	move.w	#SCENE_ID_CAVERN,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
+	move.w	#SCENE_ID_FCBCAMPING,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
+	move.w	#PLAYER_SPRITE_ERYN,(MEM_PLAYER_SPRITE) ; initial sprite
+	;---------------------------------------------------------------------------	
+	; update NPC locations
+	;---------------------------------------------------------------------------	
+	bsr.w	InitNPCLocationsDay ; reset the NPC locations
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneDenimCountry,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
+	rts	
+
 LaunchDebug07:
 LaunchDebug08:
 LaunchDebug09:

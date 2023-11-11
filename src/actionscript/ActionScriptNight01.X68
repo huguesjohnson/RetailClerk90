@@ -4,6 +4,14 @@
 ;*******************************************************************************
 
 ;*******************************************************************************
+; SCENE_ID_WEHALL:
+;*******************************************************************************
+ActionScriptNight01WEHallExit:
+	move.l	#$00000000,(MEM_NPC_LOCATION_WEHALL)
+	bsr.w	DefaultExitScene ; default scene exit
+	rts	
+
+;*******************************************************************************
 ; SCENE_ID_CAVERN
 ;*******************************************************************************
 ActionScriptNight01CavernInteract:	
@@ -103,7 +111,7 @@ ActionScriptNight01WWAppliancesRespond:
 	; setup the scripted event
 	lea	StoryTextNight01WWAppliancesChoice0,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
-	lea ScriptedEventNight01_Optional01Start,a6 ; point a6 to event to load
+	lea ScriptedEventNight01_Optional00Start,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 	rts	
 
@@ -149,12 +157,38 @@ ActionScriptNight01VBRespond:
 ; End of the day
 ;*******************************************************************************
 EndNight01:
-;[ScriptedEventDay02_00_Intro]
-;"Why are you asking me about this?" with Grunberg - response about needing to talk to people here a long time - response about how the store only opened 2 years ago and which stores have been there since 1975
-;[Set objective to OBJECTIVE_D02_O00_TalkToEmployees]
-;[set Story event at TLodge]
-;[set Story event at TBooks]
-
-
+	;---------------------------------------------------------------------------	
+	; setup the next day
+	;---------------------------------------------------------------------------	
+	move.w	#$0004,(MEM_DAY) ; increment day
+	move.w	#OBJECTIVE_D02_O00_TalkToEmployees,(MEM_OBJECTIVE) ; initial objective
+	and.l	#$00000000,(MEM_DAY_EVENT_FLAGS) ; clear day event flags
+	move.w	#SCENE_ID_TLODGE,(MEM_STORY_EVENT1_SCENE_ID) ; story event 1
+	move.w	#SCENE_ID_TBOOKS,(MEM_STORY_EVENT2_SCENE_ID) ; story event 2
+	move.w	#SCENE_ID_SVIDEO,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
+	move.w	#SCENE_ID_FCBCAMPING,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
+	move.w	#PLAYER_SPRITE_ERYN,(MEM_PLAYER_SPRITE) ; initial sprite
+	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
+	move.w	#$00C2,(MEM_PLAYER_SPRITE_X)
+	move.w	#$00D0,(MEM_PLAYER_SPRITE_Y)
+	;---------------------------------------------------------------------------	
+	; update NPC locations
+	;---------------------------------------------------------------------------	
+	bsr.w	InitNPCLocationsDay ; reset the NPC locations
+	;---------------------------------------------------------------------------	
+	; set the intro screen
+	;---------------------------------------------------------------------------	
+	move.l	(MEM_GAME_STATE),d7	; copy game state
+	bset.l	#STATE_FLAG_INTRO_SCREEN,d7 ; set intro screen flag
+	move.l	d7,(MEM_GAME_STATE)	; save updated game state
+	; set the intro screen counter
+	move.w	#INTRO_SCREEN_COUNTER_START,(MEM_INTRO_SCENE_COUNTER)
+	lea	SceneIntroDay02,a6	; address of the scene for the title screen
+	bsr.w	LoadScene	; branch to LoadScene subroutine
+	bsr.w	FadeIn	; fade in to the new scene
+	; queue scripted event to launch
+	lea ScriptedEventDay02_00_IntroStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
 	rts	
-		
+

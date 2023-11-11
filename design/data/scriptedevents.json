@@ -522,6 +522,15 @@
             "intValue":2
          },
          {
+            "comment":"fade out",
+            "command":"FADE_BLACK"
+         },
+         {
+            "comment":"change scene to dcountry",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_DENIMCOUNTRY"
+         },
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay01DenimCountryLine1"
@@ -576,29 +585,6 @@
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay01WWAppliancesLine2"
-         },
-         {
-            "comment":"end",
-            "command":"END"
-         }
-      ]
-   },  
-   {
-      "name":"ScriptedEventDay01_02_ReportBack",
-      "actions":[
-         {
-            "comment":"NPC0 sprite",
-            "intValue":2
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay01DenimCountry2Line1"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay01DenimCountry2Line2"
          },
          {
             "comment":"end",
@@ -662,8 +648,37 @@
          {
             "comment":"dialog",
             "command":"DIALOG",
+            "label":"StoryTextDay01DenimCountry2Line1"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay01DenimCountry2Line2"
+         },
+         {
+            "comment":"fade out",
+            "command":"FADE_BLACK"
+         },
+         {
+            "comment":"change scene to w/e hall",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_WEHALL"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
             "label":"StoryTextNight01WEHallLine1"
          },
+         {
+            "comment":"change to npc0 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         },          
+         {
+            "comment":"have NPC move right",
+            "direction":"RIGHT",
+            "intValue":40
+         },         
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -796,6 +811,15 @@
          {
             "comment":"NPC0 sprite",
             "intValue":2
+         },
+         {
+            "comment":"fade out",
+            "command":"FADE_BLACK"
+         },
+         {
+            "comment":"change scene to vb",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_VB"
          },
          {
             "comment":"dialog",
@@ -959,6 +983,15 @@
             "intValue":2
          },
          {
+            "comment":"fade out",
+            "command":"FADE_BLACK"
+         },
+         {
+            "comment":"change scene to tbooks",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_TBOOKS"
+         },
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay02TBooksLine1"
@@ -1118,6 +1151,15 @@
          {
             "comment":"NPC0 sprite",
             "intValue":2
+         },
+         {
+            "comment":"fade out",
+            "command":"FADE_BLACK"
+         },
+         {
+            "comment":"change scene to denim country",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_DENIMCOUNTRY"
          },
          {
             "comment":"dialog",
@@ -1304,6 +1346,15 @@
             "intValue":2
          },
          {
+            "comment":"fade out",
+            "command":"FADE_BLACK"
+         },
+         {
+            "comment":"change scene to tbooks",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_TBOOKS"
+         },
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight03TBooksLine1"
@@ -1465,6 +1516,15 @@
             "intValue":2
          },
          {
+            "comment":"fade out",
+            "command":"FADE_BLACK"
+         },
+         {
+            "comment":"change scene to e/w hall",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_EWHALL"
+         },
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay04EWHallLine1"
@@ -1578,6 +1638,15 @@
          {
             "comment":"NPC0 sprite",
             "intValue":2
+         },
+         {
+            "comment":"fade out",
+            "command":"FADE_BLACK"
+         },
+         {
+            "comment":"change scene to tbooks",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_TBOOKS"
          },
          {
             "comment":"dialog",
@@ -1718,6 +1787,15 @@
             "intValue":2
          },
          {
+            "comment":"fade out",
+            "command":"FADE_BLACK"
+         },
+         {
+            "comment":"change scene to denim country",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_DENIMCOUNTRY"
+         },
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay05DenimCountryLine1"
@@ -1854,6 +1932,15 @@
          {
             "comment":"NPC0 sprite",
             "intValue":2
+         },
+         {
+            "comment":"fade out",
+            "command":"FADE_BLACK"
+         },
+         {
+            "comment":"change scene to tbooks",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_TBOOKS"
          },
          {
             "comment":"dialog",
@@ -1994,6 +2081,15 @@
             "intValue":2
          },
          {
+            "comment":"fade out",
+            "command":"FADE_BLACK"
+         },
+         {
+            "comment":"change scene to denim country",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_DENIMCOUNTRY"
+         },
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay06DemimCountryLine1"
@@ -2107,6 +2203,15 @@
          {
             "comment":"NPC0 sprite",
             "intValue":2
+         },
+         {
+            "comment":"fade out",
+            "command":"FADE_BLACK"
+         },
+         {
+            "comment":"change scene to tbooks",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_TBOOKS"
          },
          {
             "comment":"dialog",

@@ -13,7 +13,9 @@ TestIntroScreenLoadScene:
 	bclr.l	#STATE_FLAG_INTRO_SCREEN,d7 ; clear game state flag
 	bset.l	#STATE_FLAG_EXPLORING,d7	; initial mode is exploring
 	move.l	d7,(MEM_GAME_STATE)	; save updated game state
-	; determine which scene to load
+	btst.l	#STATE_FLAG_SCRIPTED_EVENT,d7 ; test if a scripted event is queued
+	bne.s	ExitProcessIntroScreen ; if so, have that handle loading the next scene
+	; otherwise determine which scene to load
 	move.w	(MEM_ACTIVE_SCENE_EXIT_N),d6	; copy any exit to d6
 	mulu.w	#LWORD_SIZE,d6	; SceneDefinitionTable entries are long values
 	lea	SceneDefinitionTable,a5	; point to scene table

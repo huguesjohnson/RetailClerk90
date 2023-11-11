@@ -84,14 +84,33 @@ ActionScriptDay06FCBCampingRespond:
 ; End of the day
 ;*******************************************************************************
 EndDay06:
+	;---------------------------------------------------------------------------	
+	; setup the next day
+	;---------------------------------------------------------------------------	
+	move.w	#$000D,(MEM_DAY) ; increment day
+	move.w	#OBJECTIVE_D06_O01_FinalDay,(MEM_OBJECTIVE) ; initial objective
+	and.l	#$00000000,(MEM_DAY_EVENT_FLAGS) ; clear event flags
+	move.w	#SCENE_ID_BASEMENTCAFE,(MEM_STORY_EVENT1_SCENE_ID) ; initial story event
+	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; no 2nd story event
+;TODO - determine which of these to show
+;	move.w	#SCENE_ID_VB,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
+;	move.w	#SCENE_ID_CPLANET,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
+;	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
+	move.w	#PLAYER_SPRITE_CARL,(MEM_PLAYER_SPRITE) ; initial sprite
+	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
+	move.w	#$00DE,(MEM_PLAYER_SPRITE_X)
+	move.w	#$00EE,(MEM_PLAYER_SPRITE_Y)
+	;---------------------------------------------------------------------------	
+	; update NPC locations
+	;---------------------------------------------------------------------------	
+	bsr.w	InitNPCLocationsNight ; reset the NPC locations
+	move.l	#$27000000,(MEM_NPC_LOCATION_TBOOKS)
+	;---------------------------------------------------------------------------	
+	; queue the introduction
+	;---------------------------------------------------------------------------	
+	lea ScriptedEventNight06_00_IntroStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts
 
-;Intro scene - 
-;[ScriptedEventNight06_00_Intro]
-;Scene where he's training his replacement and can now leave before closing for the first time.
-;[Set objective to OBJECTIVE_D06_O01_FinalDay]
-;[set story event at BasementKitchen]
 
-
-	rts	
-		
 		

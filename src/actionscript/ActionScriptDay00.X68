@@ -250,7 +250,6 @@ EndDay00:
 	;---------------------------------------------------------------------------	
 	move.w	#$0001,(MEM_DAY) ; increment day
 	move.w	#OBJECTIVE_D00_O03_SVideo,(MEM_OBJECTIVE) ; initial objective
-	and.l	#$00000000,(MEM_GLOBAL_EVENT_FLAGS)	; clear event flags
 	and.l	#$00000000,(MEM_DAY_EVENT_FLAGS) ; clear event flags
 	move.w	#SCENE_ID_SVIDEO,(MEM_STORY_EVENT1_SCENE_ID) ; initial story event
 	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; no 2nd story event
@@ -261,6 +260,10 @@ EndDay00:
 	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
 	move.w	#$00DE,(MEM_PLAYER_SPRITE_X)
 	move.w	#$00EE,(MEM_PLAYER_SPRITE_Y)
+	; add item that is needed for the first trading sequence
+	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 1st pc inventory
+	move.w	#OBJ_ITEM_SPECIAL_ORDER,d7 ; add item for the trading sequence
+	bsr.w	AddItem ; add item to inventory		
 	;---------------------------------------------------------------------------	
 	; update NPC locations
 	;---------------------------------------------------------------------------	

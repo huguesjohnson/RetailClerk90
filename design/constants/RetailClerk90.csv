@@ -29,7 +29,6 @@ FLAG_NIGHT00_OPTIONAL1,$0E,set after optional event
 FLAG_NIGHT00_OPTIONAL2,$0F,set after optional event
 FLAG_DAY01_EVENT00_CPLANET,$00,set after event in cplanet
 FLAG_DAY01_EVENT01_WWAPPLIANCES,$01,set after event in wwappliances
-FLAG_DAY01_EVENT02_RUMORSDONE,$02,set after completing both previous events
 FLAG_DAY01_OPTIONAL1,$0C,set after optional event
 FLAG_DAY01_OPTIONAL2,$0D,set after optional event
 FLAG_NIGHT_01_EVENT00_CAVERN,$03,set after event in the cavern
@@ -232,7 +231,7 @@ OBJECTIVE_D02_O04_Leave,$000E
 OBJECTIVE_D03_O00_VisitPogoDawg,$000F
 OBJECTIVE_D03_O01_DeliverLunches,$0010
 OBJECTIVE_D03_O02_ReportBack,$0011
-OBJECTIVE_D03_O03_Revist,$0012
+OBJECTIVE_D03_O03_Revisit,$0012
 OBJECTIVE_D03_O04_CheckIn,$0013
 ;
 ;-------------------------------------------------------------------------------

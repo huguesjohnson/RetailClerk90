@@ -298,6 +298,11 @@ ScriptedEventNight00_Optional01_ElizaEnd:
 ScriptedEventDay01_00_IntroStart:
 	; NPC0 sprite
 	dc.w	$0002
+	; fade out
+	dc.w	SCRIPTED_EVENT_FADE_BLACK
+	; change scene to dcountry
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_DENIMCOUNTRY
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay01DenimCountryLine1
@@ -334,19 +339,6 @@ ScriptedEventDay01_02_WWAppliancesStart:
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay01_02_WWAppliancesEnd:
 
-ScriptedEventDay01_02_ReportBackStart:
-	; NPC0 sprite
-	dc.w	$0002
-	; dialog
-	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextDay01DenimCountry2Line1
-	; dialog
-	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextDay01DenimCountry2Line2
-	; end
-	dc.w	SCRIPTED_EVENT_END
-ScriptedEventDay01_02_ReportBackEnd:
-
 ScriptedEventDay01_Optional00_DBStart:
 	; NPC0 sprite
 	dc.w	$0002
@@ -378,7 +370,24 @@ ScriptedEventNight01_00_IntroStart:
 	dc.w	$0002
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01DenimCountry2Line1
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01DenimCountry2Line2
+	; fade out
+	dc.w	SCRIPTED_EVENT_FADE_BLACK
+	; change scene to w/e hall
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_WEHALL
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01WEHallLine1
+	; change to npc0 sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0002
+	; have NPC move right
+	dc.w	DIRECTION_RIGHT
+	dc.w	$0028
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01WEHallLine2
@@ -454,6 +463,11 @@ ScriptedEventNight01_Optional01End:
 ScriptedEventDay02_00_IntroStart:
 	; NPC0 sprite
 	dc.w	$0002
+	; fade out
+	dc.w	SCRIPTED_EVENT_FADE_BLACK
+	; change scene to vb
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_VB
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay02VBLine1
@@ -545,6 +559,11 @@ ScriptedEventDay02_Optional01End:
 ScriptedEventNight02_00_IntroStart:
 	; NPC0 sprite
 	dc.w	$0002
+	; fade out
+	dc.w	SCRIPTED_EVENT_FADE_BLACK
+	; change scene to tbooks
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_TBOOKS
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay02TBooksLine1
@@ -636,6 +655,11 @@ ScriptedEventNight02_04_VisionEnd:
 ScriptedEventDay03_00_IntroStart:
 	; NPC0 sprite
 	dc.w	$0002
+	; fade out
+	dc.w	SCRIPTED_EVENT_FADE_BLACK
+	; change scene to denim country
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_DENIMCOUNTRY
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay03DenimCountryLine1
@@ -740,6 +764,11 @@ ScriptedEventDay03_Optional01_NickyEnd:
 ScriptedEventNight03_00_IntroStart:
 	; NPC0 sprite
 	dc.w	$0002
+	; fade out
+	dc.w	SCRIPTED_EVENT_FADE_BLACK
+	; change scene to tbooks
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_TBOOKS
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight03TBooksLine1
@@ -831,6 +860,11 @@ ScriptedEventNight03_Optional01End:
 ScriptedEventDay04_00_IntroStart:
 	; NPC0 sprite
 	dc.w	$0002
+	; fade out
+	dc.w	SCRIPTED_EVENT_FADE_BLACK
+	; change scene to e/w hall
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_EWHALL
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay04EWHallLine1
@@ -896,6 +930,11 @@ ScriptedEventDay04_Optional01End:
 ScriptedEventNight04_00_IntroStart:
 	; NPC0 sprite
 	dc.w	$0002
+	; fade out
+	dc.w	SCRIPTED_EVENT_FADE_BLACK
+	; change scene to tbooks
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_TBOOKS
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight04TBooksLine1
@@ -974,6 +1013,11 @@ ScriptedEventNight04_Optional01_GrunbergEnd:
 ScriptedEventDay05_00_IntroStart:
 	; NPC0 sprite
 	dc.w	$0002
+	; fade out
+	dc.w	SCRIPTED_EVENT_FADE_BLACK
+	; change scene to denim country
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_DENIMCOUNTRY
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay05DenimCountryLine1
@@ -1052,6 +1096,11 @@ ScriptedEventDay05_Optional01End:
 ScriptedEventNight05_00_IntroStart:
 	; NPC0 sprite
 	dc.w	$0002
+	; fade out
+	dc.w	SCRIPTED_EVENT_FADE_BLACK
+	; change scene to tbooks
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_TBOOKS
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight05TBooksLine1
@@ -1130,6 +1179,11 @@ ScriptedEventNight05_Optional01End:
 ScriptedEventDay06_00_IntroStart:
 	; NPC0 sprite
 	dc.w	$0002
+	; fade out
+	dc.w	SCRIPTED_EVENT_FADE_BLACK
+	; change scene to denim country
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_DENIMCOUNTRY
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay06DemimCountryLine1
@@ -1195,6 +1249,11 @@ ScriptedEventDay06_Optional02_GrantEnd:
 ScriptedEventNight06_00_IntroStart:
 	; NPC0 sprite
 	dc.w	$0002
+	; fade out
+	dc.w	SCRIPTED_EVENT_FADE_BLACK
+	; change scene to tbooks
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_TBOOKS
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight06TBooksLine1

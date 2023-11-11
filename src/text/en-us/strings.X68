@@ -1587,13 +1587,13 @@ DebugScreenLine02:
 DebugScreenLine03:
 	dc.b	"{Night0 start      {(not implemented)",ETX
 DebugScreenLine04:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{Night0 after trade{(not implemented)",ETX
 DebugScreenLine05:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{Night0 events done{(not implemented)",ETX
 DebugScreenLine06:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{Day1 start        {(not implemented)",ETX
 DebugScreenLine07:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{Day1 events done  {(not implemented)",ETX
 DebugScreenLine08:
 	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine09:
@@ -2233,9 +2233,14 @@ StoryTextNight00CPlanetLine2:
 	dc.w	OBJ_NPC_ELIZA
 	dc.b	"line2.",ETX
 	align 2
+StoryTextDay01DenimCountryNotDone:
+	dc.w	OBJ_NPC_LISA
+	dc.b	"events not done",LF
+	dc.b	"message",ETX
+	align 2
 StoryTextDay01DenimCountryLine1:
-	dc.w	OBJ_NPC_ERYN
-	dc.b	"line1.",ETX
+	dc.w	OBJ_NPC_LISA
+	dc.b	"line2.",ETX
 	align 2
 StoryTextDay01DenimCountryLine2:
 	dc.w	OBJ_NPC_LISA

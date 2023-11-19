@@ -7,7 +7,25 @@
 ; SCENE_ID_CAVERN
 ;*******************************************************************************
 ActionScriptDay04CavernInteract:	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+;	btst.l	#FLAGNAME,d7 ; test if the optional event is complete
+	bne.s	.default ; show default text if the event is complete
+	;---------------------------------------------------------------------------
+	; else update flags and run the scripted event
+	;---------------------------------------------------------------------------
+;	bset.l	#FLAGNAME,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+;	move.w	#$FFFF,(MEM_STORY_EVENT1OR2_SCENE_ID) ; clear story event
+;	move.w	#OBJECTIVE_D01_O01_ReportBack,(MEM_OBJECTIVE) ; update objective
+;	move.l	#$00000000,(MEM_NPC_LOCATION_WEHALL) ; move characters
+	; setup scripted event
+;	lea	XXXXLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+;	lea XXXXStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+.default
 	bsr.w ShowDefaultText
+	rts
 ;-------------------------------------------------------------------------------
 ; TODO
 ;-------------------------------------------------------------------------------
@@ -22,7 +40,25 @@ ActionScriptDay04CavernInteract:
 ; SCENE_ID_NSHACK
 ;*******************************************************************************
 ActionScriptDay04NShackInteract:	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+;	btst.l	#FLAGNAME,d7 ; test if the optional event is complete
+	bne.s	.default ; show default text if the event is complete
+	;---------------------------------------------------------------------------
+	; else update flags and run the scripted event
+	;---------------------------------------------------------------------------
+;	bset.l	#FLAGNAME,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+;	move.w	#$FFFF,(MEM_STORY_EVENT1OR2_SCENE_ID) ; clear story event
+;	move.w	#OBJECTIVE_D01_O01_ReportBack,(MEM_OBJECTIVE) ; update objective
+;	move.l	#$00000000,(MEM_NPC_LOCATION_WEHALL) ; move characters
+	; setup scripted event
+;	lea	XXXXLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+;	lea XXXXStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+.default
 	bsr.w ShowDefaultText
+	rts
 ;-------------------------------------------------------------------------------
 ; TODO
 ;-------------------------------------------------------------------------------

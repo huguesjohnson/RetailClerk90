@@ -7,84 +7,131 @@
 ; SCENE_ID_FCBCAMPING
 ;*******************************************************************************
 ActionScriptNight02FCBInteract:	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT02_EVENT00_FCBCAMPING,d7 ; test if the event is complete
+	bne.s	.default ; show default text if the event is complete
+	;---------------------------------------------------------------------------
+	; else update flags and run the scripted event
+	;---------------------------------------------------------------------------
+	bset.l	#FLAG_NIGHT02_EVENT00_FCBCAMPING,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#$FFFF,(MEM_STORY_EVENT1_SCENE_ID) ; clear story event
+	bsr.w	CheckNight02Flags
+	; setup scripted event
+	lea	StoryTextNight02FCBCampingLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventNight02_01_FCBCampingStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+.default
 	bsr.w ShowDefaultText
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;[ScriptedEventNight02_01_FCBCamping]
-;[set FLAG_NIGHT02_EVENT00_FCBCamping]
-;Maybe you suspect that guy is up to something and decide to look for him, or maybe you think he needs help since you're all helpful like that
-;[Story event at FCB camping - conversation about there being an employee who lived in the mall]
-
 	rts		
 
 ;*******************************************************************************
 ; SCENE_ID_NSHACK
 ;*******************************************************************************
 ActionScriptNight02NShackEnter:	
-	bsr.w ShowDefaultText
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;[ScriptedEventNight02_02_NShack]
-;Story event Nut Shack - dialog about "is this the weirdo you told me about?"
-;[set FLAG_NIGHT02_EVENT01_NShack]
-;
-;When both [FLAG_NIGHT02_EVENT00_FCBCamping] and [FLAG_NIGHT02_EVENT01_NShack] are set
-;[Set objective to OBJECTIVE_D00_O04_Leave]
-;[Story Event at South Hall with prompt]
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT02_EVENT01_NSHACK,d7 ; test if the event is complete
+	bne.s	.default ; show default text if the event is complete
+	;---------------------------------------------------------------------------
+	; else update flags and run the scripted event
+	;---------------------------------------------------------------------------
+	bset.l	#FLAG_NIGHT02_EVENT01_NSHACK,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; clear story event
+	bsr.w	CheckNight02Flags
+	; setup scripted event
+	lea	StoryTextNight02NShackLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventNight02_02_NShackStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+.default
+	rts
 
-
-	rts		
+CheckNight02Flags:
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT02_EVENT00_FCBCAMPING,d7 ; test if event is complete
+	beq.s	.exit ; exit if not
+	btst.l	#FLAG_NIGHT02_EVENT01_NSHACK,d7 ; test if event is complete
+	beq.s	.exit ; exit if not
+	; both flags are set - update objective and story event location
+	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
+	move.w	#OBJECTIVE_D00_O04_Leave,(MEM_OBJECTIVE) ; update objective
+.exit
+	rts
 
 ;*******************************************************************************
 ; SCENE_ID_WWHALL
 ;*******************************************************************************
 ActionScriptNight02WWHallEnter:	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT02_EVENT02_WWHALL,d7 ; test if the optional event is complete
+	bne.s	.default ; show default text if the event is complete
+	;---------------------------------------------------------------------------
+	; else update flags and run the scripted event
+	;---------------------------------------------------------------------------
+	bset.l	#FLAG_NIGHT02_EVENT02_WWHALL,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.l	#$00000000,(MEM_NPC_LOCATION_WWHALL) ; victor is out of wwhall
+	move.l	#$0C220000,(MEM_NPC_LOCATION_CNOW) ; victor is in cnow	
+	; setup scripted event
+	lea	StoryTextNight02WWHallLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventNight02_03_WWHallStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+.default
 	bsr.w ShowDefaultText
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;[ScriptedEventNight02_03_WWHall]
-;maybe a scene with Victor heading East - he is now in CNow - dialog about what this place used to look like
-;[set FLAG_NIGHT02_EVENT02_WWHall]
-;[Move Victor to CNow]
-
-	rts		
+	rts
 
 ;*******************************************************************************
 ; SCENE_ID_CNOW
 ;*******************************************************************************
 ActionScriptNight02CNowInteract:	
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	beq.w	.default ; branch if not an npc
+	cmpi.w	#$0001,d7 ; test for npc1	
+	bne.s	.default ; not npc1
+	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_GLOBAL_Victor1204,d7 ; test if the optional event is complete
+	bne.s	.default ; show default text if the event is complete
+	;---------------------------------------------------------------------------
+	; else update flags and run the scripted event
+	;---------------------------------------------------------------------------
+	bset.l	#FLAG_GLOBAL_Victor1204,d7 ; set event is done
+	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS) ; save updated flags
+	move.l	#$0C000000,(MEM_NPC_LOCATION_CNOW) ; victor leaves cnow	
+	; setup scripted event
+	lea	StoryTextNight02CNowLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventNight02_CNowStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+.default
 	bsr.w ShowDefaultText
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;Talking to victor sets FLAG_GLOBAL_Victor1204
-
 	rts	
-
 
 ;*******************************************************************************
 ; SCENE_ID_SHALL
 ;*******************************************************************************
 ActionScriptNight02SHallExit:	
-	bsr.w ShowDefaultText
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;After exiting south hall
-;[ScriptedEventNight02_04_Vision]
-;Carl's vision at the hotel
+	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d7 ; copy player sprite direction to d7
+	cmpi.w	#DIRECTION_DOWN,d7 ; is the player facing south?
+	beq.s	.south ; branch if so
+	bsr.w	DefaultExitScene ; default scene exit
+	rts	
+.south
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT02_EVENT00_FCBCAMPING,d7 ; test if event is complete
+	beq.s	.cantleave ; exit if not
+	btst.l	#FLAG_NIGHT02_EVENT01_NSHACK,d7 ; test if event is complete
+	beq.s	.cantleave ; branch if not
+	; events are both done
+	bsr.w	EndNight02 ; transition to night
+	rts	
+.cantleave
+	lea ScriptedEventNotTimeToLeaveCarlStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event	
 	rts		
-
-ActionScriptNight02SHallRespond:	
-	bsr.w ShowDefaultText
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-
-	rts
 
 ;*******************************************************************************
 ; SCENE_ID_CPLANET

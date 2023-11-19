@@ -420,6 +420,16 @@
          "text":"line2.",
          "align":2
          },   
+      "StoryTextNight01TLodgeLine1":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"line1.",
+         "align":2
+         },
+      "StoryTextNight01TLodgeLine2":{
+         "dialogTitle":"OBJ_NPC_VICTOR",
+         "text":"line2.",
+         "align":2
+         },   
       "StoryTextNight01SouthHallLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
          "text":"line1.",
@@ -512,6 +522,11 @@
          "text":"line2.",
          "align":2
          },
+      "StoryTextDay02DenimCountryNotDone":{
+         "dialogTitle":"OBJ_NPC_LISA",
+         "text":"not done message.",
+         "align":2
+         },         
       "StoryTextDay02DenimCountryLine1":{
          "dialogTitle":"OBJ_NPC_ERYN",
          "text":"line1.",
@@ -584,16 +599,6 @@
          "text":"line2.",
          "align":2
          },     
-      "StoryTextNight02TBooksLine1":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
-         "align":2
-         },
-      "StoryTextNight02TBooksLine2":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
-         "align":2
-         },
       "StoryTextNight02FCBCampingLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
          "text":"line1.",
@@ -624,6 +629,16 @@
          "text":"line2.",
          "align":2
          }, 
+      "StoryTextNight02CNowLine1":{
+         "dialogTitle":"OBJ_NPC_VICTOR",
+         "text":"line1.",
+         "align":2
+         },
+      "StoryTextNight02CNowLine2":{
+         "dialogTitle":"OBJ_NPC_VICTOR",
+         "text":"line2.",
+         "align":2
+         },
       "StoryTextNight02VisionLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
          "text":"line1.",
@@ -696,6 +711,21 @@
          "text":"line2.",
          "align":2
          },
+      "StoryTextDay03DenimCountryInprogress":{
+         "dialogTitle":"OBJ_NPC_LISA",
+         "text":"line2.",
+         "align":2
+         },
+      "StoryTextDay03DenimCountry2Line1":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"line1.",
+         "align":2
+         },
+      "StoryTextDay03DenimCountry2Line2":{
+         "dialogTitle":"OBJ_NPC_LISA",
+         "text":"line2.",
+         "align":2
+         },
       "StoryTextDay03PogoDawgLine1":{
          "dialogTitle":"OBJ_NPC_ERYN",
          "text":"line1.",
@@ -704,6 +734,11 @@
       "StoryTextDay03PogoDawgLine2":{
          "dialogTitle":"OBJ_NPC_GRIFFY",
          "text":"line2.",
+         "align":2
+         },
+      "StoryTextDay03PogoDawgInprogress":{
+         "dialogTitle":"OBJ_NPC_GRIFFY",
+         "text":"still in progress message",
          "align":2
          },
       "StoryTextDay03CheckersLine1":{
@@ -838,6 +873,11 @@
          "text":"line2.",
          "align":2
          },              
+      "StoryTextNight03CantEnterNShack":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"line1.",
+         "align":2
+         },
       "StoryTextNight03NShackLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
          "text":"line1.",

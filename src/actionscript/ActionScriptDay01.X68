@@ -174,7 +174,7 @@ EndDay01:
 	; update NPC locations
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsNight ; reset the NPC locations
-	move.l	#$18000000,(MEM_NPC_LOCATION_WEHALL)	
+	move.l	#$18000000,(MEM_NPC_LOCATION_WEHALL) ; brett starts in wehall
 	;---------------------------------------------------------------------------	
 	; queue the ending dialog and transition to night
 	;---------------------------------------------------------------------------	

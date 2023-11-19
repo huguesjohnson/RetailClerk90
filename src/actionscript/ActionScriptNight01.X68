@@ -7,75 +7,130 @@
 ; SCENE_ID_WEHALL:
 ;*******************************************************************************
 ActionScriptNight01WEHallExit:
+	; need to clear out NPC who is set there at the start of the day
 	move.l	#$00000000,(MEM_NPC_LOCATION_WEHALL)
 	bsr.w	DefaultExitScene ; default scene exit
-	rts	
+	rts
 
 ;*******************************************************************************
 ; SCENE_ID_CAVERN
 ;*******************************************************************************
-ActionScriptNight01CavernInteract:	
+ActionScriptNight01CavernInteract:
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT_01_EVENT00_CAVERN,d7 ; test if the event is complete
+	bne.s	.default ; show default text if the event is complete
+	;---------------------------------------------------------------------------
+	; else update flags and run the scripted event
+	;---------------------------------------------------------------------------
+	bset.l	#FLAG_NIGHT_01_EVENT00_CAVERN,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#SCENE_ID_EEHALL,(MEM_STORY_EVENT1_SCENE_ID) ; next story event in in EE hall
+	move.w	#OBJECTIVE_D01_O03_Leave,(MEM_OBJECTIVE) ; update objective
+	move.l	#$28000000,(MEM_NPC_LOCATION_EEHALL) ; victor is now in eehall
+	; fast travel is temporarily unavailable
+	move.l	(MEM_GAME_STATE),d7 ; copy game state to d7
+	bclr.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is unavailable
+	move.l	d7,(MEM_GAME_STATE) ; save updated state
+	; setup scripted event
+	lea	StoryTextNight01CavernLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventNight01_01_CavernStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+.default
 	bsr.w ShowDefaultText
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;[Story event at the cavern - "It's not my business. Too much snooping can cause drama."]
-;[ScriptedEventNight01_01_Cavern]
-;[set FLAG_NIGHT_01_EVENT00_Cavern]
-
-	rts		
+	rts
 
 ;*******************************************************************************
 ; SCENE_ID_EEHALL
 ;*******************************************************************************
 ActionScriptNight01EEHallEnter:	
-	bsr.w ShowDefaultText
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;[ScriptedEventNight01_02_EEHall]
-;[set FLAG_NIGHT_01_EVENT01_EEHall]
-;move sprites
-;Victor to TLodge
-;Eryn to south hall
-;
-;At the end of these scenes Carl wonders where the Brett character might be hiding
-;[Set objective to OBJECTIVE_D01_O03_Leave]
-
-	rts		
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT_01_EVENT00_CAVERN,d7 ; test if the event is complete
+	beq.s	.default ; before this event has happened, exit
+	btst.l	#FLAG_NIGHT_01_EVENT01_EEHALL,d7 ; test if the event is complete
+	bne.s	.default ; after this event has happened, exit
+	;---------------------------------------------------------------------------
+	; else update flags and run the scripted event
+	;---------------------------------------------------------------------------
+	bset.l	#FLAG_NIGHT_01_EVENT01_EEHALL,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
+	move.l	#$00000000,(MEM_NPC_LOCATION_EEHALL) ; victor is out of eehall
+	move.l	#$09280000,(MEM_NPC_LOCATION_TLODGE) ; victor is in tlodge
+	move.l	#$01000000,(MEM_NPC_LOCATION_SHALL) ; eryn is in south hall	
+	; fast travel is available again
+	move.l	(MEM_GAME_STATE),d7 ; copy game state to d7
+	bset.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is unavailable
+	move.l	d7,(MEM_GAME_STATE) ; save updated state	
+	; setup scripted event
+	lea	StoryTextNight01EEHallLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventNight01_02_EEHallStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+.default
+	rts
 
 ;*******************************************************************************
 ; SCENE_ID_TLODGE
 ;*******************************************************************************
 ActionScriptNight01TLodgeEnter:	
-	bsr.w ShowDefaultText
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;[if you follow him he's in TLodge and there's a scene where he can't believe the store lasted this long - need to set something in MEM_GLOBAL_EVENT_FLAGS, like FLAG_GLOBAL_EVENT00_TLodgeEvent1123Night]
+	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7 ; copy global event flags to d7
+	btst.l	#FLAG_GLOBAL_EVENT00_TLodgeEvent1123Night,d7 ; test if the event is complete
+	bne.s	.default ; show default text if the event is complete
+	;---------------------------------------------------------------------------
+	; else update flags and run the scripted event
+	;---------------------------------------------------------------------------
+	bset.l	#FLAG_GLOBAL_EVENT00_TLodgeEvent1123Night,d7 ; set event is done
+	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS) ; save updated flags
+	move.l	#$09000000,(MEM_NPC_LOCATION_TLODGE) ; back to default npc in tlodge
+	; setup scripted event
+	lea	StoryTextNight01TLodgeLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventNight01_TLodgeStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+.default
+	rts
 
-	rts	
 
 ;*******************************************************************************
 ; SCENE_ID_SHALL
 ;*******************************************************************************
 ActionScriptNight01SHallEnter:	
-	bsr.w ShowDefaultText
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;[Story Event at South Hall on enter - Main characters meet after close]
-;[ScriptedEventNight01_03_SouthHall]
-;[set FLAG_NIGHT_01_EVENT02_StoryEventsDone]
-	rts	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT_01_EVENT01_EEHALL,d7 ; test if the event is complete
+	beq.s	.default ; not time for this event
+	btst.l	#FLAG_NIGHT_01_EVENT02_STORYEVENTSDONE,d7 ; test if the event is complete
+	bne.s	.default ; event is already done
+	;---------------------------------------------------------------------------
+	; else update flags and run the scripted event
+	;---------------------------------------------------------------------------
+	bset.l	#FLAG_NIGHT_01_EVENT02_STORYEVENTSDONE,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#$FFFF,(MEM_STORY_EVENT1_SCENE_ID) ; clear story event
+	move.l	#$00000000,(MEM_NPC_LOCATION_SHALL) ; move characters
+	; setup scripted event
+	lea	StoryTextNight01SouthHallLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventNight01_03_SouthHallStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+.default
+	rts
 	
 ActionScriptNight01SHallExit:	
-	bsr.w ShowDefaultText
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;Check FLAG_NIGHT_01_EVENT02_StoryEventsDone when trying to exit from south hall with generic “forgetting something” message
-
+	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d7 ; copy player sprite direction to d7
+	cmpi.w	#DIRECTION_DOWN,d7 ; is the player facing south?
+	beq.s	.south ; branch if so
+	bsr.w	DefaultExitScene ; default scene exit
+	rts	
+.south
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT_01_EVENT02_STORYEVENTSDONE,d7 ; test if the mandatory event is complete
+	beq.s	.cantleave ; branch if not
+	bsr.w	EndNight01 ; transition to night
+	rts	
+.cantleave
+	lea ScriptedEventNotTimeToLeaveCarlStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event	
 	rts		
 	
 ;*******************************************************************************

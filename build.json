@@ -2744,7 +2744,6 @@
 		{"day":5,"scene":"SCENE_ID_WWHALL","action":"EnterScene","label":"ActionScriptNight02WWHallEnter"},
 		{"day":5,"scene":"SCENE_ID_CNOW","action":"EnterScene","label":"ActionScriptNight02CNowInteract"},
 		{"day":5,"scene":"SCENE_ID_SHALL","action":"ExitScene","label":"ActionScriptNight02SHallExit"},
-		{"day":5,"scene":"SCENE_ID_SHALL","action":"Respond","label":"ActionScriptNight02SHallRespond"},
 		{"day":5,"scene":"SCENE_ID_CPLANET","action":"Interact","label":"ActionScriptNight02CPlanetInteract"},
 		{"day":5,"scene":"SCENE_ID_CPLANET","action":"Respond","label":"ActionScriptNight02CPlanetRespond"},
 		{"day":5,"scene":"SCENE_ID_VB","action":"Interact","label":"ActionScriptNight02VBInteract"},

@@ -737,6 +737,29 @@
       ]
    }, 
    {
+      "name":"ScriptedEventNight01_TLodge",
+      "actions":[
+         {
+            "comment":"NPC0 sprite",
+            "intValue":2
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight01TLodgeLine1"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight01TLodgeLine2"
+         },
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   },    
+   {
       "name":"ScriptedEventNight01_03_SouthHall",
       "actions":[
          {
@@ -907,7 +930,7 @@
       ]
    }, 
    {
-      "name":"ScriptedEventDay02_04_NS",
+      "name":"ScriptedEventDay02_Transition",
       "actions":[
          {
             "comment":"NPC0 sprite",
@@ -923,6 +946,29 @@
             "command":"DIALOG",
             "label":"StoryTextDay02NShackLine2"
          },
+         {
+            "comment":"NPC0 sprite",
+            "intValue":2
+         },
+         {
+            "comment":"fade out",
+            "command":"FADE_BLACK"
+         },
+         {
+            "comment":"change scene to tbooks",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_TBOOKS"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay02TBooksLine1"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay02TBooksLine2"
+         },         
          {
             "comment":"end",
             "command":"END"
@@ -968,38 +1014,6 @@
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay02FCBCampingLine2"
-         },
-         {
-            "comment":"end",
-            "command":"END"
-         }
-      ]
-   }, 
-   {
-      "name":"ScriptedEventNight02_00_Intro",
-      "actions":[
-         {
-            "comment":"NPC0 sprite",
-            "intValue":2
-         },
-         {
-            "comment":"fade out",
-            "command":"FADE_BLACK"
-         },
-         {
-            "comment":"change scene to tbooks",
-            "command":"CHANGE_SCENE",
-            "intConst":"SCENE_ID_TBOOKS"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay02TBooksLine1"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay02TBooksLine2"
          },
          {
             "comment":"end",
@@ -1076,6 +1090,29 @@
          }
       ]
    }, 
+   {
+      "name":"ScriptedEventNight02_CNow",
+      "actions":[
+         {
+            "comment":"NPC0 sprite",
+            "intValue":2
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight02WWHallLine1"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight02WWHallLine2"
+         },
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   },   
    {
       "name":"ScriptedEventNight02_Optional00_Grunberg",
       "actions":[
@@ -1439,6 +1476,29 @@
          }
       ]
    },
+   {
+      "name":"Night03EastExitBlocked",
+      "actions":[
+         {
+            "comment":"player sprite",
+            "intValue":1
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight03CantEnterNShack"
+         },
+         {
+            "comment":"move player sprite to the left",
+            "direction":"LEFT",
+            "intValue":4
+         },
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   },   
    {
       "name":"ScriptedEventNight03_03_NShack",
       "actions":[

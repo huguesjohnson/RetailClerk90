@@ -7,61 +7,126 @@
 ; SCENE_ID_TLODGE
 ;*******************************************************************************
 ActionScriptNight03TLodgeInteract:	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT03_EVENT00_TLODGE,d7 ; test if the event is complete
+	bne.s	.default ; show default text if the event is complete
+	;---------------------------------------------------------------------------
+	; else update flags and run the scripted event
+	;---------------------------------------------------------------------------
+	bset.l	#FLAG_NIGHT03_EVENT00_TLODGE,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#$FFFF,(MEM_STORY_EVENT1_SCENE_ID) ; clear story event
+	bsr.w	CheckNight03Events
+	; setup scripted event
+	lea	StoryTextNight03TLodgeLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventNight03_01_TLodgeStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+.default
 	bsr.w ShowDefaultText
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;[ScriptedEventNight03_01_TLodge]
-;[set FLAG_NIGHT03_EVENT00_TLodge]
-
-	rts		
+	rts
 
 ;*******************************************************************************
 ; SCENE_ID_CNOW
 ;*******************************************************************************
 ActionScriptNight03CNowInteract:	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT03_EVENT01_CNOW,d7 ; test if the event is complete
+	bne.s	.default ; show default text if the event is complete
+	;---------------------------------------------------------------------------
+	; else update flags and run the scripted event
+	;---------------------------------------------------------------------------
+	bset.l	#FLAG_NIGHT03_EVENT01_CNOW,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; clear story event
+	bsr.w	CheckNight03Events
+	; setup scripted event
+	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7 ; copy global event flags to d7	
+	btst.l	#FLAG_GLOBAL_Victor1204,d7 ; test if the semi-hidden event is complete	
+	bne.s	.altevent
+.defaultevent
+	lea	StoryTextNight03CNowLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventNight03_02_CNowStart,a6 ; point a6 to event to load
+	bra.s	.queuescriptedevent
+.altevent
+	lea	StoryTextNight03CNowAltLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventNight03_02_CNowAltStart,a6 ; point a6 to event to load
+.queuescriptedevent
+	bsr.w QueueScriptedEvent ; queue the event
+.default
 	bsr.w ShowDefaultText
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;Different text based on whether or not you saw the dialog with Victor FLAG_GLOBAL_Victor1204]
-;[ScriptedEventNight03_02_CNow]
-;[ScriptedEventNight03_02_CNowAlt]
-;Set [FLAG_NIGHT03_EVENT01_CNow]
-;
-;After each check if [FLAG_NIGHT03_EVENT00_TLodge] and [FLAG_NIGHT03_EVENT01_CNow] are set, if so
-;[Set objective to OBJECTIVE_D03_O04_CheckIn]
-;[Set story event at NShack]
+	rts
 
-	rts		
+CheckNight03Events:
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT03_EVENT00_TLODGE,d7 ; test if the event is complete
+	beq.s	.exit ; not complete, exit
+	btst.l	#FLAG_NIGHT03_EVENT01_CNOW,d7 ; test if the event is complete
+	beq.s	.exit ; not complete, exit
+	; else - update the story event and objective
+	move.w	#SCENE_ID_NSHACK,(MEM_STORY_EVENT1_SCENE_ID) ; clear story event
+	move.w	#OBJECTIVE_D03_O04_CheckIn,(MEM_OBJECTIVE) ; update objective
+.exit
+	rts
 
 ;*******************************************************************************
 ; SCENE_ID_SHALL
 ;*******************************************************************************
 ActionScriptNight03SHallExit:	
-	bsr.w ShowDefaultText
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-; Blocked from entering Nut Shack until [FLAG_NIGHT03_EVENT00_TLodge] and [FLAG_NIGHT03_EVENT01_CNow] are set
-; Blocked from exiting until [FLAG_NIGHT03_EVENT02_NShack]
-
+	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d7 ; copy player sprite direction to d7
+	cmpi.w	#DIRECTION_DOWN,d7 ; is the player facing south?
+	beq.s	.south ; branch if so
+	cmpi.w	#DIRECTION_RIGHT,d7 ; is the player facing east?
+	beq.s	.east ; branch if so
+	bsr.w	DefaultExitScene ; default scene exit
 	rts	
-	
+.south
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT03_EVENT02_NSHACK,d7 ; test if event is complete
+	beq.s	.cantleavesouth ; exit if not
+	; all events are done
+	bsr.w	EndNight03 ; transition to night
+	rts	
+.cantleavesouth
+	lea ScriptedEventNotTimeToLeaveCarlStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event	
+	rts		
+.east
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT03_EVENT00_TLODGE,d7 ; test if the event is complete
+	beq.s	.cantleaveeast ; not complete, can't exit
+	btst.l	#FLAG_NIGHT03_EVENT01_CNOW,d7 ; test if the event is complete
+	beq.s	.cantleaveeast ; not complete, can't exit
+	; otherwise, defaul
+	bsr.w	DefaultExitScene ; default scene exit
+.cantleaveeast	
+	lea Night03EastExitBlockedStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event	
+	rts
+
 ;*******************************************************************************
 ; SCENE_ID_NSHACK
 ;*******************************************************************************
 ActionScriptNight03NShackInteract:	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT03_EVENT02_NSHACK,d7 ; test if the event is complete
+	bne.s	.default ; show default text if the event is complete
+	;---------------------------------------------------------------------------
+	; else update flags and run the scripted event
+	;---------------------------------------------------------------------------
+	bset.l	#FLAG_NIGHT03_EVENT02_NSHACK,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
+	; setup scripted event
+	lea	StoryTextNight03NShackLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventNight03_03_NShackStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+.default
 	bsr.w ShowDefaultText
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;[Story event at NShack - "hey, you're late dialog" "there are these two strange guys I ran into after hours - don't know if they're connected"]
-;[ScriptedEventNight03_03_NShack]
-;[set FLAG_NIGHT03_EVENT02_NShack]
-;[set story event at South Hall or parking lot after]
-
-	rts		
+	rts
 
 ;*******************************************************************************
 ; SCENE_ID_CPLANET

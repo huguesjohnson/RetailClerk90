@@ -421,6 +421,19 @@ ScriptedEventNight01_02_EEHallStart:
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight01_02_EEHallEnd:
 
+ScriptedEventNight01_TLodgeStart:
+	; NPC0 sprite
+	dc.w	$0002
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01TLodgeLine1
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01TLodgeLine2
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventNight01_TLodgeEnd:
+
 ScriptedEventNight01_03_SouthHallStart:
 	; NPC0 sprite
 	dc.w	$0002
@@ -517,7 +530,7 @@ ScriptedEventDay02_03_DenimCountryStart:
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay02_03_DenimCountryEnd:
 
-ScriptedEventDay02_04_NSStart:
+ScriptedEventDay02_TransitionStart:
 	; NPC0 sprite
 	dc.w	$0002
 	; dialog
@@ -526,9 +539,22 @@ ScriptedEventDay02_04_NSStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay02NShackLine2
+	; NPC0 sprite
+	dc.w	$0002
+	; fade out
+	dc.w	SCRIPTED_EVENT_FADE_BLACK
+	; change scene to tbooks
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_TBOOKS
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02TBooksLine1
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02TBooksLine2
 	; end
 	dc.w	SCRIPTED_EVENT_END
-ScriptedEventDay02_04_NSEnd:
+ScriptedEventDay02_TransitionEnd:
 
 ScriptedEventDay02_Optional00Start:
 	; NPC0 sprite
@@ -555,24 +581,6 @@ ScriptedEventDay02_Optional01Start:
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay02_Optional01End:
-
-ScriptedEventNight02_00_IntroStart:
-	; NPC0 sprite
-	dc.w	$0002
-	; fade out
-	dc.w	SCRIPTED_EVENT_FADE_BLACK
-	; change scene to tbooks
-	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
-	dc.w	SCENE_ID_TBOOKS
-	; dialog
-	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextDay02TBooksLine1
-	; dialog
-	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextDay02TBooksLine2
-	; end
-	dc.w	SCRIPTED_EVENT_END
-ScriptedEventNight02_00_IntroEnd:
 
 ScriptedEventNight02_01_FCBCampingStart:
 	; NPC0 sprite
@@ -612,6 +620,19 @@ ScriptedEventNight02_03_WWHallStart:
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight02_03_WWHallEnd:
+
+ScriptedEventNight02_CNowStart:
+	; NPC0 sprite
+	dc.w	$0002
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02WWHallLine1
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02WWHallLine2
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventNight02_CNowEnd:
 
 ScriptedEventNight02_Optional00_GrunbergStart:
 	; NPC0 sprite
@@ -817,6 +838,19 @@ ScriptedEventNight03_02_CNowAltStart:
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight03_02_CNowAltEnd:
+
+Night03EastExitBlockedStart:
+	; player sprite
+	dc.w	$0001
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight03CantEnterNShack
+	; move player sprite to the left
+	dc.w	DIRECTION_LEFT
+	dc.w	$0004
+	; end
+	dc.w	SCRIPTED_EVENT_END
+Night03EastExitBlockedEnd:
 
 ScriptedEventNight03_03_NShackStart:
 	; NPC0 sprite

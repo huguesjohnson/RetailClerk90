@@ -12,7 +12,8 @@
 ;-------------------------------------------------------------------------------
 ; global event flags - used to track events across days 
 ;-------------------------------------------------------------------------------
-; nothing here yet
+FLAG_GLOBAL_EVENT00_TLodgeEvent1123Night=$00 ; optional event
+FLAG_GLOBAL_Victor1204=$01 ; optional event
 ;
 ;-------------------------------------------------------------------------------
 ; day event flags - used to track events in the current day 
@@ -53,8 +54,8 @@ FLAG_DAY03_EVENT00_POGODAWG=$00 ; set after event in pogodag
 FLAG_DAY03_EVENT01_CHECKERS=$01 ; set after event in checkers
 FLAG_DAY03_EVENT02_CLOTHESNOW=$02 ; set after event in clothesnow
 FLAG_DAY03_EVENT03_LUNCHESDELIVERED=$03 ; set after completing the 3 previous events
-FLAG_DAY03_EVENT03_SOUTHHALL=$04 ; set after event in southhall
-FLAG_DAY03_EVENT04_STORYEVENTSDONE=$05 ; set after story events for the day are done
+FLAG_DAY03_EVENT04_DONE=$04 ; set after completing the 4 previous events
+FLAG_DAY03_EVENT05_SOUTHHALL=$05 ; set after event in southhall
 FLAG_DAY03_OPTIONAL1=$0C ; set after optional event
 FLAG_DAY03_OPTIONAL2=$0D ; set after optional event
 FLAG_NIGHT03_EVENT00_TLODGE=$06 ; set after event in tlodge

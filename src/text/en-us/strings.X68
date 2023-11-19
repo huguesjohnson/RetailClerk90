@@ -2340,6 +2340,14 @@ StoryTextNight01EEHallLine2:
 	dc.w	OBJ_NPC_VICTOR
 	dc.b	"line2.",ETX
 	align 2
+StoryTextNight01TLodgeLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight01TLodgeLine2:
+	dc.w	OBJ_NPC_VICTOR
+	dc.b	"line2.",ETX
+	align 2
 StoryTextNight01SouthHallLine1:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"line1.",ETX
@@ -2418,6 +2426,10 @@ StoryTextDay02TBooksLine2:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"line2.",ETX
 	align 2
+StoryTextDay02DenimCountryNotDone:
+	dc.w	OBJ_NPC_LISA
+	dc.b	"not done message.",ETX
+	align 2
 StoryTextDay02DenimCountryLine1:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"line1.",ETX
@@ -2480,14 +2492,6 @@ StoryTextDay02FCBCampingLine2:
 	dc.w	OBJ_NPC_GRANT
 	dc.b	"line2.",ETX
 	align 2
-StoryTextNight02TBooksLine1:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
-	align 2
-StoryTextNight02TBooksLine2:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
-	align 2
 StoryTextNight02FCBCampingLine1:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"line1.",ETX
@@ -2509,6 +2513,14 @@ StoryTextNight02WWHallLine1:
 	dc.b	"line1.",ETX
 	align 2
 StoryTextNight02WWHallLine2:
+	dc.w	OBJ_NPC_VICTOR
+	dc.b	"line2.",ETX
+	align 2
+StoryTextNight02CNowLine1:
+	dc.w	OBJ_NPC_VICTOR
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight02CNowLine2:
 	dc.w	OBJ_NPC_VICTOR
 	dc.b	"line2.",ETX
 	align 2
@@ -2574,6 +2586,18 @@ StoryTextDay03DenimCountryLine2:
 	dc.w	OBJ_NPC_LISA
 	dc.b	"line2.",ETX
 	align 2
+StoryTextDay03DenimCountryInprogress:
+	dc.w	OBJ_NPC_LISA
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay03DenimCountry2Line1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay03DenimCountry2Line2:
+	dc.w	OBJ_NPC_LISA
+	dc.b	"line2.",ETX
+	align 2
 StoryTextDay03PogoDawgLine1:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"line1.",ETX
@@ -2581,6 +2605,11 @@ StoryTextDay03PogoDawgLine1:
 StoryTextDay03PogoDawgLine2:
 	dc.w	OBJ_NPC_GRIFFY
 	dc.b	"line2.",ETX
+	align 2
+StoryTextDay03PogoDawgInprogress:
+	dc.w	OBJ_NPC_GRIFFY
+	dc.b	"still in progress",LF
+	dc.b	"message",ETX
 	align 2
 StoryTextDay03CheckersLine1:
 	dc.w	OBJ_NPC_ERYN
@@ -2691,6 +2720,10 @@ StoryTextNight03CNowAltLine1:
 StoryTextNight03CNowAltLine2:
 	dc.w	OBJ_NPC_BECKY
 	dc.b	"line2.",ETX
+	align 2
+StoryTextNight03CantEnterNShack:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
 	align 2
 StoryTextNight03NShackLine1:
 	dc.w	OBJ_NPC_CARL

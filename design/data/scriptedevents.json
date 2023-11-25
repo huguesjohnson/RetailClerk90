@@ -1601,6 +1601,47 @@
       ]
    },
    {
+      "name":"Night04NorthExitBlocked",
+      "actions":[
+         {
+            "comment":"player sprite",
+            "intValue":1
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight04CantEnterCavern"
+         },
+         {
+            "comment":"move player sprite down",
+            "direction":"DOWN",
+            "intValue":4
+         },
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   },
+   {
+      "name":"Night04CantUseStairs",
+      "actions":[
+         {
+            "comment":"player sprite",
+            "intValue":1
+         },
+         {
+            "comment":"move player sprite down",
+            "direction":"DOWN",
+            "intValue":4
+         },
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   },    
+   {
       "name":"ScriptedEventDay04_01_Cavern",
       "actions":[
          {
@@ -1872,7 +1913,7 @@
       ]
    },
    {
-      "name":"ScriptedEventDay05_01_FCBFirearms",
+      "name":"ActionScriptDay05FCBFirearmsRespond0",
       "actions":[
          {
             "comment":"NPC0 sprite",
@@ -1881,12 +1922,7 @@
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"StoryTextDay05FCBFirearmsLine1"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay05FCBFirearmsLine2"
+            "label":"StoryTextDay05FCBFirearmsRespond0Line02"
          },
          {
             "comment":"end",
@@ -1895,7 +1931,7 @@
       ]
    },
    {
-      "name":"ScriptedEventDay05_02_WWAudio",
+      "name":"ActionScriptDay05FCBFirearmsRespond1",
       "actions":[
          {
             "comment":"NPC0 sprite",
@@ -1904,12 +1940,25 @@
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"StoryTextDay05WWAudioLine1"
+            "label":"StoryTextDay05FCBFirearmsRespond1Line02"
+         },
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   },   
+   {
+      "name":"ActionScriptDay05WWAudioRespond0",
+      "actions":[
+         {
+            "comment":"NPC0 sprite",
+            "intValue":2
          },
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"StoryTextDay05WWAudioLine2"
+            "label":"StoryTextDay05WWAudioRespond0Line02"
          },
          {
             "comment":"end",
@@ -1917,6 +1966,24 @@
          }
       ]
    },
+   {
+      "name":"ActionScriptDay05WWAudioRespond1",
+      "actions":[
+         {
+            "comment":"NPC0 sprite",
+            "intValue":2
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05WWAudioRespond1Line02"
+         },
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   },  
    {
       "name":"ScriptedEventDay05_03_DenimCountry",
       "actions":[
@@ -2235,7 +2302,7 @@
       ]
    },
    {
-      "name":"ScriptedEventDay06_Optional02_Grant",
+      "name":"ScriptedEventDay06_Optional02",
       "actions":[
          {
             "comment":"NPC0 sprite",
@@ -2336,7 +2403,7 @@
       ]
    },
    {
-      "name":"ScriptedEventNight06_Optional01_Eliza",
+      "name":"ScriptedEventNight06_Optional01",
       "actions":[
          {
             "comment":"NPC0 sprite",
@@ -2359,7 +2426,7 @@
       ]
    },
    {
-      "name":"ScriptedEventNight06_Optional02_Grunberg",
+      "name":"ScriptedEventNight06_Optional02",
       "actions":[
          {
             "comment":"NPC0 sprite",
@@ -2399,6 +2466,10 @@
             "label":"StoryTextEndGoodLine2"
          },
          {
+            "comment":"set end game",
+            "command":"ENDGAME"
+         },         
+         {
             "comment":"end",
             "command":"END"
          }
@@ -2422,6 +2493,10 @@
             "label":"StoryTextEndBadLine2"
          },
          {
+            "comment":"set end game",
+            "command":"ENDGAME"
+         },         
+         {
             "comment":"end",
             "command":"END"
          }
@@ -2444,6 +2519,10 @@
             "command":"DIALOG",
             "label":"StoryTextEndPerfectLine2"
          },
+         {
+            "comment":"set end game",
+            "command":"ENDGAME"
+         },         
          {
             "comment":"end",
             "command":"END"

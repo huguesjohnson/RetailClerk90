@@ -7,50 +7,93 @@
 ; SCENE_ID_BASEMENTCAFE
 ;*******************************************************************************
 ActionScriptNight06BasementCafeInteract:	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT06_EVENT00_BASEMENTKITCHEN,d7 ; test if the event is complete
+	bne.s	.default ; show default text if the event is complete
+	;---------------------------------------------------------------------------
+	; else update flags and run the scripted event
+	;---------------------------------------------------------------------------
+	bset.l	#FLAG_NIGHT06_EVENT00_BASEMENTKITCHEN,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#SCENE_ID_NSHACK,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
+	; setup scripted event
+	lea	StoryTextNight06BasementKitchenLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventNight06_01_BasementKitchenStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+.default
 	bsr.w ShowDefaultText
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;[Story event in basement - Brett is moving out]
-;[ScriptedEventNight06_01_BasementKitchen]
-;[set FLAG_NIGHT06_EVENT00_BasementKitchen]
-
-	rts		
+	rts
 
 
 ;*******************************************************************************
 ; SCENE_ID_SHALL
 ;*******************************************************************************
 ActionScriptNight06SHallExit:	
-	bsr.w ShowDefaultText
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-; south exit should be blocked
-;
-;2) Final event is in Nut Shack - triggered on enter
-;Entrance to NShack should be blocked until other things are complete or you should be prompted before entering if [FLAG_NIGHT06_EVENT00_BasementKitchen] is set
-;[ScriptedEventEndGood]
-;[ScriptedEventEndBad]
-;[ScriptedEventEndPerfect]
-
+	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d7 ; copy player sprite direction to d7
+	cmpi.w	#DIRECTION_DOWN,d7 ; is the player facing south?
+	beq.s	.cantleavesouth ; branch if so
+	cmpi.w	#DIRECTION_RIGHT,d7 ; is the player facing east?
+	beq.s	.east ; branch if so
+.default
+	bsr.w	DefaultExitScene ; default scene exit
 	rts	
+.cantleavesouth
+	lea ScriptedEventNotTimeToLeaveCarlStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event	
+	rts
+.east
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT06_EVENT00_BASEMENTKITCHEN,d7 ; test if the event is complete
+	beq.s	.cantleaveeast ; event not complete, can't enter yet
+	; else prompt to enter
+	lea	StoryTextNight06EnterNShackChoice,a6 ; load dialog text	
+	bsr.w	Show2ChoiceDialog
+	rts
+.cantleaveeast
+	lea Night03EastExitBlockedStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event	
+	rts
 
+ActionScriptNight06SHallRespond:	
+	bsr.w	ResetDialog
+	cmpi.w	#$0000,(MEM_MENU_RESPONSE) ; is the menu selection 0?
+	bne.s	.choice1
+.choice0	
+	bra.w	EndNight06
+.choice1
+	lea	StoryTextNight06EnterNShackChoice1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the dialog
+	lea ScriptedEventPlayerSpriteLeft4Start,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts
 
 ;*******************************************************************************
 ; SCENE_ID_CPLANET
 ;*******************************************************************************
 ActionScriptNight06CPlanetInteract:	
-	bsr.w ShowDefaultText
-
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-; dialog and prompt for optional event
-
-	rts		
-
-ActionScriptNight06CPlanetRespond:	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+ 	btst.l	#FLAG_NIGHT06_OPTIONAL2,d7 ; test if the optional event is complete
+	bne.s	.default ; show default text if the event is complete
+	; check if the final event is available
+	cmpi.w	#MAX_REL,(MEM_REL_ELIZA)	
+	bne.s	.default ; not available, show default text	
+	;---------------------------------------------------------------------------
+	; else update flags and run the scripted event
+	;---------------------------------------------------------------------------
+	bset.l	#FLAG_NIGHT06_OPTIONAL2,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; clear optional event
+	; update global events
+	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7 ; copy day event flags to d7
+	bset.l	#FLAG_GLOBAL_REL3Complete,d7 ; set event is done
+	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS) ; save updated flags
+	; setup scripted event
+	lea	StoryTextNight06CPlanetLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventNight06_Optional01Start,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+.default
 	bsr.w ShowDefaultText
 	rts
 	
@@ -58,40 +101,103 @@ ActionScriptNight06CPlanetRespond:
 ; SCENE_ID_VB
 ;*******************************************************************************
 ActionScriptNight06VBInteract:	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+ 	btst.l	#FLAG_NIGHT06_OPTIONAL3,d7 ; test if the optional event is complete
+	bne.s	.default ; show default text if the event is complete
+	; check if the final event is available
+	cmpi.w	#MAX_REL,(MEM_REL_GRUNBERG)	
+	bne.s	.default ; not available, show default text	
+	;---------------------------------------------------------------------------
+	; else update flags and run the scripted event
+	;---------------------------------------------------------------------------
+	bset.l	#FLAG_NIGHT06_OPTIONAL3,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; clear optional event
+	; update global events
+	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7 ; copy day event flags to d7
+	bset.l	#FLAG_GLOBAL_REL4Complete,d7 ; set event is done
+	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS) ; save updated flags
+	; setup scripted event
+	lea	StoryTextNight06VBLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventNight06_Optional02Start,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+.default
 	bsr.w ShowDefaultText
-
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-; dialog and prompt for optional event
-
-	rts		
-
-ActionScriptNight06VBRespond:	
-	bsr.w ShowDefaultText
-	rts	
+	rts
 	
 ;*******************************************************************************
 ; SCENE_ID_WWAPPLIANCES
 ;*******************************************************************************
 ActionScriptNight06WWAppliancesInteract:	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+ 	btst.l	#FLAG_NIGHT06_OPTIONAL1,d7 ; test if the optional event is complete
+	bne.s	.default ; show default text if the event is complete
+	; check if the final event is available
+	cmpi.w	#MAX_REL,(MEM_REL_LAURA)	
+	bne.s	.default ; not available, show default text	
+	;---------------------------------------------------------------------------
+	; else update flags and run the scripted event
+	;---------------------------------------------------------------------------
+	bset.l	#FLAG_NIGHT06_OPTIONAL1,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; clear optional event
+	; update global events
+	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7 ; copy day event flags to d7
+	bset.l	#FLAG_GLOBAL_REL5Complete,d7 ; set event is done
+	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS) ; save updated flags
+	; setup scripted event
+	lea	StoryTextNight06WWAppliancesLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventNight06_Optional00Start,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+.default
 	bsr.w ShowDefaultText
-
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-; dialog and prompt for optional event
-
-	rts		
-
-ActionScriptNight06WWAppliancesRespond:	
-	bsr.w ShowDefaultText
-	rts		
+	rts
 	
 ;*******************************************************************************
 ; End of the day
 ;*******************************************************************************
 EndNight06:
-	rts	
-	
-	
+
+SetupEndGame:
+	; --------------------------------------------------------------------------
+	; test if the player did all required interactions
+	; bad = no final character events complete
+	; good = at least one final character event complete 
+	; perfect = all final character events viewed, and trading sequence complete
+	; --------------------------------------------------------------------------
+	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7 ; copy global event flags to d7
+	tst	d7 ; if d7 is zero we definitely have a bad ending
+	beq.s	.badending
+	cmpi.w	#ALL_GLOBAL_FLAGS_SET,d7 ; test if all flags are set
+	beq.s	.perfectending
+	; --------------------------------------------------------------------------
+	; at this point, it's either or good or bad ending
+	; test thing that trigger good ending
+	; this will fall through to the bad ending by default
+	; --------------------------------------------------------------------------
+	btst.l	#FLAG_GLOBAL_REL0Complete,d7
+	beq.s	.goodending
+	btst.l	#FLAG_GLOBAL_REL1Complete,d7
+	beq.s	.goodending
+	btst.l	#FLAG_GLOBAL_REL2Complete,d7
+	beq.s	.goodending
+	btst.l	#FLAG_GLOBAL_REL3Complete,d7
+	beq.s	.goodending
+	btst.l	#FLAG_GLOBAL_REL4Complete,d7
+	beq.s	.goodending
+	btst.l	#FLAG_GLOBAL_REL5Complete,d7
+	beq.s	.goodending
+.badending
+	lea	ScriptedEventEndBadStart,a6	; point a6 to event to load
+	bra.s	.queue
+.perfectending
+	lea	ScriptedEventEndPerfectStart,a6	; point a6 to event to load
+	bra.s	.queue
+.goodending
+	lea	ScriptedEventEndGoodStart,a6	; point a6 to event to load
+.queue
+	bsr.w QueueScriptedEvent	; queue the event
+	rts
+

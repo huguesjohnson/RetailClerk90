@@ -1501,10 +1501,10 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 11
-	dc.l	ActionScriptNight04CavernInteract ; Interact
+	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	ActionScriptExitCavernCarl ; ExitScene
-	dc.l	DefaultEnterScene ; EnterScene
+	dc.l	ActionScriptNight04CavernEnterScene ; EnterScene
 ; scene 12
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
@@ -1647,7 +1647,7 @@ ActionTableStart:
 ; scene 8
 	dc.l	ActionScriptDay05DenimCountryInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	DefaultExitScene ; ExitScene
+	dc.l	ActionScriptDay05DenimCountryExit ; ExitScene
 	dc.l	ActionScriptDay05DenimCountryEnter ; EnterScene
 ; scene 9
 	dc.l	ActionScriptDefaultInteract ; Interact
@@ -1979,12 +1979,12 @@ ActionTableStart:
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 11
 	dc.l	ActionScriptDay06CavernInteract ; Interact
-	dc.l	ActionScriptDay06CavernRespond ; Respond
+	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	ActionScriptExitCavernEryn ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 12
 	dc.l	ActionScriptDay06SVideoInteract ; Interact
-	dc.l	ActionScriptDay06SVideoRespond ; Respond
+	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 13
@@ -2029,7 +2029,7 @@ ActionTableStart:
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 21
 	dc.l	ActionScriptDay06FCBCampingInteract ; Interact
-	dc.l	ActionScriptDay06FCBCampingRespond ; Respond
+	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 22
@@ -2083,7 +2083,7 @@ ActionTableStart:
 ;---------------------------------------------------------------------------
 ; scene 0
 	dc.l	ActionScriptNight06VBInteract ; Interact
-	dc.l	ActionScriptNight06VBRespond ; Respond
+	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 1
@@ -2158,7 +2158,7 @@ ActionTableStart:
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 15
 	dc.l	ActionScriptNight06CPlanetInteract ; Interact
-	dc.l	ActionScriptNight06CPlanetRespond ; Respond
+	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 16
@@ -2213,7 +2213,7 @@ ActionTableStart:
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 26
 	dc.l	ActionScriptNight06WWAppliancesInteract ; Interact
-	dc.l	ActionScriptNight06WWAppliancesRespond ; Respond
+	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 27

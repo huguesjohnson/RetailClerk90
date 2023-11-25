@@ -10,8 +10,17 @@
 ;-------------------------------------------------------------------------------
 ; global event flags - used to track events across days 
 ;-------------------------------------------------------------------------------
-FLAG_GLOBAL_EVENT00_TLodgeEvent1123Night,$00,optional event
-FLAG_GLOBAL_Victor1204,$01,optional event
+FLAG_GLOBAL_REL0Complete,$00,all optional relationship events complete
+FLAG_GLOBAL_REL1Complete,$01,all optional relationship events complete
+FLAG_GLOBAL_REL2Complete,$02,all optional relationship events complete
+FLAG_GLOBAL_REL3Complete,$03,all optional relationship events complete
+FLAG_GLOBAL_REL4Complete,$04,all optional relationship events complete
+FLAG_GLOBAL_REL5Complete,$05,all optional relationship events complete
+FLAG_GLOBAL_EVENT00_TLodgeEvent1123Night,$06,optional event
+FLAG_GLOBAL_Victor1204,$07,optional event
+FLAG_GLOBAL_TradingDayComplete,$08,day trading sequence complete
+FLAG_GLOBAL_TradingNightComplete,$09,night trading sequence complete
+ALL_GLOBAL_FLAGS_SET,$03FF,value if all flags are set
 ;
 ;-------------------------------------------------------------------------------
 ; day event flags - used to track events in the current day 
@@ -65,7 +74,9 @@ FLAG_DAY04_EVENT00_CAVERN,$00,set after event in cavern
 FLAG_DAY04_OPTIONAL1,$0C,set after optional event
 FLAG_DAY04_OPTIONAL2,$0D,set after optional event
 FLAG_NIGHT04_EVENT00_NSHACKNIGHT,$01,set after event in nshack
-FLAG_NIGHT04_EVENT01_CAVERNBACKROOM,$02,set after event in the cavern backroom
+FLAG_NIGHT04_EVENT01_CAVERN,$02,set after event in the cavern
+FLAG_NIGHT04_EVENT02_CAVERNBACKROOM,$03,set after event in the cavern backroom
+FLAG_NIGHT04_EVENT03_SHALL,$04,set after event in the south hall
 FLAG_NIGHT04_OPTIONAL1,$0E,set after optional event
 FLAG_NIGHT04_OPTIONAL2,$0F,set after optional event
 FLAG_DAY05_EVENT00_FCBFIREARMS,$00,set after event in fcbfirearms
@@ -371,6 +382,7 @@ MEM_REL_NICKY,MEM_PLAYER1_REL2
 MEM_REL_GRUNBERG,MEM_PLAYER2_REL0
 MEM_REL_ELIZA,MEM_PLAYER2_REL1
 MEM_REL_LAURA,MEM_PLAYER2_REL2
+MAX_REL,$0003
 ;
 ;-------------------------------------------------------------------------------
 ; max store id - used to check if a lookup is out of range

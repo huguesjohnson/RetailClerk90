@@ -909,6 +909,29 @@ ScriptedEventDay04_00_IntroStart:
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay04_00_IntroEnd:
 
+Night04NorthExitBlockedStart:
+	; player sprite
+	dc.w	$0001
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight04CantEnterCavern
+	; move player sprite down
+	dc.w	DIRECTION_DOWN
+	dc.w	$0004
+	; end
+	dc.w	SCRIPTED_EVENT_END
+Night04NorthExitBlockedEnd:
+
+Night04CantUseStairsStart:
+	; player sprite
+	dc.w	$0001
+	; move player sprite down
+	dc.w	DIRECTION_DOWN
+	dc.w	$0004
+	; end
+	dc.w	SCRIPTED_EVENT_END
+Night04CantUseStairsEnd:
+
 ScriptedEventDay04_01_CavernStart:
 	; NPC0 sprite
 	dc.w	$0002
@@ -1062,31 +1085,45 @@ ScriptedEventDay05_00_IntroStart:
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay05_00_IntroEnd:
 
-ScriptedEventDay05_01_FCBFirearmsStart:
+ActionScriptDay05FCBFirearmsRespond0Start:
 	; NPC0 sprite
 	dc.w	$0002
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextDay05FCBFirearmsLine1
-	; dialog
-	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextDay05FCBFirearmsLine2
+	dc.l	StoryTextDay05FCBFirearmsRespond0Line02
 	; end
 	dc.w	SCRIPTED_EVENT_END
-ScriptedEventDay05_01_FCBFirearmsEnd:
+ActionScriptDay05FCBFirearmsRespond0End:
 
-ScriptedEventDay05_02_WWAudioStart:
+ActionScriptDay05FCBFirearmsRespond1Start:
 	; NPC0 sprite
 	dc.w	$0002
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextDay05WWAudioLine1
-	; dialog
-	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextDay05WWAudioLine2
+	dc.l	StoryTextDay05FCBFirearmsRespond1Line02
 	; end
 	dc.w	SCRIPTED_EVENT_END
-ScriptedEventDay05_02_WWAudioEnd:
+ActionScriptDay05FCBFirearmsRespond1End:
+
+ActionScriptDay05WWAudioRespond0Start:
+	; NPC0 sprite
+	dc.w	$0002
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay05WWAudioRespond0Line02
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ActionScriptDay05WWAudioRespond0End:
+
+ActionScriptDay05WWAudioRespond1Start:
+	; NPC0 sprite
+	dc.w	$0002
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay05WWAudioRespond1Line02
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ActionScriptDay05WWAudioRespond1End:
 
 ScriptedEventDay05_03_DenimCountryStart:
 	; NPC0 sprite
@@ -1267,7 +1304,7 @@ ScriptedEventDay06_Optional01Start:
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay06_Optional01End:
 
-ScriptedEventDay06_Optional02_GrantStart:
+ScriptedEventDay06_Optional02Start:
 	; NPC0 sprite
 	dc.w	$0002
 	; dialog
@@ -1278,7 +1315,7 @@ ScriptedEventDay06_Optional02_GrantStart:
 	dc.l	StoryTextDay06FCBCampingLine2
 	; end
 	dc.w	SCRIPTED_EVENT_END
-ScriptedEventDay06_Optional02_GrantEnd:
+ScriptedEventDay06_Optional02End:
 
 ScriptedEventNight06_00_IntroStart:
 	; NPC0 sprite
@@ -1324,7 +1361,7 @@ ScriptedEventNight06_Optional00Start:
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight06_Optional00End:
 
-ScriptedEventNight06_Optional01_ElizaStart:
+ScriptedEventNight06_Optional01Start:
 	; NPC0 sprite
 	dc.w	$0002
 	; dialog
@@ -1335,9 +1372,9 @@ ScriptedEventNight06_Optional01_ElizaStart:
 	dc.l	StoryTextNight06CPlanetLine2
 	; end
 	dc.w	SCRIPTED_EVENT_END
-ScriptedEventNight06_Optional01_ElizaEnd:
+ScriptedEventNight06_Optional01End:
 
-ScriptedEventNight06_Optional02_GrunbergStart:
+ScriptedEventNight06_Optional02Start:
 	; NPC0 sprite
 	dc.w	$0002
 	; dialog
@@ -1348,7 +1385,7 @@ ScriptedEventNight06_Optional02_GrunbergStart:
 	dc.l	StoryTextNight06VBLine2
 	; end
 	dc.w	SCRIPTED_EVENT_END
-ScriptedEventNight06_Optional02_GrunbergEnd:
+ScriptedEventNight06_Optional02End:
 
 ScriptedEventEndGoodStart:
 	; NPC0 sprite
@@ -1359,6 +1396,8 @@ ScriptedEventEndGoodStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine2
+	; set end game
+	dc.w	SCRIPTED_EVENT_ENDGAME
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventEndGoodEnd:
@@ -1372,6 +1411,8 @@ ScriptedEventEndBadStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndBadLine2
+	; set end game
+	dc.w	SCRIPTED_EVENT_ENDGAME
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventEndBadEnd:
@@ -1385,6 +1426,8 @@ ScriptedEventEndPerfectStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndPerfectLine2
+	; set end game
+	dc.w	SCRIPTED_EVENT_ENDGAME
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventEndPerfectEnd:

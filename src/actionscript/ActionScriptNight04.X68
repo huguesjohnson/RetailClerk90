@@ -8,191 +8,143 @@
 ;*******************************************************************************
 ActionScriptNight04NShackInteract:	
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
-;	btst.l	#FLAGNAME,d7 ; test if the optional event is complete
+	btst.l	#FLAG_NIGHT04_EVENT00_NSHACKNIGHT,d7 ; test if the event is complete
 	bne.s	.default ; show default text if the event is complete
 	;---------------------------------------------------------------------------
 	; else update flags and run the scripted event
 	;---------------------------------------------------------------------------
-;	bset.l	#FLAGNAME,d7 ; set event is done
+	bset.l	#FLAG_NIGHT04_EVENT00_NSHACKNIGHT,d7 ; set event is done
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-;	move.w	#$FFFF,(MEM_STORY_EVENT1OR2_SCENE_ID) ; clear story event
-;	move.w	#OBJECTIVE_D01_O01_ReportBack,(MEM_OBJECTIVE) ; update objective
-;	move.l	#$00000000,(MEM_NPC_LOCATION_WEHALL) ; move characters
+	move.w	#SCENE_ID_CAVERN,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
+	move.w	#OBJECTIVE_D04_O03_Cavern,(MEM_OBJECTIVE) ; update objective
 	; setup scripted event
-;	lea	XXXXLine1,a6 ; point a6 to the first dialog
+	lea	StoryTextNight04NShackLine1,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
-;	lea XXXXStart,a6 ; point a6 to event to load
+	lea ScriptedEventNight04_01_NShackStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 .default
 	bsr.w ShowDefaultText
-	rts
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;[Story event at NShack - Eryn explains she saw a guy head into the Cavern and then disappear]
-;[ScriptedEventNight04_01_NShack]
-;[Set objective to OBJECTIVE_D04_O03_Cavern]
-;[set FLAG_NIGHT04_EVENT00_NShackNight]
-;[set story event at Cavern]
-
 	rts		
 
 ;*******************************************************************************
 ; SCENE_ID_CAVERN
 ;*******************************************************************************
-ActionScriptNight04CavernInteract:	
+ActionScriptNight04CavernEnterScene:	
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
-;	btst.l	#FLAGNAME,d7 ; test if the optional event is complete
-	bne.s	.default ; show default text if the event is complete
+	btst.l	#FLAG_NIGHT04_EVENT01_CAVERN,d7 ; test if the event is complete
+	bne.s	.default ; default if set
 	;---------------------------------------------------------------------------
 	; else update flags and run the scripted event
 	;---------------------------------------------------------------------------
-;	bset.l	#FLAGNAME,d7 ; set event is done
+	bset.l	#FLAG_NIGHT04_EVENT01_CAVERN,d7 ; set event is done
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-;	move.w	#$FFFF,(MEM_STORY_EVENT1OR2_SCENE_ID) ; clear story event
-;	move.w	#OBJECTIVE_D01_O01_ReportBack,(MEM_OBJECTIVE) ; update objective
-;	move.l	#$00000000,(MEM_NPC_LOCATION_WEHALL) ; move characters
+	move.w	#SCENE_ID_CAVERN_BACKROOM,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
 	; setup scripted event
-;	lea	XXXXLine1,a6 ; point a6 to the first dialog
+	lea	StoryTextNight04CavernLine1,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
-;	lea XXXXStart,a6 ; point a6 to event to load
+	lea ScriptedEventDay04_01_CavernStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 .default
-	bsr.w ShowDefaultText
 	rts
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-; is this really needed?
-
-	rts		
 
 ;*******************************************************************************
 ; SCENE_ID_WWHALL
 ;*******************************************************************************
 ActionScriptNight04WWHallExit:	
+	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d7 ; copy player sprite direction to d7
+	cmpi.w	#DIRECTION_UP,d7 ; is the player facing north?
+	beq.s	.north ; branch if so
+	bsr.w	DefaultExitScene ; default scene exit
+	rts	
+.north
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
-;	btst.l	#FLAGNAME,d7 ; test if the optional event is complete
-	bne.s	.default ; show default text if the event is complete
-	;---------------------------------------------------------------------------
-	; else update flags and run the scripted event
-	;---------------------------------------------------------------------------
-;	bset.l	#FLAGNAME,d7 ; set event is done
-	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-;	move.w	#$FFFF,(MEM_STORY_EVENT1OR2_SCENE_ID) ; clear story event
-;	move.w	#OBJECTIVE_D01_O01_ReportBack,(MEM_OBJECTIVE) ; update objective
-;	move.l	#$00000000,(MEM_NPC_LOCATION_WEHALL) ; move characters
-	; setup scripted event
-;	lea	XXXXLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
-;	lea XXXXStart,a6 ; point a6 to event to load
-	bsr.w QueueScriptedEvent ; queue the event
-.default
-	bsr.w ShowDefaultText
+	btst.l	#FLAG_NIGHT04_EVENT00_NSHACKNIGHT,d7 ; test if event is complete
+	beq.s	.cantleavenorth ; exit if not
+	; otherwise default
+	bsr.w	DefaultExitScene ; default scene exit
+	rts	
+.cantleavenorth
+	lea Night04NorthExitBlockedStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event	
 	rts
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;Trying to enter the Cavern before [FLAG_DAY04_EVENT01_NShackNight] is set should have a message like “I’ll check back here later”
-;
-;[ScriptedEventNight04_02_Cavern] [Story event at Cavern backroom - DB is gone, you inspect the staircase but decide against going downstairs]
-
-
-	rts		
 
 ;*******************************************************************************
 ; SCENE_ID_CAVERN_BACKROOM
 ;*******************************************************************************
-ActionScriptNight04CavernBackroomExit:	
-	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
-;	btst.l	#FLAGNAME,d7 ; test if the optional event is complete
-	bne.s	.default ; show default text if the event is complete
+ActionScriptNight04CavernBackroomExit:
 	;---------------------------------------------------------------------------
-	; else update flags and run the scripted event
+	; once again annoyed at how I implemented this
 	;---------------------------------------------------------------------------
-;	bset.l	#FLAGNAME,d7 ; set event is done
-	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-;	move.w	#$FFFF,(MEM_STORY_EVENT1OR2_SCENE_ID) ; clear story event
-;	move.w	#OBJECTIVE_D01_O01_ReportBack,(MEM_OBJECTIVE) ; update objective
-;	move.l	#$00000000,(MEM_NPC_LOCATION_WEHALL) ; move characters
-	; setup scripted event
-;	lea	XXXXLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
-;	lea XXXXStart,a6 ; point a6 to event to load
-	bsr.w QueueScriptedEvent ; queue the event
-.default
-	bsr.w ShowDefaultText
+	cmpi.w	#MAP_MID_X+$0040,(MEM_PLAYER_SPRITE_X)
+	bge.s	.stairs ; player X is > midpoint, use staircase exit
+	move.w	#SCENE_ID_CAVERN,d6 ; player X is midpoint, use cavern exit
+	bsr.w	DefaultExitSceneLoadNewScene
 	rts
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;Trying to exit via the ladder or inspecting it
-;Set [set FLAG_NIGHT04_EVENT01_CavernBackroom]
-;Different text depending on the FLAG_NIGHT04_EVENT01_CavernBackroom
-;[Set objective to OBJECTIVE_D04_O04_Leave]
-;[Move Victor to south hall]
-
-	rts	
+.stairs
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT04_EVENT02_CAVERNBACKROOM,d7 ; test if the event is complete
+	bne.s	.cantusestairs ; event is already complete
+.firsttime
+	bset.l	#FLAG_NIGHT04_EVENT02_CAVERNBACKROOM,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; clear story event
+	move.w	#OBJECTIVE_D04_O04_Leave,(MEM_OBJECTIVE) ; update objective
+	move.l	#$28000000,(MEM_NPC_LOCATION_SHALL) ; move victor to south hall
+.cantusestairs
+	lea	StoryTextNight04CantUseStairs,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea Night04CantUseStairsStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts
+.default
+	bsr.w	DefaultExitScene ; default scene exit
+	rts
 
 ;*******************************************************************************
 ; SCENE_ID_SHALL
 ;*******************************************************************************
 ActionScriptNight04SHallExit:	
+	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d7 ; copy player sprite direction to d7
+	cmpi.w	#DIRECTION_DOWN,d7 ; is the player facing south?
+	beq.s	.south ; branch if so
+	bsr.w	DefaultExitScene ; default scene exit
+	rts	
+.south
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
-;	btst.l	#FLAGNAME,d7 ; test if the optional event is complete
-	bne.s	.default ; show default text if the event is complete
-	;---------------------------------------------------------------------------
-	; else update flags and run the scripted event
-	;---------------------------------------------------------------------------
-;	bset.l	#FLAGNAME,d7 ; set event is done
-	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-;	move.w	#$FFFF,(MEM_STORY_EVENT1OR2_SCENE_ID) ; clear story event
-;	move.w	#OBJECTIVE_D01_O01_ReportBack,(MEM_OBJECTIVE) ; update objective
-;	move.l	#$00000000,(MEM_NPC_LOCATION_WEHALL) ; move characters
-	; setup scripted event
-;	lea	XXXXLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
-;	lea XXXXStart,a6 ; point a6 to event to load
-	bsr.w QueueScriptedEvent ; queue the event
-.default
-	bsr.w ShowDefaultText
-	rts
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;Exit is blocked until [FLAG_DAY04_EVENT03_Done] is set
-
-
+	btst.l	#FLAG_NIGHT04_EVENT03_SHALL,d7 ; test if event is complete
+	beq.s	.cantleave ; branch if not
+	; events are done
+	bsr.w	EndNight04 ; transition to night
+	rts	
+.cantleave
+	lea ScriptedEventNotTimeToLeaveCarlStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event	
 	rts	
 
 ActionScriptNight04SHallEnter:	
+	;---------------------------------------------------------------------------
+	; event should run if
+	; FLAG_NIGHT04_EVENT02_CAVERNBACKROOM is set
+	; FLAG_NIGHT04_EVENT03_SHALL is not set
+	;---------------------------------------------------------------------------
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
-;	btst.l	#FLAGNAME,d7 ; test if the optional event is complete
-	bne.s	.default ; show default text if the event is complete
+	btst.l	#FLAG_NIGHT04_EVENT02_CAVERNBACKROOM,d7 ; test if the event is complete
+	beq.s	.default ; not set, go to default
+	btst.l	#FLAG_NIGHT04_EVENT03_SHALL,d7 ; test if the event is complete
+	bne.s	.default ; set, go to default
 	;---------------------------------------------------------------------------
 	; else update flags and run the scripted event
 	;---------------------------------------------------------------------------
-;	bset.l	#FLAGNAME,d7 ; set event is done
+	bset.l	#FLAG_NIGHT04_EVENT03_SHALL,d7 ; set event is done
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-;	move.w	#$FFFF,(MEM_STORY_EVENT1OR2_SCENE_ID) ; clear story event
-;	move.w	#OBJECTIVE_D01_O01_ReportBack,(MEM_OBJECTIVE) ; update objective
-;	move.l	#$00000000,(MEM_NPC_LOCATION_WEHALL) ; move characters
+	move.l	#$00000000,(MEM_NPC_LOCATION_SHALL) ; victor is out of south hall after this scene
 	; setup scripted event
-;	lea	XXXXLine1,a6 ; point a6 to the first dialog
+	lea	StoryTextNight04SouthHallLine1,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
-;	lea XXXXStart,a6 ; point a6 to event to load
+	lea ScriptedEventNight04_03_SouthHallStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 .default
-	bsr.w ShowDefaultText
 	rts
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;If [FLAG_NIGHT04_EVENT01_CavernBackroom] but not [FLAG_DAY04_EVENT03_Done]
-;[ScriptedEventNight04_03_SouthHall] [Story event at South Hall - probably another scene with Victor - a "you know something about this place" scene]
-;[Set objective to OBJECTIVE_D04_O05_Done]
-
-	rts	
 
 ;*******************************************************************************
 ; SCENE_ID_VB
@@ -294,7 +246,7 @@ EndNight04:
 	bsr.w	InitNPCLocationsDay ; reset the NPC locations
 	move.l	#$060D0000,(MEM_NPC_LOCATION_VB)	
 	move.l	#$05100000,(MEM_NPC_LOCATION_DENIMCOUNTRY)
-	move.l	#$0E000000,(MEM_NPC_LOCATION_FCBFIREARMS)
+	move.l	#$0E240000,(MEM_NPC_LOCATION_FCBFIREARMS)
 	move.l	#$1B250000,(MEM_NPC_LOCATION_WWAUDIO)
 	;---------------------------------------------------------------------------	
 	; set the intro screen

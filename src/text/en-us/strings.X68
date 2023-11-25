@@ -2723,7 +2723,8 @@ StoryTextNight03CNowAltLine2:
 	align 2
 StoryTextNight03CantEnterNShack:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
+	dc.b	"I have something to",LF
+	dc.b	"finish first.",ETX
 	align 2
 StoryTextNight03NShackLine1:
 	dc.w	OBJ_NPC_CARL
@@ -2865,6 +2866,14 @@ StoryTextNight04NShackLine2:
 	dc.w	OBJ_NPC_JEN
 	dc.b	"line2.",ETX
 	align 2
+StoryTextNight04CantEnterCavern:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
+StoryTextNight04CantUseStairs:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"line1.",ETX
+	align 2
 StoryTextNight04CavernLine1:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"line1.",ETX
@@ -2935,20 +2944,48 @@ StoryTextDay05DenimCountryLine2:
 	dc.w	OBJ_NPC_DANI
 	dc.b	"line2.",ETX
 	align 2
-StoryTextDay05FCBFirearmsLine1:
+StoryTextDay05FCBFirearmsChoice:
+	dc.w	OBJ_NPC_BUSYMOM
+	dc.b	"some question",LF
+	dc.b	"{ choice0            ^",FFR
+	dc.b	"{ choice1       ",ETX
+	align 2
+StoryTextDay05FCBFirearmsRespond0Line01:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"line1.",ETX
 	align 2
-StoryTextDay05FCBFirearmsLine2:
+StoryTextDay05FCBFirearmsRespond0Line02:
 	dc.w	OBJ_NPC_RANDY
 	dc.b	"line2.",ETX
 	align 2
-StoryTextDay05WWAudioLine1:
+StoryTextDay05FCBFirearmsRespond1Line01:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"line1.",ETX
 	align 2
-StoryTextDay05WWAudioLine2:
+StoryTextDay05FCBFirearmsRespond1Line02:
+	dc.w	OBJ_NPC_RANDY
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay05WWAudioChoice:
+	dc.w	OBJ_NPC_BUSYMOM
+	dc.b	"some question",LF
+	dc.b	"{ choice0            ^",FFR
+	dc.b	"{ choice1       ",ETX
+	align 2
+StoryTextDay05WWAudioRespond0Line01:
 	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay05WWAudioRespond0Line02:
+	dc.w	OBJ_NPC_RANDY
+	dc.b	"line2.",ETX
+	align 2
+StoryTextDay05WWAudioRespond1Line01:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"line1.",ETX
+	align 2
+StoryTextDay05WWAudioRespond1Line02:
+	dc.w	OBJ_NPC_RANDY
 	dc.b	"line2.",ETX
 	align 2
 StoryTextDay05DenimCountry2Line1:
@@ -3130,6 +3167,29 @@ StoryTextDay06FCBCampingLine1:
 StoryTextDay06FCBCampingLine2:
 	dc.w	OBJ_NPC_GRANT
 	dc.b	"line2.",ETX
+	align 2
+StoryTextDay06EnterNShackChoice:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"Is there anyone else",LF
+	dc.b	"I need to see first? ^",FFR
+	dc.b	"{ Yeah               ",LF
+	dc.b	"{ Nope       ",ETX
+	align 2
+StoryTextDay06EnterNShackChoice1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"I'll come back later.",ETX
+	align 2
+StoryTextNight06EnterNShackChoice:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"Am I ready to say",LF
+	dc.b	"goodbye?             ^",FFR
+	dc.b	"{ Yeah               ",LF
+	dc.b	"{ Nope       ",ETX
+	align 2
+StoryTextNight06EnterNShackChoice1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"No rush, I'll come",LF
+	dc.b	"back when I'm ready.",ETX
 	align 2
 StoryTextNight06TBooksLine1:
 	dc.w	OBJ_NPC_CARL

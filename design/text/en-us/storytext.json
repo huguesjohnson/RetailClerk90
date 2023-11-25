@@ -875,7 +875,7 @@
          },              
       "StoryTextNight03CantEnterNShack":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
+         "text":"I have something to finish first.",
          "align":2
          },
       "StoryTextNight03NShackLine1":{
@@ -1042,6 +1042,16 @@
          "text":"line2.",
          "align":2
          },   
+      "StoryTextNight04CantEnterCavern":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"line1.",
+         "align":2
+         },
+      "StoryTextNight04CantUseStairs":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"line1.",
+         "align":2
+         },            
       "StoryTextNight04CavernLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
          "text":"line1.",
@@ -1123,27 +1133,59 @@
          "dialogTitle":"OBJ_NPC_DANI",
          "text":"line2.",
          "align":2
-         },     
-      "StoryTextDay05FCBFirearmsLine1":{
+         },
+      "StoryTextDay05FCBFirearmsChoice":{
+         "dialogTitle":"OBJ_NPC_BUSYMOM",
+         "text":"some question|{ choice0             { choice1       ",
+         "formFeed":"FFR",
+         "align":2
+         },         
+      "StoryTextDay05FCBFirearmsRespond0Line01":{
          "dialogTitle":"OBJ_NPC_ERYN",
          "text":"line1.",
          "align":2
          },
-      "StoryTextDay05FCBFirearmsLine2":{
+      "StoryTextDay05FCBFirearmsRespond0Line02":{
          "dialogTitle":"OBJ_NPC_RANDY",
          "text":"line2.",
          "align":2
          },
-      "StoryTextDay05WWAudioLine1":{
+      "StoryTextDay05FCBFirearmsRespond1Line01":{
          "dialogTitle":"OBJ_NPC_ERYN",
          "text":"line1.",
          "align":2
          },
-      "StoryTextDay05WWAudioLine2":{
-         "dialogTitle":"OBJ_NPC_ERYN",
+      "StoryTextDay05FCBFirearmsRespond1Line02":{
+         "dialogTitle":"OBJ_NPC_RANDY",
          "text":"line2.",
          "align":2
-         },     
+         },         
+      "StoryTextDay05WWAudioChoice":{
+         "dialogTitle":"OBJ_NPC_BUSYMOM",
+         "text":"some question|{ choice0             { choice1       ",
+         "formFeed":"FFR",
+         "align":2
+         },         
+      "StoryTextDay05WWAudioRespond0Line01":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"line1.",
+         "align":2
+         },
+      "StoryTextDay05WWAudioRespond0Line02":{
+         "dialogTitle":"OBJ_NPC_RANDY",
+         "text":"line2.",
+         "align":2
+         },
+      "StoryTextDay05WWAudioRespond1Line01":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"line1.",
+         "align":2
+         },
+      "StoryTextDay05WWAudioRespond1Line02":{
+         "dialogTitle":"OBJ_NPC_RANDY",
+         "text":"line2.",
+         "align":2
+         }, 
       "StoryTextDay05DenimCountry2Line1":{
          "dialogTitle":"OBJ_NPC_ERYN",
          "text":"line1.",
@@ -1357,7 +1399,29 @@
          "dialogTitle":"OBJ_NPC_GRANT",
          "text":"line2.",
          "align":2
-         },         
+         },  
+      "StoryTextDay06EnterNShackChoice":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"Is there anyone else I need to see first?|{ Yeah                { Nope       ",
+         "formFeed":"FFR",
+         "align":2
+         }, 
+      "StoryTextDay06EnterNShackChoice1":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"I'll come back later.",
+         "align":2
+         },              
+      "StoryTextNight06EnterNShackChoice":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"Am I ready to say goodbye?|{ Yeah                { Nope       ",
+         "formFeed":"FFR",
+         "align":2
+         },
+      "StoryTextNight06EnterNShackChoice1":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"No rush, I'll come back when I'm ready.",
+         "align":2
+         },              
       "StoryTextNight06TBooksLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
          "text":"line1.",

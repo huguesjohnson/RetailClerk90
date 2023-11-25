@@ -8,65 +8,38 @@
 ;*******************************************************************************
 ActionScriptDay04CavernInteract:	
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
-;	btst.l	#FLAGNAME,d7 ; test if the optional event is complete
+	btst.l	#FLAG_DAY04_EVENT00_CAVERN,d7 ; test if the event is complete
 	bne.s	.default ; show default text if the event is complete
 	;---------------------------------------------------------------------------
 	; else update flags and run the scripted event
 	;---------------------------------------------------------------------------
-;	bset.l	#FLAGNAME,d7 ; set event is done
+	bset.l	#FLAG_DAY04_EVENT00_CAVERN,d7 ; set event is done
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-;	move.w	#$FFFF,(MEM_STORY_EVENT1OR2_SCENE_ID) ; clear story event
-;	move.w	#OBJECTIVE_D01_O01_ReportBack,(MEM_OBJECTIVE) ; update objective
-;	move.l	#$00000000,(MEM_NPC_LOCATION_WEHALL) ; move characters
+	move.w	#SCENE_ID_NSHACK,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
+	move.w	#OBJECTIVE_D04_O01_NShack,(MEM_OBJECTIVE) ; update objective
 	; setup scripted event
-;	lea	XXXXLine1,a6 ; point a6 to the first dialog
+	lea	StoryTextDay04CavernLine1,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
-;	lea XXXXStart,a6 ; point a6 to event to load
+	lea ScriptedEventDay04_01_CavernStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 .default
 	bsr.w ShowDefaultText
 	rts
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;[Story event at The Cavern - D.B. - explains about the basement or maybe doesn't yet]
-;[ScriptedEventDay04_01_Cavern]
-;[Set objective to OBJECTIVE_D04_O01_NShack]
-;[set FLAG_DAY04_EVENT00_Cavern]
-
-	rts		
 
 ;*******************************************************************************
 ; SCENE_ID_NSHACK
 ;*******************************************************************************
 ActionScriptDay04NShackInteract:	
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
-;	btst.l	#FLAGNAME,d7 ; test if the optional event is complete
-	bne.s	.default ; show default text if the event is complete
+	btst.l	#FLAG_DAY04_EVENT00_CAVERN,d7 ; test if the 1st event is complete
+	beq.s	.default ; show default text if the event is not complete
 	;---------------------------------------------------------------------------
-	; else update flags and run the scripted event
+	; else transition - this is a really short day, maybe I should fix that
 	;---------------------------------------------------------------------------
-;	bset.l	#FLAGNAME,d7 ; set event is done
-	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-;	move.w	#$FFFF,(MEM_STORY_EVENT1OR2_SCENE_ID) ; clear story event
-;	move.w	#OBJECTIVE_D01_O01_ReportBack,(MEM_OBJECTIVE) ; update objective
-;	move.l	#$00000000,(MEM_NPC_LOCATION_WEHALL) ; move characters
-	; setup scripted event
-;	lea	XXXXLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
-;	lea XXXXStart,a6 ; point a6 to event to load
-	bsr.w QueueScriptedEvent ; queue the event
+	bra.w	EndDay04
 .default
 	bsr.w ShowDefaultText
 	rts
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;[ScriptedEventDay04_02_NShack]
-;[Story event at Nut Shack - likely a conversation about the letter and complaining about Lisa]
-;Transition to night
-
-	rts		
 
 ;*******************************************************************************
 ; SCENE_ID_SVIDEO
@@ -166,6 +139,7 @@ EndDay04:
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsNight ; reset the NPC locations
 	move.l	#$03000000,(MEM_NPC_LOCATION_TBOOKS)
+	move.l	#$0F100000,(MEM_NPC_LOCATION_CAVERN) ; db and dani are both in the cavern
 	;---------------------------------------------------------------------------	
 	; queue the introduction
 	;---------------------------------------------------------------------------	

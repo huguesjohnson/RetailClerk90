@@ -8,135 +8,96 @@
 ;*******************************************************************************
 ActionScriptNight05CavernEnter:	
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
-;	btst.l	#FLAGNAME,d7 ; test if the optional event is complete
+	btst.l	#FLAG_NIGHT05_EVENT00_CAVERN,d7 ; test if the event is complete
 	bne.s	.default ; show default text if the event is complete
 	;---------------------------------------------------------------------------
 	; else update flags and run the scripted event
 	;---------------------------------------------------------------------------
-;	bset.l	#FLAGNAME,d7 ; set event is done
+	bset.l	#FLAG_NIGHT05_EVENT00_CAVERN,d7 ; set event is done
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-;	move.w	#$FFFF,(MEM_STORY_EVENT1OR2_SCENE_ID) ; clear story event
-;	move.w	#OBJECTIVE_D01_O01_ReportBack,(MEM_OBJECTIVE) ; update objective
-;	move.l	#$00000000,(MEM_NPC_LOCATION_WEHALL) ; move characters
+	move.w	#SCENE_ID_BASEMENTMDORM,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
+	move.w	#SCENE_ID_BASEMENTOFFICE,(MEM_STORY_EVENT2_SCENE_ID) ; update story event
+	move.w	#OBJECTIVE_D05_O03_Basement,(MEM_OBJECTIVE) ; update objective
 	; setup scripted event
-;	lea	XXXXLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
-;	lea XXXXStart,a6 ; point a6 to event to load
+	lea ScriptedEventNight05_01_CavernStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 .default
-	bsr.w ShowDefaultText
 	rts
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;On enter - [ScriptedEventNight05_01_Cavern]
-;[Story event at the Cavern - Dani berates D.B. for keeping the basement a secret]
-;[Set FLAG_NIGHT04_EVENT00_Cavern]
-;[Set objective to OBJECTIVE_D05_O03_Basement]
-;[set story events at BasementMDorm and BasementOffice]
-
-	rts		
 
 ;*******************************************************************************
 ; SCENE_ID_BASEMENTMDORM
 ;*******************************************************************************
 ActionScriptNight05BasementMDormEnter:	
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
-;	btst.l	#FLAGNAME,d7 ; test if the optional event is complete
+	btst.l	#FLAG_NIGHT05_EVENT01_BASEMENTMDORM,d7 ; test if the event is complete
 	bne.s	.default ; show default text if the event is complete
 	;---------------------------------------------------------------------------
 	; else update flags and run the scripted event
 	;---------------------------------------------------------------------------
-;	bset.l	#FLAGNAME,d7 ; set event is done
+	bset.l	#FLAG_NIGHT05_EVENT01_BASEMENTMDORM,d7 ; set event is done
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-;	move.w	#$FFFF,(MEM_STORY_EVENT1OR2_SCENE_ID) ; clear story event
-;	move.w	#OBJECTIVE_D01_O01_ReportBack,(MEM_OBJECTIVE) ; update objective
-;	move.l	#$00000000,(MEM_NPC_LOCATION_WEHALL) ; move characters
+	move.w	#$FFFF,(MEM_STORY_EVENT1_SCENE_ID) ; clear story event
+	bsr.w	CheckNight05Events
 	; setup scripted event
-;	lea	XXXXLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
-;	lea XXXXStart,a6 ; point a6 to event to load
+	lea ScriptedEventNight05_02_BasementMDormStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 .default
 	bsr.w ShowDefaultText
 	rts
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;[Story event in dorm on enter - Carl learns about something]
-;[ScriptedEventNight05_02_BasementMDorm]
-;[FLAG_NIGHT05_EVENT01_BasementMDorm]
-
-	rts		
 
 ;*******************************************************************************
 ; SCENE_ID_BASEMENTOFFICE
 ;*******************************************************************************
 ActionScriptNight05BasementOfficeEnter:	
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
-;	btst.l	#FLAGNAME,d7 ; test if the optional event is complete
+	btst.l	#FLAG_NIGHT05_EVENT02_BASEMENTOFFICE,d7 ; test if the event is complete
 	bne.s	.default ; show default text if the event is complete
 	;---------------------------------------------------------------------------
 	; else update flags and run the scripted event
 	;---------------------------------------------------------------------------
-;	bset.l	#FLAGNAME,d7 ; set event is done
+	bset.l	#FLAG_NIGHT05_EVENT02_BASEMENTOFFICE,d7 ; set event is done
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-;	move.w	#$FFFF,(MEM_STORY_EVENT1OR2_SCENE_ID) ; clear story event
-;	move.w	#OBJECTIVE_D01_O01_ReportBack,(MEM_OBJECTIVE) ; update objective
-;	move.l	#$00000000,(MEM_NPC_LOCATION_WEHALL) ; move characters
+	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; clear story event
+	bsr.w	CheckNight05Events
 	; setup scripted event
-;	lea	XXXXLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
-;	lea XXXXStart,a6 ; point a6 to event to load
+	lea ScriptedEventNight05_03_BasementOfficeStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 .default
 	bsr.w ShowDefaultText
 	rts
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;[Dialog about the letters - Al is all like "why would I send that, I could care less about the people that work here"]
-;[Story event in the office - Carl learns about the simulation]
-;[ScriptedEventNight05_03_BasementOffice]
-;[set FLAG_NIGHT05_EVENT02_BasementOffice]
-;
-;After each - check if both flags FLAG_NIGHT05_EVENT01_BasementMDorm and FLAG_NIGHT05_EVENT02_BasementOffice are set and change objective if so
-;[Set objective to OBJECTIVE_D05_O04_Leave]
-;[set story event at South Hall]
-;[set FLAG_NIGHT05_EVENT03_BasementDone]
 
+CheckNight05Events:
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT05_EVENT01_BASEMENTMDORM,d7 ; test if the event is complete
+	beq.s	.exit ; event not done, exit
+	btst.l	#FLAG_NIGHT05_EVENT02_BASEMENTOFFICE,d7 ; test if the event is complete
+	beq.s	.exit ; event not done, exit
+	; else update objective and story event
+	bset.l	#FLAG_NIGHT05_EVENT03_BASEMENTDONE,d7 ; set event complete
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#OBJECTIVE_D05_O04_Leave,(MEM_OBJECTIVE) ; update objective	
+	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; update story event	
+.exit
 	rts		
 
 ;*******************************************************************************
 ; SCENE_ID_SHALL
 ;*******************************************************************************
 ActionScriptNight05SHallExit:	
+	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d7 ; copy player sprite direction to d7
+	cmpi.w	#DIRECTION_DOWN,d7 ; is the player facing south?
+	beq.s	.south ; branch if so
+	bsr.w	DefaultExitScene ; default scene exit
+	rts	
+.south
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
-;	btst.l	#FLAGNAME,d7 ; test if the optional event is complete
-	bne.s	.default ; show default text if the event is complete
-	;---------------------------------------------------------------------------
-	; else update flags and run the scripted event
-	;---------------------------------------------------------------------------
-;	bset.l	#FLAGNAME,d7 ; set event is done
-	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-;	move.w	#$FFFF,(MEM_STORY_EVENT1OR2_SCENE_ID) ; clear story event
-;	move.w	#OBJECTIVE_D01_O01_ReportBack,(MEM_OBJECTIVE) ; update objective
-;	move.l	#$00000000,(MEM_NPC_LOCATION_WEHALL) ; move characters
-	; setup scripted event
-;	lea	XXXXLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
-;	lea XXXXStart,a6 ; point a6 to event to load
-	bsr.w QueueScriptedEvent ; queue the event
-.default
-	bsr.w ShowDefaultText
-	rts
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;Exit blocked until [FLAG_NIGHT05_EVENT03_BasementDone] is set
-;If set - [ScriptedEventNight05_04_SouthHall] - Carl does some introspection
-;Transition to next day
-
+	btst.l	#FLAG_NIGHT05_EVENT03_BASEMENTDONE,d7 ; test if the mandatory event is complete
+	beq.s	.cantleave ; branch if not
+	bsr.w	EndNight05 ; transition to night
+	rts	
+.cantleave
+	lea ScriptedEventNotTimeToLeaveCarlStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event	
 	rts	
 
 ;*******************************************************************************
@@ -225,14 +186,28 @@ EndNight05:
 	and.l	#$00000000,(MEM_DAY_EVENT_FLAGS) ; clear day event flags
 	move.w	#SCENE_ID_NSHACK,(MEM_STORY_EVENT1_SCENE_ID) ; story event 1
 	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; no story event 2
-;TODO - determine which of these to show
-;	move.w	#SCENE_ID_CAVERN,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
-;	move.w	#SCENE_ID_FCBCAMPING,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
-;	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
 	move.w	#PLAYER_SPRITE_ERYN,(MEM_PLAYER_SPRITE) ; initial sprite
 	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
 	move.w	#$00C2,(MEM_PLAYER_SPRITE_X)
 	move.w	#$00D0,(MEM_PLAYER_SPRITE_Y)
+	;---------------------------------------------------------------------------	
+	; determine which optional events are available
+	;---------------------------------------------------------------------------	
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; clear all optional events
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; clear all optional events
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; clear all optional events
+	cmpi.w	#MAX_REL,(MEM_REL_DB)
+	bne.s	.1
+	move.w	#SCENE_ID_CAVERN,(MEM_OPTIONAL_EVENT1_SCENE_ID)	
+.1
+	cmpi.w	#MAX_REL,(MEM_REL_GRANT)
+	bne.s	.2
+	move.w	#SCENE_ID_FCBCAMPING,(MEM_OPTIONAL_EVENT2_SCENE_ID)	
+.2
+	cmpi.w	#MAX_REL,(MEM_REL_NICKY)
+	bne.s	.3
+	move.w	#SCENE_ID_SVIDEO,(MEM_OPTIONAL_EVENT3_SCENE_ID)	
+.3
 	;---------------------------------------------------------------------------	
 	; update NPC locations
 	;---------------------------------------------------------------------------	

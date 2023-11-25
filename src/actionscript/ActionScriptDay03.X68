@@ -120,8 +120,7 @@ CheckDay03Events:
 	bset.l	#FLAG_DAY03_EVENT03_LUNCHESDELIVERED,d7 ; set events complete
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
 	move.w	#OBJECTIVE_D03_O02_ReportBack,(MEM_OBJECTIVE) ; update objective	
-	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; clear story event
-	move.w	#OBJECTIVE_D01_O01_ReportBack,(MEM_OBJECTIVE) ; update objective
+	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
 	move.l	#$18000000,(MEM_NPC_LOCATION_SHALL) ; move characters
 .exit
 	rts

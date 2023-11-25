@@ -7,109 +7,132 @@
 ; SCENE_ID_FCBFIREARMS
 ;*******************************************************************************
 ActionScriptDay05FCBFirearmsInteract:	
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	beq.s	ActionScriptDay05FCBFirearmsInteractDefault ; branch if not an npc
+	;---------------------------------------------------------------
+	; npc 0 is the clerk
+	; npc 1 is the shopper
+	;---------------------------------------------------------------
+	cmpi.w	#$0000,d7 ; test if the clerk
+	bne.s	.customer
+.clerk
+	bra.s	ActionScriptDay05FCBFirearmsInteractDefault
+.customer
+	lea	StoryTextDay05FCBFirearmsChoice,a6 ; load dialog text	
+	bsr.w	Show2ChoiceDialog
+	rts
+ActionScriptDay05FCBFirearmsInteractDefault:
 	bsr.w ShowDefaultText
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;[ScriptedEventDay05_01_FCBFirearms]
-;[set FLAG_DAY05_EVENT00_FCBFirearms]
-
 	rts		
 
 ActionScriptDay05FCBFirearmsRespond:	
-	bsr.w ShowDefaultText
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-
-	rts
+	bsr.w	ResetDialog
+	move.w	#$FFFF,(MEM_STORY_EVENT1_SCENE_ID) ; clear story event	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	bset.l	#FLAG_DAY05_EVENT00_FCBFIREARMS,d7 ; set event flag
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; copy them back
+	move.l	#$0E000000,(MEM_NPC_LOCATION_FCBFIREARMS) ; npc leaves after event
+	cmpi.w	#$0000,(MEM_MENU_RESPONSE) ; is the menu selection 0?
+	bne.s	.choice1
+.choice0
+	lea	StoryTextDay05FCBFirearmsRespond0Line01,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ActionScriptDay05FCBFirearmsRespond0Start,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts	
+.choice1	
+	addq	#$1,(MEM_CUSTOMER_FEEDBACK_SCORE) ; not sure if I'll do anything with this	
+	lea	StoryTextDay05FCBFirearmsRespond1Line01,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ActionScriptDay05FCBFirearmsRespond1Start,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts	
 
 ;*******************************************************************************
 ; SCENE_ID_WWAUDIO
 ;*******************************************************************************
 ActionScriptDay05WWAudioInteract:	
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	beq.s	ActionScriptDay05WWAudioInteractDefault ; branch if not an npc
+	;---------------------------------------------------------------
+	; npc 0 is the clerk
+	; npc 1 is the shopper
+	;---------------------------------------------------------------
+	cmpi.w	#$0000,d7 ; test if the clerk
+	bne.s	.customer
+.clerk
+	bra.s	ActionScriptDay05WWAudioInteractDefault
+.customer
+	lea	StoryTextDay05WWAudioChoice,a6 ; load dialog text	
+	bsr.w	Show2ChoiceDialog
+	rts
+ActionScriptDay05WWAudioInteractDefault:
 	bsr.w ShowDefaultText
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;[ScriptedEventDay05_02_WWAudio]
-;[set FLAG_DAY05_EVENT01_WWAudio]
-;
-;After each - check if both flags FLAG_DAY04_EVENT00_FCBFirearms and FLAG_DAY04_EVENT01_WWAudio are set and change objective if so
-;[Set objective to OBJECTIVE_D05_O01_ReportBack]
-;[set story event at denim country]
-;[set FLAG_DAY05_EVENT02_ContestDone]
-
 	rts		
 
 ActionScriptDay05WWAudioRespond:	
-	bsr.w ShowDefaultText
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
+	bsr.w	ResetDialog
+	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; clear story event	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	bset.l	#FLAG_DAY05_EVENT01_WWAUDIO,d7 ; set event flag
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; copy them back
+	move.l	#$1B000000,(MEM_NPC_LOCATION_WWAUDIO) ; npc leaves after event
+	cmpi.w	#$0000,(MEM_MENU_RESPONSE) ; is the menu selection 0?
+	bne.s	.choice1
+.choice0
+	addq	#$1,(MEM_CUSTOMER_FEEDBACK_SCORE) ; not sure if I'll do anything with this	
+	lea	StoryTextDay05WWAudioRespond0Line01,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ActionScriptDay05WWAudioRespond0Start,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts	
+.choice1	
+	lea	StoryTextDay05WWAudioRespond1Line01,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ActionScriptDay05WWAudioRespond1Start,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts	
 
+CheckDay05Events:
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_DAY05_EVENT00_FCBFIREARMS,d7 ; test if event is complete
+	beq.s	.exit ; event not complete, exit
+	btst.l	#FLAG_DAY05_EVENT01_WWAUDIO,d7 ; test if event is complete
+	beq.s	.exit ; event not complete, exit
+	; otherwise update story event, objective, and npc locations
+	bset.l	#FLAG_DAY05_EVENT02_CONTESTDONE,d7 ; set events complete
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#OBJECTIVE_D05_O01_ReportBack,(MEM_OBJECTIVE) ; update objective	
+	move.w	#SCENE_ID_DENIMCOUNTRY,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
+	move.l	#$05102024,(MEM_NPC_LOCATION_DENIMCOUNTRY) ; move characters
+.exit
 	rts
 
 ;*******************************************************************************
 ; SCENE_ID_DENIMCOUNTRY
 ;*******************************************************************************
 ActionScriptDay05DenimCountryInteract:	
-	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
-;	btst.l	#FLAGNAME,d7 ; test if the optional event is complete
-	bne.s	.default ; show default text if the event is complete
-	;---------------------------------------------------------------------------
-	; else update flags and run the scripted event
-	;---------------------------------------------------------------------------
-;	bset.l	#FLAGNAME,d7 ; set event is done
-	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-;	move.w	#$FFFF,(MEM_STORY_EVENT1OR2_SCENE_ID) ; clear story event
-;	move.w	#OBJECTIVE_D01_O01_ReportBack,(MEM_OBJECTIVE) ; update objective
-;	move.l	#$00000000,(MEM_NPC_LOCATION_WEHALL) ; move characters
-	; setup scripted event
-;	lea	XXXXLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
-;	lea XXXXStart,a6 ; point a6 to event to load
-	bsr.w QueueScriptedEvent ; queue the event
-.default
 	bsr.w ShowDefaultText
 	rts
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;Dialog at Denim Country is the same until [FLAG_DAY05_EVENT02_ContestDone] - maybe doesn’t matter if there is a quick transition
-
-	rts		
+	
+ActionScriptDay05DenimCountryExit:	
+	; need to clear out NPC who is set there at the start of the day
+	move.l	#$05000000,(MEM_NPC_LOCATION_DENIMCOUNTRY)
+	bsr.w	DefaultExitScene ; default scene exit
+	rts
 
 ActionScriptDay05DenimCountryEnter:	
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
-;	btst.l	#FLAGNAME,d7 ; test if the optional event is complete
-	bne.s	.default ; show default text if the event is complete
+	btst.l	#FLAG_DAY05_EVENT02_CONTESTDONE,d7 ; test if the event is complete
+	bne.s	.default ; not set, default
 	;---------------------------------------------------------------------------
-	; else update flags and run the scripted event
+	; else - end of the day
 	;---------------------------------------------------------------------------
-;	bset.l	#FLAGNAME,d7 ; set event is done
-	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-;	move.w	#$FFFF,(MEM_STORY_EVENT1OR2_SCENE_ID) ; clear story event
-;	move.w	#OBJECTIVE_D01_O01_ReportBack,(MEM_OBJECTIVE) ; update objective
-;	move.l	#$00000000,(MEM_NPC_LOCATION_WEHALL) ; move characters
-	; setup scripted event
-;	lea	XXXXLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
-;	lea XXXXStart,a6 ; point a6 to event to load
-	bsr.w QueueScriptedEvent ; queue the event
+	bsr.w	EndDay05
 .default
-	bsr.w ShowDefaultText
 	rts
-;-------------------------------------------------------------------------------
-; TODO
-;-------------------------------------------------------------------------------
-;On scene enter if [FLAG_DAY05_EVENT02_ContestDone] is set
-;[ScriptedEventDay05_03_DenimCountry]
-;[Story event at DCountry - likely another dialog with Dani, she's chastising Lisa about the letter. "Obviously it's the mall manager Al. Who else would know about something like this in advance?" "Doesn't he live in the basement?" "Yeah, more or less. If this is so important then go talk to him." "I can't.. the basement, it sounds scary." "Just give me the letter, I'm not scared of that loser. I can't wait to see the look on his face when I walk in." (to Eryn) "Also, I won."]
-;Transition to night
-
-	rts	
-
 
 ;*******************************************************************************
 ; SCENE_ID_CAVERN

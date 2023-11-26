@@ -1506,92 +1506,252 @@
          "dialogTitle":"OBJ_NPC_GINA",
          "text":"whatever",
          "align":2
-         },         
+         },    
       "StoryTextTradingSequenceSVideo":{
          "dialogTitle":"OBJ_NPC_NICKY",
-         "text":"whatever",
+         "text":"thanks for that item, here's this item",
+         "align":2
+         },  
+      "StoryTextTradingSequenceFCBFishingBefore":{
+         "dialogTitle":"OBJ_NPC_HEATHER",
+         "text":"dialog after the trading sequence is available but before it happened",
          "align":2
          },  
       "StoryTextTradingSequenceFCBFishing":{
          "dialogTitle":"OBJ_NPC_HEATHER",
-         "text":"whatever",
+         "text":"thanks for that item, here's this item",
+         "align":2
+         },  
+      "StoryTextTradingSequenceFCBFishingAfter":{
+         "dialogTitle":"OBJ_NPC_HEATHER",
+         "text":"dialog after the trading sequence happened",
+         "align":2
+         },
+      "StoryTextTradingSequenceFCBFirearmsBefore":{
+         "dialogTitle":"OBJ_NPC_RANDY",
+         "text":"dialog after the trading sequence is available but before it happened",
          "align":2
          },  
       "StoryTextTradingSequenceFCBFirearms":{
          "dialogTitle":"OBJ_NPC_RANDY",
-         "text":"whatever",
+         "text":"thanks for that item, here's this item",
          "align":2
          }, 
-      "StoryTextTradingSequenceWWAppliances":{
-         "dialogTitle":"OBJ_NPC_LAURA",
-         "text":"whatever",
-         "align":2
-         },     
-      "StoryTextTradingSequenceCheckers":{
-         "dialogTitle":"OBJ_NPC_TODD",
-         "text":"whatever",
-         "align":2
-         },               
-      "StoryTextTradingSequenceCPlanet":{
-         "dialogTitle":"OBJ_NPC_ELIZA",
-         "text":"whatever",
-         "align":2
-         }, 
-      "StoryTextTradingSequenceWWAudio":{
-         "dialogTitle":"OBJ_NPC_CRAIG",
-         "text":"whatever",
-         "align":2
-         }, 
-      "StoryTextTradingSequenceWWVideo":{
-         "dialogTitle":"OBJ_NPC_JUAN",
-         "text":"whatever",
-         "align":2
-         }, 
-      "StoryTextTradingSequenceTLodge":{
-         "dialogTitle":"OBJ_NPC_SCOTT",
-         "text":"whatever",
-         "align":2
-         }, 
-      "StoryTextTradingSequenceCNow":{
-         "dialogTitle":"OBJ_NPC_BECKY",
-         "text":"whatever",
-         "align":2
-         }, 
-      "StoryTextTradingSequenceFCBCheckout":{
-         "dialogTitle":"OBJ_NPC_THOMAS",
-         "text":"whatever",
-         "align":2
-         }, 
-      "StoryTextTradingSequenceWWCheckout":{
-         "dialogTitle":"OBJ_NPC_TANYA",
-         "text":"whatever",
-         "align":2
-         },          
-      "StoryTextTradingSequenceFCBCamping":{
-         "dialogTitle":"OBJ_NPC_GRANT",
-         "text":"whatever",
-         "align":2
-         },          
-      "StoryTextTradingSequencePogoDawg":{
-         "dialogTitle":"OBJ_NPC_GRIFFY",
-         "text":"whatever",
-         "align":2
-         },   
-      "StoryTextTradingSequenceVB":{
-         "dialogTitle":"OBJ_NPC_GRUNBERG",
-         "text":"whatever",
+      "StoryTextTradingSequenceFCBFirearmsAfter":{
+         "dialogTitle":"OBJ_NPC_RANDY",
+         "text":"dialog after the trading sequence happened",
          "align":2
          },           
+      "StoryTextTradingSequenceWWAppliancesBefore":{
+         "dialogTitle":"OBJ_NPC_LAURA",
+         "text":"dialog after the trading sequence is available but before it happened",
+         "align":2
+         },          
+      "StoryTextTradingSequenceWWAppliances":{
+         "dialogTitle":"OBJ_NPC_LAURA",
+         "text":"thanks for that item, here's this item",
+         "align":2
+         },     
+      "StoryTextTradingSequenceWWAppliancesAfter":{
+         "dialogTitle":"OBJ_NPC_LAURA",
+         "text":"dialog after the trading sequence happened",
+         "align":2
+         },           
+      "StoryTextTradingSequenceCheckersBefore":{
+         "dialogTitle":"OBJ_NPC_TODD",
+         "text":"dialog after the trading sequence is available but before it happened",
+         "align":2
+         },          
+      "StoryTextTradingSequenceCheckers":{
+         "dialogTitle":"OBJ_NPC_TODD",
+         "text":"thanks for that item, here's this item",
+         "align":2
+         },      
+      "StoryTextTradingSequenceCheckersAfter":{
+         "dialogTitle":"OBJ_NPC_TODD",
+         "text":"dialog after the trading sequence happened",
+         "align":2
+         },            
+      "StoryTextTradingSequenceCPlanetBefore":{
+         "dialogTitle":"OBJ_NPC_ELIZA",
+         "text":"dialog after the trading sequence is available but before it happened",
+         "align":2
+         },          
+      "StoryTextTradingSequenceCPlanet":{
+         "dialogTitle":"OBJ_NPC_ELIZA",
+         "text":"thanks for that item, here's this item",
+         "align":2
+         }, 
+      "StoryTextTradingSequenceCPlanetAfter":{
+         "dialogTitle":"OBJ_NPC_ELIZA",
+         "text":"dialog after the trading sequence happened",
+         "align":2
+         },           
+      "StoryTextTradingSequenceWWAudioBefore":{
+         "dialogTitle":"OBJ_NPC_CRAIG",
+         "text":"dialog after the trading sequence is available but before it happened",
+         "align":2
+         },          
+      "StoryTextTradingSequenceWWAudio":{
+         "dialogTitle":"OBJ_NPC_CRAIG",
+         "text":"thanks for that item, here's this item",
+         "align":2
+         }, 
+      "StoryTextTradingSequenceWWAudioAfter":{
+         "dialogTitle":"OBJ_NPC_CRAIG",
+         "text":"dialog after the trading sequence happened",
+         "align":2
+         },  
+      "StoryTextTradingSequenceWWVideoBefore":{
+         "dialogTitle":"OBJ_NPC_JUAN",
+         "text":"dialog after the trading sequence is available but before it happened",
+         "align":2
+         },          
+      "StoryTextTradingSequenceWWVideo":{
+         "dialogTitle":"OBJ_NPC_JUAN",
+         "text":"thanks for that item, here's this item",
+         "align":2
+         },
+      "StoryTextTradingSequenceWWVideoAfter":{
+         "dialogTitle":"OBJ_NPC_JUAN",
+         "text":"dialog after the trading sequence happened",
+         "align":2
+         },          
+      "StoryTextTradingSequenceTLodgeBefore":{
+         "dialogTitle":"OBJ_NPC_SCOTT",
+         "text":"dialog after the trading sequence is available but before it happened",
+         "align":2
+         },          
+      "StoryTextTradingSequenceTLodge":{
+         "dialogTitle":"OBJ_NPC_SCOTT",
+         "text":"thanks for that item, here's this item",
+         "align":2
+         }, 
+      "StoryTextTradingSequenceTLodgeAfter":{
+         "dialogTitle":"OBJ_NPC_SCOTT",
+         "text":"dialog after the trading sequence happened",
+         "align":2
+         },          
+      "StoryTextTradingSequenceCNowBefore":{
+         "dialogTitle":"OBJ_NPC_BECKY",
+         "text":"dialog after the trading sequence is available but before it happened",
+         "align":2
+         },          
+      "StoryTextTradingSequenceCNow":{
+         "dialogTitle":"OBJ_NPC_BECKY",
+         "text":"thanks for that item, here's this item",
+         "align":2
+         }, 
+      "StoryTextTradingSequenceCNowAfter":{
+         "dialogTitle":"OBJ_NPC_BECKY",
+         "text":"dialog after the trading sequence happened",
+         "align":2
+         },            
+      "StoryTextTradingSequenceFCBCheckoutBefore":{
+         "dialogTitle":"OBJ_NPC_THOMAS",
+         "text":"dialog after the trading sequence is available but before it happened",
+         "align":2
+         },          
+      "StoryTextTradingSequenceFCBCheckout":{
+         "dialogTitle":"OBJ_NPC_THOMAS",
+         "text":"thanks for that item, here's this item",
+         "align":2
+         }, 
+      "StoryTextTradingSequenceFCBCheckoutAfter":{
+         "dialogTitle":"OBJ_NPC_THOMAS",
+         "text":"dialog after the trading sequence happened",
+         "align":2
+         },          
+      "StoryTextTradingSequenceWWCheckoutBefore":{
+         "dialogTitle":"OBJ_NPC_TANYA",
+         "text":"dialog after the trading sequence is available but before it happened",
+         "align":2
+         },   
+      "StoryTextTradingSequenceWWCheckout":{
+         "dialogTitle":"OBJ_NPC_TANYA",
+         "text":"thanks for that item, here's this item",
+         "align":2
+         },      
+      "StoryTextTradingSequenceWWCheckoutAfter":{
+         "dialogTitle":"OBJ_NPC_TANYA",
+         "text":"dialog after the trading sequence happened",
+         "align":2
+         },                
+      "StoryTextTradingSequenceFCBCampingBefore":{
+         "dialogTitle":"OBJ_NPC_GRANT",
+         "text":"dialog after the trading sequence is available but before it happened",
+         "align":2
+         },   
+      "StoryTextTradingSequenceFCBCamping":{
+         "dialogTitle":"OBJ_NPC_GRANT",
+         "text":"thanks for that item, here's this item",
+         "align":2
+         }, 
+      "StoryTextTradingSequenceFCBCampingAfter":{
+         "dialogTitle":"OBJ_NPC_GRANT",
+         "text":"dialog after the trading sequence happened",
+         "align":2
+         },            
+      "StoryTextTradingSequencePogoDawgBefore":{
+         "dialogTitle":"OBJ_NPC_GRIFFY",
+         "text":"dialog after the trading sequence is available but before it happened",
+         "align":2
+         },                  
+      "StoryTextTradingSequencePogoDawg":{
+         "dialogTitle":"OBJ_NPC_GRIFFY",
+         "text":"thanks for that item, here's this item",
+         "align":2
+         },
+      "StoryTextTradingSequencePogoDawgAfter":{
+         "dialogTitle":"OBJ_NPC_GRIFFY",
+         "text":"dialog after the trading sequence happened",
+         "align":2
+         },            
+      "StoryTextTradingSequenceVBBefore":{
+         "dialogTitle":"OBJ_NPC_GRUNBERG",
+         "text":"dialog after the trading sequence is available but before it happened",
+         "align":2
+         },               
+      "StoryTextTradingSequenceVB":{
+         "dialogTitle":"OBJ_NPC_GRUNBERG",
+         "text":"thanks for that item, here's this item",
+         "align":2
+         },        
+      "StoryTextTradingSequenceVBAfter":{
+         "dialogTitle":"OBJ_NPC_GRUNBERG",
+         "text":"dialog after the trading sequence happened",
+         "align":2
+         },            
+      "StoryTextTradingSequenceCavernBefore":{
+         "dialogTitle":"OBJ_NPC_DB",
+         "text":"dialog after the trading sequence is available but before it happened",
+         "align":2
+         }, 
       "StoryTextTradingSequenceCavern":{
          "dialogTitle":"OBJ_NPC_DB",
-         "text":"whatever",
+         "text":"thanks for that item, here's this item",
+         "align":2
+         }, 
+      "StoryTextTradingSequenceCavernAfter":{
+         "dialogTitle":"OBJ_NPC_DB",
+         "text":"dialog after the trading sequence happened",
+         "align":2
+         },          
+      "StoryTextTradingSequenceDenimCountryBefore":{
+         "dialogTitle":"OBJ_NPC_LISA",
+         "text":"dialog after the trading sequence is available but before it happened",
          "align":2
          }, 
       "StoryTextTradingSequenceDenimCountry":{
          "dialogTitle":"OBJ_NPC_LISA",
-         "text":"whatever",
+         "text":"thanks for that item, here's this item",
          "align":2
-         }
+         },
+      "StoryTextTradingSequenceDenimCountryAfter":{
+         "dialogTitle":"OBJ_NPC_LISA",
+         "text":"dialog after the trading sequence happened",
+         "align":2
+         }         
    }
 }
 

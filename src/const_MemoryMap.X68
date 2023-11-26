@@ -200,4 +200,9 @@ MEM_PLAYER1_REL2=$FFFF0474	; relationship score for p1 and npc2
 MEM_PLAYER2_REL0=$FFFF0476	; relationship score for p2 and npc0
 MEM_PLAYER2_REL1=$FFFF0478	; relationship score for p2 and npc1
 MEM_PLAYER2_REL2=$FFFF047A	; relationship score for p2 and npc2
-MEM_END=$FFFF047C
+;-------------------------------------------------------------------------------
+; trading sequence
+;-------------------------------------------------------------------------------
+MEM_TRADING_SEQUENCE_DAY=$FFFF047C	; track trading sequence for the daytime
+MEM_TRADING_SEQUENCE_NIGHT=$FFFF0480	; track trading sequence for the nighttime
+MEM_END=$FFFF0484

@@ -1625,11 +1625,11 @@ DebugScreenLine15:
 DebugScreenLine16:
 	dc.b	"{(not implemented) {(not implemented)",ETX
 DebugScreenLine17:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{(not implemented) {Bad ending       ",ETX
 DebugScreenLine18:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{(not implemented) {Good ending      ",ETX
 DebugScreenLine19:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{(not implemented) {Perfect Ending   ",ETX
 
 ;-------------------------------------------------------------------------------
 ; CreditsScreens
@@ -3261,71 +3261,296 @@ StoryTextTradingSequenceInfoDek:
 	align 2
 StoryTextTradingSequenceSVideo:
 	dc.w	OBJ_NPC_NICKY
-	dc.b	"whatever",ETX
+	dc.b	"thanks for that item,",LF
+	dc.b	"here's this item",ETX
+	align 2
+StoryTextTradingSequenceFCBFishingBefore:
+	dc.w	OBJ_NPC_HEATHER
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence is  ^",FF
+	dc.b	"available but before",LF
+	dc.b	"it happened",ETX
 	align 2
 StoryTextTradingSequenceFCBFishing:
 	dc.w	OBJ_NPC_HEATHER
-	dc.b	"whatever",ETX
+	dc.b	"thanks for that item,",LF
+	dc.b	"here's this item",ETX
+	align 2
+StoryTextTradingSequenceFCBFishingAfter:
+	dc.w	OBJ_NPC_HEATHER
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence     ^",FF
+	dc.b	"happened",ETX
+	align 2
+StoryTextTradingSequenceFCBFirearmsBefore:
+	dc.w	OBJ_NPC_RANDY
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence is  ^",FF
+	dc.b	"available but before",LF
+	dc.b	"it happened",ETX
 	align 2
 StoryTextTradingSequenceFCBFirearms:
 	dc.w	OBJ_NPC_RANDY
-	dc.b	"whatever",ETX
+	dc.b	"thanks for that item,",LF
+	dc.b	"here's this item",ETX
+	align 2
+StoryTextTradingSequenceFCBFirearmsAfter:
+	dc.w	OBJ_NPC_RANDY
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence     ^",FF
+	dc.b	"happened",ETX
+	align 2
+StoryTextTradingSequenceWWAppliancesBefore:
+	dc.w	OBJ_NPC_LAURA
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence is  ^",FF
+	dc.b	"available but before",LF
+	dc.b	"it happened",ETX
 	align 2
 StoryTextTradingSequenceWWAppliances:
 	dc.w	OBJ_NPC_LAURA
-	dc.b	"whatever",ETX
+	dc.b	"thanks for that item,",LF
+	dc.b	"here's this item",ETX
+	align 2
+StoryTextTradingSequenceWWAppliancesAfter:
+	dc.w	OBJ_NPC_LAURA
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence     ^",FF
+	dc.b	"happened",ETX
+	align 2
+StoryTextTradingSequenceCheckersBefore:
+	dc.w	OBJ_NPC_TODD
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence is  ^",FF
+	dc.b	"available but before",LF
+	dc.b	"it happened",ETX
 	align 2
 StoryTextTradingSequenceCheckers:
 	dc.w	OBJ_NPC_TODD
-	dc.b	"whatever",ETX
+	dc.b	"thanks for that item,",LF
+	dc.b	"here's this item",ETX
+	align 2
+StoryTextTradingSequenceCheckersAfter:
+	dc.w	OBJ_NPC_TODD
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence     ^",FF
+	dc.b	"happened",ETX
+	align 2
+StoryTextTradingSequenceCPlanetBefore:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence is  ^",FF
+	dc.b	"available but before",LF
+	dc.b	"it happened",ETX
 	align 2
 StoryTextTradingSequenceCPlanet:
 	dc.w	OBJ_NPC_ELIZA
-	dc.b	"whatever",ETX
+	dc.b	"thanks for that item,",LF
+	dc.b	"here's this item",ETX
+	align 2
+StoryTextTradingSequenceCPlanetAfter:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence     ^",FF
+	dc.b	"happened",ETX
+	align 2
+StoryTextTradingSequenceWWAudioBefore:
+	dc.w	OBJ_NPC_CRAIG
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence is  ^",FF
+	dc.b	"available but before",LF
+	dc.b	"it happened",ETX
 	align 2
 StoryTextTradingSequenceWWAudio:
 	dc.w	OBJ_NPC_CRAIG
-	dc.b	"whatever",ETX
+	dc.b	"thanks for that item,",LF
+	dc.b	"here's this item",ETX
+	align 2
+StoryTextTradingSequenceWWAudioAfter:
+	dc.w	OBJ_NPC_CRAIG
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence     ^",FF
+	dc.b	"happened",ETX
+	align 2
+StoryTextTradingSequenceWWVideoBefore:
+	dc.w	OBJ_NPC_JUAN
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence is  ^",FF
+	dc.b	"available but before",LF
+	dc.b	"it happened",ETX
 	align 2
 StoryTextTradingSequenceWWVideo:
 	dc.w	OBJ_NPC_JUAN
-	dc.b	"whatever",ETX
+	dc.b	"thanks for that item,",LF
+	dc.b	"here's this item",ETX
+	align 2
+StoryTextTradingSequenceWWVideoAfter:
+	dc.w	OBJ_NPC_JUAN
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence     ^",FF
+	dc.b	"happened",ETX
+	align 2
+StoryTextTradingSequenceTLodgeBefore:
+	dc.w	OBJ_NPC_SCOTT
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence is  ^",FF
+	dc.b	"available but before",LF
+	dc.b	"it happened",ETX
 	align 2
 StoryTextTradingSequenceTLodge:
 	dc.w	OBJ_NPC_SCOTT
-	dc.b	"whatever",ETX
+	dc.b	"thanks for that item,",LF
+	dc.b	"here's this item",ETX
+	align 2
+StoryTextTradingSequenceTLodgeAfter:
+	dc.w	OBJ_NPC_SCOTT
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence     ^",FF
+	dc.b	"happened",ETX
+	align 2
+StoryTextTradingSequenceCNowBefore:
+	dc.w	OBJ_NPC_BECKY
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence is  ^",FF
+	dc.b	"available but before",LF
+	dc.b	"it happened",ETX
 	align 2
 StoryTextTradingSequenceCNow:
 	dc.w	OBJ_NPC_BECKY
-	dc.b	"whatever",ETX
+	dc.b	"thanks for that item,",LF
+	dc.b	"here's this item",ETX
+	align 2
+StoryTextTradingSequenceCNowAfter:
+	dc.w	OBJ_NPC_BECKY
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence     ^",FF
+	dc.b	"happened",ETX
+	align 2
+StoryTextTradingSequenceFCBCheckoutBefore:
+	dc.w	OBJ_NPC_THOMAS
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence is  ^",FF
+	dc.b	"available but before",LF
+	dc.b	"it happened",ETX
 	align 2
 StoryTextTradingSequenceFCBCheckout:
 	dc.w	OBJ_NPC_THOMAS
-	dc.b	"whatever",ETX
+	dc.b	"thanks for that item,",LF
+	dc.b	"here's this item",ETX
+	align 2
+StoryTextTradingSequenceFCBCheckoutAfter:
+	dc.w	OBJ_NPC_THOMAS
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence     ^",FF
+	dc.b	"happened",ETX
+	align 2
+StoryTextTradingSequenceWWCheckoutBefore:
+	dc.w	OBJ_NPC_TANYA
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence is  ^",FF
+	dc.b	"available but before",LF
+	dc.b	"it happened",ETX
 	align 2
 StoryTextTradingSequenceWWCheckout:
 	dc.w	OBJ_NPC_TANYA
-	dc.b	"whatever",ETX
+	dc.b	"thanks for that item,",LF
+	dc.b	"here's this item",ETX
+	align 2
+StoryTextTradingSequenceWWCheckoutAfter:
+	dc.w	OBJ_NPC_TANYA
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence     ^",FF
+	dc.b	"happened",ETX
+	align 2
+StoryTextTradingSequenceFCBCampingBefore:
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence is  ^",FF
+	dc.b	"available but before",LF
+	dc.b	"it happened",ETX
 	align 2
 StoryTextTradingSequenceFCBCamping:
 	dc.w	OBJ_NPC_GRANT
-	dc.b	"whatever",ETX
+	dc.b	"thanks for that item,",LF
+	dc.b	"here's this item",ETX
+	align 2
+StoryTextTradingSequenceFCBCampingAfter:
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence     ^",FF
+	dc.b	"happened",ETX
+	align 2
+StoryTextTradingSequencePogoDawgBefore:
+	dc.w	OBJ_NPC_GRIFFY
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence is  ^",FF
+	dc.b	"available but before",LF
+	dc.b	"it happened",ETX
 	align 2
 StoryTextTradingSequencePogoDawg:
 	dc.w	OBJ_NPC_GRIFFY
-	dc.b	"whatever",ETX
+	dc.b	"thanks for that item,",LF
+	dc.b	"here's this item",ETX
+	align 2
+StoryTextTradingSequencePogoDawgAfter:
+	dc.w	OBJ_NPC_GRIFFY
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence     ^",FF
+	dc.b	"happened",ETX
+	align 2
+StoryTextTradingSequenceVBBefore:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence is  ^",FF
+	dc.b	"available but before",LF
+	dc.b	"it happened",ETX
 	align 2
 StoryTextTradingSequenceVB:
 	dc.w	OBJ_NPC_GRUNBERG
-	dc.b	"whatever",ETX
+	dc.b	"thanks for that item,",LF
+	dc.b	"here's this item",ETX
+	align 2
+StoryTextTradingSequenceVBAfter:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence     ^",FF
+	dc.b	"happened",ETX
+	align 2
+StoryTextTradingSequenceCavernBefore:
+	dc.w	OBJ_NPC_DB
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence is  ^",FF
+	dc.b	"available but before",LF
+	dc.b	"it happened",ETX
 	align 2
 StoryTextTradingSequenceCavern:
 	dc.w	OBJ_NPC_DB
-	dc.b	"whatever",ETX
+	dc.b	"thanks for that item,",LF
+	dc.b	"here's this item",ETX
+	align 2
+StoryTextTradingSequenceCavernAfter:
+	dc.w	OBJ_NPC_DB
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence     ^",FF
+	dc.b	"happened",ETX
+	align 2
+StoryTextTradingSequenceDenimCountryBefore:
+	dc.w	OBJ_NPC_LISA
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence is  ^",FF
+	dc.b	"available but before",LF
+	dc.b	"it happened",ETX
 	align 2
 StoryTextTradingSequenceDenimCountry:
 	dc.w	OBJ_NPC_LISA
-	dc.b	"whatever",ETX
+	dc.b	"thanks for that item,",LF
+	dc.b	"here's this item",ETX
+	align 2
+StoryTextTradingSequenceDenimCountryAfter:
+	dc.w	OBJ_NPC_LISA
+	dc.b	"dialog after the",LF
+	dc.b	"trading sequence     ^",FF
+	dc.b	"happened",ETX
 	align 2
 
 	align 2

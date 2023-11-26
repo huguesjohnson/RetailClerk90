@@ -495,10 +495,29 @@ LaunchDebug47:
 LaunchDebug48:
 LaunchDebug49:
 LaunchDebug50:
-LaunchDebug51:
-LaunchDebug52:
-LaunchDebug53:
+
 DebugNotImplemented:
+	bra.w	NewGame
+
+
+; these three are not tested yet
+LaunchDebug51: ; test bad ending here
+	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7 ; copy global event flags to d7
+	and.l	#$00000000,d7
+	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS)
+	bsr.w	SetupEndGame
+
+LaunchDebug52: ; test good ending here
+	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7 ; copy global event flags to d7
+	bset.l	#FLAG_GLOBAL_REL0Complete,d7
+	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS)
+	bsr.w	SetupEndGame
+
+LaunchDebug53: ; test perfect ending here
+	move.l	#ALL_GLOBAL_FLAGS_SET,(MEM_GLOBAL_EVENT_FLAGS)
+	bsr.w	SetupEndGame
+
+CatchAll:
 	; prevent freezing in case I messed up
 	bra.w	NewGame
 

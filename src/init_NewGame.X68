@@ -35,6 +35,8 @@ InitGameState:
 	move.w	#$0000,(MEM_PLAYER2_REL0) ; clear relationship scores
 	move.w	#$0000,(MEM_PLAYER2_REL1) ; clear relationship scores
 	move.w	#$0000,(MEM_PLAYER2_REL2) ; clear relationship scores
+	move.l	#$00000000,(MEM_TRADING_SEQUENCE_DAY) ; clear trading sequence
+	move.l	#$00000000,(MEM_TRADING_SEQUENCE_NIGHT) ; clear trading sequence
 
 ;-------------------------------------------------------------------------------
 ; load the initial NPC locations

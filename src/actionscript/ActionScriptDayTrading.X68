@@ -2,7 +2,9 @@
 ; day 01+ - trading sequence 
 ; (really day02,day04,day06,day08,day10,day12)
 ; FCBFishing
-; Heather - get unsafe looking handwarmer
+; Heather
+;  give: OBJ_ITEM_SCARF
+;  get: OBJ_ITEM_HANDWARMER
 ;*******************************************************************************
 ActionScriptDay01SceneFCBFishingTrading:
 	bsr.w ShowDefaultText
@@ -13,6 +15,8 @@ ActionScriptDay01SceneFCBFishingTrading:
 ; (really day04,day06,day08,day10,day12)
 ; WWAppliances
 ; Laura - get lipstick
+;  give: OBJ_ITEM_HANDWARMER
+;  get: OBJ_ITEM_LIPSTICK
 ;*******************************************************************************
 ActionScriptDay02SceneWWAppliancesTrading:
 	bsr.w ShowDefaultText
@@ -22,7 +26,9 @@ ActionScriptDay02SceneWWAppliancesTrading:
 ; day 03+ - trading sequence
 ; (really day06,day08,day10,day12)
 ; CPlanet
-; Eliza - get tickets to some obscure concert
+; Eliza
+;  give: OBJ_ITEM_LIPSTICK
+;  get: OBJ_ITEM_TICKETS
 ;*******************************************************************************
 ActionScriptDay03SceneCPlanetTrading:
 	bsr.w ShowDefaultText
@@ -32,7 +38,9 @@ ActionScriptDay03SceneCPlanetTrading:
 ; day 04+ - trading sequence
 ; (really day08,day10,day12)
 ; scene 18 - wwtv
-; Juan - get portable TV demo unit
+; Juan
+;  give: OBJ_ITEM_TICKETS
+;  get: OBJ_ITEM_PORTABLE_TV
 ;*******************************************************************************
 ActionScriptDay04SceneWWTVTrading:
 	bsr.w ShowDefaultText
@@ -42,7 +50,9 @@ ActionScriptDay04SceneWWTVTrading:
 ; day 05+ - trading sequence
 ; (really day10,day12)
 ; scene 12 - fcbcheckout
-; Thomas - get useless coupon
+; Thomas
+;  give: OBJ_ITEM_PORTABLE_TV
+;  get: OBJ_ITEM_COUPONS
 ;*******************************************************************************
 ActionScriptDay05SceneFCBCheckoutTrading:
 	bsr.w ShowDefaultText
@@ -52,7 +62,9 @@ ActionScriptDay05SceneFCBCheckoutTrading:
 ; day 05+ - trading sequence
 ; (really day10,day12)
 ; scene 17 - wwcheckout
-; Tanya - get LPs
+; Tanya
+;  give: OBJ_ITEM_COUPONS
+;  get: OBJ_ITEM_LPS
 ;*******************************************************************************
 ActionScriptDay05SceneWWCheckoutTrading:
 	bsr.w ShowDefaultText
@@ -62,7 +74,9 @@ ActionScriptDay05SceneWWCheckoutTrading:
 ; day 06 - trading sequence
 ; (really day12)
 ; scene 0E - PogoDawg
-; Griffy - box left by delivery guy
+; Griffy
+;  give: OBJ_ITEM_LPS
+;  get: OBJ_ITEM_MYSTERY_BOX
 ;*******************************************************************************
 ActionScriptDay06ScenePogoDawgTrading:
 	bsr.w ShowDefaultText
@@ -73,7 +87,12 @@ ActionScriptDay06ScenePogoDawgTrading:
 ; (really day12)
 ; scene 00 - VB
 ; Grunberg
+;  give: OBJ_ITEM_MYSTERY_BOX
+;  get: (still haven't figured this out)
 ;*******************************************************************************
 ActionScriptDay06SceneVBTrading:
 	bsr.w ShowDefaultText
+	
+	; need to set FLAG_GLOBAL_TradingNightComplete
+	
 	rts		

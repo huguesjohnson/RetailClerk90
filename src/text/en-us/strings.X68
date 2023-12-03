@@ -1581,55 +1581,55 @@ TitleScreenTextTitleDebug:
 DebugScreenLine00:
 	dc.b	"Debug menu",ETX
 DebugScreenLine01:
-	dc.b	"{Day0 @info desk   {(not implemented)",ETX
+	dc.b	"{Day0 @info desk   {Day5 midpoint1   ",ETX
 DebugScreenLine02:
-	dc.b	"{Day0 @south hall  {(not implemented)",ETX
+	dc.b	"{Day0 @south hall  {Day5 midpoint2   ",ETX
 DebugScreenLine03:
-	dc.b	"{Night0 start      {(not implemented)",ETX
+	dc.b	"{Night0 start      {Day5 events done ",ETX
 DebugScreenLine04:
-	dc.b	"{Night0 after trade{(not implemented)",ETX
+	dc.b	"{Night0 after trade{Night5 @EEHallway",ETX
 DebugScreenLine05:
-	dc.b	"{Night0 events done{(not implemented)",ETX
+	dc.b	"{Night0 events done{Night5 events done",ETX
 DebugScreenLine06:
-	dc.b	"{Day1 start        {(not implemented)",ETX
+	dc.b	"{Day1 start        {Day6 intro - bad ",ETX
 DebugScreenLine07:
-	dc.b	"{Day1 events done  {(not implemented)",ETX
+	dc.b	"{Day1 events done  {Day6 intro - good",ETX
 DebugScreenLine08:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{Night1 @cavern    {Night6 intro-bad ",ETX
 DebugScreenLine09:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{Night1 events done{Night6 intro-good",ETX
 DebugScreenLine0A:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{Night1 @south hall{(not implemented)",ETX
 DebugScreenLine0B:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{Day2 midpoint     {(not implemented)",ETX
 DebugScreenLine0C:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{Day2 events done  {(not implemented)",ETX
 DebugScreenLine0D:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{Night2 midpoint   {(not implemented)",ETX
 DebugScreenLine0E:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{Night2 events done{(not implemented)",ETX
 DebugScreenLine0F:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{Day3 start        {(not implemented)",ETX
 DebugScreenLine10:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{Day3 midpoint     {(not implemented)",ETX
 DebugScreenLine11:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{Day3 events done  {(not implemented)",ETX
 DebugScreenLine12:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{Night3 midpoint   {(not implemented)",ETX
 DebugScreenLine13:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{Night3 events done{(not implemented)",ETX
 DebugScreenLine14:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{Day4 start        {(not implemented)",ETX
 DebugScreenLine15:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{Day4 midpoint     {(not implemented)",ETX
 DebugScreenLine16:
-	dc.b	"{(not implemented) {(not implemented)",ETX
+	dc.b	"{Day4 events done  {(not implemented)",ETX
 DebugScreenLine17:
-	dc.b	"{(not implemented) {Bad ending       ",ETX
+	dc.b	"{Night4 midpoint   {Bad ending       ",ETX
 DebugScreenLine18:
-	dc.b	"{(not implemented) {Good ending      ",ETX
+	dc.b	"{Night4 events done{Good ending      ",ETX
 DebugScreenLine19:
-	dc.b	"{(not implemented) {Perfect Ending   ",ETX
+	dc.b	"{Day5 start        {Perfect Ending   ",ETX
 
 ;-------------------------------------------------------------------------------
 ; CreditsScreens
@@ -3263,13 +3263,6 @@ StoryTextTradingSequenceSVideo:
 	dc.w	OBJ_NPC_NICKY
 	dc.b	"thanks for that item,",LF
 	dc.b	"here's this item",ETX
-	align 2
-StoryTextTradingSequenceFCBFishingBefore:
-	dc.w	OBJ_NPC_HEATHER
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence is  ^",FF
-	dc.b	"available but before",LF
-	dc.b	"it happened",ETX
 	align 2
 StoryTextTradingSequenceFCBFishing:
 	dc.w	OBJ_NPC_HEATHER

@@ -2,8 +2,8 @@
 	"basePath":".",
 	"memoryMap":{
 		"sourceFiles":[
-			"design/constants/MemoryMapRCBase.csv",
-			"design/constants/MemoryMapRC90.csv"
+			"design/constants/MemoryMapRC90.csv",
+			"design/constants/MemoryMapRCBase.csv"
 		],
 		"destinationFile":"src/const_MemoryMap.X68",
 		"baseAddress":"FFFF0000"

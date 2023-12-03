@@ -395,6 +395,10 @@ LaunchDebug05: ; day 01 - at the start
 	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
 	move.w	#$00C2,(MEM_PLAYER_SPRITE_X)
 	move.w	#$00D0,(MEM_PLAYER_SPRITE_Y)
+	; add item to start trading sequence
+	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
+	move.w	#OBJ_ITEM_SCARF,d7 ; add item from trading sequence
+	bsr.w	AddItem ; add item to inventory		
 	;---------------------------------------------------------------------------	
 	; update NPC locations
 	;---------------------------------------------------------------------------	
@@ -435,6 +439,10 @@ LaunchDebug06: ; day 01 - after required events are done
 	move.w	#SCENE_ID_FCBCAMPING,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
 	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
 	move.w	#PLAYER_SPRITE_ERYN,(MEM_PLAYER_SPRITE) ; initial sprite
+	; add item to start trading sequence
+	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
+	move.w	#OBJ_ITEM_SCARF,d7 ; add item from trading sequence
+	bsr.w	AddItem ; add item to inventory			
 	;---------------------------------------------------------------------------	
 	; update NPC locations
 	;---------------------------------------------------------------------------	
@@ -451,33 +459,79 @@ LaunchDebug06: ; day 01 - after required events are done
 	bsr.w FadeIn
 	rts	
 
-LaunchDebug07:
-LaunchDebug08:
-LaunchDebug09:
-LaunchDebug10:
-LaunchDebug11:
-LaunchDebug12:
-LaunchDebug13:
-LaunchDebug14:
-LaunchDebug15:
-LaunchDebug16:
-LaunchDebug17:
-LaunchDebug18:
-LaunchDebug19:
-LaunchDebug20:
-LaunchDebug21:
-LaunchDebug22:
-LaunchDebug23:
-LaunchDebug24:
-LaunchDebug25:
-LaunchDebug26:
-LaunchDebug27:
-LaunchDebug28:
-LaunchDebug29:
-LaunchDebug30:
-LaunchDebug31:
-LaunchDebug32:
-LaunchDebug33:
+LaunchDebug07: ; night 01 - at the cavern
+LaunchDebug08: ; night 01 - after main events are done
+LaunchDebug09: ; night 01 - can leave 
+LaunchDebug10: ; day 02 - midpoint
+
+	; this is not really done yet, just here right now to test the trading sequence
+
+	;---------------------------------------------------------------------------
+	; global events
+	;---------------------------------------------------------------------------
+	move.l	(MEM_GAME_STATE),d7	; copy game state to d7
+	bset.l	#STATE_FLAG_EXPLORING,d7 ; set exploring flag
+	bset.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is available
+	move.l	d7,(MEM_GAME_STATE)	; save updated game state
+	;---------------------------------------------------------------------------	
+	; setup the day
+	;---------------------------------------------------------------------------	
+	move.w	#$0004,(MEM_DAY) ; increment day
+	move.w	#OBJECTIVE_D04_O02_CheckIn,(MEM_OBJECTIVE) ; initial objective
+	and.l	#$00000000,(MEM_DAY_EVENT_FLAGS) ; clear day event flags
+	move.w	#SCENE_ID_DENIMCOUNTRY,(MEM_STORY_EVENT1_SCENE_ID) ; story event 1
+	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; story event 2
+	move.w	#SCENE_ID_SVIDEO,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
+	move.w	#SCENE_ID_FCBCAMPING,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
+	move.w	#PLAYER_SPRITE_ERYN,(MEM_PLAYER_SPRITE) ; initial sprite
+	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
+	move.w	#$00C2,(MEM_PLAYER_SPRITE_X)
+	move.w	#$00D0,(MEM_PLAYER_SPRITE_Y)
+	; add item to start trading sequence
+	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
+	move.w	#OBJ_ITEM_SCARF,d7 ; add item from trading sequence
+	bsr.w	AddItem ; add item to inventory		
+	;---------------------------------------------------------------------------	
+	; update NPC locations
+	;---------------------------------------------------------------------------	
+	bsr.w	InitNPCLocationsDay ; reset the NPC locations
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneDenimCountry,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
+	rts	
+
+
+LaunchDebug11: ; day 02 - after main events are done
+LaunchDebug12: ; night 02 - midpoint
+LaunchDebug13: ; night 02 - after main events are done
+LaunchDebug14: ; day 03 - start
+LaunchDebug15: ; day 03 - midpoint
+LaunchDebug16: ; day 03 - after main events are done
+LaunchDebug17: ; night 03 - midpoint
+LaunchDebug18: ; night 03 - after main events are done
+LaunchDebug19: ; day 04 - start
+LaunchDebug20: ; day 04 - midpoint
+LaunchDebug21: ; day 04 - after main events are done
+LaunchDebug22: ; night 04 - midpoint
+LaunchDebug23: ; night 04 - after main events are done
+LaunchDebug24: ; day 05 - start
+LaunchDebug25: ; day 05 - midpoint1
+LaunchDebug26: ; day 05 - midpoint2
+LaunchDebug27: ; day 05 - after main events are done
+LaunchDebug28: ; night 05 - @EEHallway
+LaunchDebug29: ; night 05 - events done
+LaunchDebug30: ; day 06 - intro - bad
+LaunchDebug31: ; day 06 - intro - good
+LaunchDebug32: ; night 06 - intro-bad
+LaunchDebug33: ; night 06 - intro-good
 LaunchDebug34:
 LaunchDebug35:
 LaunchDebug36:

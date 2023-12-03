@@ -49,7 +49,6 @@ ActionScriptDay02TBooksInteract:
 	bsr.w ShowDefaultText
 	rts
 
-
 CheckDay02Flags:
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_DAY02_EVENT00_TLODGE,d7 ; test if the event is complete

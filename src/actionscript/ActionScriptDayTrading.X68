@@ -264,11 +264,39 @@ ActionScriptDay06ScenePogoDawgTrading:
 ; scene 00 - VB
 ; Grunberg
 ;  give: OBJ_ITEM_MYSTERY_BOX
-;  get: (still haven't figured this out)
+;  get: OBJ_ITEM_TROPHY
 ;*******************************************************************************
 ActionScriptDay06SceneVBTrading:
-	bsr.w ShowDefaultText
-	
-	; need to set FLAG_GLOBAL_TradingNightComplete
-	
-	rts		
+	move.l	(MEM_TRADING_SEQUENCE_DAY),d7 ; copy progress of day trading to d7
+	btst.l	#$7,d7 ; test if this trade is done
+	bne.s	.after
+	btst.l	#$6,d7 ; test if this trade is available
+	beq.s	.before
+	; otherwise trade
+	bset.l	#$7,d7 ; set trade complete
+	move.l	d7,(MEM_TRADING_SEQUENCE_DAY) ; save updated progress
+	;set FLAG_GLOBAL_TradingDayComplete
+	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7
+	bset.l	#FLAG_GLOBAL_TradingDayComplete,d7
+	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS)
+	; remove item
+	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
+	move.w	#OBJ_ITEM_MYSTERY_BOX,d7 ; remove item from trading sequence
+	bsr.w	RemoveItem ; remove item from the inventory			
+	; add item to start trading sequence
+	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
+	move.w	#OBJ_ITEM_TROPHY,d7 ; add item from trading sequence
+	bsr.w	AddItem ; add item to inventory				
+	; show the dialog
+	lea	StoryTextTradingSequencePogoDawg,a6 ; point to text to display
+	bsr.w	ShowDialog
+	rts
+.after
+	lea	StoryTextTradingSequencePogoDawgAfter,a6 ; point to text to display
+	bsr.w	ShowDialog
+	rts
+.before
+	lea	StoryTextTradingSequencePogoDawgBefore,a6 ; point to text to display
+	bsr.w	ShowDialog
+	rts	
+

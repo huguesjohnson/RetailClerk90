@@ -11,7 +11,7 @@
       "ItemDescriptionScarf":{"text":"Thick winter scarf."},
       "ItemDescriptionSpecialOrder":{"text":"Special order book for Nicky at Sunset Video."},
       "ItemDescriptionVhsTape":{"text":"'Nature's Greatest Maulings' VHS tape."},
-      "ItemDescriptionHandwarmer":{"text":"Electric handwarmer that was recalled for safefy concerns."},
+      "ItemDescriptionHandwarmer":{"text":"Electric handwarmer that was recalled for safety concerns."},
       "ItemDescriptionMooseAttractant":{"text":"A vial of moose attractant."},
       "ItemDescriptionLetter":{"text":"Anonymous letter sent to Lisa warning that her store will close after this year."},
       "ItemDescriptionLipstick":{"text":"Sealed tube of bright red lipstick."},
@@ -27,6 +27,8 @@
       "ItemDescriptionLps":{"text":"Assortment of obsolete LP records."},
       "ItemDescriptionUtilityKnife":{"text":"Utility knife with 27 different functions."},
       "ItemDescriptionMysteryBox":{"text":"It's probably best to open this later."},
-      "ItemDescriptionEarring":{"text":"Earring that someone jammed in a coin slot."}
+      "ItemDescriptionEarring":{"text":"Earring that someone jammed in a coin slot."},
+      "ItemDescriptionTrophy":{"text":"For completing a set of arbitrary tasks."},
+      "ItemDescriptionFinalItem":{"text":"tbd"}      
    }
 }

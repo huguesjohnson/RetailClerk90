@@ -780,6 +780,8 @@ ItemNameTableStart:
 	dc.l	ItemNameUtilityKnife
 	dc.l	ItemNameMysteryBox
 	dc.l	ItemNameEarring
+	dc.l	ItemNameTrophy
+	dc.l	ItemNameFinalItem
 ItemNameTableEnd:
 
 ;-------------------------------------------------------------------------------
@@ -808,6 +810,8 @@ ItemDescriptionTableStart:
 	dc.l	ItemDescriptionUtilityKnife
 	dc.l	ItemDescriptionMysteryBox
 	dc.l	ItemDescriptionEarring
+	dc.l	ItemDescriptionTrophy
+	dc.l	ItemDescriptionFinalItem
 ItemDescriptionTableEnd:
 
 ;-------------------------------------------------------------------------------

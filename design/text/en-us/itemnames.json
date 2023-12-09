@@ -27,6 +27,8 @@
       "ItemNameLps":{"text":"LPs"},
       "ItemNameUtilityKnife":{"text":"Util Knife"},
       "ItemNameMysteryBox":{"text":"MysteryBox"},
-      "ItemNameEarring":{"text":"Earring"}
+      "ItemNameEarring":{"text":"Earring"},
+      "ItemNameTrophy":{"text":"Trophy"},
+      "ItemNameFinalItem":{"text":"(fitem}"}
    }
 }

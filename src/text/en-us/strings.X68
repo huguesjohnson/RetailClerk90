@@ -1289,6 +1289,10 @@ ItemNameMysteryBox:
 	dc.b	"MysteryBox",ITEMNAMEEND
 ItemNameEarring:
 	dc.b	"Earring",ITEMNAMEEND
+ItemNameTrophy:
+	dc.b	"Trophy",ITEMNAMEEND
+ItemNameFinalItem:
+	dc.b	"(fitem}",ITEMNAMEEND
 
 ;-------------------------------------------------------------------------------
 ; ItemDescription
@@ -1323,7 +1327,7 @@ ItemDescriptionHandwarmer:
 	dc.b	"Electric",LF
 	dc.b	"handwarmer that",LF
 	dc.b	"was recalled for",LF
-	dc.b	"safefy concerns.",ETX
+	dc.b	"safety concerns.",ETX
 ItemDescriptionMooseAttractant:
 	dc.b	"A vial of moose",LF
 	dc.b	"attractant.",ETX
@@ -1388,6 +1392,12 @@ ItemDescriptionEarring:
 	dc.b	"Earring that",LF
 	dc.b	"someone jammed in",LF
 	dc.b	"a coin slot.",ETX
+ItemDescriptionTrophy:
+	dc.b	"For completing a",LF
+	dc.b	"set of arbitrary",LF
+	dc.b	"tasks.",ETX
+ItemDescriptionFinalItem:
+	dc.b	"tbd",ETX
 
 ;-------------------------------------------------------------------------------
 ; StatusScreenObjectives
@@ -1570,9 +1580,9 @@ TitleScreenTextLoadGame:
 TitleScreenTextDebug:
 	dc.b	"{Debug",ETX
 TitleScreenTextTitle:
-	dc.b	"Oct23 Dev Build",ETX
+	dc.b	"Dec23 Dev Build",ETX
 TitleScreenTextTitleDebug:
-	dc.b	"Oct23 Debug Build",ETX
+	dc.b	"Dec23 Debug Build",ETX
 
 ;-------------------------------------------------------------------------------
 ; DebugScreen

@@ -119,6 +119,15 @@ ActionScriptDay04FCBCampingRespond:
 ; End of the day
 ;*******************************************************************************
 EndDay04:
+	bsr.s	EndDay04SetupGameState
+	;---------------------------------------------------------------------------	
+	; queue the introduction
+	;---------------------------------------------------------------------------	
+	lea ScriptedEventNight04_00_IntroStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts	
+	
+EndDay04SetupGameState: ; separated to help with debugging		
 	;---------------------------------------------------------------------------	
 	; setup the next day
 	;---------------------------------------------------------------------------	
@@ -140,11 +149,5 @@ EndDay04:
 	bsr.w	InitNPCLocationsNight ; reset the NPC locations
 	move.l	#$03000000,(MEM_NPC_LOCATION_TBOOKS)
 	move.l	#$0F100000,(MEM_NPC_LOCATION_CAVERN) ; db and dani are both in the cavern
-	;---------------------------------------------------------------------------	
-	; queue the introduction
-	;---------------------------------------------------------------------------	
-	lea ScriptedEventNight04_00_IntroStart,a6 ; point a6 to event to load
-	bsr.w QueueScriptedEvent ; queue the event
-	rts	
-			
-		
+	rts		
+

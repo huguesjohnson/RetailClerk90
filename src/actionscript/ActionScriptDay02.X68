@@ -184,6 +184,15 @@ ActionScriptDay02FCBCampingRespond:
 ; End of the day
 ;*******************************************************************************
 EndDay02:
+	bsr.s	EndDay02SetupGameState
+	;---------------------------------------------------------------------------	
+	; queue the introduction
+	;---------------------------------------------------------------------------	
+	lea ScriptedEventDay02_TransitionStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts
+		
+EndDay02SetupGameState: ; separated to help with debugging		
 	;---------------------------------------------------------------------------	
 	; setup the next day
 	;---------------------------------------------------------------------------	
@@ -206,10 +215,4 @@ EndDay02:
 	bsr.w	InitNPCLocationsNight ; reset the NPC locations
 	move.l	#$22000000,(MEM_NPC_LOCATION_WWHALL) ; victor is in wwhall
 	move.l	#$07010000,(MEM_NPC_LOCATION_NSHACK) ; eryn is in nshack
-	;---------------------------------------------------------------------------	
-	; queue the introduction
-	;---------------------------------------------------------------------------	
-	lea ScriptedEventDay02_TransitionStart,a6 ; point a6 to event to load
-	bsr.w QueueScriptedEvent ; queue the event
 	rts
-		

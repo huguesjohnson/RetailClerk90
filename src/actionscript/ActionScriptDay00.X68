@@ -27,16 +27,7 @@ ActionScriptDay00SceneDenimCountryInteractNPC0: ; lisa
 	beq.s	.customers
 	btst.l	#FLAG_DAY00_EVENT02_CANEXITDC,d7 ; test the flag for completing the first events
 	bne.s	.default
-	bset.l	#FLAG_DAY00_EVENT02_CANEXITDC,d7 ; update the state
-	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; copy the updated state back
-	move.l	(MEM_GAME_STATE),d7 ; copy game state to d7
-	bset.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is now available
-	move.l	d7,(MEM_GAME_STATE) ; save updated state
-	move.w	#OBJECTIVE_D00_O01_VisitInfo,(MEM_OBJECTIVE) ; update the objective
-	move.w	#SCENE_ID_SOUTH_CENTER,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
-	move.w	#SCENE_ID_CAVERN,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; update optional event
-	move.w	#SCENE_ID_SVIDEO,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; update optional event
-	move.l	#$05000000,(MEM_NPC_LOCATION_DENIMCOUNTRY) ; update npcs in denim country
+	bsr.s	ActionScriptDay00UpdateStateAfterCustomerEventsDone
 	lea	StoryTextDay00LisaWorriedLine0,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
 	lea Day00SceneDenimCountryLisaWorriedStart,a6 ; point a6 to event to load
@@ -60,6 +51,20 @@ ActionScriptDay00SceneDenimCountryInteractShow2ChoiceDialog:
 	rts
 ActionScriptDay00SceneDenimCountryInteractDefault:
 	bsr.w	ShowDefaultText
+	rts
+
+; assumes d7 has MEM_DAY_EVENT_FLAGS
+ActionScriptDay00UpdateStateAfterCustomerEventsDone:
+	bset.l	#FLAG_DAY00_EVENT02_CANEXITDC,d7 ; update the state
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; copy the updated state back
+	move.l	(MEM_GAME_STATE),d7 ; copy game state to d7
+	bset.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is now available
+	move.l	d7,(MEM_GAME_STATE) ; save updated state
+	move.w	#OBJECTIVE_D00_O01_VisitInfo,(MEM_OBJECTIVE) ; update the objective
+	move.w	#SCENE_ID_SOUTH_CENTER,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
+	move.w	#SCENE_ID_CAVERN,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; update optional event
+	move.w	#SCENE_ID_SVIDEO,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; update optional event
+	move.l	#$05000000,(MEM_NPC_LOCATION_DENIMCOUNTRY) ; update npcs in denim country
 	rts
 
 ActionScriptDay00SceneDenimCountryRespond:
@@ -134,6 +139,13 @@ ActionScriptDay00InfoDeskInteract:
 	bsr.w ShowDefaultText ; show default text by default
 	rts
 .scriptedevent
+	bsr.s	ActionScriptDay00UpdateStateAfterInfoDesk
+	lea ScriptedEventDay00_01_InfoDeskStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts
+	
+; assumes d7 has MEM_DAY_EVENT_FLAGS 	
+ActionScriptDay00UpdateStateAfterInfoDesk:
 	bset.l	#FLAG_DAY00_EVENT03_INFODESKVISITED,d7 ; set event flag
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
 	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
@@ -142,9 +154,7 @@ ActionScriptDay00InfoDeskInteract:
 	move.w	#OBJ_ITEM_SCARF,d7 ; add item from trading sequence
 	bsr.w	AddItem ; add item to inventory	
 	move.w	#OBJECTIVE_D00_O02_LeaveWhenReady,(MEM_OBJECTIVE) ; update the objective		
-	lea ScriptedEventDay00_01_InfoDeskStart,a6 ; point a6 to event to load
-	bsr.w QueueScriptedEvent ; queue the event
-	rts
+	rts	
 	
 ;*******************************************************************************
 ; SCENE_ID_SHALL

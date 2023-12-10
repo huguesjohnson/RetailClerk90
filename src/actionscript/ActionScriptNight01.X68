@@ -211,6 +211,24 @@ ActionScriptNight01VBRespond:
 ; End of the day
 ;*******************************************************************************
 EndNight01:
+	bsr.s	EndNight01SetupGameState
+	;---------------------------------------------------------------------------	
+	; set the intro screen
+	;---------------------------------------------------------------------------	
+	move.l	(MEM_GAME_STATE),d7	; copy game state
+	bset.l	#STATE_FLAG_INTRO_SCREEN,d7 ; set intro screen flag
+	move.l	d7,(MEM_GAME_STATE)	; save updated game state
+	; set the intro screen counter
+	move.w	#INTRO_SCREEN_COUNTER_START,(MEM_INTRO_SCENE_COUNTER)
+	lea	SceneIntroDay02,a6	; address of the scene for the title screen
+	bsr.w	LoadScene	; branch to LoadScene subroutine
+	bsr.w	FadeIn	; fade in to the new scene
+	; queue scripted event to launch
+	lea ScriptedEventDay02_00_IntroStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts	
+	
+EndNight01SetupGameState: ; separated to help with debugging
 	;---------------------------------------------------------------------------	
 	; setup the next day
 	;---------------------------------------------------------------------------	
@@ -230,19 +248,4 @@ EndNight01:
 	; update NPC locations
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsDay ; reset the NPC locations
-	;---------------------------------------------------------------------------	
-	; set the intro screen
-	;---------------------------------------------------------------------------	
-	move.l	(MEM_GAME_STATE),d7	; copy game state
-	bset.l	#STATE_FLAG_INTRO_SCREEN,d7 ; set intro screen flag
-	move.l	d7,(MEM_GAME_STATE)	; save updated game state
-	; set the intro screen counter
-	move.w	#INTRO_SCREEN_COUNTER_START,(MEM_INTRO_SCENE_COUNTER)
-	lea	SceneIntroDay02,a6	; address of the scene for the title screen
-	bsr.w	LoadScene	; branch to LoadScene subroutine
-	bsr.w	FadeIn	; fade in to the new scene
-	; queue scripted event to launch
-	lea ScriptedEventDay02_00_IntroStart,a6 ; point a6 to event to load
-	bsr.w QueueScriptedEvent ; queue the event
-	rts	
-
+	rts

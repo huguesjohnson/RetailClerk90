@@ -42,6 +42,15 @@ ActionScriptNight00SVideoInteract:
 	bsr.w ShowDefaultText
 	rts	
 .event	
+	bsr.s	ActionScriptNight00UpdateStateAfterSVideo
+	lea	StoryTextNight00SVideoLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea	ScriptedEventNight00_01_SVideoStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts
+
+; assumes d7 has MEM_DAY_EVENT_FLAGS
+ActionScriptNight00UpdateStateAfterSVideo:
 	bset.l	#FLAG_NIGHT00_EVENT01_SVIDEO,d7 ; set that event ran
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags		
 	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
@@ -56,10 +65,6 @@ ActionScriptNight00SVideoInteract:
 	move.w	#OBJ_ITEM_VHS_TAPE,d7 ; add item from trading sequence
 	bsr.w	AddItem ; add item to inventory	
 	; run the scripted event
-	lea	StoryTextNight00SVideoLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
-	lea	ScriptedEventNight00_01_SVideoStart,a6 ; point a6 to event to load
-	bsr.w QueueScriptedEvent ; queue the event
 	rts
 
 ;*******************************************************************************
@@ -76,15 +81,20 @@ ActionScriptNight00SouthHallEnter:
 .default	
 	rts
 .event	
-	bset.l	#FLAG_NIGHT00_EVENT02_STORYEVENTSDONE,d7 ; set that required event ran
-	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-	move.l	#$00000000,(MEM_NPC_LOCATION_SHALL) ; no npcs in south hall after the event
+	bsr.s	ActionScriptNight00UpdateStateAfterSHall
 	; run the scripted event
 	lea	StoryTextNight00SouthHallLine1,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
 	lea	ScriptedEventNight00_02_VictorEncounterStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 	rts		
+	
+; assumes d7 has MEM_DAY_EVENT_FLAGS
+ActionScriptNight00UpdateStateAfterSHall:
+	bset.l	#FLAG_NIGHT00_EVENT02_STORYEVENTSDONE,d7 ; set that required event ran
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.l	#$00000000,(MEM_NPC_LOCATION_SHALL) ; no npcs in south hall after the event
+	rts	
 
 ActionScriptNight00SouthHallExit:
 	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d7 ; copy player sprite direction to d7
@@ -185,6 +195,24 @@ ActionScriptNight00CPlanetRespond:
 ; End of the day
 ;*******************************************************************************
 EndNight00:
+	bsr.s	EndNight00SetGameState
+	;---------------------------------------------------------------------------	
+	; set the intro screen
+	;---------------------------------------------------------------------------	
+	move.l	(MEM_GAME_STATE),d7	; copy game state
+	bset.l	#STATE_FLAG_INTRO_SCREEN,d7 ; set intro screen flag
+	move.l	d7,(MEM_GAME_STATE)	; save updated game state
+	; set the intro screen counter
+	move.w	#INTRO_SCREEN_COUNTER_START,(MEM_INTRO_SCENE_COUNTER)
+	lea	SceneIntroDay01,a6	; address of the scene for the title screen
+	bsr.w	LoadScene	; branch to LoadScene subroutine
+	bsr.w	FadeIn	; fade in to the new scene
+	; queue scripted event to launch
+	lea ScriptedEventDay01_00_IntroStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts	
+	
+EndNight00SetGameState: ; separated out to help with debugging
 	;---------------------------------------------------------------------------	
 	; setup the next day
 	;---------------------------------------------------------------------------	
@@ -204,19 +232,5 @@ EndNight00:
 	; update NPC locations
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsDay ; reset the NPC locations
-	;---------------------------------------------------------------------------	
-	; set the intro screen
-	;---------------------------------------------------------------------------	
-	move.l	(MEM_GAME_STATE),d7	; copy game state
-	bset.l	#STATE_FLAG_INTRO_SCREEN,d7 ; set intro screen flag
-	move.l	d7,(MEM_GAME_STATE)	; save updated game state
-	; set the intro screen counter
-	move.w	#INTRO_SCREEN_COUNTER_START,(MEM_INTRO_SCENE_COUNTER)
-	lea	SceneIntroDay01,a6	; address of the scene for the title screen
-	bsr.w	LoadScene	; branch to LoadScene subroutine
-	bsr.w	FadeIn	; fade in to the new scene
-	; queue scripted event to launch
-	lea ScriptedEventDay01_00_IntroStart,a6 ; point a6 to event to load
-	bsr.w QueueScriptedEvent ; queue the event
 	rts	
 

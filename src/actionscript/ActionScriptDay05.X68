@@ -213,6 +213,15 @@ ActionScriptDay05FCBCampingRespond:
 ; End of the day
 ;*******************************************************************************
 EndDay05:
+	bsr.s	EndDay05SetupGameState
+	;---------------------------------------------------------------------------	
+	; queue the introduction
+	;---------------------------------------------------------------------------	
+	lea ScriptedEventNight05_00_IntroStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts
+
+EndDay05SetupGameState: ; separated to help with debugging		
 	;---------------------------------------------------------------------------	
 	; setup the next day
 	;---------------------------------------------------------------------------	
@@ -232,11 +241,5 @@ EndDay05:
 	; update NPC locations
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsNight ; reset the NPC locations
-	move.l	#$0D000000,(MEM_NPC_LOCATION_TBOOKS)
-	;---------------------------------------------------------------------------	
-	; queue the introduction
-	;---------------------------------------------------------------------------	
-	lea ScriptedEventNight05_00_IntroStart,a6 ; point a6 to event to load
-	bsr.w QueueScriptedEvent ; queue the event
-	rts
-		
+	move.l	#$0D000000,(MEM_NPC_LOCATION_TBOOKS)	
+	rts		

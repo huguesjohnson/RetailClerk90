@@ -2721,6 +2721,7 @@
 		{"day":2,"scene":"SCENE_ID_CAVERN","action":"Respond","label":"ActionScriptDay01CavernRespond"},
 		{"day":2,"scene":"SCENE_ID_FCBCAMPING","action":"Interact","label":"ActionScriptDay01FCBCampingInteract"},
 		{"day":2,"scene":"SCENE_ID_FCBCAMPING","action":"Respond","label":"ActionScriptDay01FCBCampingRespond"},
+		{"day":2,"scene":"SCENE_ID_SHALL","action":"ExitScene","label":"ActionScriptDay01SouthHallExit"},		
 		{"day":3,"scene":"SCENE_ID_CAVERN","action":"Interact","label":"ActionScriptNight01CavernInteract"},
 		{"day":3,"scene":"SCENE_ID_WEHALL","action":"ExitScene","label":"ActionScriptNight01WEHallExit"},		
 		{"day":3,"scene":"SCENE_ID_EEHALL","action":"EnterScene","label":"ActionScriptNight01EEHallEnter"},

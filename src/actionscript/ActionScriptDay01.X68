@@ -45,6 +45,20 @@ ActionScriptDay01CPlanetInteract:
 	rts
 
 ;*******************************************************************************
+; SCENE_ID_SHALL
+;*******************************************************************************
+ActionScriptDay01SouthHallExit:	
+	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d7 ; copy player sprite direction to d7
+	cmpi.w	#DIRECTION_DOWN,d7 ; is the player facing south?
+	beq.s	.south ; branch if so
+	bsr.w	DefaultExitScene ; default scene exit
+	rts	
+.south
+	lea ScriptedEventNotTimeToLeaveErynStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event	
+	rts
+	
+;*******************************************************************************
 ; SCENE_ID_WWAPPLIANCES
 ;*******************************************************************************
 ActionScriptDay01WWAppliancesInteract:	
@@ -155,6 +169,17 @@ ActionScriptDay01FCBCampingRespond:
 ; End of the day
 ;*******************************************************************************
 EndDay01:
+	bsr.s	EndDay01SetupGameState
+	;---------------------------------------------------------------------------	
+	; queue the ending dialog and transition to night
+	;---------------------------------------------------------------------------	
+	lea	StoryTextDay01DenimCountry2Line1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog	
+	lea ScriptedEventNight01_00_IntroStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts	
+	
+EndDay01SetupGameState: ; separated to help with debugging
 	;---------------------------------------------------------------------------	
 	; setup the next day
 	;---------------------------------------------------------------------------	
@@ -175,12 +200,5 @@ EndDay01:
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsNight ; reset the NPC locations
 	move.l	#$18000000,(MEM_NPC_LOCATION_WEHALL) ; brett starts in wehall
-	;---------------------------------------------------------------------------	
-	; queue the ending dialog and transition to night
-	;---------------------------------------------------------------------------	
-	lea	StoryTextDay01DenimCountry2Line1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog	
-	lea ScriptedEventNight01_00_IntroStart,a6 ; point a6 to event to load
-	bsr.w QueueScriptedEvent ; queue the event
 	rts	
-		
+

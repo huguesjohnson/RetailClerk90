@@ -128,6 +128,15 @@ ActionScriptDay06FCBCampingInteract:
 ; End of the day
 ;*******************************************************************************
 EndDay06:
+	bsr.s	EndDay06SetupGameState
+	;---------------------------------------------------------------------------	
+	; queue the introduction
+	;---------------------------------------------------------------------------	
+	lea ScriptedEventNight06_00_IntroStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts
+	
+EndDay06SetupGameState: ; separated to help with debugging		
 	;---------------------------------------------------------------------------	
 	; setup the next day
 	;---------------------------------------------------------------------------	
@@ -163,10 +172,5 @@ EndDay06:
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsNight ; reset the NPC locations
 	move.l	#$27000000,(MEM_NPC_LOCATION_TBOOKS)
-	;---------------------------------------------------------------------------	
-	; queue the introduction
-	;---------------------------------------------------------------------------	
-	lea ScriptedEventNight06_00_IntroStart,a6 ; point a6 to event to load
-	bsr.w QueueScriptedEvent ; queue the event
-	rts
-		
+	rts		
+

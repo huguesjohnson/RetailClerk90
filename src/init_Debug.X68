@@ -153,26 +153,15 @@ ExitProcessDebugScreen:
 	rts
 
 LaunchDebug00: ; day00 - after initial event
+	bsr.w	InitGlobalEvents
 	;---------------------------------------------------------------------------
-	; global events
-	;---------------------------------------------------------------------------
-	move.l	(MEM_GAME_STATE),d7	; copy game state to d7
-	bset.l	#STATE_FLAG_EXPLORING,d7 ; set exploring flag
-	bset.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is available
-	move.l	d7,(MEM_GAME_STATE)	; save updated game state
-	;---------------------------------------------------------------------------
-	; day events
+	; set events complete
 	;---------------------------------------------------------------------------
 	move.w	#$0000,(MEM_DAY)
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	bset.l	#FLAG_DAY00_EVENT00_CUSTOMER0,d7 ; set the flag for talking to npc1
 	bset.l	#FLAG_DAY00_EVENT01_CUSTOMER1,d7 ; set the flag for talking to npc2
-	bset.l	#FLAG_DAY00_EVENT02_CANEXITDC,d7 ; set the flag for completing the first events
-	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; copy the updated state back	
-	move.w	#SCENE_ID_SOUTH_CENTER,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
-	move.w	#SCENE_ID_CAVERN,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; update optional event
-	move.w	#SCENE_ID_SVIDEO,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; update optional event
-	move.l	#$05000000,(MEM_NPC_LOCATION_DENIMCOUNTRY) ; update npcs in denim country
+	bsr.w	ActionScriptDay00UpdateStateAfterCustomerEventsDone
 	;---------------------------------------------------------------------------
 	; load starting scene and sprites
 	;---------------------------------------------------------------------------
@@ -186,32 +175,18 @@ LaunchDebug00: ; day00 - after initial event
 	rts	
 	
 LaunchDebug01: ; day00 - after visiting info desk
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceDay	
 	;---------------------------------------------------------------------------
-	; global events
-	;---------------------------------------------------------------------------
-	move.l	(MEM_GAME_STATE),d7	; copy game state to d7
-	bset.l	#STATE_FLAG_EXPLORING,d7 ; set exploring flag
-	bset.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is available
-	move.l	d7,(MEM_GAME_STATE)	; save updated game state
-	;---------------------------------------------------------------------------
-	; day events
+	; set events complete
 	;---------------------------------------------------------------------------
 	move.w	#$0000,(MEM_DAY)
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	bset.l	#FLAG_DAY00_EVENT00_CUSTOMER0,d7 ; set the flag for talking to npc1
 	bset.l	#FLAG_DAY00_EVENT01_CUSTOMER1,d7 ; set the flag for talking to npc2
-	bset.l	#FLAG_DAY00_EVENT02_CANEXITDC,d7 ; set the flag for completing the first events
-	bset.l	#FLAG_DAY00_EVENT03_INFODESKVISITED,d7 ; set event flag for visiting info desk	
-	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; copy the updated state back	
-	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
-	move.w	#SCENE_ID_CAVERN,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; update optional event
-	move.w	#SCENE_ID_SVIDEO,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; update optional event
-	move.l	#$05000000,(MEM_NPC_LOCATION_DENIMCOUNTRY) ; update npcs in denim country
-	; add item that is received during the scripted event
-	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_SCARF,d7 ; add item from trading sequence
-	bsr.w	AddItem ; add item to inventory	
-	move.w	#OBJECTIVE_D00_O02_LeaveWhenReady,(MEM_OBJECTIVE) ; update the objective			
+	bsr.w	ActionScriptDay00UpdateStateAfterCustomerEventsDone
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	bsr.w	ActionScriptDay00UpdateStateAfterInfoDesk		
 	;---------------------------------------------------------------------------
 	; load starting scene and sprites
 	;---------------------------------------------------------------------------
@@ -225,87 +200,29 @@ LaunchDebug01: ; day00 - after visiting info desk
 	rts	
 
 LaunchDebug02: ; night 00 - start
-	; add item that is needed for the first trading sequence
-	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_SPECIAL_ORDER,d7 ; add item for the trading sequence
-	bsr.w	AddItem ; add item to inventory	
-	;---------------------------------------------------------------------------
-	; global events
-	;---------------------------------------------------------------------------
-	move.l	(MEM_GAME_STATE),d7	; copy game state to d7
-	bset.l	#STATE_FLAG_EXPLORING,d7 ; set exploring flag
-	bset.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is available
-	move.l	d7,(MEM_GAME_STATE)	; save updated game state
-	;---------------------------------------------------------------------------	
-	; setup the next day
-	;---------------------------------------------------------------------------	
-	move.w	#$0001,(MEM_DAY) ; increment day
-	move.w	#OBJECTIVE_D00_O03_SVideo,(MEM_OBJECTIVE) ; initial objective
-	and.l	#$00000000,(MEM_GLOBAL_EVENT_FLAGS)	; clear event flags
-	and.l	#$00000000,(MEM_DAY_EVENT_FLAGS) ; clear event flags
-	move.w	#SCENE_ID_SVIDEO,(MEM_STORY_EVENT1_SCENE_ID) ; initial story event
-	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; no 2nd story event
-	move.w	#SCENE_ID_VB,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
-	move.w	#SCENE_ID_CPLANET,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
-	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
-	move.w	#PLAYER_SPRITE_CARL,(MEM_PLAYER_SPRITE) ; initial sprite
-	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
-	move.w	#$00DE,(MEM_PLAYER_SPRITE_X)
-	move.w	#$00EE,(MEM_PLAYER_SPRITE_Y)
-	;---------------------------------------------------------------------------	
-	; update NPC locations
-	;---------------------------------------------------------------------------	
-	bsr.w	InitNPCLocationsNight ; reset the NPC locations
-	move.l	#$03000000,(MEM_NPC_LOCATION_TBOOKS)
-	move.l	#$11180000,(MEM_NPC_LOCATION_EEHALL)		
-	;---------------------------------------------------------------------------	
-	; queue the introduction
-	;---------------------------------------------------------------------------	
-	lea ScriptedEventNight00_00_IntroStart,a6 ; point a6 to event to load
-	bsr.w QueueScriptedEvent ; queue the event
+	bsr.w	InitGlobalEvents
+	bsr.w	EndDay00
 	rts
 
 LaunchDebug03: ; night 00 - after trading sequence
-	; add item that is gained after first trading sequence
-	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_VHS_TAPE,d7 ; add item from the trading sequence
-	bsr.w	AddItem ; add item to inventory	
-	;---------------------------------------------------------------------------
-	; global events
-	;---------------------------------------------------------------------------
-	move.l	(MEM_GAME_STATE),d7	; copy game state to d7
-	bset.l	#STATE_FLAG_EXPLORING,d7 ; set exploring flag
-	bset.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is available
-	move.l	d7,(MEM_GAME_STATE)	; save updated game state
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceNight
+	move.w	#$0001,(MEM_DAY) ; set day	
+	move.w	#PLAYER_SPRITE_CARL,(MEM_PLAYER_SPRITE) ; initial sprite
 	;---------------------------------------------------------------------------	
-	; setup events complete
+	; set events complete
 	;---------------------------------------------------------------------------	
 	and.l	#$00000000,d7 ; clear out d7
 	bset.l	#FLAG_NIGHT00_EVENT00_EEHALL,d7
 	bset.l	#FLAG_NIGHT00_EVENT01_SVIDEO,d7
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; update event flags
-	;---------------------------------------------------------------------------	
-	; setup the day
-	;---------------------------------------------------------------------------	
-	move.w	#$0001,(MEM_DAY) ; increment day
-	move.w	#OBJECTIVE_D00_O04_Leave,(MEM_OBJECTIVE) ; initial objective
-	and.l	#$00000000,(MEM_GLOBAL_EVENT_FLAGS)	; clear event flags
-	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
-	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; no 2nd story event
-	move.w	#SCENE_ID_VB,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
-	move.w	#SCENE_ID_CPLANET,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
-	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
-	move.w	#PLAYER_SPRITE_CARL,(MEM_PLAYER_SPRITE) ; initial sprite
-	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
-	move.w	#$00DE,(MEM_PLAYER_SPRITE_X)
-	move.w	#$00EE,(MEM_PLAYER_SPRITE_Y)
+	bsr.w	ActionScriptNight00UpdateStateAfterSVideo
 	;---------------------------------------------------------------------------	
 	; update NPC locations
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsNight ; reset the NPC locations
 	move.l	#$00000000,(MEM_NPC_LOCATION_TBOOKS)
 	move.l	#$11000000,(MEM_NPC_LOCATION_EEHALL)	
-	move.l	#$28000000,(MEM_NPC_LOCATION_SHALL)		
 	;---------------------------------------------------------------------------
 	; load starting scene and sprites
 	;---------------------------------------------------------------------------
@@ -319,47 +236,25 @@ LaunchDebug03: ; night 00 - after trading sequence
 	rts	
 
 LaunchDebug04: ; night 00 - after required events are done
-	; add item that is gained after first trading sequence
-	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_VHS_TAPE,d7 ; add item from the trading sequence
-	bsr.w	AddItem ; add item to inventory	
-	;---------------------------------------------------------------------------
-	; global events
-	;---------------------------------------------------------------------------
-	move.l	(MEM_GAME_STATE),d7	; copy game state to d7
-	bset.l	#STATE_FLAG_EXPLORING,d7 ; set exploring flag
-	bset.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is available
-	move.l	d7,(MEM_GAME_STATE)	; save updated game state
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceNight
+	move.w	#$0001,(MEM_DAY) ; set day	
+	move.w	#PLAYER_SPRITE_CARL,(MEM_PLAYER_SPRITE) ; initial sprite
 	;---------------------------------------------------------------------------	
-	; setup events complete
+	; set events complete
 	;---------------------------------------------------------------------------	
 	and.l	#$00000000,d7 ; clear out d7
 	bset.l	#FLAG_NIGHT00_EVENT00_EEHALL,d7
 	bset.l	#FLAG_NIGHT00_EVENT01_SVIDEO,d7
+	bsr.w	ActionScriptNight00UpdateStateAfterSVideo	
 	bset.l	#FLAG_NIGHT00_EVENT02_STORYEVENTSDONE,d7
-	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; update event flags
-	;---------------------------------------------------------------------------	
-	; setup the day
-	;---------------------------------------------------------------------------	
-	move.w	#$0001,(MEM_DAY) ; increment day
-	move.w	#OBJECTIVE_D00_O04_Leave,(MEM_OBJECTIVE) ; initial objective
-	and.l	#$00000000,(MEM_GLOBAL_EVENT_FLAGS)	; clear event flags
-	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
-	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; no 2nd story event
-	move.w	#SCENE_ID_VB,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
-	move.w	#SCENE_ID_CPLANET,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
-	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
-	move.w	#PLAYER_SPRITE_CARL,(MEM_PLAYER_SPRITE) ; initial sprite
-	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
-	move.w	#$00DE,(MEM_PLAYER_SPRITE_X)
-	move.w	#$00EE,(MEM_PLAYER_SPRITE_Y)
+	bsr.w	ActionScriptNight00UpdateStateAfterSHall
 	;---------------------------------------------------------------------------	
 	; update NPC locations
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsNight ; reset the NPC locations
 	move.l	#$00000000,(MEM_NPC_LOCATION_TBOOKS)
 	move.l	#$11000000,(MEM_NPC_LOCATION_EEHALL)	
-	move.l	#$00000000,(MEM_NPC_LOCATION_SHALL)		
 	;---------------------------------------------------------------------------
 	; load starting scene and sprites
 	;---------------------------------------------------------------------------
@@ -373,80 +268,25 @@ LaunchDebug04: ; night 00 - after required events are done
 	rts	
 	
 LaunchDebug05: ; day 01 - at the start
-	;---------------------------------------------------------------------------
-	; global events
-	;---------------------------------------------------------------------------
-	move.l	(MEM_GAME_STATE),d7	; copy game state to d7
-	bset.l	#STATE_FLAG_EXPLORING,d7 ; set exploring flag
-	bset.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is available
-	move.l	d7,(MEM_GAME_STATE)	; save updated game state
-	;---------------------------------------------------------------------------	
-	; setup the day
-	;---------------------------------------------------------------------------	
-	move.w	#$0002,(MEM_DAY) ; increment day
-	move.w	#OBJECTIVE_D01_O00_RumorSearch,(MEM_OBJECTIVE) ; initial objective
-	and.l	#$00000000,(MEM_DAY_EVENT_FLAGS) ; clear day event flags
-	move.w	#SCENE_ID_CPLANET,(MEM_STORY_EVENT1_SCENE_ID) ; story event 1
-	move.w	#SCENE_ID_WWAPPLIANCES,(MEM_STORY_EVENT2_SCENE_ID) ; story event 2
-	move.w	#SCENE_ID_CAVERN,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
-	move.w	#SCENE_ID_FCBCAMPING,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
-	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
-	move.w	#PLAYER_SPRITE_ERYN,(MEM_PLAYER_SPRITE) ; initial sprite
-	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
-	move.w	#$00C2,(MEM_PLAYER_SPRITE_X)
-	move.w	#$00D0,(MEM_PLAYER_SPRITE_Y)
-	; add item to start trading sequence
-	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_SCARF,d7 ; add item from trading sequence
-	bsr.w	AddItem ; add item to inventory		
-	;---------------------------------------------------------------------------	
-	; update NPC locations
-	;---------------------------------------------------------------------------	
-	bsr.w	InitNPCLocationsDay ; reset the NPC locations
-	;---------------------------------------------------------------------------
-	; load starting scene and sprites
-	;---------------------------------------------------------------------------
-	lea	SceneDenimCountry,a6
-	bsr.w LoadScene
-	bsr.w LoadPlayerSprite
-	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
-	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
-	bsr.w FixSprites	
-	bsr.w FadeIn
-	; queue scripted event to launch
-	lea ScriptedEventDay01_00_IntroStart,a6 ; point a6 to event to load
-	bsr.w QueueScriptedEvent ; queue the event
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceDay	
+	bsr.w	EndNight00
 	rts	
 
 LaunchDebug06: ; day 01 - after required events are done
-	;---------------------------------------------------------------------------
-	; global events
-	;---------------------------------------------------------------------------
-	move.l	(MEM_GAME_STATE),d7	; copy game state to d7
-	bset.l	#STATE_FLAG_EXPLORING,d7 ; set exploring flag
-	bset.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is available
-	move.l	d7,(MEM_GAME_STATE)	; save updated game state
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceDay	
+	bsr.w	EndNight00SetGameState
 	;---------------------------------------------------------------------------	
-	; setup the day
+	; set events complete
 	;---------------------------------------------------------------------------	
-	move.w	#$0002,(MEM_DAY) ; increment day
+	move.w	#$FFFF,(MEM_STORY_EVENT1_SCENE_ID) 
+	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) 
 	and.l	#$00000000,d7
 	bset.l	#FLAG_DAY01_EVENT00_CPLANET,d7
 	bset.l	#FLAG_DAY01_EVENT01_WWAPPLIANCES,d7	
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; set day event flags
 	bsr.w	TestDay01Events
-	move.w	#SCENE_ID_CAVERN,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
-	move.w	#SCENE_ID_FCBCAMPING,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
-	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
-	move.w	#PLAYER_SPRITE_ERYN,(MEM_PLAYER_SPRITE) ; initial sprite
-	; add item to start trading sequence
-	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_SCARF,d7 ; add item from trading sequence
-	bsr.w	AddItem ; add item to inventory			
-	;---------------------------------------------------------------------------	
-	; update NPC locations
-	;---------------------------------------------------------------------------	
-	bsr.w	InitNPCLocationsDay ; reset the NPC locations
 	;---------------------------------------------------------------------------
 	; load starting scene and sprites
 	;---------------------------------------------------------------------------
@@ -460,19 +300,33 @@ LaunchDebug06: ; day 01 - after required events are done
 	rts	
 
 LaunchDebug07: ; night 01 - at the cavern
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceNight
+	bsr.w	EndDay01SetupGameState
+	;TODO - the rest of this
+	rts
+
 LaunchDebug08: ; night 01 - after main events are done
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceNight
+	bsr.w	EndDay01SetupGameState	
+	;TODO - the rest of this
+	rts
+
 LaunchDebug09: ; night 01 - can leave 
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceNight
+	bsr.w	EndDay01SetupGameState	
+	;TODO - the rest of this
+	rts
+
 LaunchDebug10: ; day 02 - midpoint
 
 	; this is not really done yet, just here right now to test the trading sequence
 
-	;---------------------------------------------------------------------------
-	; global events
-	;---------------------------------------------------------------------------
-	move.l	(MEM_GAME_STATE),d7	; copy game state to d7
-	bset.l	#STATE_FLAG_EXPLORING,d7 ; set exploring flag
-	bset.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is available
-	move.l	d7,(MEM_GAME_STATE)	; save updated game state
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceDay	
+
 	;---------------------------------------------------------------------------	
 	; setup the day
 	;---------------------------------------------------------------------------	
@@ -488,10 +342,6 @@ LaunchDebug10: ; day 02 - midpoint
 	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
 	move.w	#$00C2,(MEM_PLAYER_SPRITE_X)
 	move.w	#$00D0,(MEM_PLAYER_SPRITE_Y)
-	; add item to start trading sequence
-	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_SCARF,d7 ; add item from trading sequence
-	bsr.w	AddItem ; add item to inventory		
 	;---------------------------------------------------------------------------	
 	; update NPC locations
 	;---------------------------------------------------------------------------	
@@ -510,28 +360,143 @@ LaunchDebug10: ; day 02 - midpoint
 
 
 LaunchDebug11: ; day 02 - after main events are done
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceDay	
+	;TODO - the rest of this
+	rts
+
 LaunchDebug12: ; night 02 - midpoint
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceNight
+	;TODO - the rest of this
+	rts
+
 LaunchDebug13: ; night 02 - after main events are done
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceNight
+	;TODO - the rest of this
+	rts
+	
 LaunchDebug14: ; day 03 - start
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceDay	
+	bsr.w	EndNight02
+	rts
+	
 LaunchDebug15: ; day 03 - midpoint
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceDay	
+	;TODO - the rest of this
+	rts
+	
 LaunchDebug16: ; day 03 - after main events are done
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceDay	
+	;TODO - the rest of this
+	rts
+	
 LaunchDebug17: ; night 03 - midpoint
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceNight
+	;TODO - the rest of this
+	rts
+	
 LaunchDebug18: ; night 03 - after main events are done
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceNight
+	;TODO - the rest of this
+	rts
+	
 LaunchDebug19: ; day 04 - start
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceDay	
+	bsr.w	EndNight03
+	rts
+	
 LaunchDebug20: ; day 04 - midpoint
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceDay	
+	;TODO - the rest of this
+	rts
+	
 LaunchDebug21: ; day 04 - after main events are done
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceDay	
+	;TODO - the rest of this
+	rts
+	
 LaunchDebug22: ; night 04 - midpoint
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceNight
+	;TODO - the rest of this
+	rts
+	
 LaunchDebug23: ; night 04 - after main events are done
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceNight
+	;TODO - the rest of this
+	rts
+	
 LaunchDebug24: ; day 05 - start
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceDay	
+	;TODO - the rest of this
+	rts
+	
 LaunchDebug25: ; day 05 - midpoint1
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceDay	
+	;TODO - the rest of this
+	rts
+	
 LaunchDebug26: ; day 05 - midpoint2
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceDay	
+	;TODO - the rest of this
+	rts
+	
 LaunchDebug27: ; day 05 - after main events are done
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceDay	
+	;TODO - the rest of this
+	rts
+	
 LaunchDebug28: ; night 05 - @EEHallway
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceNight
+	;TODO - the rest of this
+	rts
+	
 LaunchDebug29: ; night 05 - events done
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceNight
+	;TODO - the rest of this
+	rts
+	
 LaunchDebug30: ; day 06 - intro - bad
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceDay	
+	;TODO - the rest of this
+	rts
+	
 LaunchDebug31: ; day 06 - intro - good
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceDay	
+	;TODO - the rest of this
+	rts
+	
 LaunchDebug32: ; night 06 - intro-bad
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceNight
+	;TODO - the rest of this
+	rts
+	
 LaunchDebug33: ; night 06 - intro-good
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceNight
+	;TODO - the rest of this
+	rts
+	
 LaunchDebug34:
 LaunchDebug35:
 LaunchDebug36:
@@ -575,4 +540,23 @@ CatchAll:
 	; prevent freezing in case I messed up
 	bra.w	NewGame
 
+InitGlobalEvents:
+	move.l	(MEM_GAME_STATE),d7	; copy game state to d7
+	bset.l	#STATE_FLAG_EXPLORING,d7 ; set exploring flag
+	bset.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is available
+	move.l	d7,(MEM_GAME_STATE)	; save updated game state
+	rts
+
+SetupTradingSequenceDay:
+	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
+	move.w	#OBJ_ITEM_SCARF,d7 ; add item for the trading sequence
+	bsr.w	AddItem ; add item to inventory		
+	rts
+	
+SetupTradingSequenceNight:
+	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 2nd pc inventory
+	move.w	#OBJ_ITEM_VHS_TAPE,d7 ; add item for the trading sequence
+	bsr.w	AddItem ; add item to inventory		
+	rts
+	
 	endif

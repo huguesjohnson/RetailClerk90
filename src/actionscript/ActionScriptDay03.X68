@@ -254,6 +254,15 @@ ActionScriptDay03CavernRespond:
 ; End of the day
 ;*******************************************************************************
 EndDay03:
+	bsr.s	EndDay03SetupGameState
+	;---------------------------------------------------------------------------	
+	; queue the introduction
+	;---------------------------------------------------------------------------	
+	lea ScriptedEventNight03_00_IntroStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts
+	
+EndDay03SetupGameState: ; separated to help with debugging		
 	;---------------------------------------------------------------------------	
 	; setup the next day
 	;---------------------------------------------------------------------------	
@@ -274,10 +283,4 @@ EndDay03:
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsNight ; reset the NPC locations
 	move.l	#$07010000,(MEM_NPC_LOCATION_NSHACK)
-	;---------------------------------------------------------------------------	
-	; queue the introduction
-	;---------------------------------------------------------------------------	
-	lea ScriptedEventNight03_00_IntroStart,a6 ; point a6 to event to load
-	bsr.w QueueScriptedEvent ; queue the event
-	rts
-
+	rts	

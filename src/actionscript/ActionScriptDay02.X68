@@ -89,11 +89,7 @@ ActionScriptDay02DenimCountryInteract:
 	;---------------------------------------------------------------------------
 	; else update flags and run the scripted event
 	;---------------------------------------------------------------------------
-	bset.l	#FLAG_DAY02_EVENT03_DENIMCOUNTRY,d7 ; set event is done
-	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-	move.w	#SCENE_ID_NSHACK,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
-	move.w	#OBJECTIVE_D02_O02_VisitNS,(MEM_OBJECTIVE) ; update objective
-	move.l	#$070F0000,(MEM_NPC_LOCATION_NSHACK) ; db is now at nshack
+	bsr.s	ActionScriptDay02DenimCountryUpdateState
 	; setup scripted event
 	lea	StoryTextDay02NShackLine1,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
@@ -105,6 +101,16 @@ ActionScriptDay02DenimCountryInteract:
 .default
 	bsr.w ShowDefaultText
 	rts
+
+; assumes d7 has MEM_DAY_EVENT_FLAGS
+ActionScriptDay02DenimCountryUpdateState:
+	bset.l	#FLAG_DAY02_EVENT03_DENIMCOUNTRY,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#SCENE_ID_NSHACK,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
+	move.w	#OBJECTIVE_D02_O02_VisitNS,(MEM_OBJECTIVE) ; update objective
+	move.l	#$070F0000,(MEM_NPC_LOCATION_NSHACK) ; db is now at nshack
+	rts
+
 
 ;*******************************************************************************
 ; SCENE_ID_SVIDEO
@@ -208,7 +214,6 @@ EndDay02SetupGameState: ; separated to help with debugging
 	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
 	move.w	#$00DE,(MEM_PLAYER_SPRITE_X)
 	move.w	#$00EE,(MEM_PLAYER_SPRITE_Y)
-	;[ScriptedEventDay02_04_NS]
 	;---------------------------------------------------------------------------	
 	; update NPC locations
 	;---------------------------------------------------------------------------	

@@ -22,6 +22,18 @@ ActionScriptNight01CavernInteract:
 	;---------------------------------------------------------------------------
 	; else update flags and run the scripted event
 	;---------------------------------------------------------------------------
+	bsr.s	ActionScriptNight01CavernUpdateState
+	; setup scripted event
+	lea	StoryTextNight01CavernLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventNight01_01_CavernStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+.default
+	bsr.w ShowDefaultText
+	rts
+
+; assumes d7 has MEM_DAY_EVENT_FLAGS
+ActionScriptNight01CavernUpdateState:
 	bset.l	#FLAG_NIGHT_01_EVENT00_CAVERN,d7 ; set event is done
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
 	move.w	#SCENE_ID_EEHALL,(MEM_STORY_EVENT1_SCENE_ID) ; next story event in in EE hall
@@ -31,13 +43,6 @@ ActionScriptNight01CavernInteract:
 	move.l	(MEM_GAME_STATE),d7 ; copy game state to d7
 	bclr.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is unavailable
 	move.l	d7,(MEM_GAME_STATE) ; save updated state
-	; setup scripted event
-	lea	StoryTextNight01CavernLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
-	lea ScriptedEventNight01_01_CavernStart,a6 ; point a6 to event to load
-	bsr.w QueueScriptedEvent ; queue the event
-.default
-	bsr.w ShowDefaultText
 	rts
 
 ;*******************************************************************************
@@ -52,6 +57,17 @@ ActionScriptNight01EEHallEnter:
 	;---------------------------------------------------------------------------
 	; else update flags and run the scripted event
 	;---------------------------------------------------------------------------
+	bsr.s	ActionScriptNight01EEHallUpdateState
+	; setup scripted event
+	lea	StoryTextNight01EEHallLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventNight01_02_EEHallStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+.default
+	rts
+
+; assumes d7 has MEM_DAY_EVENT_FLAGS
+ActionScriptNight01EEHallUpdateState:
 	bset.l	#FLAG_NIGHT_01_EVENT01_EEHALL,d7 ; set event is done
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
 	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
@@ -60,14 +76,8 @@ ActionScriptNight01EEHallEnter:
 	move.l	#$01000000,(MEM_NPC_LOCATION_SHALL) ; eryn is in south hall	
 	; fast travel is available again
 	move.l	(MEM_GAME_STATE),d7 ; copy game state to d7
-	bset.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is unavailable
+	bset.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is available
 	move.l	d7,(MEM_GAME_STATE) ; save updated state	
-	; setup scripted event
-	lea	StoryTextNight01EEHallLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
-	lea ScriptedEventNight01_02_EEHallStart,a6 ; point a6 to event to load
-	bsr.w QueueScriptedEvent ; queue the event
-.default
 	rts
 
 ;*******************************************************************************
@@ -103,16 +113,21 @@ ActionScriptNight01SHallEnter:
 	;---------------------------------------------------------------------------
 	; else update flags and run the scripted event
 	;---------------------------------------------------------------------------
-	bset.l	#FLAG_NIGHT_01_EVENT02_STORYEVENTSDONE,d7 ; set event is done
-	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-	move.w	#$FFFF,(MEM_STORY_EVENT1_SCENE_ID) ; clear story event
-	move.l	#$00000000,(MEM_NPC_LOCATION_SHALL) ; move characters
+	bsr.s	ActionScriptNight01SouthHallUpdateState
 	; setup scripted event
 	lea	StoryTextNight01SouthHallLine1,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventNight01_03_SouthHallStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 .default
+	rts
+
+; assumes d7 has MEM_DAY_EVENT_FLAGS
+ActionScriptNight01SouthHallUpdateState:
+	bset.l	#FLAG_NIGHT_01_EVENT02_STORYEVENTSDONE,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#$FFFF,(MEM_STORY_EVENT1_SCENE_ID) ; clear story event
+	move.l	#$00000000,(MEM_NPC_LOCATION_SHALL) ; move characters
 	rts
 	
 ActionScriptNight01SHallExit:	

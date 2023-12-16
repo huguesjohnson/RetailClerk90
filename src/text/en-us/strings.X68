@@ -1605,13 +1605,13 @@ DebugScreenLine06:
 DebugScreenLine07:
 	dc.b	"{Day1 events done  {Day6 intro - good",ETX
 DebugScreenLine08:
-	dc.b	"{Night1 @cavern    {Night6 intro-bad ",ETX
+	dc.b	"{Night1 @cavern    {Day6 intro - prft",ETX
 DebugScreenLine09:
-	dc.b	"{Night1 events done{Night6 intro-good",ETX
+	dc.b	"{Night1 events done{Night6 intro-bad ",ETX
 DebugScreenLine0A:
-	dc.b	"{Night1 @south hall{(not implemented)",ETX
+	dc.b	"{Night1 @south hall{Night6 intro-good",ETX
 DebugScreenLine0B:
-	dc.b	"{Day2 midpoint     {(not implemented)",ETX
+	dc.b	"{Day2 midpoint     {Night6 intro-prft",ETX
 DebugScreenLine0C:
 	dc.b	"{Day2 events done  {(not implemented)",ETX
 DebugScreenLine0D:

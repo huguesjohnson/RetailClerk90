@@ -303,49 +303,78 @@ LaunchDebug07: ; night 01 - at the cavern
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceNight
 	bsr.w	EndDay01SetupGameState
-	;TODO - the rest of this
-	rts
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneCavern,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
+	rts	
 
 LaunchDebug08: ; night 01 - after main events are done
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceNight
 	bsr.w	EndDay01SetupGameState	
-	;TODO - the rest of this
+	;---------------------------------------------------------------------------	
+	; set events complete
+	;---------------------------------------------------------------------------	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7
+	bsr.w	ActionScriptNight01CavernUpdateState
+	move.l	(MEM_DAY_EVENT_FLAGS),d7
+	bsr.w	ActionScriptNight01EEHallUpdateState
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneSouthCenter,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
 	rts
 
 LaunchDebug09: ; night 01 - can leave 
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceNight
 	bsr.w	EndDay01SetupGameState	
-	;TODO - the rest of this
+	;---------------------------------------------------------------------------	
+	; set events complete
+	;---------------------------------------------------------------------------	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7
+	bsr.w	ActionScriptNight01CavernUpdateState
+	move.l	(MEM_DAY_EVENT_FLAGS),d7
+	bsr.w	ActionScriptNight01EEHallUpdateState	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7
+	bsr.w	ActionScriptNight01SouthHallUpdateState
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneSHall,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
 	rts
 
 LaunchDebug10: ; day 02 - midpoint
-
-	; this is not really done yet, just here right now to test the trading sequence
-
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceDay	
-
+	bsr.w	EndNight01SetupGameState
 	;---------------------------------------------------------------------------	
-	; setup the day
+	; set events complete
 	;---------------------------------------------------------------------------	
-	move.w	#$0004,(MEM_DAY) ; increment day
-	move.w	#OBJECTIVE_D04_O02_CheckIn,(MEM_OBJECTIVE) ; initial objective
-	and.l	#$00000000,(MEM_DAY_EVENT_FLAGS) ; clear day event flags
-	move.w	#SCENE_ID_DENIMCOUNTRY,(MEM_STORY_EVENT1_SCENE_ID) ; story event 1
-	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; story event 2
-	move.w	#SCENE_ID_SVIDEO,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
-	move.w	#SCENE_ID_FCBCAMPING,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
-	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
-	move.w	#PLAYER_SPRITE_ERYN,(MEM_PLAYER_SPRITE) ; initial sprite
-	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
-	move.w	#$00C2,(MEM_PLAYER_SPRITE_X)
-	move.w	#$00D0,(MEM_PLAYER_SPRITE_Y)
-	;---------------------------------------------------------------------------	
-	; update NPC locations
-	;---------------------------------------------------------------------------	
-	bsr.w	InitNPCLocationsDay ; reset the NPC locations
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 
+	bset.l	#FLAG_DAY02_EVENT00_TLODGE,d7
+	bset.l	#FLAG_DAY02_EVENT01_TBOOKS,d7 
+	move.l	d7,(MEM_DAY_EVENT_FLAGS)
+	bsr.w	CheckDay02Flags
 	;---------------------------------------------------------------------------
 	; load starting scene and sprites
 	;---------------------------------------------------------------------------
@@ -358,22 +387,43 @@ LaunchDebug10: ; day 02 - midpoint
 	bsr.w FadeIn
 	rts	
 
-
 LaunchDebug11: ; day 02 - after main events are done
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceDay	
-	;TODO - the rest of this
-	rts
+	bsr.w	EndNight01SetupGameState
+	;---------------------------------------------------------------------------	
+	; set events complete
+	;---------------------------------------------------------------------------	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 
+	bset.l	#FLAG_DAY02_EVENT00_TLODGE,d7
+	bset.l	#FLAG_DAY02_EVENT01_TBOOKS,d7 
+	move.l	d7,(MEM_DAY_EVENT_FLAGS)
+	bsr.w	CheckDay02Flags
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 	
+	bsr.w	ActionScriptDay02DenimCountryUpdateState
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneSHall,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
+	rts	
 
 LaunchDebug12: ; night 02 - midpoint
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceNight
+	bsr.w	EndDay02SetupGameState
 	;TODO - the rest of this
 	rts
 
 LaunchDebug13: ; night 02 - after main events are done
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceNight
+	bsr.w	EndDay02SetupGameState
 	;TODO - the rest of this
 	rts
 	
@@ -386,24 +436,27 @@ LaunchDebug14: ; day 03 - start
 LaunchDebug15: ; day 03 - midpoint
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceDay	
-	;TODO - the rest of this
+	bsr.w	EndNight02SetupGameState
 	rts
 	
 LaunchDebug16: ; day 03 - after main events are done
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceDay	
+	bsr.w	EndNight02SetupGameState
 	;TODO - the rest of this
 	rts
 	
 LaunchDebug17: ; night 03 - midpoint
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceNight
+	bsr.w	EndDay03SetupGameState	
 	;TODO - the rest of this
 	rts
 	
 LaunchDebug18: ; night 03 - after main events are done
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceNight
+	bsr.w	EndDay03SetupGameState	
 	;TODO - the rest of this
 	rts
 	
@@ -416,89 +469,179 @@ LaunchDebug19: ; day 04 - start
 LaunchDebug20: ; day 04 - midpoint
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceDay	
+	bsr.w	EndNight03SetupGameState
 	;TODO - the rest of this
 	rts
 	
 LaunchDebug21: ; day 04 - after main events are done
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceDay	
+	bsr.w	EndNight03SetupGameState
 	;TODO - the rest of this
 	rts
 	
 LaunchDebug22: ; night 04 - midpoint
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceNight
+	bsr.w	EndDay04SetupGameState
 	;TODO - the rest of this
 	rts
 	
 LaunchDebug23: ; night 04 - after main events are done
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceNight
+	bsr.w	EndDay04SetupGameState
 	;TODO - the rest of this
 	rts
 	
 LaunchDebug24: ; day 05 - start
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceDay	
-	;TODO - the rest of this
+	bsr.w	EndNight04
 	rts
 	
 LaunchDebug25: ; day 05 - midpoint1
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceDay	
+	bsr.w	EndNight04SetupGameState
 	;TODO - the rest of this
 	rts
 	
 LaunchDebug26: ; day 05 - midpoint2
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceDay	
+	bsr.w	EndNight04SetupGameState
 	;TODO - the rest of this
 	rts
 	
 LaunchDebug27: ; day 05 - after main events are done
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceDay	
+	bsr.w	EndNight04SetupGameState
 	;TODO - the rest of this
 	rts
 	
 LaunchDebug28: ; night 05 - @EEHallway
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceNight
+	bsr.w	EndDay05SetupGameState
+
 	;TODO - the rest of this
 	rts
 	
 LaunchDebug29: ; night 05 - events done
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceNight
+	bsr.w	EndDay05SetupGameState
+	
 	;TODO - the rest of this
 	rts
 	
 LaunchDebug30: ; day 06 - intro - bad
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceDay	
-	;TODO - the rest of this
+	;---------------------------------------------------------------------------
+	; setup relationship levels
+	;---------------------------------------------------------------------------
+	move.w	#$0000,(MEM_REL_DB)
+	move.w	#$0000,(MEM_REL_GRANT)
+	move.w	#$0000,(MEM_REL_NICKY)
+	move.w	#$0000,(MEM_REL_LAURA)
+	move.w	#$0000,(MEM_REL_ELIZA)
+	move.w	#$0000,(MEM_REL_GRUNBERG)
+	bsr.w	EndNight05
 	rts
 	
 LaunchDebug31: ; day 06 - intro - good
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceDay	
-	;TODO - the rest of this
+	;---------------------------------------------------------------------------
+	; setup relationship levels
+	;---------------------------------------------------------------------------
+	move.w	#MAX_REL,(MEM_REL_DB)
+	move.w	#MAX_REL,(MEM_REL_GRANT)
+	move.w	#MAX_REL,(MEM_REL_NICKY)
+	move.w	#MAX_REL,(MEM_REL_LAURA)
+	move.w	#MAX_REL,(MEM_REL_ELIZA)
+	move.w	#MAX_REL,(MEM_REL_GRUNBERG)
+	bsr.w	EndNight05
 	rts
 	
-LaunchDebug32: ; night 06 - intro-bad
+LaunchDebug32: ; day 06 - intro - perfect
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceNight
-	;TODO - the rest of this
+	;---------------------------------------------------------------------------
+	; setup relationship levels
+	;---------------------------------------------------------------------------
+	move.w	#MAX_REL,(MEM_REL_DB)
+	move.w	#MAX_REL,(MEM_REL_GRANT)
+	move.w	#MAX_REL,(MEM_REL_NICKY)
+	move.w	#MAX_REL,(MEM_REL_LAURA)
+	move.w	#MAX_REL,(MEM_REL_ELIZA)
+	move.w	#MAX_REL,(MEM_REL_GRUNBERG)
+	;---------------------------------------------------------------------------
+	; setup global events
+	;---------------------------------------------------------------------------		
+	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7	
+	bset.l	#FLAG_GLOBAL_EVENT00_TLodgeEvent1123Night,d7
+	bset.l	#FLAG_GLOBAL_Victor1204,d7
+	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS)
+	bsr.w	EndNight05
 	rts
 	
-LaunchDebug33: ; night 06 - intro-good
+LaunchDebug33: ; night 06 - intro - bad
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceNight
-	;TODO - the rest of this
+	;---------------------------------------------------------------------------
+	; setup relationship levels
+	;---------------------------------------------------------------------------
+	move.w	#$0000,(MEM_REL_DB)
+	move.w	#$0000,(MEM_REL_GRANT)
+	move.w	#$0000,(MEM_REL_NICKY)
+	move.w	#$0000,(MEM_REL_LAURA)
+	move.w	#$0000,(MEM_REL_ELIZA)
+	move.w	#$0000,(MEM_REL_GRUNBERG)
+	bsr.w	EndDay06
 	rts
 	
-LaunchDebug34:
-LaunchDebug35:
+LaunchDebug34: ; night 06 - intro - good
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceNight
+	;---------------------------------------------------------------------------
+	; setup relationship levels
+	;---------------------------------------------------------------------------
+	move.w	#MAX_REL,(MEM_REL_DB)
+	move.w	#MAX_REL,(MEM_REL_GRANT)
+	move.w	#MAX_REL,(MEM_REL_NICKY)
+	move.w	#MAX_REL,(MEM_REL_LAURA)
+	move.w	#MAX_REL,(MEM_REL_ELIZA)
+	move.w	#MAX_REL,(MEM_REL_GRUNBERG)	
+	bsr.w	EndDay06
+	rts
+
+LaunchDebug35: ; night 06 - intro - perfect
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceNight
+	;---------------------------------------------------------------------------
+	; setup relationship levels
+	;---------------------------------------------------------------------------
+	move.w	#MAX_REL,(MEM_REL_LAURA)
+	move.w	#MAX_REL,(MEM_REL_ELIZA)
+	move.w	#MAX_REL,(MEM_REL_GRUNBERG)	
+	;---------------------------------------------------------------------------
+	; setup global events
+	;---------------------------------------------------------------------------		
+	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7	
+	bset.l	#FLAG_GLOBAL_REL0Complete,d7
+	bset.l	#FLAG_GLOBAL_REL1Complete,d7
+	bset.l	#FLAG_GLOBAL_REL2Complete,d7
+	bset.l	#FLAG_GLOBAL_EVENT00_TLodgeEvent1123Night,d7
+	bset.l	#FLAG_GLOBAL_Victor1204,d7
+	bset.l	#FLAG_GLOBAL_TradingDayComplete,d7			
+	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS)
+	bsr.w	EndDay06
+	rts
+
 LaunchDebug36:
 LaunchDebug37:
 LaunchDebug38:

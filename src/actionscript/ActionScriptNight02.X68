@@ -70,10 +70,7 @@ ActionScriptNight02WWHallEnter:
 	;---------------------------------------------------------------------------
 	; else update flags and run the scripted event
 	;---------------------------------------------------------------------------
-	bset.l	#FLAG_NIGHT02_EVENT02_WWHALL,d7 ; set event is done
-	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-	move.l	#$00000000,(MEM_NPC_LOCATION_WWHALL) ; victor is out of wwhall
-	move.l	#$0C220000,(MEM_NPC_LOCATION_CNOW) ; victor is in cnow	
+	bsr.s	Night02WWHallUpdateState
 	; setup scripted event
 	lea	StoryTextNight02WWHallLine1,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
@@ -81,6 +78,14 @@ ActionScriptNight02WWHallEnter:
 	bsr.w QueueScriptedEvent ; queue the event
 .default
 	bsr.w ShowDefaultText
+	rts
+	
+; assumes d7 has MEM_DAY_EVENT_FLAGS	
+Night02WWHallUpdateState:
+	bset.l	#FLAG_NIGHT02_EVENT02_WWHALL,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.l	#$00000000,(MEM_NPC_LOCATION_WWHALL) ; victor is out of wwhall
+	move.l	#$0C220000,(MEM_NPC_LOCATION_CNOW) ; victor is in cnow	
 	rts
 
 ;*******************************************************************************
@@ -98,9 +103,7 @@ ActionScriptNight02CNowInteract:
 	;---------------------------------------------------------------------------
 	; else update flags and run the scripted event
 	;---------------------------------------------------------------------------
-	bset.l	#FLAG_GLOBAL_Victor1204,d7 ; set event is done
-	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS) ; save updated flags
-	move.l	#$0C000000,(MEM_NPC_LOCATION_CNOW) ; victor leaves cnow	
+	bsr.s	Night02CNowUpdateState
 	; setup scripted event
 	lea	StoryTextNight02CNowLine1,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
@@ -109,6 +112,13 @@ ActionScriptNight02CNowInteract:
 .default
 	bsr.w ShowDefaultText
 	rts	
+
+; assumes d7 has MEM_DAY_EVENT_FLAGS	
+Night02CNowUpdateState:
+	bset.l	#FLAG_GLOBAL_Victor1204,d7 ; set event is done
+	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS) ; save updated flags
+	move.l	#$0C000000,(MEM_NPC_LOCATION_CNOW) ; victor leaves cnow	
+	rts
 
 ;*******************************************************************************
 ; SCENE_ID_SHALL

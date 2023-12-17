@@ -116,9 +116,7 @@ ActionScriptNight03NShackInteract:
 	;---------------------------------------------------------------------------
 	; else update flags and run the scripted event
 	;---------------------------------------------------------------------------
-	bset.l	#FLAG_NIGHT03_EVENT02_NSHACK,d7 ; set event is done
-	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
+	bsr.s	ActionScriptNight03NShackUpdateState
 	; setup scripted event
 	lea	StoryTextNight03NShackLine1,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
@@ -126,6 +124,13 @@ ActionScriptNight03NShackInteract:
 	bsr.w QueueScriptedEvent ; queue the event
 .default
 	bsr.w ShowDefaultText
+	rts
+
+; assumes d7 has MEM_DAY_EVENT_FLAGS
+ActionScriptNight03NShackUpdateState:
+	bset.l	#FLAG_NIGHT03_EVENT02_NSHACK,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
 	rts
 
 ;*******************************************************************************

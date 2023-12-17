@@ -13,10 +13,7 @@ ActionScriptNight04NShackInteract:
 	;---------------------------------------------------------------------------
 	; else update flags and run the scripted event
 	;---------------------------------------------------------------------------
-	bset.l	#FLAG_NIGHT04_EVENT00_NSHACKNIGHT,d7 ; set event is done
-	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-	move.w	#SCENE_ID_CAVERN,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
-	move.w	#OBJECTIVE_D04_O03_Cavern,(MEM_OBJECTIVE) ; update objective
+	bsr.s	ActionScriptNight04NShackUpdateState
 	; setup scripted event
 	lea	StoryTextNight04NShackLine1,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
@@ -25,6 +22,14 @@ ActionScriptNight04NShackInteract:
 .default
 	bsr.w ShowDefaultText
 	rts		
+
+; assumes d7 has MEM_DAY_EVENT_FLAGS
+ActionScriptNight04NShackUpdateState:
+	bset.l	#FLAG_NIGHT04_EVENT00_NSHACKNIGHT,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#SCENE_ID_CAVERN,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
+	move.w	#OBJECTIVE_D04_O03_Cavern,(MEM_OBJECTIVE) ; update objective
+	rts
 
 ;*******************************************************************************
 ; SCENE_ID_CAVERN
@@ -36,15 +41,20 @@ ActionScriptNight04CavernEnterScene:
 	;---------------------------------------------------------------------------
 	; else update flags and run the scripted event
 	;---------------------------------------------------------------------------
-	bset.l	#FLAG_NIGHT04_EVENT01_CAVERN,d7 ; set event is done
-	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-	move.w	#SCENE_ID_CAVERN_BACKROOM,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
+	bsr.s	ActionScriptNight04CavernUpdateState
 	; setup scripted event
 	lea	StoryTextNight04CavernLine1,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventDay04_01_CavernStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 .default
+	rts
+	
+; assumes d7 has MEM_DAY_EVENT_FLAGS
+ActionScriptNight04CavernUpdateState:
+	bset.l	#FLAG_NIGHT04_EVENT01_CAVERN,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#SCENE_ID_CAVERN_BACKROOM,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
 	rts
 
 ;*******************************************************************************
@@ -85,11 +95,7 @@ ActionScriptNight04CavernBackroomExit:
 	btst.l	#FLAG_NIGHT04_EVENT02_CAVERNBACKROOM,d7 ; test if the event is complete
 	bne.s	.cantusestairs ; event is already complete
 .firsttime
-	bset.l	#FLAG_NIGHT04_EVENT02_CAVERNBACKROOM,d7 ; set event is done
-	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; clear story event
-	move.w	#OBJECTIVE_D04_O04_Leave,(MEM_OBJECTIVE) ; update objective
-	move.l	#$28000000,(MEM_NPC_LOCATION_SHALL) ; move victor to south hall
+	bsr.s	ActionScriptNight04CavernBackroomUpdateState
 .cantusestairs
 	lea	StoryTextNight04CantUseStairs,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
@@ -98,6 +104,15 @@ ActionScriptNight04CavernBackroomExit:
 	rts
 .default
 	bsr.w	DefaultExitScene ; default scene exit
+	rts
+	
+; assumes d7 has MEM_DAY_EVENT_FLAGS
+ActionScriptNight04CavernBackroomUpdateState:	
+	bset.l	#FLAG_NIGHT04_EVENT02_CAVERNBACKROOM,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; clear story event
+	move.w	#OBJECTIVE_D04_O04_Leave,(MEM_OBJECTIVE) ; update objective
+	move.l	#$28000000,(MEM_NPC_LOCATION_SHALL) ; move victor to south hall
 	rts
 
 ;*******************************************************************************
@@ -135,9 +150,7 @@ ActionScriptNight04SHallEnter:
 	;---------------------------------------------------------------------------
 	; else update flags and run the scripted event
 	;---------------------------------------------------------------------------
-	bset.l	#FLAG_NIGHT04_EVENT03_SHALL,d7 ; set event is done
-	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-	move.l	#$00000000,(MEM_NPC_LOCATION_SHALL) ; victor is out of south hall after this scene
+	bsr.s	ActionScriptNight04SHallUpdateState
 	; setup scripted event
 	lea	StoryTextNight04SouthHallLine1,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
@@ -145,6 +158,13 @@ ActionScriptNight04SHallEnter:
 	bsr.w QueueScriptedEvent ; queue the event
 .default
 	rts
+
+; assumes d7 has MEM_DAY_EVENT_FLAGS
+ActionScriptNight04SHallUpdateState:
+	bset.l	#FLAG_NIGHT04_EVENT03_SHALL,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.l	#$00000000,(MEM_NPC_LOCATION_SHALL) ; victor is out of south hall after this scene
+	rts	
 
 ;*******************************************************************************
 ; SCENE_ID_VB

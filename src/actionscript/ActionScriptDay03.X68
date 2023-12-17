@@ -33,10 +33,7 @@ ActionScriptDay03PogoDawgInteract:
 	beq.s .inprogress
 	; otherwise we fall into the finish part
 .finish
-	bset.l	#FLAG_DAY03_EVENT04_DONE,d7 ; set event is done
-	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-	move.w	#SCENE_ID_DENIMCOUNTRY,(MEM_STORY_EVENT1_SCENE_ID) ; set story event
-	move.w	#OBJECTIVE_D03_O04_CheckIn,(MEM_OBJECTIVE) ; update objective
+	bsr.s	ActionScriptDay04PogoDawgFinishedState
 	; setup scripted event
 	lea	StoryTextDay03PogoDawg2Line1,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
@@ -62,6 +59,14 @@ ActionScriptDay03PogoDawgInteract:
 	rts
 .default
 	bsr.w ShowDefaultText
+	rts
+
+; assumes d7 has MEM_DAY_EVENT_FLAGS
+ActionScriptDay04PogoDawgFinishedState:
+	bset.l	#FLAG_DAY03_EVENT04_DONE,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#SCENE_ID_DENIMCOUNTRY,(MEM_STORY_EVENT1_SCENE_ID) ; set story event
+	move.w	#OBJECTIVE_D03_O04_CheckIn,(MEM_OBJECTIVE) ; update objective
 	rts
 
 ;*******************************************************************************

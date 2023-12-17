@@ -417,14 +417,52 @@ LaunchDebug12: ; night 02 - midpoint
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceNight
 	bsr.w	EndDay02SetupGameState
-	;TODO - the rest of this
+	;---------------------------------------------------------------------------	
+	; set events complete
+	;---------------------------------------------------------------------------	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 
+	bset.l	#FLAG_NIGHT02_EVENT00_FCBCAMPING,d7
+	bset.l	#FLAG_NIGHT02_EVENT01_NSHACK,d7 
+	move.l	d7,(MEM_DAY_EVENT_FLAGS)
+	bsr.w	CheckNight02Flags
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneWEHall,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
 	rts
 
 LaunchDebug13: ; night 02 - after main events are done
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceNight
 	bsr.w	EndDay02SetupGameState
-	;TODO - the rest of this
+	;---------------------------------------------------------------------------	
+	; set events complete
+	;---------------------------------------------------------------------------	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 
+	bset.l	#FLAG_NIGHT02_EVENT00_FCBCAMPING,d7
+	bset.l	#FLAG_NIGHT02_EVENT01_NSHACK,d7 
+	move.l	d7,(MEM_DAY_EVENT_FLAGS)
+	bsr.w	CheckNight02Flags
+	move.l	d7,(MEM_DAY_EVENT_FLAGS)
+	bsr.w	Night02WWHallUpdateState
+	move.l	d7,(MEM_DAY_EVENT_FLAGS)
+	bsr.w	Night02CNowUpdateState
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneSHall,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
 	rts
 	
 LaunchDebug14: ; day 03 - start
@@ -437,27 +475,98 @@ LaunchDebug15: ; day 03 - midpoint
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceDay	
 	bsr.w	EndNight02SetupGameState
+	;---------------------------------------------------------------------------	
+	; set events complete
+	;---------------------------------------------------------------------------	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7
+	bset.l	#FLAG_DAY03_EVENT01_CHECKERS,d7
+	bset.l	#FLAG_DAY03_EVENT02_CLOTHESNOW,d7
+	bsr.w	CheckDay03Events
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneSouthCenter,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
 	rts
 	
 LaunchDebug16: ; day 03 - after main events are done
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceDay	
 	bsr.w	EndNight02SetupGameState
-	;TODO - the rest of this
+	;---------------------------------------------------------------------------	
+	; set events complete
+	;---------------------------------------------------------------------------	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7
+	bset.l	#FLAG_DAY03_EVENT01_CHECKERS,d7
+	bset.l	#FLAG_DAY03_EVENT02_CLOTHESNOW,d7
+	bsr.w	CheckDay03Events
+	move.l	(MEM_DAY_EVENT_FLAGS),d7
+	bsr.w	ActionScriptDay04PogoDawgFinishedState
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneDenimCountry,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
 	rts
 	
 LaunchDebug17: ; night 03 - midpoint
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceNight
 	bsr.w	EndDay03SetupGameState	
-	;TODO - the rest of this
+	;---------------------------------------------------------------------------	
+	; set events complete
+	;---------------------------------------------------------------------------	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7
+	bset.l	#FLAG_NIGHT03_EVENT00_TLODGE,d7	
+	bset.l	#FLAG_NIGHT03_EVENT01_CNOW,d7	
+	move.l	d7,(MEM_DAY_EVENT_FLAGS)
+	bsr.w	CheckNight03Events
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneSHall,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
 	rts
 	
 LaunchDebug18: ; night 03 - after main events are done
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceNight
 	bsr.w	EndDay03SetupGameState	
-	;TODO - the rest of this
+	;---------------------------------------------------------------------------	
+	; set events complete
+	;---------------------------------------------------------------------------	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7
+	bset.l	#FLAG_NIGHT03_EVENT00_TLODGE,d7	
+	bset.l	#FLAG_NIGHT03_EVENT01_CNOW,d7	
+	move.l	d7,(MEM_DAY_EVENT_FLAGS)
+	bsr.w	CheckNight03Events
+	move.l	(MEM_DAY_EVENT_FLAGS),d7
+	bsr.w	ActionScriptNight03NShackUpdateState
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneNShack,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
 	rts
 	
 LaunchDebug19: ; day 04 - start
@@ -470,28 +579,91 @@ LaunchDebug20: ; day 04 - midpoint
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceDay	
 	bsr.w	EndNight03SetupGameState
-	;TODO - the rest of this
+	;---------------------------------------------------------------------------	
+	; set events complete
+	;---------------------------------------------------------------------------	
+	; nothing really this time
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneCavern,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
 	rts
 	
 LaunchDebug21: ; day 04 - after main events are done
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceDay	
 	bsr.w	EndNight03SetupGameState
-	;TODO - the rest of this
+	;---------------------------------------------------------------------------	
+	; set events complete
+	;---------------------------------------------------------------------------	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7
+	bsr.w	ActionScriptDay04CavernUpdateState
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneNShack,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
 	rts
 	
 LaunchDebug22: ; night 04 - midpoint
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceNight
 	bsr.w	EndDay04SetupGameState
-	;TODO - the rest of this
+	;---------------------------------------------------------------------------	
+	; set events complete
+	;---------------------------------------------------------------------------	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7
+	bsr.w	ActionScriptNight04NShackUpdateState
+	move.l	(MEM_DAY_EVENT_FLAGS),d7
+	bsr.w	ActionScriptNight04CavernUpdateState
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneCavernBackroom,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
 	rts
 	
 LaunchDebug23: ; night 04 - after main events are done
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceNight
 	bsr.w	EndDay04SetupGameState
-	;TODO - the rest of this
+	;---------------------------------------------------------------------------	
+	; set events complete
+	;---------------------------------------------------------------------------	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7
+	bsr.w	ActionScriptNight04NShackUpdateState
+	move.l	(MEM_DAY_EVENT_FLAGS),d7
+	bsr.w	ActionScriptNight04CavernUpdateState
+	move.l	(MEM_DAY_EVENT_FLAGS),d7
+	bsr.w	ActionScriptNight04CavernBackroomUpdateState
+	move.l	(MEM_DAY_EVENT_FLAGS),d7
+	bsr.w	ActionScriptNight04SHallUpdateState
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneSHall,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
 	rts
 	
 LaunchDebug24: ; day 05 - start
@@ -504,37 +676,117 @@ LaunchDebug25: ; day 05 - midpoint1
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceDay	
 	bsr.w	EndNight04SetupGameState
-	;TODO - the rest of this
+	;---------------------------------------------------------------------------	
+	; set events complete
+	;---------------------------------------------------------------------------	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7
+	bset.l	#FLAG_DAY05_EVENT00_FCBFIREARMS,d7
+	move.l	d7,(MEM_DAY_EVENT_FLAGS)
+	move.l	#$0E000000,(MEM_NPC_LOCATION_FCBFIREARMS)
+	bsr.w	CheckDay05Events
+	bsr.w	ActionScriptDay05DenimCountryExit	
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneWWAudio,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
 	rts
 	
 LaunchDebug26: ; day 05 - midpoint2
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceDay	
 	bsr.w	EndNight04SetupGameState
-	;TODO - the rest of this
+	;---------------------------------------------------------------------------	
+	; set events complete
+	;---------------------------------------------------------------------------	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7
+	bset.l	#FLAG_DAY05_EVENT01_WWAUDIO,d7
+	move.l	d7,(MEM_DAY_EVENT_FLAGS)
+	move.l	#$1B000000,(MEM_NPC_LOCATION_WWAUDIO)
+	bsr.w	CheckDay05Events
+	bsr.w	ActionScriptDay05DenimCountryExit
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneFCBFirearms,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
 	rts
 	
 LaunchDebug27: ; day 05 - after main events are done
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceDay	
 	bsr.w	EndNight04SetupGameState
-	;TODO - the rest of this
+	;---------------------------------------------------------------------------	
+	; set events complete
+	;---------------------------------------------------------------------------	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7
+	bset.l	#FLAG_DAY05_EVENT00_FCBFIREARMS,d7
+	bset.l	#FLAG_DAY05_EVENT01_WWAUDIO,d7
+	move.l	d7,(MEM_DAY_EVENT_FLAGS)
+	bsr.w	CheckDay05Events
+	bsr.w	ActionScriptDay05DenimCountryExit
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneEWHall,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
 	rts
 	
 LaunchDebug28: ; night 05 - @EEHallway
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceNight
 	bsr.w	EndDay05SetupGameState
-
-	;TODO - the rest of this
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneEEHall,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
 	rts
 	
 LaunchDebug29: ; night 05 - events done
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceNight
 	bsr.w	EndDay05SetupGameState
-	
-	;TODO - the rest of this
+	;---------------------------------------------------------------------------	
+	; set events complete
+	;---------------------------------------------------------------------------	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7
+	bsr.w	ActionScriptNight05CavernUpdateState
+	move.l	(MEM_DAY_EVENT_FLAGS),d7
+	bset.l	#FLAG_NIGHT05_EVENT01_BASEMENTMDORM,d7
+	bset.l	#FLAG_NIGHT05_EVENT02_BASEMENTOFFICE,d7
+	move.l	d7,(MEM_DAY_EVENT_FLAGS)
+	bsr.w	CheckNight05Events
+	;---------------------------------------------------------------------------
+	; load starting scene and sprites
+	;---------------------------------------------------------------------------
+	lea	SceneSHall,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
 	rts
 	
 LaunchDebug30: ; day 06 - intro - bad

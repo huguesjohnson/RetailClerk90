@@ -13,10 +13,7 @@ ActionScriptDay04CavernInteract:
 	;---------------------------------------------------------------------------
 	; else update flags and run the scripted event
 	;---------------------------------------------------------------------------
-	bset.l	#FLAG_DAY04_EVENT00_CAVERN,d7 ; set event is done
-	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-	move.w	#SCENE_ID_NSHACK,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
-	move.w	#OBJECTIVE_D04_O01_NShack,(MEM_OBJECTIVE) ; update objective
+	bsr.s	ActionScriptDay04CavernUpdateState
 	; setup scripted event
 	lea	StoryTextDay04CavernLine1,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
@@ -24,6 +21,14 @@ ActionScriptDay04CavernInteract:
 	bsr.w QueueScriptedEvent ; queue the event
 .default
 	bsr.w ShowDefaultText
+	rts
+
+; assumes d7 has MEM_DAY_EVENT_FLAGS
+ActionScriptDay04CavernUpdateState:
+	bset.l	#FLAG_DAY04_EVENT00_CAVERN,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#SCENE_ID_NSHACK,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
+	move.w	#OBJECTIVE_D04_O01_NShack,(MEM_OBJECTIVE) ; update objective
 	rts
 
 ;*******************************************************************************

@@ -13,15 +13,20 @@ ActionScriptNight05CavernEnter:
 	;---------------------------------------------------------------------------
 	; else update flags and run the scripted event
 	;---------------------------------------------------------------------------
+	bsr.s	ActionScriptNight05CavernUpdateState
+	; setup scripted event
+	lea ScriptedEventNight05_01_CavernStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+.default
+	rts
+
+; assumes d7 has MEM_DAY_EVENT_FLAGS
+ActionScriptNight05CavernUpdateState:
 	bset.l	#FLAG_NIGHT05_EVENT00_CAVERN,d7 ; set event is done
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
 	move.w	#SCENE_ID_BASEMENTMDORM,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
 	move.w	#SCENE_ID_BASEMENTOFFICE,(MEM_STORY_EVENT2_SCENE_ID) ; update story event
 	move.w	#OBJECTIVE_D05_O03_Basement,(MEM_OBJECTIVE) ; update objective
-	; setup scripted event
-	lea ScriptedEventNight05_01_CavernStart,a6 ; point a6 to event to load
-	bsr.w QueueScriptedEvent ; queue the event
-.default
 	rts
 
 ;*******************************************************************************

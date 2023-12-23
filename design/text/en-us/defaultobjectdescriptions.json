@@ -8,7 +8,7 @@
    "defaultFormFeed":"FF",
    "lines":{
       "ObjectDescriptionNothing":{"text":"There's nothing very interesting here."},
-      "ObjectDescriptionDCMerch":{"text":"The lastest fashions neatly folded."},
+      "ObjectDescriptionDCMerch":{"text":"The latest fashions neatly folded."},
       "ObjectDescriptionVB8Bit":{"text":"There must be over 100 NES games here."},
       "ObjectDescriptionVBMags":{"text":"Below the counter are various magazines."},
       "ObjectDescriptionVBGen":{"text":"Phantasy Star II looks interesting.|Is it really worth $70 though?"},

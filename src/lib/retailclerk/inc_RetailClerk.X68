@@ -37,6 +37,7 @@
 	include	'lib/retailclerk/sprite/sub_UpdateSpriteSortTable.X68'
 	; scene handling
 	include 'lib/retailclerk/scene/sub_DrawScene.X68'
+	include 'lib/retailclerk/scene/sub_LoadFontTiles.X68'
 	include 'lib/retailclerk/scene/sub_LoadScene.X68'
 	include 'lib/retailclerk/scene/sub_ReloadCurrentScene.X68'
 	; dialog handling

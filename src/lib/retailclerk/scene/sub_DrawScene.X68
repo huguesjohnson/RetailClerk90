@@ -24,8 +24,6 @@ DrawSceneClearVDP:
 
 	move.w	#$2700,sr		; disable interrupts
 
-;	bsr.w	WaitVBlankEnd	; if currently in VBlank, wait
-;	bsr.w	WaitVBlankStart	; wait to clear screen until VBlank starts
 	bsr.w	ClearVRAM	; clear VRAM
 
 ;-------------------------------------------------------------------------------
@@ -33,14 +31,11 @@ DrawSceneClearVDP:
 ;-------------------------------------------------------------------------------
 	move.w	(a6)+,d7	; number of tilesets to load
 	cmpi.w	#$FFFF,d7	; is there any tiles to load?
-	beq.s	LoadFontTiles	; if no tiles then move to next section
+	beq.s	DrawSceneLoadFontTiles	; if no tiles then move to next section
 	move.w	#SCENE_VDP,d1	; use d1 to track write location
 	clr.l	d2	; use d2 to increment write location
 
 LoadSceneLoadTilesLoop:
-;	bsr.w	WaitVBlank	; wait for vblank to end
-;	bsr.w	WaitVBlankEnd	; if currently in VBlank, wait
-;	bsr.w	WaitVBlankStart	; wait to clear screen until VBlank starts
 	bsr.w	BuildVRAMWriteAddress
 	move.l	(a6)+,d3	; start address of tileset
 	move.l	(a6)+,d0	; end address of tileset
@@ -57,15 +52,8 @@ LoadSceneLoadTilesLoop:
 ;-------------------------------------------------------------------------------
 ; load the font tiles
 ;-------------------------------------------------------------------------------
-LoadFontTiles:
-	move.w	#FONT_VDP,d1	; setup call to BuildVRAMWriteAddress
-	bsr.w	BuildVRAMWriteAddress	; build the VRAM write address
-	move.l	#FontTilesStart,d2	; start address of tileset
-	move.l	#DialogFrameTilesEnd,d0	; end address of tileset
-	sub.l	d2,d0	; subtract the start address to get length
-	divu.w	#$0004,d0	; divide by 4 to setup call to LoadTiles
-	movea.l	d2,a0	; set address of first tile to load
-	bsr.w	LoadTiles	; branch to LoadTiles subroutine
+DrawSceneLoadFontTiles:
+	bsr.w	LoadFontTiles
 
 ;-------------------------------------------------------------------------------
 ; load palettes

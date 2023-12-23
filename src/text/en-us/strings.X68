@@ -1613,7 +1613,7 @@ DebugScreenLine0A:
 DebugScreenLine0B:
 	dc.b	"{Day2 midpoint     {Night6 intro-prft",ETX
 DebugScreenLine0C:
-	dc.b	"{Day2 events done  {(not implemented)",ETX
+	dc.b	"{Day2 events done  {Test text distort",ETX
 DebugScreenLine0D:
 	dc.b	"{Night2 midpoint   {(not implemented)",ETX
 DebugScreenLine0E:

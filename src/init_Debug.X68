@@ -894,7 +894,59 @@ LaunchDebug35: ; night 06 - intro - perfect
 	bsr.w	EndDay06
 	rts
 
-LaunchDebug36:
+LaunchDebug36: ; test text distortion effect
+	bsr.w	InitGlobalEvents
+	;---------------------------------------------------------------------------
+	; not the scene I plan to use this effect in
+	; it's just the first one and any works for testing
+	;---------------------------------------------------------------------------
+	move.w	#$0000,(MEM_DAY)
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	bset.l	#FLAG_DAY00_EVENT00_CUSTOMER0,d7 ; set the flag for talking to npc1
+	bset.l	#FLAG_DAY00_EVENT01_CUSTOMER1,d7 ; set the flag for talking to npc2
+	bsr.w	ActionScriptDay00UpdateStateAfterCustomerEventsDone
+	lea	SceneDenimCountry,a6
+	bsr.w LoadScene
+	
+	move.w	#$2700,sr		; disable interrupts	
+	
+	bsr.w	LoadFontTilesSlightDistort
+	
+;	move.w	#FONT_VDP,d1	; setup call to BuildVRAMWriteAddress
+;	bsr.w	BuildVRAMWriteAddress	; build the VRAM write address
+;	move.l	#FontTilesStart,d2	; start address of tileset
+;	move.l	#DialogFrameTilesStart,d0	; end address of tileset
+;	sub.l	d2,d0	; subtract the start address to get length
+;	divu.w	#$0004,d0	; divide by 4 to setup call to LoadTiles
+;	movea.l	d2,a0	; set address of first tile to load
+;	subq	#$01,d0	; iterate over ((number of tiles to load) - 1)
+;	move.l	d1,(VDP_CONTROL)	; set address for VDP write
+;	move.w	(MEM_VBLANK_COUNTER),d2
+;.loop:
+;	move.l (a0)+,d1
+;	add.w	d0,d2
+;	bchg.l	d2,d1
+;	move.l d1,(VDP_DATA)	; move data to VDP & increment address
+;	dbra d0,.loop	; loop until all data is loaded
+	
+	move.w	#$2000,sr		; re-enable interrupts	
+	
+	
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
+
+
+	move.l	#$00000001,d0
+	divu.w	#$000D,d0
+	move.l	d0,(MEM_DEBUG_1)
+
+
+
+	rts
+
 LaunchDebug37:
 LaunchDebug38:
 LaunchDebug39:

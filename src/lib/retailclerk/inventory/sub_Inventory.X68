@@ -9,11 +9,12 @@
 ; a1 should be pointing to MEM_PLAYER1_ITEM_COUNT or MEM_PLAYER2_ITEM_COUNT
 ;-------------------------------------------------------------------------------
 AddItem:
-	move.w	(a1)+,d6	; copy current item count to d6
+	move.w	(a1),d6	; copy current item count to d6
 	cmpi.w	#MAX_ITEMS,d6 ; check if inventory is full 
 	bge.s	ExitAddItem ; branch if already at the limit
 AddItemFindOpenSlot:
-	addq	#$1,(a1) ; increment item count
+	addq	#$1,d6	; increment item count
+	move.w	d6,(a1) ; save new item count
 	mulu.w	#WORD_SIZE,d6 ; find index of location to write the item
 	move.w	d7,(a1,d6) ; copy the item	
 ExitAddItem:

@@ -28,6 +28,9 @@ InitGameState:
 	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no optional events
 	move.w	#PLAYER_SPRITE_ERYN,(MEM_PLAYER_SPRITE)	; initial sprite
 	bsr.w	ClearPlayerInventory	; clear player inventory
+	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 2nd pc inventory
+	move.w	#OBJ_ITEM_KEYS,d7 ; add item 2nd player starts with
+	bsr.w	AddItem ; add item to inventory			
 	move.w	#$0000,(MEM_CUSTOMER_FEEDBACK_SCORE)	; clear customer feedback
 	move.w	#$0000,(MEM_PLAYER1_REL0) ; clear relationship scores
 	move.w	#$0000,(MEM_PLAYER1_REL1) ; clear relationship scores

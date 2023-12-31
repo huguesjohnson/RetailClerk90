@@ -907,47 +907,48 @@ LaunchDebug36: ; test text distortion effect
 	bsr.w	ActionScriptDay00UpdateStateAfterCustomerEventsDone
 	lea	SceneDenimCountry,a6
 	bsr.w LoadScene
-	
+	; the part being tested	
 	move.w	#$2700,sr		; disable interrupts	
-	
 	bsr.w	LoadFontTilesSlightDistort
-	
-;	move.w	#FONT_VDP,d1	; setup call to BuildVRAMWriteAddress
-;	bsr.w	BuildVRAMWriteAddress	; build the VRAM write address
-;	move.l	#FontTilesStart,d2	; start address of tileset
-;	move.l	#DialogFrameTilesStart,d0	; end address of tileset
-;	sub.l	d2,d0	; subtract the start address to get length
-;	divu.w	#$0004,d0	; divide by 4 to setup call to LoadTiles
-;	movea.l	d2,a0	; set address of first tile to load
-;	subq	#$01,d0	; iterate over ((number of tiles to load) - 1)
-;	move.l	d1,(VDP_CONTROL)	; set address for VDP write
-;	move.w	(MEM_VBLANK_COUNTER),d2
-;.loop:
-;	move.l (a0)+,d1
-;	add.w	d0,d2
-;	bchg.l	d2,d1
-;	move.l d1,(VDP_DATA)	; move data to VDP & increment address
-;	dbra d0,.loop	; loop until all data is loaded
-	
 	move.w	#$2000,sr		; re-enable interrupts	
-	
-	
+	; back to usual business
 	bsr.w LoadPlayerSprite
 	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
 	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
 	bsr.w FixSprites	
 	bsr.w FadeIn
-
-
-	move.l	#$00000001,d0
-	divu.w	#$000D,d0
-	move.l	d0,(MEM_DEBUG_1)
-
-
-
 	rts
 
-LaunchDebug37:
+LaunchDebug37: ; test mystery item name distortion effect
+	bsr.w	InitGlobalEvents
+	; the item being tested
+	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 2nd pc inventory
+	move.w	#OBJ_ITEM_FINALITEM,d7 ; item to add
+	bsr.w	AddItem ; add item to inventory		
+	; some other items to make sure I didn't break anything
+	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 2nd pc inventory
+	move.w	#OBJ_ITEM_KEYS,d7 ; item to add
+	bsr.w	AddItem ; add item to inventory		
+	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 2nd pc inventory
+	move.w	#OBJ_ITEM_SHIRT,d7 ; item to add
+	bsr.w	AddItem ; add item to inventory		
+	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 2nd pc inventory
+	move.w	#OBJ_ITEM_FM_CONVERTER,d7 ; item to add
+	bsr.w	AddItem ; add item to inventory		
+	;---------------------------------------------------------------------------
+	; not the scene I plan to use this effect in
+	; it's just the first one and any works for testing
+	;---------------------------------------------------------------------------
+	bsr.w	EndDay01SetupGameState
+	lea	SceneCavern,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
+	rts
+
 LaunchDebug38:
 LaunchDebug39:
 LaunchDebug40:	

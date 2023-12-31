@@ -80,6 +80,34 @@ ExitDrawEventIcon:
 BuildStatusScreenStatus:
 	move.w	#MENU_PAGE_STATUS,(MEM_MENU_SELECTION) ; second menu item selected
 	;---------------------------------------------------------------------------
+	; check if we need to load psuedo-random junk tiles
+	;---------------------------------------------------------------------------
+	move.w	#OBJ_ITEM_FINALITEM,d7
+	lea	MEM_PLAYER2_ITEM_COUNT,a2 ; point to 2nd pc inventory	
+	bsr.w	HasItem
+	cmpi.w	#$FFFF,d6 ; d6 will have index of item if found, otherwise FFFF
+	beq.s	BuildStatusScreenObjectiveText
+
+;-------------------------------------------------------------------------------
+; load a set of pseudo-random garbage tiles
+;-------------------------------------------------------------------------------
+	move.w	#GARBAGE_VDP,d1 ; setup call to BuildVRAMWriteAddress
+	bsr.w	BuildVRAMWriteAddress ; build the VRAM write address
+	move.l	d1,(VDP_CONTROL) ; set initial write location 
+	move.w	(MEM_VBLANK_COUNTER),d0
+	swap	d0
+	move.w	(MEM_MAINLOOP_COUNTER),d0
+	move.w	#GARBAGE_SIZE,d1
+FillWithPsuedoRandomDataLoop:
+	move.l	#$FFFFFFFF,d2
+	eor.l	d0,d2
+	move.l	d2,(VDP_DATA)
+	add.w	d1,d0
+	swap	d0
+	add.w	d1,d0
+	dbra	d1,FillWithPsuedoRandomDataLoop
+	
+	;---------------------------------------------------------------------------
 	; draw the objective text
 	;---------------------------------------------------------------------------
 BuildStatusScreenObjectiveText:
@@ -124,7 +152,18 @@ BuildStatusScreenInventory:
 	move.w	#MAX_ITEMS,d7	; use d7 to loop through items
 	subq.w	#$1,d7	; loop counter needs to be one less than item count
 BuildStatusScreenInventoryLoop:
+	;---------------------------------------------------------------------------
+	; next 4 lines are for the mystery object name
+	; this might only exist in this demo
+	; maybe I'll use it for something similar later
+	;---------------------------------------------------------------------------
+	move.w	#$0000,d4 ; d4 is used only in one case and should reset after each item
+	move.w	(MEM_VBLANK_COUNTER),d3
+	swap	d3
+	move.w	(MEM_MAINLOOP_COUNTER),d3
+	;---------------------------------------------------------------------------	
 	; next 3 operations are to determine the row for the text 
+	;---------------------------------------------------------------------------
 	move.w	#$0080,d6
 	mulu.w	d7,d6
 	swap d6
@@ -160,10 +199,33 @@ BuildStatusScreenInventoryLoopNextChar:
 	move.b	(a0)+,d6	; copy the next character to d6
 	cmpi.b	#ITEMNAMEEND,d6	; test if this is the end of the item name
 	beq.s	BuildStatusScreenInventoryLoopDec	; branch if end of name
+	;---------------------------------------------------------------------------
+	; this is to write the mystery object name
+	; this might only exist in this demo
+	; maybe I'll use it for something similar later
+	;---------------------------------------------------------------------------
+	cmpi.w	#CHAR_GARBAGE,d6 ; is this character a garbage character?
+	bne.s	.regularchar
+	move.w	d4,d6 ; d4 should be the character index
+	addq	#$1,d4 ; increment for next time through
+	btst.l	d4,d3
+	beq.s	.1
+	add.w	#GARBAGE_BASE_TILE_LOW+%0000000000000000,d6	; add base tile	
+	bra.s	.2
+.1	
+	add.w	#GARBAGE_BASE_TILE_LOW+%0110000000000000,d6	; add base tile
+.2
+	bra.s	.writevdp
+	;---------------------------------------------------------------------------
+	; end of code for the mystery object name
+	;---------------------------------------------------------------------------
+.regularchar
 	sub.w	#$20,d6	; subtract 32 to get the character index
 	add.w	#FONT_BASE_TILE_LOW+%0110000000000000,d6	; add base tile
+.writevdp	
 	move.l	(MEM_DIALOG_VDP),(VDP_CONTROL)	; set VDP address
 	move.w  d6,(VDP_DATA)	; copy the character to VDP
+.nextcol	
 	add.l	#$00020000,(MEM_DIALOG_VDP)	; move to the next column
 	bra.s	BuildStatusScreenInventoryLoopNextChar
 BuildStatusScreenInventoryLoopDec:

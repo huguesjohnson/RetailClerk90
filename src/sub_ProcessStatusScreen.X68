@@ -340,11 +340,12 @@ BuildItemDescriptionTextLoop:
 	cmpi.b	#ETX,d6	; is this the end of the text?
 	beq.s	ExitProcessStatusScreenStatus	; end of text, move on
 	cmpi.b	#LF,d6	; is this a line feed character?
-	bne.s	.1	; not a line feed character
-	add.l	#$00800000,d7	; move down one row
+	bne.s	.regularchar ; not a line feed character
+.incrementrow	
+	add.l	#$00800000,d7 ; move down one row
 	move.l	d7,(MEM_DIALOG_VDP)	; set new VDP write
 	bra.w	BuildItemDescriptionTextLoop ; loop
-.1
+.regularchar
 	; update d6 to point to the tile ID
 	sub.w	#$20,d6	; subtract 32 to get the character index
 	add.w	#FONT_BASE_TILE_LOW+%0110000000000000,d6	; add the base tile

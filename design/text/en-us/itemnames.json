@@ -21,7 +21,7 @@
       "ItemNameTickets":{"text":"Tickets"},
       "ItemNameHeadband":{"text":"Radio Hdnd"},
       "ItemNamePortableTv":{"text":"Port. TV"},
-      "ItemNameFmConverter":{"text":"FM Convert."},
+      "ItemNameFmConverter":{"text":"FMConvert"},
       "ItemNameFlannelShirt":{"text":"Flannels"},
       "ItemNameCoupons":{"text":"Coupon"},
       "ItemNameLps":{"text":"LPs"},
@@ -29,6 +29,6 @@
       "ItemNameMysteryBox":{"text":"MysteryBox"},
       "ItemNameEarring":{"text":"Earring"},
       "ItemNameTrophy":{"text":"Trophy"},
-      "ItemNameFinalItem":{"text":"(fitem}"}
+      "ItemNameFinalItem":{"text":""}
    }
 }

@@ -121,7 +121,7 @@
          },
       "StoryTextDay00LisaWorriedLine0":{
          "dialogTitle":"OBJ_NPC_LISA",
-         "text":"Neither of them wanted anything?|It's not your fault, sales are terrible lately.|This is bad. If we close that's bad for the whole mall. You might as well leave early since it's dead here.",
+         "text":"Neither of them wanted anything?|It's not your fault, sales are terrible lately.|You might as well leave early since it's dead here.",
          "align":2
          },
       "StoryTextDay00LisaWorriedLine1":{
@@ -131,7 +131,7 @@
          },
       "StoryTextDay00LisaWorriedLine2":{
          "dialogTitle":"OBJ_NPC_LISA",
-         "text":"Consider it a favor. You don't want to be here after closing time. There's some weird guy wandering around late. I asked Todd to walk me to my car every night. Why don't you stop by the info desk if you have time. It's a good place to learn about the mall. Stop by a few stores if you want. I'll leave you on the clock.",
+         "text":"You don't want to be here after closing.| There's some weirdo wandering around late.|I asked Todd to walk me to my car every night.|Why don't you stop by the info desk if you have extra time.|It's a good place to learn about the mall.",
          "align":2
          },
       "StoryTextDay00InfoDeskLine1":{
@@ -151,7 +151,7 @@
          },
       "StoryTextDay00CavernChoice":{
             "dialogTitle":"OBJ_NPC_DB",
-            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "text":"Do you want to try a new game? It's on free play.|{ Sure, why not       { Maybe later",
             "formFeed":"FFR",
             "align":2
          },         
@@ -1509,12 +1509,12 @@
          },    
       "StoryTextTradingSequenceSVideo":{
          "dialogTitle":"OBJ_NPC_NICKY",
-         "text":"thanks for that item, here's this item",
+         "text":"Thanks! I'm new in town and it's kinda boring. I hope I find something fun to do.|It's not much, but have a free VHS tape. Sorry if it's not your thing.",
          "align":2
          },  
       "StoryTextTradingSequenceFCBFishing":{
          "dialogTitle":"OBJ_NPC_HEATHER",
-         "text":"thanks for that item, here's this item",
+         "text":"Hey, that looks like the scarf I lost last month.|I'll give you these pocket handwarmers in exchange.|Be careful with them though.",
          "align":2
          },  
       "StoryTextTradingSequenceFCBFishingAfter":{

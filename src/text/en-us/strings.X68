@@ -205,7 +205,7 @@ ObjectDescriptionNothing:
 	dc.b	"There's nothing very",LF
 	dc.b	"interesting here.",ETX
 ObjectDescriptionDCMerch:
-	dc.b	"The lastest fashions",LF
+	dc.b	"The latest fashions",LF
 	dc.b	"neatly folded.",ETX
 ObjectDescriptionVB8Bit:
 	dc.b	"There must be over",LF
@@ -1275,8 +1275,7 @@ ItemNameHeadband:
 ItemNamePortableTv:
 	dc.b	"Port. TV",ITEMNAMEEND
 ItemNameFmConverter:
-	dc.b	"FM       ^",FF
-	dc.b	"Convert.",ITEMNAMEEND
+	dc.b	"FMConvert",ITEMNAMEEND
 ItemNameFlannelShirt:
 	dc.b	"Flannels",ITEMNAMEEND
 ItemNameCoupons:
@@ -1292,7 +1291,7 @@ ItemNameEarring:
 ItemNameTrophy:
 	dc.b	"Trophy",ITEMNAMEEND
 ItemNameFinalItem:
-	dc.b	"(fitem}",ITEMNAMEEND
+	dc.b	"",ITEMNAMEEND
 
 ;-------------------------------------------------------------------------------
 ; ItemDescription
@@ -1303,21 +1302,25 @@ ItemDescriptionNothing:
 	dc.b	"yearns to be",LF
 	dc.b	"filled.",ETX
 ItemDescriptionKeys:
-	dc.b	"Oversized keyring",LF
-	dc.b	"with keys to",LF
-	dc.b	"every store.",LF
-	dc.b	"Earned over the",LF
-	dc.b	"summer. These",LF
-	dc.b	"allow entry to",LF
-	dc.b	"stores after the ^",FF
-	dc.b	"mall is closed.",ETX
+	dc.b	"Set of keys to",LF
+	dc.b	"every store,",LF
+	dc.b	"earned over the",LF
+	dc.b	"summer. Allows",LF
+	dc.b	"entry to stores",LF
+	dc.b	"after the mall is",LF
+	dc.b	"closed.",ETX
 ItemDescriptionScarf:
 	dc.b	"Thick winter",LF
-	dc.b	"scarf.",ETX
+	dc.b	"scarf from the",LF
+	dc.b	"lost & found bin.",ETX
 ItemDescriptionSpecialOrder:
 	dc.b	"Special order",LF
 	dc.b	"book for Nicky at",LF
-	dc.b	"Sunset Video.",ETX
+	dc.b	"Sunset Video.",LF
+	dc.b	"It's a travel",LF
+	dc.b	"guide to the",LF
+	dc.b	"exciting Bayhurst",LF
+	dc.b	"area.",ETX
 ItemDescriptionVhsTape:
 	dc.b	"'Nature's",LF
 	dc.b	"Greatest",LF
@@ -1326,11 +1329,11 @@ ItemDescriptionVhsTape:
 ItemDescriptionHandwarmer:
 	dc.b	"Electric",LF
 	dc.b	"handwarmer that",LF
-	dc.b	"was recalled for",LF
+	dc.b	"was recalled over",LF
 	dc.b	"safety concerns.",ETX
 ItemDescriptionMooseAttractant:
-	dc.b	"A vial of moose",LF
-	dc.b	"attractant.",ETX
+	dc.b	"A small vial of",LF
+	dc.b	"moose attractant.",ETX
 ItemDescriptionLetter:
 	dc.b	"Anonymous letter",LF
 	dc.b	"sent to Lisa",LF
@@ -1343,11 +1346,17 @@ ItemDescriptionLipstick:
 	dc.b	"lipstick.",ETX
 ItemDescriptionShirt:
 	dc.b	"Polo shirt - size",LF
-	dc.b	"small.",ETX
+	dc.b	"small. Not your",LF
+	dc.b	"style.",ETX
 ItemDescriptionLunch1:
-	dc.b	"Combo meal #1.",ETX
+	dc.b	"Combo meal #1 -",LF
+	dc.b	"hot dog on a",LF
+	dc.b	"stick with fries.",ETX
 ItemDescriptionLunch2:
-	dc.b	"Combo meal #2",ETX
+	dc.b	"Combo meal #2 -",LF
+	dc.b	"'devil dawg' with",LF
+	dc.b	"alleged tater",LF
+	dc.b	"tots.",ETX
 ItemDescriptionTickets:
 	dc.b	"Tickets for a",LF
 	dc.b	"band called",LF
@@ -1357,11 +1366,13 @@ ItemDescriptionTickets:
 ItemDescriptionHeadband:
 	dc.b	"Headband with an",LF
 	dc.b	"AM/FM radio",LF
-	dc.b	"attached.",ETX
+	dc.b	"attached. It",LF
+	dc.b	"looks",LF
+	dc.b	"uncomfortable.",ETX
 ItemDescriptionPortableTv:
 	dc.b	"Portable B&W",LF
 	dc.b	"television. It",LF
-	dc.b	"only gets one",LF
+	dc.b	"only picks-up one",LF
 	dc.b	"station in the",LF
 	dc.b	"mall.",ETX
 ItemDescriptionFmConverter:
@@ -1370,16 +1381,20 @@ ItemDescriptionFmConverter:
 	dc.b	"have AM radios.",ETX
 ItemDescriptionFlannelShirt:
 	dc.b	"Flannel shirt -",LF
-	dc.b	"size large.",ETX
+	dc.b	"size large. Too",LF
+	dc.b	"1970s for your",LF
+	dc.b	"taste.",ETX
 ItemDescriptionCoupons:
 	dc.b	"Coupon for 10%",LF
 	dc.b	"off any non-sale",LF
 	dc.b	"item, February",LF
-	dc.b	"6th only.",ETX
+	dc.b	"6th before noon",LF
+	dc.b	"only.",ETX
 ItemDescriptionLps:
 	dc.b	"Assortment of",LF
 	dc.b	"obsolete LP",LF
-	dc.b	"records.",ETX
+	dc.b	"records mistaken",LF
+	dc.b	"for laser discs.",ETX
 ItemDescriptionUtilityKnife:
 	dc.b	"Utility knife",LF
 	dc.b	"with 27 different",LF
@@ -1389,15 +1404,20 @@ ItemDescriptionMysteryBox:
 	dc.b	"best to open this",LF
 	dc.b	"later.",ETX
 ItemDescriptionEarring:
-	dc.b	"Earring that",LF
-	dc.b	"someone jammed in",LF
-	dc.b	"a coin slot.",ETX
+	dc.b	"Large earring",LF
+	dc.b	"that someone",LF
+	dc.b	"jammed in a coin",LF
+	dc.b	"slot, possibly by",LF
+	dc.b	"mistake.",ETX
 ItemDescriptionTrophy:
-	dc.b	"For completing a",LF
-	dc.b	"set of arbitrary",LF
-	dc.b	"tasks.",ETX
+	dc.b	"It reads 'For",LF
+	dc.b	"completing a set",LF
+	dc.b	"of arbitrary",LF
+	dc.b	"tasks'",ETX
 ItemDescriptionFinalItem:
-	dc.b	"tbd",ETX
+	dc.b	"Something about",LF
+	dc.b	"this seems out of",LF
+	dc.b	"place...",ETX
 
 ;-------------------------------------------------------------------------------
 ; StatusScreenObjectives
@@ -1615,7 +1635,7 @@ DebugScreenLine0B:
 DebugScreenLine0C:
 	dc.b	"{Day2 events done  {Test text distort",ETX
 DebugScreenLine0D:
-	dc.b	"{Night2 midpoint   {(not implemented)",ETX
+	dc.b	"{Night2 midpoint   {Test mystery item",ETX
 DebugScreenLine0E:
 	dc.b	"{Night2 events done{(not implemented)",ETX
 DebugScreenLine0F:
@@ -2002,6 +2022,10 @@ StoryTextDay00NPC1Choice:
 	dc.w	OBJ_NPC_BUSYMOM
 	dc.b	"Do you think this",LF
 	dc.b	"will fit my husband? ^",FFR
+	dc.b	"also blah blah  blah",LF
+	dc.b	"blah  blah blah  blah^",FFR
+	dc.b	"blah  blah blah  blah",LF
+	dc.b	"blah  blah blah      ^",FFR
 	dc.b	"{ Uh..               ",LF
 	dc.b	"{ Yes, of course",ETX
 	align 2
@@ -2076,12 +2100,9 @@ StoryTextDay00LisaWorriedLine0:
 	dc.b	"It's not your fault,",LF
 	dc.b	"sales are terrible   ^",FF
 	dc.b	"lately.",LF
-	dc.b	"This is bad. If we   ^",FF
-	dc.b	"close that's bad for",LF
-	dc.b	"the whole mall. You  ^",FF
-	dc.b	"might as well leave",LF
-	dc.b	"early since it's dead^",FF
-	dc.b	"here.",ETX
+	dc.b	"You might as well    ^",FF
+	dc.b	"leave early since",LF
+	dc.b	"it's dead here.",ETX
 	align 2
 StoryTextDay00LisaWorriedLine1:
 	dc.w	OBJ_NPC_ERYN
@@ -2090,22 +2111,19 @@ StoryTextDay00LisaWorriedLine1:
 	align 2
 StoryTextDay00LisaWorriedLine2:
 	dc.w	OBJ_NPC_LISA
-	dc.b	"Consider it a favor.",LF
-	dc.b	"You don't want to be ^",FF
-	dc.b	"here after closing",LF
-	dc.b	"time. There's some   ^",FF
-	dc.b	"weird guy wandering",LF
-	dc.b	"around late. I asked ^",FF
-	dc.b	"Todd to walk me to my",LF
-	dc.b	"car every night. Why ^",FF
-	dc.b	"don't you stop by the",LF
-	dc.b	"info desk if you have^",FF
-	dc.b	"time. It's a good",LF
-	dc.b	"place to learn about ^",FF
-	dc.b	"the mall. Stop by a",LF
-	dc.b	"few stores if you    ^",FF
-	dc.b	"want. I'll leave you",LF
-	dc.b	"on the clock.",ETX
+	dc.b	"You don't want to be",LF
+	dc.b	"here after closing.  ^",FF
+	dc.b	"There's some weirdo",LF
+	dc.b	"wandering around     ^",FF
+	dc.b	"late.",LF
+	dc.b	"I asked Todd to walk ^",FF
+	dc.b	"me to my car every",LF
+	dc.b	"night.               ^",FF
+	dc.b	"Why don't you stop by",LF
+	dc.b	"the info desk if you ^",FF
+	dc.b	"have extra time.",LF
+	dc.b	"It's a good place to ^",FF
+	dc.b	"learn about the mall.",ETX
 	align 2
 StoryTextDay00InfoDeskLine1:
 	dc.w	OBJ_NPC_GINA
@@ -2121,9 +2139,10 @@ StoryTextDay00InfoDeskLine3:
 	align 2
 StoryTextDay00CavernChoice:
 	dc.w	OBJ_NPC_DB
-	dc.b	"Do this event or",LF
-	dc.b	"whatever?            ^",FFR
-	dc.b	"{ Sure               ",LF
+	dc.b	"Do you want to try a",LF
+	dc.b	"new game? It's on    ^",FFR
+	dc.b	"free play.",LF
+	dc.b	"{ Sure, why not      ^",FFR
 	dc.b	"{ Maybe later",ETX
 	align 2
 StoryTextDay00CavernChoice0:
@@ -3271,13 +3290,22 @@ StoryTextTradingSequenceInfoDek:
 	align 2
 StoryTextTradingSequenceSVideo:
 	dc.w	OBJ_NPC_NICKY
-	dc.b	"thanks for that item,",LF
-	dc.b	"here's this item",ETX
+	dc.b	"Thanks! I'm new in",LF
+	dc.b	"town and it's kinda  ^",FF
+	dc.b	"boring. I hope I find",LF
+	dc.b	"something fun to do. ^",FF
+	dc.b	"It's not much, but",LF
+	dc.b	"have a free VHS tape.^",FF
+	dc.b	"Sorry if it's not",LF
+	dc.b	"your thing.",ETX
 	align 2
 StoryTextTradingSequenceFCBFishing:
 	dc.w	OBJ_NPC_HEATHER
-	dc.b	"thanks for that item,",LF
-	dc.b	"here's this item",ETX
+	dc.b	"Hey, that looks like",LF
+	dc.b	"the scarf I lost last^",FF
+	dc.b	"month.",LF
+	dc.b	"Here, take this other^",FF
+	dc.b	"thing.",ETX
 	align 2
 StoryTextTradingSequenceFCBFishingAfter:
 	dc.w	OBJ_NPC_HEATHER

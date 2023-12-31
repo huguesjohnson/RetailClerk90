@@ -390,3 +390,11 @@ MAX_REL,$0003
 ; max store id - used to check if a lookup is out of range
 ;-------------------------------------------------------------------------------
 MAX_STORE_ID,SCENE_ID_BASEMENTOFFICE
+;
+;-------------------------------------------------------------------------------
+; stuff that might only be used in this demo
+;-------------------------------------------------------------------------------
+CHAR_GARBAGE,$18
+GARBAGE_VDP,$1000
+GARBAGE_SIZE,$007F
+GARBAGE_BASE_TILE_LOW,GARBAGE_VDP/$0020

@@ -169,6 +169,27 @@ ScriptedEventDay00_01_InfoDeskStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay00InfoDeskLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay00InfoDeskLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay00InfoDeskLine5
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay00InfoDeskLine6
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay00InfoDeskLine7
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay00InfoDeskLine8
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay00InfoDeskLine9
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay00InfoDeskLine10
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay00_01_InfoDeskEnd:
@@ -182,6 +203,24 @@ ScriptedEventDay00_Optional00_DBStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay00CavernLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay00CavernLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay00CavernLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay00CavernLine5
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay00CavernLine6
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay00CavernLine7
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay00CavernLine8
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay00_Optional00_DBEnd:
@@ -195,6 +234,18 @@ ScriptedEventDay00_Optional01_NickyStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay00SVideoLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay00SVideoLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay00SVideoLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay00SVideoLine5
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay00SVideoLine6
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay00_Optional01_NickyEnd:
@@ -213,6 +264,21 @@ ScriptedEventNight00_00_IntroStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight00TBooksLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00TBooksLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00TBooksLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00TBooksLine5
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00TBooksLine6
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00TBooksLine7
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight00_00_IntroEnd:
@@ -225,7 +291,13 @@ ScriptedEventNight00_01_EEHallStart:
 	dc.l	StoryTextNight00EEHallLine1
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextNight00EEHallLine1
+	dc.l	StoryTextNight00EEHallLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00EEHallLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00EEHallLine4
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight00_01_EEHallEnd:
@@ -239,6 +311,12 @@ ScriptedEventNight00_01_SVideoStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight00SVideoLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00SVideoLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00SVideoLine4
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight00_01_SVideoEnd:
@@ -252,6 +330,12 @@ ScriptedEventNight00_02_VictorEncounterStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight00SouthHallLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00SouthHallLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00SouthHallLine4
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight00_02_VictorEncounterEnd:
@@ -265,22 +349,27 @@ ScriptedEventNight00_Optional00_GrunbergStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight00VBLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00VBLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00VBLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00VBLine5
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00VBLine6
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00VBLine7
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00VBLine8
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight00_Optional00_GrunbergEnd:
-
-ScriptedEventNight00_Optional00Start:
-	; NPC0 sprite
-	dc.w	$0002
-	; dialog
-	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextNight00CPlanetLine1
-	; dialog
-	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextNight00CPlanetLine2
-	; end
-	dc.w	SCRIPTED_EVENT_END
-ScriptedEventNight00_Optional00End:
 
 ScriptedEventNight00_Optional01_ElizaStart:
 	; NPC0 sprite
@@ -291,6 +380,33 @@ ScriptedEventNight00_Optional01_ElizaStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight00CPlanetLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00CPlanetLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00CPlanetLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00CPlanetLine5
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00CPlanetLine6
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00CPlanetLine7
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00CPlanetLine8
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00CPlanetLine9
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00CPlanetLine10
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00CPlanetLine11
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight00_Optional01_ElizaEnd:
@@ -309,6 +425,15 @@ ScriptedEventDay01_00_IntroStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay01DenimCountryLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01DenimCountryLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01DenimCountryLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01DenimCountryLine5
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay01_00_IntroEnd:
@@ -322,6 +447,9 @@ ScriptedEventDay01_01_CPlanetStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay01CPlanetLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01CPlanetLine3
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay01_01_CPlanetEnd:
@@ -335,6 +463,9 @@ ScriptedEventDay01_02_WWAppliancesStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay01WWAppliancesLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01WWAppliancesLine3
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay01_02_WWAppliancesEnd:
@@ -348,6 +479,36 @@ ScriptedEventDay01_Optional00_DBStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay01CavernLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01CavernLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01CavernLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01CavernLine5
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01CavernLine6
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01CavernLine7
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01CavernLine8
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01CavernLine9
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01CavernLine10
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01CavernLine11
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01CavernLine12
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay01_Optional00_DBEnd:
@@ -361,6 +522,18 @@ ScriptedEventDay01_Optional01_GrantStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay01FCBCampingLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01FCBCampingLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01FCBCampingLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01FCBCampingLine5
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01FCBCampingLine6
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay01_Optional01_GrantEnd:
@@ -374,6 +547,18 @@ ScriptedEventNight01_00_IntroStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay01DenimCountry2Line2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01DenimCountry2Line3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01DenimCountry2Line4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01DenimCountry2Line5
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay01DenimCountry2Line6
 	; fade out
 	dc.w	SCRIPTED_EVENT_FADE_BLACK
 	; change scene to w/e hall
@@ -382,6 +567,9 @@ ScriptedEventNight01_00_IntroStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01WEHallLine1
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01WEHallLine2
 	; change to npc0 sprite
 	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
 	dc.w	$0002
@@ -390,7 +578,7 @@ ScriptedEventNight01_00_IntroStart:
 	dc.w	$0028
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextNight01WEHallLine2
+	dc.l	StoryTextNight01WEHallLine3
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight01_00_IntroEnd:
@@ -404,6 +592,15 @@ ScriptedEventNight01_01_CavernStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01CavernLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01CavernLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01CavernLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01CavernLine5
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight01_01_CavernEnd:
@@ -417,6 +614,9 @@ ScriptedEventNight01_02_EEHallStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01EEHallLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01EEHallLine3
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight01_02_EEHallEnd:
@@ -427,9 +627,6 @@ ScriptedEventNight01_TLodgeStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01TLodgeLine1
-	; dialog
-	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextNight01TLodgeLine2
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight01_TLodgeEnd:
@@ -443,6 +640,36 @@ ScriptedEventNight01_03_SouthHallStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01SouthHallLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01SouthHallLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01SouthHallLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01SouthHallLine5
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01SouthHallLine6
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01SouthHallLine7
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01SouthHallLine8
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01SouthHallLine9
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01SouthHallLine10
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01SouthHallLine11
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01SouthHallLine12
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight01_03_SouthHallEnd:
@@ -456,6 +683,12 @@ ScriptedEventNight01_Optional00Start:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01WWAppliancesLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01WWAppliancesLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01WWAppliancesLine4
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight01_Optional00End:
@@ -469,6 +702,21 @@ ScriptedEventNight01_Optional01Start:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01VBLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01VBLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01VBLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01VBLine5
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01VBLine6
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01VBLine7
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight01_Optional01End:
@@ -487,6 +735,15 @@ ScriptedEventDay02_00_IntroStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay02VBLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02VBLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02VBLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02VBLine5
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay02_00_IntroEnd:
@@ -500,6 +757,9 @@ ScriptedEventDay02_01_TLodgeStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay02TLodgeLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02TLodgeLine3
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay02_01_TLodgeEnd:
@@ -513,6 +773,15 @@ ScriptedEventDay02_02_TBooksStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay02TBooksLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02TBooksLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02TBooksLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02TBooksLine5
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay02_02_TBooksEnd:
@@ -526,6 +795,18 @@ ScriptedEventDay02_03_DenimCountryStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay02DenimCountryLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02DenimCountryLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02DenimCountryLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02DenimCountryLine5
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02DenimCountryLine6
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay02_03_DenimCountryEnd:
@@ -539,6 +820,33 @@ ScriptedEventDay02_TransitionStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay02NShackLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02NShackLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02NShackLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02NShackLine5
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02NShackLine6
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02NShackLine7
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02NShackLine8
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02NShackLine9
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02NShackLine10
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02NShackLine11
 	; NPC0 sprite
 	dc.w	$0002
 	; fade out
@@ -548,10 +856,7 @@ ScriptedEventDay02_TransitionStart:
 	dc.w	SCENE_ID_TBOOKS
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextDay02TBooksLine1
-	; dialog
-	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextDay02TBooksLine2
+	dc.l	StoryTextNight02TBooksLine1
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay02_TransitionEnd:
@@ -565,6 +870,39 @@ ScriptedEventDay02_Optional00Start:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay02SVideoLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02SVideoLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02SVideoLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02SVideoLine5
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02SVideoLine6
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02SVideoLine7
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02SVideoLine8
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02SVideoLine9
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextErynSpeechless
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02SVideoLine10
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02SVideoLine11
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02SVideoLine12
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay02_Optional00End:
@@ -587,10 +925,22 @@ ScriptedEventNight02_01_FCBCampingStart:
 	dc.w	$0002
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextDay02FCBCampingLine1
+	dc.l	StoryTextNight02FCBCampingLine1
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextDay02FCBCampingLine2
+	dc.l	StoryTextNight02FCBCampingLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02FCBCampingLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02FCBCampingLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02FCBCampingLine5
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02FCBCampingLine6
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight02_01_FCBCampingEnd:
@@ -604,6 +954,21 @@ ScriptedEventNight02_02_NShackStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay02NShackLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02NShackLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02NShackLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02NShackLine5
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02NShackLine6
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02NShackLine7
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight02_02_NShackEnd:
@@ -617,6 +982,9 @@ ScriptedEventNight02_03_WWHallStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight02WWHallLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02WWHallLine3
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight02_03_WWHallEnd:
@@ -626,10 +994,13 @@ ScriptedEventNight02_CNowStart:
 	dc.w	$0002
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextNight02WWHallLine1
+	dc.l	StoryTextNight02CNowLine1
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextNight02WWHallLine2
+	dc.l	StoryTextNight02CNowLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02CNowLine3
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight02_CNowEnd:
@@ -643,6 +1014,12 @@ ScriptedEventNight02_Optional00_GrunbergStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay02VBLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02VBLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay02VBLine4
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight02_Optional00_GrunbergEnd:
@@ -656,6 +1033,33 @@ ScriptedEventNight02_Optional01_ElizaStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight02CPlanetLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02CPlanetLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02CPlanetLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02CPlanetLine5
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02CPlanetLine6
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02CPlanetLine7
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02CPlanetLine8
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02CPlanetLine9
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02CPlanetLine10
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02CPlanetLine11
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight02_Optional01_ElizaEnd:
@@ -686,7 +1090,16 @@ ScriptedEventDay03_00_IntroStart:
 	dc.l	StoryTextDay03DenimCountryLine1
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextErynSpeechless
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay03DenimCountryLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextErynSpeechless
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay03DenimCountryLine3
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay03_00_IntroEnd:
@@ -699,7 +1112,40 @@ ScriptedEventDay03_01_PogoDawgStart:
 	dc.l	StoryTextDay03PogoDawgLine1
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextErynSpeechless
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay03PogoDawgLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay03PogoDawgLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay03PogoDawgLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay03PogoDawgLine5
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay03PogoDawgLine6
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay03PogoDawgLine7
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay03PogoDawgLine8
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay03PogoDawgLine9
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay03PogoDawgLine10
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay03PogoDawgLine11
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay03PogoDawgInprogress
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay03_01_PogoDawgEnd:
@@ -713,6 +1159,15 @@ ScriptedEventDay03_02_CheckersStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay03CheckersLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay03CheckersLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay03CheckersLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay03CheckersLine5
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay03_02_CheckersEnd:
@@ -720,6 +1175,9 @@ ScriptedEventDay03_02_CheckersEnd:
 ScriptedEventDay03_03_ClothesNowStart:
 	; NPC0 sprite
 	dc.w	$0002
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay03CheckersLine1
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay03CNowLine1
@@ -736,6 +1194,9 @@ ScriptedEventDay03_04_SouthHallStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay03SouthHallLine1
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextErynSpeechless
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay03SouthHallLine2
@@ -765,6 +1226,15 @@ ScriptedEventDay03_Optional00_DBStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay03CavernLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay03CavernLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay03CavernLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay03CavernLine5
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay03_Optional00_DBEnd:
@@ -778,11 +1248,23 @@ ScriptedEventDay03_Optional01_NickyStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay03SVideoLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay03SVideoLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay03SVideoLine4
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay03_Optional01_NickyEnd:
 
 ScriptedEventNight03_00_IntroStart:
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay03DenimCountry2Line1
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextDay03DenimCountry2Line2
 	; NPC0 sprite
 	dc.w	$0002
 	; fade out
@@ -793,9 +1275,6 @@ ScriptedEventNight03_00_IntroStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight03TBooksLine1
-	; dialog
-	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextNight03TBooksLine2
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight03_00_IntroEnd:
@@ -809,9 +1288,40 @@ ScriptedEventNight03_01_TLodgeStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight03TLodgeLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight03TLodgeLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight03TLodgeLine4
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight03_01_TLodgeEnd:
+
+ScriptedEventNight03_01_TLodgeAltStart:
+	; NPC0 sprite
+	dc.w	$0002
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight03TLodgeAltLine1
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight03TLodgeAltLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight03TLodgeAltLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight03TLodgeAltLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight03TLodgeAltLine5
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight03TLodgeAltLine6
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventNight03_01_TLodgeAltEnd:
 
 ScriptedEventNight03_02_CNowStart:
 	; NPC0 sprite
@@ -822,6 +1332,12 @@ ScriptedEventNight03_02_CNowStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight03CNowLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight03CNowLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight03CNowLine4
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight03_02_CNowEnd:
@@ -835,6 +1351,15 @@ ScriptedEventNight03_02_CNowAltStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight03CNowAltLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight03CNowAltLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight03CNowAltLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight03CNowAltLine5
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight03_02_CNowAltEnd:
@@ -861,6 +1386,30 @@ ScriptedEventNight03_03_NShackStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight03NShackLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight03NShackLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight03NShackLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight03NShackLine5
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight03NShackLine6
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight03NShackLine7
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight03NShackLine8
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight03NShackLine9
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight03NShackLine10
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight03_03_NShackEnd:

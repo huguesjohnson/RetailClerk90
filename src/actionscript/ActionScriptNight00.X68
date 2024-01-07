@@ -150,7 +150,7 @@ ActionScriptNight00VBRespond:
 	; setup the scripted event
 	lea	StoryTextNight00VBChoice0,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
-	lea ScriptedEventNight00_Optional00Start,a6 ; point a6 to event to load
+	lea ScriptedEventNight00_Optional00_GrunbergStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 	rts	
 	

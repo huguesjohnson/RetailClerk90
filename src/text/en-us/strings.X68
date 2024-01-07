@@ -1702,7 +1702,7 @@ CreditsScreen01Line04:
 CreditsScreen01Line05:
 	dc.b	"Logo font based on Audiowide",ETX
 CreditsScreen01Line06:
-	dc.b	"Copyright (c) 2012 Brian J Bonislawsky",ETX
+	dc.b	"(c) 2012 Brian J Bonislawsky",ETX
 CreditsScreen01Line07:
 	dc.b	" ",ETX
 CreditsScreen01Line08:
@@ -2022,10 +2022,6 @@ StoryTextDay00NPC1Choice:
 	dc.w	OBJ_NPC_BUSYMOM
 	dc.b	"Do you think this",LF
 	dc.b	"will fit my husband? ^",FFR
-	dc.b	"also blah blah  blah",LF
-	dc.b	"blah  blah blah  blah^",FFR
-	dc.b	"blah  blah blah  blah",LF
-	dc.b	"blah  blah blah      ^",FFR
 	dc.b	"{ Uh..               ",LF
 	dc.b	"{ Yes, of course",ETX
 	align 2
@@ -2127,140 +2123,443 @@ StoryTextDay00LisaWorriedLine2:
 	align 2
 StoryTextDay00InfoDeskLine1:
 	dc.w	OBJ_NPC_GINA
-	dc.b	"line1.",ETX
+	dc.b	"Is this your first",LF
+	dc.b	"day?",ETX
 	align 2
 StoryTextDay00InfoDeskLine2:
 	dc.w	OBJ_NPC_ERYN
-	dc.b	"line2.",ETX
+	dc.b	"Yeah.",ETX
 	align 2
 StoryTextDay00InfoDeskLine3:
 	dc.w	OBJ_NPC_GINA
-	dc.b	"line3.",ETX
+	dc.b	"As a welcome gift you",LF
+	dc.b	"can take something   ^",FF
+	dc.b	"from the lost & found",LF
+	dc.b	"bin.",ETX
+	align 2
+StoryTextDay00InfoDeskLine4:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"Why would I want to",LF
+	dc.b	"do that?",ETX
+	align 2
+StoryTextDay00InfoDeskLine5:
+	dc.w	OBJ_NPC_GINA
+	dc.b	"At least take",LF
+	dc.b	"something you can    ^",FF
+	dc.b	"trade.",ETX
+	align 2
+StoryTextDay00InfoDeskLine6:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"Something I can trade?",ETX
+	align 2
+StoryTextDay00InfoDeskLine7:
+	dc.w	OBJ_NPC_GINA
+	dc.b	"Mall employees trade",LF
+	dc.b	"all kinds of items.  ^",FF
+	dc.b	"Maybe you can get",LF
+	dc.b	"something better.",ETX
+	align 2
+StoryTextDay00InfoDeskLine8:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"OK...",LF
+	dc.b	"I'll take that winter^",FF
+	dc.b	"scarf.",ETX
+	align 2
+StoryTextDay00InfoDeskLine9:
+	dc.w	OBJ_NPC_GINA
+	dc.b	"Here you go.|Enjoy!",ETX
+	align 2
+StoryTextDay00InfoDeskLine10:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"(What am I going to",LF
+	dc.b	"do with this scarf?)",ETX
 	align 2
 StoryTextDay00CavernChoice:
 	dc.w	OBJ_NPC_DB
 	dc.b	"Do you want to try a",LF
-	dc.b	"new game? It's on    ^",FFR
-	dc.b	"free play.",LF
+	dc.b	"new game? I'll put it^",FFR
+	dc.b	"on free play.",LF
 	dc.b	"{ Sure, why not      ^",FFR
 	dc.b	"{ Maybe later",ETX
 	align 2
 StoryTextDay00CavernChoice0:
 	dc.w	OBJ_NPC_DB
-	dc.b	"choice 0",ETX
+	dc.b	"Alright, it's this",LF
+	dc.b	"one over here.",ETX
 	align 2
 StoryTextDay00CavernChoice1:
 	dc.w	OBJ_NPC_DB
-	dc.b	"choice 1",ETX
+	dc.b	"Alright, stop by when",LF
+	dc.b	"you're free.",ETX
 	align 2
 StoryTextDay00CavernLine1:
 	dc.w	OBJ_NPC_DB
-	dc.b	"line1.",ETX
+	dc.b	"What do you think?",ETX
 	align 2
 StoryTextDay00CavernLine2:
 	dc.w	OBJ_NPC_ERYN
-	dc.b	"line2.",ETX
+	dc.b	"It's kind of blocky.",ETX
+	align 2
+StoryTextDay00CavernLine3:
+	dc.w	OBJ_NPC_DB
+	dc.b	"Yeah, it's the future",LF
+	dc.b	"I guess.",ETX
+	align 2
+StoryTextDay00CavernLine4:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"I don't think this is",LF
+	dc.b	"for me.",ETX
+	align 2
+StoryTextDay00CavernLine5:
+	dc.w	OBJ_NPC_DB
+	dc.b	"Which games do you",LF
+	dc.b	"like to play?",ETX
+	align 2
+StoryTextDay00CavernLine6:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"We just have an old",LF
+	dc.b	"Atari at home.       ^",FF
+	dc.b	"Pac Man is fun even",LF
+	dc.b	"if it looks bad.",ETX
+	align 2
+StoryTextDay00CavernLine7:
+	dc.w	OBJ_NPC_DB
+	dc.b	"I get that.",LF
+	dc.b	"Thanks for trying    ^",FF
+	dc.b	"this anyway.",LF
+	dc.b	"Stop by anytime.",ETX
+	align 2
+StoryTextDay00CavernLine8:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"OK.",ETX
 	align 2
 StoryTextDay00SVideoChoice:
 	dc.w	OBJ_NPC_NICKY
-	dc.b	"Do this event or",LF
-	dc.b	"whatever?            ^",FFR
-	dc.b	"{ Sure               ",LF
+	dc.b	"I don't suppose you",LF
+	dc.b	"want to help the new ^",FFR
+	dc.b	"girl?",LF
+	dc.b	"{ Help with what?    ^",FFR
 	dc.b	"{ Maybe later",ETX
 	align 2
 StoryTextDay00SVideoChoice0:
 	dc.w	OBJ_NPC_NICKY
-	dc.b	"choice 0",ETX
+	dc.b	"It's my first day and",LF
+	dc.b	"my manager ditched me^",FF
+	dc.b	"with all these boxes.",ETX
 	align 2
 StoryTextDay00SVideoChoice1:
 	dc.w	OBJ_NPC_NICKY
-	dc.b	"choice 1",ETX
+	dc.b	"I'd really appreciate",LF
+	dc.b	"it if you can.",ETX
 	align 2
 StoryTextDay00SVideoLine1:
-	dc.w	OBJ_NPC_NICKY
-	dc.b	"line1.",ETX
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"It's also my first",LF
+	dc.b	"day.                 ^",FF
+	dc.b	"But my manager sent",LF
+	dc.b	"me home early.",ETX
 	align 2
 StoryTextDay00SVideoLine2:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"Jealous. Mine just",LF
+	dc.b	"disappeared.         ^",FF
+	dc.b	"I probably have to",LF
+	dc.b	"figure out how to    ^",FF
+	dc.b	"close on my own.",ETX
+	align 2
+StoryTextDay00SVideoLine3:
 	dc.w	OBJ_NPC_ERYN
-	dc.b	"line2.",ETX
+	dc.b	"It can't be that hard.",ETX
+	align 2
+StoryTextDay00SVideoLine4:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"I'm sure. It's just a",LF
+	dc.b	"lot deal with on my  ^",FF
+	dc.b	"first day.",LF
+	dc.b	"Also I'm new in town ^",FF
+	dc.b	"and don't know anyone",LF
+	dc.b	"yet.                 ^",FF
+	dc.b	"Alright, where does",LF
+	dc.b	"this one go...",ETX
+	align 2
+StoryTextDay00SVideoLine5:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"OK, this box is done.",ETX
+	align 2
+StoryTextDay00SVideoLine6:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"Thanks, I can get the",LF
+	dc.b	"rest from here.",ETX
 	align 2
 StoryTextNight00TBooksLine1:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
+	dc.w	OBJ_NPC_FRANK
+	dc.b	"So Carl, how's this",LF
+	dc.b	"temp assignment going?",ETX
 	align 2
 StoryTextNight00TBooksLine2:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.b	"It's been great.",LF
+	dc.b	"I've even made a     ^",FF
+	dc.b	"bunch of new friends.",ETX
+	align 2
+StoryTextNight00TBooksLine3:
+	dc.w	OBJ_NPC_FRANK
+	dc.b	"I see you already",LF
+	dc.b	"earned a key to every^",FF
+	dc.b	"store",LF
+	dc.b	"by helping them with ^",FF
+	dc.b	"various chores.",ETX
+	align 2
+StoryTextNight00TBooksLine4:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"Yeah, it's nice to",LF
+	dc.b	"get that out of the  ^",FF
+	dc.b	"way.",ETX
+	align 2
+StoryTextNight00TBooksLine5:
+	dc.w	OBJ_NPC_FRANK
+	dc.b	"Don't get too",LF
+	dc.b	"comfortable.         ^",FF
+	dc.b	"The permanent manager",LF
+	dc.b	"starts 12/31.",ETX
+	align 2
+StoryTextNight00TBooksLine6:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"Yeah, it's nice to",LF
+	dc.b	"get that out of the  ^",FF
+	dc.b	"way.",LF
+	dc.b	"I still have one     ^",FF
+	dc.b	"errand.",LF
+	dc.b	"I need to deliver a  ^",FF
+	dc.b	"special order for a",LF
+	dc.b	"new person.",ETX
+	align 2
+StoryTextNight00TBooksLine7:
+	dc.w	OBJ_NPC_FRANK
+	dc.b	"I'll leave you to it",LF
+	dc.b	"then.",ETX
 	align 2
 StoryTextNight00EEHallLine1:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
+	dc.w	OBJ_NPC_GUARD
+	dc.b	"Hey! I told you not",LF
+	dc.b	"to loiter after      ^",FF
+	dc.b	"closing!",ETX
 	align 2
 StoryTextNight00EEHallLine2:
+	dc.w	OBJ_NPC_BASE
+	dc.b	"Uh, yeah...",ETX
+	align 2
+StoryTextNight00EEHallLine3:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"Is everything alright?",ETX
+	align 2
+StoryTextNight00EEHallLine4:
 	dc.w	OBJ_NPC_GUARD
-	dc.b	"line2.",ETX
+	dc.b	"I see that guy every",LF
+	dc.b	"night, usually trying^",FF
+	dc.b	"to hide.",LF
+	dc.b	"He doesn't work here.^",FF
+	dc.b	"He's up to something.",ETX
 	align 2
 StoryTextNight00SVideoLine1:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
+	dc.b	"Hi, are you Nicky?",ETX
 	align 2
 StoryTextNight00SVideoLine2:
 	dc.w	OBJ_NPC_NICKY
-	dc.b	"line2.",ETX
+	dc.b	"Yes, are you from the",LF
+	dc.b	"bookstore?",ETX
+	align 2
+StoryTextNight00SVideoLine3:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"That's right, I have",LF
+	dc.b	"the book you ordered.",ETX
+	align 2
+StoryTextNight00SVideoLine4:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"Thanks! I'm new in",LF
+	dc.b	"town and it's kinda  ^",FF
+	dc.b	"boring. I hope I find",LF
+	dc.b	"something fun to do. ^",FF
+	dc.b	"It's not much, but",LF
+	dc.b	"have a free VHS tape.^",FF
+	dc.b	"Sorry if it's not",LF
+	dc.b	"your thing.",ETX
 	align 2
 StoryTextNight00SouthHallLine1:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
+	dc.w	OBJ_NPC_VICTOR
+	dc.b	"Staying past close",LF
+	dc.b	"again Carl?",ETX
 	align 2
 StoryTextNight00SouthHallLine2:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"Yeah... wait.",LF
+	dc.b	"Do I know you?",ETX
+	align 2
+StoryTextNight00SouthHallLine3:
 	dc.w	OBJ_NPC_VICTOR
-	dc.b	"line2.",ETX
+	dc.b	"You're losing it",LF
+	dc.b	"Carl.                ^",FF
+	dc.b	"Putting in too many",LF
+	dc.b	"late nights isn't    ^",FF
+	dc.b	"good for you.",ETX
+	align 2
+StoryTextNight00SouthHallLine4:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"(Who was that",LF
+	dc.b	"anyway?)             ^",FF
+	dc.b	"(I don't remember him",LF
+	dc.b	"being a customer)",ETX
 	align 2
 StoryTextNight00VBChoice:
 	dc.w	OBJ_NPC_GRUNBERG
-	dc.b	"Do this event or",LF
-	dc.b	"whatever?            ^",FFR
-	dc.b	"{ Sure               ",LF
+	dc.b	"Heading out already?",LF
+	dc.b	"{ Stay and talk      ^",FFR
 	dc.b	"{ Maybe later",ETX
 	align 2
 StoryTextNight00VBChoice0:
 	dc.w	OBJ_NPC_GRUNBERG
-	dc.b	"choice 0",ETX
+	dc.b	"You always are done",LF
+	dc.b	"with closing before  ^",FF
+	dc.b	"me.",ETX
 	align 2
 StoryTextNight00VBChoice1:
 	dc.w	OBJ_NPC_GRUNBERG
-	dc.b	"choice 1",ETX
+	dc.b	"Have a good night.",ETX
 	align 2
 StoryTextNight00VBLine1:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
+	dc.b	"It's not a race, just",LF
+	dc.b	"how it goes.",ETX
 	align 2
 StoryTextNight00VBLine2:
 	dc.w	OBJ_NPC_GRUNBERG
-	dc.b	"line2.",ETX
+	dc.b	"You'd think after 2",LF
+	dc.b	"years I'd be faster.",ETX
+	align 2
+StoryTextNight00VBLine3:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"2 years, really?",ETX
+	align 2
+StoryTextNight00VBLine4:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"2 years next month",LF
+	dc.b	"actually.            ^",FF
+	dc.b	"I was a salesman for",LF
+	dc.b	"Tandy before then.   ^",FF
+	dc.b	"We were getting beat",LF
+	dc.b	"by IBM & my region   ^",FF
+	dc.b	"closed.",LF
+	dc.b	"Luckily this store   ^",FF
+	dc.b	"was opening then.",ETX
+	align 2
+StoryTextNight00VBLine5:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"Have you always",LF
+	dc.b	"worked in tech sales?",ETX
+	align 2
+StoryTextNight00VBLine6:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"I sold cars for a",LF
+	dc.b	"while, clothes for a ^",FF
+	dc.b	"while.",LF
+	dc.b	"I'm happy to sell    ^",FF
+	dc.b	"anything to anyone.",ETX
+	align 2
+StoryTextNight00VBLine7:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"I've only worked in",LF
+	dc.b	"the bookstore.       ^",FF
+	dc.b	"I'm a bookworm though.",ETX
+	align 2
+StoryTextNight00VBLine8:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"Sounds like a good",LF
+	dc.b	"fit.                 ^",FF
+	dc.b	"Maybe you'll write",LF
+	dc.b	"one someday.         ^",FF
+	dc.b	"I think it's time to",LF
+	dc.b	"finish closing up    ^",FF
+	dc.b	"here.",LF
+	dc.b	"Have a good night.",ETX
 	align 2
 StoryTextNight00CPlanetChoice:
 	dc.w	OBJ_NPC_ELIZA
-	dc.b	"Do this event or",LF
-	dc.b	"whatever?            ^",FFR
-	dc.b	"{ Sure               ",LF
-	dc.b	"{ Maybe later",ETX
+	dc.b	"Hey Carl, stopping by",LF
+	dc.b	"to chat?             ^",FFR
+	dc.b	"{ That's right       ",LF
+	dc.b	"{ Jusy saying 'bye'",ETX
 	align 2
 StoryTextNight00CPlanetChoice0:
 	dc.w	OBJ_NPC_ELIZA
-	dc.b	"choice 0",ETX
+	dc.b	"Great, maybe I can",LF
+	dc.b	"finally figure out   ^",FF
+	dc.b	"what kind of music",LF
+	dc.b	"you like.",ETX
 	align 2
 StoryTextNight00CPlanetChoice1:
 	dc.w	OBJ_NPC_ELIZA
-	dc.b	"choice 1",ETX
+	dc.b	"That's too bad, maybe",LF
+	dc.b	"later?",ETX
 	align 2
 StoryTextNight00CPlanetLine1:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
+	dc.b	"I told you, I mostly",LF
+	dc.b	"read.",ETX
 	align 2
 StoryTextNight00CPlanetLine2:
 	dc.w	OBJ_NPC_ELIZA
-	dc.b	"line2.",ETX
+	dc.b	"There has to be",LF
+	dc.b	"something you like.",ETX
+	align 2
+StoryTextNight00CPlanetLine3:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"I told you, I mostly",LF
+	dc.b	"read.",ETX
+	align 2
+StoryTextNight00CPlanetLine4:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"Let me try",LF
+	dc.b	"something...",ETX
+	align 2
+StoryTextNight00CPlanetLine5:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"This is 'Metaphysical",LF
+	dc.b	"Graffiti'.           ^",FF
+	dc.b	"It came out earlier",LF
+	dc.b	"this year.           ^",FF
+	dc.b	"What do you think?",ETX
+	align 2
+StoryTextNight00CPlanetLine6:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"It's kind of weird.",LF
+	dc.b	"I don't think it's   ^",FF
+	dc.b	"for me.",ETX
+	align 2
+StoryTextNight00CPlanetLine7:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"Let's try something",LF
+	dc.b	"else...",ETX
+	align 2
+StoryTextNight00CPlanetLine8:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"This one's heavier.",LF
+	dc.b	"It's called          ^",FF
+	dc.b	"'Facelift'.",ETX
+	align 2
+StoryTextNight00CPlanetLine9:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"Sorry, this isn't for",LF
+	dc.b	"me either.",ETX
+	align 2
+StoryTextNight00CPlanetLine10:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"I'm not going to quit",LF
+	dc.b	"trying.",ETX
+	align 2
+StoryTextNight00CPlanetLine11:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"I know.",ETX
 	align 2
 StoryTextDay01DenimCountryNotDone:
 	dc.w	OBJ_NPC_LISA
@@ -2269,46 +2568,139 @@ StoryTextDay01DenimCountryNotDone:
 	align 2
 StoryTextDay01DenimCountryLine1:
 	dc.w	OBJ_NPC_LISA
-	dc.b	"line2.",ETX
+	dc.b	"I have an assignment",LF
+	dc.b	"for you.",ETX
 	align 2
 StoryTextDay01DenimCountryLine2:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"OK.",ETX
+	align 2
+StoryTextDay01DenimCountryLine3:
 	dc.w	OBJ_NPC_LISA
-	dc.b	"line2.",ETX
+	dc.b	"Please ask other",LF
+	dc.b	"stores if they've    ^",FF
+	dc.b	"seen anything weird",LF
+	dc.b	"lately.",ETX
+	align 2
+StoryTextDay01DenimCountryLine4:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"I thought it would be",LF
+	dc.b	"something work       ^",FF
+	dc.b	"related.",ETX
+	align 2
+StoryTextDay01DenimCountryLine5:
+	dc.w	OBJ_NPC_LISA
+	dc.b	"This is important.",LF
+	dc.b	"I can't explain right^",FF
+	dc.b	"now.",LF
+	dc.b	"Just ask around      ^",FF
+	dc.b	"please.",ETX
 	align 2
 StoryTextDay01CPlanetLine1:
-	dc.w	OBJ_NPC_ERYN
-	dc.b	"line1.",ETX
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"You want to know if",LF
+	dc.b	"anything weird       ^",FF
+	dc.b	"happened here?",ETX
 	align 2
 StoryTextDay01CPlanetLine2:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"Apparently.",ETX
+	align 2
+StoryTextDay01CPlanetLine3:
 	dc.w	OBJ_NPC_ELIZA
-	dc.b	"line2.",ETX
+	dc.b	"Nothing more than the",LF
+	dc.b	"usual weirdos.       ^",FF
+	dc.b	"Well.",LF
+	dc.b	"There's one raggedy  ^",FF
+	dc.b	"guy who stops by a",LF
+	dc.b	"lot.                 ^",FF
+	dc.b	"He never buys",LF
+	dc.b	"anything.            ^",FF
+	dc.b	"I don't know his deal.",ETX
 	align 2
 StoryTextDay01WWAppliancesLine1:
-	dc.w	OBJ_NPC_ERYN
-	dc.b	"line1.",ETX
+	dc.w	OBJ_NPC_LAURA
+	dc.b	"Anything weird?",LF
+	dc.b	"When I opened this   ^",FF
+	dc.b	"morning it looked",LF
+	dc.b	"like someone tried to^",FF
+	dc.b	"use one of the",LF
+	dc.b	"washers.             ^",FF
+	dc.b	"They made a huge mess.",ETX
 	align 2
 StoryTextDay01WWAppliancesLine2:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"Maybe it was the",LF
+	dc.b	"night crew?",ETX
+	align 2
+StoryTextDay01WWAppliancesLine3:
 	dc.w	OBJ_NPC_LAURA
-	dc.b	"line2.",ETX
+	dc.b	"I was stuck working a",LF
+	dc.b	"double shift.        ^",FF
+	dc.b	"It had to be after",LF
+	dc.b	"closing.",ETX
 	align 2
 StoryTextDay01DenimCountry2Line1:
 	dc.w	OBJ_NPC_ERYN
-	dc.b	"line1.",ETX
+	dc.b	"Here's everything I",LF
+	dc.b	"heard.|(....)|(....)",ETX
 	align 2
 StoryTextDay01DenimCountry2Line2:
 	dc.w	OBJ_NPC_LISA
-	dc.b	"line2.",ETX
+	dc.b	"Interesting. Thanks.",ETX
+	align 2
+StoryTextDay01DenimCountry2Line3:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"Are you going to tell",LF
+	dc.b	"me why you sent me   ^",FF
+	dc.b	"out on this?",ETX
+	align 2
+StoryTextDay01DenimCountry2Line4:
+	dc.w	OBJ_NPC_LISA
+	dc.b	"OK, but don't think",LF
+	dc.b	"I'm crazy.           ^",FF
+	dc.b	"Look at this letter I",LF
+	dc.b	"received.            ^",FF
+	dc.b	"It was slipped",LF
+	dc.b	"through the gate.",ETX
+	align 2
+StoryTextDay01DenimCountry2Line5:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"'Lisa, you should",LF
+	dc.b	"know that your store ^",FF
+	dc.b	"will close in",LF
+	dc.b	"January.             ^",FF
+	dc.b	"There's nothing you",LF
+	dc.b	"can do to prevent it.^",FF
+	dc.b	"I'm warning you",LF
+	dc.b	"because you seem like^",FF
+	dc.b	"a good person.",LF
+	dc.b	"You should get out   ^",FF
+	dc.b	"before it happens.",LF
+	dc.b	"-A friend.'",ETX
+	align 2
+StoryTextDay01DenimCountry2Line6:
+	dc.w	OBJ_NPC_LISA
+	dc.b	"It's really creeping",LF
+	dc.b	"me out.              ^",FF
+	dc.b	"Who sent this?",LF
+	dc.b	"What if they're right?",ETX
 	align 2
 StoryTextDay01CavernChoice:
 	dc.w	OBJ_NPC_DB
-	dc.b	"Do this event or",LF
-	dc.b	"whatever?            ^",FFR
-	dc.b	"{ Sure               ",LF
-	dc.b	"{ Maybe later",ETX
+	dc.b	"This kid again...",LF
+	dc.b	"{ Do you need help?  ^",FFR
+	dc.b	"{ Not my problem",ETX
 	align 2
 StoryTextDay01CavernChoice0:
 	dc.w	OBJ_NPC_DB
-	dc.b	"choice 0",ETX
+	dc.b	"Yeah, that would be",LF
+	dc.b	"great.               ^",FF
+	dc.b	"I have to fix",LF
+	dc.b	"something in the     ^",FF
+	dc.b	"back.",LF
+	dc.b	"Can you keep an eye  ^",FF
+	dc.b	"on things for a bit?",ETX
 	align 2
 StoryTextDay01CavernChoice1:
 	dc.w	OBJ_NPC_DB
@@ -2316,242 +2708,927 @@ StoryTextDay01CavernChoice1:
 	align 2
 StoryTextDay01CavernLine1:
 	dc.w	OBJ_NPC_ERYN
-	dc.b	"line1.",ETX
+	dc.b	"OK, sounds easy.",ETX
 	align 2
 StoryTextDay01CavernLine2:
 	dc.w	OBJ_NPC_DB
-	dc.b	"line2.",ETX
+	dc.b	"Thanks, I'll be fast.",ETX
+	align 2
+StoryTextDay01CavernLine3:
+	dc.w	OBJ_NPC_BILLY
+	dc.b	"Are you new?",ETX
+	align 2
+StoryTextDay01CavernLine4:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"Just a temp. Do you",LF
+	dc.b	"need change or       ^",FF
+	dc.b	"something?",ETX
+	align 2
+StoryTextDay01CavernLine5:
+	dc.w	OBJ_NPC_BILLY
+	dc.b	"I don't have any",LF
+	dc.b	"money.",ETX
+	align 2
+StoryTextDay01CavernLine6:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"...",ETX
+	align 2
+StoryTextDay01CavernLine7:
+	dc.w	OBJ_NPC_BILLY
+	dc.b	"I just watch other",LF
+	dc.b	"people play.",ETX
+	align 2
+StoryTextDay01CavernLine8:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"You watch other",LF
+	dc.b	"people play games?",ETX
+	align 2
+StoryTextDay01CavernLine9:
+	dc.w	OBJ_NPC_BILLY
+	dc.b	"It's still fun. Maybe",LF
+	dc.b	"it will be on TV some^",FF
+	dc.b	"day.",ETX
+	align 2
+StoryTextDay01CavernLine10:
+	dc.w	OBJ_NPC_DB
+	dc.b	"Isn't it time for you",LF
+	dc.b	"to loiter across the ^",FF
+	dc.b	"hall?",ETX
+	align 2
+StoryTextDay01CavernLine11:
+	dc.w	OBJ_NPC_BILLY
+	dc.b	"Oh yeah, bye.",ETX
+	align 2
+StoryTextDay01CavernLine12:
+	dc.w	OBJ_NPC_DB
+	dc.b	"Poor kid is stuck",LF
+	dc.b	"here all day.        ^",FF
+	dc.b	"Like the mall is a",LF
+	dc.b	"free babysitter.     ^",FF
+	dc.b	"Thanks for helping",LF
+	dc.b	"out.",ETX
 	align 2
 StoryTextDay01FCBCampingChoice:
 	dc.w	OBJ_NPC_GRANT
-	dc.b	"Do this event or",LF
-	dc.b	"whatever?            ^",FFR
-	dc.b	"{ Sure               ",LF
+	dc.b	"Have a minute to",LF
+	dc.b	"catch-up?            ^",FFR
+	dc.b	"{ OK                 ",LF
 	dc.b	"{ Maybe later",ETX
 	align 2
 StoryTextDay01FCBCampingChoice0:
 	dc.w	OBJ_NPC_GRANT
-	dc.b	"choice 0",ETX
+	dc.b	"I don't know if you",LF
+	dc.b	"remember me.         ^",FF
+	dc.b	"I was friends with",LF
+	dc.b	"your parents in the  ^",FF
+	dc.b	"70s.",ETX
 	align 2
 StoryTextDay01FCBCampingChoice1:
 	dc.w	OBJ_NPC_GRANT
-	dc.b	"choice 1",ETX
+	dc.b	"Stop by when you're",LF
+	dc.b	"free.",ETX
 	align 2
 StoryTextDay01FCBCampingLine1:
 	dc.w	OBJ_NPC_ERYN
-	dc.b	"line1.",ETX
+	dc.b	"Vaguely. You were",LF
+	dc.b	"over a couple times  ^",FF
+	dc.b	"when I was young.",ETX
 	align 2
 StoryTextDay01FCBCampingLine2:
 	dc.w	OBJ_NPC_GRANT
-	dc.b	"line2.",ETX
+	dc.b	"That's right. We",LF
+	dc.b	"drifted apart as the ^",FF
+	dc.b	"kids got older.",LF
+	dc.b	"We were friends in   ^",FF
+	dc.b	"high school.",LF
+	dc.b	"Your parents were a  ^",FF
+	dc.b	"couple even back then.",ETX
+	align 2
+StoryTextDay01FCBCampingLine3:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"That's what they told",LF
+	dc.b	"me too.",ETX
+	align 2
+StoryTextDay01FCBCampingLine4:
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"Our little group did",LF
+	dc.b	"everything together. ^",FF
+	dc.b	"Although there wasn't",LF
+	dc.b	"much to do then.     ^",FF
+	dc.b	"Mostly hanging out,",LF
+	dc.b	"camping in the       ^",FF
+	dc.b	"summer.",LF
+	dc.b	"We had took a couple ^",FF
+	dc.b	"roadtrips too.",LF
+	dc.b	"The usual teenage    ^",FF
+	dc.b	"stuff.",ETX
+	align 2
+StoryTextDay01FCBCampingLine5:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"They told me about a",LF
+	dc.b	"couple of them.",ETX
+	align 2
+StoryTextDay01FCBCampingLine6:
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"I won't bore you with",LF
+	dc.b	"them now.            ^",FF
+	dc.b	"Stop by if you ever",LF
+	dc.b	"want to hear about   ^",FF
+	dc.b	"them.",ETX
 	align 2
 StoryTextNight01WEHallLine1:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
+	dc.b	"Hey, didn't I see you",LF
+	dc.b	"last week?           ^",FF
+	dc.b	"Don't worry, I won't",LF
+	dc.b	"call security.       ^",FF
+	dc.b	"Are you in some kind",LF
+	dc.b	"of trouble?",ETX
 	align 2
 StoryTextNight01WEHallLine2:
-	dc.w	OBJ_NPC_GUARD
-	dc.b	"line2.",ETX
+	dc.w	OBJ_NPC_BASE
+	dc.b	"...",ETX
+	align 2
+StoryTextNight01WEHallLine3:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"(Geez, I just want to",LF
+	dc.b	"help)",ETX
 	align 2
 StoryTextNight01CavernLine1:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
+	dc.b	"Did some guy come",LF
+	dc.b	"through here?",ETX
 	align 2
 StoryTextNight01CavernLine2:
 	dc.w	OBJ_NPC_DB
-	dc.b	"line2.",ETX
+	dc.b	"I didn't notice",LF
+	dc.b	"anything.",ETX
+	align 2
+StoryTextNight01CavernLine3:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"You sure? I swear he",LF
+	dc.b	"went this way.",ETX
+	align 2
+StoryTextNight01CavernLine4:
+	dc.w	OBJ_NPC_DB
+	dc.b	"Even if he did, it's",LF
+	dc.b	"not my business.     ^",FF
+	dc.b	"Snooping around too",LF
+	dc.b	"much can cause drama.^",FF
+	dc.b	"I'm not getting",LF
+	dc.b	"involved again.",ETX
+	align 2
+StoryTextNight01CavernLine5:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"(Again?)",ETX
 	align 2
 StoryTextNight01EEHallLine1:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
+	dc.w	OBJ_NPC_VICTOR
+	dc.b	"Working late again",LF
+	dc.b	"Carl?",ETX
 	align 2
 StoryTextNight01EEHallLine2:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"No, I'm just...",LF
+	dc.b	"Sorry, where do I    ^",FF
+	dc.b	"know you from?",ETX
+	align 2
+StoryTextNight01EEHallLine3:
 	dc.w	OBJ_NPC_VICTOR
-	dc.b	"line2.",ETX
+	dc.b	"Go get some sleep",LF
+	dc.b	"Carl.",ETX
 	align 2
 StoryTextNight01TLodgeLine1:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
-	align 2
-StoryTextNight01TLodgeLine2:
 	dc.w	OBJ_NPC_VICTOR
-	dc.b	"line2.",ETX
+	dc.b	"Can you believe this",LF
+	dc.b	"place lasted so long?^",FF
+	dc.b	"Look at the junk",LF
+	dc.b	"they're trying to    ^",FF
+	dc.b	"sell.",LF
+	dc.b	"They should have     ^",FF
+	dc.b	"closed 12 years ago.",ETX
 	align 2
 StoryTextNight01SouthHallLine1:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
+	dc.b	"Hey, you're new here",LF
+	dc.b	"right?",ETX
 	align 2
 StoryTextNight01SouthHallLine2:
 	dc.w	OBJ_NPC_ERYN
-	dc.b	"line2.",ETX
+	dc.b	"I already have a",LF
+	dc.b	"ride.                ^",FF
+	dc.b	"Aren't I a little",LF
+	dc.b	"young for you?",ETX
+	align 2
+StoryTextNight01SouthHallLine3:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"What? No it's not...",LF
+	dc.b	"(geez)               ^",FF
+	dc.b	"I'm just saying hi.",LF
+	dc.b	"I don't even have a  ^",FF
+	dc.b	"car.",LF
+	dc.b	"I'm on a temp        ^",FF
+	dc.b	"assignment.",LF
+	dc.b	"I'm staying at the   ^",FF
+	dc.b	"discount hotel across",LF
+	dc.b	"the street.",ETX
+	align 2
+StoryTextNight01SouthHallLine4:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"What? No it's not...",LF
+	dc.b	"(geez)               ^",FF
+	dc.b	"I'm just saying hi.",LF
+	dc.b	"I don't even have a  ^",FF
+	dc.b	"car.",LF
+	dc.b	"I'm on a temp        ^",FF
+	dc.b	"assignment.",LF
+	dc.b	"I'm staying at the   ^",FF
+	dc.b	"discount hotel across",LF
+	dc.b	"the street.",ETX
+	align 2
+StoryTextNight01SouthHallLine5:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"Telling me about your",LF
+	dc.b	"hotel room..         ^",FF
+	dc.b	"Real subtle.",ETX
+	align 2
+StoryTextNight01SouthHallLine6:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"No! Why do you keep",LF
+	dc.b	"going there?         ^",FF
+	dc.b	"Since I'm basically",LF
+	dc.b	"living here I like to^",FF
+	dc.b	"meet the other",LF
+	dc.b	"employees.           ^",FF
+	dc.b	"That's it, I swear.",ETX
+	align 2
+StoryTextNight01SouthHallLine7:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"OK then, I'm Eryn. I",LF
+	dc.b	"work at Denim        ^",FF
+	dc.b	"Country.",LF
+	dc.b	"I don't work that    ^",FF
+	dc.b	"much though.",LF
+	dc.b	"Lisa sends me on     ^",FF
+	dc.b	"crazy snipe hunts.",ETX
+	align 2
+StoryTextNight01SouthHallLine8:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"She did the same",LF
+	dc.b	"thing over summer.   ^",FF
+	dc.b	"Drove last help to",LF
+	dc.b	"quit.",ETX
+	align 2
+StoryTextNight01SouthHallLine9:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"I'm only here until",LF
+	dc.b	"January so whatever.",ETX
+	align 2
+StoryTextNight01SouthHallLine10:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"You never know.",LF
+	dc.b	"That's what I thought^",FF
+	dc.b	"8 years ago.",ETX
+	align 2
+StoryTextNight01SouthHallLine11:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"You can help her",LF
+	dc.b	"after I'm gone then. ^",FF
+	dc.b	"There's my ride.",ETX
+	align 2
+StoryTextNight01SouthHallLine12:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"(Goodnight)",ETX
 	align 2
 StoryTextNight01WWAppliancesChoice:
 	dc.w	OBJ_NPC_LAURA
-	dc.b	"Do this event or",LF
-	dc.b	"whatever?            ^",FFR
-	dc.b	"{ Sure               ",LF
-	dc.b	"{ Maybe later",ETX
+	dc.b	"Know how to fix a",LF
+	dc.b	"refrigerator?        ^",FFR
+	dc.b	"{ I can try          ",LF
+	dc.b	"{ I don't think so",ETX
 	align 2
 StoryTextNight01WWAppliancesChoice0:
 	dc.w	OBJ_NPC_LAURA
-	dc.b	"choice 0",ETX
+	dc.b	"Great, this one is",LF
+	dc.b	"acting funny.",ETX
 	align 2
 StoryTextNight01WWAppliancesChoice1:
 	dc.w	OBJ_NPC_LAURA
-	dc.b	"choice 1",ETX
+	dc.b	"I'd appreciate it if",LF
+	dc.b	"you could try.",ETX
 	align 2
 StoryTextNight01WWAppliancesLine1:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
+	dc.b	"Are they supposed to",LF
+	dc.b	"be on?",ETX
 	align 2
 StoryTextNight01WWAppliancesLine2:
 	dc.w	OBJ_NPC_LAURA
-	dc.b	"line2.",ETX
+	dc.b	"They aren't supposed",LF
+	dc.b	"to be cool.          ^",FF
+	dc.b	"But the light should",LF
+	dc.b	"come on.             ^",FF
+	dc.b	"This one isn't.",LF
+	dc.b	"I already tried the  ^",FF
+	dc.b	"bulb in a different",LF
+	dc.b	"one.",ETX
+	align 2
+StoryTextNight01WWAppliancesLine3:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"Don't ask how I know,",LF
+	dc.b	"but I bet it's the   ^",FF
+	dc.b	"door switch.",LF
+	dc.b	"(...)                ^",FF
+	dc.b	"Yeah, it's jammed.",LF
+	dc.b	"Let me try...        ^",FF
+	dc.b	"...and I think it's",LF
+	dc.b	"good for now.",ETX
+	align 2
+StoryTextNight01WWAppliancesLine4:
+	dc.w	OBJ_NPC_LAURA
+	dc.b	"Good enough for me.",LF
+	dc.b	"Thanks for the help.",ETX
 	align 2
 StoryTextNight01VBChoice:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"Do this event or",LF
-	dc.b	"whatever?            ^",FFR
-	dc.b	"{ Sure               ",LF
+	dc.b	"Thanksgiving",LF
+	dc.b	"weekend...           ^",FFR
+	dc.b	"{ Stay and talk      ",LF
 	dc.b	"{ Maybe later",ETX
 	align 2
 StoryTextNight01VBChoice0:
 	dc.w	OBJ_NPC_GRUNBERG
-	dc.b	"choice 0",ETX
+	dc.b	"Hey Carl. I was just",LF
+	dc.b	"thinking for a minute.",ETX
 	align 2
 StoryTextNight01VBChoice1:
 	dc.w	OBJ_NPC_GRUNBERG
-	dc.b	"choice 1",ETX
+	dc.b	"Sorry, lost in",LF
+	dc.b	"thought.             ^",FF
+	dc.b	"Stop by if you get a",LF
+	dc.b	"chance.",ETX
 	align 2
 StoryTextNight01VBLine1:
-	dc.w	OBJ_NPC_GRUNBERG
-	dc.b	"line1.",ETX
+	dc.w	OBJ_NPC_CARL
+	dc.b	"About past",LF
+	dc.b	"Thanksgivings?",ETX
 	align 2
 StoryTextNight01VBLine2:
 	dc.w	OBJ_NPC_GRUNBERG
-	dc.b	"line2.",ETX
+	dc.b	"More like lack",LF
+	dc.b	"thereof.             ^",FF
+	dc.b	"My family didn't",LF
+	dc.b	"really celebrate.    ^",FF
+	dc.b	"Neither set of",LF
+	dc.b	"grandparents were    ^",FF
+	dc.b	"happy about my",LF
+	dc.b	"parents' marriage.   ^",FF
+	dc.b	"We usually got",LF
+	dc.b	"Chinese food to go.",ETX
+	align 2
+StoryTextNight01VBLine3:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"That doesn't sound so",LF
+	dc.b	"bad.",ETX
+	align 2
+StoryTextNight01VBLine4:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"I guess it wasn't.",LF
+	dc.b	"I never mind working ^",FF
+	dc.b	"this weekend though.",LF
+	dc.b	"Let people with big  ^",FF
+	dc.b	"gatherings take off.",ETX
+	align 2
+StoryTextNight01VBLine5:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"I feel the same.",LF
+	dc.b	"My family is small & ^",FF
+	dc.b	"scattered.",LF
+	dc.b	"Working this weekend ^",FF
+	dc.b	"feels like a chaotic",LF
+	dc.b	"dinner anyway.",ETX
+	align 2
+StoryTextNight01VBLine6:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"Never thought about",LF
+	dc.b	"it that way.         ^",FF
+	dc.b	"This must be the",LF
+	dc.b	"quiet after-dinner   ^",FF
+	dc.b	"part.",ETX
+	align 2
+StoryTextNight01VBLine7:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"I guess so.",LF
+	dc.b	"I'll let you get back^",FF
+	dc.b	"to closing.",ETX
 	align 2
 StoryTextDay02VBLine1:
-	dc.w	OBJ_NPC_ERYN
-	dc.b	"line1.",ETX
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"Why are you asking me",LF
+	dc.b	"about this?",ETX
 	align 2
 StoryTextDay02VBLine2:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"I don't know.",LF
+	dc.b	"She told me to talk  ^",FF
+	dc.b	"to people who worked",LF
+	dc.b	"here a long time.",ETX
+	align 2
+StoryTextDay02VBLine3:
 	dc.w	OBJ_NPC_GRUNBERG
-	dc.b	"line2.",ETX
+	dc.b	"Well I'm old, but",LF
+	dc.b	"this store isn't.    ^",FF
+	dc.b	"We only opened 2",LF
+	dc.b	"years ago.           ^",FF
+	dc.b	"The mall opened in",LF
+	dc.b	"1975.                ^",FF
+	dc.b	"I believe",LF
+	dc.b	"ThoreauBooks &       ^",FF
+	dc.b	"Transistor Lodge are",LF
+	dc.b	"the only original    ^",FF
+	dc.b	"stores left.",LF
+	dc.b	"Maybe they know some ^",FF
+	dc.b	"mall legends.",ETX
+	align 2
+StoryTextDay02VBLine4:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"Mall legends?",ETX
+	align 2
+StoryTextDay02VBLine5:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"Like urban legends,",LF
+	dc.b	"but in a mall.       ^",FF
+	dc.b	"All of them have some",LF
+	dc.b	"weird bits of history.",ETX
 	align 2
 StoryTextDay02TLodgeLine1:
-	dc.w	OBJ_NPC_ERYN
-	dc.b	"line1.",ETX
+	dc.w	OBJ_NPC_SCOTT
+	dc.b	"Mall legends?",LF
+	dc.b	"There's one I think  ^",FF
+	dc.b	"is true.",ETX
 	align 2
 StoryTextDay02TLodgeLine2:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"...",ETX
+	align 2
+StoryTextDay02TLodgeLine3:
 	dc.w	OBJ_NPC_SCOTT
-	dc.b	"line2.",ETX
+	dc.b	"When the mall was",LF
+	dc.b	"built in 1975, it had^",FF
+	dc.b	"a state of the art",LF
+	dc.b	"computer system. For ^",FF
+	dc.b	"climate control and",LF
+	dc.b	"muzac.               ^",FF
+	dc.b	"Seemed like overkill",LF
+	dc.b	"for the time.        ^",FF
+	dc.b	"At least once a month",LF
+	dc.b	"the mall manager     ^",FF
+	dc.b	"comes here looking",LF
+	dc.b	"for an old part.     ^",FF
+	dc.b	"So there's some old",LF
+	dc.b	"computer he's        ^",FF
+	dc.b	"maintaining.",ETX
 	align 2
 StoryTextDay02TBooksLine1:
-	dc.w	OBJ_NPC_ERYN
-	dc.b	"line1.",ETX
+	dc.w	OBJ_NPC_CARL
+	dc.b	"Oh, hey. I'm sorry",LF
+	dc.b	"about the other      ^",FF
+	dc.b	"night.",LF
+	dc.b	"I came across creepy.",ETX
 	align 2
 StoryTextDay02TBooksLine2:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"It's OK. Let's move",LF
+	dc.b	"on.                  ^",FF
+	dc.b	"Do you know any mall",LF
+	dc.b	"legends?             ^",FF
+	dc.b	"Maybe going back to",LF
+	dc.b	"1975.",ETX
+	align 2
+StoryTextDay02TBooksLine3:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.b	"Well I am older than",LF
+	dc.b	"the average mall     ^",FF
+	dc.b	"employee...",LF
+	dc.b	"I've only been here 6^",FF
+	dc.b	"months though.",LF
+	dc.b	"I'm the assistant    ^",FF
+	dc.b	"manager at a",LF
+	dc.b	"different location.  ^",FF
+	dc.b	"I'm filling in until",LF
+	dc.b	"they hire a permanent^",FF
+	dc.b	"manager.",LF
+	dc.b	"This mall is too     ^",FF
+	dc.b	"weird for me.",LF
+	dc.b	"The customers I mean.",ETX
+	align 2
+StoryTextDay02TBooksLine4:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"They aren't very",LF
+	dc.b	"smart.               ^",FF
+	dc.b	"Not sure about weird.",ETX
+	align 2
+StoryTextDay02TBooksLine5:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"Maybe it's only here.",LF
+	dc.b	"I get a lot of       ^",FF
+	dc.b	"customers that are",LF
+	dc.b	"dressed odd.         ^",FF
+	dc.b	"Or that ask for books",LF
+	dc.b	"I never heard of.    ^",FF
+	dc.b	"Maybe they're",LF
+	dc.b	"tourists.",ETX
 	align 2
 StoryTextDay02DenimCountryNotDone:
 	dc.w	OBJ_NPC_LISA
-	dc.b	"not done message.",ETX
+	dc.b	"Sounds like you",LF
+	dc.b	"didn't find much yet.",ETX
 	align 2
 StoryTextDay02DenimCountryLine1:
-	dc.w	OBJ_NPC_ERYN
-	dc.b	"line1.",ETX
+	dc.w	OBJ_NPC_LISA
+	dc.b	"So that's all you",LF
+	dc.b	"found?               ^",FF
+	dc.b	"Old computers &",LF
+	dc.b	"weirdos?",ETX
 	align 2
 StoryTextDay02DenimCountryLine2:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"Not sure what else",LF
+	dc.b	"you were expecting.",ETX
+	align 2
+StoryTextDay02DenimCountryLine3:
 	dc.w	OBJ_NPC_LISA
-	dc.b	"line2.",ETX
+	dc.b	"I'm sorry. I thought",LF
+	dc.b	"you might get lucky. ^",FF
+	dc.b	"The letter is from",LF
+	dc.b	"someone who knows the^",FF
+	dc.b	"mall well.",LF
+	dc.b	"How else would they  ^",FF
+	dc.b	"know a store will",LF
+	dc.b	"close?",ETX
+	align 2
+StoryTextDay02DenimCountryLine4:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"Maybe it was a prank.",ETX
+	align 2
+StoryTextDay02DenimCountryLine5:
+	dc.w	OBJ_NPC_LISA
+	dc.b	"That sounds awful.",LF
+	dc.b	"Who would do that?   ^",FF
+	dc.b	"Oh, by the way...",LF
+	dc.b	"Jen from Nut Shack   ^",FF
+	dc.b	"came by looking for",LF
+	dc.b	"you.                 ^",FF
+	dc.b	"I didn't know you",LF
+	dc.b	"were friends.",ETX
+	align 2
+StoryTextDay02DenimCountryLine6:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"Neither did I.",LF
+	dc.b	"(I should see what   ^",FF
+	dc.b	"she wants)",ETX
 	align 2
 StoryTextDay02NShackLine1:
-	dc.w	OBJ_NPC_ERYN
-	dc.b	"line1.",ETX
+	dc.w	OBJ_NPC_DB
+	dc.b	"I think it's same as",LF
+	dc.b	"last year.",ETX
 	align 2
 StoryTextDay02NShackLine2:
 	dc.w	OBJ_NPC_JEN
-	dc.b	"line2.",ETX
+	dc.b	"Maybe. I tried",LF
+	dc.b	"talking to him but he^",FF
+	dc.b	"wouldn't open up.",ETX
+	align 2
+StoryTextDay02NShackLine3:
+	dc.w	OBJ_NPC_DB
+	dc.b	"I don't want to get",LF
+	dc.b	"involved.            ^",FF
+	dc.b	"If he talks to me",LF
+	dc.b	"that's fine.         ^",FF
+	dc.b	"But I'm looking for",LF
+	dc.b	"drama again.",ETX
+	align 2
+StoryTextDay02NShackLine4:
+	dc.w	OBJ_NPC_JEN
+	dc.b	"Oh hi, you're Eryn",LF
+	dc.b	"right?",ETX
+	align 2
+StoryTextDay02NShackLine5:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"Yeah. I'll come back",LF
+	dc.b	"later.",ETX
+	align 2
+StoryTextDay02NShackLine6:
+	dc.w	OBJ_NPC_JEN
+	dc.b	"It's fine, you're not",LF
+	dc.b	"interupting.         ^",FF
+	dc.b	"Employees stop here",LF
+	dc.b	"for snacks often,    ^",FF
+	dc.b	"so I hear a lot of",LF
+	dc.b	"rumors.              ^",FF
+	dc.b	"You're asking around",LF
+	dc.b	"about something right?",ETX
+	align 2
+StoryTextDay02NShackLine7:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"I'm not. Lisa wants",LF
+	dc.b	"to know who sent this^",FF
+	dc.b	"letter.",LF
+	dc.b	"I don't care.        ^",FF
+	dc.b	"I think it's a prank.",ETX
+	align 2
+StoryTextDay02NShackLine8:
+	dc.w	OBJ_NPC_JEN
+	dc.b	"Maybe. Who could",LF
+	dc.b	"really know the      ^",FF
+	dc.b	"future anyway?",LF
+	dc.b	"Still, it could be   ^",FF
+	dc.b	"someone who cares",LF
+	dc.b	"about her.           ^",FF
+	dc.b	"Denim on denim won't",LF
+	dc.b	"be fashionable       ^",FF
+	dc.b	"forvever.",LF
+	dc.b	"Have I seen you      ^",FF
+	dc.b	"waiting in the",LF
+	dc.b	"hallway at night?",ETX
+	align 2
+StoryTextDay02NShackLine9:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"Yeah, I don't have a",LF
+	dc.b	"car yet.",ETX
+	align 2
+StoryTextDay02NShackLine10:
+	dc.w	OBJ_NPC_JEN
+	dc.b	"You can wait here",LF
+	dc.b	"instead.             ^",FF
+	dc.b	"There are some real",LF
+	dc.b	"odd types hanging    ^",FF
+	dc.b	"around after close",LF
+	dc.b	"lately.",ETX
+	align 2
+StoryTextDay02NShackLine11:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"Thanks for the offer.",ETX
+	align 2
+StoryTextNight02TBooksLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"(I'm done early",LF
+	dc.b	"tonight)             ^",FF
+	dc.b	"(I should check-in",LF
+	dc.b	"with some friends)   ^",FF
+	dc.b	"(Who haven't I seen",LF
+	dc.b	"in a while?)",ETX
 	align 2
 StoryTextDay02SVideoChoice:
 	dc.w	OBJ_NPC_NICKY
-	dc.b	"Do this event or",LF
-	dc.b	"whatever?            ^",FFR
-	dc.b	"{ Sure               ",LF
+	dc.b	"Can you watch the",LF
+	dc.b	"store for a minute?  ^",FFR
+	dc.b	"{ How hard can it be?",LF
 	dc.b	"{ Maybe later",ETX
 	align 2
 StoryTextDay02SVideoChoice0:
 	dc.w	OBJ_NPC_NICKY
-	dc.b	"choice 0",ETX
+	dc.b	"Thanks, I'm just",LF
+	dc.b	"grabbing a snack.",ETX
 	align 2
 StoryTextDay02SVideoChoice1:
 	dc.w	OBJ_NPC_NICKY
-	dc.b	"choice 1",ETX
+	dc.b	"If you can help that",LF
+	dc.b	"would be great.",ETX
 	align 2
 StoryTextDay02SVideoLine1:
-	dc.w	OBJ_NPC_ERYN
-	dc.b	"line1.",ETX
+	dc.w	OBJ_NPC_LOSTGUY
+	dc.b	"Hey. Is this the",LF
+	dc.b	"video store?",ETX
 	align 2
 StoryTextDay02SVideoLine2:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"...|Yes.",ETX
+	align 2
+StoryTextDay02SVideoLine3:
+	dc.w	OBJ_NPC_LOSTGUY
+	dc.b	"Cool, thanks.",ETX
+	align 2
+StoryTextDay02SVideoLine4:
+	dc.w	OBJ_NPC_SHOPPER
+	dc.b	"Did this store used",LF
+	dc.b	"to be something else?",ETX
+	align 2
+StoryTextDay02SVideoLine5:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"Everything used to be",LF
+	dc.b	"something else.",ETX
+	align 2
+StoryTextDay02SVideoLine6:
+	dc.w	OBJ_NPC_SHOPPER
+	dc.b	"Huh, yeah, I guess.",LF
+	dc.b	"Thanks.",ETX
+	align 2
+StoryTextDay02SVideoLine7:
+	dc.w	OBJ_NPC_ROCKER
+	dc.b	"Do you have a",LF
+	dc.b	"military discount?",ETX
+	align 2
+StoryTextDay02SVideoLine8:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"Are you in the",LF
+	dc.b	"military?",ETX
+	align 2
+StoryTextDay02SVideoLine9:
+	dc.w	OBJ_NPC_ROCKER
+	dc.b	"No.",ETX
+	align 2
+StoryTextDay02SVideoLine10:
 	dc.w	OBJ_NPC_NICKY
-	dc.b	"line2.",ETX
+	dc.b	"How'd it go?",ETX
+	align 2
+StoryTextDay02SVideoLine11:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"Boring.",ETX
+	align 2
+StoryTextDay02SVideoLine12:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"That's a relief.",LF
+	dc.b	"I thought you'd get  ^",FF
+	dc.b	"the usual dumb",LF
+	dc.b	"customers.           ^",FF
+	dc.b	"Thanks again.",ETX
 	align 2
 StoryTextDay02FCBCampingChoice:
 	dc.w	OBJ_NPC_GRANT
-	dc.b	"Do this event or",LF
-	dc.b	"whatever?            ^",FFR
-	dc.b	"{ Sure               ",LF
+	dc.b	"Got time for a quick",LF
+	dc.b	"memory?              ^",FFR
+	dc.b	"{ OK                 ",LF
 	dc.b	"{ Maybe later",ETX
 	align 2
 StoryTextDay02FCBCampingChoice0:
 	dc.w	OBJ_NPC_GRANT
-	dc.b	"choice 0",ETX
+	dc.b	"The summer after",LF
+	dc.b	"graduation, our group^",FF
+	dc.b	"drove up north to go",LF
+	dc.b	"camping.             ^",FF
+	dc.b	"Your mom was so",LF
+	dc.b	"excited.             ^",FF
+	dc.b	"She packed a ton of",LF
+	dc.b	"food & grilling      ^",FF
+	dc.b	"supplies.",LF
+	dc.b	"It rained all weekend^",FF
+	dc.b	"though.",LF
+	dc.b	"We ended up eating at^",FF
+	dc.b	"a dumpy small town",LF
+	dc.b	"pizza place.         ^",FF
+	dc.b	"Luckily she also",LF
+	dc.b	"packed extra         ^",FF
+	dc.b	"blankets,",LF
+	dc.b	"it was so cold at    ^",FF
+	dc.b	"night.",ETX
 	align 2
 StoryTextDay02FCBCampingChoice1:
 	dc.w	OBJ_NPC_GRANT
-	dc.b	"choice 1",ETX
+	dc.b	"Sure, whenever you're",LF
+	dc.b	"free.",ETX
 	align 2
 StoryTextDay02FCBCampingLine1:
 	dc.w	OBJ_NPC_ERYN
-	dc.b	"line1.",ETX
+	dc.b	"That sounds like her.",ETX
 	align 2
 StoryTextDay02FCBCampingLine2:
 	dc.w	OBJ_NPC_GRANT
-	dc.b	"line2.",ETX
+	dc.b	"It was a good time",LF
+	dc.b	"though.              ^",FF
+	dc.b	"When you're with good",LF
+	dc.b	"friends even a bad   ^",FF
+	dc.b	"situation turns out",LF
+	dc.b	"alright.",ETX
 	align 2
 StoryTextNight02FCBCampingLine1:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"What brings you by so",LF
+	dc.b	"late?",ETX
 	align 2
 StoryTextNight02FCBCampingLine2:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"Nothing really.",LF
+	dc.b	"Just seeing how      ^",FF
+	dc.b	"things are going.",ETX
+	align 2
+StoryTextNight02FCBCampingLine3:
 	dc.w	OBJ_NPC_GRANT
-	dc.b	"line2.",ETX
+	dc.b	"That's good.",LF
+	dc.b	"I thought you might  ^",FF
+	dc.b	"be sneaking into a",LF
+	dc.b	"tent for the night.",ETX
+	align 2
+StoryTextNight02FCBCampingLine4:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"No, no.",LF
+	dc.b	"Wait.                ^",FF
+	dc.b	"Has that happened?",ETX
+	align 2
+StoryTextNight02FCBCampingLine5:
+	dc.w	OBJ_NPC_GRANT
+	dc.b	"Not recently but last",LF
+	dc.b	"year.                ^",FF
+	dc.b	"An ex employee was",LF
+	dc.b	"living here at night.^",FF
+	dc.b	"He got away with it",LF
+	dc.b	"for over a month.    ^",FF
+	dc.b	"I wait here until",LF
+	dc.b	"it's time to lock up.^",FF
+	dc.b	"In case someone else",LF
+	dc.b	"gets that idea.",ETX
+	align 2
+StoryTextNight02FCBCampingLine6:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"Someone living in the",LF
+	dc.b	"mall...              ^",FF
+	dc.b	"Trying to find a",LF
+	dc.b	"place to sleep every ^",FF
+	dc.b	"night.",LF
+	dc.b	"It's sad to think    ^",FF
+	dc.b	"about.",LF
+	dc.b	"(I wonder if it's    ^",FF
+	dc.b	"happening again.)",ETX
 	align 2
 StoryTextNight02NShackLine1:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"Is this one of the",LF
+	dc.b	"after hours people   ^",FF
+	dc.b	"you warned me about?",ETX
 	align 2
 StoryTextNight02NShackLine2:
 	dc.w	OBJ_NPC_JEN
-	dc.b	"line2.",ETX
+	dc.b	"Yeah, watch out for",LF
+	dc.b	"this guy.",ETX
+	align 2
+StoryTextNight02NShackLine3:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"Please don't",LF
+	dc.b	"encourage her.",ETX
+	align 2
+StoryTextNight02NShackLine4:
+	dc.w	OBJ_NPC_JEN
+	dc.b	"You know I'm kidding.",LF
+	dc.b	"Carl here is         ^",FF
+	dc.b	"harmless.",LF
+	dc.b	"He even helped me    ^",FF
+	dc.b	"deal with some",LF
+	dc.b	"expired products.",ETX
+	align 2
+StoryTextNight02NShackLine5:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"I don't know if my",LF
+	dc.b	"back will ever       ^",FF
+	dc.b	"recover.",LF
+	dc.b	"Are you on break?",ETX
+	align 2
+StoryTextNight02NShackLine6:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"I'm loitering until",LF
+	dc.b	"my ride comes.",ETX
+	align 2
+StoryTextNight02NShackLine7:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"This is a popular",LF
+	dc.b	"spot for that.       ^",FF
+	dc.b	"I'll probably see you",LF
+	dc.b	"here again then.",ETX
 	align 2
 StoryTextNight02WWHallLine1:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
+	dc.w	OBJ_NPC_VICTOR
+	dc.b	"Finally taking off",LF
+	dc.b	"for the night?",ETX
 	align 2
 StoryTextNight02WWHallLine2:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"Yeah. And why are you",LF
+	dc.b	"here after close?",ETX
+	align 2
+StoryTextNight02WWHallLine3:
 	dc.w	OBJ_NPC_VICTOR
-	dc.b	"line2.",ETX
+	dc.b	"Same reason as you.",LF
+	dc.b	"Where else do I have ^",FF
+	dc.b	"to be?",ETX
 	align 2
 StoryTextNight02CNowLine1:
 	dc.w	OBJ_NPC_VICTOR
-	dc.b	"line1.",ETX
+	dc.b	"Just look at this",LF
+	dc.b	"place.               ^",FF
+	dc.b	"Remember when it",LF
+	dc.b	"was...               ^",FF
+	dc.b	"What was it called",LF
+	dc.b	"again?",ETX
 	align 2
 StoryTextNight02CNowLine2:
+	dc.w	OBJ_NPC_BECKY
+	dc.b	"We're closed.",LF
+	dc.b	"You need to leave.",ETX
+	align 2
+StoryTextNight02CNowLine3:
 	dc.w	OBJ_NPC_VICTOR
-	dc.b	"line2.",ETX
+	dc.b	"C'mon, it's not like",LF
+	dc.b	"I'm here to rob the  ^",FF
+	dc.b	"place.",ETX
 	align 2
 StoryTextNight02VisionLine1:
 	dc.w	OBJ_NPC_CARL
@@ -2563,192 +3640,562 @@ StoryTextNight02VisionLine2:
 	align 2
 StoryTextNight02VBChoice:
 	dc.w	OBJ_NPC_GRUNBERG
-	dc.b	"Do this event or",LF
-	dc.b	"whatever?            ^",FFR
-	dc.b	"{ Sure               ",LF
+	dc.b	"Stopping by to talk?",LF
+	dc.b	"{ That's right       ^",FFR
 	dc.b	"{ Maybe later",ETX
 	align 2
 StoryTextNight02VBChoice0:
 	dc.w	OBJ_NPC_GRUNBERG
-	dc.b	"choice 0",ETX
+	dc.b	"I'm waiting for the",LF
+	dc.b	"register to finish   ^",FF
+	dc.b	"doing its thing.",ETX
 	align 2
 StoryTextNight02VBChoice1:
 	dc.w	OBJ_NPC_GRUNBERG
-	dc.b	"choice 1",ETX
+	dc.b	"No problem.",ETX
 	align 2
 StoryTextNight02VBLine1:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
+	dc.b	"Is it always slow?",ETX
 	align 2
 StoryTextNight02VBLine2:
 	dc.w	OBJ_NPC_GRUNBERG
-	dc.b	"line2.",ETX
+	dc.b	"Always. The computer",LF
+	dc.b	"it runs on is        ^",FF
+	dc.b	"ancient.",LF
+	dc.b	"And that's coming    ^",FF
+	dc.b	"from me.",LF
+	dc.b	"I haven't sold       ^",FF
+	dc.b	"Tandy's for 2 years",LF
+	dc.b	"but even those were  ^",FF
+	dc.b	"newer.",LF
+	dc.b	"This is a modified   ^",FF
+	dc.b	"C128.",LF
+	dc.b	"The real problem is  ^",FF
+	dc.b	"the modem.",LF
+	dc.b	"300 baud, it takes   ^",FF
+	dc.b	"forever.",ETX
+	align 2
+StoryTextNight02VBLine3:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"I don't know what any",LF
+	dc.b	"of that means.       ^",FF
+	dc.b	"I'll take your word",LF
+	dc.b	"for it.",ETX
+	align 2
+StoryTextNight02VBLine4:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"I know it sounds",LF
+	dc.b	"complicated.         ^",FF
+	dc.b	"Thanks for listening.",ETX
 	align 2
 StoryTextNight02CPlanetChoice:
 	dc.w	OBJ_NPC_ELIZA
-	dc.b	"Do this event or",LF
-	dc.b	"whatever?            ^",FFR
-	dc.b	"{ Sure               ",LF
+	dc.b	"I think I figured it",LF
+	dc.b	"out...               ^",FFR
+	dc.b	"{ Figured what out?  ",LF
 	dc.b	"{ Maybe later",ETX
 	align 2
 StoryTextNight02CPlanetChoice0:
 	dc.w	OBJ_NPC_ELIZA
-	dc.b	"choice 0",ETX
+	dc.b	"How to find out what",LF
+	dc.b	"kind of music you    ^",FF
+	dc.b	"like.",ETX
 	align 2
 StoryTextNight02CPlanetChoice1:
 	dc.w	OBJ_NPC_ELIZA
-	dc.b	"choice 1",ETX
+	dc.b	"Come back when you're",LF
+	dc.b	"free.",ETX
 	align 2
 StoryTextNight02CPlanetLine1:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
+	dc.b	"You're still at this?",ETX
 	align 2
 StoryTextNight02CPlanetLine2:
 	dc.w	OBJ_NPC_ELIZA
-	dc.b	"line2.",ETX
+	dc.b	"That's right. I have",LF
+	dc.b	"a quiz this time.    ^",FF
+	dc.b	"Question #1: what is",LF
+	dc.b	"your favorite color?",ETX
+	align 2
+StoryTextNight02CPlanetLine3:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"I don't know.|Beige?",ETX
+	align 2
+StoryTextNight02CPlanetLine4:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"Seriously?",LF
+	dc.b	"OK, next..           ^",FF
+	dc.b	"If you were a dog,",LF
+	dc.b	"what breed would you ^",FF
+	dc.b	"be?",ETX
+	align 2
+StoryTextNight02CPlanetLine5:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"Um.",LF
+	dc.b	"The retrieving kind?",ETX
+	align 2
+StoryTextNight02CPlanetLine6:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"At a party do want to",LF
+	dc.b	"be the center of     ^",FF
+	dc.b	"attention?",ETX
+	align 2
+StoryTextNight02CPlanetLine7:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"I don't remember",LF
+	dc.b	"going to one.",ETX
+	align 2
+StoryTextNight02CPlanetLine8:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"Would you rather live",LF
+	dc.b	"in the city or       ^",FF
+	dc.b	"country?",ETX
+	align 2
+StoryTextNight02CPlanetLine9:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"Whever the bookstore",LF
+	dc.b	"is.",ETX
+	align 2
+StoryTextNight02CPlanetLine10:
+	dc.w	OBJ_NPC_ELIZA
+	dc.b	"Alright, this says",LF
+	dc.b	"'City Pop'.          ^",FF
+	dc.b	"That can't be right.",ETX
+	align 2
+StoryTextNight02CPlanetLine11:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"I've never heard of",LF
+	dc.b	"it.                  ^",FF
+	dc.b	"Thanks for trying I",LF
+	dc.b	"guess.",ETX
 	align 2
 StoryTextDay03DenimCountryLine1:
-	dc.w	OBJ_NPC_ERYN
-	dc.b	"line1.",ETX
+	dc.w	OBJ_NPC_LISA
+	dc.b	"Alright, no one would",LF
+	dc.b	"fess up to sending me^",FF
+	dc.b	"that letter.",ETX
 	align 2
 StoryTextDay03DenimCountryLine2:
 	dc.w	OBJ_NPC_LISA
-	dc.b	"line2.",ETX
+	dc.b	"I didn't go to the",LF
+	dc.b	"so-called food court.^",FF
+	dc.b	"I can't even set foot",LF
+	dc.b	"in PogoDawg.         ^",FF
+	dc.b	"It's too gross in",LF
+	dc.b	"there.               ^",FF
+	dc.b	"Can you go for me?",ETX
+	align 2
+StoryTextDay03DenimCountryLine3:
+	dc.w	OBJ_NPC_LISA
+	dc.b	"Thanks.",ETX
 	align 2
 StoryTextDay03DenimCountryInprogress:
 	dc.w	OBJ_NPC_LISA
-	dc.b	"line2.",ETX
+	dc.b	"Let me know what the",LF
+	dc.b	"guy at PogoDawg says.^",FF
+	dc.b	"(If he says anything",LF
+	dc.b	"coherent)",ETX
 	align 2
 StoryTextDay03DenimCountry2Line1:
-	dc.w	OBJ_NPC_ERYN
-	dc.b	"line1.",ETX
+	dc.w	OBJ_NPC_LISA
+	dc.b	"What took so long?",ETX
 	align 2
 StoryTextDay03DenimCountry2Line2:
 	dc.w	OBJ_NPC_LISA
-	dc.b	"line2.",ETX
+	dc.b	"I assume he wasn't",LF
+	dc.b	"any help then.       ^",FF
+	dc.b	"Sorry if I wasted",LF
+	dc.b	"your time.           ^",FF
+	dc.b	"I don't know what to",LF
+	dc.b	"make of this.        ^",FF
+	dc.b	"Either someone is",LF
+	dc.b	"lying to me,         ^",FF
+	dc.b	"or that letter came",LF
+	dc.b	"from someone I didn't^",FF
+	dc.b	"talk to.",ETX
 	align 2
 StoryTextDay03PogoDawgLine1:
 	dc.w	OBJ_NPC_ERYN
-	dc.b	"line1.",ETX
+	dc.b	"Hi. Did you send this",LF
+	dc.b	"letter?",ETX
 	align 2
 StoryTextDay03PogoDawgLine2:
 	dc.w	OBJ_NPC_GRIFFY
-	dc.b	"line2.",ETX
+	dc.b	"Huh?",LF
+	dc.b	"Woah.                ^",FF
+	dc.b	"Uh, can I take your,",LF
+	dc.b	"um, order?",ETX
+	align 2
+StoryTextDay03PogoDawgLine3:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"L-E-T-T-E-R.",LF
+	dc.b	"Did you send it?",ETX
+	align 2
+StoryTextDay03PogoDawgLine4:
+	dc.w	OBJ_NPC_GRIFFY
+	dc.b	"Uh. For here or, ah,",LF
+	dc.b	"what is it called?   ^",FF
+	dc.b	"For delivery?",ETX
+	align 2
+StoryTextDay03PogoDawgLine5:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"You deliver now?",ETX
+	align 2
+StoryTextDay03PogoDawgLine6:
+	dc.w	OBJ_NPC_GRIFFY
+	dc.b	"Are you the... ",LF
+	dc.b	"where was I?         ^",FF
+	dc.b	"Right, the new",LF
+	dc.b	"delivery girl?",ETX
+	align 2
+StoryTextDay03PogoDawgLine7:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"That's not what I",LF
+	dc.b	"said.",ETX
+	align 2
+StoryTextDay03PogoDawgLine8:
+	dc.w	OBJ_NPC_GRIFFY
+	dc.b	"OK. There are 1, no,",LF
+	dc.b	"wait, um..           ^",FF
+	dc.b	"No, 2 orders. Is",LF
+	dc.b	"that.. yeah 2.",ETX
+	align 2
+StoryTextDay03PogoDawgLine9:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"These bags here?",LF
+	dc.b	"There aren't names on^",FF
+	dc.b	"them.",LF
+	dc.b	"Just these crude     ^",FF
+	dc.b	"pictures.",LF
+	dc.b	"4 squares on one, a  ^",FF
+	dc.b	"dress (maybe) on the",LF
+	dc.b	"other.",ETX
+	align 2
+StoryTextDay03PogoDawgLine10:
+	dc.w	OBJ_NPC_GRIFFY
+	dc.b	"Yeah, that's, uh...",LF
+	dc.b	"...                  ^",FF
+	dc.b	"Where they, you know,",LF
+	dc.b	"go.",ETX
+	align 2
+StoryTextDay03PogoDawgLine11:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"If I deliver these",LF
+	dc.b	"will you answer my   ^",FF
+	dc.b	"question?",ETX
 	align 2
 StoryTextDay03PogoDawgInprogress:
 	dc.w	OBJ_NPC_GRIFFY
-	dc.b	"still in progress",LF
-	dc.b	"message",ETX
+	dc.b	"Uh, we'll talk when",LF
+	dc.b	"you are, what, yeah, ^",FF
+	dc.b	"done.",ETX
 	align 2
 StoryTextDay03CheckersLine1:
 	dc.w	OBJ_NPC_ERYN
-	dc.b	"line1.",ETX
+	dc.b	"I think this is for",LF
+	dc.b	"you.",ETX
 	align 2
 StoryTextDay03CheckersLine2:
 	dc.w	OBJ_NPC_TODD
-	dc.b	"line2.",ETX
+	dc.b	"I thought you worked",LF
+	dc.b	"with Lisa?",ETX
+	align 2
+StoryTextDay03CheckersLine3:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"This is a vital part",LF
+	dc.b	"of the job.",ETX
+	align 2
+StoryTextDay03CheckersLine4:
+	dc.w	OBJ_NPC_TODD
+	dc.b	"I don't get it, but",LF
+	dc.b	"OK.                  ^",FF
+	dc.b	"Hey, did she mention",LF
+	dc.b	"my new years party?  ^",FF
+	dc.b	"She hasn't said if",LF
+	dc.b	"she's coming.",ETX
+	align 2
+StoryTextDay03CheckersLine5:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"Leave me out of it.",ETX
 	align 2
 StoryTextDay03CNowLine1:
-	dc.w	OBJ_NPC_ERYN
-	dc.b	"line1.",ETX
+	dc.w	OBJ_NPC_BECKY
+	dc.b	"It is, thanks. I'm",LF
+	dc.b	"stuck here alone     ^",FF
+	dc.b	"today.",LF
+	dc.b	"Care to join me for  ^",FF
+	dc.b	"lunch?",ETX
 	align 2
 StoryTextDay03CNowLine2:
-	dc.w	OBJ_NPC_BECKY
-	dc.b	"line2.",ETX
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"No. I'm doing",LF
+	dc.b	"something important.",ETX
 	align 2
 StoryTextDay03SouthHallLine1:
-	dc.w	OBJ_NPC_ERYN
-	dc.b	"line1.",ETX
+	dc.w	OBJ_NPC_BASE
+	dc.b	"Hey. I don't suppose",LF
+	dc.b	"you have an extra    ^",FF
+	dc.b	"order?",ETX
 	align 2
 StoryTextDay03SouthHallLine2:
-	dc.w	OBJ_NPC_BRETT
-	dc.b	"line2.",ETX
+	dc.w	OBJ_NPC_BASE
+	dc.b	"Sorry. Nevermind",ETX
 	align 2
 StoryTextDay03PogoDawg2Line1:
 	dc.w	OBJ_NPC_ERYN
-	dc.b	"line1.",ETX
+	dc.b	"I determined you",LF
+	dc.b	"didn't write this    ^",FF
+	dc.b	"letter",LF
+	dc.b	"because I don't think^",FF
+	dc.b	"you can read or write.",ETX
 	align 2
 StoryTextDay03PogoDawg2Line2:
 	dc.w	OBJ_NPC_GRIFFY
-	dc.b	"line2.",ETX
+	dc.b	"That's, uh, mean. No,",LF
+	dc.b	"I mean, um, right.",ETX
 	align 2
 StoryTextDay03CavernChoice:
 	dc.w	OBJ_NPC_DB
-	dc.b	"Do this event or",LF
-	dc.b	"whatever?            ^",FFR
+	dc.b	"Want to test",LF
+	dc.b	"something?           ^",FFR
 	dc.b	"{ Sure               ",LF
 	dc.b	"{ Maybe later",ETX
 	align 2
 StoryTextDay03CavernChoice0:
 	dc.w	OBJ_NPC_DB
-	dc.b	"choice 0",ETX
+	dc.b	"All these games have",LF
+	dc.b	"difficulty settings. ^",FF
+	dc.b	"You have to find the",LF
+	dc.b	"right balance.       ^",FF
+	dc.b	"See if this one is",LF
+	dc.b	"too hard.",ETX
 	align 2
 StoryTextDay03CavernChoice1:
 	dc.w	OBJ_NPC_DB
-	dc.b	"choice 1",ETX
+	dc.b	"It's alright.",ETX
 	align 2
 StoryTextDay03CavernLine1:
 	dc.w	OBJ_NPC_ERYN
-	dc.b	"line1.",ETX
+	dc.b	"Kind of, maybe if I",LF
+	dc.b	"practiced.",ETX
 	align 2
 StoryTextDay03CavernLine2:
 	dc.w	OBJ_NPC_DB
-	dc.b	"line2.",ETX
+	dc.b	"You shouldn't have to",LF
+	dc.b	"though.              ^",FF
+	dc.b	"I'll turn it back",LF
+	dc.b	"down.",ETX
+	align 2
+StoryTextDay03CavernLine3:
+	dc.w	OBJ_NPC_DB
+	dc.b	"How about this one?",ETX
+	align 2
+StoryTextDay03CavernLine4:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"It's pretty easy.",ETX
+	align 2
+StoryTextDay03CavernLine5:
+	dc.w	OBJ_NPC_DB
+	dc.b	"That's bad too.",LF
+	dc.b	"One person could play^",FF
+	dc.b	"it forever.",LF
+	dc.b	"That's fine for a    ^",FF
+	dc.b	"home game.",LF
+	dc.b	"I have to break even ^",FF
+	dc.b	"here.",LF
+	dc.b	"Anyway, that's all   ^",FF
+	dc.b	"for today.",LF
+	dc.b	"Thanks for helping.",ETX
 	align 2
 StoryTextDay03SVideoChoice:
 	dc.w	OBJ_NPC_NICKY
-	dc.b	"Do this event or",LF
-	dc.b	"whatever?            ^",FFR
-	dc.b	"{ Sure               ",LF
-	dc.b	"{ Maybe later",ETX
+	dc.b	"Are you good at math?",LF
+	dc.b	"{ I'm OK             ^",FFR
+	dc.b	"{ Never heard of it",ETX
 	align 2
 StoryTextDay03SVideoChoice0:
 	dc.w	OBJ_NPC_NICKY
-	dc.b	"choice 0",ETX
+	dc.b	"I have a final",LF
+	dc.b	"tomorrow.            ^",FF
+	dc.b	"I'm stuck on this",LF
+	dc.b	"graph.               ^",FF
+	dc.b	"How can I prove",LF
+	dc.b	"whether this graph is^",FF
+	dc.b	"a tree?",ETX
 	align 2
 StoryTextDay03SVideoChoice1:
 	dc.w	OBJ_NPC_NICKY
-	dc.b	"choice 1",ETX
+	dc.b	"Very funny.",LF
+	dc.b	"Maybe later?",ETX
 	align 2
 StoryTextDay03SVideoLine1:
 	dc.w	OBJ_NPC_ERYN
-	dc.b	"line1.",ETX
+	dc.b	"You could disprove it",LF
+	dc.b	"quickly by proving   ^",FF
+	dc.b	"the graph contains a",LF
+	dc.b	"circuit.",ETX
 	align 2
 StoryTextDay03SVideoLine2:
 	dc.w	OBJ_NPC_NICKY
-	dc.b	"line2.",ETX
+	dc.b	"Of course, that's so",LF
+	dc.b	"simple.",ETX
+	align 2
+StoryTextDay03SVideoLine3:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"It's just memorizing",LF
+	dc.b	"a rule.",ETX
+	align 2
+StoryTextDay03SVideoLine4:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"Thanks, I think I can",LF
+	dc.b	"get the rest of these^",FF
+	dc.b	"now.",ETX
 	align 2
 StoryTextNight03TBooksLine1:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
-	align 2
-StoryTextNight03TBooksLine2:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.b	"(Maybe I am losing",LF
+	dc.b	"it)                  ^",FF
+	dc.b	"(I keep seeing that",LF
+	dc.b	"guy in a suit)       ^",FF
+	dc.b	"(He knows me but I",LF
+	dc.b	"don't know him)      ^",FF
+	dc.b	"(Is he even real?)",LF
+	dc.b	"(I should revist     ^",FF
+	dc.b	"where he went)",ETX
 	align 2
 StoryTextNight03TLodgeLine1:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
+	dc.b	"Has a guy in a suit",LF
+	dc.b	"been by here?        ^",FF
+	dc.b	"After closing I mean.",ETX
 	align 2
 StoryTextNight03TLodgeLine2:
 	dc.w	OBJ_NPC_SCOTT
-	dc.b	"line2.",ETX
+	dc.b	"I forgot to lock up &",LF
+	dc.b	"someone like that    ^",FF
+	dc.b	"came in.",LF
+	dc.b	"It was a while ago.",ETX
+	align 2
+StoryTextNight03TLodgeLine3:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"What did he say?",ETX
+	align 2
+StoryTextNight03TLodgeLine4:
+	dc.w	OBJ_NPC_SCOTT
+	dc.b	"He made fun of our",LF
+	dc.b	"store and left.      ^",FF
+	dc.b	"Said he didn't know",LF
+	dc.b	"how we were still    ^",FF
+	dc.b	"open.|What a jerk.",ETX
+	align 2
+StoryTextNight03TLodgeAltLine1:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"Last month some guy",LF
+	dc.b	"in a suit was here.  ^",FF
+	dc.b	"It was after closing.",LF
+	dc.b	"Do you remember?",ETX
+	align 2
+StoryTextNight03TLodgeAltLine2:
+	dc.w	OBJ_NPC_SCOTT
+	dc.b	"I remember. I forgot",LF
+	dc.b	"to lock the gate.    ^",FF
+	dc.b	"He was all rude about",LF
+	dc.b	"my store.",ETX
+	align 2
+StoryTextNight03TLodgeAltLine3:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"I remember that too.",ETX
+	align 2
+StoryTextNight03TLodgeAltLine4:
+	dc.w	OBJ_NPC_SCOTT
+	dc.b	"I remember he talked",LF
+	dc.b	"to you.              ^",FF
+	dc.b	"I thought you were",LF
+	dc.b	"friends.",ETX
+	align 2
+StoryTextNight03TLodgeAltLine5:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"Defininely not",LF
+	dc.b	"friends.             ^",FF
+	dc.b	"I can't get over",LF
+	dc.b	"something he said.   ^",FF
+	dc.b	"That he was surprised",LF
+	dc.b	"you were still open.",ETX
+	align 2
+StoryTextNight03TLodgeAltLine6:
+	dc.w	OBJ_NPC_SCOTT
+	dc.b	"I know, business is",LF
+	dc.b	"great this year.     ^",FF
+	dc.b	"I don't know what he",LF
+	dc.b	"meant by that.       ^",FF
+	dc.b	"Maybe he's just a",LF
+	dc.b	"jerk.",ETX
 	align 2
 StoryTextNight03CNowLine1:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
+	dc.b	"Did a guy in a suit",LF
+	dc.b	"come here after      ^",FF
+	dc.b	"close?",LF
+	dc.b	"About two weeks ago.",ETX
 	align 2
 StoryTextNight03CNowLine2:
 	dc.w	OBJ_NPC_BECKY
-	dc.b	"line2.",ETX
+	dc.b	"Yeah, he just barged",LF
+	dc.b	"right in.            ^",FF
+	dc.b	"I thought he was a",LF
+	dc.b	"robber.              ^",FF
+	dc.b	"I was so scared.",LF
+	dc.b	"He just made fun of  ^",FF
+	dc.b	"the store & left.",ETX
+	align 2
+StoryTextNight03CNowLine3:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"He didn't say why he",LF
+	dc.b	"was there?",ETX
+	align 2
+StoryTextNight03CNowLine4:
+	dc.w	OBJ_NPC_BECKY
+	dc.b	"No, he just made rude",LF
+	dc.b	"comments and left.   ^",FF
+	dc.b	"Who does that?",ETX
 	align 2
 StoryTextNight03CNowAltLine1:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
+	dc.b	"About two weeks ago,",LF
+	dc.b	"do you remember? The ^",FF
+	dc.b	"guy in the suit who",LF
+	dc.b	"was here after close?",ETX
 	align 2
 StoryTextNight03CNowAltLine2:
 	dc.w	OBJ_NPC_BECKY
-	dc.b	"line2.",ETX
+	dc.b	"I can't forget it.",LF
+	dc.b	"I didn't thank you   ^",FF
+	dc.b	"for showing up when",LF
+	dc.b	"you did.             ^",FF
+	dc.b	"I thought he was",LF
+	dc.b	"there to rob us.     ^",FF
+	dc.b	"You must have scared",LF
+	dc.b	"him away.",ETX
+	align 2
+StoryTextNight03CNowAltLine3:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"I don't think so.",LF
+	dc.b	"He talked like he    ^",FF
+	dc.b	"knew me.",ETX
+	align 2
+StoryTextNight03CNowAltLine4:
+	dc.w	OBJ_NPC_BECKY
+	dc.b	"I thought he was a",LF
+	dc.b	"customer of yours.   ^",FF
+	dc.b	"You really never saw",LF
+	dc.b	"him before?",ETX
+	align 2
+StoryTextNight03CNowAltLine5:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"No. I mean, kind of.",LF
+	dc.b	"I've seen him before.^",FF
+	dc.b	"But I don't know him.",ETX
 	align 2
 StoryTextNight03CantEnterNShack:
 	dc.w	OBJ_NPC_CARL
@@ -2756,12 +4203,73 @@ StoryTextNight03CantEnterNShack:
 	dc.b	"finish first.",ETX
 	align 2
 StoryTextNight03NShackLine1:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
+	dc.w	OBJ_NPC_JEN
+	dc.b	"You're late. Just",LF
+	dc.b	"like Eryn's ride.",ETX
 	align 2
 StoryTextNight03NShackLine2:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"I'm sorry. I was",LF
+	dc.b	"looking into         ^",FF
+	dc.b	"something.",LF
+	dc.b	"Has a rude guy in a  ^",FF
+	dc.b	"suit been to your",LF
+	dc.b	"stores?",ETX
+	align 2
+StoryTextNight03NShackLine3:
 	dc.w	OBJ_NPC_JEN
-	dc.b	"line2.",ETX
+	dc.b	"I've had rude guys,",LF
+	dc.b	"and guys in suits.   ^",FF
+	dc.b	"Not both at the same",LF
+	dc.b	"time.",ETX
+	align 2
+StoryTextNight03NShackLine4:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"Guys in suits aren't",LF
+	dc.b	"our demographic.",ETX
+	align 2
+StoryTextNight03NShackLine5:
+	dc.w	OBJ_NPC_JEN
+	dc.b	"Why do you care about",LF
+	dc.b	"this rude guy in a   ^",FF
+	dc.b	"suit?",ETX
+	align 2
+StoryTextNight03NShackLine6:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"I keep running into",LF
+	dc.b	"him.                 ^",FF
+	dc.b	"And he knows my name,",LF
+	dc.b	"acts like we're      ^",FF
+	dc.b	"acquanted.",ETX
+	align 2
+StoryTextNight03NShackLine7:
+	dc.w	OBJ_NPC_JEN
+	dc.b	"He's probably just a",LF
+	dc.b	"customer.            ^",FF
+	dc.b	"You talk to a dozen",LF
+	dc.b	"people a day.        ^",FF
+	dc.b	"You can't remember",LF
+	dc.b	"all their names.",ETX
+	align 2
+StoryTextNight03NShackLine8:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"That's probably it.",LF
+	dc.b	"Thanks.              ^",FF
+	dc.b	"I'm working open to",LF
+	dc.b	"close every day.     ^",FF
+	dc.b	"Maybe I'm exhausted.",ETX
+	align 2
+StoryTextNight03NShackLine9:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"Yeah, go to that",LF
+	dc.b	"hotel room you told  ^",FF
+	dc.b	"me about.",ETX
+	align 2
+StoryTextNight03NShackLine10:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"You are never going",LF
+	dc.b	"to let me forget that^",FF
+	dc.b	"are you...",ETX
 	align 2
 StoryTextNight03WWAppliancesChoice:
 	dc.w	OBJ_NPC_LAURA
@@ -3284,28 +4792,16 @@ StoryTextEndPerfectLine2:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"line2.",ETX
 	align 2
-StoryTextTradingSequenceInfoDek:
-	dc.w	OBJ_NPC_GINA
-	dc.b	"whatever",ETX
-	align 2
-StoryTextTradingSequenceSVideo:
-	dc.w	OBJ_NPC_NICKY
-	dc.b	"Thanks! I'm new in",LF
-	dc.b	"town and it's kinda  ^",FF
-	dc.b	"boring. I hope I find",LF
-	dc.b	"something fun to do. ^",FF
-	dc.b	"It's not much, but",LF
-	dc.b	"have a free VHS tape.^",FF
-	dc.b	"Sorry if it's not",LF
-	dc.b	"your thing.",ETX
-	align 2
 StoryTextTradingSequenceFCBFishing:
 	dc.w	OBJ_NPC_HEATHER
 	dc.b	"Hey, that looks like",LF
 	dc.b	"the scarf I lost last^",FF
 	dc.b	"month.",LF
-	dc.b	"Here, take this other^",FF
-	dc.b	"thing.",ETX
+	dc.b	"I'll give you these  ^",FF
+	dc.b	"pocket handwarmers in",LF
+	dc.b	"exchange.            ^",FF
+	dc.b	"Be careful with them",LF
+	dc.b	"though.",ETX
 	align 2
 StoryTextTradingSequenceFCBFishingAfter:
 	dc.w	OBJ_NPC_HEATHER

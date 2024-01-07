@@ -18,9 +18,19 @@ ActionScriptNight03TLodgeInteract:
 	move.w	#$FFFF,(MEM_STORY_EVENT1_SCENE_ID) ; clear story event
 	bsr.w	CheckNight03Events
 	; setup scripted event
+	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7 ; copy global event flags to d7	
+	btst.l	#FLAG_GLOBAL_EVENT00_TLodgeEvent1123Night,d7 ; test if the semi-hidden event is complete	
+	bne.s	.altevent	
+.defaultevent	
 	lea	StoryTextNight03TLodgeLine1,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventNight03_01_TLodgeStart,a6 ; point a6 to event to load
+	bra.s	.queuescriptedevent
+.altevent	
+	lea	StoryTextNight03TLodgeAltLine1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the first dialog
+	lea ScriptedEventNight03_01_TLodgeAltStart,a6 ; point a6 to event to load
+.queuescriptedevent
 	bsr.w QueueScriptedEvent ; queue the event
 .default
 	bsr.w ShowDefaultText

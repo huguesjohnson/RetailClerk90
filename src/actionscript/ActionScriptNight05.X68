@@ -27,6 +27,8 @@ ActionScriptNight05CavernUpdateState:
 	move.w	#SCENE_ID_BASEMENTMDORM,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
 	move.w	#SCENE_ID_BASEMENTOFFICE,(MEM_STORY_EVENT2_SCENE_ID) ; update story event
 	move.w	#OBJECTIVE_D05_O03_Basement,(MEM_OBJECTIVE) ; update objective
+	move.l	#$0F000000,(MEM_NPC_LOCATION_CAVERN) ; only db in the cavern		
+	move.l	#$18100000,(MEM_NPC_LOCATION_BASEMENTMDORM) ; dani and brett in the basement dorm		
 	rts
 
 ;*******************************************************************************
@@ -42,6 +44,8 @@ ActionScriptNight05BasementMDormEnter:
 	bset.l	#FLAG_NIGHT05_EVENT01_BASEMENTMDORM,d7 ; set event is done
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
 	move.w	#$FFFF,(MEM_STORY_EVENT1_SCENE_ID) ; clear story event
+	move.l	#$18000000,(MEM_NPC_LOCATION_BASEMENTMDORM) ; dani out of the dorm, brett still there			
+	move.l	#$13161000,(MEM_NPC_LOCATION_BASEMENTOFFICE) ; dani in the office			
 	bsr.w	CheckNight05Events
 	; setup scripted event
 	lea ScriptedEventNight05_02_BasementMDormStart,a6 ; point a6 to event to load
@@ -63,6 +67,8 @@ ActionScriptNight05BasementOfficeEnter:
 	bset.l	#FLAG_NIGHT05_EVENT02_BASEMENTOFFICE,d7 ; set event is done
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
 	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; clear story event
+	move.l	#$13160000,(MEM_NPC_LOCATION_BASEMENTOFFICE) ; dani out of the office
+	move.l	#$0F100000,(MEM_NPC_LOCATION_CAVERN) ; db and dani are both in the cavern					
 	bsr.w	CheckNight05Events
 	; setup scripted event
 	lea ScriptedEventNight05_03_BasementOfficeStart,a6 ; point a6 to event to load

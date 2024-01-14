@@ -207,23 +207,23 @@ ActionScriptNight04VBRespond:
 ;*******************************************************************************
 ; SCENE_ID_WWAPPLIANCES
 ;*******************************************************************************
-ActionScriptNight04WWAppliancesInteract:	
+ActionScriptNight04WWTVInteract:	
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_NIGHT04_OPTIONAL2,d7 ; test if the optional event is complete
 	bne.s	.default ; show default text if the event is complete
-	lea	StoryTextNight04WWAppliancesChoice,a6 ; load dialog text	
+	lea	StoryTextNight04WWTVChoice,a6 ; load dialog text	
 	bsr.w	Show2ChoiceDialog ; prompt to do the event
 	rts	
 .default
 	bsr.w ShowDefaultText
 	rts	
 
-ActionScriptNight04WWAppliancesRespond:	
+ActionScriptNight04WWTVRespond:	
 	bsr.w	ResetDialog
 	cmpi.w	#$0000,(MEM_MENU_RESPONSE) ; is the menu selection 0?
 	beq.s	.yes
 	; else show message
-	lea	StoryTextNight04WWAppliancesChoice1,a6 ; point a6 to the first dialog
+	lea	StoryTextNight04WWTVChoice1,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first response
 	rts
 .yes
@@ -235,7 +235,7 @@ ActionScriptNight04WWAppliancesRespond:
 	; clear the map icon
 	move.w	#$FFFF,(MEM_OPTIONAL_EVENT2_SCENE_ID)
 	; setup the scripted event
-	lea	StoryTextNight04WWAppliancesChoice0,a6 ; point a6 to the first dialog
+	lea	StoryTextNight04WWTVChoice0,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventNight04_Optional00_LauraStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event

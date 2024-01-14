@@ -277,7 +277,7 @@ EndDay03SetupGameState: ; separated to help with debugging
 	move.w	#SCENE_ID_TLODGE,(MEM_STORY_EVENT1_SCENE_ID) ; 1st story event
 	move.w	#SCENE_ID_CNOW,(MEM_STORY_EVENT2_SCENE_ID) ; 2nd story event
 	move.w	#SCENE_ID_CPLANET,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
-	move.w	#SCENE_ID_WWAPPLIANCES,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
+	move.w	#SCENE_ID_WWCHECKOUT,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
 	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
 	move.w	#PLAYER_SPRITE_CARL,(MEM_PLAYER_SPRITE) ; initial sprite
 	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
@@ -288,4 +288,6 @@ EndDay03SetupGameState: ; separated to help with debugging
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsNight ; reset the NPC locations
 	move.l	#$07010000,(MEM_NPC_LOCATION_NSHACK)
+	move.l	#$00000000,(MEM_NPC_LOCATION_WWAPPLIANCES)	
+	move.l	#$1A1D0000,(MEM_NPC_LOCATION_WWCHECKOUT)	
 	rts	

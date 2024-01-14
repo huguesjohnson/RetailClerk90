@@ -2455,6 +2455,56 @@
             "label":"StoryTextNight03CPlanetLine2"
          },
          {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight03CPlanetLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight03CPlanetLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight03CPlanetLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight03CPlanetLine6"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight03CPlanetLine7"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight03CPlanetLine8"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight03CPlanetLine9"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight03CPlanetLine10"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight03CPlanetLine11"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight03CPlanetLine12"
+         },
+         {
             "comment":"end",
             "command":"END"
          }
@@ -2470,12 +2520,37 @@
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"StoryTextNight03WWAppliancesLine1"
+            "label":"StoryTextNight03WWCheckoutLine1"
          },
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"StoryTextNight03WWAppliancesLine2"
+            "label":"StoryTextNight03WWCheckoutLine2"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight03WWCheckoutLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight03WWCheckoutLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight03WWCheckoutLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight03WWCheckoutLine6"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight03WWCheckoutLine7"
          },
          {
             "comment":"end",
@@ -2498,16 +2573,6 @@
             "comment":"change scene to e/w hall",
             "command":"CHANGE_SCENE",
             "intConst":"SCENE_ID_EWHALL"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay04EWHallLine1"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay04EWHallLine2"
          },
          {
             "comment":"end",
@@ -2574,6 +2639,21 @@
             "label":"StoryTextDay04CavernLine2"
          },
          {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04CavernLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04CavernLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04CavernLine5"
+         },
+         {
             "comment":"end",
             "command":"END"
          }
@@ -2595,6 +2675,41 @@
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay04NShackLine2"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04NShackLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04NShackLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04NShackLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04NShackLine6"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04NShackLine7"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04NShackLine8"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04NShackLine9"
          },
          {
             "comment":"end",
@@ -2620,6 +2735,51 @@
             "label":"StoryTextDay04SVideoLine2"
          },
          {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04SVideoLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04SVideoLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04SVideoLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04SVideoLine6"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04SVideoLine7"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04SVideoLine8"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04SVideoLine9"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04SVideoLine10"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04SVideoLine11"
+         },
+         {
             "comment":"end",
             "command":"END"
          }
@@ -2641,6 +2801,16 @@
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay04FCBCampingLine2"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04FCBCampingLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04FCBCampingLine4"
          },
          {
             "comment":"end",
@@ -2675,6 +2845,21 @@
             "label":"StoryTextNight04TBooksLine2"
          },
          {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight04TBooksLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight04TBooksLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight04TBooksLine5"
+         },
+         {
             "comment":"end",
             "command":"END"
          }
@@ -2698,6 +2883,36 @@
             "label":"StoryTextNight04NShackLine2"
          },
          {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight04NShackLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight04NShackLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight04NShackLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight04NShackLine6"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight04NShackLine7"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight04NShackLine8"
+         },
+         {
             "comment":"end",
             "command":"END"
          }
@@ -2714,11 +2929,6 @@
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight04CavernLine1"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextNight04CavernLine2"
          },
          {
             "comment":"end",
@@ -2744,6 +2954,26 @@
             "label":"StoryTextNight04SouthHallLine2"
          },
          {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight04SouthHallLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight04SouthHallLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight04SouthHallLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight04SouthHallLine6"
+         },
+         {
             "comment":"end",
             "command":"END"
          }
@@ -2759,12 +2989,32 @@
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"StoryTextNight04WWAppliancesLine1"
+            "label":"StoryTextNight04WWTVLine1"
          },
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"StoryTextNight04WWAppliancesLine2"
+            "label":"StoryTextNight04WWTVLine2"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight04WWTVLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight04WWTVLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight04WWTVLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight04WWTVLine6"
          },
          {
             "comment":"end",
@@ -2788,6 +3038,26 @@
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight04VBLine2"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight04VBLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight04VBLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight04VBLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight04VBLine6"
          },
          {
             "comment":"end",
@@ -2822,6 +3092,21 @@
             "label":"StoryTextDay05DenimCountryLine2"
          },
          {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05DenimCountryLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05DenimCountryLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05DenimCountryLine5"
+         },
+         {
             "comment":"end",
             "command":"END"
          }
@@ -2838,6 +3123,21 @@
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay05FCBFirearmsRespond0Line02"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05FCBFirearmsRespond0Line03"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05FCBFirearmsRespond0Line04"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05FCBFirearmsRespond0Line05"
          },
          {
             "comment":"end",
@@ -2858,6 +3158,26 @@
             "label":"StoryTextDay05FCBFirearmsRespond1Line02"
          },
          {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextErynSpeechless"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05FCBFirearmsRespond1Line03"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05FCBFirearmsRespond0Line05"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05FCBFirearmsRespond1Line04"
+         },         
+         {
             "comment":"end",
             "command":"END"
          }
@@ -2876,6 +3196,41 @@
             "label":"StoryTextDay05WWAudioRespond0Line02"
          },
          {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05WWAudioRespond0Line03"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05WWAudioRespond0Line04"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05WWAudioRespond0Line05"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05WWAudioRespond0Line06"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05WWAudioRespond0Line07"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05WWAudioRespond0Line08"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextErynSpeechless"
+         },
+         {
             "comment":"end",
             "command":"END"
          }
@@ -2892,6 +3247,16 @@
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay05WWAudioRespond1Line02"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05WWAudioRespond1Line03"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05WWAudioRespond1Line04"
          },
          {
             "comment":"end",
@@ -2917,6 +3282,21 @@
             "label":"StoryTextDay05DenimCountry2Line2"
          },
          {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05DenimCountry2Line3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05DenimCountry2Line4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05DenimCountry2Line5"
+         },
+         {
             "comment":"end",
             "command":"END"
          }
@@ -2938,6 +3318,46 @@
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay05CavernLine2"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05CavernLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05CavernLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05CavernLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05CavernLine6"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05CavernLine7"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05CavernLine8"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05CavernLine9"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05CavernLine10"
          },
          {
             "comment":"end",
@@ -2995,6 +3415,36 @@
             "label":"StoryTextNight05TBooksLine2"
          },
          {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05TBooksLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05TBooksLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05TBooksLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05TBooksLine6"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05TBooksLine7"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05TBooksLine8"
+         },
+         {
             "comment":"end",
             "command":"END"
          }
@@ -3016,6 +3466,26 @@
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight05CavernLine2"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05CavernLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05CavernLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05CavernLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05CavernLine6"
          },
          {
             "comment":"end",
@@ -3041,6 +3511,31 @@
             "label":"StoryTextNight05BasementMDormLine2"
          },
          {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05BasementMDormLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05BasementMDormLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05BasementMDormLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05BasementMDormLine6"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05BasementMDormLine7"
+         },
+         {
             "comment":"end",
             "command":"END"
          }
@@ -3062,6 +3557,81 @@
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight05BasementOfficeLine2"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05BasementOfficeLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05BasementOfficeLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05BasementOfficeLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05BasementOfficeLine6"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05BasementOfficeLine7"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05BasementOfficeLine8"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05BasementOfficeLine9"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05BasementOfficeLine10"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05BasementOfficeLine11"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05BasementOfficeLine12"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05BasementOfficeLine13"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05BasementOfficeLine14"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05BasementOfficeLine15"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05BasementOfficeLine16"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05BasementOfficeLine17"
          },
          {
             "comment":"end",
@@ -3087,6 +3657,21 @@
             "label":"StoryTextNight05WWAppliancesLine2"
          },
          {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05WWAppliancesLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05WWAppliancesLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05WWAppliancesLine5"
+         },
+         {
             "comment":"end",
             "command":"END"
          }
@@ -3108,6 +3693,36 @@
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight05CPlanetLine2"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05CPlanetLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05CPlanetLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05CPlanetLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05CPlanetLine6"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05CPlanetLine7"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight05CPlanetLine8"
          },
          {
             "comment":"end",
@@ -3142,6 +3757,46 @@
             "label":"StoryTextDay06DemimCountryLine2"
          },
          {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06DemimCountryLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06DemimCountryLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06DemimCountryLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06DemimCountryLine6"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06DemimCountryLine7"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextErynSpeechless"
+         },         
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06DemimCountryLine8"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06DemimCountryLine9"
+         },
+         {
             "comment":"end",
             "command":"END"
          }
@@ -3163,6 +3818,31 @@
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay06NShackLine2"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06NShackLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06NShackLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06NShackLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06NShackLine6"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06NShackLine7"
          },
          {
             "comment":"end",
@@ -3188,6 +3868,51 @@
             "label":"StoryTextDay06CavernLine2"
          },
          {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06CavernLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06CavernLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06CavernLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06CavernLine6"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06CavernLine7"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextErynSpeechless"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06CavernLine8"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06CavernLine9"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06CavernLine10"
+         },
+         {
             "comment":"end",
             "command":"END"
          }
@@ -3211,6 +3936,46 @@
             "label":"StoryTextDay06SVideoLine2"
          },
          {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06SVideoLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06SVideoLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06SVideoLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06SVideoLine6"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06SVideoLine7"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06SVideoLine8"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06SVideoLine9"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06SVideoLine10"
+         },
+         {
             "comment":"end",
             "command":"END"
          }
@@ -3232,6 +3997,36 @@
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay06FCBCampingLine2"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06FCBCampingLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06FCBCampingLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06FCBCampingLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06FCBCampingLine6"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06FCBCampingLine7"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay06FCBCampingLine8"
          },
          {
             "comment":"end",
@@ -3266,6 +4061,51 @@
             "label":"StoryTextNight06TBooksLine2"
          },
          {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06TBooksLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06TBooksLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06TBooksLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06TBooksLine6"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06TBooksLine7"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06TBooksLine8"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06TBooksLine9"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06TBooksLine10"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06TBooksLine11"
+         },
+         {
             "comment":"end",
             "command":"END"
          }
@@ -3287,6 +4127,46 @@
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight06BasementKitchenLine2"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06BasementKitchenLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06BasementKitchenLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06BasementKitchenLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06BasementKitchenLine6"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06BasementKitchenLine7"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06BasementKitchenLine8"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06BasementKitchenLine9"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06BasementKitchenLine10"
          },
          {
             "comment":"end",
@@ -3312,6 +4192,41 @@
             "label":"StoryTextNight06WWAppliancesLine2"
          },
          {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06WWAppliancesLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06WWAppliancesLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06WWAppliancesLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06WWAppliancesLine6"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06WWAppliancesLine7"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06WWAppliancesLine8"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06WWAppliancesLine9"
+         },
+         {
             "comment":"end",
             "command":"END"
          }
@@ -3335,6 +4250,41 @@
             "label":"StoryTextNight06CPlanetLine2"
          },
          {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06CPlanetLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06CPlanetLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06CPlanetLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06CPlanetLine6"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06CPlanetLine7"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06CPlanetLine8"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06CPlanetLine9"
+         },
+         {
             "comment":"end",
             "command":"END"
          }
@@ -3351,6 +4301,56 @@
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight06VBLine1"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06VBLine2"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06VBLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06VBLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06VBLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06VBLine6"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06VBLine7"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06VBLine8"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06VBLine9"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06VBLine2"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight06VBLine10"
          },
          {
             "comment":"dialog",

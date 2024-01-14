@@ -181,25 +181,25 @@ ActionScriptNight03CPlanetRespond:
 	rts	
 	
 ;*******************************************************************************
-; SCENE_ID_WWAPPLIANCES
+; SCENE_ID_WWCheckout
 ;*******************************************************************************
-ActionScriptNight03WWAppliancesInteract:	
+ActionScriptNight03WWCheckoutInteract:	
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_NIGHT03_OPTIONAL2,d7 ; test if the optional event is complete
 	bne.s	.default ; show default text if the event is complete
-	lea	StoryTextNight03WWAppliancesChoice,a6 ; load dialog text	
+	lea	StoryTextNight03WWCheckoutChoice,a6 ; load dialog text	
 	bsr.w	Show2ChoiceDialog ; prompt to do the event
 	rts	
 .default
 	bsr.w ShowDefaultText
 	rts	
 
-ActionScriptNight03WWAppliancesRespond:	
+ActionScriptNight03WWCheckoutRespond:	
 	bsr.w	ResetDialog
 	cmpi.w	#$0000,(MEM_MENU_RESPONSE) ; is the menu selection 0?
 	beq.s	.yes
 	; else show message
-	lea	StoryTextNight03WWAppliancesChoice1,a6 ; point a6 to the first dialog
+	lea	StoryTextNight03WWCheckoutChoice1,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first response
 	rts
 .yes
@@ -211,7 +211,7 @@ ActionScriptNight03WWAppliancesRespond:
 	; clear the map icon
 	move.w	#$FFFF,(MEM_OPTIONAL_EVENT2_SCENE_ID)
 	; setup the scripted event
-	lea	StoryTextNight03WWAppliancesChoice0,a6 ; point a6 to the first dialog
+	lea	StoryTextNight03WWCheckoutChoice0,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventNight03_Optional01Start,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event

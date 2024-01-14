@@ -1243,8 +1243,8 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 23
-	dc.l	ActionScriptDefaultInteract ; Interact
-	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	ActionScriptNight03WWCheckoutInteract ; Interact
+	dc.l	ActionScriptNight03WWCheckoutRespond ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 24
@@ -1258,8 +1258,8 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 26
-	dc.l	ActionScriptNight03WWAppliancesInteract ; Interact
-	dc.l	ActionScriptNight03WWAppliancesRespond ; Respond
+	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 27
@@ -1576,8 +1576,8 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 26
-	dc.l	ActionScriptNight04WWAppliancesInteract ; Interact
-	dc.l	ActionScriptNight04WWAppliancesRespond ; Respond
+	dc.l	ActionScriptNight04WWTVInteract ; Interact
+	dc.l	ActionScriptNight04WWTVRespond ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 27

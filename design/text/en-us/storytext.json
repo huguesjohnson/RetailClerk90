@@ -1778,518 +1778,1278 @@
          "text":"You are never going to let me forget that are you...",
          "align":2
          },                           
-      "StoryTextNight03WWAppliancesChoice":{
+      "StoryTextNight03WWCheckoutChoice":{
             "dialogTitle":"OBJ_NPC_LAURA",
-            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "text":"Do you know how to fix a register?|{ I can try           { I don't think so",
             "formFeed":"FFR",
             "align":2
          },        
-      "StoryTextNight03WWAppliancesChoice0":{
+      "StoryTextNight03WWCheckoutChoice0":{
             "dialogTitle":"OBJ_NPC_LAURA",
-            "text":"choice 0",
+            "text":"This keeps giving us an error message.",
             "align":2
          },         
-      "StoryTextNight03WWAppliancesChoice1":{
+      "StoryTextNight03WWCheckoutChoice1":{
             "dialogTitle":"OBJ_NPC_LAURA",
-            "text":"choice 1",
+            "text":"I thought it was worth a try.",
             "align":2
          },         
-      "StoryTextNight03WWAppliancesLine1":{
+      "StoryTextNight03WWCheckoutLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
+         "text":"OK, hmm.. that's a weird one.|Did you try turning it off & on?",
          "align":2
          },
-      "StoryTextNight03WWAppliancesLine2":{
+      "StoryTextNight03WWCheckoutLine2":{
+         "dialogTitle":"OBJ_NPC_TANYA",
+         "text":"It would lose the totals for the day.",
+         "align":2
+         },
+      "StoryTextNight03WWCheckoutLine3":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I have an idea.",
+         "align":2
+         },         
+      "StoryTextNight03WWCheckoutLine4":{
+         "dialogTitle":"OBJ_NPC_GRUNBERG",
+         "text":"What do we have here...|OK, escape, F12, Y.|There you go.",
+         "align":2
+         },          
+      "StoryTextNight03WWCheckoutLine5":{
          "dialogTitle":"OBJ_NPC_LAURA",
-         "text":"line2.",
+         "text":"How'd you do that?",
          "align":2
-         },
+         },        
+      "StoryTextNight03WWCheckoutLine6":{
+         "dialogTitle":"OBJ_NPC_TANYA",
+         "text":"Thanks Carl.",
+         "align":2
+         },          
+      "StoryTextNight03WWCheckoutLine7":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I didn't really do anything.",
+         "align":2
+         },         
       "StoryTextNight03CPlanetChoice":{
             "dialogTitle":"OBJ_NPC_ELIZA",
-            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "text":"Care to help for a minute?|{ Alright             { Maybe later",
             "formFeed":"FFR",
             "align":2
          },        
       "StoryTextNight03CPlanetChoice0":{
             "dialogTitle":"OBJ_NPC_ELIZA",
-            "text":"choice 0",
+            "text":"I have to markdown a bunch of singles.|One hit wonders of the past few years.",
             "align":2
          },         
       "StoryTextNight03CPlanetChoice1":{
             "dialogTitle":"OBJ_NPC_ELIZA",
-            "text":"choice 1",
+            "text":"That's too bad.",
             "align":2
          },         
       "StoryTextNight03CPlanetLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
+         "text":"'One hit wonders'?.",
          "align":2
          },
       "StoryTextNight03CPlanetLine2":{
          "dialogTitle":"OBJ_NPC_ELIZA",
-         "text":"line2.",
+         "text":"You know, bands that had one song, then disappeared.",
          "align":2
          },    
-      "StoryTextDay04EWHallLine1":{
-         "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"line1.",
+      "StoryTextNight03CPlanetLine3":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I didn't know that had a name.",
          "align":2
          },
-      "StoryTextDay04EWHallLine2":{
-         "dialogTitle":"OBJ_NPC_BRETT",
-         "text":"line2.",
+      "StoryTextNight03CPlanetLine4":{
+         "dialogTitle":"OBJ_NPC_ELIZA",
+         "text":"Like this one, Pretty Poison.",
+         "align":2
+         },    
+      "StoryTextNight03CPlanetLine5":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I thought they were still making music.",
          "align":2
          },
+      "StoryTextNight03CPlanetLine6":{
+         "dialogTitle":"OBJ_NPC_ELIZA",
+         "text":"You're thinking of just Poison.",
+         "align":2
+         },    
+      "StoryTextNight03CPlanetLine7":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"But aren't they also pretty?",
+         "align":2
+         },
+      "StoryTextNight03CPlanetLine8":{
+         "dialogTitle":"OBJ_NPC_ELIZA",
+         "text":"Then there's Will to Power.|That's a cover song.|It shouldn't even count.",
+         "align":2
+         },   
+      "StoryTextNight03CPlanetLine9":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"What do you mean?",
+         "align":2
+         },         
+      "StoryTextNight03CPlanetLine10":{
+         "dialogTitle":"OBJ_NPC_ELIZA",
+         "text":"It's one thing to write a hit song.|It's another to redo a song that was already a hit.|I can respect someone that wrote a song.|Like this one, 'Just a Friend'.|It's not my thing, but at least he wrote it himself.",
+         "align":2
+         },   
+      "StoryTextNight03CPlanetLine11":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"OK, I understand.",
+         "align":2
+         },     
+      "StoryTextNight03CPlanetLine12":{
+         "dialogTitle":"OBJ_NPC_ELIZA",
+         "text":"Alright, that's all of them.|Thanks for the help.",
+         "align":2
+         },                
       "StoryTextDay04CavernLine1":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"line1.",
+         "text":"That's weird.",
          "align":2
          },
       "StoryTextDay04CavernLine2":{
          "dialogTitle":"OBJ_NPC_DB",
-         "text":"line2.",
+         "text":"What's weird.",
          "align":2
          },     
-      "StoryTextDay04NShackLine1":{
+      "StoryTextDay04CavernLine3":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"line1.",
+         "text":"I thought someone came in before me.",
+         "align":2
+         },
+      "StoryTextDay04CavernLine4":{
+         "dialogTitle":"OBJ_NPC_DB",
+         "text":"Nope. It's just me here.|Are you coming by after your shift?",
+         "align":2
+         },     
+      "StoryTextDay04CavernLine5":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"Probably going to grab a snack today.",
+         "align":2
+         },         
+      "StoryTextDay04NShackLine1":{
+         "dialogTitle":"OBJ_NPC_JEN",
+         "text":"How's it going?",
          "align":2
          },
       "StoryTextDay04NShackLine2":{
-         "dialogTitle":"OBJ_NPC_JEN",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"Fine.|Weird but fine.",
          "align":2
          },
+      "StoryTextDay04NShackLine3":{
+         "dialogTitle":"OBJ_NPC_JEN",
+         "text":"What do you mean?",
+         "align":2
+         },
+      "StoryTextDay04NShackLine4":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"You're friends with D.B. right?",
+         "align":2
+         },         
+      "StoryTextDay04NShackLine5":{
+         "dialogTitle":"OBJ_NPC_JEN",
+         "text":"Yes, since last year.|And his sister even longer.",
+         "align":2
+         },
+      "StoryTextDay04NShackLine6":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"Is there a reason he would lie to me?|He just lied about someone going into the arcade.",
+         "align":2
+         }, 
+      "StoryTextDay04NShackLine7":{
+         "dialogTitle":"OBJ_NPC_JEN",
+         "text":"Maybe he's covering for them.|He says he doesn't like helping people.|But that's not true at all.|Maybe this is someone in trouble.",
+         "align":2
+         },      
+      "StoryTextDay04NShackLine8":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"So he told you about this person?",
+         "align":2
+         },     
+      "StoryTextDay04NShackLine9":{
+         "dialogTitle":"OBJ_NPC_JEN",
+         "text":"No, but I have an idea what's going on.|He'll tell me when he's ready.",
+         "align":2
+         },                          
       "StoryTextDay04SVideoChoice":{
             "dialogTitle":"OBJ_NPC_NICKY",
-            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "text":"I really need some help here|{ Alright             { Not now",
             "formFeed":"FFR",
             "align":2
          },        
       "StoryTextDay04SVideoChoice0":{
             "dialogTitle":"OBJ_NPC_NICKY",
-            "text":"choice 0",
+            "text":"Thank you. I can't get this guy to leave.|I think he's trying to hit on me.",
             "align":2
          },         
       "StoryTextDay04SVideoChoice1":{
             "dialogTitle":"OBJ_NPC_NICKY",
-            "text":"choice 1",
+            "text":"Please, when you can...",
             "align":2
          },          
       "StoryTextDay04SVideoLine1":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"line1.",
+         "text":"I got it.",
          "align":2
          },
       "StoryTextDay04SVideoLine2":{
-         "dialogTitle":"OBJ_NPC_NICKY",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"Do you need help?",
+         "align":2
+         },
+      "StoryTextDay04SVideoLine3":{
+         "dialogTitle":"OBJ_NPC_PREPPY",
+         "text":"No, I was just, looking at...",
          "align":2
          },  
+      "StoryTextDay04SVideoLine4":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"At what?",
+         "align":2
+         },
+      "StoryTextDay04SVideoLine5":{
+         "dialogTitle":"OBJ_NPC_PREPPY",
+         "text":"This movie right here, do you know, or maybe the other one|does she know if it's any good?",
+         "align":2
+         },  
+      "StoryTextDay04SVideoLine6":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"We're not allowed to have opinions on movies.",
+         "align":2
+         },   
+      "StoryTextDay04SVideoLine7":{
+         "dialogTitle":"OBJ_NPC_PREPPY",
+         "text":"OK, so then is it, um.",
+         "align":2
+         }, 
+      "StoryTextDay04SVideoLine8":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"Look are you going to buy something or not?",
+         "align":2
+         },      
+      "StoryTextDay04SVideoLine9":{
+         "dialogTitle":"OBJ_NPC_PREPPY",
+         "text":"I guess not.",
+         "align":2
+         },        
+      "StoryTextDay04SVideoLine10":{
+         "dialogTitle":"OBJ_NPC_NICKY",
+         "text":"Wow, that was great.|How did you do that?",
+         "align":2
+         },       
+      "StoryTextDay04SVideoLine11":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"I have brothers.|Their friends are all idiots like that.",
+         "align":2
+         },                                     
       "StoryTextDay04FCBCampingChoice":{
             "dialogTitle":"OBJ_NPC_GRANT",
-            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "text":"...|{ Daydreaming?        { (I'll leave him be)",
             "formFeed":"FFR",
             "align":2
          },        
       "StoryTextDay04FCBCampingChoice0":{
             "dialogTitle":"OBJ_NPC_GRANT",
-            "text":"choice 0",
+            "text":"Sorry, didn't see you there.|I was just think about a roadtrip|I went on with your father.|The summer before your oldest brother was born.",
             "align":2
          },         
       "StoryTextDay04FCBCampingChoice1":{
             "dialogTitle":"OBJ_NPC_GRANT",
-            "text":"choice 1",
+            "text":"...",
             "align":2
          },
       "StoryTextDay04FCBCampingLine1":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"line1.",
+         "text":"Where did you go?",
          "align":2
          },
       "StoryTextDay04FCBCampingLine2":{
          "dialogTitle":"OBJ_NPC_GRANT",
-         "text":"line2.",
+         "text":"Everywhere. We bought a pair of cheap motorcycles.|We went across the whole country & back.|All we had were backpacks with single person tents.|We camped wherever we stopped.|Didn't even bring a map.",
          "align":2
          },
+      "StoryTextDay04FCBCampingLine3":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"I think he'd do that now if he could.",
+         "align":2
+         },
+      "StoryTextDay04FCBCampingLine4":{
+         "dialogTitle":"OBJ_NPC_GRANT",
+         "text":"We're both long past doing that.|One night on the ground & my back would be shot.|If you ever get a chance like that|do it while you are young.",
+         "align":2
+         },          
       "StoryTextNight04TBooksLine1":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
+         "dialogTitle":"OBJ_NPC_FRANK",
+         "text":"Things have been going well since you took over.|Sales are up, and so are repeat customers.",
          "align":2
          },
       "StoryTextNight04TBooksLine2":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "text":"I can't take all the credit.|The store was in good shape already.",
          "align":2
          }, 
+      "StoryTextNight04TBooksLine3":{
+         "dialogTitle":"OBJ_NPC_FRANK",
+         "text":"Whatever you're doing is working.|Any chance you'd like to stay here?",
+         "align":2
+         },      
+      "StoryTextNight04TBooksLine4":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I haven't thought about it.|I made some friends here.|I also miss my old store.|That mall is much busier.|I don't know.|But I'll think about it.",
+         "align":2
+         },      
+      "StoryTextNight04TBooksLine5":{
+         "dialogTitle":"OBJ_NPC_FRANK",
+         "text":"Let's talk again after the holidays.",
+         "align":2
+         },                   
       "StoryTextNight04NShackLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
+         "text":"Hey. How's it going tonight?",
          "align":2
          },
       "StoryTextNight04NShackLine2":{
          "dialogTitle":"OBJ_NPC_JEN",
-         "text":"line2.",
+         "text":"Eryn is feeling conflicted.",
          "align":2
          },   
+      "StoryTextNight04NShackLine3":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"I told you I don't care, I'm just curious.",
+         "align":2
+         },   
+      "StoryTextNight04NShackLine4":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"About what?",
+         "align":2
+         },        
+      "StoryTextNight04NShackLine5":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"A week ago I saw this disheveled guy,|he went into the cavern & disappeared.|D.B. acted like he never saw him.",
+         "align":2
+         },
+      "StoryTextNight04NShackLine6":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"There is a backroom there.|I think they keep old games in it.|Maybe he was a repair guy.|Probably just let himself in.|D.B. might not have noticed.",
+         "align":2
+         },       
+      "StoryTextNight04NShackLine7":{
+         "dialogTitle":"OBJ_NPC_JEN",
+         "text":"That's a simple theory.",
+         "align":2
+         },      
+      "StoryTextNight04NShackLine8":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"This is easy.|I'll go ask.|I'm sure it's nothing interesting.",
+         "align":2
+         },                      
       "StoryTextNight04CantEnterCavern":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
+         "text":"(I'll check back here later)",
          "align":2
          },
       "StoryTextNight04CantUseStairs":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
+         "text":"(I should find out where this goes first)",
          "align":2
          },            
       "StoryTextNight04CavernLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
+         "text":"(D.B. must have gone home already)|(I'll just look around a little)",
          "align":2
          },
-      "StoryTextNight04CavernLine2":{
-         "dialogTitle":"OBJ_NPC_JEN",
-         "text":"line2.",
-         "align":2
-         },     
       "StoryTextNight04SouthHallLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
+         "text":"You again.",
          "align":2
          },
       "StoryTextNight04SouthHallLine2":{
          "dialogTitle":"OBJ_NPC_VICTOR",
-         "text":"line2.",
+         "text":"Who else would be leaving now?",
          "align":2
          },    
-      "StoryTextNight04WWAppliancesChoice":{
-            "dialogTitle":"OBJ_NPC_LAURA",
-            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+      "StoryTextNight04SouthHallLine3":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"You're freaking people out here.|With all the things you're saying.",
+         "align":2
+         },       
+      "StoryTextNight04SouthHallLine4":{
+         "dialogTitle":"OBJ_NPC_VICTOR",
+         "text":"Have I said anything untrue?|They'll get over it.|This is just a temp job for them.",
+         "align":2
+         },        
+      "StoryTextNight04SouthHallLine5":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"What do you mean by that? Do you know something about the mall's future?",
+         "align":2
+         },      
+      "StoryTextNight04SouthHallLine6":{
+         "dialogTitle":"OBJ_NPC_VICTOR",
+         "text":"If I knew the future I'd buy stock.|Go get some sleep Carl.|You sound sleep deprived again.",
+         "align":2
+         },                   
+      "StoryTextNight04WWTVChoice":{
+            "dialogTitle":"OBJ_NPC_CARL",
+            "text":"(What are they doing?)|{ Say hello           { Leave them alone",
             "formFeed":"FFR",
             "align":2
          },        
-      "StoryTextNight04WWAppliancesChoice0":{
-            "dialogTitle":"OBJ_NPC_LAURA",
-            "text":"choice 0",
+      "StoryTextNight04WWTVChoice0":{
+            "dialogTitle":"OBJ_NPC_CARL",
+            "text":"Sorry to interrupt.",
             "align":2
          },         
-      "StoryTextNight04WWAppliancesChoice1":{
-            "dialogTitle":"OBJ_NPC_LAURA",
-            "text":"choice 1",
+      "StoryTextNight04WWTVChoice1":{
+            "dialogTitle":"OBJ_NPC_CARL",
+            "text":"(maybe later)",
             "align":2
          },
-      "StoryTextNight04WWAppliancesLine1":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
+      "StoryTextNight04WWTVLine1":{
+         "dialogTitle":"OBJ_NPC_LAURA",
+         "text":"It's alright. We're trying to get some reception.|They replay old holiday cartoons tonight.|What's your favorite?",
          "align":2
          },
-      "StoryTextNight04WWAppliancesLine2":{
-         "dialogTitle":"OBJ_NPC_LAURA",
-         "text":"line2.",
+      "StoryTextNight04WWTVLine2":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"Oh, I don't know.|I'm more of a book person.",
          "align":2
          },  
+      "StoryTextNight04WWTVLine3":{
+         "dialogTitle":"OBJ_NPC_LAURA",
+         "text":"I always liked the Grinch.",
+         "align":2
+         },         
+      "StoryTextNight04WWTVLine4":{
+         "dialogTitle":"OBJ_NPC_JUAN",
+         "text":"That's good, but I prefer Peanuts.",
+         "align":2
+         },       
+      "StoryTextNight04WWTVLine5":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I don't think I've seen either of those.",
+         "align":2
+         },            
+      "StoryTextNight04WWTVLine6":{
+         "dialogTitle":"OBJ_NPC_LAURA",
+         "text":"You're really missing out.|You're just going to watch the news alone again I bet.",
+         "align":2
+         },           
       "StoryTextNight04VBChoice":{
             "dialogTitle":"OBJ_NPC_GRUNBERG",
-            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "text":"You look troubled|{ Just a little       { I'm good",
             "formFeed":"FFR",
             "align":2
          },        
       "StoryTextNight04VBChoice0":{
-            "dialogTitle":"OBJ_NPC_GRUNBERG",
-            "text":"choice 0",
+            "dialogTitle":"OBJ_NPC_CARL",
+            "text":"My district manager asked if I want to stay?",
             "align":2
          },         
       "StoryTextNight04VBChoice1":{
             "dialogTitle":"OBJ_NPC_GRUNBERG",
-            "text":"choice 1",
+            "text":"If you ever need to talk, I'm here.",
             "align":2
          },         
       "StoryTextNight04VBLine1":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
+         "dialogTitle":"OBJ_NPC_GRUNBERG",
+         "text":"Do you?",
          "align":2
          },
       "StoryTextNight04VBLine2":{
-         "dialogTitle":"OBJ_NPC_GRUNBERG",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I honestly don't know.",
          "align":2
          },
+      "StoryTextNight04VBLine3":{
+         "dialogTitle":"OBJ_NPC_GRUNBERG",
+         "text":"What would help you decide?",
+         "align":2
+         },     
+      "StoryTextNight04VBLine4":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"That's a really tough question.|There are pros & cons.|Maybe I should write them down.",
+         "align":2
+         },   
+      "StoryTextNight04VBLine5":{
+         "dialogTitle":"OBJ_NPC_GRUNBERG",
+         "text":"That's a good start.|Make two lists & rank them.|Could be the biggest pro outweighs the biggest con|or it could be the other way around.",
+         "align":2
+         },     
+      "StoryTextNight04VBLine6":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I'll do that at the hotel.|That's better than watching news all night.|Thanks for the talk.",
+         "align":2
+         },                          
       "StoryTextDay05DenimCountryLine1":{
-         "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"line1.",
+         "dialogTitle":"OBJ_NPC_DANI",
+         "text":"I see you haven't changed.|Fretting about whether the store will close.",
          "align":2
          },
       "StoryTextDay05DenimCountryLine2":{
-         "dialogTitle":"OBJ_NPC_DANI",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_LISA",
+         "text":"I don't know what I'll do if we close.",
          "align":2
          },
+      "StoryTextDay05DenimCountryLine3":{
+         "dialogTitle":"OBJ_NPC_DANI",
+         "text":"You'll find some other mall job.|Or go back to school.|Or figure something else out.|How about we make your daily goal today.|Would that help your mood?",
+         "align":2
+         },
+      "StoryTextDay05DenimCountryLine4":{
+         "dialogTitle":"OBJ_NPC_LISA",
+         "text":"I suppose.",
+         "align":2
+         },         
+      "StoryTextDay05DenimCountryLine5":{
+         "dialogTitle":"OBJ_NPC_DANI",
+         "text":"Hey, new girl. Let's make it interesting.|I'm free for an hour.|Let's see who can refer more customers to the store.|You should be able to get 2 easily.",
+         "align":2
+         },         
       "StoryTextDay05FCBFirearmsChoice":{
-         "dialogTitle":"OBJ_NPC_BUSYMOM",
-         "text":"some question|{ choice0             { choice1       ",
+         "dialogTitle":"OBJ_NPC_MALLRAT",
+         "text":"Which of these makes the best gift?|{ Which deadly weapon?{ Who is it for?",
          "formFeed":"FFR",
          "align":2
          },         
       "StoryTextDay05FCBFirearmsRespond0Line01":{
-         "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"line1.",
+         "dialogTitle":"OBJ_NPC_MALLRAT",
+         "text":"Oh, I thought this was the toy store.",
          "align":2
          },
       "StoryTextDay05FCBFirearmsRespond0Line02":{
-         "dialogTitle":"OBJ_NPC_RANDY",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"No. And surprisingly there isn't one in this mall.|Maybe the designer forgot...|or maybe the mall was too big & it got cut.|Whatever the case, there is no toy store.",
+         "align":2
+         },        
+      "StoryTextDay05FCBFirearmsRespond0Line03":{
+         "dialogTitle":"OBJ_NPC_MALLRAT",
+         "text":"Where should I go then?",
+         "align":2
+         },     
+      "StoryTextDay05FCBFirearmsRespond0Line04":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"Whoever designed this mall realized the importance of denim.|I'd suggest Denim Country,|denim never goes out of style.",
+         "align":2
+         },    
+      "StoryTextDay05FCBFirearmsRespond0Line05":{
+         "dialogTitle":"OBJ_NPC_MALLRAT",
+         "text":"Thanks, I'll give it a try.",
          "align":2
          },
       "StoryTextDay05FCBFirearmsRespond1Line01":{
-         "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"line1.",
+         "dialogTitle":"OBJ_NPC_MALLRAT",
+         "text":"It's for my nephew.|He has anger management issues.|I thought it might help.",
          "align":2
          },
       "StoryTextDay05FCBFirearmsRespond1Line02":{
          "dialogTitle":"OBJ_NPC_RANDY",
-         "text":"line2.",
+         "text":"Even I think that's a bad idea.",
+         "align":2
+         },
+      "StoryTextDay05FCBFirearmsRespond1Line03":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"How about a fauz fur denim trucker jacket?|It will convey a strong 'leave me alone' message.|You can get one at Denim Country.",
+         "align":2
+         },
+      "StoryTextDay05FCBFirearmsRespond1Line04":{
+         "dialogTitle":"OBJ_NPC_RANDY",
+         "text":"I hate to lose a sale, but nice save.",
          "align":2
          },         
       "StoryTextDay05WWAudioChoice":{
-         "dialogTitle":"OBJ_NPC_BUSYMOM",
-         "text":"some question|{ choice0             { choice1       ",
+         "dialogTitle":"OBJ_NPC_PREPPY",
+         "text":"Which of these will fit on my father's yacht?|{ Weight limit?       { On this lake?",
          "formFeed":"FFR",
          "align":2
          },         
       "StoryTextDay05WWAudioRespond0Line01":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"line1.",
+         "text":"There has to be a maximum weight right?",
          "align":2
          },
       "StoryTextDay05WWAudioRespond0Line02":{
-         "dialogTitle":"OBJ_NPC_RANDY",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_PREPPY",
+         "text":"Huh, yeah. It's.. I don't know.",
          "align":2
          },
+      "StoryTextDay05WWAudioRespond0Line03":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"And does it have AC plugs?",
+         "align":2
+         },   
+      "StoryTextDay05WWAudioRespond0Line04":{
+         "dialogTitle":"OBJ_NPC_PREPPY",
+         "text":"It could.",
+         "align":2
+         },
+      "StoryTextDay05WWAudioRespond0Line05":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"And aren't marine radios a custom part not typically found in a mall?",
+         "align":2
+         },    
+      "StoryTextDay05WWAudioRespond0Line06":{
+         "dialogTitle":"OBJ_NPC_PREPPY",
+         "text":"That's true.",
+         "align":2
+         },        
+      "StoryTextDay05WWAudioRespond0Line07":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"You just wanted to talk about the yacht.",
+         "align":2
+         },        
+      "StoryTextDay05WWAudioRespond0Line08":{
+         "dialogTitle":"OBJ_NPC_PREPPY",
+         "text":"It's a really nice yacht though.",
+         "align":2
+         },                                 
       "StoryTextDay05WWAudioRespond1Line01":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"line1.",
+         "text":"The lake is tiny. It's more like a pond.|The mall name is a misnomer.",
          "align":2
          },
       "StoryTextDay05WWAudioRespond1Line02":{
-         "dialogTitle":"OBJ_NPC_RANDY",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_PREPPY",
+         "text":"I didn't say we sailed it.|It's just for parties.",
          "align":2
          }, 
-      "StoryTextDay05DenimCountry2Line1":{
+      "StoryTextDay05WWAudioRespond1Line03":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"line1.",
+         "text":"Then why does it matter if it fits?",
+         "align":2
+         },    
+      "StoryTextDay05WWAudioRespond1Line04":{
+         "dialogTitle":"OBJ_NPC_PREPPY",
+         "text":"That's a good point.|I should find a stereo the size of a house.",
+         "align":2
+         },               
+      "StoryTextDay05DenimCountry2Line1":{
+         "dialogTitle":"OBJ_NPC_DANI",
+         "text":"Obviously it's the mall manager who sent that letter.|Who else would know that in advance?|Just confront him already.",
          "align":2
          },
       "StoryTextDay05DenimCountry2Line2":{
-         "dialogTitle":"OBJ_NPC_DANI",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_LISA",
+         "text":"Isn't his office in the basement?|I heard a rumor it's all creepy.|I don't know if I can...",
          "align":2
          },
+      "StoryTextDay05DenimCountry2Line3":{
+         "dialogTitle":"OBJ_NPC_DANI",
+         "text":"I'll just go.|I'm not scared of that loser.",
+         "align":2
+         },         
+      "StoryTextDay05DenimCountry2Line4":{
+         "dialogTitle":"OBJ_NPC_DANI",
+         "text":"Looks like the score is 1:1 this time.|Rematch next year, unless you're doing something better.",
+         "align":2
+         },         
+      "StoryTextDay05DenimCountry2Line5":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"That's the plan.",
+         "align":2
+         },          
       "StoryTextDay05CavernChoice":{
             "dialogTitle":"OBJ_NPC_DB",
-            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "text":"Which one would she like?|{ Want some help?     { I'll leave you to that",
             "formFeed":"FFR",
             "align":2
          },        
       "StoryTextDay05CavernChoice0":{
             "dialogTitle":"OBJ_NPC_DB",
-            "text":"choice 0",
+            "text":"Yeah, that would be great.|My sister thinks games are a waste of time.|There has to be one she'd like.",
             "align":2
          },         
       "StoryTextDay05CavernChoice1":{
             "dialogTitle":"OBJ_NPC_DB",
-            "text":"choice 1",
+            "text":"If you're free later, stop by.",
             "align":2
          },  
       "StoryTextDay05CavernLine1":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"line1.",
+         "text":"What have you tried?",
          "align":2
          },
       "StoryTextDay05CavernLine2":{
          "dialogTitle":"OBJ_NPC_DB",
-         "text":"line2.",
+         "text":"I tried the fighter games, those were a pass.|I already know golf would be out.",
          "align":2
          },  
+      "StoryTextDay05CavernLine3":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"The racing one is alright.",
+         "align":2
+         },         
+      "StoryTextDay05CavernLine4":{
+         "dialogTitle":"OBJ_NPC_DANI",
+         "text":"I see you're both hard at work.",
+         "align":2
+         }, 
+      "StoryTextDay05CavernLine5":{
+         "dialogTitle":"OBJ_NPC_DB",
+         "text":"Hey, try this game over here.",
+         "align":2
+         },        
+      "StoryTextDay05CavernLine6":{
+         "dialogTitle":"OBJ_NPC_DANI",
+         "text":"This again?",
+         "align":2
+         },            
+      "StoryTextDay05CavernLine7":{
+         "dialogTitle":"OBJ_NPC_DANI",
+         "text":"It's kind of blocky.|It's alright I guess.|Am I supposed to drive through that loop?",
+         "align":2
+         },         
+      "StoryTextDay05CavernLine8":{
+         "dialogTitle":"OBJ_NPC_DB",
+         "text":"Yeah.",
+         "align":2
+         },      
+      "StoryTextDay05CavernLine9":{
+         "dialogTitle":"OBJ_NPC_DANI",
+         "text":"Great, now I'm nauseous.|It's not the worst thing I played.",
+         "align":2
+         },
+      "StoryTextDay05CavernLine10":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"It was worth a try.",
+         "align":2
+         },                              
       "StoryTextDay05FCBCampingChoice":{
             "dialogTitle":"OBJ_NPC_GRANT",
-            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "text":"Stopping by to talk?|{ Yeah                { Maybe later",
             "formFeed":"FFR",
             "align":2
          },        
       "StoryTextDay05FCBCampingChoice0":{
             "dialogTitle":"OBJ_NPC_GRANT",
-            "text":"choice 0",
+            "text":"I can't believe how old you are already.|It seems like your oldest brother was born yesterday.|I suppose that's when we fell out of touch.|It's not like we had a falling out.|They were raising a family & I wanted to keep rambling.",
             "align":2
          },         
       "StoryTextDay05FCBCampingChoice1":{
             "dialogTitle":"OBJ_NPC_GRANT",
-            "text":"choice 1",
+            "text":"Anytime.",
             "align":2
          },  
       "StoryTextDay05FCBCampingLine1":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"line1.",
+         "text":"I only remember you coming by a couple times.|Summer cookouts mostly, but I really young.",
          "align":2
          },
       "StoryTextDay05FCBCampingLine2":{
          "dialogTitle":"OBJ_NPC_GRANT",
-         "text":"line2.",
+         "text":"And who remembers their parents friends anyway.|I do miss the old times with them.|But I wouldn't change a thing.",
          "align":2
          },   
       "StoryTextNight05TBooksLine1":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
+         "dialogTitle":"OBJ_NPC_CHARLES",
+         "text":"I really like what you've done with the place.",
          "align":2
          },
       "StoryTextNight05TBooksLine2":{
-         "dialogTitle":"OBJ_NPC_CHARLES",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"Thanks. I didn't change that much though.",
          "align":2
-         },        
+         },       
+      "StoryTextNight05TBooksLine3":{
+         "dialogTitle":"OBJ_NPC_CHARLES",
+         "text":"Still, it's an improvement.|There are things about this job I miss.|And a lot more I don't miss.",
+         "align":2
+         },      
+      "StoryTextNight05TBooksLine4":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I think I understand.",
+         "align":2
+         },           
+      "StoryTextNight05TBooksLine5":{
+         "dialogTitle":"OBJ_NPC_CHARLES",
+         "text":"I won't keep you late.|I've got plans with D.B. and Dani anyway.",
+         "align":2
+         },             
+      "StoryTextNight05TBooksLine6":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"That's right, you're all friends...",
+         "align":2
+         },           
+      "StoryTextNight05TBooksLine7":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"Hey, something weird happened with them last year, right?|I overheard D.B. talking to Jen about it.|Do you know what it was?",
+         "align":2
+         },    
+      "StoryTextNight05TBooksLine8":{
+         "dialogTitle":"OBJ_NPC_CHARLES",
+         "text":"Sorry, you'll have to ask them.",
+         "align":2
+         },                
       "StoryTextNight05CavernLine1":{
          "dialogTitle":"OBJ_NPC_DANI",
-         "text":"line1.",
+         "text":"So you aren't telling anyone about the basement?|It's hardly a secret.",
          "align":2
          },
       "StoryTextNight05CavernLine2":{
          "dialogTitle":"OBJ_NPC_DB",
-         "text":"line2.",
+         "text":"I just want to stay out of it this time.",
          "align":2
-         },        
+         },
+      "StoryTextNight05CavernLine3":{
+         "dialogTitle":"OBJ_NPC_DANI",
+         "text":"So all new friends of yours, they see someone walk in|then disappear in back & you're not saying anything?",
+         "align":2
+         },         
+      "StoryTextNight05CavernLine4":{
+         "dialogTitle":"OBJ_NPC_DB",
+         "text":"That's right, I'm not.",
+         "align":2
+         },   
+      "StoryTextNight05CavernLine5":{
+         "dialogTitle":"OBJ_NPC_DANI",
+         "text":"So what if they know that..",
+         "align":2
+         },                 
+      "StoryTextNight05CavernLine6":{
+         "dialogTitle":"OBJ_NPC_DANI",
+         "text":"Hey new guy. Go ahead, see for yourself.",
+         "align":2
+         },                 
       "StoryTextNight05BasementMDormLine1":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
+         "dialogTitle":"OBJ_NPC_DANI",
+         "text":"This is an old dorm for employees.|When the mall was built in 1975|they had temporary housing built.|There's a kitchen & showers too.|That's Brett.",
          "align":2
          },
       "StoryTextNight05BasementMDormLine2":{
          "dialogTitle":"OBJ_NPC_BRETT",
-         "text":"line2.",
+         "text":"Hi.",
          "align":2
          },        
-      "StoryTextNight05BasementOfficeLine1":{
+      "StoryTextNight05BasementMDormLine3":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
+         "text":"Nice to meet you.",
+         "align":2
+         },   
+      "StoryTextNight05BasementMDormLine4":{
+         "dialogTitle":"OBJ_NPC_DANI",
+         "text":"My brother found him trying to hide at night.|He's homeless, so D.B. told him about this dorm.",
+         "align":2
+         },   
+      "StoryTextNight05BasementMDormLine5":{
+         "dialogTitle":"OBJ_NPC_BRETT",
+         "text":"It's just temporary.|Sorry for running away from you.|I don't want to get caught.",
+         "align":2
+         },                  
+      "StoryTextNight05BasementMDormLine6":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I understand.|I hope things turn around for you.",
+         "align":2
+         },     
+      "StoryTextNight05BasementMDormLine7":{
+         "dialogTitle":"OBJ_NPC_DANI",
+         "text":"The really good stuff is this way.",
+         "align":2
+         },                          
+      "StoryTextNight05BasementOfficeLine1":{
+         "dialogTitle":"OBJ_NPC_DANI",
+         "text":"Look at these losers.|They live down here too.|Working on their fancy mall computer system.",
          "align":2
          },
       "StoryTextNight05BasementOfficeLine2":{
          "dialogTitle":"OBJ_NPC_AL",
-         "text":"line2.",
+         "text":"I told the guard to ban you.",
          "align":2
          }, 
-      "StoryTextNight05SouthHallLine1":{
+      "StoryTextNight05BasementOfficeLine3":{
+         "dialogTitle":"OBJ_NPC_DANI",
+         "text":"No need, I'm not staying long.",
+         "align":2
+         },      
+      "StoryTextNight05BasementOfficeLine4":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
+         "text":"What is all this?",
+         "align":2
+         },  
+      "StoryTextNight05BasementOfficeLine5":{
+         "dialogTitle":"OBJ_NPC_AL",
+         "text":"State of the art computer system that runs the mall.|The climate, lights, musak..",
+         "align":2
+         },        
+      "StoryTextNight05BasementOfficeLine6":{
+         "dialogTitle":"OBJ_NPC_DANI",
+         "text":"The mind control waves.",
          "align":2
          },
-      "StoryTextNight05SouthHallLine2":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+      "StoryTextNight05BasementOfficeLine7":{
+         "dialogTitle":"OBJ_NPC_AL",
+         "text":"We're not controlling anyone's mind.|We're giving shoppers a highly personal experience.",
          "align":2
          },
+      "StoryTextNight05BasementOfficeLine8":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"Highly personal experience?|That sounds like you're messing with their brain.",
+         "align":2
+         },         
+      "StoryTextNight05BasementOfficeLine9":{
+         "dialogTitle":"OBJ_NPC_AL",
+         "text":"No, no, no. You don't understand.|It's just making them remember happier times|so they stay a little longer.|It's not permanent.|We have lawyers you know.",
+         "align":2
+         },         
+      "StoryTextNight05BasementOfficeLine10":{
+         "dialogTitle":"OBJ_NPC_DANI",
+         "text":"This is why I only come once a year.",
+         "align":2
+         },         
+      "StoryTextNight05BasementOfficeLine11":{
+         "dialogTitle":"OBJ_NPC_AL",
+         "text":"Hmph. Gary I think we need to tweek the algorithm.|She's as miserable as ever.",
+         "align":2
+         },      
+      "StoryTextNight05BasementOfficeLine12":{
+         "dialogTitle":"OBJ_NPC_DANI",
+         "text":"I'm happy as ever.",
+         "align":2
+         },            
+      "StoryTextNight05BasementOfficeLine13":{
+         "dialogTitle":"OBJ_NPC_DANI",
+         "text":"I hear you work all day every day.|That can't be good for you.",
+         "align":2
+         },       
+      "StoryTextNight05BasementOfficeLine14":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I don't think it works on me.|I'm not unhappy, but I'm not euphoric.",
+         "align":2
+         },         
+      "StoryTextNight05BasementOfficeLine15":{
+         "dialogTitle":"OBJ_NPC_AL",
+         "text":"It affects everyone differently.",
+         "align":2
+         },        
+      "StoryTextNight05BasementOfficeLine16":{
+         "dialogTitle":"OBJ_NPC_AL",
+         "text":"And it's only getting better.|Don't try to stop us.|Come back in 10 years, I promise you'll be euphoric.",
+         "align":2
+         },           
+      "StoryTextNight05BasementOfficeLine17":{
+         "dialogTitle":"OBJ_NPC_DANI",
+         "text":"No thanks. C'mon Carl.",
+         "align":2
+         },                       
       "StoryTextNight05WWAppliancesChoice":{
             "dialogTitle":"OBJ_NPC_LAURA",
-            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "text":"Hanging around late on xmas eve?|{ Nowhere else to be  { Just leaving",
             "formFeed":"FFR",
             "align":2
          },        
       "StoryTextNight05WWAppliancesChoice0":{
             "dialogTitle":"OBJ_NPC_LAURA",
-            "text":"choice 0",
+            "text":"I know how that goes.|My family is a lot of drama around the holidays.",
             "align":2
          },         
       "StoryTextNight05WWAppliancesChoice1":{
             "dialogTitle":"OBJ_NPC_LAURA",
-            "text":"choice 1",
+            "text":"Have a good night then.",
             "align":2
          },          
       "StoryTextNight05WWAppliancesLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
+         "text":"I'm sorry about that.",
          "align":2
          },
       "StoryTextNight05WWAppliancesLine2":{
          "dialogTitle":"OBJ_NPC_LAURA",
-         "text":"line2.",
+         "text":"It's nothing bad, just the usual.|Everyone gets together, someone drinks too much,|someone is unhappy with their gifts,|someone's kid is overtired & throws a fit.|It's the same for every family.",
          "align":2
          },   
-      "StoryTextNight05CPlanetLine1":{
+      "StoryTextNight05WWAppliancesLine3":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
+         "text":"Not mine, it was just the 4 of us.|We didn't celebrate that much.|One year we didn't even have a tree.",
          "align":2
-         },
+         },  
+      "StoryTextNight05WWAppliancesLine4":{
+         "dialogTitle":"OBJ_NPC_LAURA",
+         "text":"Wow, totally opposite.|Would you want to trade?",
+         "align":2
+         },   
+      "StoryTextNight05WWAppliancesLine5":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I don't think so. It's weird to think about.|Maybe I'd try it one year.|Not sure I'd want to do something big every year.",
+         "align":2
+         },                        
       "StoryTextNight05CPlanetChoice":{
             "dialogTitle":"OBJ_NPC_ELIZA",
-            "text":"Do this event or whatever?|{ Sure                { Maybe later",
+            "text":"What should I bring?|{ Need a hand?        { Good luck",
             "formFeed":"FFR",
             "align":2
          },        
       "StoryTextNight05CPlanetChoice0":{
             "dialogTitle":"OBJ_NPC_ELIZA",
-            "text":"choice 0",
+            "text":"I want to bring some new music to a party.|I'm already late and can't decide.",
             "align":2
          },         
       "StoryTextNight05CPlanetChoice1":{
             "dialogTitle":"OBJ_NPC_ELIZA",
-            "text":"choice 1",
+            "text":"I see how it is.",
             "align":2
          },          
+      "StoryTextNight05CPlanetLine1":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"So it's an xmas party?",
+         "align":2
+         },
       "StoryTextNight05CPlanetLine2":{
          "dialogTitle":"OBJ_NPC_ELIZA",
-         "text":"line2.",
+         "text":"No. Xmas parties are for posers.|This is a party, that happens to be on xmas eve.|It's more like a dark cabaret.. where we listen to xmas music.",
          "align":2
          },       
+      "StoryTextNight05CPlanetLine3":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"So a holiday album?",
+         "align":2
+         },         
+      "StoryTextNight05CPlanetLine4":{
+         "dialogTitle":"OBJ_NPC_ELIZA",
+         "text":"No. More like a punk album.|But with holiday songs.",
+         "align":2
+         },       
+      "StoryTextNight05CPlanetLine5":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I don't think I can help this time.",
+         "align":2
+         },   
+      "StoryTextNight05CPlanetLine6":{
+         "dialogTitle":"OBJ_NPC_ELIZA",
+         "text":"That's OK.|Say Carl, how'd you like to tag along?",
+         "align":2
+         },        
+      "StoryTextNight05CPlanetLine7":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I don't think I'd fit in.|Besides, I'm coming in early tomorrow.|With the mall closed I can take inventory.|That's a 12-hour job.",
+         "align":2
+         },      
+      "StoryTextNight05CPlanetLine8":{
+         "dialogTitle":"OBJ_NPC_ELIZA",
+         "text":"Whatever does it for you.",
+         "align":2
+         },                              
       "StoryTextDay06DemimCountryLine1":{
-         "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"line1.",
+         "dialogTitle":"OBJ_NPC_LISA",
+         "text":"I can't believe it's your last day already.",
          "align":2
          },
       "StoryTextDay06DemimCountryLine2":{
-         "dialogTitle":"OBJ_NPC_LISA",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"I can.",
          "align":2
          },     
-      "StoryTextDay06NShackLine1":{
+      "StoryTextDay06DemimCountryLine3":{
+         "dialogTitle":"OBJ_NPC_LISA",
+         "text":"Yeah, you're just xmas help.|What will I do after we close?",
+         "align":2
+         },
+      "StoryTextDay06DemimCountryLine4":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"line1.",
+         "text":"...|(sigh)|Have you considered the letter was wrong?",
+         "align":2
+         },     
+      "StoryTextDay06DemimCountryLine5":{
+         "dialogTitle":"OBJ_NPC_LISA",
+         "text":"I have. We never found the sender.",
+         "align":2
+         },     
+      "StoryTextDay06DemimCountryLine6":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"(please don't send me to look again)",
+         "align":2
+         },              
+      "StoryTextDay06DemimCountryLine7":{
+         "dialogTitle":"OBJ_NPC_LISA",
+         "text":"Eryn..",
+         "align":2
+         },     
+      "StoryTextDay06DemimCountryLine8":{
+         "dialogTitle":"OBJ_NPC_LISA",
+         "text":"Jen stopped by earlier.|She said she has a parting gift for you.|Go ahead and leave early.|Thanks for everything.",
+         "align":2
+         },        
+      "StoryTextDay06DemimCountryLine9":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"(relieved expression)",
+         "align":2
+         },             
+      "StoryTextDay06NShackLine1":{
+         "dialogTitle":"OBJ_NPC_JEN",
+         "text":"Sorry to see you leave so soon.",
          "align":2
          },
       "StoryTextDay06NShackLine2":{
-         "dialogTitle":"OBJ_NPC_JEN",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"It's OK.",
          "align":2
          },                                                                                                                                                                          
-      "StoryTextDay06CavernLine1":{
+      "StoryTextDay06NShackLine3":{
+         "dialogTitle":"OBJ_NPC_JEN",
+         "text":"I got you a little going away gift.",
+         "align":2
+         },
+      "StoryTextDay06NShackLine4":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"line1.",
+         "text":"Thanks...|It's a necklace, what does the charm on it mean.",
+         "align":2
+         },         
+      "StoryTextDay06NShackLine5":{
+         "dialogTitle":"OBJ_NPC_JEN",
+         "text":"It's just something I relate to. Maybe you will too.|It symbolizes the endless cycle of death & rebirth.",
+         "align":2
+         },     
+      "StoryTextDay06NShackLine6":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"That's a little grim.",
+         "align":2
+         },        
+      "StoryTextDay06NShackLine7":{
+         "dialogTitle":"OBJ_NPC_JEN",
+         "text":"Not at all, take this mall for example...",
+         "align":2
+         },                                                                                                                                                                                 
+      "StoryTextDay06CavernLine1":{
+         "dialogTitle":"OBJ_NPC_DB",
+         "text":"I heard it's your last day.",
          "align":2
          },
       "StoryTextDay06CavernLine2":{
-         "dialogTitle":"OBJ_NPC_DB",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"People gossip too much here.",
          "align":2
          },  
+      "StoryTextDay06CavernLine3":{
+         "dialogTitle":"OBJ_NPC_DB",
+         "text":"The mall is some people's whole life.",
+         "align":2
+         },
+      "StoryTextDay06CavernLine4":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"The last 2 months have been enough for me.|I'll work outdoors for summer break.",
+         "align":2
+         },        
+      "StoryTextDay06CavernLine5":{
+         "dialogTitle":"OBJ_NPC_DB",
+         "text":"I did that last summer... didn't turn out great.|I've got one year until college left.|I'll stick it out here.",
+         "align":2
+         },      
+      "StoryTextDay06CavernLine6":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"In the arcade?",
+         "align":2
+         },      
+      "StoryTextDay06CavernLine7":{
+         "dialogTitle":"OBJ_NPC_DB",
+         "text":"It's at least interesting.|Plus I think the machines block.. nevermind.",
+         "align":2
+         },                       
+      "StoryTextDay06CavernLine8":{
+         "dialogTitle":"OBJ_NPC_DB",
+         "text":"Anyway, it's just one more year.|What can possibly happen?",
+         "align":2
+         },     
+      "StoryTextDay06CavernLine9":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"Probably nothing.",
+         "align":2
+         },     
+      "StoryTextDay06CavernLine10":{
+         "dialogTitle":"OBJ_NPC_DB",
+         "text":"If you do ever come back here, stop by.|Maybe we'll have something new next year.",
+         "align":2
+         },                  
       "StoryTextDay06SVideoLine1":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"line1.",
+         "text":"Just saying bye on my way out.",
          "align":2
          },
       "StoryTextDay06SVideoLine2":{
          "dialogTitle":"OBJ_NPC_NICKY",
-         "text":"line2.",
+         "text":"You were only seasonal help?",
          "align":2
          },        
+      "StoryTextDay06SVideoLine3":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"Yeah, and I'm not working again until summer break.",
+         "align":2
+         },
+      "StoryTextDay06SVideoLine4":{
+         "dialogTitle":"OBJ_NPC_NICKY",
+         "text":"That's too bad, you're the only person I know here.|Story of my life...",
+         "align":2
+         },        
+      "StoryTextDay06SVideoLine5":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"What do you mean?",
+         "align":2
+         },       
+      "StoryTextDay06SVideoLine6":{
+         "dialogTitle":"OBJ_NPC_NICKY",
+         "text":"My family moves all the time.|I'm always the 'new girl'.",
+         "align":2
+         },      
+      "StoryTextDay06SVideoLine7":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"Is that tough?",
+         "align":2
+         },
+      "StoryTextDay06SVideoLine8":{
+         "dialogTitle":"OBJ_NPC_NICKY",
+         "text":"Sometimes, it depends on the town or school.|This stop is a bad one.|I just go to school & work on the weekend.|I haven't made any friends.|It's OK, I'm sure we'll be somewhere else next year.",
+         "align":2
+         },        
+      "StoryTextDay06SVideoLine9":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"Sorry, I hope the next town is better.",
+         "align":2
+         },      
+      "StoryTextDay06SVideoLine10":{
+         "dialogTitle":"OBJ_NPC_NICKY",
+         "text":"Thanks, I hope so too.",
+         "align":2
+         },                  
       "StoryTextDay06FCBCampingLine1":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"line1.",
+         "text":"Hey, I'm heading out.",
          "align":2
          },
       "StoryTextDay06FCBCampingLine2":{
          "dialogTitle":"OBJ_NPC_GRANT",
-         "text":"line2.",
+         "text":"It was nice seeing you again.|Tell your parents I said hi.",
          "align":2
          },  
+      "StoryTextDay06FCBCampingLine3":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"OK.",
+         "align":2
+         },       
+      "StoryTextDay06FCBCampingLine4":{
+         "dialogTitle":"OBJ_NPC_GRANT",
+         "text":"I can't help but wonder how life would be|if I decided to settle down too.|Maybe you'd be friends with my kid.",
+         "align":2
+         },      
+      "StoryTextDay06FCBCampingLine5":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"Maybe.",
+         "align":2
+         },    
+      "StoryTextDay06FCBCampingLine6":{
+         "dialogTitle":"OBJ_NPC_GRANT",
+         "text":"It's not for me though.|I miss my old friends, but I enjoy my freedom.|I think I'll quit this job in summer,|spend a couple months hiking & camping.",
+         "align":2
+         },      
+      "StoryTextDay06FCBCampingLine7":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"That sounds alright.",
+         "align":2
+         },      
+      "StoryTextDay06FCBCampingLine8":{
+         "dialogTitle":"OBJ_NPC_GRANT",
+         "text":"It is, and I wouldn't trade it.|That's my only advice for you,|just do what makes you happy in life.",
+         "align":2
+         },                             
       "StoryTextDay06EnterNShackChoice":{
          "dialogTitle":"OBJ_NPC_ERYN",
          "text":"Is there anyone else I need to see first?|{ Yeah                { Nope       ",
@@ -2314,54 +3074,249 @@
          },              
       "StoryTextNight06TBooksLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
+         "text":"And that's really all there is.",
          "align":2
          },
       "StoryTextNight06TBooksLine2":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_NELSON",
+         "text":"Thanks for the crash course.|This isn't very different than my old location.",
          "align":2
-         },        
+         },    
+      "StoryTextNight06TBooksLine3":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"They're all organized about the same.|And the registers are the same.|Learning the regular customers is the most work.",
+         "align":2
+         },       
+      "StoryTextNight06TBooksLine4":{
+         "dialogTitle":"OBJ_NPC_NELSON",
+         "text":"They all seem fine so far.|I'm curious about one thing though, if you don't mind..",
+         "align":2
+         },    
+      "StoryTextNight06TBooksLine5":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"Go ahead.",
+         "align":2
+         },    
+      "StoryTextNight06TBooksLine6":{
+         "dialogTitle":"OBJ_NPC_NELSON",
+         "text":"I was surprised when they offered me this promotion.|I'd been an assistant at my store for only 1 year.|Why did you turn down the manager job here?",
+         "align":2
+         },
+      "StoryTextNight06TBooksLine7":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I thought about it, a lot.|I'd rather work at the city location again.|Even if I'm stuck as an assistant.|I like how busy it is, time flies there.",
+         "align":2
+         },    
+      "StoryTextNight06TBooksLine8":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"(How many years has it been anyway?)",
+         "align":2
+         },    
+      "StoryTextNight06TBooksLine9":{
+         "dialogTitle":"OBJ_NPC_NELSON",
+         "text":"Well I already like it here.|No changing your mind.",
+         "align":2
+         },      
+      "StoryTextNight06TBooksLine10":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I won't. If you have everything under control do you mind if I leave? There are a few people I want to see before it's too late.",
+         "align":2
+         },          
+      "StoryTextNight06TBooksLine11":{
+         "dialogTitle":"OBJ_NPC_NELSON",
+         "text":"No problem. I'll take care of closing.",
+         "align":2
+         },                                                
       "StoryTextNight06BasementKitchenLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
+         "text":"I'll try once more before I go,|how can I help you?",
          "align":2
          },
       "StoryTextNight06BasementKitchenLine2":{
          "dialogTitle":"OBJ_NPC_BRETT",
-         "text":"line2.",
+         "text":"I'm fine. About to leave too.",
          "align":2
-         },      
+         },   
+      "StoryTextNight06BasementKitchenLine3":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"Oh.",
+         "align":2
+         },            
+      "StoryTextNight06BasementKitchenLine4":{
+         "dialogTitle":"OBJ_NPC_BRETT",
+         "text":"I got a lead on some construction work.|I'm catching a late train tonight.",
+         "align":2
+         },   
+      "StoryTextNight06BasementKitchenLine5":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"So it's out of town?",
+         "align":2
+         },     
+      "StoryTextNight06BasementKitchenLine6":{
+         "dialogTitle":"OBJ_NPC_BRETT",
+         "text":"Yeah, I'll staying in a trailer at first.|The pay is good so it won't be long.",
+         "align":2
+         },     
+      "StoryTextNight06BasementKitchenLine7":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"Sounds great, safe travels.",
+         "align":2
+         },    
+      "StoryTextNight06BasementKitchenLine8":{
+         "dialogTitle":"OBJ_NPC_BRETT",
+         "text":"Hey, one thing.|I overhear those guys in the office.|I don't understand what they're up to.|But I don't think you should come back.",
+         "align":2
+         },  
+      "StoryTextNight06BasementKitchenLine9":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I don't think I will.|This mall is fine, but I won't be in the area again.",
+         "align":2
+         },  
+      "StoryTextNight06BasementKitchenLine10":{
+         "dialogTitle":"OBJ_NPC_BRETT",
+         "text":"I don't know about that.",
+         "align":2
+         },           
       "StoryTextNight06WWAppliancesLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
+         "text":"Just wanted to say goodbye.|I'm going back to my old store.",
          "align":2
          },
       "StoryTextNight06WWAppliancesLine2":{
          "dialogTitle":"OBJ_NPC_LAURA",
-         "text":"line2.",
+         "text":"That's too bad. Who will help us out at night now?",
          "align":2
          },    
+      "StoryTextNight06WWAppliancesLine3":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"Flattered, but you'll be fine.",
+         "align":2
+         },         
+      "StoryTextNight06WWAppliancesLine4":{
+         "dialogTitle":"OBJ_NPC_LAURA",
+         "text":"Your store is in the city, right?",
+         "align":2
+         },          
+      "StoryTextNight06WWAppliancesLine5":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"Yeah, we're in the tower mall.",
+         "align":2
+         },     
+      "StoryTextNight06WWAppliancesLine6":{
+         "dialogTitle":"OBJ_NPC_LAURA",
+         "text":"I've never seen it. I heard it's 8 stories tall.",
+         "align":2
+         },           
+      "StoryTextNight06WWAppliancesLine7":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"The mall part is 8 stories.|The entire building is over 70.",
+         "align":2
+         },       
+      "StoryTextNight06WWAppliancesLine8":{
+         "dialogTitle":"OBJ_NPC_LAURA",
+         "text":"Maybe I'll pay a visit then.|It sounds like a fun trip.",
+         "align":2
+         },      
+      "StoryTextNight06WWAppliancesLine9":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I'll keep an eye out for you.",
+         "align":2
+         },                        
       "StoryTextNight06CPlanetLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
+         "text":"Sorry, bad news. It's my last day here.|I'm going back to my store in the city.",
          "align":2
          },
       "StoryTextNight06CPlanetLine2":{
          "dialogTitle":"OBJ_NPC_ELIZA",
-         "text":"line2.",
+         "text":"Aw, who am I going to torment now?",
+         "align":2
+         },   
+      "StoryTextNight06CPlanetLine3":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I'm sure you'll find someone.",
+         "align":2
+         },       
+      "StoryTextNight06CPlanetLine4":{
+         "dialogTitle":"OBJ_NPC_ELIZA",
+         "text":"Seriously, you need to loosen up.|The city is no place for normal people.|How do you get by there?",
+         "align":2
+         },
+      "StoryTextNight06CPlanetLine5":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I work most of the time.",
+         "align":2
+         },
+      "StoryTextNight06CPlanetLine6":{
+         "dialogTitle":"OBJ_NPC_ELIZA",
+         "text":"There's your problem.|You're surrounded by a big city,|tons of weird interesting people,|there are all kinds of fringe stores & clubs,|and you're just working all the time.|Go try something that makes you uncomfortable.",
          "align":2
          },     
-      "StoryTextNight06VBLine1":{
+      "StoryTextNight06CPlanetLine7":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
+         "text":"I'm fine like this, really.",
+         "align":2
+         },
+      "StoryTextNight06CPlanetLine8":{
+         "dialogTitle":"OBJ_NPC_ELIZA",
+         "text":"Just try once, see what happens.",
+         "align":2
+         },
+      "StoryTextNight06CPlanetLine9":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I'll think about it.",
+         "align":2
+         },         
+      "StoryTextNight06VBLine1":{
+         "dialogTitle":"OBJ_NPC_GRUNBERG",
+         "text":"It looks like you've got a new guy there.",
          "align":2
          },
       "StoryTextNight06VBLine2":{
-         "dialogTitle":"OBJ_NPC_GRUNBERG",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"He's my replacement, a permanent store manager.|I'm going back to the city location.",
          "align":2
          },
+      "StoryTextNight06VBLine3":{
+         "dialogTitle":"OBJ_NPC_GRUNBERG",
+         "text":"And I was just about to ask you if you wanted to work here.",
+         "align":2
+         },      
+      "StoryTextNight06VBLine4":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"Really?",
+         "align":2
+         },   
+      "StoryTextNight06VBLine5":{
+         "dialogTitle":"OBJ_NPC_GRUNBERG",
+         "text":"I'm going to retire soon.|We already picked out a place up north.|I'm not going to leave the company dry though.|I want to find & train my replacement first.",
+         "align":2
+         },    
+      "StoryTextNight06VBLine6":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I appreciate the consideration.|But I'd rather be in the city.",
+         "align":2
+         },       
+      "StoryTextNight06VBLine7":{
+         "dialogTitle":"OBJ_NPC_GRUNBERG",
+         "text":"I understand. Back to square one for me.",
+         "align":2
+         },
+      "StoryTextNight06VBLine8":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"Maybe you can convert one of the regulars.|That's how it all started for me.|I was a bookworm, now I work there.",
+         "align":2
+         },       
+      "StoryTextNight06VBLine9":{
+         "dialogTitle":"OBJ_NPC_GRUNBERG",
+         "text":"That's a possibility.|Well best wishes Carl, it's been good talking to you.",
+         "align":2
+         },        
+      "StoryTextNight06VBLine10":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"Same to you.|And early congratulations on retiring.",
+         "align":2
+         },                                 
       "StoryTextEndGoodLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
          "text":"line1.",

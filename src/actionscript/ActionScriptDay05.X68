@@ -242,4 +242,5 @@ EndDay05SetupGameState: ; separated to help with debugging
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsNight ; reset the NPC locations
 	move.l	#$0D000000,(MEM_NPC_LOCATION_TBOOKS)	
+	move.l	#$0F100000,(MEM_NPC_LOCATION_CAVERN) ; db and dani are both in the cavern	
 	rts		

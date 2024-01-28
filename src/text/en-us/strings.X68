@@ -1600,9 +1600,9 @@ TitleScreenTextLoadGame:
 TitleScreenTextDebug:
 	dc.b	"{Debug",ETX
 TitleScreenTextTitle:
-	dc.b	"Dec23 Dev Build",ETX
+	dc.b	"Jan24 Dev Build",ETX
 TitleScreenTextTitleDebug:
-	dc.b	"Dec23 Debug Build",ETX
+	dc.b	"Jan24 Debug Build",ETX
 
 ;-------------------------------------------------------------------------------
 ; DebugScreen
@@ -6282,279 +6282,431 @@ StoryTextTradingSequenceFCBFishing:
 	align 2
 StoryTextTradingSequenceFCBFishingAfter:
 	dc.w	OBJ_NPC_HEATHER
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence     ^",FF
-	dc.b	"happened",ETX
-	align 2
-StoryTextTradingSequenceFCBFirearmsBefore:
-	dc.w	OBJ_NPC_RANDY
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence is  ^",FF
-	dc.b	"available but before",LF
-	dc.b	"it happened",ETX
+	dc.b	"Be careful with those",LF
+	dc.b	"handwarmers.         ^",FF
+	dc.b	"They were recalled.",ETX
 	align 2
 StoryTextTradingSequenceFCBFirearms:
 	dc.w	OBJ_NPC_RANDY
-	dc.b	"thanks for that item,",LF
-	dc.b	"here's this item",ETX
+	dc.b	"That's the only tape",LF
+	dc.b	"in the series I'm    ^",FF
+	dc.b	"missing.",LF
+	dc.b	"Do you mind trading? ^",FF
+	dc.b	"I can give you this",LF
+	dc.b	"moose attractant.    ^",FF
+	dc.b	"I already shot one.",ETX
 	align 2
 StoryTextTradingSequenceFCBFirearmsAfter:
 	dc.w	OBJ_NPC_RANDY
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence     ^",FF
-	dc.b	"happened",ETX
+	dc.b	"That moose photo is",LF
+	dc.b	"one of my best shots.^",FF
+	dc.b	"I'm thinking of",LF
+	dc.b	"making a photography ^",FF
+	dc.b	"book.",ETX
 	align 2
 StoryTextTradingSequenceWWAppliancesBefore:
 	dc.w	OBJ_NPC_LAURA
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence is  ^",FF
-	dc.b	"available but before",LF
-	dc.b	"it happened",ETX
+	dc.b	"The worst part of",LF
+	dc.b	"working here is      ^",FF
+	dc.b	"parking.",LF
+	dc.b	"They won't let us    ^",FF
+	dc.b	"park near the door.",LF
+	dc.b	"So we have to walk   ^",FF
+	dc.b	"forever at night in",LF
+	dc.b	"the cold.",ETX
 	align 2
 StoryTextTradingSequenceWWAppliances:
 	dc.w	OBJ_NPC_LAURA
-	dc.b	"thanks for that item,",LF
-	dc.b	"here's this item",ETX
+	dc.b	"You're giving me",LF
+	dc.b	"these handwarmers?   ^",FF
+	dc.b	"Thanks!",LF
+	dc.b	"Let me give you this ^",FF
+	dc.b	"lipstick.",LF
+	dc.b	"It's brand new. It's ^",FF
+	dc.b	"not my color.",LF
+	dc.b	"The guy who gave it  ^",FF
+	dc.b	"me, I think he's",LF
+	dc.b	"seeing someone else  ^",FF
+	dc.b	"anyway.",ETX
 	align 2
 StoryTextTradingSequenceWWAppliancesAfter:
 	dc.w	OBJ_NPC_LAURA
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence     ^",FF
-	dc.b	"happened",ETX
+	dc.b	"Thanks again.",LF
+	dc.b	"Be smart, stay away  ^",FF
+	dc.b	"from guys like that.",ETX
 	align 2
 StoryTextTradingSequenceCheckersBefore:
 	dc.w	OBJ_NPC_TODD
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence is  ^",FF
-	dc.b	"available but before",LF
-	dc.b	"it happened",ETX
+	dc.b	"My new years party is",LF
+	dc.b	"coming up.           ^",FF
+	dc.b	"I need something to",LF
+	dc.b	"help draw in the     ^",FF
+	dc.b	"ladies.",ETX
 	align 2
 StoryTextTradingSequenceCheckers:
 	dc.w	OBJ_NPC_TODD
-	dc.b	"thanks for that item,",LF
-	dc.b	"here's this item",ETX
+	dc.b	"What is that? Some",LF
+	dc.b	"new kind of cologne? ^",FF
+	dc.b	"I'd be happy to trade",LF
+	dc.b	"for it.              ^",FF
+	dc.b	"All I have is this",LF
+	dc.b	"shirt we have to get ^",FF
+	dc.b	"rid of.",LF
+	dc.b	"It's a small size.   ^",FF
+	dc.b	"And we have a new",LF
+	dc.b	"store policy to only ^",FF
+	dc.b	"sell clothes to",LF
+	dc.b	"people over 6ft.     ^",FF
+	dc.b	"Sorry if it's not",LF
+	dc.b	"your size.",ETX
 	align 2
 StoryTextTradingSequenceCheckersAfter:
 	dc.w	OBJ_NPC_TODD
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence     ^",FF
-	dc.b	"happened",ETX
+	dc.b	"No one under 6ft",LF
+	dc.b	"allowed.             ^",FF
+	dc.b	"It's a weird policy",LF
+	dc.b	"but I don't make the ^",FF
+	dc.b	"rules.",ETX
 	align 2
 StoryTextTradingSequenceCPlanetBefore:
 	dc.w	OBJ_NPC_ELIZA
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence is  ^",FF
-	dc.b	"available but before",LF
-	dc.b	"it happened",ETX
+	dc.b	"I could use something",LF
+	dc.b	"to freshen-up my look.",ETX
 	align 2
 StoryTextTradingSequenceCPlanet:
 	dc.w	OBJ_NPC_ELIZA
-	dc.b	"thanks for that item,",LF
-	dc.b	"here's this item",ETX
+	dc.b	"Hey, that is a",LF
+	dc.b	"different color      ^",FF
+	dc.b	"lipstick.",LF
+	dc.b	"Do you like          ^",FF
+	dc.b	"underground bands?",LF
+	dc.b	"We've giving away    ^",FF
+	dc.b	"tickets for show next",LF
+	dc.b	"month.               ^",FF
+	dc.b	"Take a pair with you.",ETX
 	align 2
 StoryTextTradingSequenceCPlanetAfter:
 	dc.w	OBJ_NPC_ELIZA
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence     ^",FF
-	dc.b	"happened",ETX
+	dc.b	"I can't wait for the",LF
+	dc.b	"concert next month.",ETX
 	align 2
 StoryTextTradingSequenceWWAudioBefore:
 	dc.w	OBJ_NPC_CRAIG
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence is  ^",FF
-	dc.b	"available but before",LF
-	dc.b	"it happened",ETX
+	dc.b	"The worst part of",LF
+	dc.b	"working here is the  ^",FF
+	dc.b	"dress code.",LF
+	dc.b	"I only have one shirt^",FF
+	dc.b	"that qualfies.",LF
+	dc.b	"I'm doing laundy     ^",FF
+	dc.b	"every day.",ETX
 	align 2
 StoryTextTradingSequenceWWAudio:
 	dc.w	OBJ_NPC_CRAIG
-	dc.b	"thanks for that item,",LF
-	dc.b	"here's this item",ETX
+	dc.b	"That is my size,",LF
+	dc.b	"thanks.              ^",FF
+	dc.b	"I'll give you this in",LF
+	dc.b	"exchange.            ^",FF
+	dc.b	"It's a headband",LF
+	dc.b	"radio. I guess for   ^",FF
+	dc.b	"running.",LF
+	dc.b	"We just discontined  ^",FF
+	dc.b	"it.",ETX
 	align 2
 StoryTextTradingSequenceWWAudioAfter:
 	dc.w	OBJ_NPC_CRAIG
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence     ^",FF
-	dc.b	"happened",ETX
+	dc.b	"Thanks for the shirt.",ETX
 	align 2
 StoryTextTradingSequenceWWVideoBefore:
 	dc.w	OBJ_NPC_JUAN
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence is  ^",FF
-	dc.b	"available but before",LF
-	dc.b	"it happened",ETX
+	dc.b	"This town is so",LF
+	dc.b	"boring.              ^",FF
+	dc.b	"I wish there was",LF
+	dc.b	"anything to do.",ETX
 	align 2
 StoryTextTradingSequenceWWVideo:
 	dc.w	OBJ_NPC_JUAN
-	dc.b	"thanks for that item,",LF
-	dc.b	"here's this item",ETX
+	dc.b	"You're giving me",LF
+	dc.b	"these concert        ^",FF
+	dc.b	"tickets?",LF
+	dc.b	"I haven't heard of   ^",FF
+	dc.b	"them but it's worth a",LF
+	dc.b	"try.                 ^",FF
+	dc.b	"Take this portable TV",LF
+	dc.b	"demo unit.           ^",FF
+	dc.b	"I have to take it",LF
+	dc.b	"down anyway.         ^",FF
+	dc.b	"It's cool but only",LF
+	dc.b	"gets one station in  ^",FF
+	dc.b	"here.",ETX
 	align 2
 StoryTextTradingSequenceWWVideoAfter:
 	dc.w	OBJ_NPC_JUAN
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence     ^",FF
-	dc.b	"happened",ETX
+	dc.b	"I hope this band is",LF
+	dc.b	"good.",ETX
 	align 2
 StoryTextTradingSequenceTLodgeBefore:
 	dc.w	OBJ_NPC_SCOTT
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence is  ^",FF
-	dc.b	"available but before",LF
-	dc.b	"it happened",ETX
+	dc.b	"I don't think there's",LF
+	dc.b	"a gadget we don't    ^",FF
+	dc.b	"sell.",ETX
 	align 2
 StoryTextTradingSequenceTLodge:
 	dc.w	OBJ_NPC_SCOTT
-	dc.b	"thanks for that item,",LF
-	dc.b	"here's this item",ETX
+	dc.b	"Is that a headband",LF
+	dc.b	"radio?               ^",FF
+	dc.b	"I thought we had",LF
+	dc.b	"everything.          ^",FF
+	dc.b	"That is so useless &",LF
+	dc.b	"tacky, can I trade   ^",FF
+	dc.b	"for it?",LF
+	dc.b	"I'll give you this   ^",FF
+	dc.b	"car radio FM",LF
+	dc.b	"converter.           ^",FF
+	dc.b	"It's also totally",LF
+	dc.b	"useless.",ETX
 	align 2
 StoryTextTradingSequenceTLodgeAfter:
 	dc.w	OBJ_NPC_SCOTT
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence     ^",FF
-	dc.b	"happened",ETX
+	dc.b	"Seriously, who drives",LF
+	dc.b	"a car without an FM  ^",FF
+	dc.b	"radio now?",ETX
 	align 2
 StoryTextTradingSequenceCNowBefore:
 	dc.w	OBJ_NPC_BECKY
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence is  ^",FF
-	dc.b	"available but before",LF
-	dc.b	"it happened",ETX
+	dc.b	"My parents just gave",LF
+	dc.b	"me their old         ^",FF
+	dc.b	"mini-van.",LF
+	dc.b	"It runs OK, but it's ^",FF
+	dc.b	"so ancient.",ETX
 	align 2
 StoryTextTradingSequenceCNow:
 	dc.w	OBJ_NPC_BECKY
-	dc.b	"thanks for that item,",LF
-	dc.b	"here's this item",ETX
+	dc.b	"Wow, I bet that will",LF
+	dc.b	"work in my car.      ^",FF
+	dc.b	"It would be nice to",LF
+	dc.b	"have something to    ^",FF
+	dc.b	"listen to while I'm",LF
+	dc.b	"waiting for that old ^",FF
+	dc.b	"van to warm up.",LF
+	dc.b	"Speaking of ancient  ^",FF
+	dc.b	"junk from the 70s...",LF
+	dc.b	"Take this flannel    ^",FF
+	dc.b	"shirt.",LF
+	dc.b	"I don't know why they^",FF
+	dc.b	"keep shipping them.",LF
+	dc.b	"They'll never be in  ^",FF
+	dc.b	"style.",ETX
 	align 2
 StoryTextTradingSequenceCNowAfter:
 	dc.w	OBJ_NPC_BECKY
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence     ^",FF
-	dc.b	"happened",ETX
+	dc.b	"Thanks again, it's",LF
+	dc.b	"nice to have         ^",FF
+	dc.b	"something to listen",LF
+	dc.b	"to.                  ^",FF
+	dc.b	"Last night there was",LF
+	dc.b	"show about..         ^",FF
+	dc.b	"[30 minutes later]",LF
+	dc.b	"...and they still    ^",FF
+	dc.b	"haven't found him.",ETX
 	align 2
 StoryTextTradingSequenceFCBCheckoutBefore:
 	dc.w	OBJ_NPC_THOMAS
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence is  ^",FF
-	dc.b	"available but before",LF
-	dc.b	"it happened",ETX
+	dc.b	"Everyone is done",LF
+	dc.b	"shopping for xmas,   ^",FF
+	dc.b	"it's totally dead",LF
+	dc.b	"here, I'm more bored ^",FF
+	dc.b	"than usual.",ETX
 	align 2
 StoryTextTradingSequenceFCBCheckout:
 	dc.w	OBJ_NPC_THOMAS
-	dc.b	"thanks for that item,",LF
-	dc.b	"here's this item",ETX
+	dc.b	"You're giving me this",LF
+	dc.b	"TV?                  ^",FF
+	dc.b	"At least it's",LF
+	dc.b	"something to do.     ^",FF
+	dc.b	"Am I supposed to give",LF
+	dc.b	"you something in     ^",FF
+	dc.b	"return?",LF
+	dc.b	"Here's a coupon we   ^",FF
+	dc.b	"give to angry",LF
+	dc.b	"customers.           ^",FF
+	dc.b	"It's good for 10% off",LF
+	dc.b	"any non-sale item,   ^",FF
+	dc.b	"good on weekdays in",LF
+	dc.b	"February only.",ETX
 	align 2
 StoryTextTradingSequenceFCBCheckoutAfter:
 	dc.w	OBJ_NPC_THOMAS
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence     ^",FF
-	dc.b	"happened",ETX
+	dc.b	"Is this the only",LF
+	dc.b	"station it gets?",ETX
 	align 2
 StoryTextTradingSequenceWWCheckoutBefore:
 	dc.w	OBJ_NPC_TANYA
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence is  ^",FF
-	dc.b	"available but before",LF
-	dc.b	"it happened",ETX
+	dc.b	"I wonder what we can",LF
+	dc.b	"do to get some after ^",FF
+	dc.b	"holiday shoppers?",ETX
 	align 2
 StoryTextTradingSequenceWWCheckout:
 	dc.w	OBJ_NPC_TANYA
-	dc.b	"thanks for that item,",LF
-	dc.b	"here's this item",ETX
+	dc.b	"That coupon is a",LF
+	dc.b	"really good idea.    ^",FF
+	dc.b	"Can I take it to show",LF
+	dc.b	"to my manager?       ^",FF
+	dc.b	"I'll give you these",LF
+	dc.b	"LPs in return.       ^",FF
+	dc.b	"They got mixed-in",LF
+	dc.b	"with some laserdiscs.^",FF
+	dc.b	"I don't know if",LF
+	dc.b	"anyone will want LPs ^",FF
+	dc.b	"again though.",ETX
 	align 2
 StoryTextTradingSequenceWWCheckoutAfter:
 	dc.w	OBJ_NPC_TANYA
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence     ^",FF
-	dc.b	"happened",ETX
+	dc.b	"Thanks again for the",LF
+	dc.b	"coupon idea.",ETX
 	align 2
 StoryTextTradingSequenceFCBCampingBefore:
 	dc.w	OBJ_NPC_GRANT
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence is  ^",FF
-	dc.b	"available but before",LF
-	dc.b	"it happened",ETX
+	dc.b	"This place always",LF
+	dc.b	"takes me back to my  ^",FF
+	dc.b	"youth.",LF
+	dc.b	"You were too young,  ^",FF
+	dc.b	"you don't know what",LF
+	dc.b	"you missed out on.",ETX
 	align 2
 StoryTextTradingSequenceFCBCamping:
 	dc.w	OBJ_NPC_GRANT
-	dc.b	"thanks for that item,",LF
-	dc.b	"here's this item",ETX
+	dc.b	"You need to unload",LF
+	dc.b	"that flannel shirt?  ^",FF
+	dc.b	"I won't complain",LF
+	dc.b	"about taking it.     ^",FF
+	dc.b	"I'll give you this",LF
+	dc.b	"utility knife in     ^",FF
+	dc.b	"return.",LF
+	dc.b	"Be careful with it.",ETX
 	align 2
 StoryTextTradingSequenceFCBCampingAfter:
 	dc.w	OBJ_NPC_GRANT
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence     ^",FF
-	dc.b	"happened",ETX
+	dc.b	"That knife has over a",LF
+	dc.b	"dozen uses.",ETX
 	align 2
 StoryTextTradingSequencePogoDawgBefore:
 	dc.w	OBJ_NPC_GRIFFY
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence is  ^",FF
-	dc.b	"available but before",LF
-	dc.b	"it happened",ETX
+	dc.b	"Have you ever... uh.",LF
+	dc.b	"Have you ever...     ^",FF
+	dc.b	"wait.",LF
+	dc.b	"The thing with the   ^",FF
+	dc.b	"movie and album.",LF
+	dc.b	"You know, the thing?",ETX
 	align 2
 StoryTextTradingSequencePogoDawg:
 	dc.w	OBJ_NPC_GRIFFY
-	dc.b	"thanks for that item,",LF
-	dc.b	"here's this item",ETX
+	dc.b	"Is that the, uh,",LF
+	dc.b	"what's is called?    ^",FF
+	dc.b	"...record...",LF
+	dc.b	"Is that the, uh,     ^",FF
+	dc.b	"record with the",LF
+	dc.b	"movie?               ^",FF
+	dc.b	"You know, the thing",LF
+	dc.b	"with the movie and   ^",FF
+	dc.b	"album.",LF
+	dc.b	"Like you, um, play   ^",FF
+	dc.b	"them together or...",LF
+	dc.b	"Can I have that?     ^",FF
+	dc.b	"I'll give this,",LF
+	dc.b	"what's it called?    ^",FF
+	dc.b	"This, uh, package.",LF
+	dc.b	"The, uh, yeah, the   ^",FF
+	dc.b	"delivery guy left it",LF
+	dc.b	"here.                ^",FF
+	dc.b	"When the, what's it",LF
+	dc.b	"called? Ambulance    ^",FF
+	dc.b	"took him.",ETX
 	align 2
 StoryTextTradingSequencePogoDawgAfter:
 	dc.w	OBJ_NPC_GRIFFY
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence     ^",FF
-	dc.b	"happened",ETX
+	dc.b	"Uh... is there, yeah,",LF
+	dc.b	"uh.                  ^",FF
+	dc.b	"Like something else",LF
+	dc.b	"you need?",ETX
 	align 2
 StoryTextTradingSequenceVBBefore:
 	dc.w	OBJ_NPC_GRUNBERG
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence is  ^",FF
-	dc.b	"available but before",LF
-	dc.b	"it happened",ETX
+	dc.b	"Last year was so much",LF
+	dc.b	"more interesting.",ETX
 	align 2
 StoryTextTradingSequenceVB:
 	dc.w	OBJ_NPC_GRUNBERG
-	dc.b	"thanks for that item,",LF
-	dc.b	"here's this item",ETX
+	dc.b	"You don't know who",LF
+	dc.b	"that box is for?     ^",FF
+	dc.b	"I always enjoy a good",LF
+	dc.b	"mystery, let's open  ^",FF
+	dc.b	"it.",LF
+	dc.b	"[...]                ^",FF
+	dc.b	"Why it's a trophy.",LF
+	dc.b	"Why don't you keep it.",ETX
 	align 2
 StoryTextTradingSequenceVBAfter:
 	dc.w	OBJ_NPC_GRUNBERG
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence     ^",FF
-	dc.b	"happened",ETX
+	dc.b	"I wish there was",LF
+	dc.b	"something mysterious ^",FF
+	dc.b	"in that box.",ETX
 	align 2
 StoryTextTradingSequenceCavernBefore:
 	dc.w	OBJ_NPC_DB
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence is  ^",FF
-	dc.b	"available but before",LF
-	dc.b	"it happened",ETX
+	dc.b	"Some kid jammed up a",LF
+	dc.b	"coin slot.           ^",FF
+	dc.b	"Looks like a metal",LF
+	dc.b	"thing they found on  ^",FF
+	dc.b	"the floor.",ETX
 	align 2
 StoryTextTradingSequenceCavern:
 	dc.w	OBJ_NPC_DB
-	dc.b	"thanks for that item,",LF
-	dc.b	"here's this item",ETX
+	dc.b	"Can I borrow that",LF
+	dc.b	"knife you have there?^",FF
+	dc.b	"There's a metal",LF
+	dc.b	"object jammed in coin^",FF
+	dc.b	"slot.",LF
+	dc.b	"Oh, it's a big round ^",FF
+	dc.b	"earring.",LF
+	dc.b	"Think you can find   ^",FF
+	dc.b	"the owner?",ETX
 	align 2
 StoryTextTradingSequenceCavernAfter:
 	dc.w	OBJ_NPC_DB
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence     ^",FF
-	dc.b	"happened",ETX
+	dc.b	"I don't know who lost",LF
+	dc.b	"that earring.",ETX
 	align 2
 StoryTextTradingSequenceDenimCountryBefore:
 	dc.w	OBJ_NPC_LISA
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence is  ^",FF
-	dc.b	"available but before",LF
-	dc.b	"it happened",ETX
+	dc.b	"(I've looked",LF
+	dc.b	"everywhere)          ^",FF
+	dc.b	"Sorry, I was thinking",LF
+	dc.b	"about something.",ETX
 	align 2
 StoryTextTradingSequenceDenimCountry:
 	dc.w	OBJ_NPC_LISA
-	dc.b	"thanks for that item,",LF
-	dc.b	"here's this item",ETX
+	dc.b	"Thanks Carl. These",LF
+	dc.b	"belonged to my       ^",FF
+	dc.b	"grandmother.",LF
+	dc.b	"I couldn't stand to  ^",FF
+	dc.b	"lose them.",LF
+	dc.b	"I know this is       ^",FF
+	dc.b	"expensive but I want",LF
+	dc.b	"you to have it as    ^",FF
+	dc.b	"thanks.",LF
+	dc.b	"It just came out this^",FF
+	dc.b	"year and everyone",LF
+	dc.b	"wants one.           ^",FF
+	dc.b	"I bought it but then",LF
+	dc.b	"won one from a prize ^",FF
+	dc.b	"machine.",LF
+	dc.b	"I insist you have it.",ETX
 	align 2
 StoryTextTradingSequenceDenimCountryAfter:
 	dc.w	OBJ_NPC_LISA
-	dc.b	"dialog after the",LF
-	dc.b	"trading sequence     ^",FF
-	dc.b	"happened",ETX
+	dc.b	"Thank you again Carl.",LF
+	dc.b	"Those earrings mean  ^",FF
+	dc.b	"so much to me.",ETX
 	align 2
 
 	align 2

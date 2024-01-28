@@ -16,6 +16,7 @@
 	include 'lib/retailclerk/event/sub_FindActionTarget.X68'
 	include	'lib/retailclerk/event/sub_ProcessAction.X68'
 	include	'lib/retailclerk/event/sub_ProcessIntroScreen.X68'
+	include 'lib/retailclerk/event/table_ScriptedEventActions.X68'
 	include 'lib/retailclerk/event/sub_ProcessScriptedEvent.X68'
 	include	'lib/retailclerk/event/sub_QueueScriptedEvent.X68'
 	; sprite handling

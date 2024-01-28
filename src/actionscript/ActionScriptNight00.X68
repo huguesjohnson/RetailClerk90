@@ -43,8 +43,6 @@ ActionScriptNight00SVideoInteract:
 	rts	
 .event	
 	bsr.s	ActionScriptNight00UpdateStateAfterSVideo
-	lea	StoryTextNight00SVideoLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea	ScriptedEventNight00_01_SVideoStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 	rts
@@ -56,15 +54,6 @@ ActionScriptNight00UpdateStateAfterSVideo:
 	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
 	move.l	#$28000000,(MEM_NPC_LOCATION_SHALL) ; move victor to the south hall
 	move.w	#OBJECTIVE_D00_O04_Leave,(MEM_OBJECTIVE) ; update the objective		
-	; remove item that is given during the scripted event
-	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_SPECIAL_ORDER,d7 ; add item from trading sequence
-	bsr.w	RemoveItem ; add item to inventory	
-	; add item that is received during the scripted event
-	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_VHS_TAPE,d7 ; add item from trading sequence
-	bsr.w	AddItem ; add item to inventory	
-	; run the scripted event
 	rts
 
 ;*******************************************************************************

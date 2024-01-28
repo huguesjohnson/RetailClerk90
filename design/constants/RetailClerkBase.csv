@@ -69,22 +69,28 @@ DIALOG_NO_RESPONSE,$FFFF,no response or dialog cancelled
 ;-------------------------------------------------------------------------------
 FONT_BASE_TILE_LOW,FONT_VDP/$0020,base tile for dialogs (low)
 FONT_BASE_TILE,FONT_BASE_TILE_LOW+$8000,base tile for dialogs
+FONT_ID_DEFAULT,$0000,id for default font
+FONT_ID_DISTORT,$0001,id for distorted font
 ;
 ;-------------------------------------------------------------------------------
 ; scripted event commands
 ;-------------------------------------------------------------------------------
-SCRIPTED_EVENT_END,$FFFF,end of scripted event
-SCRIPTED_EVENT_DIALOG,$EEEE,show a dialog
-SCRIPTED_EVENT_CHANGE_SPRITE,$DDDD,change the moving sprite
-SCRIPTED_EVENT_CHANGE_SCENE,$CCCC,switch scenes
-SCRIPTED_EVENT_CHANGE_PLAYER_SPRITE,$BBBB,switch player sprites
-SCRIPTED_EVENT_SET_PLAYER_SPRITE_X,$AAAA,set player sprite X
-SCRIPTED_EVENT_SET_PLAYER_SPRITE_Y,$9999,set player sprite Y
-SCRIPTED_EVENT_SET_PLAYER_SPRITE_DIRECTION,$8888,set player direction
-SCRIPTED_EVENT_FADE_BLACK,$7777,fade and blackout the palette
-SCRIPTED_EVENT_DRAW_SCENE,$6666,draw scene, but not completely reload scene
-SCRIPTED_EVENT_TIMER,$5555,pause for a specified number of frames
-SCRIPTED_EVENT_ENDGAME,$4444,end the game
+SCRIPTED_EVENT_BASE,$F000
+SCRIPTED_EVENT_END,SCRIPTED_EVENT_BASE,end of scripted event
+SCRIPTED_EVENT_DIALOG,SCRIPTED_EVENT_BASE+$0001,show a dialog
+SCRIPTED_EVENT_CHANGE_SPRITE,SCRIPTED_EVENT_BASE+$0002,change the moving sprite
+SCRIPTED_EVENT_CHANGE_SCENE,SCRIPTED_EVENT_BASE+$0003,switch scenes
+SCRIPTED_EVENT_CHANGE_PLAYER_SPRITE,SCRIPTED_EVENT_BASE+$0004,switch player sprites
+SCRIPTED_EVENT_SET_PLAYER_SPRITE_X,SCRIPTED_EVENT_BASE+$0005,set player sprite X
+SCRIPTED_EVENT_SET_PLAYER_SPRITE_Y,SCRIPTED_EVENT_BASE+$0006,set player sprite Y
+SCRIPTED_EVENT_SET_PLAYER_SPRITE_DIRECTION,SCRIPTED_EVENT_BASE+$0007,set player direction
+SCRIPTED_EVENT_FADE_BLACK,SCRIPTED_EVENT_BASE+$0008,fade and blackout the palette
+SCRIPTED_EVENT_DRAW_SCENE,SCRIPTED_EVENT_BASE+$0009,draw scene, but not completely reload scene
+SCRIPTED_EVENT_TIMER,SCRIPTED_EVENT_BASE+$000A,pause for a specified number of frames
+SCRIPTED_EVENT_ENDGAME,SCRIPTED_EVENT_BASE+$000B,end the game
+SCRIPTED_EVENT_LOADFONT,SCRIPTED_EVENT_BASE+$000C,change the font
+SCRIPTED_EVENT_ADDITEM,SCRIPTED_EVENT_BASE+$000D,add an item to inventory
+SCRIPTED_EVENT_REMOVEITEM,SCRIPTED_EVENT_BASE+$000E,remove an item fron inventory
 ;
 ;-------------------------------------------------------------------------------
 ; sprite data structure

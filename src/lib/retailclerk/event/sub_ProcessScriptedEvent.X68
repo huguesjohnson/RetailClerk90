@@ -1,5 +1,6 @@
 ;-------------------------------------------------------------------------------
 ; process scripted events from the main loop
+; I should split this up somehow
 ;-------------------------------------------------------------------------------
 ProcessScriptedEvent:
 	;---------------------------------------------------------------------------
@@ -13,7 +14,6 @@ ProcessScriptedEvent:
 	cmpi.w	#SPRITE_MOVE_FREQUENCY,(MEM_FRAME_COUNTER); is it time to move?
 	blt.w	ExitProcessScriptedEvent	; exit if it's not time to move
 	move.w	#$0000,(MEM_FRAME_COUNTER)	; reset counter to 0
-ScriptedEventMoveSprite:
 	subq	#$1,(MEM_SCRIPTED_EVENT_STEPS)	; decrement step counter
 	move.l	(MEM_SCRIPTED_SPRITE_ADDR),a6	; point a6 to sprite to move
 	bsr.w	MoveSprite	; branch to MoveSprite
@@ -23,30 +23,18 @@ NextScriptedEventAction:
 	bsr.w	StopSprite	; stop moving the sprite
 	move.l	(MEM_SCRIPTED_EVENT_ADDR),a6	; point a6 to next step
 	move.w	(MEM_SCRIPTED_EVENT_ACTION),d7	; copy action to d7
-	cmpi.w	#SCRIPTED_EVENT_END,d7	; are we at the end?
-	beq.s	ScriptedEventEnd	; if so branch
-	cmpi.w	#SCRIPTED_EVENT_DIALOG,d7	; display a dialog?
-	beq.w	ScriptedEventDialog	; if so branch
-	cmpi.w	#SCRIPTED_EVENT_CHANGE_SPRITE,d7	; changing the sprite?
-	beq.w	ScriptedEventChangeSprite	; if so branch
-	cmpi.w	#SCRIPTED_EVENT_CHANGE_SCENE,d7	; change scene?
-	beq.w	ScriptedEventChangeScene	; if so branch
-	cmpi.w	#SCRIPTED_EVENT_DRAW_SCENE,d7	; draw scene?
-	beq.w	ScriptedEventDrawScene	; if so branch
-	cmpi.w	#SCRIPTED_EVENT_CHANGE_PLAYER_SPRITE,d7	; change player sprite?
-	beq.w	ScriptedEventChangePlayerSprite	; if so branch
-	cmpi.w	#SCRIPTED_EVENT_SET_PLAYER_SPRITE_X,d7	; change player X?
-	beq.w	ScriptedEventSetPlayerSpriteX	; if so branch
-	cmpi.w	#SCRIPTED_EVENT_SET_PLAYER_SPRITE_Y,d7	; change player Y?
-	beq.w	ScriptedEventSetPlayerSpriteY	; if so branch
-	cmpi.w	#SCRIPTED_EVENT_SET_PLAYER_SPRITE_DIRECTION,d7	; change direction?
-	beq.w	ScriptedEventSetPlayerSpriteDirection	; if so branch
-	cmpi.w	#SCRIPTED_EVENT_FADE_BLACK,d7	; fade out?
-	beq.w	ScriptedEventFadeBlack	; if so branch
-	cmpi.w	#SCRIPTED_EVENT_TIMER,d7	; timer?
-	beq.w	ScriptedEventTimer	; if so branch
-	cmpi.w	#SCRIPTED_EVENT_ENDGAME,d7	; end game?
-	beq.w	ScriptedEventEndGame	; if so branch
+	cmpi.w	#SCRIPTED_EVENT_BASE,d7 ; test if this is an action
+	bcs.s	ScriptedEventMoveSprite ; I regret how I initially implemented this now
+	;---------------------------------------------------------------------------
+	; lookup address of next action handler
+	;---------------------------------------------------------------------------
+	sub.w	#SCRIPTED_EVENT_BASE,d7	; subtract base value to make d7 an index	
+	mulu.w	#LWORD_SIZE,d7 ; d7 will be the offset now
+	lea	ScriptedEventActionTableStart,a4 ; point to action table
+	adda.w	d7,a4 ; move to offset location
+	move.l	(a4),a5	; a5 has the address of the subroutine to jump to
+	jmp	(a5) ; jump to location of code to process this event
+ScriptedEventMoveSprite:
 	;---------------------------------------------------------------------------
 	; start moving the sprite
 	;---------------------------------------------------------------------------
@@ -55,10 +43,7 @@ NextScriptedEventAction:
 	adda.w	#STRUCT_SPRITE_DIRECTION,a5	; move to direction
 	move.w	(MEM_SCRIPTED_EVENT_ACTION),(a5)	; copy action to direction
 	move.w	(a6)+,(MEM_SCRIPTED_EVENT_STEPS)	; copy steps in action
-	; save state of scripted event and loop back to main
-	move.w	(a6)+,(MEM_SCRIPTED_EVENT_ACTION)	; save next action
-	move.l	a6,(MEM_SCRIPTED_EVENT_ADDR)	; save address of next step
-	bra.w	ExitProcessScriptedEvent	; exit
+	bra.w	ProcessScriptedEventQueueNextAction ; exit
 ScriptedEventEnd:
 	move.l	(MEM_GAME_STATE),d7	; copy current game state to d7
 	bclr.l	#STATE_FLAG_SCRIPTED_EVENT,d7	; clear the scripted event flag
@@ -119,24 +104,16 @@ ScriptedEventFadeInDelayLoop:
 	bra.w	ExitProcessScriptedEvent	; exit
 ScriptedEventChangePlayerSprite:
 	move.w	(a6)+,(MEM_PLAYER_SPRITE)	; update sprite
-	move.w	(a6)+,(MEM_SCRIPTED_EVENT_ACTION)	; save next action
-	move.l	a6,(MEM_SCRIPTED_EVENT_ADDR)	; save address of next step
-	bra.w	ExitProcessScriptedEvent	; exit
+	bra.w	ProcessScriptedEventQueueNextAction ; exit
 ScriptedEventSetPlayerSpriteX:
 	move.w	(a6)+,(MEM_PLAYER_SPRITE_X)	; update sprite
-	move.w	(a6)+,(MEM_SCRIPTED_EVENT_ACTION)	; save next action
-	move.l	a6,(MEM_SCRIPTED_EVENT_ADDR)	; save address of next step
-	bra.w	ExitProcessScriptedEvent	; exit
+	bra.w	ProcessScriptedEventQueueNextAction ; exit
 ScriptedEventSetPlayerSpriteY:
 	move.w	(a6)+,(MEM_PLAYER_SPRITE_Y)	; update sprite
-	move.w	(a6)+,(MEM_SCRIPTED_EVENT_ACTION)	; save next action
-	move.l	a6,(MEM_SCRIPTED_EVENT_ADDR)	; save address of next step
-	bra.w	ExitProcessScriptedEvent	; exit
+	bra.w	ProcessScriptedEventQueueNextAction ; exit
 ScriptedEventSetPlayerSpriteDirection:
 	move.w	(a6)+,(MEM_PLAYER_SPRITE_DIRECTION)	; update sprite
-	move.w	(a6)+,(MEM_SCRIPTED_EVENT_ACTION)	; save next action
-	move.l	a6,(MEM_SCRIPTED_EVENT_ADDR)	; save address of next step
-	bra.w	ExitProcessScriptedEvent	; exit
+	bra.w	ProcessScriptedEventQueueNextAction ; exit
 ScriptedEventFadeBlack:
 	move.w	(a6)+,(MEM_SCRIPTED_EVENT_ACTION)	; save next action
 	move.l	a6,(MEM_SCRIPTED_EVENT_ADDR)	; save address of next step
@@ -161,5 +138,46 @@ ScriptedEventEndGame:
 	bclr.l	#STATE_FLAG_SCRIPTED_EVENT,d7	; clear the scripted event flag
 	move.l	d7,(MEM_GAME_STATE)	; save it back
 	bra.w	EndGame
+	bra.w	ExitProcessScriptedEvent ; exit
+ScriptedEventLoadFont:
+	move.w	(a6)+,d7 ; copy font id to d7
+	cmpi.w	#FONT_ID_DISTORT,d7
+	beq.s	.distort
+.default	
+	move.w	#$2700,sr		; disable interrupts	
+	bsr.w	LoadFontTiles
+	move.w	#$2000,sr		; re-enable interrupts
+	bra.s	.exitloadfont
+.distort	
+	move.w	#$2700,sr		; disable interrupts	
+	bsr.w	LoadFontTilesSlightDistort
+	move.w	#$2000,sr		; re-enable interrupts	
+.exitloadfont
+	bra.w	ProcessScriptedEventQueueNextAction ; exit
+
+ScriptedEventAddItem:
+	move.w	(a6)+,d7 ; item to add
+	cmpi.w	#$0000,(MEM_PLAYER_SPRITE) ; which player inventory to use?
+	beq.s	.pczero
+	lea	MEM_PLAYER2_ITEM_COUNT,a1
+	bra.s	.calladditem
+.pczero
+	lea	MEM_PLAYER1_ITEM_COUNT,a1
+.calladditem
+	bsr.w	AddItem ; add item to inventory		
+	bra.w	ProcessScriptedEventQueueNextAction ; exit
+ScriptedEventRemoveItem:	
+	move.w	(a6)+,d7 ; item to add
+	cmpi.w	#$0000,(MEM_PLAYER_SPRITE) ; which player inventory to use?
+	beq.s	.pczero
+	lea	MEM_PLAYER2_ITEM_COUNT,a1
+	bra.s	.callremoveitem
+.pczero
+	lea	MEM_PLAYER1_ITEM_COUNT,a1
+.callremoveitem
+	bsr.w	RemoveItem ; remove item from inventory
+ProcessScriptedEventQueueNextAction:
+	move.w	(a6)+,(MEM_SCRIPTED_EVENT_ACTION) ; save next action
+	move.l	a6,(MEM_SCRIPTED_EVENT_ADDR) ; save address of next step	
 ExitProcessScriptedEvent:
 	rts

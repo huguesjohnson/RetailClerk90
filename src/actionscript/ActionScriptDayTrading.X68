@@ -24,6 +24,9 @@ ActionScriptDay01SceneFCBFishingTrading:
 	; show the dialog
 	lea	StoryTextTradingSequenceFCBFishing,a6 ; point to text to display
 	bsr.w	ShowDialog
+	; queue scripted event
+	lea ScriptedEventTradingSequenceFCBFishingStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
 	rts
 .after
 	lea	StoryTextTradingSequenceFCBFishingAfter,a6 ; point to text to display
@@ -47,17 +50,9 @@ ActionScriptDay02SceneWWAppliancesTrading:
 	; otherwise trade
 	bset.l	#$1,d7 ; set trade complete
 	move.l	d7,(MEM_TRADING_SEQUENCE_DAY) ; save updated progress
-	; remove item
-	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_HANDWARMER,d7 ; remove item from trading sequence
-	bsr.w	RemoveItem ; remove item from the inventory			
-	; add item to start trading sequence
-	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_LIPSTICK,d7 ; add item from trading sequence
-	bsr.w	AddItem ; add item to inventory				
-	; show the dialog
-	lea	StoryTextTradingSequenceWWAppliances,a6 ; point to text to display
-	bsr.w	ShowDialog
+	; queue scripted event
+	lea ScriptedEventTradingSequenceWWAppliancesStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event	
 	rts
 .after
 	lea	StoryTextTradingSequenceWWAppliancesAfter,a6 ; point to text to display
@@ -85,17 +80,9 @@ ActionScriptDay03SceneCPlanetTrading:
 	; otherwise trade
 	bset.l	#$2,d7 ; set trade complete
 	move.l	d7,(MEM_TRADING_SEQUENCE_DAY) ; save updated progress
-	; remove item
-	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_LIPSTICK,d7 ; remove item from trading sequence
-	bsr.w	RemoveItem ; remove item from the inventory			
-	; add item to start trading sequence
-	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_TICKETS,d7 ; add item from trading sequence
-	bsr.w	AddItem ; add item to inventory				
-	; show the dialog
-	lea	StoryTextTradingSequenceCPlanet,a6 ; point to text to display
-	bsr.w	ShowDialog
+	; queue scripted event
+	lea ScriptedEventTradingSequenceCPlanetStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event		
 	rts
 .after
 	lea	StoryTextTradingSequenceCPlanetAfter,a6 ; point to text to display
@@ -123,17 +110,9 @@ ActionScriptDay04SceneWWTVTrading:
 	; otherwise trade
 	bset.l	#$3,d7 ; set trade complete
 	move.l	d7,(MEM_TRADING_SEQUENCE_DAY) ; save updated progress
-	; remove item
-	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_TICKETS,d7 ; remove item from trading sequence
-	bsr.w	RemoveItem ; remove item from the inventory			
-	; add item to start trading sequence
-	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_TICKETS,d7 ; add item from trading sequence
-	bsr.w	AddItem ; add item to inventory				
-	; show the dialog
-	lea	StoryTextTradingSequenceWWVideo,a6 ; point to text to display
-	bsr.w	ShowDialog
+	; queue scripted event
+	lea ScriptedEventTradingSequenceWWVideoStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event		
 	rts
 .after
 	lea	StoryTextTradingSequenceWWVideoAfter,a6 ; point to text to display
@@ -161,17 +140,9 @@ ActionScriptDay05SceneFCBCheckoutTrading:
 	; otherwise trade
 	bset.l	#$4,d7 ; set trade complete
 	move.l	d7,(MEM_TRADING_SEQUENCE_DAY) ; save updated progress
-	; remove item
-	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_PORTABLE_TV,d7 ; remove item from trading sequence
-	bsr.w	RemoveItem ; remove item from the inventory			
-	; add item to start trading sequence
-	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_COUPONS,d7 ; add item from trading sequence
-	bsr.w	AddItem ; add item to inventory				
-	; show the dialog
-	lea	StoryTextTradingSequenceFCBCheckout,a6 ; point to text to display
-	bsr.w	ShowDialog
+	; queue scripted event
+	lea ScriptedEventTradingSequenceFCBCheckoutStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event		
 	rts
 .after
 	lea	StoryTextTradingSequenceFCBCheckoutAfter,a6 ; point to text to display
@@ -199,17 +170,10 @@ ActionScriptDay05SceneWWCheckoutTrading:
 	; otherwise trade
 	bset.l	#$5,d7 ; set trade complete
 	move.l	d7,(MEM_TRADING_SEQUENCE_DAY) ; save updated progress
-	; remove item
-	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_COUPONS,d7 ; remove item from trading sequence
-	bsr.w	RemoveItem ; remove item from the inventory			
-	; add item to start trading sequence
-	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_LPS,d7 ; add item from trading sequence
-	bsr.w	AddItem ; add item to inventory				
-	; show the dialog
-	lea	StoryTextTradingSequenceWWCheckout,a6 ; point to text to display
 	bsr.w	ShowDialog
+	; queue scripted event
+	lea ScriptedEventTradingSequenceWWCheckoutStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event		
 	rts
 .after
 	lea	StoryTextTradingSequenceWWCheckoutAfter,a6 ; point to text to display
@@ -237,17 +201,9 @@ ActionScriptDay06ScenePogoDawgTrading:
 	; otherwise trade
 	bset.l	#$6,d7 ; set trade complete
 	move.l	d7,(MEM_TRADING_SEQUENCE_DAY) ; save updated progress
-	; remove item
-	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_LPS,d7 ; remove item from trading sequence
-	bsr.w	RemoveItem ; remove item from the inventory			
-	; add item to start trading sequence
-	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_MYSTERY_BOX,d7 ; add item from trading sequence
-	bsr.w	AddItem ; add item to inventory				
-	; show the dialog
-	lea	StoryTextTradingSequencePogoDawg,a6 ; point to text to display
-	bsr.w	ShowDialog
+	; queue scripted event
+	lea ScriptedEventTradingSequencePogoDawgStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event		
 	rts
 .after
 	lea	StoryTextTradingSequencePogoDawgAfter,a6 ; point to text to display
@@ -279,24 +235,16 @@ ActionScriptDay06SceneVBTrading:
 	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7
 	bset.l	#FLAG_GLOBAL_TradingDayComplete,d7
 	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS)
-	; remove item
-	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_MYSTERY_BOX,d7 ; remove item from trading sequence
-	bsr.w	RemoveItem ; remove item from the inventory			
-	; add item to start trading sequence
-	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_TROPHY,d7 ; add item from trading sequence
-	bsr.w	AddItem ; add item to inventory				
-	; show the dialog
-	lea	StoryTextTradingSequencePogoDawg,a6 ; point to text to display
-	bsr.w	ShowDialog
+	; queue scripted event	
+	lea ScriptedEventTradingSequenceVBStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event			
 	rts
 .after
-	lea	StoryTextTradingSequencePogoDawgAfter,a6 ; point to text to display
+	lea	StoryTextTradingSequenceVBAfter,a6 ; point to text to display
 	bsr.w	ShowDialog
 	rts
 .before
-	lea	StoryTextTradingSequencePogoDawgBefore,a6 ; point to text to display
+	lea	StoryTextTradingSequenceVBBefore,a6 ; point to text to display
 	bsr.w	ShowDialog
 	rts	
 

@@ -328,6 +328,11 @@
             "label":"StoryTextDay00InfoDeskLine10"
          },
          {
+            "comment":"add OBJ_ITEM_SCARF to inventory",
+            "command":"ADDITEM",
+            "intConst":"OBJ_ITEM_SCARF"
+         },
+         {
             "comment":"end",
             "command":"END"
          }
@@ -546,6 +551,16 @@
             "command":"DIALOG",
             "label":"StoryTextNight00SVideoLine4"
          },
+         {
+            "comment":"remove item that is given during the scripted event",
+            "command":"REMOVEITEM",
+            "intConst":"OBJ_ITEM_SPECIAL_ORDER"
+         },         
+         {
+            "comment":"add item that is received during the scripted event",
+            "command":"ADDITEM",
+            "intConst":"OBJ_ITEM_VHS_TAPE"
+         },         
          {
             "comment":"end",
             "command":"END"
@@ -4444,6 +4459,539 @@
          }
       ]
    },
+   {
+      "name":"ScriptedEventTradingSequenceDenimCountry",
+      "actions":[
+         {
+            "comment":"NPC0 sprite",
+            "intValue":2
+         },
+         {
+            "comment":"dialog - regular text",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceDenimCountryBefore"
+         },
+         {
+            "comment":"set distorted font",
+            "command":"LOADFONT",
+            "intConst":"FONT_ID_DISTORT"
+         },
+         {
+            "comment":"dialog - distorted text",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceDenimCountry"
+         },
+         {
+            "comment":"set back to regular font",
+            "command":"LOADFONT",
+            "intConst":"FONT_ID_DEFAULT"
+         },
+         {
+            "comment":"dialog - back to regular text",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceDenimCountry"
+         },
+         {
+            "comment":"remove item that is given during the scripted event",
+            "command":"REMOVEITEM",
+            "intConst":"OBJ_ITEM_EARRING"
+         },         
+         {
+            "comment":"add item that is received during the scripted event",
+            "command":"ADDITEM",
+            "intConst":"OBJ_ITEM_FINALITEM"
+         },         
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   },   
+   {
+      "name":"ScriptedEventTradingSequenceFCBFishing",
+      "actions":[
+         {
+            "comment":"NPC0 sprite",
+            "intValue":2
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceFCBFishing"
+         },
+         {
+            "comment":"remove item that is given during the scripted event",
+            "command":"REMOVEITEM",
+            "intConst":""
+         },         
+         {
+            "comment":"add item that is received during the scripted event",
+            "command":"ADDITEM",
+            "intConst":""
+         },          
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   },      
+   {
+      "name":"ScriptedEventTradingSequenceWWAppliances",
+      "actions":[
+         {
+            "comment":"NPC0 sprite",
+            "intValue":2
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceWWAppliancesBefore"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceWWAppliances"
+         },
+         {
+            "comment":"remove item that is given during the scripted event",
+            "command":"REMOVEITEM",
+            "intConst":"OBJ_ITEM_HANDWARMER"
+         },         
+         {
+            "comment":"add item that is received during the scripted event",
+            "command":"ADDITEM",
+            "intConst":"OBJ_ITEM_LIPSTICK"
+         },          
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   }, 
+   {
+      "name":"ScriptedEventTradingSequenceCPlanet",
+      "actions":[
+         {
+            "comment":"NPC0 sprite",
+            "intValue":2
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceCPlanetBefore"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceCPlanet"
+         },
+         {
+            "comment":"remove item that is given during the scripted event",
+            "command":"REMOVEITEM",
+            "intConst":"OBJ_ITEM_LIPSTICK"
+         },         
+         {
+            "comment":"add item that is received during the scripted event",
+            "command":"ADDITEM",
+            "intConst":"OBJ_ITEM_TICKETS"
+         },          
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   }, 
+   {
+      "name":"ScriptedEventTradingSequenceWWVideo",
+      "actions":[
+         {
+            "comment":"NPC0 sprite",
+            "intValue":2
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceWWVideoBefore"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceWWVideo"
+         },
+         {
+            "comment":"remove item that is given during the scripted event",
+            "command":"REMOVEITEM",
+            "intConst":"OBJ_ITEM_TICKETS"
+         },         
+         {
+            "comment":"add item that is received during the scripted event",
+            "command":"ADDITEM",
+            "intConst":"OBJ_ITEM_PORTABLE_TV"
+         },          
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   }, 
+   {
+      "name":"ScriptedEventTradingSequenceFCBCheckout",
+      "actions":[
+         {
+            "comment":"NPC0 sprite",
+            "intValue":2
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceFCBCheckoutBefore"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceFCBCheckout"
+         },
+         {
+            "comment":"remove item that is given during the scripted event",
+            "command":"REMOVEITEM",
+            "intConst":"OBJ_ITEM_PORTABLE_TV"
+         },         
+         {
+            "comment":"add item that is received during the scripted event",
+            "command":"ADDITEM",
+            "intConst":"OBJ_ITEM_COUPONS"
+         },          
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   }, 
+   {
+      "name":"ScriptedEventTradingSequenceWWCheckout",
+      "actions":[
+         {
+            "comment":"NPC0 sprite",
+            "intValue":2
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceWWCheckoutBefore"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceWWCheckout"
+         },
+         {
+            "comment":"remove item that is given during the scripted event",
+            "command":"REMOVEITEM",
+            "intConst":"OBJ_ITEM_COUPONS"
+         },         
+         {
+            "comment":"add item that is received during the scripted event",
+            "command":"ADDITEM",
+            "intConst":"OBJ_ITEM_LPS"
+         },          
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   }, 
+   {
+      "name":"ScriptedEventTradingSequencePogoDawg",
+      "actions":[
+         {
+            "comment":"NPC0 sprite",
+            "intValue":2
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequencePogoDawgBefore"
+         },         
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequencePogoDawg"
+         },
+         {
+            "comment":"remove item that is given during the scripted event",
+            "command":"REMOVEITEM",
+            "intConst":"OBJ_ITEM_LPS"
+         },         
+         {
+            "comment":"add item that is received during the scripted event",
+            "command":"ADDITEM",
+            "intConst":"OBJ_ITEM_MYSTERY_BOX"
+         },          
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   }, 
+   {
+      "name":"ScriptedEventTradingSequenceVB",
+      "actions":[
+         {
+            "comment":"NPC0 sprite",
+            "intValue":2
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceVBBefore"
+         },         
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceVB"
+         },
+         {
+            "comment":"remove item that is given during the scripted event",
+            "command":"REMOVEITEM",
+            "intConst":"OBJ_ITEM_MYSTERY_BOX"
+         },         
+         {
+            "comment":"add item that is received during the scripted event",
+            "command":"ADDITEM",
+            "intConst":"OBJ_ITEM_TROPHY"
+         },          
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   }, 
+   {
+      "name":"ScriptedEventTradingSequenceFCBFirearms",
+      "actions":[
+         {
+            "comment":"NPC0 sprite",
+            "intValue":2
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceFCBFirearms"
+         },
+         {
+            "comment":"remove item that is given during the scripted event",
+            "command":"REMOVEITEM",
+            "intConst":"OBJ_ITEM_VHS_TAPE"
+         },         
+         {
+            "comment":"add item that is received during the scripted event",
+            "command":"ADDITEM",
+            "intConst":"OBJ_ITEM_MOOSE_ATTRACTANT"
+         },          
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   }, 
+   {
+      "name":"ScriptedEventTradingSequenceCheckers",
+      "actions":[
+         {
+            "comment":"NPC0 sprite",
+            "intValue":2
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceCheckersBefore"
+         },         
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceCheckers"
+         },
+         {
+            "comment":"remove item that is given during the scripted event",
+            "command":"REMOVEITEM",
+            "intConst":"OBJ_ITEM_MOOSE_ATTRACTANT"
+         },         
+         {
+            "comment":"add item that is received during the scripted event",
+            "command":"ADDITEM",
+            "intConst":"OBJ_ITEM_SHIRT"
+         },          
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   }, 
+   {
+      "name":"ScriptedEventTradingSequenceWWAudio",
+      "actions":[
+         {
+            "comment":"NPC0 sprite",
+            "intValue":2
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceWWAudioBefore"
+         },   
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceWWAudio"
+         },
+         {
+            "comment":"remove item that is given during the scripted event",
+            "command":"REMOVEITEM",
+            "intConst":"OBJ_ITEM_SHIRT"
+         },         
+         {
+            "comment":"add item that is received during the scripted event",
+            "command":"ADDITEM",
+            "intConst":"OBJ_ITEM_HEADBAND"
+         },          
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   }, 
+   {
+      "name":"ScriptedEventTradingSequenceTLodge",
+      "actions":[
+         {
+            "comment":"NPC0 sprite",
+            "intValue":2
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceTLodgeBefore"
+         },         
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceTLodge"
+         },
+         {
+            "comment":"remove item that is given during the scripted event",
+            "command":"REMOVEITEM",
+            "intConst":"OBJ_ITEM_HEADBAND"
+         },         
+         {
+            "comment":"add item that is received during the scripted event",
+            "command":"ADDITEM",
+            "intConst":"OBJ_ITEM_FM_CONVERTER"
+         },          
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   }, 
+   {
+      "name":"ScriptedEventTradingSequenceCNow",
+      "actions":[
+         {
+            "comment":"NPC0 sprite",
+            "intValue":2
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceCNowBefore"
+         },         
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceCNow"
+         },
+         {
+            "comment":"remove item that is given during the scripted event",
+            "command":"REMOVEITEM",
+            "intConst":"OBJ_ITEM_FM_CONVERTER"
+         },         
+         {
+            "comment":"add item that is received during the scripted event",
+            "command":"ADDITEM",
+            "intConst":"OBJ_ITEM_FLANNEL_SHIRT"
+         },          
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   }, 
+   {
+      "name":"ScriptedEventTradingSequenceFCBCamping",
+      "actions":[
+         {
+            "comment":"NPC0 sprite",
+            "intValue":2
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceFCBCampingBefore"
+         },         
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceFCBCamping"
+         },
+         {
+            "comment":"remove item that is given during the scripted event",
+            "command":"REMOVEITEM",
+            "intConst":"OBJ_ITEM_FLANNEL_SHIRT"
+         },         
+         {
+            "comment":"add item that is received during the scripted event",
+            "command":"ADDITEM",
+            "intConst":"OBJ_ITEM_UTILITY_KNIFE"
+         },          
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   }, 
+   {
+      "name":"ScriptedEventTradingSequenceCavern",
+      "actions":[
+         {
+            "comment":"NPC0 sprite",
+            "intValue":2
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceCavernBefore"
+         },         
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceCavern"
+         },
+         {
+            "comment":"remove item that is given during the scripted event",
+            "command":"REMOVEITEM",
+            "intConst":"OBJ_ITEM_UTILITY_KNIFE"
+         },         
+         {
+            "comment":"add item that is received during the scripted event",
+            "command":"ADDITEM",
+            "intConst":"OBJ_ITEM_EARRING"
+         },          
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   }, 
    {
       "name":"ScriptedEventNotTimeToLeaveEryn",
       "actions":[

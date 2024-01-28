@@ -149,10 +149,6 @@ ActionScriptDay00UpdateStateAfterInfoDesk:
 	bset.l	#FLAG_DAY00_EVENT03_INFODESKVISITED,d7 ; set event flag
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
 	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
-	; add item that is received during the scripted event
-	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_SCARF,d7 ; add item from trading sequence
-	bsr.w	AddItem ; add item to inventory	
 	move.w	#OBJECTIVE_D00_O02_LeaveWhenReady,(MEM_OBJECTIVE) ; update the objective		
 	rts	
 	

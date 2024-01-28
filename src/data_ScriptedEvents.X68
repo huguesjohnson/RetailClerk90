@@ -190,6 +190,9 @@ ScriptedEventDay00_01_InfoDeskStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay00InfoDeskLine10
+	; add OBJ_ITEM_SCARF to inventory
+	dc.w	SCRIPTED_EVENT_ADDITEM
+	dc.w	OBJ_ITEM_SCARF
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay00_01_InfoDeskEnd:
@@ -317,6 +320,12 @@ ScriptedEventNight00_01_SVideoStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight00SVideoLine4
+	; remove item that is given during the scripted event
+	dc.w	SCRIPTED_EVENT_REMOVEITEM
+	dc.w	OBJ_ITEM_SPECIAL_ORDER
+	; add item that is received during the scripted event
+	dc.w	SCRIPTED_EVENT_ADDITEM
+	dc.w	OBJ_ITEM_VHS_TAPE
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight00_01_SVideoEnd:
@@ -2580,6 +2589,311 @@ ScriptedEventEndPerfectStart:
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventEndPerfectEnd:
+
+ScriptedEventTradingSequenceDenimCountryStart:
+	; NPC0 sprite
+	dc.w	$0002
+	; dialog - regular text
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceDenimCountryBefore
+	; set distorted font
+	dc.w	SCRIPTED_EVENT_LOADFONT
+	dc.w	FONT_ID_DISTORT
+	; dialog - distorted text
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceDenimCountry
+	; set back to regular font
+	dc.w	SCRIPTED_EVENT_LOADFONT
+	dc.w	FONT_ID_DEFAULT
+	; dialog - back to regular text
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceDenimCountry
+	; remove item that is given during the scripted event
+	dc.w	SCRIPTED_EVENT_REMOVEITEM
+	dc.w	OBJ_ITEM_EARRING
+	; add item that is received during the scripted event
+	dc.w	SCRIPTED_EVENT_ADDITEM
+	dc.w	OBJ_ITEM_FINALITEM
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventTradingSequenceDenimCountryEnd:
+
+ScriptedEventTradingSequenceFCBFishingStart:
+	; NPC0 sprite
+	dc.w	$0002
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceFCBFishing
+	; remove item that is given during the scripted event
+	dc.w	SCRIPTED_EVENT_REMOVEITEM
+	; add item that is received during the scripted event
+	dc.w	SCRIPTED_EVENT_ADDITEM
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventTradingSequenceFCBFishingEnd:
+
+ScriptedEventTradingSequenceWWAppliancesStart:
+	; NPC0 sprite
+	dc.w	$0002
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceWWAppliancesBefore
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceWWAppliances
+	; remove item that is given during the scripted event
+	dc.w	SCRIPTED_EVENT_REMOVEITEM
+	dc.w	OBJ_ITEM_HANDWARMER
+	; add item that is received during the scripted event
+	dc.w	SCRIPTED_EVENT_ADDITEM
+	dc.w	OBJ_ITEM_LIPSTICK
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventTradingSequenceWWAppliancesEnd:
+
+ScriptedEventTradingSequenceCPlanetStart:
+	; NPC0 sprite
+	dc.w	$0002
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceCPlanetBefore
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceCPlanet
+	; remove item that is given during the scripted event
+	dc.w	SCRIPTED_EVENT_REMOVEITEM
+	dc.w	OBJ_ITEM_LIPSTICK
+	; add item that is received during the scripted event
+	dc.w	SCRIPTED_EVENT_ADDITEM
+	dc.w	OBJ_ITEM_TICKETS
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventTradingSequenceCPlanetEnd:
+
+ScriptedEventTradingSequenceWWVideoStart:
+	; NPC0 sprite
+	dc.w	$0002
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceWWVideoBefore
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceWWVideo
+	; remove item that is given during the scripted event
+	dc.w	SCRIPTED_EVENT_REMOVEITEM
+	dc.w	OBJ_ITEM_TICKETS
+	; add item that is received during the scripted event
+	dc.w	SCRIPTED_EVENT_ADDITEM
+	dc.w	OBJ_ITEM_PORTABLE_TV
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventTradingSequenceWWVideoEnd:
+
+ScriptedEventTradingSequenceFCBCheckoutStart:
+	; NPC0 sprite
+	dc.w	$0002
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceFCBCheckoutBefore
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceFCBCheckout
+	; remove item that is given during the scripted event
+	dc.w	SCRIPTED_EVENT_REMOVEITEM
+	dc.w	OBJ_ITEM_PORTABLE_TV
+	; add item that is received during the scripted event
+	dc.w	SCRIPTED_EVENT_ADDITEM
+	dc.w	OBJ_ITEM_COUPONS
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventTradingSequenceFCBCheckoutEnd:
+
+ScriptedEventTradingSequenceWWCheckoutStart:
+	; NPC0 sprite
+	dc.w	$0002
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceWWCheckoutBefore
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceWWCheckout
+	; remove item that is given during the scripted event
+	dc.w	SCRIPTED_EVENT_REMOVEITEM
+	dc.w	OBJ_ITEM_COUPONS
+	; add item that is received during the scripted event
+	dc.w	SCRIPTED_EVENT_ADDITEM
+	dc.w	OBJ_ITEM_LPS
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventTradingSequenceWWCheckoutEnd:
+
+ScriptedEventTradingSequencePogoDawgStart:
+	; NPC0 sprite
+	dc.w	$0002
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequencePogoDawgBefore
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequencePogoDawg
+	; remove item that is given during the scripted event
+	dc.w	SCRIPTED_EVENT_REMOVEITEM
+	dc.w	OBJ_ITEM_LPS
+	; add item that is received during the scripted event
+	dc.w	SCRIPTED_EVENT_ADDITEM
+	dc.w	OBJ_ITEM_MYSTERY_BOX
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventTradingSequencePogoDawgEnd:
+
+ScriptedEventTradingSequenceVBStart:
+	; NPC0 sprite
+	dc.w	$0002
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceVBBefore
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceVB
+	; remove item that is given during the scripted event
+	dc.w	SCRIPTED_EVENT_REMOVEITEM
+	dc.w	OBJ_ITEM_MYSTERY_BOX
+	; add item that is received during the scripted event
+	dc.w	SCRIPTED_EVENT_ADDITEM
+	dc.w	OBJ_ITEM_TROPHY
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventTradingSequenceVBEnd:
+
+ScriptedEventTradingSequenceFCBFirearmsStart:
+	; NPC0 sprite
+	dc.w	$0002
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceFCBFirearms
+	; remove item that is given during the scripted event
+	dc.w	SCRIPTED_EVENT_REMOVEITEM
+	dc.w	OBJ_ITEM_VHS_TAPE
+	; add item that is received during the scripted event
+	dc.w	SCRIPTED_EVENT_ADDITEM
+	dc.w	OBJ_ITEM_MOOSE_ATTRACTANT
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventTradingSequenceFCBFirearmsEnd:
+
+ScriptedEventTradingSequenceCheckersStart:
+	; NPC0 sprite
+	dc.w	$0002
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceCheckersBefore
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceCheckers
+	; remove item that is given during the scripted event
+	dc.w	SCRIPTED_EVENT_REMOVEITEM
+	dc.w	OBJ_ITEM_MOOSE_ATTRACTANT
+	; add item that is received during the scripted event
+	dc.w	SCRIPTED_EVENT_ADDITEM
+	dc.w	OBJ_ITEM_SHIRT
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventTradingSequenceCheckersEnd:
+
+ScriptedEventTradingSequenceWWAudioStart:
+	; NPC0 sprite
+	dc.w	$0002
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceWWAudioBefore
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceWWAudio
+	; remove item that is given during the scripted event
+	dc.w	SCRIPTED_EVENT_REMOVEITEM
+	dc.w	OBJ_ITEM_SHIRT
+	; add item that is received during the scripted event
+	dc.w	SCRIPTED_EVENT_ADDITEM
+	dc.w	OBJ_ITEM_HEADBAND
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventTradingSequenceWWAudioEnd:
+
+ScriptedEventTradingSequenceTLodgeStart:
+	; NPC0 sprite
+	dc.w	$0002
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceTLodgeBefore
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceTLodge
+	; remove item that is given during the scripted event
+	dc.w	SCRIPTED_EVENT_REMOVEITEM
+	dc.w	OBJ_ITEM_HEADBAND
+	; add item that is received during the scripted event
+	dc.w	SCRIPTED_EVENT_ADDITEM
+	dc.w	OBJ_ITEM_FM_CONVERTER
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventTradingSequenceTLodgeEnd:
+
+ScriptedEventTradingSequenceCNowStart:
+	; NPC0 sprite
+	dc.w	$0002
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceCNowBefore
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceCNow
+	; remove item that is given during the scripted event
+	dc.w	SCRIPTED_EVENT_REMOVEITEM
+	dc.w	OBJ_ITEM_FM_CONVERTER
+	; add item that is received during the scripted event
+	dc.w	SCRIPTED_EVENT_ADDITEM
+	dc.w	OBJ_ITEM_FLANNEL_SHIRT
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventTradingSequenceCNowEnd:
+
+ScriptedEventTradingSequenceFCBCampingStart:
+	; NPC0 sprite
+	dc.w	$0002
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceFCBCampingBefore
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceFCBCamping
+	; remove item that is given during the scripted event
+	dc.w	SCRIPTED_EVENT_REMOVEITEM
+	dc.w	OBJ_ITEM_FLANNEL_SHIRT
+	; add item that is received during the scripted event
+	dc.w	SCRIPTED_EVENT_ADDITEM
+	dc.w	OBJ_ITEM_UTILITY_KNIFE
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventTradingSequenceFCBCampingEnd:
+
+ScriptedEventTradingSequenceCavernStart:
+	; NPC0 sprite
+	dc.w	$0002
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceCavernBefore
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceCavern
+	; remove item that is given during the scripted event
+	dc.w	SCRIPTED_EVENT_REMOVEITEM
+	dc.w	OBJ_ITEM_UTILITY_KNIFE
+	; add item that is received during the scripted event
+	dc.w	SCRIPTED_EVENT_ADDITEM
+	dc.w	OBJ_ITEM_EARRING
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventTradingSequenceCavernEnd:
 
 ScriptedEventNotTimeToLeaveErynStart:
 	; player sprite

@@ -27,25 +27,10 @@ ProcessAction:
 	bsr.w	StopSprite	; stop moving the sprite
 ProcessActionBuildActionTableOffset:
 	bsr.w	BuildActionTableOffset	; build action table offset
-	lea	ActionTableStart,a5 ; point to player 2 action table (night)
+	lea	ActionTableStart,a5 ; point to action table
 	adda.w	(MEM_ACTION_TABLE_OFFSET),a5	; move to offset location
 	move.l	(a5),a6	; a5 has the address of the subroutine to jump to
 	jsr	(a6)	; jump to location of code to process this event
-	;---------------------------------------------------------------------------
-	; returning from the action
-	; if the dialog is now titled style then some extra setup is needed
-	;---------------------------------------------------------------------------
-	; to do - determine what (if anything) still needs to be done here now 
-	; this is the code from Retail Clerk '89 which may not apply now
-	;move.l	(MEM_DIALOG_FLAGS),d7	; copy flags to d7
-	;btst.l	#DIALOG_FLAG_STYLE_TITLED,d7	; test if flag is set
-	;beq.s	ExitProcessAction
-	;bset.l	#DIALOG_FLAG_TEXT_TITLE_DRAWING,d7	; change state to title drawing
-	;move.l	d7,(MEM_DIALOG_FLAGS)	; save updated flags
-	;bsr.w	ClearDialog	; clear the dialog
-	;move.l	#(VDP_VRAM_WRITE_A+DIALOG_TITLE_ROWCOL),(MEM_DIALOG_VDP)
-	;bsr.w	ProcessDialogLookupNPCName	; lookup the NPC name
-
 ExitProcessAction:
 	move.l	(MEM_GAME_STATE),d7	; copy current game state to d7
 	bclr.l	#STATE_FLAG_ACTION,d7 ; clear action flag

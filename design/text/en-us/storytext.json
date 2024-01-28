@@ -3354,232 +3354,227 @@
          },  
       "StoryTextTradingSequenceFCBFishingAfter":{
          "dialogTitle":"OBJ_NPC_HEATHER",
-         "text":"dialog after the trading sequence happened",
+         "text":"Be careful with those handwarmers.|They were recalled.",
          "align":2
          },
-      "StoryTextTradingSequenceFCBFirearmsBefore":{
-         "dialogTitle":"OBJ_NPC_RANDY",
-         "text":"dialog after the trading sequence is available but before it happened",
-         "align":2
-         },  
       "StoryTextTradingSequenceFCBFirearms":{
          "dialogTitle":"OBJ_NPC_RANDY",
-         "text":"thanks for that item, here's this item",
+         "text":"That's the only tape in the series I'm missing.|Do you mind trading?|I can give you this moose attractant.|I already shot one.",
          "align":2
          }, 
       "StoryTextTradingSequenceFCBFirearmsAfter":{
          "dialogTitle":"OBJ_NPC_RANDY",
-         "text":"dialog after the trading sequence happened",
+         "text":"That moose photo is one of my best shots.|I'm thinking of making a photography book.",
          "align":2
          },           
       "StoryTextTradingSequenceWWAppliancesBefore":{
          "dialogTitle":"OBJ_NPC_LAURA",
-         "text":"dialog after the trading sequence is available but before it happened",
+         "text":"The worst part of working here is parking.|They won't let us park near the door.|So we have to walk forever at night in the cold.",
          "align":2
          },          
       "StoryTextTradingSequenceWWAppliances":{
          "dialogTitle":"OBJ_NPC_LAURA",
-         "text":"thanks for that item, here's this item",
+         "text":"You're giving me these handwarmers?|Thanks!|Let me give you this lipstick.|It's brand new. It's not my color.|The guy who gave it me, I think he's seeing someone else anyway.",
          "align":2
          },     
       "StoryTextTradingSequenceWWAppliancesAfter":{
          "dialogTitle":"OBJ_NPC_LAURA",
-         "text":"dialog after the trading sequence happened",
+         "text":"Thanks again.|Be smart, stay away from guys like that.",
          "align":2
          },           
       "StoryTextTradingSequenceCheckersBefore":{
          "dialogTitle":"OBJ_NPC_TODD",
-         "text":"dialog after the trading sequence is available but before it happened",
+         "text":"My new years party is coming up.|I need something to help draw in the ladies.",
          "align":2
          },          
       "StoryTextTradingSequenceCheckers":{
          "dialogTitle":"OBJ_NPC_TODD",
-         "text":"thanks for that item, here's this item",
+         "text":"What is that? Some new kind of cologne?|I'd be happy to trade for it.|All I have is this shirt we have to get rid of.|It's a small size.|And we have a new store policy to only sell clothes to people over 6ft.|Sorry if it's not your size.",
          "align":2
          },      
       "StoryTextTradingSequenceCheckersAfter":{
          "dialogTitle":"OBJ_NPC_TODD",
-         "text":"dialog after the trading sequence happened",
+         "text":"No one under 6ft allowed.|It's a weird policy but I don't make the rules.",
          "align":2
          },            
       "StoryTextTradingSequenceCPlanetBefore":{
          "dialogTitle":"OBJ_NPC_ELIZA",
-         "text":"dialog after the trading sequence is available but before it happened",
+         "text":"I could use something to freshen-up my look.",
          "align":2
          },          
       "StoryTextTradingSequenceCPlanet":{
          "dialogTitle":"OBJ_NPC_ELIZA",
-         "text":"thanks for that item, here's this item",
+         "text":"Hey, that is a different color lipstick.|Do you like underground bands?|We've giving away tickets for show next month.|Take a pair with you.",
          "align":2
          }, 
       "StoryTextTradingSequenceCPlanetAfter":{
          "dialogTitle":"OBJ_NPC_ELIZA",
-         "text":"dialog after the trading sequence happened",
+         "text":"I can't wait for the concert next month.",
          "align":2
          },           
       "StoryTextTradingSequenceWWAudioBefore":{
          "dialogTitle":"OBJ_NPC_CRAIG",
-         "text":"dialog after the trading sequence is available but before it happened",
+         "text":"The worst part of working here is the dress code.|I only have one shirt that qualfies.|I'm doing laundy every day.",
          "align":2
          },          
       "StoryTextTradingSequenceWWAudio":{
          "dialogTitle":"OBJ_NPC_CRAIG",
-         "text":"thanks for that item, here's this item",
+         "text":"That is my size, thanks.|I'll give you this in exchange.|It's a headband radio. I guess for running.|We just discontined it.",
          "align":2
          }, 
       "StoryTextTradingSequenceWWAudioAfter":{
          "dialogTitle":"OBJ_NPC_CRAIG",
-         "text":"dialog after the trading sequence happened",
+         "text":"Thanks for the shirt.",
          "align":2
          },  
       "StoryTextTradingSequenceWWVideoBefore":{
          "dialogTitle":"OBJ_NPC_JUAN",
-         "text":"dialog after the trading sequence is available but before it happened",
+         "text":"This town is so boring.|I wish there was anything to do.",
          "align":2
          },          
       "StoryTextTradingSequenceWWVideo":{
          "dialogTitle":"OBJ_NPC_JUAN",
-         "text":"thanks for that item, here's this item",
+         "text":"You're giving me these concert tickets?|I haven't heard of them but it's worth a try.|Take this portable TV demo unit.|I have to take it down anyway.|It's cool but only gets one station in here.",
          "align":2
          },
       "StoryTextTradingSequenceWWVideoAfter":{
          "dialogTitle":"OBJ_NPC_JUAN",
-         "text":"dialog after the trading sequence happened",
+         "text":"I hope this band is good.",
          "align":2
          },          
       "StoryTextTradingSequenceTLodgeBefore":{
          "dialogTitle":"OBJ_NPC_SCOTT",
-         "text":"dialog after the trading sequence is available but before it happened",
+         "text":"I don't think there's a gadget we don't sell.",
          "align":2
          },          
       "StoryTextTradingSequenceTLodge":{
          "dialogTitle":"OBJ_NPC_SCOTT",
-         "text":"thanks for that item, here's this item",
+         "text":"Is that a headband radio?|I thought we had everything.|That is so useless & tacky, can I trade for it?|I'll give you this car radio FM converter.|It's also totally useless.",
          "align":2
          }, 
       "StoryTextTradingSequenceTLodgeAfter":{
          "dialogTitle":"OBJ_NPC_SCOTT",
-         "text":"dialog after the trading sequence happened",
+         "text":"Seriously, who drives a car without an FM radio now?",
          "align":2
          },          
       "StoryTextTradingSequenceCNowBefore":{
          "dialogTitle":"OBJ_NPC_BECKY",
-         "text":"dialog after the trading sequence is available but before it happened",
+         "text":"My parents just gave me their old mini-van.|It runs OK, but it's so ancient.",
          "align":2
          },          
       "StoryTextTradingSequenceCNow":{
          "dialogTitle":"OBJ_NPC_BECKY",
-         "text":"thanks for that item, here's this item",
+         "text":"Wow, I bet that will work in my car.|It would be nice to have something to listen to while I'm waiting for that old van to warm up.|Speaking of ancient junk from the 70s...|Take this flannel shirt.|I don't know why they keep shipping them.|They'll never be in style.",
          "align":2
          }, 
       "StoryTextTradingSequenceCNowAfter":{
          "dialogTitle":"OBJ_NPC_BECKY",
-         "text":"dialog after the trading sequence happened",
+         "text":"Thanks again, it's nice to have something to listen to.|Last night there was show about..|[30 minutes later]|...and they still haven't found him.",
          "align":2
          },            
       "StoryTextTradingSequenceFCBCheckoutBefore":{
          "dialogTitle":"OBJ_NPC_THOMAS",
-         "text":"dialog after the trading sequence is available but before it happened",
+         "text":"Everyone is done shopping for xmas,|it's totally dead here, I'm more bored than usual.",
          "align":2
          },          
       "StoryTextTradingSequenceFCBCheckout":{
          "dialogTitle":"OBJ_NPC_THOMAS",
-         "text":"thanks for that item, here's this item",
+         "text":"You're giving me this TV?|At least it's something to do.|Am I supposed to give you something in return?|Here's a coupon we give to angry customers.|It's good for 10% off any non-sale item,|good on weekdays in February only.",
          "align":2
          }, 
       "StoryTextTradingSequenceFCBCheckoutAfter":{
          "dialogTitle":"OBJ_NPC_THOMAS",
-         "text":"dialog after the trading sequence happened",
+         "text":"Is this the only station it gets?",
          "align":2
          },          
       "StoryTextTradingSequenceWWCheckoutBefore":{
          "dialogTitle":"OBJ_NPC_TANYA",
-         "text":"dialog after the trading sequence is available but before it happened",
+         "text":"I wonder what we can do to get some after holiday shoppers?",
          "align":2
          },   
       "StoryTextTradingSequenceWWCheckout":{
          "dialogTitle":"OBJ_NPC_TANYA",
-         "text":"thanks for that item, here's this item",
+         "text":"That coupon is a really good idea.|Can I take it to show to my manager?|I'll give you these LPs in return.|They got mixed-in with some laserdiscs.|I don't know if anyone will want LPs again though.",
          "align":2
          },      
       "StoryTextTradingSequenceWWCheckoutAfter":{
          "dialogTitle":"OBJ_NPC_TANYA",
-         "text":"dialog after the trading sequence happened",
+         "text":"Thanks again for the coupon idea.",
          "align":2
          },                
       "StoryTextTradingSequenceFCBCampingBefore":{
          "dialogTitle":"OBJ_NPC_GRANT",
-         "text":"dialog after the trading sequence is available but before it happened",
+         "text":"This place always takes me back to my youth.|You were too young, you don't know what you missed out on.",
          "align":2
          },   
       "StoryTextTradingSequenceFCBCamping":{
          "dialogTitle":"OBJ_NPC_GRANT",
-         "text":"thanks for that item, here's this item",
+         "text":"You need to unload that flannel shirt?|I won't complain about taking it.|I'll give you this utility knife in return.|Be careful with it.",
          "align":2
          }, 
       "StoryTextTradingSequenceFCBCampingAfter":{
          "dialogTitle":"OBJ_NPC_GRANT",
-         "text":"dialog after the trading sequence happened",
+         "text":"That knife has over a dozen uses.",
          "align":2
          },            
       "StoryTextTradingSequencePogoDawgBefore":{
          "dialogTitle":"OBJ_NPC_GRIFFY",
-         "text":"dialog after the trading sequence is available but before it happened",
+         "text":"Have you ever... uh.|Have you ever... wait.|The thing with the movie and album.|You know, the thing?",
          "align":2
          },                  
       "StoryTextTradingSequencePogoDawg":{
          "dialogTitle":"OBJ_NPC_GRIFFY",
-         "text":"thanks for that item, here's this item",
+         "text":"Is that the, uh, what's is called? ...record...|Is that the, uh, record with the movie?|You know, the thing with the movie and album.|Like you, um, play them together or...|Can I have that?|I'll give this, what's it called?|This, uh, package.|The, uh, yeah, the delivery guy left it here.|When the, what's it called? Ambulance took him.",
          "align":2
          },
       "StoryTextTradingSequencePogoDawgAfter":{
          "dialogTitle":"OBJ_NPC_GRIFFY",
-         "text":"dialog after the trading sequence happened",
+         "text":"Uh... is there, yeah, uh.|Like something else you need?",
          "align":2
          },            
       "StoryTextTradingSequenceVBBefore":{
          "dialogTitle":"OBJ_NPC_GRUNBERG",
-         "text":"dialog after the trading sequence is available but before it happened",
+         "text":"Last year was so much more interesting.",
          "align":2
          },               
       "StoryTextTradingSequenceVB":{
          "dialogTitle":"OBJ_NPC_GRUNBERG",
-         "text":"thanks for that item, here's this item",
+         "text":"You don't know who that box is for?|I always enjoy a good mystery, let's open it.|[...]|Why it's a trophy.|Why don't you keep it.",
          "align":2
          },        
       "StoryTextTradingSequenceVBAfter":{
          "dialogTitle":"OBJ_NPC_GRUNBERG",
-         "text":"dialog after the trading sequence happened",
+         "text":"I wish there was something mysterious in that box.",
          "align":2
          },            
       "StoryTextTradingSequenceCavernBefore":{
          "dialogTitle":"OBJ_NPC_DB",
-         "text":"dialog after the trading sequence is available but before it happened",
+         "text":"Some kid jammed up a coin slot.|Looks like a metal thing they found on the floor.",
          "align":2
          }, 
       "StoryTextTradingSequenceCavern":{
          "dialogTitle":"OBJ_NPC_DB",
-         "text":"thanks for that item, here's this item",
+         "text":"Can I borrow that knife you have there?|There's a metal object jammed in coin slot.|Oh, it's a big round earring.|Think you can find the owner?",
          "align":2
          }, 
       "StoryTextTradingSequenceCavernAfter":{
          "dialogTitle":"OBJ_NPC_DB",
-         "text":"dialog after the trading sequence happened",
+         "text":"I don't know who lost that earring.",
          "align":2
          },          
       "StoryTextTradingSequenceDenimCountryBefore":{
          "dialogTitle":"OBJ_NPC_LISA",
-         "text":"dialog after the trading sequence is available but before it happened",
+         "text":"(I've looked everywhere)|Sorry, I was thinking about something.",
          "align":2
          }, 
       "StoryTextTradingSequenceDenimCountry":{
          "dialogTitle":"OBJ_NPC_LISA",
-         "text":"thanks for that item, here's this item",
+         "text":"Thanks Carl. These belonged to my grandmother.|I couldn't stand to lose them.|I know this is expensive but I want you to have it as thanks.|It just came out this year and everyone wants one.|I bought it but then won one from a prize machine.|I insist you have it.",
          "align":2
          },
       "StoryTextTradingSequenceDenimCountryAfter":{
          "dialogTitle":"OBJ_NPC_LISA",
-         "text":"dialog after the trading sequence happened",
+         "text":"Thank you again Carl.|Those earrings mean so much to me.",
          "align":2
          }         
    }

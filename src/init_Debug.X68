@@ -908,10 +908,12 @@ LaunchDebug36: ; test text distortion effect
 	lea	SceneDenimCountry,a6
 	bsr.w LoadScene
 	; the part being tested	
-	move.w	#$2700,sr		; disable interrupts	
-	bsr.w	LoadFontTilesSlightDistort
-	move.w	#$2000,sr		; re-enable interrupts	
+	;move.w	#$2700,sr		; disable interrupts	
+	;bsr.w	LoadFontTilesSlightDistort
+	;move.w	#$2000,sr		; re-enable interrupts	
 	; back to usual business
+	lea	ScriptedEventTradingSequenceDenimCountryStart,a6
+	bsr.w	QueueScriptedEvent
 	bsr.w LoadPlayerSprite
 	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
 	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)

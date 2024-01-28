@@ -13,17 +13,9 @@ ActionScriptNight01SceneFCBFirearmsTrading:
 	; otherwise trade
 	bset.l	#$0,d7 ; set trade complete
 	move.l	d7,(MEM_TRADING_SEQUENCE_NIGHT) ; save updated progress
-	; remove item
-	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 2nd pc inventory
-	move.w	#OBJ_ITEM_VHS_TAPE,d7 ; remove item from trading sequence
-	bsr.w	RemoveItem ; remove item from the inventory			
-	; add item to start trading sequence
-	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 2nd pc inventory
-	move.w	#OBJ_ITEM_MOOSE_ATTRACTANT,d7 ; add item from trading sequence
-	bsr.w	AddItem ; add item to inventory				
-	; show the dialog
-	lea	StoryTextTradingSequenceFCBFirearms,a6 ; point to text to display
-	bsr.w	ShowDialog
+	; queue scripted event	
+	lea ScriptedEventTradingSequenceFCBFirearmsStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
 	rts
 .after
 	lea	StoryTextTradingSequenceFCBFirearmsAfter,a6 ; point to text to display
@@ -47,17 +39,9 @@ ActionScriptNight02SceneCheckersTrading:
 	; otherwise trade
 	bset.l	#$1,d7 ; set trade complete
 	move.l	d7,(MEM_TRADING_SEQUENCE_NIGHT) ; save updated progress
-	; remove item
-	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 2nd pc inventory
-	move.w	#OBJ_ITEM_MOOSE_ATTRACTANT,d7 ; remove item from trading sequence
-	bsr.w	RemoveItem ; remove item from the inventory			
-	; add item to start trading sequence
-	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 2nd pc inventory
-	move.w	#OBJ_ITEM_SHIRT,d7 ; add item from trading sequence
-	bsr.w	AddItem ; add item to inventory				
-	; show the dialog
-	lea	StoryTextTradingSequenceCheckers,a6 ; point to text to display
-	bsr.w	ShowDialog
+	; queue scripted event	
+	lea ScriptedEventTradingSequenceCheckersStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
 	rts
 .after
 	lea	StoryTextTradingSequenceCheckersAfter,a6 ; point to text to display
@@ -85,17 +69,9 @@ ActionScriptNight03SceneWWAudioTrading:
 	; otherwise trade
 	bset.l	#$2,d7 ; set trade complete
 	move.l	d7,(MEM_TRADING_SEQUENCE_NIGHT) ; save updated progress
-	; remove item
-	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 2nd pc inventory
-	move.w	#OBJ_ITEM_SHIRT,d7 ; remove item from trading sequence
-	bsr.w	RemoveItem ; remove item from the inventory			
-	; add item to start trading sequence
-	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 2nd pc inventory
-	move.w	#OBJ_ITEM_HEADBAND,d7 ; add item from trading sequence
-	bsr.w	AddItem ; add item to inventory				
-	; show the dialog
-	lea	StoryTextTradingSequenceWWAudio,a6 ; point to text to display
-	bsr.w	ShowDialog
+	; queue scripted event	
+	lea ScriptedEventTradingSequenceWWAudioStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
 	rts
 .after
 	lea	StoryTextTradingSequenceWWAudioAfter,a6 ; point to text to display
@@ -123,17 +99,9 @@ ActionScriptNight04SceneTLodgeTrading:
 	; otherwise trade
 	bset.l	#$3,d7 ; set trade complete
 	move.l	d7,(MEM_TRADING_SEQUENCE_NIGHT) ; save updated progress
-	; remove item
-	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 2nd pc inventory
-	move.w	#OBJ_ITEM_HEADBAND,d7 ; remove item from trading sequence
-	bsr.w	RemoveItem ; remove item from the inventory			
-	; add item to start trading sequence
-	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 2nd pc inventory
-	move.w	#OBJ_ITEM_FM_CONVERTER,d7 ; add item from trading sequence
-	bsr.w	AddItem ; add item to inventory				
-	; show the dialog
-	lea	StoryTextTradingSequenceTLodge,a6 ; point to text to display
-	bsr.w	ShowDialog
+	; queue scripted event	
+	lea ScriptedEventTradingSequenceTLodgeStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
 	rts
 .after
 	lea	StoryTextTradingSequenceTLodgeAfter,a6 ; point to text to display
@@ -161,17 +129,9 @@ ActionScriptNight04SceneCNowTrading:
 	; otherwise trade
 	bset.l	#$4,d7 ; set trade complete
 	move.l	d7,(MEM_TRADING_SEQUENCE_NIGHT) ; save updated progress
-	; remove item
-	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 2nd pc inventory
-	move.w	#OBJ_ITEM_FM_CONVERTER,d7 ; remove item from trading sequence
-	bsr.w	RemoveItem ; remove item from the inventory			
-	; add item to start trading sequence
-	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 2nd pc inventory
-	move.w	#OBJ_ITEM_FLANNEL_SHIRT,d7 ; add item from trading sequence
-	bsr.w	AddItem ; add item to inventory				
-	; show the dialog
-	lea	StoryTextTradingSequenceCNow,a6 ; point to text to display
-	bsr.w	ShowDialog
+	; queue scripted event	
+	lea ScriptedEventTradingSequenceCNowStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
 	rts
 .after
 	lea	StoryTextTradingSequenceCNowAfter,a6 ; point to text to display
@@ -199,17 +159,9 @@ ActionScriptNight05SceneFCBCampingTrading:
 	; otherwise trade
 	bset.l	#$5,d7 ; set trade complete
 	move.l	d7,(MEM_TRADING_SEQUENCE_NIGHT) ; save updated progress
-	; remove item
-	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 2nd pc inventory
-	move.w	#OBJ_ITEM_FLANNEL_SHIRT,d7 ; remove item from trading sequence
-	bsr.w	RemoveItem ; remove item from the inventory			
-	; add item to start trading sequence
-	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 2nd pc inventory
-	move.w	#OBJ_ITEM_UTILITY_KNIFE,d7 ; add item from trading sequence
-	bsr.w	AddItem ; add item to inventory				
-	; show the dialog
-	lea	StoryTextTradingSequenceFCBCamping,a6 ; point to text to display
-	bsr.w	ShowDialog
+	; queue scripted event	
+	lea ScriptedEventTradingSequenceFCBCampingStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
 	rts
 .after
 	lea	StoryTextTradingSequenceFCBCampingAfter,a6 ; point to text to display
@@ -237,17 +189,9 @@ ActionScriptNight06SceneCavernTrading:
 	; otherwise trade
 	bset.l	#$6,d7 ; set trade complete
 	move.l	d7,(MEM_TRADING_SEQUENCE_NIGHT) ; save updated progress
-	; remove item
-	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 2nd pc inventory
-	move.w	#OBJ_ITEM_UTILITY_KNIFE,d7 ; remove item from trading sequence
-	bsr.w	RemoveItem ; remove item from the inventory			
-	; add item to start trading sequence
-	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 2nd pc inventory
-	move.w	#OBJ_ITEM_EARRING,d7 ; add item from trading sequence
-	bsr.w	AddItem ; add item to inventory				
-	; show the dialog
-	lea	StoryTextTradingSequenceCavern,a6 ; point to text to display
-	bsr.w	ShowDialog
+	; queue scripted event	
+	lea ScriptedEventTradingSequenceCavernStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
 	rts
 .after
 	lea	StoryTextTradingSequenceCavernAfter,a6 ; point to text to display
@@ -279,17 +223,9 @@ ActionScriptNight06SceneDenimCountryTrading:
 	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7
 	bset.l	#FLAG_GLOBAL_TradingNightComplete,d7
 	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS)
-	; remove item
-	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 2nd pc inventory
-	move.w	#OBJ_ITEM_EARRING,d7 ; remove item from trading sequence
-	bsr.w	RemoveItem ; remove item from the inventory			
-	; add item to start trading sequence
-	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 2nd pc inventory
-	move.w	#OBJ_ITEM_FINALITEM,d7 ; add item from trading sequence
-	bsr.w	AddItem ; add item to inventory				
-	; show the dialog
-	lea	StoryTextTradingSequenceDenimCountry,a6 ; point to text to display
-	bsr.w	ShowDialog
+	; queue scripted event	
+	lea ScriptedEventTradingSequenceDenimCountryStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
 	rts
 .after
 	lea	StoryTextTradingSequenceDenimCountryBefore,a6 ; point to text to display

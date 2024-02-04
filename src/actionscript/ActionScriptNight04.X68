@@ -170,6 +170,18 @@ ActionScriptNight04SHallUpdateState:
 ; SCENE_ID_VB
 ;*******************************************************************************
 ActionScriptNight04VBInteract:	
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	beq.s	.default
+	;---------------------------------------------------------------
+	; npc 0 is the clerk
+	;---------------------------------------------------------------
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.s	.default
+	;---------------------------------------------------------------
+	; else check if the event is complete
+	;---------------------------------------------------------------
+
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_NIGHT04_OPTIONAL1,d7 ; test if the optional event is complete
 	bne.s	.default ; show default text if the event is complete
@@ -208,6 +220,17 @@ ActionScriptNight04VBRespond:
 ; SCENE_ID_WWAPPLIANCES
 ;*******************************************************************************
 ActionScriptNight04WWTVInteract:	
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	beq.s	.default
+	;---------------------------------------------------------------
+	; npc 0 is the clerk
+	;---------------------------------------------------------------
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.s	.default
+	;---------------------------------------------------------------
+	; else check if the event is complete
+	;---------------------------------------------------------------
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_NIGHT04_OPTIONAL2,d7 ; test if the optional event is complete
 	bne.s	.default ; show default text if the event is complete
@@ -286,4 +309,14 @@ EndNight04SetupGameState: ; separated to help with debugging
 	move.l	#$05100000,(MEM_NPC_LOCATION_DENIMCOUNTRY)
 	move.l	#$0E240000,(MEM_NPC_LOCATION_FCBFIREARMS)
 	move.l	#$1B250000,(MEM_NPC_LOCATION_WWAUDIO)
+	;---------------------------------------------------------------------------	
+	; scatter some NPCs around
+	;---------------------------------------------------------------------------	
+	move.l	#$09260000,(MEM_NPC_LOCATION_TLODGE)
+	move.l	#$19120000,(MEM_NPC_LOCATION_SVIDEO)
+	move.l	#$15230000,(MEM_NPC_LOCATION_FCBFISHING)
+	move.l	#$1D220000,(MEM_NPC_LOCATION_WWAPPLIANCES)
+	move.l	#$0A200000,(MEM_NPC_LOCATION_CHECKERS)
+	move.l	#$08210000,(MEM_NPC_LOCATION_POGODAWG)
+	move.l	#$11000000,(MEM_NPC_LOCATION_WWHALL)
 	rts		

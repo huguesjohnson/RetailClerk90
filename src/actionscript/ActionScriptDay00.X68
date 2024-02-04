@@ -177,6 +177,17 @@ ActionScriptDay00SouthHallExit:
 ; SCENE_ID_CAVERN
 ;*******************************************************************************
 ActionScriptDay00CavernInteract:
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	beq.s	.default
+	;---------------------------------------------------------------
+	; npc 0 is the clerk
+	;---------------------------------------------------------------
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.s	.default
+	;---------------------------------------------------------------
+	; else check if the event is complete
+	;---------------------------------------------------------------
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_DAY00_OPTIONAL1,d7 ; test if the optional event is complete
 	bne.s	.default ; show default text if the event is complete
@@ -214,6 +225,17 @@ ActionScriptDay00CavernRespond:
 ; SCENE_ID_SVIDEO
 ;*******************************************************************************
 ActionScriptDay00SVideoInteract:	
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	beq.s	.default
+	;---------------------------------------------------------------
+	; npc 0 is the clerk
+	;---------------------------------------------------------------
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.s	.default
+	;---------------------------------------------------------------
+	; else check if the event is complete
+	;---------------------------------------------------------------
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_DAY00_OPTIONAL2,d7 ; test if the optional event is complete
 	bne.s	.default ; show default text if the event is complete
@@ -269,7 +291,7 @@ EndDay00:
 	; add item that is needed for the first trading sequence
 	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 1st pc inventory
 	move.w	#OBJ_ITEM_SPECIAL_ORDER,d7 ; add item for the trading sequence
-	bsr.w	AddItem ; add item to inventory		
+	bsr.w	AddItem ; add item to inventory	
 	;---------------------------------------------------------------------------	
 	; update NPC locations
 	;---------------------------------------------------------------------------	

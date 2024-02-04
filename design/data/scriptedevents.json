@@ -328,6 +328,11 @@
             "label":"StoryTextDay00InfoDeskLine10"
          },
          {
+            "comment":"have sprite face down again",
+            "direction":"DOWN",
+            "intValue":0
+         },         
+         {
             "comment":"add OBJ_ITEM_SCARF to inventory",
             "command":"ADDITEM",
             "intConst":"OBJ_ITEM_SCARF"
@@ -346,10 +351,55 @@
             "intValue":2
          },
          {
+            "comment":"move up toward the arcade cabinet",
+            "direction":"UP",
+            "intValue":96
+         },           
+         {
+            "comment":"move right toward the arcade cabinet",
+            "direction":"RIGHT",
+            "intValue":23
+         },           
+         {
+            "comment":"face the cabinet",
+            "direction":"UP",
+            "intValue":8
+         }, 
+         {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         },
+         {
+            "comment":"move up toward the arcade cabinet",
+            "direction":"UP",
+            "intValue":128
+         },
+         {
+            "comment":"change to npc0",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         }, 
+         {
+            "comment":"have them face left",
+            "direction":"LEFT",
+            "intValue":0
+         },                 
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay00CavernLine1"
          },
+         {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         }, 
+         {
+            "comment":"have them face right",
+            "direction":"RIGHT",
+            "intValue":0
+         },          
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -386,6 +436,16 @@
             "label":"StoryTextDay00CavernLine8"
          },
          {
+            "comment":"change to npc0",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         }, 
+         {
+            "comment":"have them face up",
+            "direction":"UP",
+            "intValue":0
+         },           
+         {
             "comment":"end",
             "command":"END"
          }
@@ -399,30 +459,175 @@
             "intValue":2
          },
          {
+            "comment":"move left and down toward the boxes",
+            "direction":"LEFT",
+            "intValue":20
+         },          
+         {
+            "comment":"move left and down toward the boxes",
+            "direction":"DOWN",
+            "intValue":20
+         }, 
+         {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         },         
+         {
+            "comment":"move left and down toward the boxes",
+            "direction":"LEFT",
+            "intValue":140
+         },          
+         {
+            "comment":"move left and down toward the boxes",
+            "direction":"DOWN",
+            "intValue":30
+         },            
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay00SVideoLine1"
          },
+         {
+            "comment":"change to npc0 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         },         
+         {
+            "comment":"move up",
+            "direction":"UP",
+            "intValue":30
+         },          
          {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay00SVideoLine2"
          },
          {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         },         
+         {
+            "comment":"move up",
+            "direction":"UP",
+            "intValue":30
+         },          
+         {
+            "comment":"change to npc0 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         },         
+         {
+            "comment":"move down",
+            "direction":"DOWN",
+            "intValue":30
+         },          
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay00SVideoLine3"
          },
+         {
+            "comment":"move up (still npc0 sprite)",
+            "direction":"UP",
+            "intValue":30
+         },          
+         {
+            "comment":"move down",
+            "direction":"DOWN",
+            "intValue":30
+         },          
          {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay00SVideoLine4"
          },
          {
+            "comment":"move up (still npc0 sprite)",
+            "direction":"UP",
+            "intValue":30
+         },  
+         {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         },         
+         {
+            "comment":"move down",
+            "direction":"DOWN",
+            "intValue":30
+         },     
+         {
+            "comment":"change to npc0 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         },         
+         {
+            "comment":"move up",
+            "direction":"UP",
+            "intValue":30
+         },   
+         {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         },         
+         {
+            "comment":"move up",
+            "direction":"UP",
+            "intValue":30
+         },  
+         {
+            "comment":"change to npc0 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         },         
+         {
+            "comment":"move down",
+            "direction":"DOWN",
+            "intValue":30
+         },  
+         {
+            "comment":"move up",
+            "direction":"UP",
+            "intValue":30
+         },   
+         {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         },         
+         {
+            "comment":"move down",
+            "direction":"DOWN",
+            "intValue":30
+         },  
+         {
+            "comment":"move up",
+            "direction":"UP",
+            "intValue":30
+         }, 
+         {
+            "comment":"face right",
+            "direction":"RIGHT",
+            "intValue":0
+         },                                                                   
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay00SVideoLine5"
          },
+         {
+            "comment":"change to npc0 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         },         
+         {
+            "comment":"face left",
+            "direction":"LEFT",
+            "intValue":0
+         },          
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -486,6 +691,21 @@
             "label":"StoryTextNight00TBooksLine7"
          },
          {
+            "comment":"move npc0 out of the scene",
+            "direction":"UP",
+            "intValue":56
+         },          
+         {
+            "comment":"move npc0 out of the scene",
+            "direction":"RIGHT",
+            "intValue":56
+         },          
+         {
+            "comment":"move npc0 out of the scene",
+            "direction":"UP",
+            "intValue":76
+         },          
+         {
             "comment":"end",
             "command":"END"
          }
@@ -495,24 +715,60 @@
       "name":"ScriptedEventNight00_01_EEHall",
       "actions":[
          {
-            "comment":"NPC0 sprite",
-            "intValue":2
+            "comment":"player sprite",
+            "intValue":1
          },
+         {
+            "comment":"face to the right (in case we came via fast travel)",
+            "direction":"RIGHT",
+            "intValue":0
+         },           
          {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight00EEHallLine1"
          },
          {
+            "comment":"change to npc1 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":3
+         },          
+         {
+            "comment":"face to the left",
+            "direction":"LEFT",
+            "intValue":0
+         },          
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight00EEHallLine2"
          },
          {
+            "comment":"exit the scene",
+            "direction":"RIGHT",
+            "intValue":24
+         },         
+         {
+            "comment":"exit the scene",
+            "direction":"UP",
+            "intValue":96
+         },          
+         
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight00EEHallLine3"
          },
+         {
+            "comment":"change to npc0 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         }, 
+         {
+            "comment":"face to the left",
+            "direction":"LEFT",
+            "intValue":0
+         },  
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -590,6 +846,11 @@
             "label":"StoryTextNight00SouthHallLine3"
          },
          {
+            "comment":"move npc0 out of the scene",
+            "direction":"DOWN",
+            "intValue":92
+         },         
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight00SouthHallLine4"
@@ -648,6 +909,16 @@
             "label":"StoryTextNight00VBLine8"
          },
          {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight00VBLine9"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight00VBLine10 "
+         },
+         {
             "comment":"end",
             "command":"END"
          }
@@ -681,6 +952,36 @@
             "label":"StoryTextNight00CPlanetLine4"
          },
          {
+            "comment":"move toward a bin of cds",
+            "direction":"LEFT",
+            "intValue":80
+         },           
+         {
+            "comment":"move toward a bin of cds",
+            "direction":"UP",
+            "intValue":4
+         },           
+         {
+            "comment":"move behind the counter",
+            "direction":"DOWN",
+            "intValue":4
+         }, 
+         {
+            "comment":"move behind the counter",
+            "direction":"RIGHT",
+            "intValue":108
+         },  
+         {
+            "comment":"move behind the counter",
+            "direction":"UP",
+            "intValue":40
+         },                              
+         {
+            "comment":"face left",
+            "direction":"LEFT",
+            "intValue":0
+         },                              
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight00CPlanetLine5"
@@ -695,6 +996,41 @@
             "command":"DIALOG",
             "label":"StoryTextNight00CPlanetLine7"
          },
+         {
+            "comment":"move from behind the counter",
+            "direction":"DOWN",
+            "intValue":40
+         }, 
+         {
+            "comment":"move toward a bin of cds",
+            "direction":"LEFT",
+            "intValue":128
+         },           
+         {
+            "comment":"move toward a bin of cds",
+            "direction":"UP",
+            "intValue":4
+         },           
+         {
+            "comment":"move behind the counter",
+            "direction":"DOWN",
+            "intValue":4
+         }, 
+         {
+            "comment":"move behind the counter",
+            "direction":"RIGHT",
+            "intValue":128
+         },  
+         {
+            "comment":"move behind the counter",
+            "direction":"UP",
+            "intValue":40
+         },                              
+         {
+            "comment":"face left",
+            "direction":"LEFT",
+            "intValue":0
+         },          
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -1004,7 +1340,7 @@
          {
             "comment":"have NPC move right",
             "direction":"RIGHT",
-            "intValue":40
+            "intValue":144
          },         
          {
             "comment":"dialog",
@@ -1162,11 +1498,6 @@
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight01SouthHallLine11"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextNight01SouthHallLine12"
          },
          {
             "comment":"end",
@@ -1903,12 +2234,12 @@
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"StoryTextErynSpeechless"
+            "label":"StoryTextDay03DenimCountryLine3"
          },
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"StoryTextDay03DenimCountryLine3"
+            "label":"StoryTextDay03DenimCountryLine4"
          },
          {
             "comment":"end",

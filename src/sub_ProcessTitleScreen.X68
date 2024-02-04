@@ -83,7 +83,7 @@ TestTitleLoadSelectedScreen:
 	endif
 	; switch to load screen
 	move.w	#$0000,(MEM_MENU_SELECTION)	; clear menu selection
-	bset.l	#STATE_FLAG_LOAD_MENU,d7 ; set debug menu flag
+	bset.l	#STATE_FLAG_LOAD_MENU,d7 ; set load menu flag
 	move.l	d7,(MEM_GAME_STATE)	; save updated game state
 	lea	SceneLoad,a6	; address of the scene for the debug menu
 	bsr.w	LoadScene	; branch to LoadScene subroutine
@@ -109,6 +109,12 @@ TestTitleLoadDebugMenu:
 	move.w	#$0000,(MEM_PLAYER_SPRITE_Y)
 	bsr.w	FixSprites	
 	bsr.w	FadeIn	; fade in to the new scene
+
+;*******************************************************************************
+; TEMPORARY "QUICK DEBUG" FOR DEVELOPMENT - REMOVE THIS LATER
+;*******************************************************************************
+	move.w	#$0006,(MEM_MENU_SELECTION)
+
 	bra.s	ExitProcessTitleScreen	;	return to start of game loop
 	endif
 TestTitleLoadNewGame:

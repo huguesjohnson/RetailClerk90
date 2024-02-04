@@ -24,9 +24,6 @@ ActionScriptNight00EEHallEnter:
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags	
 	; the npcs in the area are different after the event
 	move.l	#$11000000,(MEM_NPC_LOCATION_EEHALL)			
-	; run the scripted event
-	lea	StoryTextNight00EEHallLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea	ScriptedEventNight00_01_EEHallStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 	rts
@@ -72,8 +69,6 @@ ActionScriptNight00SouthHallEnter:
 .event	
 	bsr.s	ActionScriptNight00UpdateStateAfterSHall
 	; run the scripted event
-	lea	StoryTextNight00SouthHallLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea	ScriptedEventNight00_02_VictorEncounterStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 	rts		
@@ -110,6 +105,17 @@ ActionScriptNight00SouthHallExit:
 ; SCENE_ID_VB
 ;*******************************************************************************
 ActionScriptNight00VBInteract:	
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	beq.s	.default
+	;---------------------------------------------------------------
+	; npc 0 is the clerk
+	;---------------------------------------------------------------
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.s	.default
+	;---------------------------------------------------------------
+	; else check if the event is complete
+	;---------------------------------------------------------------
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_NIGHT00_OPTIONAL1,d7 ; test if the optional event is complete
 	bne.s	.default ; show default text if the event is complete
@@ -147,6 +153,17 @@ ActionScriptNight00VBRespond:
 ; SCENE_ID_CPLANET
 ;*******************************************************************************
 ActionScriptNight00CPlanetInteract:	
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	beq.s	.default
+	;---------------------------------------------------------------
+	; npc 0 is the clerk
+	;---------------------------------------------------------------
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.s	.default
+	;---------------------------------------------------------------
+	; else check if the event is complete
+	;---------------------------------------------------------------
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_NIGHT00_OPTIONAL2,d7 ; test if the optional event is complete
 	bne.s	.default ; show default text if the event is complete
@@ -221,5 +238,17 @@ EndNight00SetGameState: ; separated out to help with debugging
 	; update NPC locations
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsDay ; reset the NPC locations
+	;---------------------------------------------------------------------------	
+	; scatter some NPCs around
+	;---------------------------------------------------------------------------	
+	move.l	#$08220000,(MEM_NPC_LOCATION_POGODAWG)
+	move.l	#$0A260000,(MEM_NPC_LOCATION_CHECKERS)
+	move.l	#$09250000,(MEM_NPC_LOCATION_TLODGE)
+	move.l	#$0B240000,(MEM_NPC_LOCATION_CPLANET)
+	move.l	#$0C230000,(MEM_NPC_LOCATION_CNOW)	
+	move.l	#$02200000,(MEM_NPC_LOCATION_TBOOKS)	
+	move.l	#$1E120000,(MEM_NPC_LOCATION_SOUTH_CENTER)
+	move.l	#$1B210000,(MEM_NPC_LOCATION_WWAUDIO)
+	move.l	#$11000000,(MEM_NPC_LOCATION_WEHALL)	
 	rts	
 

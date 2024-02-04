@@ -63,6 +63,8 @@ DIALOG_FRAME_COUNT,$000B,number of animation frames for dialogs
 DIALOG_MENU_INIT_SELECTION_X,$C8,x coordinate of initial menu selection
 DIALOG_MENU_INIT_SELECTION_Y,$138,y coordinate of initial menu selection
 DIALOG_NO_RESPONSE,$FFFF,no response or dialog cancelled 
+DIALOG_CARET_RELATIVE_POSITION,$00AA0000,where to draw the caret character that indicates there is another page
+DIALOG_NEXT_ROW,$00800000,add to current position to go down a row
 ;
 ;-------------------------------------------------------------------------------
 ; font settings

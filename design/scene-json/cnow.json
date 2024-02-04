@@ -504,16 +504,16 @@
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":200,
-			"y":200,
+			"x":286,
+			"y":170,
 			"direction":"DIRECTION_DOWN",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":0,
-			"y":0,
-			"direction":"DIRECTION_DOWN",
+			"x":372,
+			"y":240,
+			"direction":"DIRECTION_LEFT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},

@@ -653,6 +653,13 @@
 	],
 	"npcLocations":[
 		{
+			"x":383,
+			"y":266,
+			"direction":"DIRECTION_RIGHT",
+			"movementFrequency":65535,
+			"movementPatternName":"NullMovement"
+		},
+		{
 			"x":250,
 			"y":170,
 			"direction":"DIRECTION_DOWN",
@@ -660,23 +667,16 @@
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":0,
-			"y":0,
-			"direction":"DIRECTION_DOWN",
+			"x":184,
+			"y":264,
+			"direction":"DIRECTION_LEFT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":0,
-			"y":0,
-			"direction":"DIRECTION_DOWN",
-			"movementFrequency":65535,
-			"movementPatternName":"NullMovement"
-		},
-		{
-			"x":0,
-			"y":0,
-			"direction":"DIRECTION_DOWN",
+			"x":268,
+			"y":158,
+			"direction":"DIRECTION_LEFT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		}

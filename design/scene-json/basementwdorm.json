@@ -246,9 +246,9 @@
 	],
 	"npcLocations":[
 		{
-			"x":0,
-			"y":0,
-			"direction":"DIRECTION_DOWN",
+			"x":176,
+			"y":152,
+			"direction":"DIRECTION_RIGHT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},

@@ -45,10 +45,17 @@ InitGameState:
 ; load the initial NPC locations
 ;-------------------------------------------------------------------------------
 	bsr.w	InitNPCLocationsDay ; moves all npcs back to their starting point
-	; add the two npcs that need to be present at the start
+	; add the npcs that need to be present at the start
 	move.l	#$05232100,(MEM_NPC_LOCATION_DENIMCOUNTRY)	
-	move.l	#$02240000,(MEM_NPC_LOCATION_TBOOKS)	
-
+	move.l	#$02240000,(MEM_NPC_LOCATION_TBOOKS)
+	; scatter a few NPCs around
+	move.l	#$0B220000,(MEM_NPC_LOCATION_CPLANET)
+	move.l	#$0A250000,(MEM_NPC_LOCATION_CHECKERS)
+	move.l	#$1D260000,(MEM_NPC_LOCATION_WWAPPLIANCES)
+	move.l	#$15200000,(MEM_NPC_LOCATION_FCBFISHING)
+	move.l	#$07030000,(MEM_NPC_LOCATION_NSHACK)
+	move.l	#$1C120000,(MEM_NPC_LOCATION_WWTV)	
+			
 	move.w	#$2000,sr		; re-enable interrupts
 ;-------------------------------------------------------------------------------
 ; load the initial scene

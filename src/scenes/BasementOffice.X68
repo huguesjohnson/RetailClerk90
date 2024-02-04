@@ -417,9 +417,9 @@
 	dc.l	NullMovementStart ; location of movement pattern for npc1
 	dc.w	(NullMovementEnd-NullMovementStart-1) ; movement pattern length
 
-	dc.w	$0000 ; starting x location of npc2
-	dc.w	$0000 ; starting y location of npc2
-	dc.w	DIRECTION_DOWN ; starting direction of npc2
+	dc.w	$00AA ; starting x location of npc2
+	dc.w	$00E0 ; starting y location of npc2
+	dc.w	DIRECTION_UP ; starting direction of npc2
 	dc.w	$FFFF ; movement frequency of npc2
 	dc.l	NullMovementStart ; location of movement pattern for npc2
 	dc.w	(NullMovementEnd-NullMovementStart-1) ; movement pattern length

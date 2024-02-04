@@ -190,6 +190,9 @@ ScriptedEventDay00_01_InfoDeskStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay00InfoDeskLine10
+	; have sprite face down again
+	dc.w	DIRECTION_DOWN
+	dc.w	$0000
 	; add OBJ_ITEM_SCARF to inventory
 	dc.w	SCRIPTED_EVENT_ADDITEM
 	dc.w	OBJ_ITEM_SCARF
@@ -200,9 +203,36 @@ ScriptedEventDay00_01_InfoDeskEnd:
 ScriptedEventDay00_Optional00_DBStart:
 	; NPC0 sprite
 	dc.w	$0002
+	; move up toward the arcade cabinet
+	dc.w	DIRECTION_UP
+	dc.w	$0060
+	; move right toward the arcade cabinet
+	dc.w	DIRECTION_RIGHT
+	dc.w	$0017
+	; face the cabinet
+	dc.w	DIRECTION_UP
+	dc.w	$0008
+	; change to player sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0001
+	; move up toward the arcade cabinet
+	dc.w	DIRECTION_UP
+	dc.w	$0080
+	; change to npc0
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0002
+	; have them face left
+	dc.w	DIRECTION_LEFT
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay00CavernLine1
+	; change to player sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0001
+	; have them face right
+	dc.w	DIRECTION_RIGHT
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay00CavernLine2
@@ -224,6 +254,12 @@ ScriptedEventDay00_Optional00_DBStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay00CavernLine8
+	; change to npc0
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0002
+	; have them face up
+	dc.w	DIRECTION_UP
+	dc.w	$0000
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay00_Optional00_DBEnd:
@@ -231,21 +267,108 @@ ScriptedEventDay00_Optional00_DBEnd:
 ScriptedEventDay00_Optional01_NickyStart:
 	; NPC0 sprite
 	dc.w	$0002
+	; move left and down toward the boxes
+	dc.w	DIRECTION_LEFT
+	dc.w	$0014
+	; move left and down toward the boxes
+	dc.w	DIRECTION_DOWN
+	dc.w	$0014
+	; change to player sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0001
+	; move left and down toward the boxes
+	dc.w	DIRECTION_LEFT
+	dc.w	$008c
+	; move left and down toward the boxes
+	dc.w	DIRECTION_DOWN
+	dc.w	$001e
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay00SVideoLine1
+	; change to npc0 sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0002
+	; move up
+	dc.w	DIRECTION_UP
+	dc.w	$001e
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay00SVideoLine2
+	; change to player sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0001
+	; move up
+	dc.w	DIRECTION_UP
+	dc.w	$001e
+	; change to npc0 sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0002
+	; move down
+	dc.w	DIRECTION_DOWN
+	dc.w	$001e
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay00SVideoLine3
+	; move up (still npc0 sprite)
+	dc.w	DIRECTION_UP
+	dc.w	$001e
+	; move down
+	dc.w	DIRECTION_DOWN
+	dc.w	$001e
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay00SVideoLine4
+	; move up (still npc0 sprite)
+	dc.w	DIRECTION_UP
+	dc.w	$001e
+	; change to player sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0001
+	; move down
+	dc.w	DIRECTION_DOWN
+	dc.w	$001e
+	; change to npc0 sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0002
+	; move up
+	dc.w	DIRECTION_UP
+	dc.w	$001e
+	; change to player sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0001
+	; move up
+	dc.w	DIRECTION_UP
+	dc.w	$001e
+	; change to npc0 sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0002
+	; move down
+	dc.w	DIRECTION_DOWN
+	dc.w	$001e
+	; move up
+	dc.w	DIRECTION_UP
+	dc.w	$001e
+	; change to player sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0001
+	; move down
+	dc.w	DIRECTION_DOWN
+	dc.w	$001e
+	; move up
+	dc.w	DIRECTION_UP
+	dc.w	$001e
+	; face right
+	dc.w	DIRECTION_RIGHT
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay00SVideoLine5
+	; change to npc0 sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0002
+	; face left
+	dc.w	DIRECTION_LEFT
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay00SVideoLine6
@@ -282,22 +405,52 @@ ScriptedEventNight00_00_IntroStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight00TBooksLine7
+	; move npc0 out of the scene
+	dc.w	DIRECTION_UP
+	dc.w	$0038
+	; move npc0 out of the scene
+	dc.w	DIRECTION_RIGHT
+	dc.w	$0038
+	; move npc0 out of the scene
+	dc.w	DIRECTION_UP
+	dc.w	$004c
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight00_00_IntroEnd:
 
 ScriptedEventNight00_01_EEHallStart:
-	; NPC0 sprite
-	dc.w	$0002
+	; player sprite
+	dc.w	$0001
+	; face to the right (in case we came via fast travel)
+	dc.w	DIRECTION_RIGHT
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight00EEHallLine1
+	; change to npc1 sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0003
+	; face to the left
+	dc.w	DIRECTION_LEFT
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight00EEHallLine2
+	; exit the scene
+	dc.w	DIRECTION_RIGHT
+	dc.w	$0018
+	; exit the scene
+	dc.w	DIRECTION_UP
+	dc.w	$0060
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight00EEHallLine3
+	; change to npc0 sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0002
+	; face to the left
+	dc.w	DIRECTION_LEFT
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight00EEHallLine4
@@ -342,6 +495,9 @@ ScriptedEventNight00_02_VictorEncounterStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight00SouthHallLine3
+	; move npc0 out of the scene
+	dc.w	DIRECTION_DOWN
+	dc.w	$005c
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight00SouthHallLine4
@@ -376,6 +532,12 @@ ScriptedEventNight00_Optional00_GrunbergStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight00VBLine8
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00VBLine9
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight00VBLine10 
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight00_Optional00_GrunbergEnd:
@@ -395,6 +557,24 @@ ScriptedEventNight00_Optional01_ElizaStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight00CPlanetLine4
+	; move toward a bin of cds
+	dc.w	DIRECTION_LEFT
+	dc.w	$0050
+	; move toward a bin of cds
+	dc.w	DIRECTION_UP
+	dc.w	$0004
+	; move behind the counter
+	dc.w	DIRECTION_DOWN
+	dc.w	$0004
+	; move behind the counter
+	dc.w	DIRECTION_RIGHT
+	dc.w	$006c
+	; move behind the counter
+	dc.w	DIRECTION_UP
+	dc.w	$0028
+	; face left
+	dc.w	DIRECTION_LEFT
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight00CPlanetLine5
@@ -404,6 +584,27 @@ ScriptedEventNight00_Optional01_ElizaStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight00CPlanetLine7
+	; move from behind the counter
+	dc.w	DIRECTION_DOWN
+	dc.w	$0028
+	; move toward a bin of cds
+	dc.w	DIRECTION_LEFT
+	dc.w	$0080
+	; move toward a bin of cds
+	dc.w	DIRECTION_UP
+	dc.w	$0004
+	; move behind the counter
+	dc.w	DIRECTION_DOWN
+	dc.w	$0004
+	; move behind the counter
+	dc.w	DIRECTION_RIGHT
+	dc.w	$0080
+	; move behind the counter
+	dc.w	DIRECTION_UP
+	dc.w	$0028
+	; face left
+	dc.w	DIRECTION_LEFT
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight00CPlanetLine8
@@ -584,7 +785,7 @@ ScriptedEventNight01_00_IntroStart:
 	dc.w	$0002
 	; have NPC move right
 	dc.w	DIRECTION_RIGHT
-	dc.w	$0028
+	dc.w	$0090
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01WEHallLine3
@@ -676,9 +877,6 @@ ScriptedEventNight01_03_SouthHallStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01SouthHallLine11
-	; dialog
-	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextNight01SouthHallLine12
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight01_03_SouthHallEnd:
@@ -1105,10 +1303,10 @@ ScriptedEventDay03_00_IntroStart:
 	dc.l	StoryTextDay03DenimCountryLine2
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextErynSpeechless
+	dc.l	StoryTextDay03DenimCountryLine3
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextDay03DenimCountryLine3
+	dc.l	StoryTextDay03DenimCountryLine4
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventDay03_00_IntroEnd:

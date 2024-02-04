@@ -151,6 +151,17 @@ ActionScriptNight01SHallExit:
 ; SCENE_ID_WWAPPLIANCES
 ;*******************************************************************************
 ActionScriptNight01WWAppliancesInteract:	
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	beq.s	.default
+	;---------------------------------------------------------------
+	; npc 0 is the clerk
+	;---------------------------------------------------------------
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.s	.default
+	;---------------------------------------------------------------
+	; else check if the event is complete
+	;---------------------------------------------------------------
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_NIGHT01_OPTIONAL1,d7 ; test if the optional event is complete
 	bne.s	.default ; show default text if the event is complete
@@ -189,6 +200,17 @@ ActionScriptNight01WWAppliancesRespond:
 ; SCENE_ID_VB
 ;*******************************************************************************
 ActionScriptNight01VBInteract:	
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	beq.s	.default
+	;---------------------------------------------------------------
+	; npc 0 is the clerk
+	;---------------------------------------------------------------
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.s	.default
+	;---------------------------------------------------------------
+	; else check if the event is complete
+	;---------------------------------------------------------------
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_NIGHT01_OPTIONAL2,d7 ; test if the optional event is complete
 	bne.s	.default ; show default text if the event is complete
@@ -263,4 +285,16 @@ EndNight01SetupGameState: ; separated to help with debugging
 	; update NPC locations
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsDay ; reset the NPC locations
+	;---------------------------------------------------------------------------	
+	; scatter some NPCs around
+	;---------------------------------------------------------------------------	
+	move.l	#$06120000,(MEM_NPC_LOCATION_VB)
+	move.l	#$11000000,(MEM_NPC_LOCATION_EWHALL)
+	move.l	#$08200000,(MEM_NPC_LOCATION_POGODAWG)
+	move.l	#$0F210000,(MEM_NPC_LOCATION_CAVERN)
+	move.l	#$14220000,(MEM_NPC_LOCATION_FCBCHECKOUT)
+	move.l	#$1B250000,(MEM_NPC_LOCATION_WWAUDIO)
+	move.l	#$05000000,(MEM_NPC_LOCATION_DENIMCOUNTRY)
+	move.l	#$1D230000,(MEM_NPC_LOCATION_WWAPPLIANCES)
+	move.l	#$0B240000,(MEM_NPC_LOCATION_CPLANET)
 	rts

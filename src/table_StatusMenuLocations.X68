@@ -298,8 +298,8 @@ FastTravelSpriteXY:
 	dc.w	$0118	; x
 	dc.w	$0100	; y
 	; SCENE_ID_EEHALL
-	dc.w	$0118	; x
-	dc.w	$0100	; y
+	dc.w	$0098	; x
+	dc.w	$00E0	; y
 	; SCENE_ID_WWCHECKOUT
 	dc.w	$0118	; x
 	dc.w	$0120	; y

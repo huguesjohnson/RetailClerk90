@@ -249,7 +249,7 @@
 	dc.w	$0003 ; npc count - 1
 
 	dc.w	$0128 ; starting x location of npc0
-	dc.w	$0128 ; starting y location of npc0
+	dc.w	$010A ; starting y location of npc0
 	dc.w	DIRECTION_DOWN ; starting direction of npc0
 	dc.w	$FFFF ; movement frequency of npc0
 	dc.l	NullMovementStart ; location of movement pattern for npc0

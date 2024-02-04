@@ -70,6 +70,16 @@ ProcessDialogTestTextDrawing:
 	clr.w	d6	; prevent some issues
 	move.l	(MEM_DIALOG_TEXT),a0	; point a0 to the current character
 	move.b	(a0),d6	; copy current character to d6
+TestCaret:
+	;---------------------------------------------------------------------------
+	; the '^' symbol is used to show an indicator there is another page of text
+	; we can save some time by jumping to that position when it's found
+	; I will probably find a frustrating bug from this in the future
+	;---------------------------------------------------------------------------
+	cmpi.b	#CHAR_CARET,d6 ; is this a '^' character?
+	bne.s	TestETX ; not the '^' character, go to next test
+	move.l	#(VDP_VRAM_WRITE_A+DIALOG_TEXT_ROWCOL+DIALOG_CARET_RELATIVE_POSITION),(MEM_DIALOG_VDP)
+	bra.w	DrawNextChar
 TestETX:
 	cmpi.b	#ETX,d6	; is this the end of the text?
 	bne.s	TestFF	; not end of text character, go to next test
@@ -89,14 +99,14 @@ ProcessDialogFF:
 TestObjMenu:
 	cmpi.b	#OBJNAMEEND,d6	; draw the object menu?
 	bne.s	TestNPCMenu	; not the OBJMENU character, continue to next test
-	move.l	#(VDP_VRAM_WRITE_A+DIALOG_TEXT_ROWCOL+$00800000),(MEM_DIALOG_VDP)
+	move.l	#(VDP_VRAM_WRITE_A+DIALOG_TEXT_ROWCOL+DIALOG_NEXT_ROW),(MEM_DIALOG_VDP)
 	lea	ObjectMenu,a6	; load object menu text
 	move.l	a6,(MEM_DIALOG_TEXT)	; copy address to MEM_DIALOG_TEXT
 	bra.w	ExitProcessDialog	; exit
 TestNPCMenu:
 	cmpi.b	#NPCNAMEEND,d6	; draw the npc menu?
 	bne.s	TestItemNameStart	; not the NPCMENU character, next test
-	move.l	#(VDP_VRAM_WRITE_A+DIALOG_TEXT_ROWCOL+$00800000),(MEM_DIALOG_VDP)
+	move.l	#(VDP_VRAM_WRITE_A+DIALOG_TEXT_ROWCOL+DIALOG_NEXT_ROW),(MEM_DIALOG_VDP)
 	lea	NPCMenu,a6	; load npc menu text
 	move.l	a6,(MEM_DIALOG_TEXT)	; copy address to MEM_DIALOG_TEXT
 	bra.w	ExitProcessDialog	; exit
@@ -146,18 +156,18 @@ TestItemNameEnd:
 	bra.w	ExitProcessDialog
 TestLF:
 	cmpi.b	#LF,d6	; is this a new line character
-	bne.s	.1	; not a line feed character
-	move.l	#(VDP_VRAM_WRITE_A+DIALOG_TEXT_ROWCOL+$00800000),(MEM_DIALOG_VDP)
-	bra.s	.2	; go to increment text step
-.1
+	bne.s	DrawNextChar ; not a line feed character
+	move.l	#(VDP_VRAM_WRITE_A+DIALOG_TEXT_ROWCOL+DIALOG_NEXT_ROW),(MEM_DIALOG_VDP)
+	bra.s	MoveToNextCharacter	; go to increment text step
+DrawNextChar:
 	; update d6 to point to the tile ID
 	sub.w	#$20,d6	; subtract 32 to get the character index
-	add.w	#FONT_BASE_TILE+%0110000000000000,d6	; add the base tile
-	move.l	(MEM_DIALOG_VDP),(VDP_CONTROL)	; set VDP address
-	move.w  d6,(VDP_DATA)	; copy the character to VPD
+	add.w	#FONT_BASE_TILE+%0110000000000000,d6 ; add the base tile
+	move.l	(MEM_DIALOG_VDP),(VDP_CONTROL) ; set VDP address
+	move.w  d6,(VDP_DATA) ; copy the character to VPD
 	; draw the next character
 	add.l	#$00020000,(MEM_DIALOG_VDP)	; move to the next column
-.2
+MoveToNextCharacter:
 	add.l	#$0001,(MEM_DIALOG_TEXT)	; move to the next character
 	bra.w	ExitProcessDialog
 ProcessDialogTextEnd:
@@ -546,7 +556,7 @@ SetItemMenuDrawLocation:
 	cmpi.w	#$0001,d6	; is it one?
 	bne.s	.1	; branch if not
 	; move down 2 rows
-	move.l	#(VDP_VRAM_WRITE_A+DIALOG_TEXT_ROWCOL+$00800000),(MEM_DIALOG_VDP)
+	move.l	#(VDP_VRAM_WRITE_A+DIALOG_TEXT_ROWCOL+DIALOG_NEXT_ROW),(MEM_DIALOG_VDP)
 	bra.s	ExitSetItemMenuDrawLocation	; exit
 .1	; test for 0002
 	cmpi.w	#$0002,d6	; is it two?

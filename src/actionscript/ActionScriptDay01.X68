@@ -35,8 +35,6 @@ ActionScriptDay01CPlanetInteract:
 	move.w	#$FFFF,(MEM_STORY_EVENT1_SCENE_ID) ; clear story event	
 	bsr.w	TestDay01Events ; text if all events are complete
 	; setup scripted event
-	lea	StoryTextDay01CPlanetLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventDay01_01_CPlanetStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 	rts	
@@ -70,8 +68,6 @@ ActionScriptDay01WWAppliancesInteract:
 	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; clear story event	
 	bsr.w	TestDay01Events ; text if all events are complete
 	; setup scripted event
-	lea	StoryTextDay01WWAppliancesLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventDay01_02_WWAppliancesStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 	rts	
@@ -95,6 +91,17 @@ TestDay01Events:
 ; SCENE_ID_CAVERN
 ;*******************************************************************************
 ActionScriptDay01CavernInteract:	
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	beq.s	.default
+	;---------------------------------------------------------------
+	; npc 0 is the clerk
+	;---------------------------------------------------------------
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.s	.default
+	;---------------------------------------------------------------
+	; else check if the event is complete
+	;---------------------------------------------------------------
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_DAY01_OPTIONAL1,d7 ; test if the optional event is complete
 	bne.s	.default ; show default text if the event is complete
@@ -132,6 +139,17 @@ ActionScriptDay01CavernRespond:
 ; SCENE_ID_FCBCAMPING
 ;*******************************************************************************
 ActionScriptDay01FCBCampingInteract:	
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	beq.s	.default
+	;---------------------------------------------------------------
+	; npc 0 is the clerk
+	;---------------------------------------------------------------
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.s	.default
+	;---------------------------------------------------------------
+	; else check if the event is complete
+	;---------------------------------------------------------------
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_DAY01_OPTIONAL2,d7 ; test if the optional event is complete
 	bne.s	.default ; show default text if the event is complete
@@ -173,8 +191,6 @@ EndDay01:
 	;---------------------------------------------------------------------------	
 	; queue the ending dialog and transition to night
 	;---------------------------------------------------------------------------	
-	lea	StoryTextDay01DenimCountry2Line1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog	
 	lea ScriptedEventNight01_00_IntroStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 	rts	

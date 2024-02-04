@@ -55,7 +55,7 @@ InitNPCLocationsNight:
 	move.l	#$00000000,(a0)+	; location 11 (TBOOKS)
 	move.l	#$14000000,(a0)+	; location 12 (FCBCHECKOUT)
 	move.l	#$0E000000,(a0)+	; location 13 (FCBFIREARMS)
-	move.l	#$15000000,(a0)+	; location 14 (FCBFISHING)
+	move.l	#$00000000,(a0)+	; location 14 (FCBFISHING)
 	move.l	#$17000000,(a0)+	; location 15 (FCBCAMPING)
 	move.l	#$00000000,(a0)+	; location 16 (SOUTH_CENTER)
 	move.l	#$1A000000,(a0)+	; location 17 (WWCHECKOUT)

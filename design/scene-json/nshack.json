@@ -317,23 +317,23 @@
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":200,
-			"y":200,
-			"direction":"DIRECTION_DOWN",
-			"movementFrequency":65535,
-			"movementPatternName":"NullMovement"
-		},
-		{
 			"x":220,
-			"y":220,
-			"direction":"DIRECTION_DOWN",
+			"y":224,
+			"direction":"DIRECTION_RIGHT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":240,
-			"y":240,
-			"direction":"DIRECTION_DOWN",
+			"x":340,
+			"y":160,
+			"direction":"DIRECTION_LEFT",
+			"movementFrequency":65535,
+			"movementPatternName":"NullMovement"
+		},
+		{
+			"x":360,
+			"y":160,
+			"direction":"DIRECTION_LEFT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		}

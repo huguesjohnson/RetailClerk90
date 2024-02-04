@@ -58,6 +58,11 @@ DebugTable:
 	dc.l	LaunchDebug53
 
 ProcessDebugScreen:
+;*******************************************************************************
+; TEMPORARY "QUICK DEBUG" FOR DEVELOPMENT - REMOVE THIS LATER
+;*******************************************************************************
+	move.b	#BUTTON_START,(MEM_CONTROL_PRESSED)
+
 	; process start press
 	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
 	andi.b	#BUTTON_START,d6	; test if the start button was pressed
@@ -210,6 +215,12 @@ LaunchDebug03: ; night 00 - after trading sequence
 	move.w	#$0001,(MEM_DAY) ; set day	
 	move.w	#PLAYER_SPRITE_CARL,(MEM_PLAYER_SPRITE) ; initial sprite
 	;---------------------------------------------------------------------------	
+	; update NPC locations
+	;---------------------------------------------------------------------------	
+	bsr.w	InitNPCLocationsNight ; reset the NPC locations
+	move.l	#$00000000,(MEM_NPC_LOCATION_TBOOKS)
+	move.l	#$11000000,(MEM_NPC_LOCATION_EEHALL)	
+	;---------------------------------------------------------------------------	
 	; set events complete
 	;---------------------------------------------------------------------------	
 	and.l	#$00000000,d7 ; clear out d7
@@ -218,11 +229,11 @@ LaunchDebug03: ; night 00 - after trading sequence
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; update event flags
 	bsr.w	ActionScriptNight00UpdateStateAfterSVideo
 	;---------------------------------------------------------------------------	
-	; update NPC locations
+	; optional events are still available
 	;---------------------------------------------------------------------------	
-	bsr.w	InitNPCLocationsNight ; reset the NPC locations
-	move.l	#$00000000,(MEM_NPC_LOCATION_TBOOKS)
-	move.l	#$11000000,(MEM_NPC_LOCATION_EEHALL)	
+	move.w	#SCENE_ID_VB,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
+	move.w	#SCENE_ID_CPLANET,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event	
 	;---------------------------------------------------------------------------
 	; load starting scene and sprites
 	;---------------------------------------------------------------------------
@@ -287,6 +298,12 @@ LaunchDebug06: ; day 01 - after required events are done
 	bset.l	#FLAG_DAY01_EVENT01_WWAPPLIANCES,d7	
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; set day event flags
 	bsr.w	TestDay01Events
+	;---------------------------------------------------------------------------	
+	; optional events are still available
+	;---------------------------------------------------------------------------	
+	move.w	#SCENE_ID_CAVERN,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
+	move.w	#SCENE_ID_FCBCAMPING,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
 	;---------------------------------------------------------------------------
 	; load starting scene and sprites
 	;---------------------------------------------------------------------------

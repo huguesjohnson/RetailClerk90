@@ -681,17 +681,38 @@ ScriptedEventDay01_02_WWAppliancesStart:
 ScriptedEventDay01_02_WWAppliancesEnd:
 
 ScriptedEventDay01_Optional00_DBStart:
-	; NPC0 sprite
-	dc.w	$0002
+	; NPC1 sprite
+	dc.w	$0003
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay01CavernLine1
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay01CavernLine2
+	; move npc1 off screen
+	dc.w	DIRECTION_RIGHT
+	dc.w	$001a
+	; move npc1 off screen
+	dc.w	DIRECTION_UP
+	dc.w	$004c
+	; change to npc0 sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0002
+	; move npc0 toward top of the scene
+	dc.w	DIRECTION_UP
+	dc.w	$0052
+	; move npc0 toward top of the scene
+	dc.w	DIRECTION_LEFT
+	dc.w	$005a
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay01CavernLine3
+	; change to player sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0001
+	; face right
+	dc.w	DIRECTION_RIGHT
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay01CavernLine4
@@ -716,6 +737,18 @@ ScriptedEventDay01_Optional00_DBStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay01CavernLine11
+	; change to npc0 sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0002
+	; move npc0 out of the scene
+	dc.w	DIRECTION_DOWN
+	dc.w	$00ac
+	; change to npc1 sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0003
+	; move them back into the scene
+	dc.w	DIRECTION_DOWN
+	dc.w	$0030
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay01CavernLine12

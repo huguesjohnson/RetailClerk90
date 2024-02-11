@@ -667,8 +667,8 @@
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":184,
-			"y":264,
+			"x":180,
+			"y":266,
 			"direction":"DIRECTION_LEFT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"

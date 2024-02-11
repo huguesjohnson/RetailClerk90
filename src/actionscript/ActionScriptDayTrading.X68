@@ -21,9 +21,6 @@ ActionScriptDay01SceneFCBFishingTrading:
 	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
 	move.w	#OBJ_ITEM_HANDWARMER,d7 ; add item from trading sequence
 	bsr.w	AddItem ; add item to inventory				
-	; show the dialog
-	lea	StoryTextTradingSequenceFCBFishing,a6 ; point to text to display
-	bsr.w	ShowDialog
 	; queue scripted event
 	lea ScriptedEventTradingSequenceFCBFishingStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event

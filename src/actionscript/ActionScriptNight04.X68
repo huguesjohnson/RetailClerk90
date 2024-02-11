@@ -319,4 +319,5 @@ EndNight04SetupGameState: ; separated to help with debugging
 	move.l	#$0A200000,(MEM_NPC_LOCATION_CHECKERS)
 	move.l	#$08210000,(MEM_NPC_LOCATION_POGODAWG)
 	move.l	#$11000000,(MEM_NPC_LOCATION_WWHALL)
+	move.l	#$00000000,(MEM_NPC_LOCATION_SHALL)		
 	rts		

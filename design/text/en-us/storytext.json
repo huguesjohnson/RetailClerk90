@@ -606,13 +606,13 @@
          },                    
       "StoryTextDay01CavernChoice":{
             "dialogTitle":"OBJ_NPC_DB",
-            "text":"This kid again...|{ Do you need help?   { Not my problem",
+            "text":"He's been here forever...|{ Do you need help?   { Not my problem",
             "formFeed":"FFR",
             "align":2
          },         
       "StoryTextDay01CavernChoice0":{
             "dialogTitle":"OBJ_NPC_DB",
-            "text":"Yeah, that would be great.|I have to fix something in the back.|Can you keep an eye on things for a bit?^",
+            "text":"Yeah, that would be great.|I have to fix something quick.|Can you keep an eye on things for a bit?^",
             "align":2
          },         
       "StoryTextDay01CavernChoice1":{
@@ -637,7 +637,7 @@
          },       
       "StoryTextDay01CavernLine4":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"Just a temp. Do you need change or something?^",
+         "text":"Just a temp, very temp actually.|Do you need change or something?^",
          "align":2
          },         
       "StoryTextDay01CavernLine5":{
@@ -662,12 +662,12 @@
          },
       "StoryTextDay01CavernLine9":{
          "dialogTitle":"OBJ_NPC_BILLY",
-         "text":"It's still fun. Maybe it will be on TV some day.^",
+         "text":"It's still fun if they're good.|Maybe it will be on TV some day.^",
          "align":2
          },       
       "StoryTextDay01CavernLine10":{
          "dialogTitle":"OBJ_NPC_DB",
-         "text":"Isn't it time to loiter across the hall?^",
+         "text":"Isn't it time to loiter down the hall?^",
          "align":2
          },
       "StoryTextDay01CavernLine11":{
@@ -688,7 +688,7 @@
          },         
       "StoryTextDay01FCBCampingChoice0":{
             "dialogTitle":"OBJ_NPC_GRANT",
-            "text":"I don't know if you remember me.|I was friends with your parents in the 70s.^",
+            "text":"I don't know if you remember me.|I know your parents from back in the 70s.^",
             "align":2
          },         
       "StoryTextDay01FCBCampingChoice1":{
@@ -698,12 +698,12 @@
          },          
       "StoryTextDay01FCBCampingLine1":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"Vaguely. You were over a couple times when I was young.^",
+         "text":"I remember you vaguely.|You were over a couple times|when I was very little.^",
          "align":2
          },
       "StoryTextDay01FCBCampingLine2":{
          "dialogTitle":"OBJ_NPC_GRANT",
-         "text":"That's right. We drifted apart as the kids got older.|We were friends in high school.|Your parents were a couple even back then.^",
+         "text":"We drifted apart as you kids got older.|We were friends in high school.|They were a couple even back then.^",
          "align":2
          },
       "StoryTextDay01FCBCampingLine3":{
@@ -713,7 +713,7 @@
          },    
       "StoryTextDay01FCBCampingLine4":{
          "dialogTitle":"OBJ_NPC_GRANT",
-         "text":"Our little group did everything together.|Although there wasn't much to do then.|Mostly hanging out, camping in the summer.|We had took a couple roadtrips too.|The usual teenage stuff.^",
+         "text":"Our little group did everything together.|Although there wasn't much to do then.|Hanging out, camping in the summer.|We had took a couple roadtrips too.|The usual teenage stuff.^",
          "align":2
          },
       "StoryTextDay01FCBCampingLine5":{
@@ -723,7 +723,7 @@
          },      
       "StoryTextDay01FCBCampingLine6":{
          "dialogTitle":"OBJ_NPC_GRANT",
-         "text":"I won't bore you with them now.|Stop by if you ever want to hear about them.^",
+         "text":"I won't bore you with them now.|Stop by if you want to hear about one.",
          "align":2
          },                           
       "StoryTextNight01WEHallLine1":{
@@ -3355,7 +3355,7 @@
          },         
       "StoryTextTradingSequenceFCBFishing":{
          "dialogTitle":"OBJ_NPC_HEATHER",
-         "text":"Hey, that looks like the scarf I lost last month.|I'll give you these pocket handwarmers in exchange.|Be careful with them though.",
+         "text":"Is that the scarf I lost last month?|Let me give you a finder's fee.|Please take these pocket handwarmers.|Be careful with them though.",
          "align":2
          },  
       "StoryTextTradingSequenceFCBFishingAfter":{

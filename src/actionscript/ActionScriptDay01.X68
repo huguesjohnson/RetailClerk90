@@ -95,9 +95,9 @@ ActionScriptDay01CavernInteract:
 	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
 	beq.s	.default
 	;---------------------------------------------------------------
-	; npc 0 is the clerk
+	; npc 1 is the clerk this time
 	;---------------------------------------------------------------
-	cmpi.w	#$0000,d7 ; test for npc0
+	cmpi.w	#$0001,d7 ; test for npc0
 	bne.s	.default
 	;---------------------------------------------------------------
 	; else check if the event is complete
@@ -128,6 +128,8 @@ ActionScriptDay01CavernRespond:
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
 	; clear the map icon
 	move.w	#$FFFF,(MEM_OPTIONAL_EVENT1_SCENE_ID)
+	; change NPCs in the area afterward
+	move.l	#$210F0000,(MEM_NPC_LOCATION_CAVERN)	
 	; setup the scripted event
 	lea	StoryTextDay01CavernChoice0,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog

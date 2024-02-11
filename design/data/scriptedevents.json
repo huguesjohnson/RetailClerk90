@@ -1164,8 +1164,8 @@
       "name":"ScriptedEventDay01_Optional00_DB",
       "actions":[
          {
-            "comment":"NPC0 sprite",
-            "intValue":2
+            "comment":"NPC1 sprite",
+            "intValue":3
          },
          {
             "comment":"dialog",
@@ -1178,10 +1178,45 @@
             "label":"StoryTextDay01CavernLine2"
          },
          {
+            "comment":"move npc1 off screen",
+            "direction":"RIGHT",
+            "intValue":26
+         },                              
+         {
+            "comment":"move npc1 off screen",
+            "direction":"UP",
+            "intValue":76
+         },  
+         {
+            "comment":"change to npc0 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         }, 
+         {
+            "comment":"move npc0 toward top of the scene",
+            "direction":"UP",
+            "intValue":82
+         },  
+         {
+            "comment":"move npc0 toward top of the scene",
+            "direction":"LEFT",
+            "intValue":90
+         },
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay01CavernLine3"
          },
+         {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         },  
+         {
+            "comment":"face right",
+            "direction":"RIGHT",
+            "intValue":0
+         },                
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -1222,6 +1257,26 @@
             "command":"DIALOG",
             "label":"StoryTextDay01CavernLine11"
          },
+         {
+            "comment":"change to npc0 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         }, 
+         {
+            "comment":"move npc0 out of the scene",
+            "direction":"DOWN",
+            "intValue":172
+         },                              
+         {
+            "comment":"change to npc1 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":3
+         }, 
+         {
+            "comment":"move them back into the scene",
+            "direction":"DOWN",
+            "intValue":48
+         },            
          {
             "comment":"dialog",
             "command":"DIALOG",

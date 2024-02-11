@@ -433,108 +433,177 @@ ObjectDescriptionCavernBackroomLadder:
 ; CharacterInteractText
 ; Default character dialog
 ;-------------------------------------------------------------------------------
+; should not be reachable
 DialogTextUnknownNPCDay00:
+; should not be reachable
 DialogTextUnknownNPCDay01:
+; should not be reachable
 DialogTextUnknownNPCDay02:
+; should not be reachable
 DialogTextUnknownNPCDay03:
+; should not be reachable
 DialogTextUnknownNPCDay04:
+; should not be reachable
 DialogTextUnknownNPCDay05:
+; should not be reachable
 DialogTextUnknownNPCDay06:
+; should not be reachable
 DialogTextUnknownNPCDay07:
+; should not be reachable
 DialogTextUnknownNPCDay08:
+; should not be reachable
 DialogTextUnknownNPCDay09:
+; should not be reachable
 DialogTextUnknownNPCDay0A:
+; should not be reachable
 DialogTextUnknownNPCDay0B:
+; should not be reachable
 DialogTextUnknownNPCDay0C:
+; catch-all if npc00 is somehow referenced
 DialogTextUnknownNPCDay0D:
 	dc.w	OBJ_NPC_HIDDENHJ
 	dc.b	"If you see this then",LF
 	dc.b	"I really messed up.",ETX
 	align 2
+; PC on day00
 DialogTextErynDay00:
+; not present on day01
 DialogTextErynDay01:
+; PC on day02
 DialogTextErynDay02:
+; story event, no default dialog
 DialogTextErynDay03:
+; PC on day04
 DialogTextErynDay04:
+; story event, no default dialog
 DialogTextErynDay05:
+; PC on day06
 DialogTextErynDay06:
+; story event, no default dialog
 DialogTextErynDay07:
+; PC on day08
 DialogTextErynDay08:
+; story event, no default dialog
 DialogTextErynDay09:
+; PC on day0A
 DialogTextErynDay0A:
+; story event, no default dialog
 DialogTextErynDay0B:
+; PC on day0C
 DialogTextErynDay0C:
+; story event, no default dialog
 DialogTextErynDay0D:
-	dc.w	OBJ_NPC_ERYN
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
-	align 2
+; Carl is talking to a customer on day00
 DialogTextCarlDay00:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"Sorry, I'll be with",LF
 	dc.b	"you next.",ETX
 	align 2
+; PC on day01
 DialogTextCarlDay01:
+; Carl is talking to a customer on day02
 DialogTextCarlDay02:
-DialogTextCarlDay03:
-DialogTextCarlDay04:
-DialogTextCarlDay05:
-DialogTextCarlDay06:
-DialogTextCarlDay07:
-DialogTextCarlDay08:
-DialogTextCarlDay09:
-DialogTextCarlDay0A:
-DialogTextCarlDay0B:
-DialogTextCarlDay0C:
-DialogTextCarlDay0D:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
+	dc.b	"Sorry, it might be a",LF
+	dc.b	"while.",ETX
 	align 2
+; PC on day03
+DialogTextCarlDay03:
+; 
+DialogTextCarlDay04:
+	dc.w	OBJ_NPC_CARL
+	align 2
+; PC on day05
+DialogTextCarlDay05:
+; 
+DialogTextCarlDay06:
+	dc.w	OBJ_NPC_CARL
+	align 2
+; PC on day07
+DialogTextCarlDay07:
+; 
+DialogTextCarlDay08:
+	dc.w	OBJ_NPC_CARL
+	align 2
+; PC on day09
+DialogTextCarlDay09:
+; 
+DialogTextCarlDay0A:
+	dc.w	OBJ_NPC_CARL
+	align 2
+; PC on day0B
+DialogTextCarlDay0B:
+; 
+DialogTextCarlDay0C:
+	dc.w	OBJ_NPC_CARL
+	align 2
+; PC on day0D
+DialogTextCarlDay0D:
+; hanging around the mall in the AM
 DialogTextFrankDay00:
 	dc.w	OBJ_NPC_FRANK
 	dc.b	"Sorry, I don't work",LF
 	dc.b	"here.",ETX
 	align 2
+; not present
 DialogTextFrankDay01:
+; not present
 DialogTextFrankDay02:
+; not present
 DialogTextFrankDay03:
+; not present
 DialogTextFrankDay04:
+; not present
 DialogTextFrankDay05:
+; not present
 DialogTextFrankDay06:
+; not present
 DialogTextFrankDay07:
+; hanging around the mall in the AM
 DialogTextFrankDay08:
-DialogTextFrankDay09:
-DialogTextFrankDay0A:
-DialogTextFrankDay0B:
-DialogTextFrankDay0C:
-DialogTextFrankDay0D:
 	dc.w	OBJ_NPC_FRANK
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
 	align 2
+; not present
+DialogTextFrankDay09:
+; not present
+DialogTextFrankDay0A:
+; not present
+DialogTextFrankDay0B:
+; not present
+DialogTextFrankDay0C:
+; not present
+DialogTextFrankDay0D:
 DialogTextCarolDay00:
 	dc.w	OBJ_NPC_CAROL
 	dc.b	"Sorry, children under",LF
 	dc.b	"10 only.",ETX
 	align 2
+; not present at night
 DialogTextCarolDay01:
 DialogTextCarolDay02:
+	dc.w	OBJ_NPC_CAROL
+	dc.b	"Sorry, nothing",LF
+	dc.b	"unusual here.",ETX
+	align 2
+; not present at night
 DialogTextCarolDay03:
 DialogTextCarolDay04:
+; not present at night
 DialogTextCarolDay05:
 DialogTextCarolDay06:
+; not present at night
 DialogTextCarolDay07:
 DialogTextCarolDay08:
+; not present at night
 DialogTextCarolDay09:
 DialogTextCarolDay0A:
+; not present at night
 DialogTextCarolDay0B:
+; not present after 12/24
 DialogTextCarolDay0C:
+; not present after 12/24
 DialogTextCarolDay0D:
-	dc.w	OBJ_NPC_CAROL
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
-	align 2
+; dialog after intro event
 DialogTextLisaDay00:
 	dc.w	OBJ_NPC_LISA
 	dc.b	"It's way too slow",LF
@@ -545,47 +614,109 @@ DialogTextLisaDay01:
 	dc.b	"I hope your store is",LF
 	dc.b	"doing better than us.",ETX
 	align 2
+; only dialog is in scripted events this day
 DialogTextLisaDay02:
+; 
 DialogTextLisaDay03:
-DialogTextLisaDay04:
-DialogTextLisaDay05:
-DialogTextLisaDay06:
-DialogTextLisaDay07:
-DialogTextLisaDay08:
-DialogTextLisaDay09:
-DialogTextLisaDay0A:
-DialogTextLisaDay0B:
-DialogTextLisaDay0C:
-DialogTextLisaDay0D:
 	dc.w	OBJ_NPC_LISA
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
 	align 2
+; 
+DialogTextLisaDay04:
+	dc.w	OBJ_NPC_LISA
+	align 2
+; 
+DialogTextLisaDay05:
+	dc.w	OBJ_NPC_LISA
+	align 2
+; 
+DialogTextLisaDay06:
+	dc.w	OBJ_NPC_LISA
+	align 2
+; 
+DialogTextLisaDay07:
+	dc.w	OBJ_NPC_LISA
+	align 2
+; 
+DialogTextLisaDay08:
+	dc.w	OBJ_NPC_LISA
+	align 2
+; 
+DialogTextLisaDay09:
+	dc.w	OBJ_NPC_LISA
+	align 2
+; 
+DialogTextLisaDay0A:
+	dc.w	OBJ_NPC_LISA
+	align 2
+; 
+DialogTextLisaDay0B:
+	dc.w	OBJ_NPC_LISA
+	align 2
+; 
+DialogTextLisaDay0C:
+	dc.w	OBJ_NPC_LISA
+	align 2
+; trading sequence
+DialogTextLisaDay0D:
 DialogTextGrunbergDay00:
 	dc.w	OBJ_NPC_GRUNBERG
 	dc.b	"Let me know if you",LF
 	dc.b	"need anything.",ETX
 	align 2
+; text after optional event
 DialogTextGrunbergDay01:
 	dc.w	OBJ_NPC_GRUNBERG
 	dc.b	"Have a good night",LF
 	dc.b	"Carl.",ETX
 	align 2
 DialogTextGrunbergDay02:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"What an odd thing to",LF
+	dc.b	"ask about.^",FF
+	dc.b	"Someone is worrying",LF
+	dc.b	"too much.",ETX
+	align 2
+; 
 DialogTextGrunbergDay03:
+	dc.w	OBJ_NPC_GRUNBERG
+	align 2
+; 
 DialogTextGrunbergDay04:
+	dc.w	OBJ_NPC_GRUNBERG
+	align 2
+; 
 DialogTextGrunbergDay05:
+	dc.w	OBJ_NPC_GRUNBERG
+	align 2
+; 
 DialogTextGrunbergDay06:
+	dc.w	OBJ_NPC_GRUNBERG
+	align 2
+; 
 DialogTextGrunbergDay07:
+	dc.w	OBJ_NPC_GRUNBERG
+	align 2
+; 
 DialogTextGrunbergDay08:
+	dc.w	OBJ_NPC_GRUNBERG
+	align 2
+; 
 DialogTextGrunbergDay09:
+	dc.w	OBJ_NPC_GRUNBERG
+	align 2
+; 
 DialogTextGrunbergDay0A:
+	dc.w	OBJ_NPC_GRUNBERG
+	align 2
+; 
 DialogTextGrunbergDay0B:
+	dc.w	OBJ_NPC_GRUNBERG
+	align 2
+; trading sequence
 DialogTextGrunbergDay0C:
+; 
 DialogTextGrunbergDay0D:
 	dc.w	OBJ_NPC_GRUNBERG
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
 	align 2
 DialogTextJenDay00:
 	dc.w	OBJ_NPC_JEN
@@ -602,20 +733,53 @@ DialogTextJenDay01:
 	dc.b	"another night.",ETX
 	align 2
 DialogTextJenDay02:
+	dc.w	OBJ_NPC_JEN
+	dc.b	"Oh my, what is she",LF
+	dc.b	"looking for?",ETX
+	align 2
+; 
 DialogTextJenDay03:
+	dc.w	OBJ_NPC_JEN
+	align 2
+; 
 DialogTextJenDay04:
+	dc.w	OBJ_NPC_JEN
+	align 2
+; 
 DialogTextJenDay05:
+	dc.w	OBJ_NPC_JEN
+	align 2
+; 
 DialogTextJenDay06:
+	dc.w	OBJ_NPC_JEN
+	align 2
+; 
 DialogTextJenDay07:
+	dc.w	OBJ_NPC_JEN
+	align 2
+; 
 DialogTextJenDay08:
+	dc.w	OBJ_NPC_JEN
+	align 2
+; 
 DialogTextJenDay09:
+	dc.w	OBJ_NPC_JEN
+	align 2
+; 
 DialogTextJenDay0A:
+	dc.w	OBJ_NPC_JEN
+	align 2
+; 
 DialogTextJenDay0B:
+	dc.w	OBJ_NPC_JEN
+	align 2
+; 
 DialogTextJenDay0C:
+	dc.w	OBJ_NPC_JEN
+	align 2
+; 
 DialogTextJenDay0D:
 	dc.w	OBJ_NPC_JEN
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
 	align 2
 DialogTextGriffyDay00:
 	dc.w	OBJ_NPC_GRIFFY
@@ -629,20 +793,50 @@ DialogTextGriffyDay01:
 	dc.b	"awake)",ETX
 	align 2
 DialogTextGriffyDay02:
+	dc.w	OBJ_NPC_GRIFFY
+	dc.b	"Uh, what?",ETX
+	align 2
+; 
 DialogTextGriffyDay03:
+	dc.w	OBJ_NPC_GRIFFY
+	align 2
+; 
 DialogTextGriffyDay04:
+	dc.w	OBJ_NPC_GRIFFY
+	align 2
+; 
 DialogTextGriffyDay05:
+	dc.w	OBJ_NPC_GRIFFY
+	align 2
+; 
 DialogTextGriffyDay06:
+	dc.w	OBJ_NPC_GRIFFY
+	align 2
+; 
 DialogTextGriffyDay07:
+	dc.w	OBJ_NPC_GRIFFY
+	align 2
+; 
 DialogTextGriffyDay08:
+	dc.w	OBJ_NPC_GRIFFY
+	align 2
+; 
 DialogTextGriffyDay09:
+	dc.w	OBJ_NPC_GRIFFY
+	align 2
+; 
 DialogTextGriffyDay0A:
+	dc.w	OBJ_NPC_GRIFFY
+	align 2
+; 
 DialogTextGriffyDay0B:
+	dc.w	OBJ_NPC_GRIFFY
+	align 2
+; trading sequence
 DialogTextGriffyDay0C:
+; 
 DialogTextGriffyDay0D:
 	dc.w	OBJ_NPC_GRIFFY
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
 	align 2
 DialogTextScottDay00:
 	dc.w	OBJ_NPC_SCOTT
@@ -657,21 +851,48 @@ DialogTextScottDay01:
 	dc.b	"combo.",ETX
 	align 2
 DialogTextScottDay02:
-DialogTextScottDay03:
-DialogTextScottDay04:
-DialogTextScottDay05:
-DialogTextScottDay06:
-DialogTextScottDay07:
-DialogTextScottDay08:
-DialogTextScottDay09:
-DialogTextScottDay0A:
-DialogTextScottDay0B:
-DialogTextScottDay0C:
-DialogTextScottDay0D:
 	dc.w	OBJ_NPC_SCOTT
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
+	dc.b	"No, it's been normal",LF
+	dc.b	"here.",ETX
 	align 2
+; 
+DialogTextScottDay03:
+	dc.w	OBJ_NPC_SCOTT
+	align 2
+; 
+DialogTextScottDay04:
+	dc.w	OBJ_NPC_SCOTT
+	align 2
+; 
+DialogTextScottDay05:
+	dc.w	OBJ_NPC_SCOTT
+	align 2
+; 
+DialogTextScottDay06:
+	dc.w	OBJ_NPC_SCOTT
+	align 2
+; 
+DialogTextScottDay07:
+	dc.w	OBJ_NPC_SCOTT
+	align 2
+; 
+DialogTextScottDay08:
+	dc.w	OBJ_NPC_SCOTT
+	align 2
+; trading sequence
+DialogTextScottDay09:
+; 
+DialogTextScottDay0A:
+	dc.w	OBJ_NPC_SCOTT
+	align 2
+; trading sequence
+DialogTextScottDay0B:
+; 
+DialogTextScottDay0C:
+	dc.w	OBJ_NPC_SCOTT
+	align 2
+; trading sequence
+DialogTextScottDay0D:
 DialogTextToddDay00:
 	dc.w	OBJ_NPC_TODD
 	dc.b	"You must be the new",LF
@@ -685,52 +906,99 @@ DialogTextToddDay01:
 	dc.b	"though.",ETX
 	align 2
 DialogTextToddDay02:
-DialogTextToddDay03:
-DialogTextToddDay04:
-DialogTextToddDay05:
-DialogTextToddDay06:
-DialogTextToddDay07:
-DialogTextToddDay08:
-DialogTextToddDay09:
-DialogTextToddDay0A:
-DialogTextToddDay0B:
-DialogTextToddDay0C:
-DialogTextToddDay0D:
 	dc.w	OBJ_NPC_TODD
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
+	dc.b	"Lisa talked to me",LF
+	dc.b	"last night.^^",FF
+	dc.b	"Wish I could help.",ETX
 	align 2
+; 
+DialogTextToddDay03:
+	dc.w	OBJ_NPC_TODD
+	align 2
+; 
+DialogTextToddDay04:
+	dc.w	OBJ_NPC_TODD
+	align 2
+; trading sequence
+DialogTextToddDay05:
+; 
+DialogTextToddDay06:
+	dc.w	OBJ_NPC_TODD
+	align 2
+; trading sequence
+DialogTextToddDay07:
+; 
+DialogTextToddDay08:
+	dc.w	OBJ_NPC_TODD
+	align 2
+; trading sequence
+DialogTextToddDay09:
+; 
+DialogTextToddDay0A:
+	dc.w	OBJ_NPC_TODD
+	align 2
+; trading sequence
+DialogTextToddDay0B:
+; 
+DialogTextToddDay0C:
+	dc.w	OBJ_NPC_TODD
+	align 2
+; trading sequence
+DialogTextToddDay0D:
 DialogTextElizaDay00:
 	dc.w	OBJ_NPC_ELIZA
 	dc.b	"Sorry, nothing new",LF
 	dc.b	"came in today.^^",FF
 	dc.b	"At least nothing good.",ETX
 	align 2
+; dialog after optional event
 DialogTextElizaDay01:
 	dc.w	OBJ_NPC_ELIZA
 	dc.b	"Just give me a little",LF
 	dc.b	"more time.^^",FF
 	dc.b	"I'll figure you out.",ETX
 	align 2
+; after the story event
 DialogTextElizaDay02:
-DialogTextElizaDay03:
-DialogTextElizaDay04:
-DialogTextElizaDay05:
-DialogTextElizaDay06:
-DialogTextElizaDay07:
-DialogTextElizaDay08:
-DialogTextElizaDay09:
-DialogTextElizaDay0A:
-DialogTextElizaDay0B:
-DialogTextElizaDay0C:
 	dc.w	OBJ_NPC_ELIZA
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
+	dc.b	"That's all I have for",LF
+	dc.b	"you.",ETX
 	align 2
+; 
+DialogTextElizaDay03:
+	dc.w	OBJ_NPC_ELIZA
+	align 2
+; 
+DialogTextElizaDay04:
+	dc.w	OBJ_NPC_ELIZA
+	align 2
+; 
+DialogTextElizaDay05:
+	dc.w	OBJ_NPC_ELIZA
+	align 2
+; trading sequence
+DialogTextElizaDay06:
+; 
+DialogTextElizaDay07:
+	dc.w	OBJ_NPC_ELIZA
+	align 2
+; trading sequence
+DialogTextElizaDay08:
+; 
+DialogTextElizaDay09:
+	dc.w	OBJ_NPC_ELIZA
+	align 2
+; trading sequence
+DialogTextElizaDay0A:
+; 
+DialogTextElizaDay0B:
+	dc.w	OBJ_NPC_ELIZA
+	align 2
+; trading sequence
+DialogTextElizaDay0C:
+; 
 DialogTextElizaDay0D:
 	dc.w	OBJ_NPC_ELIZA
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
 	align 2
 DialogTextBeckyDay00:
 	dc.w	OBJ_NPC_BECKY
@@ -738,40 +1006,86 @@ DialogTextBeckyDay00:
 	dc.b	"day?.^^",FF
 	dc.b	"That is so exciting!",ETX
 	align 2
+; not present
 DialogTextBeckyDay01:
 DialogTextBeckyDay02:
-DialogTextBeckyDay03:
-DialogTextBeckyDay04:
-DialogTextBeckyDay05:
-DialogTextBeckyDay06:
-DialogTextBeckyDay07:
-DialogTextBeckyDay08:
-DialogTextBeckyDay09:
-DialogTextBeckyDay0A:
-DialogTextBeckyDay0B:
-DialogTextBeckyDay0C:
-DialogTextBeckyDay0D:
 	dc.w	OBJ_NPC_BECKY
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
+	dc.b	"Anything weird? Not",LF
+	dc.b	"at all!",ETX
 	align 2
+; 
+DialogTextBeckyDay03:
+	dc.w	OBJ_NPC_BECKY
+	align 2
+; 
+DialogTextBeckyDay04:
+	dc.w	OBJ_NPC_BECKY
+	align 2
+; 
+DialogTextBeckyDay05:
+	dc.w	OBJ_NPC_BECKY
+	align 2
+; 
+DialogTextBeckyDay06:
+	dc.w	OBJ_NPC_BECKY
+	align 2
+; 
+DialogTextBeckyDay07:
+	dc.w	OBJ_NPC_BECKY
+	align 2
+; 
+DialogTextBeckyDay08:
+	dc.w	OBJ_NPC_BECKY
+	align 2
+; trading sequence
+DialogTextBeckyDay09:
+; 
+DialogTextBeckyDay0A:
+	dc.w	OBJ_NPC_BECKY
+	align 2
+; trading sequence
+DialogTextBeckyDay0B:
+; 
+DialogTextBeckyDay0C:
+	dc.w	OBJ_NPC_BECKY
+	align 2
+; trading sequence
+DialogTextBeckyDay0D:
+; not present until day0A
 DialogTextCharlesDay00:
+; not present until day0A
 DialogTextCharlesDay01:
+; not present until day0A
 DialogTextCharlesDay02:
+; not present until day0A
 DialogTextCharlesDay03:
+; not present until day0A
 DialogTextCharlesDay04:
+; not present until day0A
 DialogTextCharlesDay05:
+; not present until day0A
 DialogTextCharlesDay06:
+; not present until day0A
 DialogTextCharlesDay07:
+; not present until day0A
 DialogTextCharlesDay08:
+; not present until day0A
 DialogTextCharlesDay09:
+; 
 DialogTextCharlesDay0A:
+	dc.w	OBJ_NPC_CHARLES
+	align 2
+; 
 DialogTextCharlesDay0B:
+	dc.w	OBJ_NPC_CHARLES
+	align 2
+; 
 DialogTextCharlesDay0C:
+	dc.w	OBJ_NPC_CHARLES
+	align 2
+; 
 DialogTextCharlesDay0D:
 	dc.w	OBJ_NPC_CHARLES
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
 	align 2
 DialogTextRandyDay00:
 	dc.w	OBJ_NPC_RANDY
@@ -786,60 +1100,122 @@ DialogTextRandyDay01:
 	dc.b	"not tonight.",ETX
 	align 2
 DialogTextRandyDay02:
-DialogTextRandyDay03:
-DialogTextRandyDay04:
-DialogTextRandyDay05:
-DialogTextRandyDay06:
-DialogTextRandyDay07:
-DialogTextRandyDay08:
-DialogTextRandyDay09:
-DialogTextRandyDay0A:
-DialogTextRandyDay0B:
-DialogTextRandyDay0C:
-DialogTextRandyDay0D:
 	dc.w	OBJ_NPC_RANDY
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
+	dc.b	"No, but that is a",LF
+	dc.b	"weird thing to ask.",ETX
 	align 2
+; trading sequence
+DialogTextRandyDay03:
+; 
+DialogTextRandyDay04:
+	dc.w	OBJ_NPC_RANDY
+	align 2
+; trading sequence
+DialogTextRandyDay05:
+; 
+DialogTextRandyDay06:
+	dc.w	OBJ_NPC_RANDY
+	align 2
+; trading sequence
+DialogTextRandyDay07:
+; 
+DialogTextRandyDay08:
+	dc.w	OBJ_NPC_RANDY
+	align 2
+; trading sequence
+DialogTextRandyDay09:
+; 
+DialogTextRandyDay0A:
+	dc.w	OBJ_NPC_RANDY
+	align 2
+; trading sequence
+DialogTextRandyDay0B:
+; 
+DialogTextRandyDay0C:
+	dc.w	OBJ_NPC_RANDY
+	align 2
+; trading sequence
+DialogTextRandyDay0D:
+; dialog after optional event
 DialogTextDBDay00:
 	dc.w	OBJ_NPC_DB
 	dc.b	"Back for another",LF
 	dc.b	"round?",ETX
 	align 2
+; not present this night
 DialogTextDBDay01:
+; dialog after optional event
 DialogTextDBDay02:
-DialogTextDBDay03:
-DialogTextDBDay04:
-DialogTextDBDay05:
-DialogTextDBDay06:
-DialogTextDBDay07:
-DialogTextDBDay08:
-DialogTextDBDay09:
-DialogTextDBDay0A:
-DialogTextDBDay0B:
-DialogTextDBDay0C:
-DialogTextDBDay0D:
 	dc.w	OBJ_NPC_DB
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
+	dc.b	"Thanks for the help.",ETX
 	align 2
+; not present this night
+DialogTextDBDay03:
+; 
+DialogTextDBDay04:
+	dc.w	OBJ_NPC_DB
+	align 2
+; not present this night
+DialogTextDBDay05:
+; 
+DialogTextDBDay06:
+	dc.w	OBJ_NPC_DB
+	align 2
+; not present this night
+DialogTextDBDay07:
+; 
+DialogTextDBDay08:
+	dc.w	OBJ_NPC_DB
+	align 2
+; not present this night
+DialogTextDBDay09:
+; 
+DialogTextDBDay0A:
+	dc.w	OBJ_NPC_DB
+	align 2
+; not present this night
+DialogTextDBDay0B:
+; 
+DialogTextDBDay0C:
+	dc.w	OBJ_NPC_DB
+	align 2
+; trading sequence
+DialogTextDBDay0D:
+; not present until day0A
 DialogTextDaniDay00:
+; not present until day0A
 DialogTextDaniDay01:
+; not present until day0A
 DialogTextDaniDay02:
+; not present until day0A
 DialogTextDaniDay03:
+; not present until day0A
 DialogTextDaniDay04:
+; not present until day0A
 DialogTextDaniDay05:
+; not present until day0A
 DialogTextDaniDay06:
+; not present until day0A
 DialogTextDaniDay07:
+; not present until day0A
 DialogTextDaniDay08:
+; not present until day0A
 DialogTextDaniDay09:
+; 
 DialogTextDaniDay0A:
+	dc.w	OBJ_NPC_DANI
+	align 2
+; 
 DialogTextDaniDay0B:
+	dc.w	OBJ_NPC_DANI
+	align 2
+; 
 DialogTextDaniDay0C:
+	dc.w	OBJ_NPC_DANI
+	align 2
+; 
 DialogTextDaniDay0D:
 	dc.w	OBJ_NPC_DANI
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
 	align 2
 DialogTextGuardDay00:
 	dc.w	OBJ_NPC_GUARD
@@ -851,61 +1227,139 @@ DialogTextGuardDay01:
 	dc.b	"I don't know what",LF
 	dc.b	"he's up to.",ETX
 	align 2
+; in wehall this day
 DialogTextGuardDay02:
+	dc.w	OBJ_NPC_GUARD
+	dc.b	"Anything I saw is",LF
+	dc.b	"private mall security^",FF
+	dc.b	"info.",ETX
+	align 2
+; 
 DialogTextGuardDay03:
+	dc.w	OBJ_NPC_GUARD
+	align 2
+; in ewhall this day
 DialogTextGuardDay04:
+	dc.w	OBJ_NPC_GUARD
+	align 2
+; 
 DialogTextGuardDay05:
+	dc.w	OBJ_NPC_GUARD
+	align 2
+; in wwhall this day
 DialogTextGuardDay06:
+	dc.w	OBJ_NPC_GUARD
+	align 2
+; 
 DialogTextGuardDay07:
+	dc.w	OBJ_NPC_GUARD
+	align 2
+; in the center this day
 DialogTextGuardDay08:
+	dc.w	OBJ_NPC_GUARD
+	align 2
+; 
 DialogTextGuardDay09:
+	dc.w	OBJ_NPC_GUARD
+	align 2
+; in wwhall this day
 DialogTextGuardDay0A:
+	dc.w	OBJ_NPC_GUARD
+	align 2
+; 
 DialogTextGuardDay0B:
+	dc.w	OBJ_NPC_GUARD
+	align 2
+; in eehall this day
 DialogTextGuardDay0C:
+	dc.w	OBJ_NPC_GUARD
+	align 2
+; 
 DialogTextGuardDay0D:
 	dc.w	OBJ_NPC_GUARD
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
 	align 2
+; loitering in the tv section
 DialogTextBillyDay00:
 	dc.w	OBJ_NPC_BILLY
 	dc.b	"What? He said I could",LF
 	dc.b	"wait here.",ETX
 	align 2
+; not present at night
 DialogTextBillyDay01:
+; in VB this day
 DialogTextBillyDay02:
-DialogTextBillyDay03:
-DialogTextBillyDay04:
-DialogTextBillyDay05:
-DialogTextBillyDay06:
-DialogTextBillyDay07:
-DialogTextBillyDay08:
-DialogTextBillyDay09:
-DialogTextBillyDay0A:
-DialogTextBillyDay0B:
-DialogTextBillyDay0C:
-DialogTextBillyDay0D:
 	dc.w	OBJ_NPC_BILLY
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
+	dc.b	"Do you work here too?",ETX
 	align 2
+; not present at night
+DialogTextBillyDay03:
+; in the camping section this day
+DialogTextBillyDay04:
+	dc.w	OBJ_NPC_BILLY
+	dc.b	"Will he let me take a",LF
+	dc.b	"nap here?",ETX
+	align 2
+; not present at night
+DialogTextBillyDay05:
+; in the fishing section this day
+DialogTextBillyDay06:
+	dc.w	OBJ_NPC_BILLY
+	dc.b	"Do you know how these",LF
+	dc.b	"work?",ETX
+	align 2
+; not present at night
+DialogTextBillyDay07:
+; in svideo this day
+DialogTextBillyDay08:
+	dc.w	OBJ_NPC_BILLY
+	dc.b	"I'm not allowed to",LF
+	dc.b	"watch this one.",ETX
+	align 2
+; not present at night
+DialogTextBillyDay09:
+; in ewhall this day
+DialogTextBillyDay0A:
+	dc.w	OBJ_NPC_BILLY
+	dc.b	"Where should I go",LF
+	dc.b	"today?",ETX
+	align 2
+; not present at night
+DialogTextBillyDay0B:
+; not present on 12/31
+DialogTextBillyDay0C:
+; not present on 12/31
+DialogTextBillyDay0D:
+; not present until day0B
 DialogTextAlDay00:
+; not present until day0B
 DialogTextAlDay01:
+; not present until day0B
 DialogTextAlDay02:
+; not present until day0B
 DialogTextAlDay03:
+; not present until day0B
 DialogTextAlDay04:
+; not present until day0B
 DialogTextAlDay05:
+; not present until day0B
 DialogTextAlDay06:
+; not present until day0B
 DialogTextAlDay07:
+; not present until day0B
 DialogTextAlDay08:
+; not present until day0B
 DialogTextAlDay09:
+; not present until day0B
 DialogTextAlDay0A:
+; 
 DialogTextAlDay0B:
+	dc.w	OBJ_NPC_AL
+	align 2
+; eryn never visits the basement
 DialogTextAlDay0C:
+; 
 DialogTextAlDay0D:
 	dc.w	OBJ_NPC_AL
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
 	align 2
 DialogTextThomasDay00:
 	dc.w	OBJ_NPC_THOMAS
@@ -917,21 +1371,49 @@ DialogTextThomasDay01:
 	dc.b	"You know we're closed",LF
 	dc.b	"right?",ETX
 	align 2
+; Why are you asking me this?
 DialogTextThomasDay02:
+	dc.w	OBJ_NPC_THOMAS
+	align 2
+; 
 DialogTextThomasDay03:
+	dc.w	OBJ_NPC_THOMAS
+	align 2
+; 
 DialogTextThomasDay04:
+	dc.w	OBJ_NPC_THOMAS
+	align 2
+; 
 DialogTextThomasDay05:
+	dc.w	OBJ_NPC_THOMAS
+	align 2
+; 
 DialogTextThomasDay06:
+	dc.w	OBJ_NPC_THOMAS
+	align 2
+; 
 DialogTextThomasDay07:
+	dc.w	OBJ_NPC_THOMAS
+	align 2
+; 
 DialogTextThomasDay08:
+	dc.w	OBJ_NPC_THOMAS
+	align 2
+; 
 DialogTextThomasDay09:
+	dc.w	OBJ_NPC_THOMAS
+	align 2
+; trading sequence
 DialogTextThomasDay0A:
+; 
 DialogTextThomasDay0B:
+	dc.w	OBJ_NPC_THOMAS
+	align 2
+; trading sequence
 DialogTextThomasDay0C:
+; 
 DialogTextThomasDay0D:
 	dc.w	OBJ_NPC_THOMAS
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
 	align 2
 DialogTextHeatherDay00:
 	dc.w	OBJ_NPC_HEATHER
@@ -940,40 +1422,63 @@ DialogTextHeatherDay00:
 	dc.b	"I learned a ton from",LF
 	dc.b	"him already.",ETX
 	align 2
+; not present at night
 DialogTextHeatherDay01:
+; trading sequence
 DialogTextHeatherDay02:
+; not present at night
 DialogTextHeatherDay03:
+; trading sequence
 DialogTextHeatherDay04:
+; not present at night
 DialogTextHeatherDay05:
+; trading sequence
 DialogTextHeatherDay06:
+; not present at night
 DialogTextHeatherDay07:
+; trading sequence
 DialogTextHeatherDay08:
+; not present at night
 DialogTextHeatherDay09:
+; trading sequence
 DialogTextHeatherDay0A:
+; not present at night
 DialogTextHeatherDay0B:
+; trading sequence
 DialogTextHeatherDay0C:
+; not present at night
 DialogTextHeatherDay0D:
-	dc.w	OBJ_NPC_HEATHER
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
-	align 2
+; not present until day0B
 DialogTextGaryDay00:
+; not present until day0B
 DialogTextGaryDay01:
+; not present until day0B
 DialogTextGaryDay02:
+; not present until day0B
 DialogTextGaryDay03:
+; not present until day0B
 DialogTextGaryDay04:
+; not present until day0B
 DialogTextGaryDay05:
+; not present until day0B
 DialogTextGaryDay06:
+; not present until day0B
 DialogTextGaryDay07:
+; not present until day0B
 DialogTextGaryDay08:
+; not present until day0B
 DialogTextGaryDay09:
+; not present until day0B
 DialogTextGaryDay0A:
+; 
 DialogTextGaryDay0B:
+	dc.w	OBJ_NPC_GARY
+	align 2
+; eryn never visits the basement
 DialogTextGaryDay0C:
+; 
 DialogTextGaryDay0D:
 	dc.w	OBJ_NPC_GARY
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
 	align 2
 DialogTextGrantDay00:
 	dc.w	OBJ_NPC_GRANT
@@ -988,65 +1493,145 @@ DialogTextGrantDay01:
 	dc.b	"Thanks for the help",LF
 	dc.b	"last week.",ETX
 	align 2
+; dialog after scripted event
 DialogTextGrantDay02:
-DialogTextGrantDay03:
-DialogTextGrantDay04:
-DialogTextGrantDay05:
-DialogTextGrantDay06:
-DialogTextGrantDay07:
-DialogTextGrantDay08:
-DialogTextGrantDay09:
-DialogTextGrantDay0A:
-DialogTextGrantDay0B:
-DialogTextGrantDay0C:
-DialogTextGrantDay0D:
 	dc.w	OBJ_NPC_GRANT
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
+	dc.b	"Stop by another time.",ETX
 	align 2
+; 
+DialogTextGrantDay03:
+	dc.w	OBJ_NPC_GRANT
+	align 2
+; 
+DialogTextGrantDay04:
+	dc.w	OBJ_NPC_GRANT
+	align 2
+; 
+DialogTextGrantDay05:
+	dc.w	OBJ_NPC_GRANT
+	align 2
+; 
+DialogTextGrantDay06:
+	dc.w	OBJ_NPC_GRANT
+	align 2
+; 
+DialogTextGrantDay07:
+	dc.w	OBJ_NPC_GRANT
+	align 2
+; 
+DialogTextGrantDay08:
+	dc.w	OBJ_NPC_GRANT
+	align 2
+; 
+DialogTextGrantDay09:
+	dc.w	OBJ_NPC_GRANT
+	align 2
+; 
+DialogTextGrantDay0A:
+	dc.w	OBJ_NPC_GRANT
+	align 2
+; trading sequence
+DialogTextGrantDay0B:
+; 
+DialogTextGrantDay0C:
+	dc.w	OBJ_NPC_GRANT
+	align 2
+; trading sequence
+DialogTextGrantDay0D:
+; no dialog until day0B
 DialogTextBrettDay00:
+; no dialog until day0B
 DialogTextBrettDay01:
+; no dialog until day0B
 DialogTextBrettDay02:
+; no dialog until day0B
 DialogTextBrettDay03:
+; no dialog until day0B
 DialogTextBrettDay04:
+; no dialog until day0B
 DialogTextBrettDay05:
+; no dialog until day0B
 DialogTextBrettDay06:
+; no dialog until day0B
 DialogTextBrettDay07:
+; no dialog until day0B
 DialogTextBrettDay08:
+; no dialog until day0B
 DialogTextBrettDay09:
+; no dialog until day0B
 DialogTextBrettDay0A:
+; 
 DialogTextBrettDay0B:
+	dc.w	OBJ_NPC_BRETT
+	align 2
+; eryn never interacts with brett
 DialogTextBrettDay0C:
+; 
 DialogTextBrettDay0D:
 	dc.w	OBJ_NPC_BRETT
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
 	align 2
+; dialog after optional event
 DialogTextNickyDay00:
 	dc.w	OBJ_NPC_NICKY
 	dc.b	"Thanks again for the",LF
 	dc.b	"help.",ETX
 	align 2
+; dialog after story event
 DialogTextNickyDay01:
 	dc.w	OBJ_NPC_NICKY
 	dc.b	"Thanks for delivering",LF
 	dc.b	"my order.",ETX
 	align 2
 DialogTextNickyDay02:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"I haven't been here",LF
+	dc.b	"that long.^^",FF
+	dc.b	"I don't know what's",LF
+	dc.b	"even normal.",ETX
+	align 2
+; 
 DialogTextNickyDay03:
+	dc.w	OBJ_NPC_NICKY
+	align 2
+; 
 DialogTextNickyDay04:
+	dc.w	OBJ_NPC_NICKY
+	align 2
+; 
 DialogTextNickyDay05:
+	dc.w	OBJ_NPC_NICKY
+	align 2
+; 
 DialogTextNickyDay06:
+	dc.w	OBJ_NPC_NICKY
+	align 2
+; 
 DialogTextNickyDay07:
+	dc.w	OBJ_NPC_NICKY
+	align 2
+; 
 DialogTextNickyDay08:
+	dc.w	OBJ_NPC_NICKY
+	align 2
+; 
 DialogTextNickyDay09:
+	dc.w	OBJ_NPC_NICKY
+	align 2
+; 
 DialogTextNickyDay0A:
+	dc.w	OBJ_NPC_NICKY
+	align 2
+; 
 DialogTextNickyDay0B:
+	dc.w	OBJ_NPC_NICKY
+	align 2
+; 
 DialogTextNickyDay0C:
+	dc.w	OBJ_NPC_NICKY
+	align 2
+; 
 DialogTextNickyDay0D:
 	dc.w	OBJ_NPC_NICKY
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
 	align 2
 DialogTextTanyaDay00:
 	dc.w	OBJ_NPC_TANYA
@@ -1059,65 +1644,136 @@ DialogTextTanyaDay01:
 	dc.b	"forever to finish.",ETX
 	align 2
 DialogTextTanyaDay02:
+	dc.w	OBJ_NPC_TANYA
+	dc.b	"I haven't seen",LF
+	dc.b	"anything unusual.",ETX
+	align 2
+; 
 DialogTextTanyaDay03:
+	dc.w	OBJ_NPC_TANYA
+	align 2
+; 
 DialogTextTanyaDay04:
+	dc.w	OBJ_NPC_TANYA
+	align 2
+; 
 DialogTextTanyaDay05:
+	dc.w	OBJ_NPC_TANYA
+	align 2
+; 
 DialogTextTanyaDay06:
+	dc.w	OBJ_NPC_TANYA
+	align 2
+; 
 DialogTextTanyaDay07:
+	dc.w	OBJ_NPC_TANYA
+	align 2
+; 
 DialogTextTanyaDay08:
+	dc.w	OBJ_NPC_TANYA
+	align 2
+; 
 DialogTextTanyaDay09:
+	dc.w	OBJ_NPC_TANYA
+	align 2
+; trading sequence
 DialogTextTanyaDay0A:
+; 
 DialogTextTanyaDay0B:
+	dc.w	OBJ_NPC_TANYA
+	align 2
+; trading sequence
 DialogTextTanyaDay0C:
+; 
 DialogTextTanyaDay0D:
 	dc.w	OBJ_NPC_TANYA
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
 	align 2
 DialogTextCraigDay00:
 	dc.w	OBJ_NPC_CRAIG
 	dc.b	"I didn't think anyone",LF
 	dc.b	"would find me.",ETX
 	align 2
+; not present this night
 DialogTextCraigDay01:
 DialogTextCraigDay02:
-DialogTextCraigDay03:
-DialogTextCraigDay04:
-DialogTextCraigDay05:
-DialogTextCraigDay06:
-DialogTextCraigDay07:
-DialogTextCraigDay08:
-DialogTextCraigDay09:
-DialogTextCraigDay0A:
-DialogTextCraigDay0B:
-DialogTextCraigDay0C:
-DialogTextCraigDay0D:
 	dc.w	OBJ_NPC_CRAIG
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
+	dc.b	"I barely see anything",LF
+	dc.b	"back here.",ETX
 	align 2
+; 
+DialogTextCraigDay03:
+	dc.w	OBJ_NPC_CRAIG
+	align 2
+; 
+DialogTextCraigDay04:
+	dc.w	OBJ_NPC_CRAIG
+	align 2
+; 
+DialogTextCraigDay05:
+	dc.w	OBJ_NPC_CRAIG
+	align 2
+; 
+DialogTextCraigDay06:
+	dc.w	OBJ_NPC_CRAIG
+	align 2
+; trading sequence
+DialogTextCraigDay07:
+; 
+DialogTextCraigDay08:
+	dc.w	OBJ_NPC_CRAIG
+	align 2
+; trading sequence
+DialogTextCraigDay09:
+; 
+DialogTextCraigDay0A:
+	dc.w	OBJ_NPC_CRAIG
+	align 2
+; trading sequence
+DialogTextCraigDay0B:
+; 
+DialogTextCraigDay0C:
+	dc.w	OBJ_NPC_CRAIG
+	align 2
+; trading sequence
+DialogTextCraigDay0D:
 DialogTextJuanDay00:
 	dc.w	OBJ_NPC_JUAN
 	dc.b	"Poor kid is stuck",LF
 	dc.b	"here all day.",ETX
 	align 2
+; not present at night
 DialogTextJuanDay01:
 DialogTextJuanDay02:
-DialogTextJuanDay03:
-DialogTextJuanDay04:
-DialogTextJuanDay05:
-DialogTextJuanDay06:
-DialogTextJuanDay07:
-DialogTextJuanDay08:
-DialogTextJuanDay09:
-DialogTextJuanDay0A:
-DialogTextJuanDay0B:
-DialogTextJuanDay0C:
-DialogTextJuanDay0D:
 	dc.w	OBJ_NPC_JUAN
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
+	dc.b	"Nope, just a regular",LF
+	dc.b	"day here.",ETX
 	align 2
+; not present at night
+DialogTextJuanDay03:
+; 
+DialogTextJuanDay04:
+	dc.w	OBJ_NPC_JUAN
+	align 2
+; not present at night
+DialogTextJuanDay05:
+; 
+DialogTextJuanDay06:
+	dc.w	OBJ_NPC_JUAN
+	align 2
+; not present at night
+DialogTextJuanDay07:
+; trading sequence
+DialogTextJuanDay08:
+; not present at night
+DialogTextJuanDay09:
+; trading sequence
+DialogTextJuanDay0A:
+; not present at night
+DialogTextJuanDay0B:
+; trading sequence
+DialogTextJuanDay0C:
+; not present at night
+DialogTextJuanDay0D:
 DialogTextLauraDay00:
 	dc.w	OBJ_NPC_LAURA
 	dc.b	"Most people just like",LF
@@ -1128,186 +1784,420 @@ DialogTextLauraDay01:
 	dc.b	"We had some odd types",LF
 	dc.b	"today.",ETX
 	align 2
+; trading sequence
 DialogTextLauraDay02:
+; 
 DialogTextLauraDay03:
+	dc.w	OBJ_NPC_LAURA
+	align 2
+; trading sequence
 DialogTextLauraDay04:
+; 
 DialogTextLauraDay05:
+	dc.w	OBJ_NPC_LAURA
+	align 2
+; trading sequence
 DialogTextLauraDay06:
+; 
 DialogTextLauraDay07:
+	dc.w	OBJ_NPC_LAURA
+	align 2
+; trading sequence
 DialogTextLauraDay08:
+; 
 DialogTextLauraDay09:
+	dc.w	OBJ_NPC_LAURA
+	align 2
+; trading sequence
 DialogTextLauraDay0A:
+; 
 DialogTextLauraDay0B:
+	dc.w	OBJ_NPC_LAURA
+	align 2
+; trading sequence
 DialogTextLauraDay0C:
+; 
 DialogTextLauraDay0D:
 	dc.w	OBJ_NPC_LAURA
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
 	align 2
+; text after story event
 DialogTextGinaDay00:
+	dc.w	OBJ_NPC_GINA
 	dc.b	"Nice choice.",ETX
+	align 2
+; not present at night
 DialogTextGinaDay01:
 DialogTextGinaDay02:
-DialogTextGinaDay03:
-DialogTextGinaDay04:
-DialogTextGinaDay05:
-DialogTextGinaDay06:
-DialogTextGinaDay07:
-DialogTextGinaDay08:
-DialogTextGinaDay09:
-DialogTextGinaDay0A:
-DialogTextGinaDay0B:
-DialogTextGinaDay0C:
-DialogTextGinaDay0D:
 	dc.w	OBJ_NPC_GINA
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
+	dc.b	"We get all types",LF
+	dc.b	"asking questions.^^",FF
+	dc.b	"You'll have to be",LF
+	dc.b	"more specific.",ETX
 	align 2
+; not present at night
+DialogTextGinaDay03:
+; 
+DialogTextGinaDay04:
+	dc.w	OBJ_NPC_GINA
+	align 2
+; not present at night
+DialogTextGinaDay05:
+; 
+DialogTextGinaDay06:
+	dc.w	OBJ_NPC_GINA
+	align 2
+; not present at night
+DialogTextGinaDay07:
+; 
+DialogTextGinaDay08:
+	dc.w	OBJ_NPC_GINA
+	align 2
+; not present at night
+DialogTextGinaDay09:
+; 
+DialogTextGinaDay0A:
+	dc.w	OBJ_NPC_GINA
+	align 2
+; not present at night
+DialogTextGinaDay0B:
+; 
+DialogTextGinaDay0C:
+	dc.w	OBJ_NPC_GINA
+	align 2
+; not present at night
+DialogTextGinaDay0D:
 DialogTextSantaDay00:
 	dc.w	OBJ_NPC_SANTA
 	dc.b	"It's OK, any age can",LF
 	dc.b	"visit Santa.",ETX
 	align 2
+; not present at night
 DialogTextSantaDay01:
 DialogTextSantaDay02:
+	dc.w	OBJ_NPC_SANTA
+	dc.b	"This Santa doesn't",LF
+	dc.b	"keep a naughty list.",ETX
+	align 2
+; not present at night
 DialogTextSantaDay03:
 DialogTextSantaDay04:
+	dc.w	OBJ_NPC_SANTA
+	align 2
+; not present at night
 DialogTextSantaDay05:
 DialogTextSantaDay06:
+	dc.w	OBJ_NPC_SANTA
+	align 2
+; not present at night
 DialogTextSantaDay07:
 DialogTextSantaDay08:
+	dc.w	OBJ_NPC_SANTA
+	align 2
+; not present at night
 DialogTextSantaDay09:
 DialogTextSantaDay0A:
-DialogTextSantaDay0B:
-DialogTextSantaDay0C:
-DialogTextSantaDay0D:
 	dc.w	OBJ_NPC_SANTA
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
 	align 2
+; not present at night
+DialogTextSantaDay0B:
+; not present after 12/24
+DialogTextSantaDay0C:
+; not present after 12/24
+DialogTextSantaDay0D:
+; in the fishing section this day
 DialogTextLostGuyDay00:
 	dc.w	OBJ_NPC_LOSTGUY
 	dc.b	"Do these work on land",LF
 	dc.b	"too?",ETX
 	align 2
+; not present at night
 DialogTextLostGuyDay01:
+; in the bookstore this day
 DialogTextLostGuyDay02:
-DialogTextLostGuyDay03:
-DialogTextLostGuyDay04:
-DialogTextLostGuyDay05:
-DialogTextLostGuyDay06:
-DialogTextLostGuyDay07:
-DialogTextLostGuyDay08:
-DialogTextLostGuyDay09:
-DialogTextLostGuyDay0A:
-DialogTextLostGuyDay0B:
-DialogTextLostGuyDay0C:
-DialogTextLostGuyDay0D:
 	dc.w	OBJ_NPC_LOSTGUY
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
+	dc.b	"Do you work here too?",ETX
 	align 2
+; not present at night
+DialogTextLostGuyDay03:
+; in pogodawg this day
+DialogTextLostGuyDay04:
+	dc.w	OBJ_NPC_LOSTGUY
+	align 2
+; not present at night
+DialogTextLostGuyDay05:
+; in the appliances section this day
+DialogTextLostGuyDay06:
+	dc.w	OBJ_NPC_LOSTGUY
+	align 2
+; not present at night
+DialogTextLostGuyDay07:
+; at wwcheckout this day
+DialogTextLostGuyDay08:
+	dc.w	OBJ_NPC_LOSTGUY
+	align 2
+; not present at night
+DialogTextLostGuyDay09:
+; at checkers this day
+DialogTextLostGuyDay0A:
+	dc.w	OBJ_NPC_LOSTGUY
+	align 2
+; not present at night
+DialogTextLostGuyDay0B:
+; in the audio section this day
+DialogTextLostGuyDay0C:
+	dc.w	OBJ_NPC_LOSTGUY
+	align 2
+; not present at night
+DialogTextLostGuyDay0D:
+; in story event, no other dialog
 DialogTextRockerDay00:
+; not present at night
 DialogTextRockerDay01:
+; at the cavern this day
 DialogTextRockerDay02:
-DialogTextRockerDay03:
-DialogTextRockerDay04:
-DialogTextRockerDay05:
-DialogTextRockerDay06:
-DialogTextRockerDay07:
-DialogTextRockerDay08:
-DialogTextRockerDay09:
-DialogTextRockerDay0A:
-DialogTextRockerDay0B:
-DialogTextRockerDay0C:
-DialogTextRockerDay0D:
 	dc.w	OBJ_NPC_ROCKER
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
+	dc.b	"Don't break my",LF
+	dc.b	"concentration.",ETX
 	align 2
+; not present at night
+DialogTextRockerDay03:
+; at the cavern this day
+DialogTextRockerDay04:
+	dc.w	OBJ_NPC_ROCKER
+	align 2
+; not present at night
+DialogTextRockerDay05:
+; at tlodge this day
+DialogTextRockerDay06:
+	dc.w	OBJ_NPC_ROCKER
+	align 2
+; not present at night
+DialogTextRockerDay07:
+; at VB this day
+DialogTextRockerDay08:
+	dc.w	OBJ_NPC_ROCKER
+	align 2
+; not present at night
+DialogTextRockerDay09:
+; at pogodawg this day
+DialogTextRockerDay0A:
+	dc.w	OBJ_NPC_ROCKER
+	align 2
+; not present at night
+DialogTextRockerDay0B:
+; at the info desk this day
+DialogTextRockerDay0C:
+	dc.w	OBJ_NPC_ROCKER
+	align 2
+; not present at night
+DialogTextRockerDay0D:
+; in the record store this day
 DialogTextShopperDay00:
 	dc.w	OBJ_NPC_SHOPPER
 	dc.b	"I don't know if this",LF
 	dc.b	"is worth $15",ETX
 	align 2
+; not present at night
 DialogTextShopperDay01:
+; in pogodawg this day
 DialogTextShopperDay02:
-DialogTextShopperDay03:
-DialogTextShopperDay04:
-DialogTextShopperDay05:
-DialogTextShopperDay06:
-DialogTextShopperDay07:
-DialogTextShopperDay08:
-DialogTextShopperDay09:
-DialogTextShopperDay0A:
-DialogTextShopperDay0B:
-DialogTextShopperDay0C:
-DialogTextShopperDay0D:
 	dc.w	OBJ_NPC_SHOPPER
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
+	dc.b	"I know this place is",LF
+	dc.b	"bad.^^",FF
+	dc.b	"I wish there was",LF
+	dc.b	"another option.",ETX
 	align 2
+; not present at night
+DialogTextShopperDay03:
+; at fcbcheckout this day
+DialogTextShopperDay04:
+	dc.w	OBJ_NPC_SHOPPER
+	align 2
+; not present at night
+DialogTextShopperDay05:
+; at fcbfirearms this day
+DialogTextShopperDay06:
+	dc.w	OBJ_NPC_SHOPPER
+	align 2
+; not present at night
+DialogTextShopperDay07:
+; at VB this day
+DialogTextShopperDay08:
+	dc.w	OBJ_NPC_SHOPPER
+	align 2
+; not present at night
+DialogTextShopperDay09:
+; at the appliances section this day
+DialogTextShopperDay0A:
+	dc.w	OBJ_NPC_SHOPPER
+	align 2
+; not present at night
+DialogTextShopperDay0B:
+; at checkers this day
+DialogTextShopperDay0C:
+	dc.w	OBJ_NPC_SHOPPER
+	align 2
+; not present at night
+DialogTextShopperDay0D:
+; in story event, no other dialog
 DialogTextBusyMomDay00:
+; not present at night
 DialogTextBusyMomDay01:
+; in clothesnow this day
 DialogTextBusyMomDay02:
-DialogTextBusyMomDay03:
-DialogTextBusyMomDay04:
-DialogTextBusyMomDay05:
-DialogTextBusyMomDay06:
-DialogTextBusyMomDay07:
-DialogTextBusyMomDay08:
-DialogTextBusyMomDay09:
-DialogTextBusyMomDay0A:
-DialogTextBusyMomDay0B:
-DialogTextBusyMomDay0C:
-DialogTextBusyMomDay0D:
 	dc.w	OBJ_NPC_BUSYMOM
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
+	dc.b	"Everything here is",LF
+	dc.b	"too flashy.",ETX
 	align 2
+; not present at night
+DialogTextBusyMomDay03:
+; in the appliances section this day
+DialogTextBusyMomDay04:
+	dc.w	OBJ_NPC_BUSYMOM
+	dc.b	"Do they have larger",LF
+	dc.b	"ones?",ETX
+	align 2
+; not present at night
+DialogTextBusyMomDay05:
+; in checkers this day
+DialogTextBusyMomDay06:
+	dc.w	OBJ_NPC_BUSYMOM
+	dc.b	"Where can I find",LF
+	dc.b	"normal clothes?",ETX
+	align 2
+; not present at night
+DialogTextBusyMomDay07:
+; in the tv section this day
+DialogTextBusyMomDay08:
+	dc.w	OBJ_NPC_BUSYMOM
+	dc.b	"Does this get cable",LF
+	dc.b	"though?",ETX
+	align 2
+; not present at night
+DialogTextBusyMomDay09:
+; at the fishing section this day
+DialogTextBusyMomDay0A:
+	dc.w	OBJ_NPC_BUSYMOM
+	dc.b	"Would he like fishing?",ETX
+	align 2
+; not present at night
+DialogTextBusyMomDay0B:
+; at VB this day
+DialogTextBusyMomDay0C:
+	dc.w	OBJ_NPC_BUSYMOM
+	dc.b	"I can't believe it",LF
+	dc.b	"only came^^",FF
+	dc.b	"with a single",LF
+	dc.b	"controller.",ETX
+	align 2
+; not present at night
+DialogTextBusyMomDay0D:
+; at tbooks this day
 DialogTextMallratDay00:
 	dc.w	OBJ_NPC_MALLRAT
 	dc.b	"Interrupting much?",ETX
 	align 2
+; not present at night
 DialogTextMallratDay01:
+; at cplanet this day
 DialogTextMallratDay02:
-DialogTextMallratDay03:
-DialogTextMallratDay04:
-DialogTextMallratDay05:
-DialogTextMallratDay06:
-DialogTextMallratDay07:
-DialogTextMallratDay08:
-DialogTextMallratDay09:
-DialogTextMallratDay0A:
-DialogTextMallratDay0B:
-DialogTextMallratDay0C:
-DialogTextMallratDay0D:
 	dc.w	OBJ_NPC_MALLRAT
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
+	dc.b	"This isn't really my",LF
+	dc.b	"thing..^^",FF
+	dc.b	"but it's so popular",LF
+	dc.b	"right now.",ETX
 	align 2
+; not present at night
+DialogTextMallratDay03:
+; in the audio section this day
+DialogTextMallratDay04:
+	dc.w	OBJ_NPC_MALLRAT
+	dc.b	"Do you work here?^",LF
+	dc.b	"That guy isn't much^",FF
+	dc.b	"help.",ETX
+	align 2
+; not present at night
+DialogTextMallratDay05:
+; in VB this day
+DialogTextMallratDay06:
+	dc.w	OBJ_NPC_MALLRAT
+	dc.b	"Is this based on the",LF
+	dc.b	"music video?",ETX
+	align 2
+; not present at night
+DialogTextMallratDay07:
+; in cnow this day
+DialogTextMallratDay08:
+	dc.w	OBJ_NPC_MALLRAT
+	dc.b	"I like all the new",LF
+	dc.b	"dress colors.",ETX
+	align 2
+; not present at night
+DialogTextMallratDay09:
+; used in story event this day
+DialogTextMallratDay0A:
+; not present at night
+DialogTextMallratDay0B:
+; at wwcheckout this day
+DialogTextMallratDay0C:
+	dc.w	OBJ_NPC_MALLRAT
+	dc.b	"After xmas is the",LF
+	dc.b	"best time to shop.",ETX
+	align 2
+; not present at night
+DialogTextMallratDay0D:
+; at checkers this day
 DialogTextPreppyDay00:
 	dc.w	OBJ_NPC_PREPPY
 	dc.b	"There's no way you",LF
 	dc.b	"work here.",ETX
 	align 2
+; not present at night
 DialogTextPreppyDay01:
+; at tlodge this day
 DialogTextPreppyDay02:
-DialogTextPreppyDay03:
-DialogTextPreppyDay04:
-DialogTextPreppyDay05:
-DialogTextPreppyDay06:
-DialogTextPreppyDay07:
-DialogTextPreppyDay08:
-DialogTextPreppyDay09:
-DialogTextPreppyDay0A:
-DialogTextPreppyDay0B:
-DialogTextPreppyDay0C:
-DialogTextPreppyDay0D:
 	dc.w	OBJ_NPC_PREPPY
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
+	dc.b	"I wonder if they have",LF
+	dc.b	"it...",ETX
 	align 2
+; not present at night
+DialogTextPreppyDay03:
+; at cplanet this day
+DialogTextPreppyDay04:
+	dc.w	OBJ_NPC_PREPPY
+	dc.b	"No, this isn't trendy",LF
+	dc.b	"enough.",ETX
+	align 2
+; not present at night
+DialogTextPreppyDay05:
+; at cnow today
+DialogTextPreppyDay06:
+	dc.w	OBJ_NPC_PREPPY
+	dc.b	"I'm looking for",LF
+	dc.b	"someone else.",ETX
+	align 2
+; not present at night
+DialogTextPreppyDay07:
+; at denim country this day
+DialogTextPreppyDay08:
+	dc.w	OBJ_NPC_PREPPY
+	dc.b	"None of this will do.",ETX
+	align 2
+; not present at night
+DialogTextPreppyDay09:
+; used in story event - no other dialog
+DialogTextPreppyDay0A:
+; not present at night
+DialogTextPreppyDay0B:
+; at firearms section this day
+DialogTextPreppyDay0C:
+	dc.w	OBJ_NPC_PREPPY
+	dc.b	"I've never been to",LF
+	dc.b	"this part of the mall.",ETX
+	align 2
+; not present at night
+DialogTextPreppyDay0D:
+; in the appliances section this day
 DialogTextYuppieDay00:
 	dc.w	OBJ_NPC_YUPPIE
 	dc.b	"An ice maker would be",LF
@@ -1315,117 +2205,220 @@ DialogTextYuppieDay00:
 	dc.b	"It would save me",LF
 	dc.b	"hours.",ETX
 	align 2
+; not present at night
 DialogTextYuppieDay01:
+; in the audio section this day
 DialogTextYuppieDay02:
-DialogTextYuppieDay03:
-DialogTextYuppieDay04:
-DialogTextYuppieDay05:
-DialogTextYuppieDay06:
-DialogTextYuppieDay07:
-DialogTextYuppieDay08:
-DialogTextYuppieDay09:
-DialogTextYuppieDay0A:
-DialogTextYuppieDay0B:
-DialogTextYuppieDay0C:
-DialogTextYuppieDay0D:
 	dc.w	OBJ_NPC_YUPPIE
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
+	dc.b	"I wanted something",LF
+	dc.b	"with a more modern^",FF
+	dc.b	"look.",ETX
 	align 2
+; not present at night
+DialogTextYuppieDay03:
+; at denim country this day
+DialogTextYuppieDay04:
+	dc.w	OBJ_NPC_YUPPIE
+	dc.b	"These look",LF
+	dc.b	"comfortable.^^",FF
+	dc.b	"But the color is",LF
+	dc.b	"atrocious.",ETX
+	align 2
+; not present at night
+DialogTextYuppieDay05:
+; in the south hall this day
+DialogTextYuppieDay06:
+	dc.w	OBJ_NPC_YUPPIE
+	dc.b	"They need better",LF
+	dc.b	"resturaunts here.",ETX
+	align 2
+; not present at night
+DialogTextYuppieDay07:
+; at checkers this day
+DialogTextYuppieDay08:
+	dc.w	OBJ_NPC_YUPPIE
+	dc.b	"I don't think he'd",LF
+	dc.b	"wear this.",ETX
+	align 2
+; not present at night
+DialogTextYuppieDay09:
+; at tlodge this day
+DialogTextYuppieDay0A:
+	dc.w	OBJ_NPC_YUPPIE
+	dc.b	"Hmm, any good last",LF
+	dc.b	"minute gifts..",ETX
+	align 2
+; not present at night
+DialogTextYuppieDay0B:
+; at cplanet this day
+DialogTextYuppieDay0C:
+	dc.w	OBJ_NPC_YUPPIE
+	dc.b	"This is the one I was",LF
+	dc.b	"looking for.",ETX
+	align 2
+; not present at night
+DialogTextYuppieDay0D:
+; not present until day0D
 DialogTextNelsonDay00:
+; not present until day0D
 DialogTextNelsonDay01:
+; not present until day0D
 DialogTextNelsonDay02:
+; not present until day0D
 DialogTextNelsonDay03:
+; not present until day0D
 DialogTextNelsonDay04:
+; not present until day0D
 DialogTextNelsonDay05:
+; not present until day0D
 DialogTextNelsonDay06:
+; not present until day0D
 DialogTextNelsonDay07:
+; not present until day0D
 DialogTextNelsonDay08:
+; not present until day0D
 DialogTextNelsonDay09:
+; not present until day0D
 DialogTextNelsonDay0A:
+; not present until day0D
 DialogTextNelsonDay0B:
+; not present until day0D
 DialogTextNelsonDay0C:
 DialogTextNelsonDay0D:
 	dc.w	OBJ_NPC_NELSON
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
+	dc.b	"Don't worry about",LF
+	dc.b	"me.^^",FF
+	dc.b	"I can handle closing",LF
+	dc.b	"solo.",ETX
 	align 2
+; only used in scripted events
 DialogTextVictorDay00:
+; only used in scripted events
 DialogTextVictorDay01:
+; only used in scripted events
 DialogTextVictorDay02:
+; only used in scripted events
 DialogTextVictorDay03:
+; only used in scripted events
 DialogTextVictorDay04:
+; only used in scripted events
 DialogTextVictorDay05:
+; only used in scripted events
 DialogTextVictorDay06:
+; only used in scripted events
 DialogTextVictorDay07:
+; only used in scripted events
 DialogTextVictorDay08:
+; only used in scripted events
 DialogTextVictorDay09:
+; only used in scripted events
 DialogTextVictorDay0A:
+; only used in scripted events
 DialogTextVictorDay0B:
+; only used in scripted events
 DialogTextVictorDay0C:
+; only used in scripted events
 DialogTextVictorDay0D:
-	dc.w	OBJ_NPC_VICTOR
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
-	align 2
+; not present until day0B
 DialogTextAlOldDay00:
+; not present until day0B
 DialogTextAlOldDay01:
+; not present until day0B
 DialogTextAlOldDay02:
+; not present until day0B
 DialogTextAlOldDay03:
+; not present until day0B
 DialogTextAlOldDay04:
+; not present until day0B
 DialogTextAlOldDay05:
+; not present until day0B
 DialogTextAlOldDay06:
+; not present until day0B
 DialogTextAlOldDay07:
+; not present until day0B
 DialogTextAlOldDay08:
+; not present until day0B
 DialogTextAlOldDay09:
+; not present until day0B
 DialogTextAlOldDay0A:
 DialogTextAlOldDay0B:
+	dc.w	OBJ_NPC_ALOLD
+	dc.b	"This is my default",LF
+	dc.b	"text.",ETX
+	align 2
+; eryn never visits the basement
 DialogTextAlOldDay0C:
 DialogTextAlOldDay0D:
 	dc.w	OBJ_NPC_ALOLD
 	dc.b	"This is my default",LF
 	dc.b	"text.",ETX
 	align 2
+; only present on day0C
 DialogTextHiddenHJDay00:
+; only present on day0C
 DialogTextHiddenHJDay01:
+; only present on day0C
 DialogTextHiddenHJDay02:
+; only present on day0C
 DialogTextHiddenHJDay03:
+; only present on day0C
 DialogTextHiddenHJDay04:
+; only present on day0C
 DialogTextHiddenHJDay05:
+; only present on day0C
 DialogTextHiddenHJDay06:
+; only present on day0C
 DialogTextHiddenHJDay07:
+; only present on day0C
 DialogTextHiddenHJDay08:
+; only present on day0C
 DialogTextHiddenHJDay09:
+; only present on day0C
 DialogTextHiddenHJDay0A:
+; only present on day0C
 DialogTextHiddenHJDay0B:
 DialogTextHiddenHJDay0C:
-DialogTextHiddenHJDay0D:
 	dc.w	OBJ_NPC_HIDDENHJ
 	dc.b	"It's too bad, I have",LF
 	dc.b	"all of these already.^",FF
 	dc.b	"It was still worth",LF
 	dc.b	"the visit though.",ETX
 	align 2
+; only present on day0C
+DialogTextHiddenHJDay0D:
+; only present on day0C
 DialogTextHiddenMJDay00:
+; only present on day0C
 DialogTextHiddenMJDay01:
+; only present on day0C
 DialogTextHiddenMJDay02:
+; only present on day0C
 DialogTextHiddenMJDay03:
+; only present on day0C
 DialogTextHiddenMJDay04:
+; only present on day0C
 DialogTextHiddenMJDay05:
+; only present on day0C
 DialogTextHiddenMJDay06:
+; only present on day0C
 DialogTextHiddenMJDay07:
+; only present on day0C
 DialogTextHiddenMJDay08:
+; only present on day0C
 DialogTextHiddenMJDay09:
+; only present on day0C
 DialogTextHiddenMJDay0A:
+; only present on day0C
 DialogTextHiddenMJDay0B:
 DialogTextHiddenMJDay0C:
-DialogTextHiddenMJDay0D:
 	dc.w	OBJ_NPC_HIDDENMJ
 	dc.b	"I came all the way",LF
 	dc.b	"here & still can't^",FF
 	dc.b	"find the Kathleen",LF
 	dc.b	"Sunfire book.",ETX
 	align 2
+; only present on day0C
+DialogTextHiddenMJDay0D:
 
 ;-------------------------------------------------------------------------------
 ; ObjectName
@@ -2857,8 +3850,9 @@ StoryTextDay01DenimCountry2Line6:
 	align 2
 StoryTextDay01CavernChoice:
 	dc.w	OBJ_NPC_DB
-	dc.b	"This kid again...",LF
-	dc.b	"{ Do you need help?  ^",FFR
+	dc.b	"He's been here",LF
+	dc.b	"forever...^",FFR
+	dc.b	"{ Do you need help?  ",LF
 	dc.b	"{ Not my problem",ETX
 	align 2
 StoryTextDay01CavernChoice0:
@@ -2866,9 +3860,8 @@ StoryTextDay01CavernChoice0:
 	dc.b	"Yeah, that would be",LF
 	dc.b	"great.^",FF
 	dc.b	"I have to fix",LF
-	dc.b	"something in the^",FF
-	dc.b	"back.",LF
-	dc.b	"Can you keep an eye^",FF
+	dc.b	"something quick.^",FF
+	dc.b	"Can you keep an eye",LF
 	dc.b	"on things for a bit?^",ETX
 	align 2
 StoryTextDay01CavernChoice1:
@@ -2889,8 +3882,9 @@ StoryTextDay01CavernLine3:
 	align 2
 StoryTextDay01CavernLine4:
 	dc.w	OBJ_NPC_ERYN
-	dc.b	"Just a temp. Do you",LF
-	dc.b	"need change or^",FF
+	dc.b	"Just a temp, very",LF
+	dc.b	"temp actually.^",FF
+	dc.b	"Do you need change or",LF
 	dc.b	"something?^",ETX
 	align 2
 StoryTextDay01CavernLine5:
@@ -2914,15 +3908,15 @@ StoryTextDay01CavernLine8:
 	align 2
 StoryTextDay01CavernLine9:
 	dc.w	OBJ_NPC_BILLY
-	dc.b	"It's still fun. Maybe",LF
-	dc.b	"it will be on TV some^",FF
-	dc.b	"day.^",ETX
+	dc.b	"It's still fun if",LF
+	dc.b	"they're good.^",FF
+	dc.b	"Maybe it will be on",LF
+	dc.b	"TV some day.^",ETX
 	align 2
 StoryTextDay01CavernLine10:
 	dc.w	OBJ_NPC_DB
 	dc.b	"Isn't it time to",LF
-	dc.b	"loiter across the^",FF
-	dc.b	"hall?^",ETX
+	dc.b	"loiter down the hall?^",ETX
 	align 2
 StoryTextDay01CavernLine11:
 	dc.w	OBJ_NPC_BILLY
@@ -2948,9 +3942,8 @@ StoryTextDay01FCBCampingChoice0:
 	dc.w	OBJ_NPC_GRANT
 	dc.b	"I don't know if you",LF
 	dc.b	"remember me.^",FF
-	dc.b	"I was friends with",LF
-	dc.b	"your parents in the^",FF
-	dc.b	"70s.^",ETX
+	dc.b	"I know your parents",LF
+	dc.b	"from back in the 70s.^",ETX
 	align 2
 StoryTextDay01FCBCampingChoice1:
 	dc.w	OBJ_NPC_GRANT
@@ -2959,20 +3952,21 @@ StoryTextDay01FCBCampingChoice1:
 	align 2
 StoryTextDay01FCBCampingLine1:
 	dc.w	OBJ_NPC_ERYN
-	dc.b	"Vaguely. You were",LF
-	dc.b	"over a couple times^",FF
-	dc.b	"when I was young.^",ETX
+	dc.b	"I remember you",LF
+	dc.b	"vaguely.^",FF
+	dc.b	"You were over a",LF
+	dc.b	"couple times^",FF
+	dc.b	"when I was very",LF
+	dc.b	"little.^",ETX
 	align 2
 StoryTextDay01FCBCampingLine2:
 	dc.w	OBJ_NPC_GRANT
-	dc.b	"That's right. We",LF
-	dc.b	"drifted apart as the^",FF
-	dc.b	"kids got older.",LF
-	dc.b	"We were friends in^",FF
-	dc.b	"high school.",LF
-	dc.b	"Your parents were a^",FF
-	dc.b	"couple even back",LF
-	dc.b	"then.^",ETX
+	dc.b	"We drifted apart as",LF
+	dc.b	"you kids got older.^",FF
+	dc.b	"We were friends in",LF
+	dc.b	"high school.^",FF
+	dc.b	"They were a couple",LF
+	dc.b	"even back then.^",ETX
 	align 2
 StoryTextDay01FCBCampingLine3:
 	dc.w	OBJ_NPC_ERYN
@@ -2985,12 +3979,11 @@ StoryTextDay01FCBCampingLine4:
 	dc.b	"everything together.^",FF
 	dc.b	"Although there wasn't",LF
 	dc.b	"much to do then.^",FF
-	dc.b	"Mostly hanging out,",LF
-	dc.b	"camping in the^",FF
-	dc.b	"summer.",LF
-	dc.b	"We had took a couple^",FF
-	dc.b	"roadtrips too.",LF
-	dc.b	"The usual teenage^",FF
+	dc.b	"Hanging out, camping",LF
+	dc.b	"in the summer.^",FF
+	dc.b	"We had took a couple",LF
+	dc.b	"roadtrips too.^",FF
+	dc.b	"The usual teenage",LF
 	dc.b	"stuff.^",ETX
 	align 2
 StoryTextDay01FCBCampingLine5:
@@ -3002,9 +3995,8 @@ StoryTextDay01FCBCampingLine6:
 	dc.w	OBJ_NPC_GRANT
 	dc.b	"I won't bore you with",LF
 	dc.b	"them now.^",FF
-	dc.b	"Stop by if you ever",LF
-	dc.b	"want to hear about^",FF
-	dc.b	"them.^",ETX
+	dc.b	"Stop by if you want",LF
+	dc.b	"to hear about one.",ETX
 	align 2
 StoryTextNight01WEHallLine1:
 	dc.w	OBJ_NPC_CARL
@@ -6445,12 +7437,12 @@ StoryTextEndPerfectLine2:
 	align 2
 StoryTextTradingSequenceFCBFishing:
 	dc.w	OBJ_NPC_HEATHER
-	dc.b	"Hey, that looks like",LF
-	dc.b	"the scarf I lost last^",FF
-	dc.b	"month.",LF
-	dc.b	"I'll give you these^",FF
-	dc.b	"pocket handwarmers in",LF
-	dc.b	"exchange.^",FF
+	dc.b	"Is that the scarf I",LF
+	dc.b	"lost last month?^",FF
+	dc.b	"Let me give you a",LF
+	dc.b	"finder's fee.^",FF
+	dc.b	"Please take these",LF
+	dc.b	"pocket handwarmers.^",FF
 	dc.b	"Be careful with them",LF
 	dc.b	"though.",ETX
 	align 2

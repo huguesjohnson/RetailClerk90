@@ -218,5 +218,6 @@ EndDay01SetupGameState: ; separated to help with debugging
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsNight ; reset the NPC locations
 	move.l	#$18000000,(MEM_NPC_LOCATION_WEHALL) ; brett starts in wehall
+	move.l	#$11000000,(MEM_NPC_LOCATION_SHALL) ; put the guard somewhere 		
 	rts	
 

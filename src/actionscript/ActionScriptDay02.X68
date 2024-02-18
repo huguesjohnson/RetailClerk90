@@ -242,4 +242,5 @@ EndDay02SetupGameState: ; separated to help with debugging
 	bsr.w	InitNPCLocationsNight ; reset the NPC locations
 	move.l	#$22000000,(MEM_NPC_LOCATION_WWHALL) ; victor is in wwhall
 	move.l	#$07010000,(MEM_NPC_LOCATION_NSHACK) ; eryn is in nshack
+	move.l	#$11000000,(MEM_NPC_LOCATION_EEHALL) ; put the guard somewhere 			
 	rts

@@ -298,6 +298,7 @@ EndDay00:
 	bsr.w	InitNPCLocationsNight ; reset the NPC locations
 	move.l	#$03000000,(MEM_NPC_LOCATION_TBOOKS)
 	move.l	#$11180000,(MEM_NPC_LOCATION_EEHALL)	
+	move.l	#$19000000,(MEM_NPC_LOCATION_SVIDEO) ; for story event	
 	;---------------------------------------------------------------------------	
 	; queue the introduction
 	;---------------------------------------------------------------------------	

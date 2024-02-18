@@ -194,5 +194,7 @@ EndDay06SetupGameState: ; separated to help with debugging
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsNight ; reset the NPC locations
 	move.l	#$27000000,(MEM_NPC_LOCATION_TBOOKS)
+	move.l	#$11000000,(MEM_NPC_LOCATION_CENTER) ; put the guard somewhere
+	move.l	#$0D110F1C,(MEM_NPC_LOCATION_CENTER) ; new year party at the cavern	
 	rts		
 

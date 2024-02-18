@@ -475,16 +475,32 @@ DialogTextErynDay02:
 DialogTextErynDay03:
 ; PC on day04
 DialogTextErynDay04:
-; story event, no default dialog
+; text after story event
 DialogTextErynDay05:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"My ride is coming",LF
+	dc.b	"late.^^",FF
+	dc.b	"This place is OK to",LF
+	dc.b	"hang out in.",ETX
+	align 2
 ; PC on day06
 DialogTextErynDay06:
-; story event, no default dialog
+; text after story event
 DialogTextErynDay07:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"So you're not the",LF
+	dc.b	"only weirdo^^",FF
+	dc.b	"wandering around",LF
+	dc.b	"after close.",ETX
+	align 2
 ; PC on day08
 DialogTextErynDay08:
-; story event, no default dialog
+; text after story event
 DialogTextErynDay09:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"I wonder why D.B. is",LF
+	dc.b	"being like this?",ETX
+	align 2
 ; PC on day0A
 DialogTextErynDay0A:
 ; story event, no default dialog
@@ -509,33 +525,42 @@ DialogTextCarlDay02:
 	align 2
 ; PC on day03
 DialogTextCarlDay03:
-; 
+; dialog after story event
 DialogTextCarlDay04:
 	dc.w	OBJ_NPC_CARL
+	dc.b	"Really, I'm sorry for",LF
+	dc.b	"being creepy.",ETX
 	align 2
 ; PC on day05
 DialogTextCarlDay05:
-; 
 DialogTextCarlDay06:
 	dc.w	OBJ_NPC_CARL
+	dc.b	"What are you doing?",ETX
 	align 2
 ; PC on day07
 DialogTextCarlDay07:
-; 
 DialogTextCarlDay08:
 	dc.w	OBJ_NPC_CARL
+	dc.b	"I don't talk to D.B.",LF
+	dc.b	"often.^^",FF
+	dc.b	"He's not here late",LF
+	dc.b	"every night.^^",FF
+	dc.b	"He must close up",LF
+	dc.b	"early if it's slow.",ETX
 	align 2
 ; PC on day09
 DialogTextCarlDay09:
-; 
 DialogTextCarlDay0A:
 	dc.w	OBJ_NPC_CARL
+	dc.b	"There are many last",LF
+	dc.b	"minute shoppers today.",ETX
 	align 2
 ; PC on day0B
 DialogTextCarlDay0B:
-; 
 DialogTextCarlDay0C:
 	dc.w	OBJ_NPC_CARL
+	dc.b	"Let's catch-up after",LF
+	dc.b	"close.",ETX
 	align 2
 ; PC on day0D
 DialogTextCarlDay0D:
@@ -562,6 +587,16 @@ DialogTextFrankDay07:
 ; hanging around the mall in the AM
 DialogTextFrankDay08:
 	dc.w	OBJ_NPC_FRANK
+	dc.b	"I visit all the malls",LF
+	dc.b	"in my district.^^",FF
+	dc.b	"This is definitely",LF
+	dc.b	"the smallest.^^",FF
+	dc.b	"Maybe it started as a",LF
+	dc.b	"bigger idea.^^",FF
+	dc.b	"And that was too much",LF
+	dc.b	"to finish.^^",FF
+	dc.b	"I hope it gets an",LF
+	dc.b	"expansion.",ETX
 	align 2
 ; not present
 DialogTextFrankDay09:
@@ -588,15 +623,35 @@ DialogTextCarolDay02:
 ; not present at night
 DialogTextCarolDay03:
 DialogTextCarolDay04:
+	dc.w	OBJ_NPC_CAROL
+	dc.b	"I've worked here a",LF
+	dc.b	"long time.^^",FF
+	dc.b	"But I only work",LF
+	dc.b	"seasonal jobs.^^",FF
+	dc.b	"I don't about the",LF
+	dc.b	"mall's history.",ETX
+	align 2
 ; not present at night
 DialogTextCarolDay05:
 DialogTextCarolDay06:
+	dc.w	OBJ_NPC_CAROL
+	dc.b	"Are you doing two",LF
+	dc.b	"jobs now?",ETX
+	align 2
 ; not present at night
 DialogTextCarolDay07:
 DialogTextCarolDay08:
+	dc.w	OBJ_NPC_CAROL
+	dc.b	"I thought we'd be",LF
+	dc.b	"busier today.",ETX
+	align 2
 ; not present at night
 DialogTextCarolDay09:
 DialogTextCarolDay0A:
+	dc.w	OBJ_NPC_CAROL
+	dc.b	"It's the last day",LF
+	dc.b	"we'll be here.",ETX
+	align 2
 ; not present at night
 DialogTextCarolDay0B:
 ; not present after 12/24
@@ -616,45 +671,53 @@ DialogTextLisaDay01:
 	align 2
 ; only dialog is in scripted events this day
 DialogTextLisaDay02:
-; 
 DialogTextLisaDay03:
 	dc.w	OBJ_NPC_LISA
+	dc.b	"I'm just waiting for",LF
+	dc.b	"Todd.",ETX
 	align 2
-; 
+; after story events
 DialogTextLisaDay04:
 	dc.w	OBJ_NPC_LISA
+	dc.b	"You can take off now.",ETX
 	align 2
-; 
 DialogTextLisaDay05:
 	dc.w	OBJ_NPC_LISA
+	dc.b	"Making the rounds",LF
+	dc.b	"again?",ETX
 	align 2
-; 
+; no default text - used in story events
 DialogTextLisaDay06:
-	dc.w	OBJ_NPC_LISA
-	align 2
-; 
 DialogTextLisaDay07:
 	dc.w	OBJ_NPC_LISA
+	dc.b	"You look really tired",LF
+	dc.b	"tonight.^^",FF
+	dc.b	"Oh, sorry for saying",LF
+	dc.b	"that.",ETX
 	align 2
-; 
 DialogTextLisaDay08:
 	dc.w	OBJ_NPC_LISA
+	dc.b	"Your shift is over.^",LF
+	dc.b	"Did you forget^",FF
+	dc.b	"something?",ETX
 	align 2
-; 
 DialogTextLisaDay09:
 	dc.w	OBJ_NPC_LISA
+	dc.b	"Was that your DM in",LF
+	dc.b	"the mall today?",ETX
 	align 2
-; 
+; only in story events this day
 DialogTextLisaDay0A:
-	dc.w	OBJ_NPC_LISA
-	align 2
-; 
 DialogTextLisaDay0B:
 	dc.w	OBJ_NPC_LISA
+	dc.b	"Hey Carl, Merry",LF
+	dc.b	"Xmas.^^",FF
+	dc.b	"Or I hope it is.",ETX
 	align 2
-; 
+; after intro event
 DialogTextLisaDay0C:
 	dc.w	OBJ_NPC_LISA
+	dc.b	"I guess this is it...",ETX
 	align 2
 ; trading sequence
 DialogTextLisaDay0D:
@@ -676,47 +739,65 @@ DialogTextGrunbergDay02:
 	dc.b	"Someone is worrying",LF
 	dc.b	"too much.",ETX
 	align 2
-; 
+; text after optional event
 DialogTextGrunbergDay03:
 	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"That was all so long",LF
+	dc.b	"ago.",ETX
 	align 2
-; 
+; after intro event
 DialogTextGrunbergDay04:
 	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"Sorry, can't be of",LF
+	dc.b	"more help.",ETX
 	align 2
-; 
+; text after optional event
 DialogTextGrunbergDay05:
 	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"Stop by anytime.",ETX
 	align 2
-; 
 DialogTextGrunbergDay06:
 	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"What errand are you",LF
+	dc.b	"on today?",ETX
 	align 2
-; 
 DialogTextGrunbergDay07:
 	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"You seem worn out",LF
+	dc.b	"tonight Carl.",ETX
 	align 2
-; 
 DialogTextGrunbergDay08:
 	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"Asking about D.B.?^",LF
+	dc.b	"He worked here last^",FF
+	dc.b	"year.^",LF
+	dc.b	"Good guy, a little^",FF
+	dc.b	"odd at times.",ETX
 	align 2
-; 
+; after optional event
 DialogTextGrunbergDay09:
 	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"I know you'll make",LF
+	dc.b	"the best choice.",ETX
 	align 2
-; 
 DialogTextGrunbergDay0A:
 	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"A lot of kids are",LF
+	dc.b	"getting new consoles^",FF
+	dc.b	"this year.",ETX
 	align 2
-; 
 DialogTextGrunbergDay0B:
 	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"Day after xmas will",LF
+	dc.b	"be our busiest of the^",FF
+	dc.b	"year.",ETX
 	align 2
 ; trading sequence
 DialogTextGrunbergDay0C:
-; 
 DialogTextGrunbergDay0D:
 	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"I hope you don't miss",LF
+	dc.b	"this place.",ETX
 	align 2
 DialogTextJenDay00:
 	dc.w	OBJ_NPC_JEN
@@ -737,107 +818,109 @@ DialogTextJenDay02:
 	dc.b	"Oh my, what is she",LF
 	dc.b	"looking for?",ETX
 	align 2
-; 
 DialogTextJenDay03:
 	dc.w	OBJ_NPC_JEN
+	dc.b	"You're looking for",LF
+	dc.b	"someone?^^",FF
+	dc.b	"Sorry, just me here",LF
+	dc.b	"tonight.",ETX
 	align 2
-; 
 DialogTextJenDay04:
 	dc.w	OBJ_NPC_JEN
+	dc.b	"That's an odd thing",LF
+	dc.b	"to ask about.",ETX
 	align 2
-; 
+; text after story event
 DialogTextJenDay05:
 	dc.w	OBJ_NPC_JEN
+	dc.b	"Stop by another night",LF
+	dc.b	"when you're free.",ETX
 	align 2
-; 
 DialogTextJenDay06:
 	dc.w	OBJ_NPC_JEN
+	dc.b	"What are you doing",LF
+	dc.b	"this time?",ETX
 	align 2
-; 
+; after story event
 DialogTextJenDay07:
 	dc.w	OBJ_NPC_JEN
+	dc.b	"Maybe some sleep",LF
+	dc.b	"would help.",ETX
 	align 2
-; 
+; only in story events this day
 DialogTextJenDay08:
-	dc.w	OBJ_NPC_JEN
-	align 2
-; 
+; after story event
 DialogTextJenDay09:
 	dc.w	OBJ_NPC_JEN
+	dc.b	"If you're so curious,",LF
+	dc.b	"go check it out.",ETX
 	align 2
-; 
 DialogTextJenDay0A:
 	dc.w	OBJ_NPC_JEN
+	dc.b	"A referral contest?",LF
+	dc.b	"Sounds fun.",ETX
 	align 2
-; 
 DialogTextJenDay0B:
 	dc.w	OBJ_NPC_JEN
+	dc.b	"You seem troubled",LF
+	dc.b	"tonight.^^",FF
+	dc.b	"I hope everything is",LF
+	dc.b	"OK.",ETX
 	align 2
-; 
+; only in story events this day
 DialogTextJenDay0C:
-	dc.w	OBJ_NPC_JEN
-	align 2
-; 
+; only in story events this day
 DialogTextJenDay0D:
-	dc.w	OBJ_NPC_JEN
-	align 2
 DialogTextGriffyDay00:
 	dc.w	OBJ_NPC_GRIFFY
 	dc.b	"Uh, I think we're,",LF
 	dc.b	"what's it called?^",FF
 	dc.b	"All out of that.",ETX
 	align 2
+; not present at night
 DialogTextGriffyDay01:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"(Not sure if he's",LF
-	dc.b	"awake)",ETX
-	align 2
 DialogTextGriffyDay02:
 	dc.w	OBJ_NPC_GRIFFY
 	dc.b	"Uh, what?",ETX
 	align 2
-; 
+; not present at night
 DialogTextGriffyDay03:
-	dc.w	OBJ_NPC_GRIFFY
-	align 2
-; 
 DialogTextGriffyDay04:
 	dc.w	OBJ_NPC_GRIFFY
+	dc.b	"I, uh, have only been",LF
+	dc.b	"here since..^^",FF
+	dc.b	"Wait, um, I don't",LF
+	dc.b	"know.",ETX
 	align 2
-; 
+; not present at night
 DialogTextGriffyDay05:
-	dc.w	OBJ_NPC_GRIFFY
-	align 2
-; 
+; after story events are done
 DialogTextGriffyDay06:
 	dc.w	OBJ_NPC_GRIFFY
+	dc.b	"Uh, who are you?",ETX
 	align 2
-; 
+; not present at night
 DialogTextGriffyDay07:
-	dc.w	OBJ_NPC_GRIFFY
-	align 2
-; 
 DialogTextGriffyDay08:
 	dc.w	OBJ_NPC_GRIFFY
+	dc.b	"Do you, uh, want like",LF
+	dc.b	"fries with that?^^",FF
+	dc.b	"Oh, wait. Yeah,",LF
+	dc.b	"right. Uh..^^",FF
+	dc.b	"We don't have fries.",ETX
 	align 2
-; 
+; not present at night
 DialogTextGriffyDay09:
-	dc.w	OBJ_NPC_GRIFFY
-	align 2
-; 
 DialogTextGriffyDay0A:
 	dc.w	OBJ_NPC_GRIFFY
+	dc.b	"Uh, happpy easter.",ETX
 	align 2
-; 
+; not present at night
 DialogTextGriffyDay0B:
-	dc.w	OBJ_NPC_GRIFFY
-	align 2
 ; trading sequence
 DialogTextGriffyDay0C:
-; 
+; not present at night
 DialogTextGriffyDay0D:
-	dc.w	OBJ_NPC_GRIFFY
-	align 2
 DialogTextScottDay00:
 	dc.w	OBJ_NPC_SCOTT
 	dc.b	"We still sell 8-track",LF
@@ -855,41 +938,57 @@ DialogTextScottDay02:
 	dc.b	"No, it's been normal",LF
 	dc.b	"here.",ETX
 	align 2
-; 
+; dialog after hidden event
 DialogTextScottDay03:
 	dc.w	OBJ_NPC_SCOTT
+	dc.b	"What was that about?",ETX
 	align 2
-; 
+; after story event
 DialogTextScottDay04:
 	dc.w	OBJ_NPC_SCOTT
+	dc.b	"I hope that info",LF
+	dc.b	"helped.",ETX
 	align 2
-; 
 DialogTextScottDay05:
 	dc.w	OBJ_NPC_SCOTT
+	dc.b	"Interested in a high",LF
+	dc.b	"speed casette dubbing^",FF
+	dc.b	"system?",ETX
 	align 2
-; 
 DialogTextScottDay06:
 	dc.w	OBJ_NPC_SCOTT
+	dc.b	"I know cable is",LF
+	dc.b	"popular, but I think^",FF
+	dc.b	"giant rooftop",LF
+	dc.b	"antennas will made a^",FF
+	dc.b	"comeback.",ETX
 	align 2
-; 
+; after story event
 DialogTextScottDay07:
 	dc.w	OBJ_NPC_SCOTT
+	dc.b	"That guy is a jerk.",ETX
 	align 2
-; 
 DialogTextScottDay08:
 	dc.w	OBJ_NPC_SCOTT
+	dc.b	"You look like someone",LF
+	dc.b	"who would use a^",FF
+	dc.b	"hi-gain signal amp.",ETX
 	align 2
 ; trading sequence
 DialogTextScottDay09:
-; 
 DialogTextScottDay0A:
 	dc.w	OBJ_NPC_SCOTT
+	dc.b	"A 40 function",LF
+	dc.b	"scientific calculator^",FF
+	dc.b	"makes a great last",LF
+	dc.b	"minute gift.",ETX
 	align 2
 ; trading sequence
 DialogTextScottDay0B:
-; 
 DialogTextScottDay0C:
 	dc.w	OBJ_NPC_SCOTT
+	dc.b	"We ran out of",LF
+	dc.b	"batteries by 9:01.",ETX
 	align 2
 ; trading sequence
 DialogTextScottDay0D:
@@ -911,37 +1010,57 @@ DialogTextToddDay02:
 	dc.b	"last night.^^",FF
 	dc.b	"Wish I could help.",ETX
 	align 2
-; 
 DialogTextToddDay03:
 	dc.w	OBJ_NPC_TODD
+	dc.b	"I didn't see anyone",LF
+	dc.b	"like that.^^",FF
+	dc.b	"I doubt he would shop",LF
+	dc.b	"here.",ETX
 	align 2
-; 
 DialogTextToddDay04:
 	dc.w	OBJ_NPC_TODD
+	dc.b	"I haven't been here",LF
+	dc.b	"that long.^^",FF
+	dc.b	"It's only been.. 4",LF
+	dc.b	"years.^^",FF
+	dc.b	"Really, 4 years",LF
+	dc.b	"already?^^",FF
+	dc.b	"Sorry, I can't help",LF
+	dc.b	"you.",ETX
 	align 2
 ; trading sequence
 DialogTextToddDay05:
-; 
+; after story event
 DialogTextToddDay06:
 	dc.w	OBJ_NPC_TODD
+	dc.b	"I hope you're getting",LF
+	dc.b	"paid extra.",ETX
 	align 2
 ; trading sequence
 DialogTextToddDay07:
-; 
 DialogTextToddDay08:
 	dc.w	OBJ_NPC_TODD
+	dc.b	"I tried talking Lisa",LF
+	dc.b	"down, no luck.^^",FF
+	dc.b	"She is really worked",LF
+	dc.b	"up about something.",ETX
 	align 2
 ; trading sequence
 DialogTextToddDay09:
-; 
 DialogTextToddDay0A:
 	dc.w	OBJ_NPC_TODD
+	dc.b	"Is your store busy",LF
+	dc.b	"today?^^",FF
+	dc.b	"We're doing alright.",ETX
 	align 2
 ; trading sequence
 DialogTextToddDay0B:
-; 
 DialogTextToddDay0C:
 	dc.w	OBJ_NPC_TODD
+	dc.b	"Only hours until my",LF
+	dc.b	"new year party.^^",FF
+	dc.b	"I think this will be",LF
+	dc.b	"the best.",ETX
 	align 2
 ; trading sequence
 DialogTextToddDay0D:
@@ -964,41 +1083,55 @@ DialogTextElizaDay02:
 	dc.b	"That's all I have for",LF
 	dc.b	"you.",ETX
 	align 2
-; 
 DialogTextElizaDay03:
 	dc.w	OBJ_NPC_ELIZA
+	dc.b	"Looking for someone",LF
+	dc.b	"else?^^",FF
+	dc.b	"I see how it is with",LF
+	dc.b	"you.",ETX
 	align 2
-; 
 DialogTextElizaDay04:
 	dc.w	OBJ_NPC_ELIZA
+	dc.b	"This is just my",LF
+	dc.b	"second year here.^^",FF
+	dc.b	"I hope it's the last.",ETX
 	align 2
-; 
+; after optional event
 DialogTextElizaDay05:
 	dc.w	OBJ_NPC_ELIZA
+	dc.b	"I don't think that",LF
+	dc.b	"quiz worked.",ETX
 	align 2
 ; trading sequence
 DialogTextElizaDay06:
-; 
+; after optional event
 DialogTextElizaDay07:
 	dc.w	OBJ_NPC_ELIZA
+	dc.b	"The good times never",LF
+	dc.b	"last forever.",ETX
 	align 2
 ; trading sequence
 DialogTextElizaDay08:
-; 
 DialogTextElizaDay09:
 	dc.w	OBJ_NPC_ELIZA
+	dc.b	"Looking for someone?",ETX
 	align 2
 ; trading sequence
 DialogTextElizaDay0A:
-; 
+; after optional event
 DialogTextElizaDay0B:
 	dc.w	OBJ_NPC_ELIZA
+	dc.b	"You can still change",LF
+	dc.b	"your mind.",ETX
 	align 2
 ; trading sequence
 DialogTextElizaDay0C:
-; 
 DialogTextElizaDay0D:
 	dc.w	OBJ_NPC_ELIZA
+	dc.b	"You're too normal for",LF
+	dc.b	"your own good.^^",FF
+	dc.b	"Stop by if you're in",LF
+	dc.b	"town again.",ETX
 	align 2
 DialogTextBeckyDay00:
 	dc.w	OBJ_NPC_BECKY
@@ -1013,41 +1146,50 @@ DialogTextBeckyDay02:
 	dc.b	"Anything weird? Not",LF
 	dc.b	"at all!",ETX
 	align 2
-; 
 DialogTextBeckyDay03:
 	dc.w	OBJ_NPC_BECKY
+	dc.b	"It's taking forever",LF
+	dc.b	"to clean up tonight.",ETX
 	align 2
-; 
 DialogTextBeckyDay04:
 	dc.w	OBJ_NPC_BECKY
+	dc.b	"I just started last",LF
+	dc.b	"year.^^",FF
+	dc.b	"Thanks for asking!",ETX
 	align 2
-; 
 DialogTextBeckyDay05:
 	dc.w	OBJ_NPC_BECKY
+	dc.b	"What is that guy's",LF
+	dc.b	"deal?!",ETX
 	align 2
-; 
 DialogTextBeckyDay06:
 	dc.w	OBJ_NPC_BECKY
+	dc.b	"Thanks again!",ETX
 	align 2
-; 
+; after story event
 DialogTextBeckyDay07:
 	dc.w	OBJ_NPC_BECKY
+	dc.b	"It can get scary here",LF
+	dc.b	"after close.",ETX
 	align 2
-; 
 DialogTextBeckyDay08:
 	dc.w	OBJ_NPC_BECKY
+	dc.b	"I hope my old van",LF
+	dc.b	"starts tonight.",ETX
 	align 2
 ; trading sequence
 DialogTextBeckyDay09:
-; 
 DialogTextBeckyDay0A:
 	dc.w	OBJ_NPC_BECKY
+	dc.b	"Looking for a late",LF
+	dc.b	"gift?",ETX
 	align 2
 ; trading sequence
 DialogTextBeckyDay0B:
-; 
 DialogTextBeckyDay0C:
 	dc.w	OBJ_NPC_BECKY
+	dc.b	"I can't believe it's",LF
+	dc.b	"the end of 1990!",ETX
 	align 2
 ; trading sequence
 DialogTextBeckyDay0D:
@@ -1071,21 +1213,31 @@ DialogTextCharlesDay07:
 DialogTextCharlesDay08:
 ; not present until day0A
 DialogTextCharlesDay09:
-; 
 DialogTextCharlesDay0A:
 	dc.w	OBJ_NPC_CHARLES
+	dc.b	"This place hasn't",LF
+	dc.b	"changed much.",ETX
 	align 2
-; 
 DialogTextCharlesDay0B:
 	dc.w	OBJ_NPC_CHARLES
+	dc.b	"Last year was",LF
+	dc.b	"something.^^",FF
+	dc.b	"I only heard about it",LF
+	dc.b	"though.",ETX
 	align 2
-; 
 DialogTextCharlesDay0C:
 	dc.w	OBJ_NPC_CHARLES
+	dc.b	"I hope D.B. is",LF
+	dc.b	"opening the arcade^",FF
+	dc.b	"tonight.",ETX
 	align 2
-; 
+; at the arcade
 DialogTextCharlesDay0D:
 	dc.w	OBJ_NPC_CHARLES
+	dc.b	"Hey, great job with",LF
+	dc.b	"the store.^^",FF
+	dc.b	"I miss it, just a",LF
+	dc.b	"little, sometimes.",ETX
 	align 2
 DialogTextRandyDay00:
 	dc.w	OBJ_NPC_RANDY
@@ -1106,33 +1258,40 @@ DialogTextRandyDay02:
 	align 2
 ; trading sequence
 DialogTextRandyDay03:
-; 
 DialogTextRandyDay04:
 	dc.w	OBJ_NPC_RANDY
+	dc.b	"Our store opened last",LF
+	dc.b	"year.^^",FF
+	dc.b	"I can't imagine any",LF
+	dc.b	"of us can help.",ETX
 	align 2
 ; trading sequence
 DialogTextRandyDay05:
-; 
 DialogTextRandyDay06:
 	dc.w	OBJ_NPC_RANDY
+	dc.b	"Working two jobs now?",ETX
 	align 2
 ; trading sequence
 DialogTextRandyDay07:
-; 
 DialogTextRandyDay08:
 	dc.w	OBJ_NPC_RANDY
+	dc.b	"I can't until it's",LF
+	dc.b	"slow again,^^",FF
+	dc.b	"and I can get back to",LF
+	dc.b	"my hobby.",ETX
 	align 2
 ; trading sequence
 DialogTextRandyDay09:
-; 
 DialogTextRandyDay0A:
 	dc.w	OBJ_NPC_RANDY
+	dc.b	"So many last minute",LF
+	dc.b	"shoppers.",ETX
 	align 2
 ; trading sequence
 DialogTextRandyDay0B:
-; 
 DialogTextRandyDay0C:
 	dc.w	OBJ_NPC_RANDY
+	dc.b	"Nice save last week.",ETX
 	align 2
 ; trading sequence
 DialogTextRandyDay0D:
@@ -1149,35 +1308,52 @@ DialogTextDBDay02:
 	dc.w	OBJ_NPC_DB
 	dc.b	"Thanks for the help.",ETX
 	align 2
-; not present this night
+; dialog after story event
 DialogTextDBDay03:
-; 
+	dc.w	OBJ_NPC_DB
+	dc.b	"Please leave me out",LF
+	dc.b	"of this.",ETX
+	align 2
 DialogTextDBDay04:
 	dc.w	OBJ_NPC_DB
+	dc.b	"This is just a",LF
+	dc.b	"regular mall.^^",FF
+	dc.b	"I wouldn't poke",LF
+	dc.b	"around too much.",ETX
 	align 2
 ; not present this night
 DialogTextDBDay05:
-; 
+; after optional event
 DialogTextDBDay06:
 	dc.w	OBJ_NPC_DB
+	dc.b	"It's tricky to figure",LF
+	dc.b	"out the right combo.",ETX
 	align 2
 ; not present this night
 DialogTextDBDay07:
-; 
+; after story event
 DialogTextDBDay08:
 	dc.w	OBJ_NPC_DB
+	dc.b	"Just another regular",LF
+	dc.b	"day here.",ETX
 	align 2
 ; not present this night
 DialogTextDBDay09:
-; 
+; after optional event
 DialogTextDBDay0A:
 	dc.w	OBJ_NPC_DB
+	dc.b	"It was worth a try.",ETX
 	align 2
-; not present this night
+; after story event
 DialogTextDBDay0B:
-; 
+	dc.w	OBJ_NPC_DB
+	dc.b	"Fine, go ahead and",LF
+	dc.b	"look.",ETX
+	align 2
 DialogTextDBDay0C:
 	dc.w	OBJ_NPC_DB
+	dc.b	"Good luck with",LF
+	dc.b	"whatever's next.",ETX
 	align 2
 ; trading sequence
 DialogTextDBDay0D:
@@ -1201,21 +1377,24 @@ DialogTextDaniDay07:
 DialogTextDaniDay08:
 ; not present until day0A
 DialogTextDaniDay09:
-; 
 DialogTextDaniDay0A:
 	dc.w	OBJ_NPC_DANI
+	dc.b	"Slacking on your job",LF
+	dc.b	"I see.",ETX
 	align 2
-; 
+; only in story events this day
 DialogTextDaniDay0B:
-	dc.w	OBJ_NPC_DANI
-	align 2
-; 
 DialogTextDaniDay0C:
 	dc.w	OBJ_NPC_DANI
+	dc.b	"Last day already?^",LF
+	dc.b	"Not a bad idea to^",FF
+	dc.b	"move on.",ETX
 	align 2
-; 
+; at the arcade
 DialogTextDaniDay0D:
 	dc.w	OBJ_NPC_DANI
+	dc.b	"Some things don't",LF
+	dc.b	"change.",ETX
 	align 2
 DialogTextGuardDay00:
 	dc.w	OBJ_NPC_GUARD
@@ -1234,49 +1413,65 @@ DialogTextGuardDay02:
 	dc.b	"private mall security^",FF
 	dc.b	"info.",ETX
 	align 2
-; 
 DialogTextGuardDay03:
 	dc.w	OBJ_NPC_GUARD
+	dc.b	"Let me know if you",LF
+	dc.b	"find him.",ETX
 	align 2
-; in ewhall this day
 DialogTextGuardDay04:
 	dc.w	OBJ_NPC_GUARD
+	dc.b	"Mall history? I'm",LF
+	dc.b	"just the guard.",ETX
 	align 2
-; 
 DialogTextGuardDay05:
 	dc.w	OBJ_NPC_GUARD
+	dc.b	"I haven't seen that",LF
+	dc.b	"guy today.",ETX
 	align 2
-; in wwhall this day
 DialogTextGuardDay06:
 	dc.w	OBJ_NPC_GUARD
+	dc.b	"Move along.",ETX
 	align 2
-; 
 DialogTextGuardDay07:
 	dc.w	OBJ_NPC_GUARD
+	dc.b	"See anything",LF
+	dc.b	"suspicious?",ETX
 	align 2
-; in the center this day
 DialogTextGuardDay08:
 	dc.w	OBJ_NPC_GUARD
+	dc.b	"Did you see some",LF
+	dc.b	"shaggy guy go by?",ETX
 	align 2
-; 
 DialogTextGuardDay09:
 	dc.w	OBJ_NPC_GUARD
+	dc.b	"Too many people",LF
+	dc.b	"around this late.^^",FF
+	dc.b	"Go home already all",LF
+	dc.b	"of you.",ETX
 	align 2
-; in wwhall this day
 DialogTextGuardDay0A:
 	dc.w	OBJ_NPC_GUARD
+	dc.b	"So many people to",LF
+	dc.b	"watch today",ETX
 	align 2
-; 
 DialogTextGuardDay0B:
 	dc.w	OBJ_NPC_GUARD
+	dc.b	"This better not be",LF
+	dc.b	"like last year.",ETX
 	align 2
-; in eehall this day
 DialogTextGuardDay0C:
 	dc.w	OBJ_NPC_GUARD
+	dc.b	"Made it through the",LF
+	dc.b	"year without any^",FF
+	dc.b	"trouble.",ETX
 	align 2
-; 
 DialogTextGuardDay0D:
 	dc.w	OBJ_NPC_GUARD
+	dc.b	"You all need to move",LF
+	dc.b	"on.^^",FF
+	dc.b	"I have plans",LF
+	dc.b	"tonight.^^",FF
+	dc.b	"No, really, I do.",ETX
 	align 2
 ; loitering in the tv section
 DialogTextBillyDay00:
@@ -1351,15 +1546,19 @@ DialogTextAlDay08:
 DialogTextAlDay09:
 ; not present until day0B
 DialogTextAlDay0A:
-; 
+; after story event
 DialogTextAlDay0B:
 	dc.w	OBJ_NPC_AL
+	dc.b	"You don't understand",LF
+	dc.b	"how important this^",FF
+	dc.b	"work is.",ETX
 	align 2
 ; eryn never visits the basement
 DialogTextAlDay0C:
-; 
 DialogTextAlDay0D:
 	dc.w	OBJ_NPC_AL
+	dc.b	"We have big plans for",LF
+	dc.b	"1991.",ETX
 	align 2
 DialogTextThomasDay00:
 	dc.w	OBJ_NPC_THOMAS
@@ -1374,46 +1573,61 @@ DialogTextThomasDay01:
 ; Why are you asking me this?
 DialogTextThomasDay02:
 	dc.w	OBJ_NPC_THOMAS
+	dc.b	"What do you want?^",LF
+	dc.b	"Can't you see I'm^",FF
+	dc.b	"busy.",ETX
 	align 2
-; 
 DialogTextThomasDay03:
 	dc.w	OBJ_NPC_THOMAS
+	dc.b	"I don't care who",LF
+	dc.b	"you're looking for.^^",FF
+	dc.b	"They're not here.",ETX
 	align 2
-; 
 DialogTextThomasDay04:
 	dc.w	OBJ_NPC_THOMAS
+	dc.b	"How old do you think",LF
+	dc.b	"I am?",ETX
 	align 2
-; 
 DialogTextThomasDay05:
 	dc.w	OBJ_NPC_THOMAS
+	dc.b	"Why are you here",LF
+	dc.b	"after close?^^",FF
+	dc.b	"I have to wait until",LF
+	dc.b	"everyone is gone.",ETX
 	align 2
-; 
 DialogTextThomasDay06:
 	dc.w	OBJ_NPC_THOMAS
+	dc.b	"Are you bringing me",LF
+	dc.b	"anything?",ETX
 	align 2
-; 
 DialogTextThomasDay07:
 	dc.w	OBJ_NPC_THOMAS
+	dc.b	"You don't get it,",LF
+	dc.b	"we're closed.",ETX
 	align 2
-; 
 DialogTextThomasDay08:
 	dc.w	OBJ_NPC_THOMAS
+	dc.b	"Are you here to shop",LF
+	dc.b	"or annoy me?",ETX
 	align 2
-; 
 DialogTextThomasDay09:
 	dc.w	OBJ_NPC_THOMAS
+	dc.b	"Please stop coming",LF
+	dc.b	"here at night.",ETX
 	align 2
 ; trading sequence
 DialogTextThomasDay0A:
-; 
 DialogTextThomasDay0B:
 	dc.w	OBJ_NPC_THOMAS
+	dc.b	"It's taking them",LF
+	dc.b	"forever to close.",ETX
 	align 2
 ; trading sequence
 DialogTextThomasDay0C:
-; 
 DialogTextThomasDay0D:
 	dc.w	OBJ_NPC_THOMAS
+	dc.b	"Finally, another year",LF
+	dc.b	"gone.",ETX
 	align 2
 DialogTextHeatherDay00:
 	dc.w	OBJ_NPC_HEATHER
@@ -1470,15 +1684,18 @@ DialogTextGaryDay08:
 DialogTextGaryDay09:
 ; not present until day0B
 DialogTextGaryDay0A:
-; 
+; after story event
 DialogTextGaryDay0B:
 	dc.w	OBJ_NPC_GARY
+	dc.b	"Please, I'm trying to",LF
+	dc.b	"work.",ETX
 	align 2
 ; eryn never visits the basement
 DialogTextGaryDay0C:
-; 
 DialogTextGaryDay0D:
 	dc.w	OBJ_NPC_GARY
+	dc.b	"I don't have time for",LF
+	dc.b	"you.",ETX
 	align 2
 DialogTextGrantDay00:
 	dc.w	OBJ_NPC_GRANT
@@ -1498,43 +1715,61 @@ DialogTextGrantDay02:
 	dc.w	OBJ_NPC_GRANT
 	dc.b	"Stop by another time.",ETX
 	align 2
-; 
 DialogTextGrantDay03:
 	dc.w	OBJ_NPC_GRANT
+	dc.b	"No, nobody came by",LF
+	dc.b	"here.",ETX
 	align 2
-; 
+; after optional event
 DialogTextGrantDay04:
 	dc.w	OBJ_NPC_GRANT
+	dc.b	"Even when things go",LF
+	dc.b	"wrong,^^",FF
+	dc.b	"you can have fun with",LF
+	dc.b	"your friends.",ETX
 	align 2
-; 
+; text after story event
 DialogTextGrantDay05:
 	dc.w	OBJ_NPC_GRANT
+	dc.b	"No one is living here",LF
+	dc.b	"this year.",ETX
 	align 2
-; 
 DialogTextGrantDay06:
 	dc.w	OBJ_NPC_GRANT
+	dc.b	"Nice of you to say",LF
+	dc.b	"hello.",ETX
 	align 2
-; 
 DialogTextGrantDay07:
 	dc.w	OBJ_NPC_GRANT
+	dc.b	"Is everything OK?^",LF
+	dc.b	"You seem a little off.",ETX
 	align 2
-; 
+; after optional event
 DialogTextGrantDay08:
 	dc.w	OBJ_NPC_GRANT
+	dc.b	"It's a miracle we",LF
+	dc.b	"didn't get lost.",ETX
 	align 2
-; 
 DialogTextGrantDay09:
 	dc.w	OBJ_NPC_GRANT
+	dc.b	"I know, those tents",LF
+	dc.b	"look cozy.^^",FF
+	dc.b	"They're meant for",LF
+	dc.b	"outdoors though.^^",FF
+	dc.b	"Camping inside, who'd",LF
+	dc.b	"do that?",ETX
 	align 2
-; 
+; after optional event
 DialogTextGrantDay0A:
 	dc.w	OBJ_NPC_GRANT
+	dc.b	"I hope that didn't",LF
+	dc.b	"bore you.",ETX
 	align 2
 ; trading sequence
 DialogTextGrantDay0B:
-; 
 DialogTextGrantDay0C:
 	dc.w	OBJ_NPC_GRANT
+	dc.b	"Safe travels.",ETX
 	align 2
 ; trading sequence
 DialogTextGrantDay0D:
@@ -1560,15 +1795,18 @@ DialogTextBrettDay08:
 DialogTextBrettDay09:
 ; no dialog until day0B
 DialogTextBrettDay0A:
-; 
+; after story event
 DialogTextBrettDay0B:
 	dc.w	OBJ_NPC_BRETT
+	dc.b	"Your not going to",LF
+	dc.b	"bust me right?",ETX
 	align 2
 ; eryn never interacts with brett
 DialogTextBrettDay0C:
-; 
 DialogTextBrettDay0D:
 	dc.w	OBJ_NPC_BRETT
+	dc.b	"Oh, and thanks for",LF
+	dc.b	"not turning me in.",ETX
 	align 2
 ; dialog after optional event
 DialogTextNickyDay00:
@@ -1580,7 +1818,9 @@ DialogTextNickyDay00:
 DialogTextNickyDay01:
 	dc.w	OBJ_NPC_NICKY
 	dc.b	"Thanks for delivering",LF
-	dc.b	"my order.",ETX
+	dc.b	"my order.^^",FF
+	dc.b	"Now I have something",LF
+	dc.b	"to do at night.",ETX
 	align 2
 DialogTextNickyDay02:
 	dc.w	OBJ_NPC_NICKY
@@ -1589,50 +1829,45 @@ DialogTextNickyDay02:
 	dc.b	"I don't know what's",LF
 	dc.b	"even normal.",ETX
 	align 2
-; 
+; not present at night
 DialogTextNickyDay03:
-	dc.w	OBJ_NPC_NICKY
-	align 2
-; 
+; after optional event
 DialogTextNickyDay04:
 	dc.w	OBJ_NPC_NICKY
+	dc.b	"Maybe I should bring",LF
+	dc.b	"a lunch.",ETX
 	align 2
-; 
+; not present at night
 DialogTextNickyDay05:
-	dc.w	OBJ_NPC_NICKY
-	align 2
-; 
+; after optional event
 DialogTextNickyDay06:
 	dc.w	OBJ_NPC_NICKY
+	dc.b	"That was so easy",LF
+	dc.b	"afterall.",ETX
 	align 2
-; 
+; not present at night
 DialogTextNickyDay07:
-	dc.w	OBJ_NPC_NICKY
-	align 2
-; 
+; after optional event
 DialogTextNickyDay08:
 	dc.w	OBJ_NPC_NICKY
+	dc.b	"Thanks, I thought",LF
+	dc.b	"he'd never leave.",ETX
 	align 2
-; 
+; not present at night
 DialogTextNickyDay09:
-	dc.w	OBJ_NPC_NICKY
-	align 2
-; 
 DialogTextNickyDay0A:
 	dc.w	OBJ_NPC_NICKY
+	dc.b	"A contest? Sounds fun.",ETX
 	align 2
-; 
+; not present at night
 DialogTextNickyDay0B:
-	dc.w	OBJ_NPC_NICKY
-	align 2
-; 
 DialogTextNickyDay0C:
 	dc.w	OBJ_NPC_NICKY
+	dc.b	"So sad you're",LF
+	dc.b	"leaving. Take care.",ETX
 	align 2
-; 
+; not present at night
 DialogTextNickyDay0D:
-	dc.w	OBJ_NPC_NICKY
-	align 2
 DialogTextTanyaDay00:
 	dc.w	OBJ_NPC_TANYA
 	dc.b	"It was busy this",LF
@@ -1648,45 +1883,56 @@ DialogTextTanyaDay02:
 	dc.b	"I haven't seen",LF
 	dc.b	"anything unusual.",ETX
 	align 2
-; 
 DialogTextTanyaDay03:
 	dc.w	OBJ_NPC_TANYA
+	dc.b	"I didn't let anyone",LF
+	dc.b	"in after close.",ETX
 	align 2
-; 
 DialogTextTanyaDay04:
 	dc.w	OBJ_NPC_TANYA
+	dc.b	"We just opened.^",LF
+	dc.b	"I don't anything^",FF
+	dc.b	"before that.",ETX
 	align 2
-; 
 DialogTextTanyaDay05:
 	dc.w	OBJ_NPC_TANYA
+	dc.b	"Closing always takes",LF
+	dc.b	"forever.",ETX
 	align 2
-; 
 DialogTextTanyaDay06:
 	dc.w	OBJ_NPC_TANYA
+	dc.b	"I wish we had smarter",LF
+	dc.b	"customers.",ETX
 	align 2
-; 
 DialogTextTanyaDay07:
 	dc.w	OBJ_NPC_TANYA
+	dc.b	"Is something wrong?^",LF
+	dc.b	"You look flustered^",FF
+	dc.b	"tonight.",ETX
 	align 2
-; 
 DialogTextTanyaDay08:
 	dc.w	OBJ_NPC_TANYA
+	dc.b	"Busy days just fly by",LF
+	dc.b	"here.",ETX
 	align 2
-; 
 DialogTextTanyaDay09:
 	dc.w	OBJ_NPC_TANYA
+	dc.b	"Almost done closing",LF
+	dc.b	"now.",ETX
 	align 2
 ; trading sequence
 DialogTextTanyaDay0A:
-; 
 DialogTextTanyaDay0B:
 	dc.w	OBJ_NPC_TANYA
+	dc.b	"These registers are",LF
+	dc.b	"so slow.",ETX
 	align 2
 ; trading sequence
 DialogTextTanyaDay0C:
-; 
 DialogTextTanyaDay0D:
 	dc.w	OBJ_NPC_TANYA
+	dc.b	"Bye Carl, it was nice",LF
+	dc.b	"to meet you.",ETX
 	align 2
 DialogTextCraigDay00:
 	dc.w	OBJ_NPC_CRAIG
@@ -1700,39 +1946,45 @@ DialogTextCraigDay02:
 	dc.b	"I barely see anything",LF
 	dc.b	"back here.",ETX
 	align 2
-; 
 DialogTextCraigDay03:
 	dc.w	OBJ_NPC_CRAIG
+	dc.b	"I'm trying to finish",LF
+	dc.b	"cleaning. Sorry.",ETX
 	align 2
-; 
 DialogTextCraigDay04:
 	dc.w	OBJ_NPC_CRAIG
+	dc.b	"I'm barely old enough",LF
+	dc.b	"to work.",ETX
 	align 2
-; 
 DialogTextCraigDay05:
 	dc.w	OBJ_NPC_CRAIG
+	dc.b	"I still have a lot to",LF
+	dc.b	"do.",ETX
 	align 2
-; 
 DialogTextCraigDay06:
 	dc.w	OBJ_NPC_CRAIG
+	dc.b	"You didn't bring me",LF
+	dc.b	"anything?",ETX
 	align 2
 ; trading sequence
 DialogTextCraigDay07:
-; 
 DialogTextCraigDay08:
 	dc.w	OBJ_NPC_CRAIG
+	dc.b	"It's too busy today.",ETX
 	align 2
 ; trading sequence
 DialogTextCraigDay09:
-; 
 DialogTextCraigDay0A:
 	dc.w	OBJ_NPC_CRAIG
+	dc.b	"I'm getting stressed",LF
+	dc.b	"out today.",ETX
 	align 2
 ; trading sequence
 DialogTextCraigDay0B:
-; 
 DialogTextCraigDay0C:
 	dc.w	OBJ_NPC_CRAIG
+	dc.b	"This is your last",LF
+	dc.b	"day?^|Mine too.",ETX
 	align 2
 ; trading sequence
 DialogTextCraigDay0D:
@@ -1750,15 +2002,22 @@ DialogTextJuanDay02:
 	align 2
 ; not present at night
 DialogTextJuanDay03:
-; 
 DialogTextJuanDay04:
 	dc.w	OBJ_NPC_JUAN
+	dc.b	"We came to this mall",LF
+	dc.b	"all the time.^^",FF
+	dc.b	"They had Santa back",LF
+	dc.b	"here last year.^^",FF
+	dc.b	"Before that it was a",LF
+	dc.b	"dept store.",ETX
 	align 2
 ; not present at night
 DialogTextJuanDay05:
-; 
 DialogTextJuanDay06:
 	dc.w	OBJ_NPC_JUAN
+	dc.b	"Is it just me, or are",LF
+	dc.b	"some of the shoppers^",FF
+	dc.b	"not very bright?",ETX
 	align 2
 ; not present at night
 DialogTextJuanDay07:
@@ -1772,8 +2031,12 @@ DialogTextJuanDay0A:
 DialogTextJuanDay0B:
 ; trading sequence
 DialogTextJuanDay0C:
-; not present at night
+; at the arcade
 DialogTextJuanDay0D:
+	dc.w	OBJ_NPC_JUAN
+	dc.b	"This is the best new",LF
+	dc.b	"year idea ever.",ETX
+	align 2
 DialogTextLauraDay00:
 	dc.w	OBJ_NPC_LAURA
 	dc.b	"Most people just like",LF
@@ -1786,39 +2049,49 @@ DialogTextLauraDay01:
 	align 2
 ; trading sequence
 DialogTextLauraDay02:
-; 
+; dialog after optional event
 DialogTextLauraDay03:
 	dc.w	OBJ_NPC_LAURA
+	dc.b	"Thanks for the help.",ETX
 	align 2
 ; trading sequence
 DialogTextLauraDay04:
-; 
 DialogTextLauraDay05:
 	dc.w	OBJ_NPC_LAURA
+	dc.b	"Thanks for stopping",LF
+	dc.b	"by.^^",FF
+	dc.b	"Everything is good",LF
+	dc.b	"here tonight.",ETX
 	align 2
 ; trading sequence
 DialogTextLauraDay06:
-; 
+; after optional event
 DialogTextLauraDay07:
 	dc.w	OBJ_NPC_LAURA
+	dc.b	"I'm glad someone",LF
+	dc.b	"figured it out.",ETX
 	align 2
 ; trading sequence
 DialogTextLauraDay08:
-; 
+; after optional event
 DialogTextLauraDay09:
 	dc.w	OBJ_NPC_LAURA
+	dc.b	"I still like this one.",ETX
 	align 2
 ; trading sequence
 DialogTextLauraDay0A:
-; 
+; after optional event
 DialogTextLauraDay0B:
 	dc.w	OBJ_NPC_LAURA
+	dc.b	"I hope you have a",LF
+	dc.b	"good xmas.",ETX
 	align 2
 ; trading sequence
 DialogTextLauraDay0C:
-; 
 DialogTextLauraDay0D:
 	dc.w	OBJ_NPC_LAURA
+	dc.b	"Maybe I'll make it",LF
+	dc.b	"out to your mall.",ETX
 	align 2
 ; text after story event
 DialogTextGinaDay00:
@@ -1836,33 +2109,40 @@ DialogTextGinaDay02:
 	align 2
 ; not present at night
 DialogTextGinaDay03:
-; 
 DialogTextGinaDay04:
 	dc.w	OBJ_NPC_GINA
+	dc.b	"This is my first year",LF
+	dc.b	"here.",ETX
 	align 2
 ; not present at night
 DialogTextGinaDay05:
-; 
 DialogTextGinaDay06:
 	dc.w	OBJ_NPC_GINA
+	dc.b	"Did you find a trade",LF
+	dc.b	"for that scarf?",ETX
 	align 2
 ; not present at night
 DialogTextGinaDay07:
-; 
 DialogTextGinaDay08:
 	dc.w	OBJ_NPC_GINA
 	align 2
 ; not present at night
 DialogTextGinaDay09:
-; 
 DialogTextGinaDay0A:
 	dc.w	OBJ_NPC_GINA
+	dc.b	"Last year the info",LF
+	dc.b	"desk is where Santa^",FF
+	dc.b	"is.^",LF
+	dc.b	"Was that a better^",FF
+	dc.b	"spot I wonder?",ETX
 	align 2
 ; not present at night
 DialogTextGinaDay0B:
-; 
 DialogTextGinaDay0C:
 	dc.w	OBJ_NPC_GINA
+	dc.b	"There are some",LF
+	dc.b	"exciting changes^",FF
+	dc.b	"planned for next year.",ETX
 	align 2
 ; not present at night
 DialogTextGinaDay0D:
@@ -1882,6 +2162,10 @@ DialogTextSantaDay02:
 DialogTextSantaDay03:
 DialogTextSantaDay04:
 	dc.w	OBJ_NPC_SANTA
+	dc.b	"It's a different",LF
+	dc.b	"Santa every year.^^",FF
+	dc.b	"Don't tell the kids",LF
+	dc.b	"though.",ETX
 	align 2
 ; not present at night
 DialogTextSantaDay05:
@@ -1922,30 +2206,40 @@ DialogTextLostGuyDay03:
 ; in pogodawg this day
 DialogTextLostGuyDay04:
 	dc.w	OBJ_NPC_LOSTGUY
+	dc.b	"I hope they have",LF
+	dc.b	"pizza slices.",ETX
 	align 2
 ; not present at night
 DialogTextLostGuyDay05:
 ; in the appliances section this day
 DialogTextLostGuyDay06:
 	dc.w	OBJ_NPC_LOSTGUY
+	dc.b	"Will this fit in my",LF
+	dc.b	"kitchen?",ETX
 	align 2
 ; not present at night
 DialogTextLostGuyDay07:
 ; at wwcheckout this day
 DialogTextLostGuyDay08:
 	dc.w	OBJ_NPC_LOSTGUY
+	dc.b	"Why don't they sell",LF
+	dc.b	"wires here.",ETX
 	align 2
 ; not present at night
 DialogTextLostGuyDay09:
 ; at checkers this day
 DialogTextLostGuyDay0A:
 	dc.w	OBJ_NPC_LOSTGUY
+	dc.b	"Where's the girl from",LF
+	dc.b	"last year?",ETX
 	align 2
 ; not present at night
 DialogTextLostGuyDay0B:
 ; in the audio section this day
 DialogTextLostGuyDay0C:
 	dc.w	OBJ_NPC_LOSTGUY
+	dc.b	"These are all too",LF
+	dc.b	"loud.",ETX
 	align 2
 ; not present at night
 DialogTextLostGuyDay0D:
@@ -1964,30 +2258,42 @@ DialogTextRockerDay03:
 ; at the cavern this day
 DialogTextRockerDay04:
 	dc.w	OBJ_NPC_ROCKER
+	dc.b	"I'm going to finally",LF
+	dc.b	"win this.",ETX
 	align 2
 ; not present at night
 DialogTextRockerDay05:
 ; at tlodge this day
 DialogTextRockerDay06:
 	dc.w	OBJ_NPC_ROCKER
+	dc.b	"They have everything",LF
+	dc.b	"here.",ETX
 	align 2
 ; not present at night
 DialogTextRockerDay07:
 ; at VB this day
 DialogTextRockerDay08:
 	dc.w	OBJ_NPC_ROCKER
+	dc.b	"These home versions",LF
+	dc.b	"look great.",ETX
 	align 2
 ; not present at night
 DialogTextRockerDay09:
 ; at pogodawg this day
 DialogTextRockerDay0A:
 	dc.w	OBJ_NPC_ROCKER
+	dc.b	"I know this is",LF
+	dc.b	"awful.^^",FF
+	dc.b	"But what choice is",LF
+	dc.b	"there?",ETX
 	align 2
 ; not present at night
 DialogTextRockerDay0B:
 ; at the info desk this day
 DialogTextRockerDay0C:
 	dc.w	OBJ_NPC_ROCKER
+	dc.b	"Will there be new",LF
+	dc.b	"stores next year?",ETX
 	align 2
 ; not present at night
 DialogTextRockerDay0D:
@@ -2012,6 +2318,8 @@ DialogTextShopperDay03:
 ; at fcbcheckout this day
 DialogTextShopperDay04:
 	dc.w	OBJ_NPC_SHOPPER
+	dc.b	"This guy is really",LF
+	dc.b	"slow.",ETX
 	align 2
 ; not present at night
 DialogTextShopperDay05:
@@ -2024,18 +2332,23 @@ DialogTextShopperDay07:
 ; at VB this day
 DialogTextShopperDay08:
 	dc.w	OBJ_NPC_SHOPPER
+	dc.b	"I don't think I'll",LF
+	dc.b	"find a gift here.",ETX
 	align 2
 ; not present at night
 DialogTextShopperDay09:
 ; at the appliances section this day
 DialogTextShopperDay0A:
 	dc.w	OBJ_NPC_SHOPPER
+	dc.b	"Maybe if I get a",LF
+	dc.b	"bigger place..",ETX
 	align 2
 ; not present at night
 DialogTextShopperDay0B:
 ; at checkers this day
 DialogTextShopperDay0C:
 	dc.w	OBJ_NPC_SHOPPER
+	dc.b	"This style is alright.",ETX
 	align 2
 ; not present at night
 DialogTextShopperDay0D:
@@ -2341,17 +2654,18 @@ DialogTextAlOldDay08:
 DialogTextAlOldDay09:
 ; not present until day0B
 DialogTextAlOldDay0A:
+; after story event
 DialogTextAlOldDay0B:
 	dc.w	OBJ_NPC_ALOLD
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
+	dc.b	"She needs to mind her",LF
+	dc.b	"own business.",ETX
 	align 2
 ; eryn never visits the basement
 DialogTextAlOldDay0C:
 DialogTextAlOldDay0D:
 	dc.w	OBJ_NPC_ALOLD
-	dc.b	"This is my default",LF
-	dc.b	"text.",ETX
+	dc.b	"Why are you poking",LF
+	dc.b	"around here?",ETX
 	align 2
 ; only present on day0C
 DialogTextHiddenHJDay00:

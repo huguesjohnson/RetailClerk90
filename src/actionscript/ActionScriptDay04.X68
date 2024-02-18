@@ -177,5 +177,6 @@ EndDay04SetupGameState: ; separated to help with debugging
 	move.l	#$03000000,(MEM_NPC_LOCATION_TBOOKS)
 	move.l	#$00000000,(MEM_NPC_LOCATION_WWAPPLIANCES)	
 	move.l	#$1C1D0000,(MEM_NPC_LOCATION_WWTV)	
+	move.l	#$11000000,(MEM_NPC_LOCATION_EWHALL) ; put the guard somewhere 	
 	rts		
 

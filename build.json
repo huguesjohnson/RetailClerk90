@@ -2726,6 +2726,7 @@
 		{"day":3,"scene":"SCENE_ID_WEHALL","action":"ExitScene","label":"ActionScriptNight01WEHallExit"},		
 		{"day":3,"scene":"SCENE_ID_EEHALL","action":"EnterScene","label":"ActionScriptNight01EEHallEnter"},
 		{"day":3,"scene":"SCENE_ID_TLODGE","action":"EnterScene","label":"ActionScriptNight01TLodgeEnter"},
+		{"day":3,"scene":"SCENE_ID_TLODGE","action":"Interact","label":"ActionScriptNight01TLodgeInteract"},
 		{"day":3,"scene":"SCENE_ID_SHALL","action":"EnterScene","label":"ActionScriptNight01SHallEnter"},
 		{"day":3,"scene":"SCENE_ID_SHALL","action":"ExitScene","label":"ActionScriptNight01SHallExit"},
 		{"day":3,"scene":"SCENE_ID_WWAPPLIANCES","action":"Interact","label":"ActionScriptNight01WWAppliancesInteract"},

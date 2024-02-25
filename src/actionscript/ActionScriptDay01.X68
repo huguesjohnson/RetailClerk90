@@ -7,6 +7,17 @@
 ; SCENE_ID_DENIMCOUNTRY
 ;*******************************************************************************
 ActionScriptDay01DenimCountryInteract:
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	beq.s	.default
+	;---------------------------------------------------------------
+	; npc 0 is the clerk
+	;---------------------------------------------------------------
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.s	.default
+	;---------------------------------------------------------------
+	; else check if the event is complete
+	;---------------------------------------------------------------	
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_DAY01_EVENT00_CPLANET,d7 ; test if event is done
 	beq.s	.notdone
@@ -27,6 +38,17 @@ ActionScriptDay01DenimCountryInteract:
 ; SCENE_ID_CPLANET
 ;*******************************************************************************
 ActionScriptDay01CPlanetInteract:	
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	beq.s	.default
+	;---------------------------------------------------------------
+	; npc 0 is the clerk
+	;---------------------------------------------------------------
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.s	.default
+	;---------------------------------------------------------------
+	; else check if the event is complete
+	;---------------------------------------------------------------	
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_DAY01_EVENT00_CPLANET,d7 ; test if event is done
 	bne.s	.default ; event is done
@@ -60,6 +82,17 @@ ActionScriptDay01SouthHallExit:
 ; SCENE_ID_WWAPPLIANCES
 ;*******************************************************************************
 ActionScriptDay01WWAppliancesInteract:	
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	beq.s	.default
+	;---------------------------------------------------------------
+	; npc 0 is the clerk
+	;---------------------------------------------------------------
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.s	.default
+	;---------------------------------------------------------------
+	; else check if the event is complete
+	;---------------------------------------------------------------	
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_DAY01_EVENT01_WWAPPLIANCES,d7 ; test if event is done
 	bne.s	.default ; event is done
@@ -213,6 +246,12 @@ EndDay01SetupGameState: ; separated to help with debugging
 	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
 	move.w	#$00DE,(MEM_PLAYER_SPRITE_X)
 	move.w	#$00EE,(MEM_PLAYER_SPRITE_Y)
+	;---------------------------------------------------------------------------	
+	; eryn now has the letter
+	;---------------------------------------------------------------------------	
+	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
+	move.w	#OBJ_ITEM_LETTER,d7 ; item to add
+	bsr.w	AddItem ; add item to inventory			
 	;---------------------------------------------------------------------------	
 	; update NPC locations
 	;---------------------------------------------------------------------------	

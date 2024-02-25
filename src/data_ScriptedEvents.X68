@@ -841,6 +841,9 @@ ScriptedEventNight01_01_CavernStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01CavernLine4
+	; have NPC face right
+	dc.w	DIRECTION_RIGHT
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01CavernLine5
@@ -849,27 +852,57 @@ ScriptedEventNight01_01_CavernStart:
 ScriptedEventNight01_01_CavernEnd:
 
 ScriptedEventNight01_02_EEHallStart:
-	; NPC0 sprite
-	dc.w	$0002
+	; player sprite
+	dc.w	$0001
+	; walk into the scene
+	dc.w	DIRECTION_DOWN
+	dc.w	$002e
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01EEHallLine1
+	; face left
+	dc.w	DIRECTION_LEFT
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01EEHallLine2
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01EEHallLine3
+	; change to npc0
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0002
+	; walk to the south exit
+	dc.w	DIRECTION_LEFT
+	dc.w	$004a
+	; walk to the south exit
+	dc.w	DIRECTION_DOWN
+	dc.w	$0078
+	; walk to the south exit
+	dc.w	DIRECTION_RIGHT
+	dc.w	$0078
+	; walk to the south exit
+	dc.w	DIRECTION_DOWN
+	dc.w	$0040
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight01_02_EEHallEnd:
 
 ScriptedEventNight01_TLodgeStart:
-	; NPC0 sprite
-	dc.w	$0002
+	; NPC1 sprite
+	dc.w	$0003
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01TLodgeLine1
+	; walk to the north exit
+	dc.w	DIRECTION_UP
+	dc.w	$0014
+	; walk to the north exit
+	dc.w	DIRECTION_LEFT
+	dc.w	$0030
+	; walk to the north exit
+	dc.w	DIRECTION_UP
+	dc.w	$0050
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight01_TLodgeEnd:
@@ -1313,6 +1346,39 @@ ScriptedEventNight02_04_VisionStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight02VisionLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02VisionLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02VisionLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02VisionLine5
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02VisionLine6
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02VisionLine7
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02VisionLine8
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02VisionLine9
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02VisionLine10
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02VisionLine11
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02VisionLine12
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02VisionLine13
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight02_04_VisionEnd:
@@ -2776,21 +2842,6 @@ ScriptedEventNight06_Optional02Start:
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight06_Optional02End:
 
-ScriptedEventEndGoodStart:
-	; NPC0 sprite
-	dc.w	$0002
-	; dialog
-	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextEndGoodLine1
-	; dialog
-	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextEndGoodLine2
-	; set end game
-	dc.w	SCRIPTED_EVENT_ENDGAME
-	; end
-	dc.w	SCRIPTED_EVENT_END
-ScriptedEventEndGoodEnd:
-
 ScriptedEventEndBadStart:
 	; NPC0 sprite
 	dc.w	$0002
@@ -2800,11 +2851,110 @@ ScriptedEventEndBadStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndBadLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndBadLine3 
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndBadLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndBadLine5
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndBadLine6
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndBadLine7
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndBadLine8
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndBadLine9
 	; set end game
 	dc.w	SCRIPTED_EVENT_ENDGAME
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventEndBadEnd:
+
+ScriptedEventEndGoodStart:
+	; NPC0 sprite
+	dc.w	$0002
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndGoodLine1
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndGoodLine2
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndGoodLine3
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndGoodLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndGoodLine5
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndGoodLine6
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndGoodLine7
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndGoodLine8
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndGoodLine9
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndGoodLine10
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndGoodLine11
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndGoodLine12
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndGoodLine13
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndGoodLine14
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndGoodLine15
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndGoodLine16
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndGoodLine17
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndGoodLine18
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndGoodLine19
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndGoodLine20
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndGoodLine21
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndGoodLine22
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextEndGoodLine23
+	; set end game
+	dc.w	SCRIPTED_EVENT_ENDGAME
+	; end
+	dc.w	SCRIPTED_EVENT_END
+ScriptedEventEndGoodEnd:
 
 ScriptedEventEndPerfectStart:
 	; NPC0 sprite
@@ -2827,18 +2977,21 @@ ScriptedEventTradingSequenceDenimCountryStart:
 	; dialog - regular text
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextTradingSequenceDenimCountryBefore
+	; dialog - regular text
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextTradingSequenceDenimCountry1
 	; set distorted font
 	dc.w	SCRIPTED_EVENT_LOADFONT
 	dc.w	FONT_ID_DISTORT
 	; dialog - distorted text
 	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextTradingSequenceDenimCountry
+	dc.l	StoryTextTradingSequenceDenimCountry2
 	; set back to regular font
 	dc.w	SCRIPTED_EVENT_LOADFONT
 	dc.w	FONT_ID_DEFAULT
 	; dialog - back to regular text
 	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextTradingSequenceDenimCountry
+	dc.l	StoryTextTradingSequenceDenimCountry3
 	; remove item that is given during the scripted event
 	dc.w	SCRIPTED_EVENT_REMOVEITEM
 	dc.w	OBJ_ITEM_EARRING
@@ -3242,22 +3395,4 @@ ScriptedEventPlayerSpriteLeft4Start:
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventPlayerSpriteLeft4End:
-
-ExampleSceneChangeStart:
-	; player sprite
-	dc.w	$0001
-	; move player sprite up
-	dc.w	DIRECTION_UP
-	dc.w	$0032
-	; change player sprite
-	dc.w	PLAYER_SPRITE_ERYN
-	; change scene
-	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
-	dc.w	SCENE_ID_VB
-	; move player sprite up
-	dc.w	DIRECTION_UP
-	dc.w	$0020
-	; end
-	dc.w	SCRIPTED_EVENT_END
-ExampleSceneChangeEnd:
 

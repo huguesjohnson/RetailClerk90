@@ -16,6 +16,17 @@ ActionScriptNight01WEHallExit:
 ; SCENE_ID_CAVERN
 ;*******************************************************************************
 ActionScriptNight01CavernInteract:
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
+	beq.s	.default
+	;---------------------------------------------------------------
+	; npc 0 is the clerk
+	;---------------------------------------------------------------
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.s	.default
+	;---------------------------------------------------------------
+	; else check if the event is complete
+	;---------------------------------------------------------------
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_NIGHT_01_EVENT00_CAVERN,d7 ; test if the event is complete
 	bne.s	.default ; show default text if the event is complete
@@ -24,10 +35,9 @@ ActionScriptNight01CavernInteract:
 	;---------------------------------------------------------------------------
 	bsr.s	ActionScriptNight01CavernUpdateState
 	; setup scripted event
-	lea	StoryTextNight01CavernLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventNight01_01_CavernStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
 	bsr.w ShowDefaultText
 	rts
@@ -59,8 +69,6 @@ ActionScriptNight01EEHallEnter:
 	;---------------------------------------------------------------------------
 	bsr.s	ActionScriptNight01EEHallUpdateState
 	; setup scripted event
-	lea	StoryTextNight01EEHallLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventNight01_02_EEHallStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 .default
@@ -83,10 +91,36 @@ ActionScriptNight01EEHallUpdateState:
 ;*******************************************************************************
 ; SCENE_ID_TLODGE
 ;*******************************************************************************
+ActionScriptNight01TLodgeInteract:	
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
+	beq.s	.default
+	;---------------------------------------------------------------
+	; npc 0 is the clerk
+	;---------------------------------------------------------------
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.s	.default
+	;---------------------------------------------------------------
+	; else check if the event is complete
+	;---------------------------------------------------------------
+	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7 ; copy global event flags to d7
+	btst.l	#FLAG_GLOBAL_EVENT00_TLodgeEvent1123Night,d7 ; test if the event is complete
+	beq.s	.default ; show default text if the event is complete
+	; otherwise show alternate text
+	lea	StoryTextNight01TLodgeAfterEvent,a6 ; load dialog text	
+	bsr.w	ShowDialog ; show the text event
+	rts
+.default
+	bsr.w ShowDefaultText
+	rts
+
 ActionScriptNight01TLodgeEnter:	
 	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7 ; copy global event flags to d7
 	btst.l	#FLAG_GLOBAL_EVENT00_TLodgeEvent1123Night,d7 ; test if the event is complete
 	bne.s	.default ; show default text if the event is complete
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7	
+	btst.l	#FLAG_NIGHT_01_EVENT01_EEHALL,d7 ; check if required event is done
+	beq.s	.default ; required event not done	
 	;---------------------------------------------------------------------------
 	; else update flags and run the scripted event
 	;---------------------------------------------------------------------------
@@ -94,8 +128,6 @@ ActionScriptNight01TLodgeEnter:
 	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS) ; save updated flags
 	move.l	#$09000000,(MEM_NPC_LOCATION_TLODGE) ; back to default npc in tlodge
 	; setup scripted event
-	lea	StoryTextNight01TLodgeLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventNight01_TLodgeStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 .default
@@ -285,6 +317,8 @@ EndNight01SetupGameState: ; separated to help with debugging
 	; update NPC locations
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsDay ; reset the NPC locations
+	; setup for optional event
+	move.l	#$19202122,(MEM_NPC_LOCATION_SVIDEO)	
 	;---------------------------------------------------------------------------	
 	; scatter some NPCs around
 	;---------------------------------------------------------------------------	

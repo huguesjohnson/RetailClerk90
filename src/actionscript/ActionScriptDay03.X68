@@ -7,6 +7,14 @@
 ; SCENE_ID_POGODAWG
 ;*******************************************************************************
 ActionScriptDay03PogoDawgInteract:
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	beq.s	.default
+	;---------------------------------------------------------------
+	; npc 0 is the clerk
+	;---------------------------------------------------------------
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.s	.default
 	;---------------------------------------------------------------------------
 	; FLAG_DAY03_EVENT00_POGODAWG=0 -> start the subtask
 	;
@@ -73,6 +81,17 @@ ActionScriptDay04PogoDawgFinishedState:
 ; SCENE_ID_CHECKERS
 ;*******************************************************************************
 ActionScriptDay03CheckersInteract:	
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	beq.s	.default
+	;---------------------------------------------------------------
+	; npc 0 is the clerk
+	;---------------------------------------------------------------
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.s	.default
+	;---------------------------------------------------------------
+	; else check if the event is complete
+	;---------------------------------------------------------------
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_DAY03_EVENT01_CHECKERS,d7 ; test if the event is complete
 	bne.s	.default ; show default text if the event is complete
@@ -96,6 +115,17 @@ ActionScriptDay03CheckersInteract:
 ; SCENE_ID_CNOW
 ;*******************************************************************************
 ActionScriptDay03CNowInteract:
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	beq.s	.default
+	;---------------------------------------------------------------
+	; npc 0 is the clerk
+	;---------------------------------------------------------------
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.s	.default
+	;---------------------------------------------------------------
+	; else check if the event is complete
+	;---------------------------------------------------------------
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_DAY03_EVENT02_CLOTHESNOW,d7 ; test if the optional event is complete
 	bne.s	.default ; show default text if the event is complete
@@ -134,6 +164,17 @@ CheckDay03Events:
 ; SCENE_ID_DENIMCOUNTRY
 ;*******************************************************************************
 ActionScriptDay03DenimCountryInteract:	
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	beq.s	.default
+	;---------------------------------------------------------------
+	; npc 0 is the clerk
+	;---------------------------------------------------------------
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.s	.default
+	;---------------------------------------------------------------
+	; else check if the event is complete
+	;---------------------------------------------------------------
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_DAY03_EVENT04_DONE,d7 ; test if the optional event is complete
 	beq.s	.inprogress ; still inprogress
@@ -146,7 +187,10 @@ ActionScriptDay03DenimCountryInteract:
 	lea	StoryTextDay03DenimCountryInprogress,a6 ; point a6 to the dialog
 	bsr.w	ShowDialog ; show the first dialog
 	rts
-
+.default
+	bsr.w ShowDefaultText
+	rts
+	
 ;*******************************************************************************
 ; SCENE_ID_SHALL
 ;*******************************************************************************

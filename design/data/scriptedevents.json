@@ -1436,6 +1436,11 @@
             "label":"StoryTextNight01CavernLine4"
          },
          {
+            "comment":"have NPC face right",
+            "direction":"RIGHT",
+            "intValue":0
+         },         
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight01CavernLine5"
@@ -1450,14 +1455,24 @@
       "name":"ScriptedEventNight01_02_EEHall",
       "actions":[
          {
-            "comment":"NPC0 sprite",
-            "intValue":2
+            "comment":"player sprite",
+            "intValue":1
          },
+         {
+            "comment":"walk into the scene",
+            "direction":"DOWN",
+            "intValue":46
+         }, 
          {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight01EEHallLine1"
          },
+         {
+            "comment":"face left",
+            "direction":"LEFT",
+            "intValue":0
+         },          
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -1469,6 +1484,31 @@
             "label":"StoryTextNight01EEHallLine3"
          },
          {
+            "comment":"change to npc0",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         },
+         {
+            "comment":"walk to the south exit",
+            "direction":"LEFT",
+            "intValue":74
+         },
+         {
+            "comment":"walk to the south exit",
+            "direction":"DOWN",
+            "intValue":120
+         },
+         {
+            "comment":"walk to the south exit",
+            "direction":"RIGHT",
+            "intValue":120
+         }, 
+         {
+            "comment":"walk to the south exit",
+            "direction":"DOWN",
+            "intValue":64
+         },                 
+         {
             "comment":"end",
             "command":"END"
          }
@@ -1478,14 +1518,29 @@
       "name":"ScriptedEventNight01_TLodge",
       "actions":[
          {
-            "comment":"NPC0 sprite",
-            "intValue":2
+            "comment":"NPC1 sprite",
+            "intValue":3
          },
          {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight01TLodgeLine1"
          },
+         {
+            "comment":"walk to the north exit",
+            "direction":"UP",
+            "intValue":20
+         },  
+         {
+            "comment":"walk to the north exit",
+            "direction":"LEFT",
+            "intValue":48
+         },   
+         {
+            "comment":"walk to the north exit",
+            "direction":"UP",
+            "intValue":80
+         },                        
          {
             "comment":"end",
             "command":"END"
@@ -2248,6 +2303,61 @@
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight02VisionLine2"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight02VisionLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight02VisionLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight02VisionLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight02VisionLine6"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight02VisionLine7"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight02VisionLine8"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight02VisionLine9"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight02VisionLine10"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight02VisionLine11"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight02VisionLine12"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight02VisionLine13"
          },
          {
             "comment":"end",
@@ -4765,33 +4875,6 @@
       ]
    },
    {
-      "name":"ScriptedEventEndGood",
-      "actions":[
-         {
-            "comment":"NPC0 sprite",
-            "intValue":2
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextEndGoodLine1"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextEndGoodLine2"
-         },
-         {
-            "comment":"set end game",
-            "command":"ENDGAME"
-         },         
-         {
-            "comment":"end",
-            "command":"END"
-         }
-      ]
-   },
-   {
       "name":"ScriptedEventEndBad",
       "actions":[
          {
@@ -4809,6 +4892,41 @@
             "label":"StoryTextEndBadLine2"
          },
          {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndBadLine3 "
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndBadLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndBadLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndBadLine6"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndBadLine7"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndBadLine8"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndBadLine9"
+         },
+         {
             "comment":"set end game",
             "command":"ENDGAME"
          },         
@@ -4818,6 +4936,138 @@
          }
       ]
    },   
+   {
+      "name":"ScriptedEventEndGood",
+      "actions":[
+         {
+            "comment":"NPC0 sprite",
+            "intValue":2
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndGoodLine1"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndGoodLine2"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndGoodLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndGoodLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndGoodLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndGoodLine6"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndGoodLine7"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndGoodLine8"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndGoodLine9"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndGoodLine10"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndGoodLine11"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndGoodLine12"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndGoodLine13"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndGoodLine14"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndGoodLine15"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndGoodLine16"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndGoodLine17"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndGoodLine18"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndGoodLine19"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndGoodLine20"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndGoodLine21"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndGoodLine22"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextEndGoodLine23"
+         },
+         {
+            "comment":"set end game",
+            "command":"ENDGAME"
+         },         
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   },
    {
       "name":"ScriptedEventEndPerfect",
       "actions":[
@@ -4858,6 +5108,11 @@
             "label":"StoryTextTradingSequenceDenimCountryBefore"
          },
          {
+            "comment":"dialog - regular text",
+            "command":"DIALOG",
+            "label":"StoryTextTradingSequenceDenimCountry1"
+         },         
+         {
             "comment":"set distorted font",
             "command":"LOADFONT",
             "intConst":"FONT_ID_DISTORT"
@@ -4865,7 +5120,7 @@
          {
             "comment":"dialog - distorted text",
             "command":"DIALOG",
-            "label":"StoryTextTradingSequenceDenimCountry"
+            "label":"StoryTextTradingSequenceDenimCountry2"
          },
          {
             "comment":"set back to regular font",
@@ -4875,7 +5130,7 @@
          {
             "comment":"dialog - back to regular text",
             "command":"DIALOG",
-            "label":"StoryTextTradingSequenceDenimCountry"
+            "label":"StoryTextTradingSequenceDenimCountry3"
          },
          {
             "comment":"remove item that is given during the scripted event",
@@ -5578,39 +5833,6 @@
             "comment":"move player sprite left",
             "direction":"LEFT",
             "intValue":4
-         },
-         {
-            "comment":"end",
-            "command":"END"
-         }
-      ]
-   },    
-   {
-      "name":"ExampleSceneChange",
-      "actions":[
-         {
-            "comment":"player sprite",
-            "intValue":1
-         },
-         {
-            "comment":"move player sprite up",
-            "direction":"UP",
-            "intValue":50
-         },
-         {
-            "comment":"change player sprite",
-            "command":"CHANGE_CHANGE_PLAYER_SPRITE",
-            "intConst":"PLAYER_SPRITE_ERYN"
-         },
-         {
-            "comment":"change scene",
-            "command":"CHANGE_SCENE",
-            "intConst":"SCENE_ID_VB"
-         },
-         {
-            "comment":"move player sprite up",
-            "direction":"UP",
-            "intValue":32
          },
          {
             "comment":"end",

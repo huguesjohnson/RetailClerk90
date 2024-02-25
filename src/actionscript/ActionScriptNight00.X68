@@ -239,7 +239,7 @@ EndNight00SetGameState: ; separated out to help with debugging
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsDay ; reset the NPC locations
 	; for optional event
-	move.l	#$120F0000,(MEM_NPC_LOCATION_CAVERN)
+	move.l	#$120F2100,(MEM_NPC_LOCATION_CAVERN)
 	;---------------------------------------------------------------------------	
 	; scatter some NPCs around
 	;---------------------------------------------------------------------------	
@@ -250,5 +250,6 @@ EndNight00SetGameState: ; separated out to help with debugging
 	move.l	#$02200000,(MEM_NPC_LOCATION_TBOOKS)	
 	move.l	#$1B260000,(MEM_NPC_LOCATION_WWAUDIO)
 	move.l	#$11000000,(MEM_NPC_LOCATION_WEHALL)	
+	move.l	#$00000000,(MEM_NPC_LOCATION_SHALL)	
 	rts	
 

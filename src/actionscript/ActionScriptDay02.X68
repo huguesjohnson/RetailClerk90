@@ -7,6 +7,17 @@
 ; SCENE_ID_TLODGE
 ;*******************************************************************************
 ActionScriptDay02TLodgeInteract:	
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	beq.s	.default
+	;---------------------------------------------------------------
+	; npc 0 is the clerk
+	;---------------------------------------------------------------
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.s	.default
+	;---------------------------------------------------------------
+	; else check if the event is complete
+	;---------------------------------------------------------------	
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_DAY02_EVENT00_TLODGE,d7 ; test if the event is complete
 	bne.s	.default ; show default text if the event is complete
@@ -29,7 +40,18 @@ ActionScriptDay02TLodgeInteract:
 ;*******************************************************************************
 ; SCENE_ID_TBOOKS
 ;*******************************************************************************
-ActionScriptDay02TBooksInteract:	
+ActionScriptDay02TBooksInteract:
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	beq.s	.default
+	;---------------------------------------------------------------
+	; npc 0 is the clerk
+	;---------------------------------------------------------------
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.s	.default
+	;---------------------------------------------------------------
+	; else check if the event is complete
+	;---------------------------------------------------------------	
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_DAY02_EVENT01_TBOOKS,d7 ; test if the event is complete
 	bne.s	.default ; show default text if the event is complete
@@ -81,6 +103,17 @@ ActionScriptDay02NShackEnter:
 ; SCENE_ID_DENIMCOUNTRY
 ;*******************************************************************************
 ActionScriptDay02DenimCountryInteract:	
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	beq.s	.default
+	;---------------------------------------------------------------
+	; npc 0 is the clerk
+	;---------------------------------------------------------------
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.s	.default
+	;---------------------------------------------------------------
+	; else check if the event is complete
+	;---------------------------------------------------------------
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_DAY02_EVENT02_TALKEDTOPEOPLE,d7 ; test if the event is complete
 	beq.s	.notdone ; flag not set, show 'not done' response
@@ -153,6 +186,8 @@ ActionScriptDay02SVideoRespond:
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
 	; clear the map icon
 	move.w	#$FFFF,(MEM_OPTIONAL_EVENT1_SCENE_ID)
+	; clear out npcs in the location
+	move.l	#$19000000,(MEM_NPC_LOCATION_SVIDEO)	
 	; setup the scripted event
 	lea	StoryTextDay02SVideoChoice0,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog

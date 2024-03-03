@@ -7827,8 +7827,9 @@ StoryTextEndBadLine2:
 StoryTextEndBadLine3:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"Weren't you looking",LF
-	dc.b	"at a letter? Or^",FF
-	dc.b	"something like that.",ETX
+	dc.b	"at a letter?^",FF
+	dc.b	"Or something like",LF
+	dc.b	"that.",ETX
 	align 2
 StoryTextEndBadLine4:
 	dc.w	OBJ_NPC_ERYN
@@ -7860,138 +7861,294 @@ StoryTextEndBadLine8:
 	align 2
 StoryTextEndBadLine9:
 	dc.w	OBJ_NPC_ERYN
-	dc.b	"It was very boring.",LF
-	dc.b	"Nothing interesting^",FF
+	dc.b	"It was very boring.",ETX
+	align 2
+StoryTextEndBadLine10:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"Nothing interesting",LF
 	dc.b	"happened.",ETX
 	align 2
 ; Good and perfect ending have the same text before the credits
 StoryTextEndGoodLine1:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line1.",ETX
+	dc.w	OBJ_NPC_JEN
+	dc.b	"This is it for our",LF
+	dc.b	"group.",ETX
 	align 2
 StoryTextEndGoodLine2:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.b	"I'll visit sometime,",LF
+	dc.b	"but yeah.",ETX
 	align 2
 StoryTextEndGoodLine3:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"If I'm around, maybe.",ETX
 	align 2
 StoryTextEndGoodLine4:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.b	"I have one question",LF
+	dc.b	"if it's OK...^",FF
+	dc.b	"All that stuff in the",LF
+	dc.b	"basement,^",FF
+	dc.b	"is it related to what",LF
+	dc.b	"happened last year?",ETX
 	align 2
 StoryTextEndGoodLine5:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.w	OBJ_NPC_DB
+	dc.b	"...",ETX
 	align 2
 StoryTextEndGoodLine6:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.w	OBJ_NPC_JEN
+	dc.b	"It's OK to tell them.",ETX
 	align 2
 StoryTextEndGoodLine7:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.w	OBJ_NPC_DB
+	dc.b	"I don't think I know",LF
+	dc.b	"any more.^",FF
+	dc.b	"That thing they're",LF
+	dc.b	"building..",ETX
 	align 2
 StoryTextEndGoodLine8:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.b	"The Nostalgia Engine?",ETX
 	align 2
 StoryTextEndGoodLine9:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.w	OBJ_NPC_DB
+	dc.b	"I'm not sure what it",LF
+	dc.b	"even is.^",FF
+	dc.b	"They say it's a",LF
+	dc.b	"simulation,^",FF
+	dc.b	"but last year, that",LF
+	dc.b	"Jordan guy,^",FF
+	dc.b	"he said he was from",LF
+	dc.b	"2014.^",FF
+	dc.b	"Either they created",LF
+	dc.b	"time travel.^",FF
+	dc.b	"Or Jordan was",LF
+	dc.b	"brain-fried.",ETX
 	align 2
 StoryTextEndGoodLine10:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"Or maybe this is a",LF
+	dc.b	"simulation.",ETX
 	align 2
 StoryTextEndGoodLine11:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.w	OBJ_NPC_DB
+	dc.b	"I considered that",LF
+	dc.b	"too.^",FF
+	dc.b	"What does that make",LF
+	dc.b	"us though?",ETX
 	align 2
 StoryTextEndGoodLine12:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.b	"This is getting too",LF
+	dc.b	"deep for me.^",FF
+	dc.b	"Going back to my room",LF
+	dc.b	"for the last time.",ETX
 	align 2
 StoryTextEndGoodLine13:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.b	"All the Iraq news",LF
+	dc.b	"will put me to sleep^",FF
+	dc.b	"as usual.",ETX
 	align 2
 StoryTextEndGoodLine14:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.b	"You know what's weird",LF
+	dc.b	"about it...^",FF
+	dc.b	"Those guys Cheney &",LF
+	dc.b	"Powell,^",FF
+	dc.b	"they keep getting",LF
+	dc.b	"older,^",FF
+	dc.b	"but the President",LF
+	dc.b	"though,^",FF
+	dc.b	"he looks like he's",LF
+	dc.b	"getting younger.",ETX
 	align 2
 StoryTextEndGoodLine15:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"That's not how this",LF
+	dc.b	"part goes.",ETX
 	align 2
 StoryTextEndGoodLine16:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.w	OBJ_NPC_JEN
+	dc.b	"You said something",LF
+	dc.b	"different last time.",ETX
 	align 2
 StoryTextEndGoodLine17:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.w	OBJ_NPC_DB
+	dc.b	"Uh-oh, I think you",LF
+	dc.b	"lost it.^",FF
+	dc.b	"Where are you right",LF
+	dc.b	"now?",ETX
 	align 2
 StoryTextEndGoodLine18:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.b	"You're being weird,",LF
+	dc.b	"stop it.^",FF
+	dc.b	"It's 1990 & I'm with",LF
+	dc.b	"my friends.^",FF
+	dc.b	"We met over the",LF
+	dc.b	"summer.^",FF
+	dc.b	"I helped you both",LF
+	dc.b	"every night.^",FF
+	dc.b	"Eryn joined our group",LF
+	dc.b	"in winter.^",FF
+	dc.b	"We were together",LF
+	dc.b	"every night.",ETX
 	align 2
 StoryTextEndGoodLine19:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.w	OBJ_NPC_JEN
+	dc.b	"Yes, just like this",LF
+	dc.b	"right now.^",FF
+	dc.b	"Exactly how you",LF
+	dc.b	"remember.^",FF
+	dc.b	"Do you remember what",LF
+	dc.b	"happens next?",ETX
 	align 2
 StoryTextEndGoodLine20:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.b	"Yeah, we split up",LF
+	dc.b	"don't we?",ETX
 	align 2
 StoryTextEndGoodLine21:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.b	"I go back to my store",ETX
 	align 2
 StoryTextEndGoodLine22:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.b	"We're bought by a",LF
+	dc.b	"larger chain.",ETX
 	align 2
 StoryTextEndGoodLine23:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.b	"They can't compete",LF
+	dc.b	"though.^",FF
+	dc.b	"They start closing",LF
+	dc.b	"stores.^",FF
+	dc.b	"The smaller mall ones",LF
+	dc.b	"are first.",ETX
 	align 2
 StoryTextEndGoodLine24:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.b	"I'm on the",LF
+	dc.b	"liquidation team.^",FF
+	dc.b	"In November 2002...",ETX
 	align 2
 StoryTextEndGoodLine25:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.w	OBJ_NPC_VICTOR
+	dc.b	"Didn't you used to",LF
+	dc.b	"work here?",ETX
 	align 2
 StoryTextEndGoodLine26:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.b	"Just for a six months",LF
+	dc.b	"in 1990.^",FF
+	dc.b	"The friends I made",LF
+	dc.b	"though..",ETX
 	align 2
 StoryTextEndGoodLine27:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.w	OBJ_NPC_VICTOR
+	dc.b	"..have all moved on",LF
+	dc.b	"with their lives.^",FF
+	dc.b	"We have two months to",LF
+	dc.b	"get this done.^",FF
+	dc.b	"Then it's off to the",LF
+	dc.b	"next town.^",FF
+	dc.b	"If you're done",LF
+	dc.b	"moping, let's go.",ETX
 	align 2
 StoryTextEndGoodLine28:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.b	"But it's 1990 now,",LF
+	dc.b	"I'm positive.",ETX
 	align 2
 StoryTextEndGoodLine29:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.w	OBJ_NPC_DB
+	dc.b	"It's the Nostalgia",LF
+	dc.b	"Engine.^",FF
+	dc.b	"It reached its full",LF
+	dc.b	"power in 2000.^",FF
+	dc.b	"In 2002 you wished it",LF
+	dc.b	"was 1990 again,^",FF
+	dc.b	"and that's exactly",LF
+	dc.b	"what you saw.",ETX
 	align 2
 StoryTextEndGoodLine30:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.b	"So it's what I heard",LF
+	dc.b	"in the basement.^",FF
+	dc.b	"It can't be true.",ETX
 	align 2
 StoryTextEndGoodLine31:
-	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"Did you learn",LF
+	dc.b	"anything this year?^",FF
+	dc.b	"Or is only what you",LF
+	dc.b	"remember?",ETX
 	align 2
 StoryTextEndGoodLine32:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"line2.",ETX
+	dc.b	"Just what I already",LF
+	dc.b	"knew.",ETX
+	align 2
+StoryTextEndGoodLine33:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"What am I going to do",LF
+	dc.b	"now?",ETX
+	align 2
+StoryTextEndGoodLine34:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"The last 12 years",LF
+	dc.b	"were a waste.",ETX
+	align 2
+StoryTextEndGoodLine35:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"You wanted to try",LF
+	dc.b	"writing.^",FF
+	dc.b	"You told us all the",LF
+	dc.b	"time.^",FF
+	dc.b	"You're off to the",LF
+	dc.b	"next hotel room.^",FF
+	dc.b	"Forget about the news",LF
+	dc.b	"& get to work.",ETX
+	align 2
+StoryTextEndGoodLine36:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"I don't know. Maybe",LF
+	dc.b	"it's too late.",ETX
+	align 2
+StoryTextEndGoodLine37:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"There's only one way",LF
+	dc.b	"to know.^",FF
+	dc.b	"Beside, you already",LF
+	dc.b	"have a starting point.",ETX
+	align 2
+StoryTextEndGoodLine38:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"A story about time",LF
+	dc.b	"travel & regrets.^",FF
+	dc.b	"It's been done, but",LF
+	dc.b	"it works.",ETX
+	align 2
+StoryTextEndGoodLine39:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"I guess it's time to",LF
+	dc.b	"go",ETX
+	align 2
+StoryTextEndGoodLine40:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"When I walk out it",LF
+	dc.b	"will be 2002,^",FF
+	dc.b	"and it will stay that",LF
+	dc.b	"way.",ETX
+	align 2
+StoryTextEndGoodLine41:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"I know you're just a",LF
+	dc.b	"memory but,^",FF
+	dc.b	"can I say goodbye",LF
+	dc.b	"anyway?",ETX
 	align 2
 ; This is the text for the after-credits scene
 StoryTextEndPerfectLine1:
@@ -8111,15 +8268,14 @@ StoryTextEndPerfectLine19:
 	align 2
 StoryTextEndPerfectLine20:
 	dc.w	OBJ_NPC_DB
-	dc.b	"(Is this like.. last",LF
-	dc.b	"year?)",ETX
+	dc.b	"(This is too much)",ETX
 	align 2
 StoryTextEndPerfectLine21:
 	dc.w	OBJ_NPC_DB
-	dc.b	"I bet arcades go out",LF
-	dc.b	"in the 90s.^",FF
 	dc.b	"I think I'll find",LF
 	dc.b	"another gig.^",FF
+	dc.b	"I bet arcades go out",LF
+	dc.b	"in the 90s.^",FF
 	dc.b	"It was nice knowing",LF
 	dc.b	"all of you.",ETX
 	align 2

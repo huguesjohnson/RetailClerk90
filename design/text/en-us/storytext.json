@@ -3395,7 +3395,7 @@
          },   
       "StoryTextEndBadLine3":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"Weren't you looking at a letter? Or something like that.",
+         "text":"Weren't you looking at a letter?|Or something like that.",
          "align":2
          },   
       "StoryTextEndBadLine4":{
@@ -3425,174 +3425,220 @@
          },         
       "StoryTextEndBadLine9":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"It was very boring.|Nothing interesting happened.",
+         "text":"It was very boring.",
          "align":2
          },      
-          
+      "StoryTextEndBadLine10":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"Nothing interesting happened.",
+         "align":2
+         },             
       "StoryTextEndGoodLine1":{
          "comment":"Good and perfect ending have the same text before the credits",
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line1.",
+         "dialogTitle":"OBJ_NPC_JEN",
+         "text":"This is it for our group.",
          "align":2
          },
       "StoryTextEndGoodLine2":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "text":"I'll visit sometime, but yeah.",
          "align":2
          },
       "StoryTextEndGoodLine3":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"If I'm around, maybe.",
          "align":2
          },
       "StoryTextEndGoodLine4":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "text":"I have one question if it's OK...|All that stuff in the basement,|is it related to what happened last year?",
          "align":2
          },
       "StoryTextEndGoodLine5":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_DB",
+         "text":"...",
          "align":2
          },
       "StoryTextEndGoodLine6":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_JEN",
+         "text":"It's OK to tell them.",
          "align":2
          },
       "StoryTextEndGoodLine7":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_DB",
+         "text":"I don't think I know any more.|That thing they're building..",
          "align":2
          },
       "StoryTextEndGoodLine8":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "text":"The Nostalgia Engine?",
          "align":2
          },
       "StoryTextEndGoodLine9":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_DB",
+         "text":"I'm not sure what it even is.|They say it's a simulation,|but last year, that Jordan guy,|he said he was from 2014.|Either they created time travel.|Or Jordan was brain-fried.",
          "align":2
          },
       "StoryTextEndGoodLine10":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"Or maybe this is a simulation.",
          "align":2
-         },
+         },         
       "StoryTextEndGoodLine11":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_DB",
+         "text":"I considered that too.|What does that make us though?",
          "align":2
          },
       "StoryTextEndGoodLine12":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "text":"This is getting too deep for me.|Going back to my room for the last time.",
          "align":2
-         },
+         },                                             
       "StoryTextEndGoodLine13":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "text":"All the Iraq news will put me to sleep as usual.",
          "align":2
-         },
+         },    
       "StoryTextEndGoodLine14":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "text":"You know what's weird about it...|Those guys Cheney & Powell,|they keep getting older,|but the President though,|he looks like he's getting younger.",
          "align":2
-         },
+         },    
       "StoryTextEndGoodLine15":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"That's not how this part goes.",
          "align":2
-         },
+         },  
       "StoryTextEndGoodLine16":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_JEN",
+         "text":"You said something different last time.",
          "align":2
-         },
+         },  
       "StoryTextEndGoodLine17":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_DB",
+         "text":"Uh-oh, I think you lost it.|Where are you right now?",
          "align":2
-         },
+         },           
       "StoryTextEndGoodLine18":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "text":"You're being weird, stop it.|It's 1990 & I'm with my friends.|We met over the summer.|I helped you both every night.|Eryn joined our group in winter.|We were together every night.",
          "align":2
-         },
+         },  
       "StoryTextEndGoodLine19":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_JEN",
+         "text":"Yes, just like this right now.|Exactly how you remember.|Do you remember what happens next?",
          "align":2
-         },
+         },  
       "StoryTextEndGoodLine20":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "text":"Yeah, we split up don't we?",
          "align":2
-         },
+         },         
       "StoryTextEndGoodLine21":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "text":"I go back to my store",
          "align":2
-         },
+         }, 
       "StoryTextEndGoodLine22":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "text":"We're bought by a larger chain.",
          "align":2
-         },
+         }, 
       "StoryTextEndGoodLine23":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "text":"They can't compete though.|They start closing stores.|The smaller mall ones are first.",
          "align":2
-         },
+         }, 
       "StoryTextEndGoodLine24":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "text":"I'm on the liquidation team.|In November 2002...",
          "align":2
-         },
+         }, 
       "StoryTextEndGoodLine25":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_VICTOR",
+         "text":"Didn't you used to work here?",
          "align":2
-         },
+         },   
       "StoryTextEndGoodLine26":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "text":"Just for a six months in 1990.|The friends I made though..",
          "align":2
-         },
+         },      
       "StoryTextEndGoodLine27":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_VICTOR",
+         "text":"..have all moved on with their lives.|We have two months to get this done.|Then it's off to the next town.|If you're done moping, let's go.",
          "align":2
-         },
+         },            
       "StoryTextEndGoodLine28":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "text":"But it's 1990 now, I'm positive.",
          "align":2
-         },
+         },                              
       "StoryTextEndGoodLine29":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_DB",
+         "text":"It's the Nostalgia Engine.|It reached its full power in 2000.|In 2002 you wished it was 1990 again,|and that's exactly what you saw.",
          "align":2
-         },
+         }, 
       "StoryTextEndGoodLine30":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "text":"So it's what I heard in the basement.|It can't be true.",
          "align":2
-         },
+         }, 
       "StoryTextEndGoodLine31":{
-         "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"Did you learn anything this year?|Or is only what you remember?",
          "align":2
-         },
+         }, 
       "StoryTextEndGoodLine32":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"line2.",
+         "text":"Just what I already knew.",
          "align":2
          },
-         
-         
-         
+      "StoryTextEndGoodLine33":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"What am I going to do now?",
+         "align":2
+         },
+      "StoryTextEndGoodLine34":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"The last 12 years were a waste.",
+         "align":2
+         },
+      "StoryTextEndGoodLine35":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"You wanted to try writing.|You told us all the time.|You're off to the next hotel room.|Forget about the news & get to work.",
+         "align":2
+         },          
+      "StoryTextEndGoodLine36":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I don't know. Maybe it's too late.",
+         "align":2
+         },
+      "StoryTextEndGoodLine37":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"There's only one way to know.|Beside, you already have a starting point.",
+         "align":2
+         },       
+      "StoryTextEndGoodLine38":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"A story about time travel & regrets.|It's been done, but it works.|Some people like that story.",
+         "align":2
+         },         
+      "StoryTextEndGoodLine39":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I guess it's time to go",
+         "align":2
+         },   
+      "StoryTextEndGoodLine40":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"When I walk out it will be 2002,|and it will stay that way.",
+         "align":2
+         }, 
+      "StoryTextEndGoodLine41":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I know you're just a memory but,|can I say goodbye anyway?",
+         "align":2
+         }, 
       "StoryTextEndPerfectLine1":{
          "comment":"This is the text for the after-credits scene",
          "dialogTitle":"OBJ_NPC_JEN",
@@ -3691,12 +3737,12 @@
          },   
       "StoryTextEndPerfectLine20":{
          "dialogTitle":"OBJ_NPC_DB",
-         "text":"(Is this like.. last year?)",
+         "text":"(This is too much)",
          "align":2
          },   
       "StoryTextEndPerfectLine21":{
          "dialogTitle":"OBJ_NPC_DB",
-         "text":"I bet arcades go out in the 90s.|I think I'll find another gig.|It was nice knowing all of you.",
+         "text":"I think I'll find another gig.|I bet arcades go out in the 90s.|It was nice knowing all of you.",
          "align":2
          },  
       "StoryTextEndPerfectLine22":{

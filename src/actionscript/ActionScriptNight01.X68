@@ -132,11 +132,18 @@ ActionScriptNight01TLodgeEnter:
 	bsr.w QueueScriptedEvent ; queue the event
 .default
 	rts
+	
+
 
 ;*******************************************************************************
-; SCENE_ID_SHALL
+; SCENE_ID_SOUTH_CENTER
 ;*******************************************************************************
-ActionScriptNight01SHallEnter:	
+ActionScriptNight01SouthCenterExit:	
+	; test which direction the player is going
+	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d7 ; copy player sprite direction to d7
+	cmpi.w	#DIRECTION_DOWN,d7 ; is the player facing south?
+	bne.s	.default ; branch if not
+.south
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_NIGHT_01_EVENT01_EEHALL,d7 ; test if the event is complete
 	beq.s	.default ; not time for this event
@@ -147,11 +154,11 @@ ActionScriptNight01SHallEnter:
 	;---------------------------------------------------------------------------
 	bsr.s	ActionScriptNight01SouthHallUpdateState
 	; setup scripted event
-	lea	StoryTextNight01SouthHallLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventNight01_03_SouthHallStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
+	bsr.w	DefaultExitScene
 	rts
 
 ; assumes d7 has MEM_DAY_EVENT_FLAGS
@@ -159,10 +166,19 @@ ActionScriptNight01SouthHallUpdateState:
 	bset.l	#FLAG_NIGHT_01_EVENT02_STORYEVENTSDONE,d7 ; set event is done
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
 	move.w	#$FFFF,(MEM_STORY_EVENT1_SCENE_ID) ; clear story event
-	move.l	#$00000000,(MEM_NPC_LOCATION_SHALL) ; move characters
 	rts
-	
+
+;*******************************************************************************
+; SCENE_ID_SHALL
+;*******************************************************************************
 ActionScriptNight01SHallExit:	
+	; need to clear NPC after ScriptedEventNight01_03_SouthHallStart
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT_01_EVENT02_STORYEVENTSDONE,d7 ; test if event is done
+	beq.s	.testdir ; not set
+	move.l	#$00000000,(MEM_NPC_LOCATION_SHALL) ; otherwise clear npc	
+.testdir
+	; test which direction the player is going
 	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d7 ; copy player sprite direction to d7
 	cmpi.w	#DIRECTION_DOWN,d7 ; is the player facing south?
 	beq.s	.south ; branch if so

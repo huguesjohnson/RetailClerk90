@@ -4420,13 +4420,12 @@ StoryTextNight01SouthHallLine3:
 	dc.b	"What? No it's not...",LF
 	dc.b	"(geez)^",FF
 	dc.b	"I'm only saying hi, I",LF
-	dc.b	"don't even have a^",FF
-	dc.b	"car.",LF
-	dc.b	"I'm on a temp^",FF
-	dc.b	"assignment.",LF
-	dc.b	"I'm staying at the^",FF
-	dc.b	"discount hotel.",LF
-	dc.b	"It's across the^",FF
+	dc.b	"don't have a car.^",FF
+	dc.b	"I'm on a temp",LF
+	dc.b	"assignment.^",FF
+	dc.b	"I'm staying at the",LF
+	dc.b	"discount hotel.^",FF
+	dc.b	"It's across the",LF
 	dc.b	"parking lot.^",ETX
 	align 2
 StoryTextNight01SouthHallLine4:
@@ -4440,10 +4439,9 @@ StoryTextNight01SouthHallLine5:
 	dc.b	"No! Why do you keep",LF
 	dc.b	"going there?^",FF
 	dc.b	"Since I'm basically",LF
-	dc.b	"living here its^",FF
-	dc.b	"just..",LF
-	dc.b	"I like to meet the^",FF
-	dc.b	"other employees.",LF
+	dc.b	"living here,^",FF
+	dc.b	"I like to meet other",LF
+	dc.b	"employees.^",FF
 	dc.b	"That's all, I swear.^",ETX
 	align 2
 StoryTextNight01SouthHallLine6:
@@ -4479,10 +4477,13 @@ StoryTextNight01SouthHallLine9:
 StoryTextNight01SouthHallLine10:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"You can help her",LF
-	dc.b	"after I'm gone then.^",FF
-	dc.b	"There's my ride.^",ETX
+	dc.b	"after I'm gone then.^",ETX
 	align 2
 StoryTextNight01SouthHallLine11:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"There's my ride.^",ETX
+	align 2
+StoryTextNight01SouthHallLine12:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"(Goodnight)",ETX
 	align 2
@@ -4579,12 +4580,13 @@ StoryTextNight01VBLine3:
 	align 2
 StoryTextNight01VBLine4:
 	dc.w	OBJ_NPC_GRUNBERG
-	dc.b	"I guess it wasn't.",LF
-	dc.b	"Could have been^",FF
-	dc.b	"nothing.",LF
-	dc.b	"I never mind working^",FF
-	dc.b	"this weekend though.",LF
-	dc.b	"Let people with big^",FF
+	dc.b	"I guess it wasn't too",LF
+	dc.b	"bad.^",FF
+	dc.b	"Could have been",LF
+	dc.b	"nothing.^",FF
+	dc.b	"I never mind working",LF
+	dc.b	"this weekend though.^",FF
+	dc.b	"Let people with big",LF
 	dc.b	"gatherings take off.^",ETX
 	align 2
 StoryTextNight01VBLine5:
@@ -4594,8 +4596,7 @@ StoryTextNight01VBLine5:
 	dc.b	"My family is small &",LF
 	dc.b	"scattered.^",FF
 	dc.b	"This weekend feels",LF
-	dc.b	"chaotic enough^",FF
-	dc.b	"anyway.^",ETX
+	dc.b	"chaotic enough.^",ETX
 	align 2
 StoryTextNight01VBLine6:
 	dc.w	OBJ_NPC_GRUNBERG
@@ -4633,12 +4634,11 @@ StoryTextDay02VBLine3:
 	dc.b	"years ago.^",FF
 	dc.b	"The mall opened in",LF
 	dc.b	"1975.^",FF
-	dc.b	"I believe",LF
-	dc.b	"ThoreauBooks &^",FF
-	dc.b	"Transistor Lodge are",LF
-	dc.b	"the only original^",FF
-	dc.b	"stores left.",LF
-	dc.b	"Maybe they know some^",FF
+	dc.b	"ThoreauBooks &",LF
+	dc.b	"Transistor Lodge are^",FF
+	dc.b	"the only original",LF
+	dc.b	"stores left.^",FF
+	dc.b	"Maybe they know some",LF
 	dc.b	"mall legends.^",ETX
 	align 2
 StoryTextDay02VBLine4:
@@ -8129,7 +8129,9 @@ StoryTextEndGoodLine38:
 	dc.b	"A story about time",LF
 	dc.b	"travel & regrets.^",FF
 	dc.b	"It's been done, but",LF
-	dc.b	"it works.",ETX
+	dc.b	"it works.^",FF
+	dc.b	"Some people like that",LF
+	dc.b	"story.",ETX
 	align 2
 StoryTextEndGoodLine39:
 	dc.w	OBJ_NPC_CARL

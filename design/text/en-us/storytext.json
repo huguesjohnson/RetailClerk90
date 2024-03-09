@@ -803,7 +803,7 @@
          },
       "StoryTextNight01SouthHallLine3":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"What? No it's not...|(geez)|I'm only saying hi, I don't even have a car.|I'm on a temp assignment.|I'm staying at the discount hotel.|It's across the parking lot.^",
+         "text":"What? No it's not...|(geez)|I'm only saying hi, I don't have a car.|I'm on a temp assignment.|I'm staying at the discount hotel.|It's across the parking lot.^",
          "align":2
          },    
       "StoryTextNight01SouthHallLine4":{
@@ -813,7 +813,7 @@
          },         
       "StoryTextNight01SouthHallLine5":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"No! Why do you keep going there?|Since I'm basically living here its just..|I like to meet the other employees.|That's all, I swear.^",
+         "text":"No! Why do you keep going there?|Since I'm basically living here,|I like to meet other employees.|That's all, I swear.^",
          "align":2
          },
       "StoryTextNight01SouthHallLine6":{
@@ -838,10 +838,15 @@
          },  
       "StoryTextNight01SouthHallLine10":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"You can help her after I'm gone then.|There's my ride.^",
+         "text":"You can help her after I'm gone then.^",
          "align":2
          },    
       "StoryTextNight01SouthHallLine11":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"There's my ride.^",
+         "align":2
+         },           
+      "StoryTextNight01SouthHallLine12":{
          "dialogTitle":"OBJ_NPC_CARL",
          "text":"(Goodnight)",
          "align":2
@@ -915,12 +920,12 @@
          },        
       "StoryTextNight01VBLine4":{
          "dialogTitle":"OBJ_NPC_GRUNBERG",
-         "text":"I guess it wasn't.|Could have been nothing.|I never mind working this weekend though.|Let people with big gatherings take off.^",
+         "text":"I guess it wasn't too bad.|Could have been nothing.|I never mind working this weekend though.|Let people with big gatherings take off.^",
          "align":2
          },        
       "StoryTextNight01VBLine5":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"I feel the same way as you.|My family is small & scattered.|This weekend feels chaotic enough anyway.^",
+         "text":"I feel the same way as you.|My family is small & scattered.|This weekend feels chaotic enough.^",
          "align":2
          },   
       "StoryTextNight01VBLine6":{
@@ -945,7 +950,7 @@
          },        
       "StoryTextDay02VBLine3":{
          "dialogTitle":"OBJ_NPC_GRUNBERG",
-         "text":"Well I'm old, but this store isn't.|We only opened 2 years ago.|The mall opened in 1975.|I believe ThoreauBooks & Transistor Lodge are the only original stores left.|Maybe they know some mall legends.^",
+         "text":"Well I'm old, but this store isn't.|We only opened 2 years ago.|The mall opened in 1975.|ThoreauBooks & Transistor Lodge are the only original stores left.|Maybe they know some mall legends.^",
          "align":2
          },      
       "StoryTextDay02VBLine4":{

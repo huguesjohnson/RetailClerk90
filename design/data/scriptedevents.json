@@ -1551,9 +1551,38 @@
       "name":"ScriptedEventNight01_03_SouthHall",
       "actions":[
          {
-            "comment":"NPC0 sprite",
-            "intValue":2
+            "comment":"player sprite",
+            "intValue":1
          },
+         {
+            "comment":"fade out",
+            "command":"FADE_BLACK"
+         },
+         {
+            "comment":"set where player sprite enters the scene",
+            "command":"SET_PLAYER_SPRITE_X",
+            "intValue":356
+         },
+         {
+            "comment":"set where player sprite enters the scene",
+            "command":"SET_PLAYER_SPRITE_Y",
+            "intValue":136
+         },
+         {
+            "comment":"change scene to south hall",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_SHALL"
+         },
+         {
+            "comment":"move down to npc0",
+            "direction":"DOWN",
+            "intValue":132
+         }, 
+         {
+            "comment":"face left",
+            "direction":"LEFT",
+            "intValue":0
+         }, 
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -1580,6 +1609,16 @@
             "label":"StoryTextNight01SouthHallLine5"
          },
          {
+            "comment":"change to npc0",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         },   
+         {
+            "comment":"face right",
+            "direction":"RIGHT",
+            "intValue":0
+         }, 
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight01SouthHallLine6"
@@ -1605,9 +1644,24 @@
             "label":"StoryTextNight01SouthHallLine10"
          },
          {
+            "comment":"npc0 face down",
+            "direction":"DOWN",
+            "intValue":0
+         }, 
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight01SouthHallLine11"
+         },
+         {
+            "comment":"npc0 exits to the south",
+            "direction":"DOWN",
+            "intValue":96
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight01SouthHallLine12"
          },
          {
             "comment":"end",
@@ -1622,6 +1676,21 @@
             "comment":"NPC0 sprite",
             "intValue":2
          },
+         {
+            "comment":"npc0 moves up",
+            "direction":"UP",
+            "intValue":8
+         },      
+         {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         },              
+         {
+            "comment":"player sprite moves up",
+            "direction":"UP",
+            "intValue":8
+         },      
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -1642,6 +1711,16 @@
             "command":"DIALOG",
             "label":"StoryTextNight01WWAppliancesLine4"
          },
+         {
+            "comment":"change to npc0",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         },    
+         {
+            "comment":"face down",
+            "direction":"DOWN",
+            "intValue":0
+         },                 
          {
             "comment":"end",
             "command":"END"

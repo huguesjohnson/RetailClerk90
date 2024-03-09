@@ -113,7 +113,7 @@ TestTitleLoadDebugMenu:
 ;*******************************************************************************
 ; TEMPORARY "QUICK DEBUG" FOR DEVELOPMENT - REMOVE THIS LATER
 ;*******************************************************************************
-	move.w	#$0007,(MEM_MENU_SELECTION)
+	move.w	#$0009,(MEM_MENU_SELECTION)
 
 	bra.s	ExitProcessTitleScreen	;	return to start of game loop
 	endif

@@ -908,8 +908,25 @@ ScriptedEventNight01_TLodgeStart:
 ScriptedEventNight01_TLodgeEnd:
 
 ScriptedEventNight01_03_SouthHallStart:
-	; NPC0 sprite
-	dc.w	$0002
+	; player sprite
+	dc.w	$0001
+	; fade out
+	dc.w	SCRIPTED_EVENT_FADE_BLACK
+	; set where player sprite enters the scene
+	dc.w	SCRIPTED_EVENT_SET_PLAYER_SPRITE_X
+	dc.w	$0164
+	; set where player sprite enters the scene
+	dc.w	SCRIPTED_EVENT_SET_PLAYER_SPRITE_Y
+	dc.w	$0088
+	; change scene to south hall
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_SHALL
+	; move down to npc0
+	dc.w	DIRECTION_DOWN
+	dc.w	$0084
+	; face left
+	dc.w	DIRECTION_LEFT
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01SouthHallLine1
@@ -925,6 +942,12 @@ ScriptedEventNight01_03_SouthHallStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01SouthHallLine5
+	; change to npc0
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0002
+	; face right
+	dc.w	DIRECTION_RIGHT
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01SouthHallLine6
@@ -940,9 +963,18 @@ ScriptedEventNight01_03_SouthHallStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01SouthHallLine10
+	; npc0 face down
+	dc.w	DIRECTION_DOWN
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01SouthHallLine11
+	; npc0 exits to the south
+	dc.w	DIRECTION_DOWN
+	dc.w	$0060
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight01SouthHallLine12
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight01_03_SouthHallEnd:
@@ -950,6 +982,15 @@ ScriptedEventNight01_03_SouthHallEnd:
 ScriptedEventNight01_Optional00Start:
 	; NPC0 sprite
 	dc.w	$0002
+	; npc0 moves up
+	dc.w	DIRECTION_UP
+	dc.w	$0008
+	; change to player sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0001
+	; player sprite moves up
+	dc.w	DIRECTION_UP
+	dc.w	$0008
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01WWAppliancesLine1
@@ -962,6 +1003,12 @@ ScriptedEventNight01_Optional00Start:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01WWAppliancesLine4
+	; change to npc0
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0002
+	; face down
+	dc.w	DIRECTION_DOWN
+	dc.w	$0000
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight01_Optional00End:

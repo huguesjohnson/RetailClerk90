@@ -2549,9 +2549,11 @@ DialogTextYuppieDay02:
 	align 2
 ; not present at night
 DialogTextYuppieDay03:
-; at denim country this day
+; at sunset video this day
 DialogTextYuppieDay04:
 	dc.w	OBJ_NPC_YUPPIE
+	dc.b	"There are too many",LF
+	dc.b	"choices.",ETX
 	align 2
 ; not present at night
 DialogTextYuppieDay05:
@@ -3114,9 +3116,9 @@ TitleScreenTextLoadGame:
 TitleScreenTextDebug:
 	dc.b	"{Debug",ETX
 TitleScreenTextTitle:
-	dc.b	"Feb24 Dev Build",ETX
+	dc.b	"Mar24 Dev Build",ETX
 TitleScreenTextTitleDebug:
-	dc.b	"Feb24 Debug Build",ETX
+	dc.b	"Mar24 Debug Build",ETX
 
 ;-------------------------------------------------------------------------------
 ; DebugScreen
@@ -4705,11 +4707,12 @@ StoryTextDay02TBooksLine3:
 	dc.b	"months though.^",FF
 	dc.b	"I'm the assistant",LF
 	dc.b	"manager at a^",FF
-	dc.b	"different location.",LF
-	dc.b	"I'm filling in until^",FF
-	dc.b	"they hire someone.",LF
-	dc.b	"This mall is too^",FF
-	dc.b	"weird for me.",LF
+	dc.b	"different location in",LF
+	dc.b	"the city.^",FF
+	dc.b	"I'm filling in until",LF
+	dc.b	"they hire someone.^",FF
+	dc.b	"This mall is too",LF
+	dc.b	"weird for me.^",FF
 	dc.b	"The customers I mean.^",ETX
 	align 2
 StoryTextDay02TBooksLine4:
@@ -4722,12 +4725,11 @@ StoryTextDay02TBooksLine5:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"Maybe it's only here",LF
 	dc.b	"then...^",FF
-	dc.b	"I get a lot of",LF
-	dc.b	"customers dressed^",FF
-	dc.b	"odd.",LF
-	dc.b	"Or that ask for books^",FF
-	dc.b	"I never heard of.",LF
-	dc.b	"Maybe they're^",FF
+	dc.b	"I get a lot who are",LF
+	dc.b	"dressed odd.^",FF
+	dc.b	"Or that ask for books",LF
+	dc.b	"I never heard of.^",FF
+	dc.b	"Maybe they're",LF
 	dc.b	"tourists.^",ETX
 	align 2
 StoryTextDay02DenimCountryNotDone:
@@ -4953,22 +4955,23 @@ StoryTextDay02FCBCampingChoice:
 	align 2
 StoryTextDay02FCBCampingChoice0:
 	dc.w	OBJ_NPC_GRANT
-	dc.b	"I'll never forget",LF
-	dc.b	"summer after^",FF
-	dc.b	"graduation.",LF
-	dc.b	"Our group drove up^",FF
-	dc.b	"north to go camping.",LF
-	dc.b	"Your mom was so^",FF
-	dc.b	"excited.",LF
-	dc.b	"She packed a ton of^",FF
-	dc.b	"grilling supplies.",LF
-	dc.b	"It rained all weekend^",FF
-	dc.b	"though.",LF
-	dc.b	"We ate at a dumpy^",FF
-	dc.b	"small pizza place.",LF
-	dc.b	"Luckily she packed^",FF
-	dc.b	"extra blankets.",LF
-	dc.b	"It was so cold at^",FF
+	dc.b	"I'll never forget the",LF
+	dc.b	"summer^",FF
+	dc.b	"after our senior",LF
+	dc.b	"year.^",FF
+	dc.b	"We drove up north to",LF
+	dc.b	"go camping.^",FF
+	dc.b	"Your mom was so",LF
+	dc.b	"excited.^",FF
+	dc.b	"She packed a ton of",LF
+	dc.b	"grilling supplies.^",FF
+	dc.b	"It rained all weekend",LF
+	dc.b	"though.^",FF
+	dc.b	"We ate at a dumpy",LF
+	dc.b	"small pizza place.^",FF
+	dc.b	"Luckily she packed",LF
+	dc.b	"extra blankets.^",FF
+	dc.b	"It was so cold at",LF
 	dc.b	"night.^",ETX
 	align 2
 StoryTextDay02FCBCampingChoice1:

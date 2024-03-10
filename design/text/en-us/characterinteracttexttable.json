@@ -1461,8 +1461,9 @@
       	"align":2},
       "DialogTextYuppieDay03":{"comment":"not present at night"},
       "DialogTextYuppieDay04":{
-      	"comment":"at denim country this day",
+      	"comment":"at sunset video this day",
       	"dialogTitle":"OBJ_NPC_YUPPIE",
+      	"text":"There are too many choices.",
       	"align":2},
       "DialogTextYuppieDay05":{"comment":"not present at night"},
       "DialogTextYuppieDay06":{

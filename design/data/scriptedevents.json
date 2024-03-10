@@ -1787,6 +1787,16 @@
             "command":"FADE_BLACK"
          },
          {
+            "comment":"set where player sprite starts the scene",
+            "command":"SET_PLAYER_SPRITE_X",
+            "intValue":330
+         },
+         {
+            "comment":"set where player sprite starts the scene",
+            "command":"SET_PLAYER_SPRITE_Y",
+            "intValue":240
+         },         
+         {
             "comment":"change scene to vb",
             "command":"CHANGE_SCENE",
             "intConst":"SCENE_ID_VB"
@@ -1832,11 +1842,6 @@
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"StoryTextDay02TLodgeLine1"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
             "label":"StoryTextDay02TLodgeLine2"
          },
          {
@@ -1856,11 +1861,6 @@
          {
             "comment":"NPC0 sprite",
             "intValue":2
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay02TBooksLine1"
          },
          {
             "comment":"dialog",

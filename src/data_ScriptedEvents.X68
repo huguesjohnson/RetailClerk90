@@ -1046,6 +1046,12 @@ ScriptedEventDay02_00_IntroStart:
 	dc.w	$0002
 	; fade out
 	dc.w	SCRIPTED_EVENT_FADE_BLACK
+	; set where player sprite starts the scene
+	dc.w	SCRIPTED_EVENT_SET_PLAYER_SPRITE_X
+	dc.w	$014a
+	; set where player sprite starts the scene
+	dc.w	SCRIPTED_EVENT_SET_PLAYER_SPRITE_Y
+	dc.w	$00f0
 	; change scene to vb
 	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
 	dc.w	SCENE_ID_VB

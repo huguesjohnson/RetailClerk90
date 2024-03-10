@@ -334,18 +334,17 @@ EndNight01SetupGameState: ; separated to help with debugging
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsDay ; reset the NPC locations
 	; setup for optional event
-	move.l	#$19202122,(MEM_NPC_LOCATION_SVIDEO)	
+	move.l	#$19262120,(MEM_NPC_LOCATION_SVIDEO)	
 	;---------------------------------------------------------------------------	
 	; scatter some NPCs around
 	;---------------------------------------------------------------------------	
-	move.l	#$06120000,(MEM_NPC_LOCATION_VB)
+	move.l	#$17120000,(MEM_NPC_LOCATION_FCBCAMPING)
 	move.l	#$11000000,(MEM_NPC_LOCATION_EWHALL)
 	move.l	#$00000000,(MEM_NPC_LOCATION_SHALL)		
 	move.l	#$08200000,(MEM_NPC_LOCATION_POGODAWG)
-	move.l	#$0F210000,(MEM_NPC_LOCATION_CAVERN)
+	move.l	#$210F0000,(MEM_NPC_LOCATION_CAVERN)
 	move.l	#$14220000,(MEM_NPC_LOCATION_FCBCHECKOUT)
 	move.l	#$1B240000,(MEM_NPC_LOCATION_WWAUDIO)
-	move.l	#$05260000,(MEM_NPC_LOCATION_DENIMCOUNTRY)
 	move.l	#$1D230000,(MEM_NPC_LOCATION_WWAPPLIANCES)
 	move.l	#$0B250000,(MEM_NPC_LOCATION_CPLANET)
 	rts

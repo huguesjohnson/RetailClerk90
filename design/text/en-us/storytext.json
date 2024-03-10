@@ -990,7 +990,7 @@
          },
       "StoryTextDay02TBooksLine3":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"I'm older than the average employee...|I've only been here 6 months though.|I'm the assistant manager at a different location.|I'm filling in until they hire someone.|This mall is too weird for me.|The customers I mean.^",
+         "text":"I'm older than the average employee...|I've only been here 6 months though.|I'm the assistant manager at a different location in the city.|I'm filling in until they hire someone.|This mall is too weird for me.|The customers I mean.^",
          "align":2
          },       
       "StoryTextDay02TBooksLine4":{
@@ -1000,7 +1000,7 @@
          },
       "StoryTextDay02TBooksLine5":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"Maybe it's only here then...|I get a lot of customers dressed odd.|Or that ask for books I never heard of.|Maybe they're tourists.^",
+         "text":"Maybe it's only here then...|I get a lot who are dressed odd.|Or that ask for books I never heard of.|Maybe they're tourists.^",
          "align":2
          },
       "StoryTextDay02DenimCountryNotDone":{
@@ -1182,7 +1182,7 @@
          },        
       "StoryTextDay02FCBCampingChoice0":{
             "dialogTitle":"OBJ_NPC_GRANT",
-            "text":"I'll never forget summer after graduation.|Our group drove up north to go camping.|Your mom was so excited.|She packed a ton of grilling supplies.|It rained all weekend though.|We ate at a dumpy small pizza place.|Luckily she packed extra blankets.|It was so cold at night.^",
+            "text":"I'll never forget the summer|after our senior year.|We drove up north to go camping.|Your mom was so excited.|She packed a ton of grilling supplies.|It rained all weekend though.|We ate at a dumpy small pizza place.|Luckily she packed extra blankets.|It was so cold at night.^",
             "align":2
          },         
       "StoryTextDay02FCBCampingChoice1":{

@@ -33,6 +33,7 @@ ActionScriptDay02TLodgeInteract:
 	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventDay02_01_TLodgeStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
 	bsr.w ShowDefaultText
 	rts		
@@ -67,6 +68,7 @@ ActionScriptDay02TBooksInteract:
 	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventDay02_02_TBooksStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
 	bsr.w ShowDefaultText
 	rts
@@ -128,9 +130,11 @@ ActionScriptDay02DenimCountryInteract:
 	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventDay02_03_DenimCountryStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .notdone
 	lea	StoryTextDay02DenimCountryNotDone,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the dialog
+	rts
 .default
 	bsr.w ShowDefaultText
 	rts
@@ -144,6 +148,19 @@ ActionScriptDay02DenimCountryUpdateState:
 	move.l	#$070F0000,(MEM_NPC_LOCATION_NSHACK) ; db is now at nshack
 	rts
 
+;*******************************************************************************
+; SCENE_ID_SHALL
+;*******************************************************************************
+ActionScriptDay02SouthHallExit:	
+	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d7 ; copy player sprite direction to d7
+	cmpi.w	#DIRECTION_DOWN,d7 ; is the player facing south?
+	beq.s	.south ; branch if so
+	bsr.w	DefaultExitScene ; default scene exit
+	rts	
+.south
+	lea ScriptedEventNotTimeToLeaveErynStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event	
+	rts
 
 ;*******************************************************************************
 ; SCENE_ID_SVIDEO

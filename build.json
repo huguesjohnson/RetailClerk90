@@ -2741,6 +2741,7 @@
 		{"day":4,"scene":"SCENE_ID_SVIDEO","action":"Respond","label":"ActionScriptDay02SVideoRespond"},
 		{"day":4,"scene":"SCENE_ID_FCBCAMPING","action":"Interact","label":"ActionScriptDay02FCBCampingInteract"},
 		{"day":4,"scene":"SCENE_ID_FCBCAMPING","action":"Respond","label":"ActionScriptDay02FCBCampingRespond"},
+		{"day":4,"scene":"SCENE_ID_SHALL","action":"ExitScene","label":"ActionScriptDay02SouthHallExit"},		
 		{"day":5,"scene":"SCENE_ID_FCBCAMPING","action":"Interact","label":"ActionScriptNight02FCBInteract"},
 		{"day":5,"scene":"SCENE_ID_NSHACK","action":"EnterScene","label":"ActionScriptNight02NShackEnter"},
 		{"day":5,"scene":"SCENE_ID_WWHALL","action":"EnterScene","label":"ActionScriptNight02WWHallEnter"},

@@ -318,7 +318,7 @@
 		},
 		{
 			"x":220,
-			"y":224,
+			"y":200,
 			"direction":"DIRECTION_RIGHT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"

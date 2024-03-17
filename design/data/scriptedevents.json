@@ -1898,11 +1898,6 @@
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"StoryTextDay02DenimCountryLine1"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
             "label":"StoryTextDay02DenimCountryLine2"
          },
          {
@@ -1992,10 +1987,6 @@
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay02NShackLine11"
-         },
-         {
-            "comment":"NPC0 sprite",
-            "intValue":2
          },
          {
             "comment":"fade out",

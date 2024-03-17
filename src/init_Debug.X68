@@ -392,6 +392,7 @@ LaunchDebug10: ; day 02 - midpoint
 	bset.l	#FLAG_DAY02_EVENT01_TBOOKS,d7 
 	move.l	d7,(MEM_DAY_EVENT_FLAGS)
 	bsr.w	CheckDay02Flags
+	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; clear story event	
 	;---------------------------------------------------------------------------
 	; load starting scene and sprites
 	;---------------------------------------------------------------------------

@@ -81,9 +81,9 @@ CheckDay02Flags:
 	beq.s	.exit ; not set, exit
 	; both events are done - setup next event
 	bset.l	#FLAG_DAY02_EVENT02_TALKEDTOPEOPLE,d7 ; set flag
-	move.w	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
 	move.w	#OBJECTIVE_D02_O01_ReportBack,(MEM_OBJECTIVE) ; update objective
-	move.w	#SCENE_ID_DENIMCOUNTRY,(MEM_STORY_EVENT2_SCENE_ID) ; set story event	
+	move.w	#SCENE_ID_DENIMCOUNTRY,(MEM_STORY_EVENT1_SCENE_ID) ; set story event
 .exit
 	rts
 	
@@ -126,7 +126,7 @@ ActionScriptDay02DenimCountryInteract:
 	;---------------------------------------------------------------------------
 	bsr.s	ActionScriptDay02DenimCountryUpdateState
 	; setup scripted event
-	lea	StoryTextDay02NShackLine1,a6 ; point a6 to the first dialog
+	lea	StoryTextDay02DenimCountryLine1,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventDay02_03_DenimCountryStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event

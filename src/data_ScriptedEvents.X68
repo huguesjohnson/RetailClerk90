@@ -1079,9 +1079,6 @@ ScriptedEventDay02_01_TLodgeStart:
 	dc.w	$0002
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextDay02TLodgeLine1
-	; dialog
-	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay02TLodgeLine2
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
@@ -1093,9 +1090,6 @@ ScriptedEventDay02_01_TLodgeEnd:
 ScriptedEventDay02_02_TBooksStart:
 	; NPC0 sprite
 	dc.w	$0002
-	; dialog
-	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextDay02TBooksLine1
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay02TBooksLine2
@@ -1115,9 +1109,6 @@ ScriptedEventDay02_02_TBooksEnd:
 ScriptedEventDay02_03_DenimCountryStart:
 	; NPC0 sprite
 	dc.w	$0002
-	; dialog
-	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextDay02DenimCountryLine1
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay02DenimCountryLine2
@@ -1173,8 +1164,6 @@ ScriptedEventDay02_TransitionStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextDay02NShackLine11
-	; NPC0 sprite
-	dc.w	$0002
 	; fade out
 	dc.w	SCRIPTED_EVENT_FADE_BLACK
 	; change scene to tbooks

@@ -719,7 +719,7 @@ ActionTableStart:
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
-	dc.l	ActionScriptDay02NShackEnter ; EnterScene
+	dc.l	DefaultEnterScene ; EnterScene
 ; scene 14
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
@@ -893,7 +893,7 @@ ActionTableStart:
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
-	dc.l	ActionScriptNight02CNowInteract ; EnterScene
+	dc.l	ActionScriptNight02CNowEnter ; EnterScene
 ; scene 17
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
@@ -992,7 +992,7 @@ ActionTableStart:
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	ActionScriptDay03SHallExit ; ExitScene
-	dc.l	ActionScriptDay03SHallEnter ; EnterScene
+	dc.l	DefaultEnterScene ; EnterScene
 ; scene 5
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond

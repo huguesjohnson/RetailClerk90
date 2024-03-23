@@ -26,10 +26,9 @@ ActionScriptDay04CavernInteract:
 	;---------------------------------------------------------------------------
 	bsr.s	ActionScriptDay04CavernUpdateState
 	; setup scripted event
-	lea	StoryTextDay04CavernLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventDay04_01_CavernStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
 	bsr.w ShowDefaultText
 	rts

@@ -435,9 +435,12 @@ LaunchDebug12: ; night 02 - midpoint
 	bsr.w	InitGlobalEvents
 	bsr.w	SetupTradingSequenceNight
 	bsr.w	EndDay02SetupGameState
+	move.w	#PLAYER_SPRITE_CARL,(MEM_PLAYER_SPRITE)	
 	;---------------------------------------------------------------------------	
 	; set events complete
 	;---------------------------------------------------------------------------	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	bsr.w	Night02WWHallUpdateState
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 
 	bset.l	#FLAG_NIGHT02_EVENT00_FCBCAMPING,d7
 	bset.l	#FLAG_NIGHT02_EVENT01_NSHACK,d7 

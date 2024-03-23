@@ -28,10 +28,9 @@ ActionScriptNight06BasementCafeInteract:
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
 	move.w	#SCENE_ID_NSHACK,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
 	; setup scripted event
-	lea	StoryTextNight06BasementKitchenLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventNight06_01_BasementKitchenStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
 	bsr.w ShowDefaultText
 	rts
@@ -111,10 +110,9 @@ ActionScriptNight06CPlanetInteract:
 	bset.l	#FLAG_GLOBAL_REL3Complete,d7 ; set event is done
 	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS) ; save updated flags
 	; setup scripted event
-	lea	StoryTextNight06CPlanetLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventNight06_Optional01Start,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
 	bsr.w ShowDefaultText
 	rts
@@ -151,10 +149,9 @@ ActionScriptNight06VBInteract:
 	bset.l	#FLAG_GLOBAL_REL4Complete,d7 ; set event is done
 	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS) ; save updated flags
 	; setup scripted event
-	lea	StoryTextNight06VBLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventNight06_Optional02Start,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
 	bsr.w ShowDefaultText
 	rts
@@ -191,10 +188,9 @@ ActionScriptNight06WWAppliancesInteract:
 	bset.l	#FLAG_GLOBAL_REL5Complete,d7 ; set event is done
 	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS) ; save updated flags
 	; setup scripted event
-	lea	StoryTextNight06WWAppliancesLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventNight06_Optional00Start,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
 	bsr.w ShowDefaultText
 	rts

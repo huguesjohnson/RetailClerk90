@@ -50,6 +50,7 @@ ActionScriptNight05BasementMDormEnter:
 	; setup scripted event
 	lea ScriptedEventNight05_02_BasementMDormStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
 	bsr.w ShowDefaultText
 	rts
@@ -73,6 +74,7 @@ ActionScriptNight05BasementOfficeEnter:
 	; setup scripted event
 	lea ScriptedEventNight05_03_BasementOfficeStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
 	bsr.w ShowDefaultText
 	rts

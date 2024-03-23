@@ -1930,9 +1930,33 @@
       "name":"ScriptedEventDay02_Transition",
       "actions":[
          {
-            "comment":"NPC0 sprite",
-            "intValue":2
+            "comment":"player sprite",
+            "intValue":1
          },
+         {
+            "comment":"fade out",
+            "command":"FADE_BLACK"
+         },
+         {
+            "comment":"set where player sprite starts the scene",
+            "command":"SET_PLAYER_SPRITE_X",
+            "intValue":96
+         },
+         {
+            "comment":"set where player sprite starts the scene",
+            "command":"SET_PLAYER_SPRITE_Y",
+            "intValue":220
+         },         
+         {
+            "comment":"change scene to nshack",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_NSHACK"
+         },         
+         {
+            "comment":"move player sprite into the scene",
+            "direction":"RIGHT",
+            "intValue":48
+         },        
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -1949,10 +1973,35 @@
             "label":"StoryTextDay02NShackLine3"
          },
          {
+            "comment":"change to npc1 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":3
+         }, 
+         {
+            "comment":"start moving npc1 out of the scene",
+            "direction":"LEFT",
+            "intValue":64
+         },         
+         {
+            "comment":"face npc1 right before the next dialog",
+            "direction":"RIGHT",
+            "intValue":0
+         },           
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay02NShackLine4"
          },
+         {
+            "comment":"move npc1 out of the scene",
+            "direction":"DOWN",
+            "intValue":32
+         },       
+         {
+            "comment":"move npc1 out of the scene",
+            "direction":"LEFT",
+            "intValue":48
+         },            
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -1968,6 +2017,26 @@
             "command":"DIALOG",
             "label":"StoryTextDay02NShackLine7"
          },
+         {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         },         
+         {
+            "comment":"move player sprite toward counter",
+            "direction":"RIGHT",
+            "intValue":48
+         }, 
+         {
+            "comment":"move player sprite toward counter",
+            "direction":"UP",
+            "intValue":24
+         }, 
+         {
+            "comment":"player sprite face right",
+            "direction":"RIGHT",
+            "intValue":48
+         }, 
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -1989,14 +2058,59 @@
             "label":"StoryTextDay02NShackLine11"
          },
          {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay02NShackLine12"
+         },         
+         {
             "comment":"fade out",
             "command":"FADE_BLACK"
          },
+         {
+            "comment":"change player sprite",
+            "command":"CHANGE_PLAYER_SPRITE",
+            "intConst":"PLAYER_SPRITE_CARL"
+         },         
+         {
+            "comment":"set where player sprite starts the scene",
+            "command":"SET_PLAYER_SPRITE_X",
+            "intValue":160
+         },
+         {
+            "comment":"set where player sprite starts the scene",
+            "command":"SET_PLAYER_SPRITE_Y",
+            "intValue":256
+         }, 
          {
             "comment":"change scene to tbooks",
             "command":"CHANGE_SCENE",
             "intConst":"SCENE_ID_TBOOKS"
          },
+         {
+            "comment":"Carl is doing some closing stuff",
+            "direction":"UP",
+            "intValue":32
+         },           
+         {
+            "comment":"Carl is doing some closing stuff",
+            "direction":"DOWN",
+            "intValue":8
+         },          
+         {
+            "comment":"Carl is doing some closing stuff",
+            "direction":"RIGHT",
+            "intValue":36
+         },  
+         {
+            "comment":"Carl is doing some closing stuff",
+            "direction":"UP",
+            "intValue":32
+         },           
+         {
+            "comment":"Carl is doing some closing stuff",
+            "direction":"DOWN",
+            "intValue":0
+         },           
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -2016,6 +2130,31 @@
             "intValue":2
          },
          {
+            "comment":"move npc0 out of the scene",
+            "direction":"LEFT",
+            "intValue":208
+         },      
+         {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         },            
+         {
+            "comment":"face left",
+            "direction":"LEFT",
+            "intValue":0
+         },
+         {
+            "comment":"change to npc1 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":3
+         },           
+         {
+            "comment":"move npc1 to the right",
+            "direction":"RIGHT",
+            "intValue":108
+         },         
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay02SVideoLine1"
@@ -2031,6 +2170,22 @@
             "label":"StoryTextDay02SVideoLine3"
          },
          {
+            "comment":"move npc1 out of the scene",
+            "direction":"LEFT",
+            "intValue":208
+         },       
+         {
+            "comment":"change to npc2 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":4
+         },           
+         {
+            "comment":"move npc2 into the scene",
+            "direction":"RIGHT",
+            "intValue":180
+         },         
+            
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay02SVideoLine4"
@@ -2045,6 +2200,23 @@
             "command":"DIALOG",
             "label":"StoryTextDay02SVideoLine6"
          },
+         {
+            "comment":"move npc2 out of scene",
+            "direction":"LEFT",
+            "intValue":180
+         },          
+
+         {
+            "comment":"change to npc3 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":5
+         },           
+         {
+            "comment":"move npc3 into the scene",
+            "direction":"RIGHT",
+            "intValue":180
+         },
+         
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -2065,6 +2237,22 @@
             "command":"DIALOG",
             "label":"StoryTextErynSpeechless"
          },
+         {
+            "comment":"move npc3 out of scene",
+            "direction":"LEFT",
+            "intValue":180
+         },          
+         {
+            "comment":"change to npc0",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         },           
+         {
+            "comment":"move npc0 back into the scene",
+            "direction":"RIGHT",
+            "intValue":180
+         },           
+         
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -2156,43 +2344,69 @@
       "name":"ScriptedEventNight02_02_NShack",
       "actions":[
          {
-            "comment":"NPC0 sprite",
-            "intValue":2
+            "comment":"player sprite",
+            "intValue":1
          },
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"StoryTextDay02NShackLine1"
+            "label":"StoryTextNight02NShackLine1"
          },
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"StoryTextDay02NShackLine2"
+            "label":"StoryTextNight02NShackLine2"
          },
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"StoryTextDay02NShackLine3"
+            "label":"StoryTextNight02NShackLine3"
+         },
+         {
+            "comment":"move player toward counter",
+            "direction":"RIGHT",
+            "intValue":24
+         },          
+         {
+            "comment":"move player toward counter",
+            "direction":"UP",
+            "intValue":24
+         },     
+         {
+            "comment":"move player toward counter",
+            "direction":"RIGHT",
+            "intValue":24
+         },               
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight02NShackLine4"
          },
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"StoryTextDay02NShackLine4"
+            "label":"StoryTextNight02NShackLine5"
+         },
+         
+         {
+            "comment":"change to npc1 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":3
+         },         
+         {
+            "comment":"face left",
+            "direction":"LEFT",
+            "intValue":0
+         },        
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight02NShackLine6"
          },
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"StoryTextDay02NShackLine5"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay02NShackLine6"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay02NShackLine7"
+            "label":"StoryTextNight02NShackLine7"
          },
          {
             "comment":"end",
@@ -2223,6 +2437,11 @@
             "label":"StoryTextNight02WWHallLine3"
          },
          {
+            "comment":"move npc0 out of scene",
+            "direction":"RIGHT",
+            "intValue":216
+         },         
+         {
             "comment":"end",
             "command":"END"
          }
@@ -2241,6 +2460,11 @@
             "label":"StoryTextNight02CNowLine1"
          },
          {
+            "comment":"face npc0 to the right",
+            "direction":"RIGHT",
+            "intValue":0
+         },
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight02CNowLine2"
@@ -2250,6 +2474,16 @@
             "command":"DIALOG",
             "label":"StoryTextNight02CNowLine3"
          },
+         {
+            "comment":"change to npc1 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":3
+         },          
+         {
+            "comment":"move npc1 out of scene",
+            "direction":"UP",
+            "intValue":80
+         },         
          {
             "comment":"end",
             "command":"END"
@@ -2266,22 +2500,22 @@
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"StoryTextDay02VBLine1"
+            "label":"StoryTextNight02VBLine1"
          },
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"StoryTextDay02VBLine2"
+            "label":"StoryTextNight02VBLine2"
+         },
+         {
+            "comment":"dialog", 
+            "command":"DIALOG",
+            "label":"StoryTextNight02VBLine3"
          },
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"StoryTextDay02VBLine3"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay02VBLine4"
+            "label":"StoryTextNight02VBLine4"
          },
          {
             "comment":"end",
@@ -2664,12 +2898,12 @@
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"StoryTextDay03PogoDawgLine1"
+            "label":"StoryTextDay03PogoDawg2Line1"
          },
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"StoryTextDay03PogoDawgLine2"
+            "label":"StoryTextDay03PogoDawg2Line2"
          },
          {
             "comment":"end",
@@ -2685,6 +2919,26 @@
             "intValue":2
          },
          {
+            "comment":"face npc0 down",
+            "direction":"DOWN",
+            "intValue":4
+         },
+         {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         },    
+         {
+            "comment":"move toward lower arcade cabinet",
+            "direction":"DOWN",
+            "intValue":40
+         },              
+         {
+            "comment":"move toward lower arcade cabinet",
+            "direction":"RIGHT",
+            "intValue":36 
+         },              
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay03CavernLine1"
@@ -2694,6 +2948,31 @@
             "command":"DIALOG",
             "label":"StoryTextDay03CavernLine2"
          },
+         {
+            "comment":"change to npc0 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         },          
+         {
+            "comment":"move toward lower arcade cabinet",
+            "direction":"DOWN",
+            "intValue":32
+         },              
+         {
+            "comment":"move toward lower arcade cabinet",
+            "direction":"RIGHT",
+            "intValue":0 
+         }, 
+         {
+            "comment":"move back",
+            "direction":"UP",
+            "intValue":32
+         }, 
+         {
+            "comment":"face down",
+            "direction":"DOWN",
+            "intValue":0
+         },         
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -2710,6 +2989,11 @@
             "label":"StoryTextDay03CavernLine5"
          },
          {
+            "comment":"face npc0 right",
+            "direction":"RIGHT",
+            "intValue":0
+         },              
+         {
             "comment":"end",
             "command":"END"
          }
@@ -2723,10 +3007,40 @@
             "intValue":2
          },
          {
+            "comment":"move npc0 behind the counter",
+            "direction":"DOWN",
+            "intValue":40
+         },         
+         {
+            "comment":"move npc0 behind the counter",
+            "direction":"RIGHT",
+            "intValue":90
+         },
+         {
+            "comment":"move npc0 behind the counter",
+            "direction":"UP",
+            "intValue":32
+         },          
+         {
+            "comment":"move npc0 behind the counter",
+            "direction":"LEFT",
+            "intValue":4
+         },          
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay03SVideoLine1"
          },
+         {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         },          
+         {
+            "comment":"move player sprite close to counter",
+            "direction":"RIGHT",
+            "intValue":80
+         },         
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -2741,7 +3055,12 @@
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay03SVideoLine4"
-         },         
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay03SVideoLine5"
+         },                   
          {
             "comment":"end",
             "command":"END"
@@ -2752,23 +3071,48 @@
       "name":"ScriptedEventNight03_00_Intro",
       "actions":[
          {
+            "comment":"player sprite",
+            "intValue":1
+         },      
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay03DenimCountry2Line1"
-         },      
+         },     
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextErynSpeechless"
+         },          
          {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay03DenimCountry2Line2"
          },      
          {
-            "comment":"NPC0 sprite",
-            "intValue":2
-         },
-         {
             "comment":"fade out",
             "command":"FADE_BLACK"
          },
+         {
+            "comment":"change player sprite",
+            "command":"CHANGE_PLAYER_SPRITE",
+            "intConst":"PLAYER_SPRITE_CARL"
+         },         
+         {
+            "comment":"set where player sprite starts the scene",
+            "command":"SET_PLAYER_SPRITE_X",
+            "intValue":338
+         },
+         {
+            "comment":"set where player sprite starts the scene",
+            "command":"SET_PLAYER_SPRITE_Y",
+            "intValue":166
+         }, 
+         {
+            "comment":"face down",
+            "direction":"DOWN",
+            "intValue":0
+         },          
          {
             "comment":"change scene to tbooks",
             "command":"CHANGE_SCENE",
@@ -5845,7 +6189,7 @@
       ]
    },  
    {
-      "name":"ScriptedEventCantEnterCavernBackroomEryn",
+      "name":"ScriptedEventCantEnterCavernBackroomErynDBisNPC0",
       "actions":[
          {
             "comment":"NPC0 sprite",
@@ -5875,6 +6219,49 @@
             "comment":"change to npc0 sprite",
             "command":"CHANGE_SPRITE",
             "intValue":2
+         },
+         {
+            "comment":"have NPC face right",
+            "direction":"RIGHT",
+            "intValue":0
+         },                  
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   }, 
+   {
+      "name":"ScriptedEventCantEnterCavernBackroomErynDBisNPC1",
+      "actions":[
+         {
+            "comment":"NPC1 sprite",
+            "intValue":3
+         },
+         {
+            "comment":"have NPC face up",
+            "direction":"UP",
+            "intValue":0
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextCantEnterCavernBackroomEryn"
+         },
+         {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         },
+         {
+            "comment":"move player sprite down",
+            "direction":"DOWN",
+            "intValue":4
+         },
+         {
+            "comment":"change to npc1 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":3
          },
          {
             "comment":"have NPC face down",

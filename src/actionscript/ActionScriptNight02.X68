@@ -29,10 +29,9 @@ ActionScriptNight02FCBInteract:
 	move.w	#$FFFF,(MEM_STORY_EVENT1_SCENE_ID) ; clear story event
 	bsr.w	CheckNight02Flags
 	; setup scripted event
-	lea	StoryTextNight02FCBCampingLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventNight02_01_FCBCampingStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
 	bsr.w ShowDefaultText
 	rts		
@@ -52,8 +51,6 @@ ActionScriptNight02NShackEnter:
 	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; clear story event
 	bsr.w	CheckNight02Flags
 	; setup scripted event
-	lea	StoryTextNight02NShackLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventNight02_02_NShackStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 .default
@@ -83,12 +80,9 @@ ActionScriptNight02WWHallEnter:
 	;---------------------------------------------------------------------------
 	bsr.s	Night02WWHallUpdateState
 	; setup scripted event
-	lea	StoryTextNight02WWHallLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventNight02_03_WWHallStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 .default
-	bsr.w ShowDefaultText
 	rts
 	
 ; assumes d7 has MEM_DAY_EVENT_FLAGS	
@@ -96,18 +90,18 @@ Night02WWHallUpdateState:
 	bset.l	#FLAG_NIGHT02_EVENT02_WWHALL,d7 ; set event is done
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
 	move.l	#$00000000,(MEM_NPC_LOCATION_WWHALL) ; victor is out of wwhall
-	move.l	#$0C220000,(MEM_NPC_LOCATION_CNOW) ; victor is in cnow	
+	move.l	#$0C280000,(MEM_NPC_LOCATION_CNOW) ; victor is in cnow	
+	move.l	#$07010000,(MEM_NPC_LOCATION_NSHACK) ; eryn is in nshack
+	; fast travel is available again
+	move.l	(MEM_GAME_STATE),d7 ; copy game state to d7
+	bset.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is unavailable
+	move.l	d7,(MEM_GAME_STATE) ; save updated state		
 	rts
 
 ;*******************************************************************************
 ; SCENE_ID_CNOW
 ;*******************************************************************************
-ActionScriptNight02CNowInteract:	
-	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
-	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
-	beq.w	.default ; branch if not an npc
-	cmpi.w	#$0001,d7 ; test for npc1	
-	bne.s	.default ; not npc1
+ActionScriptNight02CNowEnter:	
 	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_GLOBAL_Victor1204,d7 ; test if the optional event is complete
 	bne.s	.default ; show default text if the event is complete
@@ -116,15 +110,12 @@ ActionScriptNight02CNowInteract:
 	;---------------------------------------------------------------------------
 	bsr.s	Night02CNowUpdateState
 	; setup scripted event
-	lea	StoryTextNight02CNowLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventNight02_CNowStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 .default
-	bsr.w ShowDefaultText
 	rts	
 
-; assumes d7 has MEM_DAY_EVENT_FLAGS	
+; assumes d7 has MEM_GLOBAL_EVENT_FLAGS	
 Night02CNowUpdateState:
 	bset.l	#FLAG_GLOBAL_Victor1204,d7 ; set event is done
 	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS) ; save updated flags

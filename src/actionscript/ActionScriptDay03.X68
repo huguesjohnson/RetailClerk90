@@ -7,9 +7,18 @@
 ; SCENE_ID_POGODAWG
 ;*******************************************************************************
 ActionScriptDay03PogoDawgInteract:
+	;---------------------------------------------------------------
+	; clerk hit region is an object because they are behind the counter
+	;---------------------------------------------------------------
+	move.w	(MEM_ACTION_TARGET_OBJID),d7 ; copy the object id to d7
+	cmpi.w	#OBJ_NPC_GRIFFY,d7 ; test if the target is the clerk
+	beq.s	.npc0
+	;---------------------------------------------------------------
+	; failback
+	;---------------------------------------------------------------
 	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
 	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
-	beq.s	.default
+	beq.w	.default
 	;---------------------------------------------------------------
 	; npc 0 is the clerk
 	;---------------------------------------------------------------
@@ -27,6 +36,7 @@ ActionScriptDay03PogoDawgInteract:
 	; &&FLAG_DAY03_EVENT03_LUNCHESDELIVERED=1
 	; &&FLAG_DAY03_EVENT04_DONE=0 -> finish the subtask
 	;---------------------------------------------------------------------------
+.npc0
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	btst.l	#FLAG_DAY03_EVENT00_POGODAWG,d7 ; test if the event is complete
 	beq.s	.start ; start the subtask
@@ -43,8 +53,6 @@ ActionScriptDay03PogoDawgInteract:
 .finish
 	bsr.s	ActionScriptDay04PogoDawgFinishedState
 	; setup scripted event
-	lea	StoryTextDay03PogoDawg2Line1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventDay03_05_PogoDawgStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 	rts
@@ -54,9 +62,18 @@ ActionScriptDay03PogoDawgInteract:
 	move.w	#SCENE_ID_CHECKERS,(MEM_STORY_EVENT1_SCENE_ID) ; set story event
 	move.w	#SCENE_ID_CNOW,(MEM_STORY_EVENT2_SCENE_ID) ; set story event
 	move.w	#OBJECTIVE_D03_O01_DeliverLunches,(MEM_OBJECTIVE) ; update objective
+	; -------------------------------
+	; add items to inventory
+	; -------------------------------
+	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
+	move.w	#OBJ_ITEM_LUNCH1,d7 ; item to add
+	bsr.w	AddItem ; add item to inventory		
+	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
+	move.w	#OBJ_ITEM_LUNCH2,d7 ; item to add
+	bsr.w	AddItem ; add item to inventory					
+	; -------------------------------
 	; setup scripted event
-	lea	StoryTextDay03PogoDawgLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
+	; -------------------------------
 	lea ScriptedEventDay03_01_PogoDawgStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 	rts
@@ -102,11 +119,14 @@ ActionScriptDay03CheckersInteract:
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
 	move.w	#$FFFF,(MEM_STORY_EVENT1_SCENE_ID) ; clear story event
 	bsr.w	CheckDay03Events
+	; remove item from inventory
+	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
+	move.w	#OBJ_ITEM_LUNCH2,d7 ; item to remove
+	bsr.w	RemoveItem ; remove item from inventory			
 	; setup scripted event
-	lea	StoryTextDay03CheckersLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventDay03_02_CheckersStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
 	bsr.w ShowDefaultText
 	rts
@@ -136,11 +156,14 @@ ActionScriptDay03CNowInteract:
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
 	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; clear story event
 	bsr.w	CheckDay03Events
+	; remove item from inventory
+	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
+	move.w	#OBJ_ITEM_LUNCH1,d7 ; item to remove
+	bsr.w	RemoveItem ; remove item from inventory			
 	; setup scripted event
-	lea	StoryTextDay03CNowLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventDay03_03_ClothesNowStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
 	bsr.w ShowDefaultText
 	rts
@@ -155,8 +178,8 @@ CheckDay03Events:
 	bset.l	#FLAG_DAY03_EVENT03_LUNCHESDELIVERED,d7 ; set events complete
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
 	move.w	#OBJECTIVE_D03_O02_ReportBack,(MEM_OBJECTIVE) ; update objective	
-	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
-	move.l	#$18000000,(MEM_NPC_LOCATION_SHALL) ; move characters
+	move.w	#SCENE_ID_POGODAWG,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
+	move.l	#$00000000,(MEM_NPC_LOCATION_SHALL) ; move characters
 .exit
 	rts
 
@@ -181,7 +204,8 @@ ActionScriptDay03DenimCountryInteract:
 	;---------------------------------------------------------------------------
 	; else end of the day
 	;---------------------------------------------------------------------------
-	bra.w	EndDay03
+	bsr.w	EndDay03
+	rts
 .inprogress
 	; just show a message
 	lea	StoryTextDay03DenimCountryInprogress,a6 ; point a6 to the dialog
@@ -194,26 +218,6 @@ ActionScriptDay03DenimCountryInteract:
 ;*******************************************************************************
 ; SCENE_ID_SHALL
 ;*******************************************************************************
-ActionScriptDay03SHallEnter:	
-	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
-	btst.l	#FLAG_DAY03_EVENT05_SOUTHHALL,d7 ; test if the optional event is complete
-	bne.s	.default ; show default text if the event is complete
-	;---------------------------------------------------------------------------
-	; else update flags and run the scripted event
-	;---------------------------------------------------------------------------
-	bset.l	#FLAG_DAY03_EVENT05_SOUTHHALL,d7 ; set event is done
-	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-	move.w	#SCENE_ID_POGODAWG,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
-	move.w	#OBJECTIVE_D01_O01_ReportBack,(MEM_OBJECTIVE) ; update objective
-	move.l	#$00000000,(MEM_NPC_LOCATION_SHALL) ; shall is empty again
-	; setup scripted event
-	lea	StoryTextDay03PogoDawg2Line1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
-	lea ScriptedEventDay03_04_SouthHallStart,a6 ; point a6 to event to load
-	bsr.w QueueScriptedEvent ; queue the event
-.default
-	rts
-	
 ActionScriptDay03SHallExit:	
 	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d7 ; copy player sprite direction to d7
 	cmpi.w	#DIRECTION_DOWN,d7 ; is the player facing south?
@@ -289,7 +293,7 @@ ActionScriptDay03CavernInteract:
 	; else check if the event is complete
 	;---------------------------------------------------------------
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
-	btst.l	#FLAG_DAY03_OPTIONAL1,d7 ; test if the optional event is complete
+	btst.l	#FLAG_DAY03_OPTIONAL2,d7 ; test if the optional event is complete
 	bne.s	.default ; show default text if the event is complete
 	lea	StoryTextDay03CavernChoice,a6 ; load dialog text	
 	bsr.w	Show2ChoiceDialog ; prompt to do the event

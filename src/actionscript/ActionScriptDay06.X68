@@ -69,10 +69,9 @@ ActionScriptDay06CavernInteract:
 	bset.l	#FLAG_GLOBAL_REL0Complete,d7 ; set event is done
 	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS) ; save updated flags
 	; setup scripted event
-	lea	StoryTextDay06CavernLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventDay06_Optional00Start,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
 	bsr.w ShowDefaultText
 	rts
@@ -109,10 +108,9 @@ ActionScriptDay06SVideoInteract:
 	bset.l	#FLAG_GLOBAL_REL1Complete,d7 ; set event is done
 	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS) ; save updated flags
 	; setup scripted event
-	lea	StoryTextDay06SVideoLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventDay06_Optional01Start,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
 	bsr.w ShowDefaultText
 	rts
@@ -138,10 +136,9 @@ ActionScriptDay06FCBCampingInteract:
 	bset.l	#FLAG_GLOBAL_REL2Complete,d7 ; set event is done
 	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS) ; save updated flags
 	; setup scripted event
-	lea	StoryTextDay06FCBCampingLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventDay06_Optional02Start,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
 	bsr.w ShowDefaultText
 	rts

@@ -86,20 +86,6 @@ CheckDay02Flags:
 	move.w	#SCENE_ID_DENIMCOUNTRY,(MEM_STORY_EVENT1_SCENE_ID) ; set story event
 .exit
 	rts
-	
-;*******************************************************************************
-; SCENE_ID_NSHACK
-;*******************************************************************************
-ActionScriptDay02NShackEnter:	
-	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
-	btst.l	#FLAG_DAY02_EVENT03_DENIMCOUNTRY,d7 ; test if the event is complete
-	beq.s	.default ; default if the event is not complete
-	;---------------------------------------------------------------------------
-	; else end the day
-	;---------------------------------------------------------------------------
-	bsr.w	EndDay02
-.default
-	rts	
 
 ;*******************************************************************************
 ; SCENE_ID_DENIMCOUNTRY
@@ -145,7 +131,6 @@ ActionScriptDay02DenimCountryUpdateState:
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
 	move.w	#SCENE_ID_NSHACK,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
 	move.w	#OBJECTIVE_D02_O02_VisitNS,(MEM_OBJECTIVE) ; update objective
-	move.l	#$070F0000,(MEM_NPC_LOCATION_NSHACK) ; db is now at nshack
 	rts
 
 ;*******************************************************************************
@@ -155,6 +140,18 @@ ActionScriptDay02SouthHallExit:
 	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d7 ; copy player sprite direction to d7
 	cmpi.w	#DIRECTION_DOWN,d7 ; is the player facing south?
 	beq.s	.south ; branch if so
+	cmpi.w	#DIRECTION_RIGHT,d7 ; is the player facing east?
+	bne.s	.default ; branch if not
+	; test if day end event should run	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_DAY02_EVENT03_DENIMCOUNTRY,d7 ; test if the event is complete
+	beq.s	.default ; default if the event is not complete
+	;---------------------------------------------------------------------------
+	; else end the day
+	;---------------------------------------------------------------------------
+	bsr.w	EndDay02
+	rts	
+.default	
 	bsr.w	DefaultExitScene ; default scene exit
 	rts	
 .south
@@ -284,15 +281,15 @@ EndDay02SetupGameState: ; separated to help with debugging
 	move.w	#SCENE_ID_CPLANET,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
 	move.w	#SCENE_ID_VB,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
 	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
-	move.w	#PLAYER_SPRITE_CARL,(MEM_PLAYER_SPRITE) ; initial sprite
-	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
-	move.w	#$00DE,(MEM_PLAYER_SPRITE_X)
-	move.w	#$00EE,(MEM_PLAYER_SPRITE_Y)
+	; fast travel is temporarily unavailable
+	move.l	(MEM_GAME_STATE),d7 ; copy game state to d7
+	bclr.l	#STATE_FLAG_FAST_TRAVEL_AVAILABLE,d7 ; fast travel is unavailable
+	move.l	d7,(MEM_GAME_STATE) ; save updated state	
 	;---------------------------------------------------------------------------	
 	; update NPC locations
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsNight ; reset the NPC locations
-	move.l	#$22000000,(MEM_NPC_LOCATION_WWHALL) ; victor is in wwhall
-	move.l	#$07010000,(MEM_NPC_LOCATION_NSHACK) ; eryn is in nshack
-	move.l	#$11000000,(MEM_NPC_LOCATION_EEHALL) ; put the guard somewhere 			
+	move.l	#$28000000,(MEM_NPC_LOCATION_WWHALL) ; victor is in wwhall
+	move.l	#$11000000,(MEM_NPC_LOCATION_EEHALL) ; put the guard somewhere 		
+	move.l	#$070F0000,(MEM_NPC_LOCATION_NSHACK) ; db is now at nshack		
 	rts

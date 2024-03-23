@@ -26,10 +26,9 @@ ActionScriptNight04NShackInteract:
 	;---------------------------------------------------------------------------
 	bsr.s	ActionScriptNight04NShackUpdateState
 	; setup scripted event
-	lea	StoryTextNight04NShackLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventNight04_01_NShackStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
 	bsr.w ShowDefaultText
 	rts		
@@ -54,8 +53,6 @@ ActionScriptNight04CavernEnterScene:
 	;---------------------------------------------------------------------------
 	bsr.s	ActionScriptNight04CavernUpdateState
 	; setup scripted event
-	lea	StoryTextNight04CavernLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventDay04_01_CavernStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 .default
@@ -163,8 +160,6 @@ ActionScriptNight04SHallEnter:
 	;---------------------------------------------------------------------------
 	bsr.s	ActionScriptNight04SHallUpdateState
 	; setup scripted event
-	lea	StoryTextNight04SouthHallLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventNight04_03_SouthHallStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 .default

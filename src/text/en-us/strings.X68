@@ -3489,6 +3489,9 @@ LegalScreenLine27:
 ; StoryText
 ; Text from the main story
 ;-------------------------------------------------------------------------------
+StoryTextDefault:
+	dc.w	OBJ_NPC_BASE
+	align 2
 StoryTextErynSpeechless:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"....^",ETX
@@ -4797,23 +4800,26 @@ StoryTextDay02NShackLine2:
 StoryTextDay02NShackLine3:
 	dc.w	OBJ_NPC_DB
 	dc.b	"I don't want to get",LF
-	dc.b	"involved.^",FF
+	dc.b	"involved.",ETX
+	align 2
+StoryTextDay02NShackLine4:
+	dc.w	OBJ_NPC_DB
 	dc.b	"If he talks to me",LF
 	dc.b	"that's fine.^",FF
 	dc.b	"But I'm not looking",LF
 	dc.b	"for drama again.^",ETX
 	align 2
-StoryTextDay02NShackLine4:
+StoryTextDay02NShackLine5:
 	dc.w	OBJ_NPC_JEN
 	dc.b	"Oh hi, you're Eryn",LF
 	dc.b	"right?^",ETX
 	align 2
-StoryTextDay02NShackLine5:
+StoryTextDay02NShackLine6:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"Yeah. I'll come back",LF
 	dc.b	"later.^",ETX
 	align 2
-StoryTextDay02NShackLine6:
+StoryTextDay02NShackLine7:
 	dc.w	OBJ_NPC_JEN
 	dc.b	"It's fine, you're not",LF
 	dc.b	"interupting.^",FF
@@ -4824,7 +4830,7 @@ StoryTextDay02NShackLine6:
 	dc.b	"You're asking around",LF
 	dc.b	"about something?^",ETX
 	align 2
-StoryTextDay02NShackLine7:
+StoryTextDay02NShackLine8:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"I'm not. I don't",LF
 	dc.b	"care.^",FF
@@ -4832,7 +4838,7 @@ StoryTextDay02NShackLine7:
 	dc.b	"who sent this letter.^",FF
 	dc.b	"I think it's a prank.^",ETX
 	align 2
-StoryTextDay02NShackLine8:
+StoryTextDay02NShackLine9:
 	dc.w	OBJ_NPC_JEN
 	dc.b	"That's one",LF
 	dc.b	"explanation.^",FF
@@ -4845,12 +4851,12 @@ StoryTextDay02NShackLine8:
 	dc.b	"Did I see you waiting",LF
 	dc.b	"in the hall late?^",ETX
 	align 2
-StoryTextDay02NShackLine9:
+StoryTextDay02NShackLine10:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"Yeah, I don't have a",LF
 	dc.b	"car yet.^",ETX
 	align 2
-StoryTextDay02NShackLine10:
+StoryTextDay02NShackLine11:
 	dc.w	OBJ_NPC_JEN
 	dc.b	"You can wait here",LF
 	dc.b	"instead.^",FF
@@ -4859,7 +4865,7 @@ StoryTextDay02NShackLine10:
 	dc.b	"There are some odd",LF
 	dc.b	"types around lately.^",ETX
 	align 2
-StoryTextDay02NShackLine11:
+StoryTextDay02NShackLine12:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"Thanks for the offer.",ETX
 	align 2
@@ -4890,32 +4896,31 @@ StoryTextDay02SVideoChoice1:
 	dc.b	"would be great.",ETX
 	align 2
 StoryTextDay02SVideoLine1:
-	dc.w	OBJ_NPC_LOSTGUY
-	dc.b	"Hey. Is this the",LF
-	dc.b	"video store?^",ETX
-	align 2
-StoryTextDay02SVideoLine2:
-	dc.w	OBJ_NPC_ERYN
-	dc.b	"... Yes.^",ETX
-	align 2
-StoryTextDay02SVideoLine3:
-	dc.w	OBJ_NPC_LOSTGUY
-	dc.b	"Alight, thanks.",ETX
-	align 2
-StoryTextDay02SVideoLine4:
-	dc.w	OBJ_NPC_SHOPPER
+	dc.w	OBJ_NPC_YUPPIE
 	dc.b	"Did this store used",LF
 	dc.b	"to be something else?^",ETX
 	align 2
-StoryTextDay02SVideoLine5:
+StoryTextDay02SVideoLine2:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"Everything used to be",LF
 	dc.b	"something else.",ETX
 	align 2
+StoryTextDay02SVideoLine3:
+	dc.w	OBJ_NPC_YUPPIE
+	dc.b	"I suppose so.",ETX
+	align 2
+StoryTextDay02SVideoLine4:
+	dc.w	OBJ_NPC_LOSTGUY
+	dc.b	"Hey. Is this the",LF
+	dc.b	"video store?^",ETX
+	align 2
+StoryTextDay02SVideoLine5:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"No.^",ETX
+	align 2
 StoryTextDay02SVideoLine6:
-	dc.w	OBJ_NPC_SHOPPER
-	dc.b	"Huh, yeah, I guess.",LF
-	dc.b	"Thanks.",ETX
+	dc.w	OBJ_NPC_LOSTGUY
+	dc.b	"Alight, thanks.",ETX
 	align 2
 StoryTextDay02SVideoLine7:
 	dc.w	OBJ_NPC_ROCKER
@@ -4929,7 +4934,7 @@ StoryTextDay02SVideoLine8:
 	align 2
 StoryTextDay02SVideoLine9:
 	dc.w	OBJ_NPC_ROCKER
-	dc.b	"No.",ETX
+	dc.b	"I'm just curious.",ETX
 	align 2
 StoryTextDay02SVideoLine10:
 	dc.w	OBJ_NPC_NICKY
@@ -5200,8 +5205,9 @@ StoryTextNight02VisionLine13:
 	align 2
 StoryTextNight02VBChoice:
 	dc.w	OBJ_NPC_GRUNBERG
-	dc.b	"Stopping by to talk?",LF
-	dc.b	"{ That's right       ^",FFR
+	dc.b	"Hey Carl, Stopping by",LF
+	dc.b	"to talk?^",FFR
+	dc.b	"{ That's right       ",LF
 	dc.b	"{ Maybe later",ETX
 	align 2
 StoryTextNight02VBChoice0:
@@ -5280,7 +5286,7 @@ StoryTextNight02CPlanetLine2:
 	align 2
 StoryTextNight02CPlanetLine3:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"I don't know.|Beige?^",ETX
+	dc.b	"I don't know. Beige?^",ETX
 	align 2
 StoryTextNight02CPlanetLine4:
 	dc.w	OBJ_NPC_ELIZA
@@ -5332,8 +5338,7 @@ StoryTextDay03DenimCountryLine1:
 	dc.b	"Alright, I tried all",LF
 	dc.b	"the stores.^",FF
 	dc.b	"No one admitted",LF
-	dc.b	"sending me that^",FF
-	dc.b	"letter.^",ETX
+	dc.b	"sending the letter.^",ETX
 	align 2
 StoryTextDay03DenimCountryLine2:
 	dc.w	OBJ_NPC_LISA
@@ -5568,18 +5573,15 @@ StoryTextDay03CavernLine5:
 	align 2
 StoryTextDay03SVideoChoice:
 	dc.w	OBJ_NPC_NICKY
-	dc.b	"Are you good at math?",LF
-	dc.b	"{ I'm OK             ^",FFR
+	dc.b	"Are you any good at",LF
+	dc.b	"math?^",FFR
+	dc.b	"{ I'm OK             ",LF
 	dc.b	"{ Never heard of it",ETX
 	align 2
 StoryTextDay03SVideoChoice0:
 	dc.w	OBJ_NPC_NICKY
 	dc.b	"I have a final",LF
-	dc.b	"tomorrow.^",FF
-	dc.b	"I'm stuck on this",LF
-	dc.b	"graph.^",FF
-	dc.b	"How can I prove if",LF
-	dc.b	"the graph is a tree?",ETX
+	dc.b	"tomorrow.",ETX
 	align 2
 StoryTextDay03SVideoChoice1:
 	dc.w	OBJ_NPC_NICKY
@@ -5587,23 +5589,30 @@ StoryTextDay03SVideoChoice1:
 	dc.b	"Maybe later?^",ETX
 	align 2
 StoryTextDay03SVideoLine1:
+	dc.w	OBJ_NPC_NICKY
+	dc.b	"I'm stuck on this",LF
+	dc.b	"graph.^",FF
+	dc.b	"How can I prove if",LF
+	dc.b	"the graph is a tree?",ETX
+	align 2
+StoryTextDay03SVideoLine2:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"You can disprove it",LF
 	dc.b	"quickly by proving if^",FF
 	dc.b	"it contains a",LF
 	dc.b	"circuit.^",ETX
 	align 2
-StoryTextDay03SVideoLine2:
+StoryTextDay03SVideoLine3:
 	dc.w	OBJ_NPC_NICKY
 	dc.b	"Of course, that's so",LF
 	dc.b	"simple.^",ETX
 	align 2
-StoryTextDay03SVideoLine3:
+StoryTextDay03SVideoLine4:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"It's just memorizing",LF
 	dc.b	"a rule.^",ETX
 	align 2
-StoryTextDay03SVideoLine4:
+StoryTextDay03SVideoLine5:
 	dc.w	OBJ_NPC_NICKY
 	dc.b	"Thanks, I think I can",LF
 	dc.b	"get the rest of these.",ETX
@@ -5618,7 +5627,7 @@ StoryTextNight03TBooksLine1:
 	dc.b	"don't know him)^",FF
 	dc.b	"(Is he even real? He",LF
 	dc.b	"must be.)^",FF
-	dc.b	"(I should revist",LF
+	dc.b	"(I should revisit",LF
 	dc.b	"where he went)",ETX
 	align 2
 StoryTextNight03TLodgeLine1:

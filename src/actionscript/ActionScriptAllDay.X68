@@ -39,7 +39,16 @@ ActionScriptExitCavernEryn:
 	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d7 ; copy player sprite direction to d7
 	cmpi.w	#DIRECTION_UP,d7 ; is the player facing north?
 	bne.s	.default ; branch if not
-	lea ScriptedEventCantEnterCavernBackroomErynStart,a6 ; point a6 to event to load
+	; test if DB is npc0
+	move.w	(MEM_OBJECT_LIST_NPCS),d7
+	cmpi.w	#OBJ_NPC_DB,d7
+	bne.s	.npc1
+.npc0	
+	lea ScriptedEventCantEnterCavernBackroomErynDBisNPC0Start,a6 ; point a6 to event to load
+	bra.s	.queue
+.npc1	
+	lea ScriptedEventCantEnterCavernBackroomErynDBisNPC1Start,a6 ; point a6 to event to load
+.queue
 	bsr.w QueueScriptedEvent ; queue the event	
 	rts	
 .default

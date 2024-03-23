@@ -334,7 +334,7 @@ EndNight01SetupGameState: ; separated to help with debugging
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsDay ; reset the NPC locations
 	; setup for optional event
-	move.l	#$19262120,(MEM_NPC_LOCATION_SVIDEO)	
+	move.l	#$19262021,(MEM_NPC_LOCATION_SVIDEO)	
 	;---------------------------------------------------------------------------	
 	; scatter some NPCs around
 	;---------------------------------------------------------------------------	

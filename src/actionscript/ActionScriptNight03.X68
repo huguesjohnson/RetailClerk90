@@ -33,8 +33,6 @@ ActionScriptNight03TLodgeInteract:
 	btst.l	#FLAG_GLOBAL_EVENT00_TLodgeEvent1123Night,d7 ; test if the semi-hidden event is complete	
 	bne.s	.altevent	
 .defaultevent	
-	lea	StoryTextNight03TLodgeLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventNight03_01_TLodgeStart,a6 ; point a6 to event to load
 	bra.s	.queuescriptedevent
 .altevent	
@@ -43,6 +41,7 @@ ActionScriptNight03TLodgeInteract:
 	lea ScriptedEventNight03_01_TLodgeAltStart,a6 ; point a6 to event to load
 .queuescriptedevent
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
 	bsr.w ShowDefaultText
 	rts
@@ -77,8 +76,6 @@ ActionScriptNight03CNowInteract:
 	btst.l	#FLAG_GLOBAL_Victor1204,d7 ; test if the semi-hidden event is complete	
 	bne.s	.altevent
 .defaultevent
-	lea	StoryTextNight03CNowLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventNight03_02_CNowStart,a6 ; point a6 to event to load
 	bra.s	.queuescriptedevent
 .altevent
@@ -87,6 +84,7 @@ ActionScriptNight03CNowInteract:
 	lea ScriptedEventNight03_02_CNowAltStart,a6 ; point a6 to event to load
 .queuescriptedevent
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
 	bsr.w ShowDefaultText
 	rts
@@ -161,10 +159,9 @@ ActionScriptNight03NShackInteract:
 	;---------------------------------------------------------------------------
 	bsr.s	ActionScriptNight03NShackUpdateState
 	; setup scripted event
-	lea	StoryTextNight03NShackLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventNight03_03_NShackStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
 	bsr.w ShowDefaultText
 	rts

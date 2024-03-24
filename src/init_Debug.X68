@@ -581,7 +581,7 @@ LaunchDebug18: ; night 03 - after main events are done
 	;---------------------------------------------------------------------------
 	; load starting scene and sprites
 	;---------------------------------------------------------------------------
-	lea	SceneNShack,a6
+	lea	SceneSHall,a6
 	bsr.w LoadScene
 	bsr.w LoadPlayerSprite
 	move.w	#$0100,(MEM_PLAYER_SPRITE_X)

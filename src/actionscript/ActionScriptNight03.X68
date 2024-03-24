@@ -129,8 +129,9 @@ ActionScriptNight03SHallExit:
 	beq.s	.cantleaveeast ; not complete, can't exit
 	btst.l	#FLAG_NIGHT03_EVENT01_CNOW,d7 ; test if the event is complete
 	beq.s	.cantleaveeast ; not complete, can't exit
-	; otherwise, defaul
+	; otherwise, default
 	bsr.w	DefaultExitScene ; default scene exit
+	rts
 .cantleaveeast	
 	lea Night03EastExitBlockedStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event	
@@ -140,6 +141,9 @@ ActionScriptNight03SHallExit:
 ; SCENE_ID_NSHACK
 ;*******************************************************************************
 ActionScriptNight03NShackInteract:	
+	move.w	(MEM_ACTION_TARGET_OBJID),d7 ; copy the object id to d7
+	cmpi.w	#OBJ_NPC_JEN,d7 ; test if the target is the clerk
+	beq.s	.npc0
 	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
 	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
 	beq.s	.default
@@ -148,6 +152,7 @@ ActionScriptNight03NShackInteract:
 	;---------------------------------------------------------------
 	cmpi.w	#$0000,d7 ; test for npc0
 	bne.s	.default
+.npc0
 	;---------------------------------------------------------------
 	; else check if the event is complete
 	;---------------------------------------------------------------

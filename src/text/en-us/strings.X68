@@ -488,10 +488,7 @@ DialogTextErynDay06:
 ; text after story event
 DialogTextErynDay07:
 	dc.w	OBJ_NPC_ERYN
-	dc.b	"So you're not the",LF
-	dc.b	"only weirdo^^",FF
-	dc.b	"wandering around",LF
-	dc.b	"after close.",ETX
+	dc.b	"You're here late.",ETX
 	align 2
 ; PC on day08
 DialogTextErynDay08:
@@ -877,14 +874,20 @@ DialogTextGriffyDay00:
 	dc.b	"what's it called?^",FF
 	dc.b	"All out of that.",ETX
 	align 2
-; not present at night
+; not present at night but can still be interacted with due to my poor planning
 DialogTextGriffyDay01:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"This place is a mess.",ETX
+	align 2
 DialogTextGriffyDay02:
 	dc.w	OBJ_NPC_GRIFFY
 	dc.b	"Uh, what?",ETX
 	align 2
-; not present at night
+; not present at night but can still be interacted with due to my poor planning
 DialogTextGriffyDay03:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"This place is a mess.",ETX
+	align 2
 DialogTextGriffyDay04:
 	dc.w	OBJ_NPC_GRIFFY
 	dc.b	"I, uh, have only been",LF
@@ -892,15 +895,21 @@ DialogTextGriffyDay04:
 	dc.b	"Wait, um, I don't",LF
 	dc.b	"know.",ETX
 	align 2
-; not present at night
+; not present at night but can still be interacted with due to my poor planning
 DialogTextGriffyDay05:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"This place is a mess.",ETX
+	align 2
 ; after story events are done
 DialogTextGriffyDay06:
 	dc.w	OBJ_NPC_GRIFFY
 	dc.b	"Uh, who are you?",ETX
 	align 2
-; not present at night
+; not present at night but can still be interacted with due to my poor planning
 DialogTextGriffyDay07:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"This place is a mess.",ETX
+	align 2
 DialogTextGriffyDay08:
 	dc.w	OBJ_NPC_GRIFFY
 	dc.b	"Do you, uh, want like",LF
@@ -2107,8 +2116,12 @@ DialogTextGinaDay00:
 	dc.w	OBJ_NPC_GINA
 	dc.b	"Nice choice.",ETX
 	align 2
-; not present at night
+; not present at night but can still be interacted with due to my poor planning
 DialogTextGinaDay01:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"She's never here at",LF
+	dc.b	"night.",ETX
+	align 2
 DialogTextGinaDay02:
 	dc.w	OBJ_NPC_GINA
 	dc.b	"We get all types",LF
@@ -2116,22 +2129,34 @@ DialogTextGinaDay02:
 	dc.b	"You'll have to be",LF
 	dc.b	"more specific.",ETX
 	align 2
-; not present at night
+; not present at night but can still be interacted with due to my poor planning
 DialogTextGinaDay03:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"She's never here at",LF
+	dc.b	"night.",ETX
+	align 2
 DialogTextGinaDay04:
 	dc.w	OBJ_NPC_GINA
 	dc.b	"This is my first year",LF
 	dc.b	"here.",ETX
 	align 2
-; not present at night
+; not present at night but can still be interacted with due to my poor planning
 DialogTextGinaDay05:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"She's never here at",LF
+	dc.b	"night.",ETX
+	align 2
 DialogTextGinaDay06:
 	dc.w	OBJ_NPC_GINA
 	dc.b	"Did you find a trade",LF
 	dc.b	"for that scarf?",ETX
 	align 2
-; not present at night
+; not present at night but can still be interacted with due to my poor planning
 DialogTextGinaDay07:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"She's never here at",LF
+	dc.b	"night.",ETX
+	align 2
 DialogTextGinaDay08:
 	dc.w	OBJ_NPC_GINA
 	dc.b	"I can't believe",LF
@@ -2139,8 +2164,12 @@ DialogTextGinaDay08:
 	dc.b	"delivery service &",LF
 	dc.b	"didn't tell me.",ETX
 	align 2
-; not present at night
+; not present at night but can still be interacted with due to my poor planning
 DialogTextGinaDay09:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"She's never here at",LF
+	dc.b	"night.",ETX
+	align 2
 DialogTextGinaDay0A:
 	dc.w	OBJ_NPC_GINA
 	dc.b	"Last year this was",LF
@@ -2148,16 +2177,23 @@ DialogTextGinaDay0A:
 	dc.b	"Was that a better",LF
 	dc.b	"spot I wonder?",ETX
 	align 2
-; not present at night
+; not present at night but can still be interacted with due to my poor planning
 DialogTextGinaDay0B:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"She's never here at",LF
+	dc.b	"night.",ETX
+	align 2
 DialogTextGinaDay0C:
 	dc.w	OBJ_NPC_GINA
 	dc.b	"There are some",LF
 	dc.b	"exciting changes^",FF
 	dc.b	"planned for next year.",ETX
 	align 2
-; not present at night
+; not present at night but can still be interacted with due to my poor planning
 DialogTextGinaDay0D:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"I'll miss this place.",ETX
+	align 2
 DialogTextSantaDay00:
 	dc.w	OBJ_NPC_SANTA
 	dc.b	"It's OK, any age can",LF

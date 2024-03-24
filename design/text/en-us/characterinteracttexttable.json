@@ -39,7 +39,7 @@
       "DialogTextErynDay07":{
       	"comment":"text after story event",
       	"dialogTitle":"OBJ_NPC_ERYN",
-      	"text":"So you're not the only weirdo^|wandering around after close.",
+      	"text":"You're here late.",
       	"align":2},
       "DialogTextErynDay08":{"comment":"PC on day08"},
       "DialogTextErynDay09":{
@@ -302,23 +302,39 @@
       	"dialogTitle":"OBJ_NPC_GRIFFY",
       	"text":"Uh, I think we're, what's it called?|All out of that.",
       	"align":2},
-      "DialogTextGriffyDay01":{"comment":"not present at night"},
+      "DialogTextGriffyDay01":{
+		"comment":"not present at night but can still be interacted with due to my poor planning",
+      	"dialogTitle":"OBJ_NPC_CARL",
+      	"text":"This place is a mess.",
+      	"align":2},
       "DialogTextGriffyDay02":{
       	"dialogTitle":"OBJ_NPC_GRIFFY",
       	"text":"Uh, what?",
       	"align":2},
-      "DialogTextGriffyDay03":{"comment":"not present at night"},
+      "DialogTextGriffyDay03":{
+		"comment":"not present at night but can still be interacted with due to my poor planning",
+      	"dialogTitle":"OBJ_NPC_CARL",
+      	"text":"This place is a mess.",
+      	"align":2},
       "DialogTextGriffyDay04":{
       	"dialogTitle":"OBJ_NPC_GRIFFY",
       	"text":"I, uh, have only been here since..^|Wait, um, I don't know.",
       	"align":2},
-      "DialogTextGriffyDay05":{"comment":"not present at night"},
+      "DialogTextGriffyDay05":{
+		"comment":"not present at night but can still be interacted with due to my poor planning",
+      	"dialogTitle":"OBJ_NPC_CARL",
+      	"text":"This place is a mess.",
+      	"align":2},
       "DialogTextGriffyDay06":{
       	"comment":"after story events are done",
       	"dialogTitle":"OBJ_NPC_GRIFFY",
       	"text":"Uh, who are you?",
       	"align":2},
-      "DialogTextGriffyDay07":{"comment":"not present at night"},
+      "DialogTextGriffyDay07":{
+		"comment":"not present at night but can still be interacted with due to my poor planning",
+      	"dialogTitle":"OBJ_NPC_CARL",
+      	"text":"This place is a mess.",
+      	"align":2},
       "DialogTextGriffyDay08":{
       	"dialogTitle":"OBJ_NPC_GRIFFY",
       	"text":"Do you, uh, want like fries with that?^|Oh, wait. Yeah, right. Uh..^|We don't have fries.",
@@ -1149,37 +1165,65 @@
       	"dialogTitle":"OBJ_NPC_GINA",
       	"text":"Nice choice.",
       	"align":2},
-      "DialogTextGinaDay01":{"comment":"not present at night"},
+      "DialogTextGinaDay01":{
+		"comment":"not present at night but can still be interacted with due to my poor planning",
+      	"dialogTitle":"OBJ_NPC_CARL",
+      	"text":"She's never here at night.",
+      	"align":2},
       "DialogTextGinaDay02":{
       	"dialogTitle":"OBJ_NPC_GINA",
       	"text":"We get all types asking questions.|You'll have to be more specific.",
       	"align":2},
-      "DialogTextGinaDay03":{"comment":"not present at night"},
+      "DialogTextGinaDay03":{
+		"comment":"not present at night but can still be interacted with due to my poor planning",
+      	"dialogTitle":"OBJ_NPC_CARL",
+      	"text":"She's never here at night.",
+      	"align":2},
       "DialogTextGinaDay04":{
       	"dialogTitle":"OBJ_NPC_GINA",
       	"text":"This is my first year here.",
       	"align":2},
-      "DialogTextGinaDay05":{"comment":"not present at night"},
+      "DialogTextGinaDay05":{
+		"comment":"not present at night but can still be interacted with due to my poor planning",
+      	"dialogTitle":"OBJ_NPC_CARL",
+      	"text":"She's never here at night.",
+      	"align":2},
       "DialogTextGinaDay06":{
       	"dialogTitle":"OBJ_NPC_GINA",
       	"text":"Did you find a trade for that scarf?",
       	"align":2},
-      "DialogTextGinaDay07":{"comment":"not present at night"},
+      "DialogTextGinaDay07":{
+		"comment":"not present at night but can still be interacted with due to my poor planning",
+      	"dialogTitle":"OBJ_NPC_CARL",
+      	"text":"She's never here at night.",
+      	"align":2},
       "DialogTextGinaDay08":{
       	"dialogTitle":"OBJ_NPC_GINA",
       	"text":"I can't believe PogoDawg started a delivery service & didn't tell me.",
       	"align":2},
-      "DialogTextGinaDay09":{"comment":"not present at night"},
+      "DialogTextGinaDay09":{
+		"comment":"not present at night but can still be interacted with due to my poor planning",
+      	"dialogTitle":"OBJ_NPC_CARL",
+      	"text":"She's never here at night.",
+      	"align":2},
       "DialogTextGinaDay0A":{
       	"dialogTitle":"OBJ_NPC_GINA",
       	"text":"Last year this was where Santa is now.|Was that a better spot I wonder?",
       	"align":2},
-      "DialogTextGinaDay0B":{"comment":"not present at night"},
+      "DialogTextGinaDay0B":{
+		"comment":"not present at night but can still be interacted with due to my poor planning",
+      	"dialogTitle":"OBJ_NPC_CARL",
+      	"text":"She's never here at night.",
+      	"align":2},
       "DialogTextGinaDay0C":{
       	"dialogTitle":"OBJ_NPC_GINA",
       	"text":"There are some exciting changes|planned for next year.",
       	"align":2},
-      "DialogTextGinaDay0D":{"comment":"not present at night"},        
+      "DialogTextGinaDay0D":{
+		"comment":"not present at night but can still be interacted with due to my poor planning",
+      	"dialogTitle":"OBJ_NPC_CARL",
+      	"text":"I'll miss this place.",
+      	"align":2},
       "DialogTextSantaDay00":{
       	"dialogTitle":"OBJ_NPC_SANTA",
       	"text":"It's OK, any age can visit Santa.",

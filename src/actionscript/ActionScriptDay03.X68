@@ -358,7 +358,8 @@ EndDay03SetupGameState: ; separated to help with debugging
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsNight ; reset the NPC locations
 	move.l	#$07010000,(MEM_NPC_LOCATION_NSHACK)
+	move.l	#$0C000000,(MEM_NPC_LOCATION_CNOW)
 	move.l	#$00000000,(MEM_NPC_LOCATION_WWAPPLIANCES)	
-	move.l	#$1A1D0000,(MEM_NPC_LOCATION_WWCHECKOUT)	
+	move.l	#$1D1A0600,(MEM_NPC_LOCATION_WWCHECKOUT)	
 	move.l	#$11000000,(MEM_NPC_LOCATION_WWHALL) ; put the guard somewhere	
 	rts	

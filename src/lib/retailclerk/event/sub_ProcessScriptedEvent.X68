@@ -166,6 +166,7 @@ ScriptedEventAddItem:
 .calladditem
 	bsr.w	AddItem ; add item to inventory		
 	bra.w	ProcessScriptedEventQueueNextAction ; exit
+
 ScriptedEventRemoveItem:	
 	move.w	(a6)+,d7 ; item to add
 	cmpi.w	#$0000,(MEM_PLAYER_SPRITE) ; which player inventory to use?
@@ -176,8 +177,19 @@ ScriptedEventRemoveItem:
 	lea	MEM_PLAYER1_ITEM_COUNT,a1
 .callremoveitem
 	bsr.w	RemoveItem ; remove item from inventory
+	bra.w	ProcessScriptedEventQueueNextAction ; exit
+	
+ScriptedEventUpdateSceneNPCs:
+	clr.l	d7 ; just being paranoid and clearing high word before mulu
+	move.w	(a6)+,d7 ; scene to update
+	mulu.w	#LWORD_SIZE,d7 ; multiply by 2 to get offset 
+	lea	MEM_NPC_LOCATIONS,a1 ; point to npc locations
+	adda.l	d7,a1 ; add offset
+	move.l	(a6)+,(a1) ; copy new npc value
+
 ProcessScriptedEventQueueNextAction:
 	move.w	(a6)+,(MEM_SCRIPTED_EVENT_ACTION) ; save next action
 	move.l	a6,(MEM_SCRIPTED_EVENT_ADDR) ; save address of next step	
+
 ExitProcessScriptedEvent:
 	rts

@@ -1892,25 +1892,40 @@
          },
       "StoryTextNight03WWCheckoutLine3":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"I have an idea...",
+         "text":"I'm stumped.",
          "align":2
          },         
       "StoryTextNight03WWCheckoutLine4":{
          "dialogTitle":"OBJ_NPC_GRUNBERG",
-         "text":"What do we have here...|OK, escape, F12, Y.|There you go.",
+         "text":"I thought I heard a fuss in here.",
          "align":2
          },          
       "StoryTextNight03WWCheckoutLine5":{
+         "dialogTitle":"OBJ_NPC_GRUNBERG",
+         "text":"Mind if I take a peek?",
+         "align":2
+         },          
+      "StoryTextNight03WWCheckoutLine6":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"Why not?",
+         "align":2
+         },         
+      "StoryTextNight03WWCheckoutLine7":{
+         "dialogTitle":"OBJ_NPC_GRUNBERG",
+         "text":"OK, escape, control F12, Y.|There you go.",
+         "align":2
+         },          
+      "StoryTextNight03WWCheckoutLine8":{
          "dialogTitle":"OBJ_NPC_LAURA",
          "text":"How'd he do that?^",
          "align":2
          },        
-      "StoryTextNight03WWCheckoutLine6":{
+      "StoryTextNight03WWCheckoutLine9":{
          "dialogTitle":"OBJ_NPC_TANYA",
          "text":"Thanks Carl.^",
          "align":2
          },          
-      "StoryTextNight03WWCheckoutLine7":{
+      "StoryTextNight03WWCheckoutLine10":{
          "dialogTitle":"OBJ_NPC_CARL",
          "text":"I didn't really do anything.",
          "align":2
@@ -1933,12 +1948,12 @@
          },         
       "StoryTextNight03CPlanetLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"'One hit wonders'?.^",
+         "text":"'One hit wonders'?^",
          "align":2
          },
       "StoryTextNight03CPlanetLine2":{
          "dialogTitle":"OBJ_NPC_ELIZA",
-         "text":"You know, bands that had one hit. song.|Then they just disappeared.^",
+         "text":"You know, bands that had one hit song.|Then they just disappeared.^",
          "align":2
          },    
       "StoryTextNight03CPlanetLine3":{
@@ -2099,7 +2114,7 @@
          },
       "StoryTextDay04SVideoLine5":{
          "dialogTitle":"OBJ_NPC_PREPPY",
-         "text":"This movie right here, do you know,|or maybe the other one there|does she know if it's any good^?",
+         "text":"This movie right here, do you know,|or maybe the other one there|does she know if it's any good?^",
          "align":2
          },  
       "StoryTextDay04SVideoLine6":{
@@ -2134,7 +2149,7 @@
          },                                     
       "StoryTextDay04FCBCampingChoice":{
             "dialogTitle":"OBJ_NPC_GRANT",
-            "text":"...|{ Daydreaming?        { (I'll leave him be)",
+            "text":"(That was so long ago...)|{ Daydreaming?        { (I'll leave him be)",
             "formFeed":"FFR",
             "align":2
          },        
@@ -2326,7 +2341,7 @@
          },           
       "StoryTextNight04VBChoice":{
             "dialogTitle":"OBJ_NPC_GRUNBERG",
-            "text":"You look troubled tonight Carl|{ Just a little       { I'm good",
+            "text":"You look troubled tonight Carl.|{ Just a little       { I'm good",
             "formFeed":"FFR",
             "align":2
          },        
@@ -2397,7 +2412,7 @@
          },         
       "StoryTextDay05FCBFirearmsChoice":{
          "dialogTitle":"OBJ_NPC_MALLRAT",
-         "text":"Which of these makes the best gift?|{ Which deadly weapon?{ Who is it for?",
+         "text":"Which of these makes the best gift?|{ Which weapon?       { Who is it for?",
          "formFeed":"FFR",
          "align":2
          },         
@@ -2539,13 +2554,13 @@
          },          
       "StoryTextDay05CavernChoice":{
             "dialogTitle":"OBJ_NPC_DB",
-            "text":"Which one would she like?|{ Want some help?     { I'll leave you to that",
+            "text":"Which one would she like?|{ Want some help?     { Not now",
             "formFeed":"FFR",
             "align":2
          },        
       "StoryTextDay05CavernChoice0":{
             "dialogTitle":"OBJ_NPC_DB",
-            "text":"Yeah, that would be great.|My sister thinks all games are a waste of time.|There has to be one she'd like.^",
+            "text":"Yeah, that would be great.|My sister doesn't like any of the new games.|There has to be one for her.^",
             "align":2
          },         
       "StoryTextDay05CavernChoice1":{
@@ -2605,7 +2620,7 @@
          },                              
       "StoryTextDay05FCBCampingChoice":{
             "dialogTitle":"OBJ_NPC_GRANT",
-            "text":"Stopping by to talk?|{ Yeah                { Maybe later",
+            "text":"Stopping by for a quick talk?|{ Yeah                { Maybe later",
             "formFeed":"FFR",
             "align":2
          },        
@@ -2671,7 +2686,7 @@
          },                
       "StoryTextNight05CavernLine1":{
          "dialogTitle":"OBJ_NPC_DANI",
-         "text":"You won't tell anyone about the basement?|It's hardly a secret.^",
+         "text":"See, now people are poking around|an hour after closing time.|How'd he get a key anyway?|You still won't talk about the basement?|It's hardly a secret.^",
          "align":2
          },
       "StoryTextNight05CavernLine2":{
@@ -2716,7 +2731,7 @@
          },   
       "StoryTextNight05BasementMDormLine4":{
          "dialogTitle":"OBJ_NPC_DANI",
-         "text":"My brother found him hiding one night.|He's homeless, a run of bad luck,|^so D.B. told him about this dorm.^",
+         "text":"My brother found him hiding one night.|He's homeless, a run of bad luck,|so D.B. told him about this dorm.^",
          "align":2
          },   
       "StoryTextNight05BasementMDormLine5":{
@@ -2776,7 +2791,7 @@
          },         
       "StoryTextNight05BasementOfficeLine9":{
          "dialogTitle":"OBJ_NPC_AL",
-         "text":"No, no, no. You don't understand.|It makes them remember happier times|so they stay a little longer, spend more.|It's not permanent. It wears off.|We have lawyers you know.^",
+         "text":"No, no, no. You don't understand.|They remember happier times|so they stay a little longer, spend more.|It's not permanent. It wears off.|We have lawyers you know.^",
          "align":2
          },         
       "StoryTextNight05BasementOfficeLine10":{
@@ -2827,7 +2842,7 @@
          },        
       "StoryTextNight05WWAppliancesChoice0":{
             "dialogTitle":"OBJ_NPC_LAURA",
-            "text":"I can relate to that.|My family is chaos around the holidays.|Better off being here late.^",
+            "text":"I can totally relate to that.|My family is chaos around the holidays.|Better off being here late.^",
             "align":2
          },         
       "StoryTextNight05WWAppliancesChoice1":{
@@ -2857,7 +2872,7 @@
          },   
       "StoryTextNight05WWAppliancesLine5":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"No, I don't think so.|It's weird to think about.|Maybe I'd try it one year.|Not sure I'd want to every year.",
+         "text":"No, I really don't think so.|It's weird to think about.|Maybe I'd try it one year.|Not sure I'd want to every year.",
          "align":2
          },                        
       "StoryTextNight05CPlanetChoice":{
@@ -3053,7 +3068,7 @@
          },
       "StoryTextDay06SVideoLine2":{
          "dialogTitle":"OBJ_NPC_NICKY",
-         "text":"You were only seasonal help^?",
+         "text":"You were only seasonal help?^",
          "align":2
          },        
       "StoryTextDay06SVideoLine3":{
@@ -3063,7 +3078,7 @@
          },
       "StoryTextDay06SVideoLine4":{
          "dialogTitle":"OBJ_NPC_NICKY",
-         "text":"It's so suddenm, it's too bad,|you're the only person I know here.|Story of my life...^",
+         "text":"It's so sudden, it's too bad,|you're the only person I know here.|Story of my life...^",
          "align":2
          },        
       "StoryTextDay06SVideoLine5":{

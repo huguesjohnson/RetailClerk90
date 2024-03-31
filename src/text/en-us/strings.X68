@@ -694,8 +694,9 @@ DialogTextLisaDay07:
 	align 2
 DialogTextLisaDay08:
 	dc.w	OBJ_NPC_LISA
-	dc.b	"Your shift is over.^",LF
-	dc.b	"Did you forget^",FF
+	dc.b	"Your shift is already",LF
+	dc.b	"over.^^",FF
+	dc.b	"Did you forget",LF
 	dc.b	"something?",ETX
 	align 2
 DialogTextLisaDay09:
@@ -703,8 +704,10 @@ DialogTextLisaDay09:
 	dc.b	"Was that your DM in",LF
 	dc.b	"the mall today?",ETX
 	align 2
-; only in story events this day
 DialogTextLisaDay0A:
+	dc.w	OBJ_NPC_LISA
+	dc.b	"Thanks for trying.",ETX
+	align 2
 DialogTextLisaDay0B:
 	dc.w	OBJ_NPC_LISA
 	dc.b	"Hey Carl, Merry",LF
@@ -1473,8 +1476,9 @@ DialogTextGuardDay0B:
 DialogTextGuardDay0C:
 	dc.w	OBJ_NPC_GUARD
 	dc.b	"Made it through the",LF
-	dc.b	"year without any^",FF
-	dc.b	"trouble.",ETX
+	dc.b	"whole year^",FF
+	dc.b	"without any",LF
+	dc.b	"troublemakers.",ETX
 	align 2
 DialogTextGuardDay0D:
 	dc.w	OBJ_NPC_GUARD
@@ -2038,8 +2042,11 @@ DialogTextJuanDay06:
 DialogTextJuanDay07:
 ; trading sequence
 DialogTextJuanDay08:
-; not present at night
 DialogTextJuanDay09:
+	dc.w	OBJ_NPC_JUAN
+	dc.b	"Old holiday cartoons",LF
+	dc.b	"are great.",ETX
+	align 2
 ; trading sequence
 DialogTextJuanDay0A:
 ; not present at night
@@ -2454,10 +2461,8 @@ DialogTextBusyMomDay0B:
 ; at VB this day
 DialogTextBusyMomDay0C:
 	dc.w	OBJ_NPC_BUSYMOM
-	dc.b	"It came with only one",LF
-	dc.b	"controller.^",FF
-	dc.b	"And now they're sold",LF
-	dc.b	"out.",ETX
+	dc.b	"They're sold out of",LF
+	dc.b	"everything good.",ETX
 	align 2
 ; not present at night
 DialogTextBusyMomDay0D:
@@ -2504,8 +2509,12 @@ DialogTextMallratDay08:
 	align 2
 ; not present at night
 DialogTextMallratDay09:
-; used in story event this day
+; in demin country after story event this day
 DialogTextMallratDay0A:
+	dc.w	OBJ_NPC_MALLRAT
+	dc.b	"I think I'll find",LF
+	dc.b	"something here.",ETX
+	align 2
 ; not present at night
 DialogTextMallratDay0B:
 ; at wwcheckout this day
@@ -2548,10 +2557,11 @@ DialogTextPreppyDay06:
 	align 2
 ; not present at night
 DialogTextPreppyDay07:
-; at denim country this day
+; at svideo this day
 DialogTextPreppyDay08:
 	dc.w	OBJ_NPC_PREPPY
-	dc.b	"None of this will do.",ETX
+	dc.b	"How long do I have to",LF
+	dc.b	"wait?",ETX
 	align 2
 ; not present at night
 DialogTextPreppyDay09:
@@ -5903,24 +5913,35 @@ StoryTextNight03WWCheckoutLine2:
 	align 2
 StoryTextNight03WWCheckoutLine3:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"I have an idea...",ETX
+	dc.b	"I'm stumped.",ETX
 	align 2
 StoryTextNight03WWCheckoutLine4:
 	dc.w	OBJ_NPC_GRUNBERG
-	dc.b	"What do we have",LF
-	dc.b	"here...^",FF
-	dc.b	"OK, escape, F12, Y.",LF
-	dc.b	"There you go.",ETX
+	dc.b	"I thought I heard a",LF
+	dc.b	"fuss in here.",ETX
 	align 2
 StoryTextNight03WWCheckoutLine5:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"Mind if I take a peek?",ETX
+	align 2
+StoryTextNight03WWCheckoutLine6:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"Why not?",ETX
+	align 2
+StoryTextNight03WWCheckoutLine7:
+	dc.w	OBJ_NPC_GRUNBERG
+	dc.b	"OK, escape, control",LF
+	dc.b	"F12, Y.|There you go.",ETX
+	align 2
+StoryTextNight03WWCheckoutLine8:
 	dc.w	OBJ_NPC_LAURA
 	dc.b	"How'd he do that?^",ETX
 	align 2
-StoryTextNight03WWCheckoutLine6:
+StoryTextNight03WWCheckoutLine9:
 	dc.w	OBJ_NPC_TANYA
 	dc.b	"Thanks Carl.^",ETX
 	align 2
-StoryTextNight03WWCheckoutLine7:
+StoryTextNight03WWCheckoutLine10:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"I didn't really do",LF
 	dc.b	"anything.",ETX
@@ -5945,12 +5966,12 @@ StoryTextNight03CPlanetChoice1:
 	align 2
 StoryTextNight03CPlanetLine1:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"'One hit wonders'?.^",ETX
+	dc.b	"'One hit wonders'?^",ETX
 	align 2
 StoryTextNight03CPlanetLine2:
 	dc.w	OBJ_NPC_ELIZA
 	dc.b	"You know, bands that",LF
-	dc.b	"had one hit. song.^",FF
+	dc.b	"had one hit song.^",FF
 	dc.b	"Then they just",LF
 	dc.b	"disappeared.^",ETX
 	align 2
@@ -6141,7 +6162,7 @@ StoryTextDay04SVideoLine5:
 	dc.b	"or maybe the other",LF
 	dc.b	"one there^",FF
 	dc.b	"does she know if it's",LF
-	dc.b	"any good^?",ETX
+	dc.b	"any good?^",ETX
 	align 2
 StoryTextDay04SVideoLine6:
 	dc.w	OBJ_NPC_ERYN
@@ -6176,8 +6197,9 @@ StoryTextDay04SVideoLine11:
 	align 2
 StoryTextDay04FCBCampingChoice:
 	dc.w	OBJ_NPC_GRANT
-	dc.b	"...",LF
-	dc.b	"{ Daydreaming?       ^",FFR
+	dc.b	"(That was so long",LF
+	dc.b	"ago...)^",FFR
+	dc.b	"{ Daydreaming?       ",LF
 	dc.b	"{ (I'll leave him be)",ETX
 	align 2
 StoryTextDay04FCBCampingChoice0:
@@ -6445,7 +6467,7 @@ StoryTextNight04WWTVLine6:
 StoryTextNight04VBChoice:
 	dc.w	OBJ_NPC_GRUNBERG
 	dc.b	"You look troubled",LF
-	dc.b	"tonight Carl^",FFR
+	dc.b	"tonight Carl.^",FFR
 	dc.b	"{ Just a little      ",LF
 	dc.b	"{ I'm good",ETX
 	align 2
@@ -6549,9 +6571,8 @@ StoryTextDay05FCBFirearmsChoice:
 	dc.w	OBJ_NPC_MALLRAT
 	dc.b	"Which of these makes",LF
 	dc.b	"the best gift?^",FFR
-	dc.b	"{ Which deadly",LF
-	dc.b	"weapon?{ Who is it^",FFR
-	dc.b	"for?",ETX
+	dc.b	"{ Which weapon?      ",LF
+	dc.b	"{ Who is it for?",ETX
 	align 2
 StoryTextDay05FCBFirearmsRespond0Line01:
 	dc.w	OBJ_NPC_MALLRAT
@@ -6738,18 +6759,17 @@ StoryTextDay05CavernChoice:
 	dc.b	"Which one would she",LF
 	dc.b	"like?^",FFR
 	dc.b	"{ Want some help?    ",LF
-	dc.b	"{ I'll leave you to^",FFR
-	dc.b	"that",ETX
+	dc.b	"{ Not now",ETX
 	align 2
 StoryTextDay05CavernChoice0:
 	dc.w	OBJ_NPC_DB
 	dc.b	"Yeah, that would be",LF
 	dc.b	"great.^",FF
-	dc.b	"My sister thinks all",LF
-	dc.b	"games are a waste of^",FF
-	dc.b	"time.",LF
+	dc.b	"My sister doesn't",LF
+	dc.b	"like any of the new^",FF
+	dc.b	"games.",LF
 	dc.b	"There has to be one^",FF
-	dc.b	"she'd like.^",ETX
+	dc.b	"for her.^",ETX
 	align 2
 StoryTextDay05CavernChoice1:
 	dc.w	OBJ_NPC_DB
@@ -6810,8 +6830,9 @@ StoryTextDay05CavernLine10:
 	align 2
 StoryTextDay05FCBCampingChoice:
 	dc.w	OBJ_NPC_GRANT
-	dc.b	"Stopping by to talk?",LF
-	dc.b	"{ Yeah               ^",FFR
+	dc.b	"Stopping by for a",LF
+	dc.b	"quick talk?^",FFR
+	dc.b	"{ Yeah               ",LF
 	dc.b	"{ Maybe later",ETX
 	align 2
 StoryTextDay05FCBCampingChoice0:
@@ -6901,7 +6922,13 @@ StoryTextNight05TBooksLine8:
 	align 2
 StoryTextNight05CavernLine1:
 	dc.w	OBJ_NPC_DANI
-	dc.b	"You won't tell anyone",LF
+	dc.b	"See, now people are",LF
+	dc.b	"poking around^",FF
+	dc.b	"an hour after closing",LF
+	dc.b	"time.^",FF
+	dc.b	"How'd he get a key",LF
+	dc.b	"anyway?^",FF
+	dc.b	"You still won't talk",LF
 	dc.b	"about the basement?^",FF
 	dc.b	"It's hardly a secret.^",ETX
 	align 2
@@ -6961,7 +6988,7 @@ StoryTextNight05BasementMDormLine4:
 	dc.b	"hiding one night.^",FF
 	dc.b	"He's homeless, a run",LF
 	dc.b	"of bad luck,^",FF
-	dc.b	"^so D.B. told him",LF
+	dc.b	"so D.B. told him",LF
 	dc.b	"about this dorm.^",ETX
 	align 2
 StoryTextNight05BasementMDormLine5:
@@ -7046,14 +7073,13 @@ StoryTextNight05BasementOfficeLine9:
 	dc.w	OBJ_NPC_AL
 	dc.b	"No, no, no. You don't",LF
 	dc.b	"understand.^",FF
-	dc.b	"It makes them",LF
-	dc.b	"remember happier^",FF
-	dc.b	"times",LF
-	dc.b	"so they stay a little^",FF
-	dc.b	"longer, spend more.",LF
-	dc.b	"It's not permanent.^",FF
-	dc.b	"It wears off.",LF
-	dc.b	"We have lawyers you^",FF
+	dc.b	"They remember happier",LF
+	dc.b	"times^",FF
+	dc.b	"so they stay a little",LF
+	dc.b	"longer, spend more.^",FF
+	dc.b	"It's not permanent.",LF
+	dc.b	"It wears off.^",FF
+	dc.b	"We have lawyers you",LF
 	dc.b	"know.^",ETX
 	align 2
 StoryTextNight05BasementOfficeLine10:
@@ -7115,10 +7141,11 @@ StoryTextNight05WWAppliancesChoice:
 	align 2
 StoryTextNight05WWAppliancesChoice0:
 	dc.w	OBJ_NPC_LAURA
-	dc.b	"I can relate to that.",LF
-	dc.b	"My family is chaos^",FF
-	dc.b	"around the holidays.",LF
-	dc.b	"Better off being here^",FF
+	dc.b	"I can totally relate",LF
+	dc.b	"to that.^",FF
+	dc.b	"My family is chaos",LF
+	dc.b	"around the holidays.^",FF
+	dc.b	"Better off being here",LF
 	dc.b	"late.^",ETX
 	align 2
 StoryTextNight05WWAppliancesChoice1:
@@ -7163,12 +7190,13 @@ StoryTextNight05WWAppliancesLine4:
 	align 2
 StoryTextNight05WWAppliancesLine5:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"No, I don't think so.",LF
-	dc.b	"It's weird to think^",FF
-	dc.b	"about.",LF
-	dc.b	"Maybe I'd try it one^",FF
-	dc.b	"year.",LF
-	dc.b	"Not sure I'd want to^",FF
+	dc.b	"No, I really don't",LF
+	dc.b	"think so.^",FF
+	dc.b	"It's weird to think",LF
+	dc.b	"about.^",FF
+	dc.b	"Maybe I'd try it one",LF
+	dc.b	"year.^",FF
+	dc.b	"Not sure I'd want to",LF
 	dc.b	"every year.",ETX
 	align 2
 StoryTextNight05CPlanetChoice:
@@ -7402,7 +7430,7 @@ StoryTextDay06SVideoLine1:
 StoryTextDay06SVideoLine2:
 	dc.w	OBJ_NPC_NICKY
 	dc.b	"You were only",LF
-	dc.b	"seasonal help^?",ETX
+	dc.b	"seasonal help?^",ETX
 	align 2
 StoryTextDay06SVideoLine3:
 	dc.w	OBJ_NPC_ERYN
@@ -7411,7 +7439,7 @@ StoryTextDay06SVideoLine3:
 	align 2
 StoryTextDay06SVideoLine4:
 	dc.w	OBJ_NPC_NICKY
-	dc.b	"It's so suddenm, it's",LF
+	dc.b	"It's so sudden, it's",LF
 	dc.b	"too bad,^",FF
 	dc.b	"you're the only",LF
 	dc.b	"person I know here.^",FF

@@ -173,13 +173,16 @@
       	"align":2},  
       "DialogTextLisaDay08":{
       	"dialogTitle":"OBJ_NPC_LISA",
-      	"text":"Your shift is over.^|Did you forget something?",
+      	"text":"Your shift is already over.^|Did you forget something?",
       	"align":2},  
       "DialogTextLisaDay09":{
       	"dialogTitle":"OBJ_NPC_LISA",
       	"text":"Was that your DM in the mall today?",
       	"align":2},  
-      "DialogTextLisaDay0A":{"comment":"only in story events this day"},  
+      "DialogTextLisaDay0A":{
+      	"dialogTitle":"OBJ_NPC_LISA",
+      	"text":"Thanks for trying.",
+      	"align":2}, 
       "DialogTextLisaDay0B":{
       	"dialogTitle":"OBJ_NPC_LISA",
       	"text":"Hey Carl, Merry Xmas.^|Or I hope it is.",
@@ -721,7 +724,7 @@
       	"align":2},
       "DialogTextGuardDay0C":{
       	"dialogTitle":"OBJ_NPC_GUARD",
-      	"text":"Made it through the year without any trouble.",
+      	"text":"Made it through the whole year|without any troublemakers.",
       	"align":2},
       "DialogTextGuardDay0D":{
       	"dialogTitle":"OBJ_NPC_GUARD",
@@ -1106,7 +1109,10 @@
       	"align":2},
       "DialogTextJuanDay07":{"comment":"not present at night"},
       "DialogTextJuanDay08":{"comment":"trading sequence"},
-      "DialogTextJuanDay09":{"comment":"not present at night"},
+      "DialogTextJuanDay09":{
+      	"dialogTitle":"OBJ_NPC_JUAN",
+      	"text":"Old holiday cartoons are great.",
+      	"align":2},
       "DialogTextJuanDay0A":{"comment":"trading sequence"},
       "DialogTextJuanDay0B":{"comment":"not present at night"},
       "DialogTextJuanDay0C":{"comment":"trading sequence"},
@@ -1413,7 +1419,7 @@
       "DialogTextBusyMomDay0C":{
       	"comment":"at VB this day",
       	"dialogTitle":"OBJ_NPC_BUSYMOM",
-      	"text":"It came with only one controller.|And now they're sold out.",
+      	"text":"They're sold out of everything good.",
       	"align":2},
       "DialogTextBusyMomDay0D":{"comment":"not present at night"},
       "DialogTextMallratDay00":{
@@ -1446,7 +1452,11 @@
       	"text":"I like all the new dress colors.",
       	"align":2},
       "DialogTextMallratDay09":{"comment":"not present at night"},
-      "DialogTextMallratDay0A":{"comment":"used in story event this day"},
+      "DialogTextMallratDay0A":{
+      	"comment":"in demin country after story event this day",
+      	"dialogTitle":"OBJ_NPC_MALLRAT",
+      	"text":"I think I'll find something here.",
+      	"align":2},
       "DialogTextMallratDay0B":{"comment":"not present at night"},
       "DialogTextMallratDay0C":{
       	"comment":"at wwcheckout this day",
@@ -1479,9 +1489,9 @@
       	"align":2},
       "DialogTextPreppyDay07":{"comment":"not present at night"},
       "DialogTextPreppyDay08":{
-      	"comment":"at denim country this day",
+      	"comment":"at svideo this day",
       	"dialogTitle":"OBJ_NPC_PREPPY",
-      	"text":"None of this will do.",
+      	"text":"How long do I have to wait?",
       	"align":2},
       "DialogTextPreppyDay09":{"comment":"not present at night"},
       "DialogTextPreppyDay0A":{"comment":"used in story event - no other dialog"},

@@ -6,7 +6,13 @@
 ;*******************************************************************************
 ; SCENE_ID_FCBFIREARMS
 ;*******************************************************************************
-ActionScriptDay05FCBFirearmsInteract:	
+ActionScriptDay05FCBFirearmsInteract:
+	;---------------------------------------------------------------
+	; clerk hit region is an object because they are behind the counter
+	;---------------------------------------------------------------
+	move.w	(MEM_ACTION_TARGET_OBJID),d7 ; copy the object id to d7
+	cmpi.w	#OBJ_NPC_RANDY,d7 ; test if the target is the clerk
+	beq.s	.clerk	
 	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
 	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
 	beq.s	ActionScriptDay05FCBFirearmsInteractDefault ; branch if not an npc
@@ -17,7 +23,13 @@ ActionScriptDay05FCBFirearmsInteract:
 	cmpi.w	#$0000,d7 ; test if the clerk
 	bne.s	.customer
 .clerk
-	bra.s	ActionScriptDay05FCBFirearmsInteractDefault
+	; show alternative dialog if event has run
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_DAY05_EVENT00_FCBFIREARMS,d7
+	beq.s	ActionScriptDay05FCBFirearmsInteractDefault
+	lea	StoryTextDay05FCBFirearmsRespond1Line04,a6 ; load dialog text	
+	bsr.w	ShowDialog
+	rts
 .customer
 	lea	StoryTextDay05FCBFirearmsChoice,a6 ; load dialog text	
 	bsr.w	Show2ChoiceDialog
@@ -33,6 +45,7 @@ ActionScriptDay05FCBFirearmsRespond:
 	bset.l	#FLAG_DAY05_EVENT00_FCBFIREARMS,d7 ; set event flag
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; copy them back
 	move.l	#$0E000000,(MEM_NPC_LOCATION_FCBFIREARMS) ; npc leaves after event
+	bsr.w	CheckDay05Events
 	cmpi.w	#$0000,(MEM_MENU_RESPONSE) ; is the menu selection 0?
 	bne.s	.choice1
 .choice0
@@ -79,6 +92,7 @@ ActionScriptDay05WWAudioRespond:
 	bset.l	#FLAG_DAY05_EVENT01_WWAUDIO,d7 ; set event flag
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; copy them back
 	move.l	#$1B000000,(MEM_NPC_LOCATION_WWAUDIO) ; npc leaves after event
+	bsr.w	CheckDay05Events
 	cmpi.w	#$0000,(MEM_MENU_RESPONSE) ; is the menu selection 0?
 	bne.s	.choice1
 .choice0
@@ -114,24 +128,30 @@ CheckDay05Events:
 ; SCENE_ID_DENIMCOUNTRY
 ;*******************************************************************************
 ActionScriptDay05DenimCountryInteract:	
-	bsr.w ShowDefaultText
-	rts
-	
-ActionScriptDay05DenimCountryExit:	
-	; need to clear out NPC who is set there at the start of the day
-	move.l	#$05000000,(MEM_NPC_LOCATION_DENIMCOUNTRY)
-	bsr.w	DefaultExitScene ; default scene exit
-	rts
-
-ActionScriptDay05DenimCountryEnter:	
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	beq.s	.default
+	;---------------------------------------------------------------
+	; npc 0 or 1 is the target for the event
+	;---------------------------------------------------------------
+	cmpi.w	#$0001,d7 ; test for npc1
+	beq.s	.npc
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.s	.default
+	;---------------------------------------------------------------
+	; else check if the event is complete
+	;---------------------------------------------------------------
+.npc
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
-	btst.l	#FLAG_DAY05_EVENT02_CONTESTDONE,d7 ; test if the event is complete
-	bne.s	.default ; not set, default
+	btst.l	#FLAG_DAY05_EVENT02_CONTESTDONE,d7 ; test if the optional event is complete	
+	beq.s	.default ; not set, default
 	;---------------------------------------------------------------------------
 	; else - end of the day
 	;---------------------------------------------------------------------------
 	bsr.w	EndDay05
+	rts	
 .default
+	bsr.w ShowDefaultText
 	rts
 
 ;*******************************************************************************
@@ -142,9 +162,9 @@ ActionScriptDay05CavernInteract:
 	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
 	beq.s	.default
 	;---------------------------------------------------------------
-	; npc 0 is the clerk
+	; npc 1 is the target for the event
 	;---------------------------------------------------------------
-	cmpi.w	#$0000,d7 ; test for npc0
+	cmpi.w	#$0001,d7 ; test for npc1
 	bne.s	.default
 	;---------------------------------------------------------------
 	; else check if the event is complete
@@ -171,10 +191,12 @@ ActionScriptDay05CavernRespond:
 	addq	#$1,(MEM_REL_DB) ; increment the relationship score
 	; update day state
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
-	bset.l	#FLAG_DAY05_OPTIONAL1,d7 ; test if the optional event is complete	
+	bset.l	#FLAG_DAY05_OPTIONAL1,d7 ; set optional event is complete	
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
 	; clear the map icon
 	move.w	#$FFFF,(MEM_OPTIONAL_EVENT1_SCENE_ID)
+	; npc is out of this scene after event
+	move.l	#$0F000000,(MEM_NPC_LOCATION_CAVERN)		
 	; setup the scripted event
 	lea	StoryTextDay05CavernChoice0,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog

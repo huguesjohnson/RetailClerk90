@@ -220,6 +220,11 @@ ActionScriptDay06ScenePogoDawgTrading:
 ;  get: OBJ_ITEM_TROPHY
 ;*******************************************************************************
 ActionScriptDay06SceneVBTrading:
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
+	beq.s	TradingDefault
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.s	TradingDefault	
 	move.l	(MEM_TRADING_SEQUENCE_DAY),d7 ; copy progress of day trading to d7
 	btst.l	#$7,d7 ; test if this trade is done
 	bne.s	.after
@@ -244,4 +249,9 @@ ActionScriptDay06SceneVBTrading:
 	lea	StoryTextTradingSequenceVBBefore,a6 ; point to text to display
 	bsr.w	ShowDialog
 	rts	
+	
+TradingDefault:
+	bsr.w ShowDefaultText
+	rts		
+	
 

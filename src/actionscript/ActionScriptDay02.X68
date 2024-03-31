@@ -8,7 +8,7 @@
 ;*******************************************************************************
 ActionScriptDay02TLodgeInteract:	
 	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
-	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
 	beq.s	.default
 	;---------------------------------------------------------------
 	; npc 0 is the clerk

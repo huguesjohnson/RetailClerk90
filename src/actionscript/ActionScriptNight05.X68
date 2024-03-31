@@ -27,7 +27,7 @@ ActionScriptNight05CavernUpdateState:
 	move.w	#SCENE_ID_BASEMENTMDORM,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
 	move.w	#SCENE_ID_BASEMENTOFFICE,(MEM_STORY_EVENT2_SCENE_ID) ; update story event
 	move.w	#OBJECTIVE_D05_O03_Basement,(MEM_OBJECTIVE) ; update objective
-	move.l	#$0F000000,(MEM_NPC_LOCATION_CAVERN) ; only db in the cavern		
+	move.l	#$0F0D0000,(MEM_NPC_LOCATION_CAVERN) ; update npcs in the cavern		
 	move.l	#$18100000,(MEM_NPC_LOCATION_BASEMENTMDORM) ; dani and brett in the basement dorm		
 	rts
 
@@ -52,7 +52,6 @@ ActionScriptNight05BasementMDormEnter:
 	bsr.w QueueScriptedEvent ; queue the event
 	rts
 .default
-	bsr.w ShowDefaultText
 	rts
 
 ;*******************************************************************************
@@ -69,7 +68,7 @@ ActionScriptNight05BasementOfficeEnter:
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
 	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; clear story event
 	move.l	#$13160000,(MEM_NPC_LOCATION_BASEMENTOFFICE) ; dani out of the office
-	move.l	#$0F100000,(MEM_NPC_LOCATION_CAVERN) ; db and dani are both in the cavern					
+	move.l	#$0F100D00,(MEM_NPC_LOCATION_CAVERN) ; db and dani are both in the cavern					
 	bsr.w	CheckNight05Events
 	; setup scripted event
 	lea ScriptedEventNight05_03_BasementOfficeStart,a6 ; point a6 to event to load
@@ -157,7 +156,7 @@ ActionScriptNight05CPlanetRespond:
 	; setup the scripted event
 	lea	StoryTextNight05CPlanetChoice0,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
-	lea ScriptedEventNight05_Optional00Start,a6 ; point a6 to event to load
+	lea ScriptedEventNight05_Optional01Start,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 	rts	
 	
@@ -205,7 +204,7 @@ ActionScriptNight05WWAppliancesRespond:
 	; setup the scripted event
 	lea	StoryTextNight05WWAppliancesChoice0,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
-	lea ScriptedEventNight05_Optional01Start,a6 ; point a6 to event to load
+	lea ScriptedEventNight05_Optional00Start,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 	rts	
 	
@@ -271,10 +270,10 @@ EndNight05SetupGameState: ; separated to help with debugging
 	move.l	#$1B200000,(MEM_NPC_LOCATION_WWAUDIO)
 	move.l	#$0A220000,(MEM_NPC_LOCATION_CHECKERS)
 	move.l	#$1E210000,(MEM_NPC_LOCATION_SOUTH_CENTER)
-	move.l	#$06230000,(MEM_NPC_LOCATION_VB)
+	move.l	#$062A0000,(MEM_NPC_LOCATION_VB)
+	move.l	#$02232B00,(MEM_NPC_LOCATION_TBOOKS)
 	move.l	#$1A260000,(MEM_NPC_LOCATION_WWCHECKOUT)
 	move.l	#$0B250000,(MEM_NPC_LOCATION_CPLANET)
-	move.l	#$12000000,(MEM_NPC_LOCATION_EWHALL)
 	move.l	#$0E250000,(MEM_NPC_LOCATION_FCBFIREARMS)
 	move.l	#$11000000,(MEM_NPC_LOCATION_EEHALL)
 	move.l	#$00000000,(MEM_NPC_LOCATION_SHALL)	

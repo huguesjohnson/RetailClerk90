@@ -234,6 +234,10 @@ ProcessStatusScreenACButtonPressed:
 	beq.w	ProcessStatusScreenData
 	cmpi.w	#MENU_PAGE_STATUS,(MEM_MENU_SCREEN_PAGE)
 	beq.w	ProcessStatusScreenStatus
+;-------------------------------------------------------------------------------
+; this is where fast travel is implemented
+; would be better off in a separate subroutine, fast travel I mean
+;-------------------------------------------------------------------------------
 ProcessStatusScreenMap:
 	move.w	#$2700,sr ; disable interrupts
 	move.l	(MEM_GAME_STATE),d7 ; copy current game state to d7

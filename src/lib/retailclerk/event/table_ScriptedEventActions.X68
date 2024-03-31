@@ -14,7 +14,6 @@ ScriptedEventActionTableStart:
 		dc.l	ScriptedEventLoadFont ; SCRIPTED_EVENT_LOADFONT
 		dc.l	ScriptedEventAddItem ; SCRIPTED_EVENT_ADDITEM
 		dc.l	ScriptedEventRemoveItem ; SCRIPTED_EVENT_REMOVEITEM
+		dc.l	ScriptedEventUpdateSceneNPCs ; SCRIPTED_EVENT_UPDATE_SCENE_NPCS
 ScriptedEventActionTableEnd:
-
-
 

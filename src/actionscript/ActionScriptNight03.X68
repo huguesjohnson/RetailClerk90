@@ -261,6 +261,7 @@ ActionScriptNight03WWCheckoutRespond:
 	rts
 .yes
 	addq	#$1,(MEM_REL_LAURA) ; increment the relationship score
+	move.l	#$00000000,(MEM_NPC_LOCATION_VB) ; event involves grunberg leaving for the night
 	; update day state
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
 	bset.l	#FLAG_NIGHT03_OPTIONAL2,d7 ; test if the optional event is complete	
@@ -308,14 +309,16 @@ EndNight03SetupGameState: ; separated to help with debugging
 	move.w	#SCENE_ID_FCBCAMPING,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
 	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
 	move.w	#PLAYER_SPRITE_ERYN,(MEM_PLAYER_SPRITE) ; initial sprite
-	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
-	move.w	#$00C2,(MEM_PLAYER_SPRITE_X)
-	move.w	#$00D0,(MEM_PLAYER_SPRITE_Y)
+	move.w	#DIRECTION_RIGHT,(MEM_PLAYER_SPRITE_DIRECTION)
+	move.w	#$00AC,(MEM_PLAYER_SPRITE_X)
+	move.w	#$011E,(MEM_PLAYER_SPRITE_Y)
 	;---------------------------------------------------------------------------	
 	; update NPC locations
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsDay ; reset the NPC locations
-	move.l	#$18000000,(MEM_NPC_LOCATION_WEHALL)
+	move.l	#$18000000,(MEM_NPC_LOCATION_EWHALL)
+	move.l	#$18000000,(MEM_NPC_LOCATION_EEHALL)	
+	move.l	#$19250000,(MEM_NPC_LOCATION_SVIDEO)
 	;---------------------------------------------------------------------------	
 	; scatter some NPCs around
 	;---------------------------------------------------------------------------	
@@ -323,7 +326,7 @@ EndNight03SetupGameState: ; separated to help with debugging
 	move.l	#$1A200000,(MEM_NPC_LOCATION_WWCHECKOUT)
 	move.l	#$1C230000,(MEM_NPC_LOCATION_WWTV)
 	move.l	#$0C240000,(MEM_NPC_LOCATION_CNOW)
-	move.l	#$0B250000,(MEM_NPC_LOCATION_DENIMCOUNTRY)
+	move.l	#$05000000,(MEM_NPC_LOCATION_DENIMCOUNTRY)
 	move.l	#$15120000,(MEM_NPC_LOCATION_FCBFISHING)
 	move.l	#$0A260000,(MEM_NPC_LOCATION_CHECKERS)
 	move.l	#$041F1100,(MEM_NPC_LOCATION_CENTER)

@@ -7,14 +7,17 @@
 ; SCENE_ID_NSHACK
 ;*******************************************************************************
 ActionScriptNight04NShackInteract:	
+	;---------------------------------------------------------------
+	; clerk hit region is an object because they are behind the counter
+	;---------------------------------------------------------------
+	move.w	(MEM_ACTION_TARGET_OBJID),d7 ; copy the object id to d7
+	cmpi.w	#OBJ_NPC_JEN,d7 ; test if the target is the clerk
+	beq.s	.npc0
+	; not even sure if it's possible to interact with the clerk directly but whatever
 	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
 	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
 	beq.s	.default
-	;---------------------------------------------------------------
-	; npc 0 is the clerk
-	;---------------------------------------------------------------
-	cmpi.w	#$0000,d7 ; test for npc0
-	bne.s	.default
+.npc0
 	;---------------------------------------------------------------
 	; else check if the event is complete
 	;---------------------------------------------------------------
@@ -53,10 +56,14 @@ ActionScriptNight04CavernEnterScene:
 	;---------------------------------------------------------------------------
 	bsr.s	ActionScriptNight04CavernUpdateState
 	; setup scripted event
-	lea ScriptedEventDay04_01_CavernStart,a6 ; point a6 to event to load
+	lea ScriptedEventNight04_02_CavernStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 .default
 	rts
+	
+ActionScriptNight04CavernExitScene:	
+	bsr.w	DefaultExitScene ; default scene exit
+	rts	
 	
 ; assumes d7 has MEM_DAY_EVENT_FLAGS
 ActionScriptNight04CavernUpdateState:
@@ -66,9 +73,9 @@ ActionScriptNight04CavernUpdateState:
 	rts
 
 ;*******************************************************************************
-; SCENE_ID_WWHALL
+; SCENE_ID_EEHALL
 ;*******************************************************************************
-ActionScriptNight04WWHallExit:	
+ActionScriptNight04EEHallExit:	
 	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d7 ; copy player sprite direction to d7
 	cmpi.w	#DIRECTION_UP,d7 ; is the player facing north?
 	beq.s	.north ; branch if so
@@ -222,16 +229,16 @@ ActionScriptNight04VBRespond:
 	
 	
 ;*******************************************************************************
-; SCENE_ID_WWAPPLIANCES
+; SCENE_ID_WWTV
 ;*******************************************************************************
 ActionScriptNight04WWTVInteract:	
 	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
 	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
 	beq.s	.default
 	;---------------------------------------------------------------
-	; npc 0 is the clerk
+	; npc 1 is the target
 	;---------------------------------------------------------------
-	cmpi.w	#$0000,d7 ; test for npc0
+	cmpi.w	#$0001,d7 ; test for npc0
 	bne.s	.default
 	;---------------------------------------------------------------
 	; else check if the event is complete
@@ -303,9 +310,9 @@ EndNight04SetupGameState: ; separated to help with debugging
 	move.w	#SCENE_ID_FCBCAMPING,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
 	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
 	move.w	#PLAYER_SPRITE_ERYN,(MEM_PLAYER_SPRITE) ; initial sprite
-	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
-	move.w	#$00C2,(MEM_PLAYER_SPRITE_X)
-	move.w	#$00D0,(MEM_PLAYER_SPRITE_Y)
+	move.w	#DIRECTION_DOWN,(MEM_PLAYER_SPRITE_DIRECTION)
+	move.w	#$00E5,(MEM_PLAYER_SPRITE_X)
+	move.w	#$00B4,(MEM_PLAYER_SPRITE_Y)
 	;---------------------------------------------------------------------------	
 	; update NPC locations
 	;---------------------------------------------------------------------------	
@@ -314,6 +321,7 @@ EndNight04SetupGameState: ; separated to help with debugging
 	move.l	#$05100000,(MEM_NPC_LOCATION_DENIMCOUNTRY)
 	move.l	#$0E240000,(MEM_NPC_LOCATION_FCBFIREARMS)
 	move.l	#$1B250000,(MEM_NPC_LOCATION_WWAUDIO)
+	move.l	#$100F0000,(MEM_NPC_LOCATION_CAVERN)	
 	;---------------------------------------------------------------------------	
 	; scatter some NPCs around
 	;---------------------------------------------------------------------------	

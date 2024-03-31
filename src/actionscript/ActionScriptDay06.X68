@@ -29,12 +29,13 @@ ActionScriptDay06SHallRespond:
 	cmpi.w	#$0000,(MEM_MENU_RESPONSE) ; is the menu selection 0?
 	bne.s	.choice1
 .choice0	
-	bra.w	EndDay06
-.choice1
 	lea	StoryTextDay06EnterNShackChoice1,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the dialog
 	lea ScriptedEventPlayerSpriteLeft4Start,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
+.choice1
+	bsr.w	EndDay06
 	rts
 
 ;*******************************************************************************
@@ -102,7 +103,7 @@ ActionScriptDay06SVideoInteract:
 	;---------------------------------------------------------------------------
 	bset.l	#FLAG_DAY06_OPTIONAL2,d7 ; set event is done
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-	move.w	#$FFFF,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; clear optional event
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; clear optional event
 	; update global events
 	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7 ; copy day event flags to d7
 	bset.l	#FLAG_GLOBAL_REL1Complete,d7 ; set event is done
@@ -130,7 +131,7 @@ ActionScriptDay06FCBCampingInteract:
 	;---------------------------------------------------------------------------
 	bset.l	#FLAG_DAY06_OPTIONAL3,d7 ; set event is done
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; clear optional event
+	move.w	#$FFFF,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; clear optional event
 	; update global events
 	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7 ; copy day event flags to d7
 	bset.l	#FLAG_GLOBAL_REL2Complete,d7 ; set event is done

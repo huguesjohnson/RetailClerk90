@@ -19,7 +19,7 @@ ActionScriptDay04CavernInteract:
 	; else check if the event is complete
 	;---------------------------------------------------------------
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
-	btst.l	#FLAG_DAY04_EVENT00_CAVERN,d7 ; test if the event is complete
+	btst.l	#FLAG_DAY04_EVENT01_CAVERN,d7 ; test if the event is complete
 	bne.s	.default ; show default text if the event is complete
 	;---------------------------------------------------------------------------
 	; else update flags and run the scripted event
@@ -35,16 +35,45 @@ ActionScriptDay04CavernInteract:
 
 ; assumes d7 has MEM_DAY_EVENT_FLAGS
 ActionScriptDay04CavernUpdateState:
-	bset.l	#FLAG_DAY04_EVENT00_CAVERN,d7 ; set event is done
+	bset.l	#FLAG_DAY04_EVENT01_CAVERN,d7 ; set event is done
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
 	move.w	#SCENE_ID_NSHACK,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
 	move.w	#OBJECTIVE_D04_O01_NShack,(MEM_OBJECTIVE) ; update objective
 	rts
 
 ;*******************************************************************************
+; SCENE_ID_EEHALL
+;*******************************************************************************
+ActionScriptDay04EEHallEnterScene:
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_DAY04_EVENT00_EEHALL,d7 ; test if the event is complete
+	bne.s	.default ; default if set
+	;---------------------------------------------------------------------------
+	; else update flags and run the scripted event
+	;---------------------------------------------------------------------------
+	bsr.s	ActionScriptDay04EEHallUpdateState
+	; setup scripted event
+	lea ScriptedEventDay04_EEHallStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+.default
+	rts
+
+ActionScriptDay04EEHallUpdateState: ; assumes d7 has MEM_DAY_EVENT_FLAGS
+	bset.l	#FLAG_DAY04_EVENT00_EEHALL,d7 ; set flag
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	rts
+
+;*******************************************************************************
 ; SCENE_ID_NSHACK
 ;*******************************************************************************
 ActionScriptDay04NShackInteract:	
+	;---------------------------------------------------------------
+	; clerk hit region is an object because they are behind the counter
+	;---------------------------------------------------------------
+	move.w	(MEM_ACTION_TARGET_OBJID),d7 ; copy the object id to d7
+	cmpi.w	#OBJ_NPC_JEN,d7 ; test if the target is the clerk
+	beq.s	.npc0
+	; not even sure if it's possible to interact with the clerk directly but whatever
 	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
 	cmpi.w	#$FFFF,d7 ; test if the target is even an npnc
 	beq.s	.default
@@ -56,15 +85,31 @@ ActionScriptDay04NShackInteract:
 	;---------------------------------------------------------------
 	; else check if the event is complete
 	;---------------------------------------------------------------
+.npc0
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
-	btst.l	#FLAG_DAY04_EVENT00_CAVERN,d7 ; test if the 1st event is complete
+	btst.l	#FLAG_DAY04_EVENT01_CAVERN,d7 ; test if the 1st event is complete
 	beq.s	.default ; show default text if the event is not complete
 	;---------------------------------------------------------------------------
 	; else transition - this is a really short day, maybe I should fix that
 	;---------------------------------------------------------------------------
-	bra.w	EndDay04
+	bsr.w	EndDay04
+	rts
 .default
 	bsr.w ShowDefaultText
+	rts
+
+;*******************************************************************************
+; SCENE_ID_SHALL
+;*******************************************************************************
+ActionScriptDay04SHallExit:	
+	move.w	(MEM_PLAYER_SPRITE_DIRECTION),d7 ; copy player sprite direction to d7
+	cmpi.w	#DIRECTION_DOWN,d7 ; is the player facing south?
+	beq.s	.south ; branch if so
+	bsr.w	DefaultExitScene ; default scene exit
+	rts	
+.south
+	lea ScriptedEventNotTimeToLeaveErynStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event	
 	rts
 
 ;*******************************************************************************
@@ -108,6 +153,8 @@ ActionScriptDay04SVideoRespond:
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
 	; clear the map icon
 	move.w	#$FFFF,(MEM_OPTIONAL_EVENT1_SCENE_ID)
+	; npc is gone after this scene
+	move.l	#$19000000,(MEM_NPC_LOCATION_SVIDEO)	
 	; setup the scripted event
 	lea	StoryTextDay04SVideoChoice0,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the first dialog
@@ -185,7 +232,7 @@ EndDay04SetupGameState: ; separated to help with debugging
 	move.w	#SCENE_ID_NSHACK,(MEM_STORY_EVENT1_SCENE_ID) ; initial story event
 	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; no 2nd story event
 	move.w	#SCENE_ID_VB,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
-	move.w	#SCENE_ID_WWAPPLIANCES,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
+	move.w	#SCENE_ID_WWTV,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
 	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
 	move.w	#PLAYER_SPRITE_CARL,(MEM_PLAYER_SPRITE) ; initial sprite
 	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
@@ -196,8 +243,10 @@ EndDay04SetupGameState: ; separated to help with debugging
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsNight ; reset the NPC locations
 	move.l	#$03000000,(MEM_NPC_LOCATION_TBOOKS)
+	move.l	#$07010000,(MEM_NPC_LOCATION_NSHACK)	
 	move.l	#$00000000,(MEM_NPC_LOCATION_WWAPPLIANCES)	
 	move.l	#$1C1D0000,(MEM_NPC_LOCATION_WWTV)	
+	move.l	#$00000000,(MEM_NPC_LOCATION_CAVERN)		
 	move.l	#$11000000,(MEM_NPC_LOCATION_EWHALL) ; put the guard somewhere 	
 	rts		
 

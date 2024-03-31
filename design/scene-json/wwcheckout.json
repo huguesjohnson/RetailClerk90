@@ -251,14 +251,14 @@
 		},
 		{
 			"x":238,
-			"y":298,
+			"y":266,
 			"direction":"DIRECTION_UP",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":262,
-			"y":298,
+			"x":278,
+			"y":356,
 			"direction":"DIRECTION_UP",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"

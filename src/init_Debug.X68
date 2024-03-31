@@ -632,7 +632,7 @@ LaunchDebug21: ; day 04 - after main events are done
 	bsr.w LoadScene
 	bsr.w LoadPlayerSprite
 	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
-	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	move.w	#$00D0,(MEM_PLAYER_SPRITE_Y)
 	bsr.w FixSprites	
 	bsr.w FadeIn
 	rts
@@ -705,7 +705,7 @@ LaunchDebug25: ; day 05 - midpoint1
 	move.l	d7,(MEM_DAY_EVENT_FLAGS)
 	move.l	#$0E000000,(MEM_NPC_LOCATION_FCBFIREARMS)
 	bsr.w	CheckDay05Events
-	bsr.w	ActionScriptDay05DenimCountryExit	
+	;bsr.w	ActionScriptDay05DenimCountryExit	
 	;---------------------------------------------------------------------------
 	; load starting scene and sprites
 	;---------------------------------------------------------------------------
@@ -730,7 +730,7 @@ LaunchDebug26: ; day 05 - midpoint2
 	move.l	d7,(MEM_DAY_EVENT_FLAGS)
 	move.l	#$1B000000,(MEM_NPC_LOCATION_WWAUDIO)
 	bsr.w	CheckDay05Events
-	bsr.w	ActionScriptDay05DenimCountryExit
+	;bsr.w	ActionScriptDay05DenimCountryExit
 	;---------------------------------------------------------------------------
 	; load starting scene and sprites
 	;---------------------------------------------------------------------------
@@ -755,11 +755,11 @@ LaunchDebug27: ; day 05 - after main events are done
 	bset.l	#FLAG_DAY05_EVENT01_WWAUDIO,d7
 	move.l	d7,(MEM_DAY_EVENT_FLAGS)
 	bsr.w	CheckDay05Events
-	bsr.w	ActionScriptDay05DenimCountryExit
+	;bsr.w	ActionScriptDay05DenimCountryExit
 	;---------------------------------------------------------------------------
 	; load starting scene and sprites
 	;---------------------------------------------------------------------------
-	lea	SceneEWHall,a6
+	lea	SceneDenimCountry,a6
 	bsr.w LoadScene
 	bsr.w LoadPlayerSprite
 	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
@@ -779,7 +779,7 @@ LaunchDebug28: ; night 05 - @EEHallway
 	bsr.w LoadScene
 	bsr.w LoadPlayerSprite
 	move.w	#$0100,(MEM_PLAYER_SPRITE_X)
-	move.w	#$0100,(MEM_PLAYER_SPRITE_Y)
+	move.w	#$00C0,(MEM_PLAYER_SPRITE_Y)
 	bsr.w FixSprites	
 	bsr.w FadeIn
 	rts

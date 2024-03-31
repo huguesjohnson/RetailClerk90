@@ -3370,24 +3370,99 @@
             "intValue":2
          },
          {
+            "comment":"move npc0 toward a bin",
+            "direction":"LEFT",
+            "intValue":200
+         },
+         {
+            "comment":"move npc0 toward a bin",
+            "direction":"UP",
+            "intValue":8
+         },
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight03CPlanetLine1"
          },
+         {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         },
+         {
+            "comment":"move player sprite toward a bin",
+            "direction":"DOWN",
+            "intValue":32
+         },
+         {
+            "comment":"move player sprite toward a bin",
+            "direction":"LEFT",
+            "intValue":76
+         },
+         {
+            "comment":"move player sprite toward a bin",
+            "direction":"UP",
+            "intValue":64
+         },
+         {
+            "comment":"change to npc0 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         },         
+         {
+            "comment":"have npc0 face right",
+            "direction":"RIGHT",
+            "intValue":0
+         },        
          {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight03CPlanetLine2"
          },
          {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         },         
+          {
+            "comment":"have player face left",
+            "direction":"LEFT",
+            "intValue":0
+         },            
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight03CPlanetLine3"
          },
          {
+            "comment":"change to npc0 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         },         
+         {
+            "comment":"have npc0 face up",
+            "direction":"UP",
+            "intValue":0
+         },        
+         {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         },         
+         {
+            "comment":"have player face up",
+            "direction":"UP",
+            "intValue":0
+         },         
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight03CPlanetLine4"
+         },
+         {
+            "comment":"have player face left",
+            "direction":"LEFT",
+            "intValue":0
          },
          {
             "comment":"dialog",
@@ -3395,20 +3470,75 @@
             "label":"StoryTextNight03CPlanetLine5"
          },
          {
+            "comment":"have player face UP",
+            "direction":"UP",
+            "intValue":0
+         },         
+         {
+            "comment":"change to npc0 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         },         
+         {
+            "comment":"have npc0 face right",
+            "direction":"RIGHT",
+            "intValue":0
+         },          
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight03CPlanetLine6"
          },
+         {
+            "comment":"have npc0 face up",
+            "direction":"UP",
+            "intValue":0
+         },  
+         {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         },         
+         {
+            "comment":"have player sprite face left",
+            "direction":"LEFT",
+            "intValue":0
+         },          
          {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight03CPlanetLine7"
          },
          {
+            "comment":"have player sprite face up",
+            "direction":"UP",
+            "intValue":0
+         }, 
+         {
+            "comment":"change to npc0 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         },         
+         {
+            "comment":"have npc0 face right",
+            "direction":"RIGHT",
+            "intValue":0
+         },  
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight03CPlanetLine8"
          },
+         {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         },         
+         {
+            "comment":"have player sprite face left",
+            "direction":"LEFT",
+            "intValue":0
+         },  
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -3420,15 +3550,55 @@
             "label":"StoryTextNight03CPlanetLine10"
          },
          {
+            "comment":"change to npc0 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         },         
+         {
+            "comment":"have npc0 face up",
+            "direction":"UP",
+            "intValue":0
+         },           
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight03CPlanetLine11"
          },
          {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         },           
+         {
+            "comment":"have player sprite face up",
+            "direction":"UP",
+            "intValue":0
+         },           
+         {
+            "comment":"change to npc0 sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         },         
+         {
+            "comment":"have npc0 face right",
+            "direction":"UP",
+            "intValue":0
+         }, 
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight03CPlanetLine12"
          },
+         {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         },         
+         {
+            "comment":"have player sprite face down",
+            "direction":"DOWN",
+            "intValue":0
+         },           
          {
             "comment":"end",
             "command":"END"
@@ -3439,9 +3609,14 @@
       "name":"ScriptedEventNight03_Optional01",
       "actions":[
          {
-            "comment":"NPC0 sprite",
-            "intValue":2
+            "comment":"player sprite",
+            "intValue":1
          },
+         {
+            "comment":"face player sprite down",
+            "direction":"DOWN",
+            "intValue":8
+         },           
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -3463,6 +3638,16 @@
             "label":"StoryTextNight03WWCheckoutLine4"
          },
          {
+            "comment":"change to npc2",
+            "command":"CHANGE_SPRITE",
+            "intValue":4
+         },         
+         {
+            "comment":"move npc2 into the scene",
+            "direction":"UP",
+            "intValue":96
+         },         
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight03WWCheckoutLine5"
@@ -3473,9 +3658,89 @@
             "label":"StoryTextNight03WWCheckoutLine6"
          },
          {
+            "comment":"change to npc0",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         },
+         {
+            "comment":"move npc0 up",
+            "direction":"UP",
+            "intValue":8
+         },           
+         {
+            "comment":"move npc0 to the right",
+            "direction":"RIGHT",
+            "intValue":24
+         },         
+         {
+            "comment":"have npc0 face left",
+            "direction":"LEFT",
+            "intValue":0
+         },        
+         {
+            "comment":"change to npc2",
+            "command":"CHANGE_SPRITE",
+            "intValue":4
+         },          
+         {
+            "comment":"move npc2 toward the register",
+            "direction":"LEFT",
+            "intValue":92
+         }, 
+         {
+            "comment":"move npc2 toward the register",
+            "direction":"UP",
+            "intValue":44
+         },          
+         {
+            "comment":"move npc2 toward the register",
+            "direction":"RIGHT",
+            "intValue":56
+         }, 
+         {
+            "comment":"move npc2 toward the register",
+            "direction":"DOWN",
+            "intValue":4
+         },          
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight03WWCheckoutLine7"
+         },
+         {
+            "comment":"move npc2 out of the scene",
+            "direction":"LEFT",
+            "intValue":56
+         },          
+         {
+            "comment":"move npc2 toward the register",
+            "direction":"DOWN",
+            "intValue":44
+         }, 
+         {
+            "comment":"move npc2 toward the register",
+            "direction":"RIGHT",
+            "intValue":92
+         },          
+         {
+            "comment":"move npc2 into the scene",
+            "direction":"DOWN",
+            "intValue":96
+         },                     
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight03WWCheckoutLine8"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight03WWCheckoutLine9"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight03WWCheckoutLine10"
          },
          {
             "comment":"end",
@@ -3500,11 +3765,51 @@
             "intConst":"SCENE_ID_EWHALL"
          },
          {
+            "comment":"move npc0 out of the scene",
+            "direction":"RIGHT",
+            "intValue":76
+         }, 
+         {
+            "comment":"clear npc out of ewhall",
+            "command":"UPDATE_SCENE_NPCS",
+            "sceneId":"SCENE_ID_EWHALL",
+            "longValue":0
+         },          
+         {
             "comment":"end",
             "command":"END"
          }
       ]
    },
+   {
+      "name":"ScriptedEventDay04_EEHall",
+      "actions":[
+         {
+            "comment":"NPC0 sprite",
+            "intValue":2
+         },
+         {
+            "comment":"move npc0 out of the scene",
+            "direction":"RIGHT",
+            "intValue":60
+         }, 
+         {
+            "comment":"move npc0 out of the scene",
+            "direction":"UP",
+            "intValue":96
+         },
+         {
+            "comment":"clear npc out of eehall",
+            "command":"UPDATE_SCENE_NPCS",
+            "sceneId":"SCENE_ID_EEHALL",
+            "longValue":0
+         },          
+         {
+            "comment":"end",
+            "command":"END"
+         }
+      ]
+   },   
    {
       "name":"Night04NorthExitBlocked",
       "actions":[
@@ -3536,9 +3841,9 @@
             "intValue":1
          },
          {
-            "comment":"move player sprite down",
-            "direction":"DOWN",
-            "intValue":4
+            "comment":"move player sprite up",
+            "direction":"UP",
+            "intValue":8
          },
          {
             "comment":"end",
@@ -3556,7 +3861,7 @@
          {
             "comment":"dialog",
             "command":"DIALOG",
-            "label":"StoryTextDay04CavernLine1"
+            "label":"StoryTextNight04CavernLine1"
          },
          {
             "comment":"dialog",
@@ -3579,63 +3884,10 @@
             "label":"StoryTextDay04CavernLine5"
          },
          {
-            "comment":"end",
-            "command":"END"
-         }
-      ]
-   },
-   {
-      "name":"ScriptedEventDay04_02_NShack",
-      "actions":[
-         {
-            "comment":"NPC0 sprite",
-            "intValue":2
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay04NShackLine1"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay04NShackLine2"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay04NShackLine3"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay04NShackLine4"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay04NShackLine5"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay04NShackLine6"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay04NShackLine7"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay04NShackLine8"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay04NShackLine9"
-         },
+            "comment":"npc0 face right after dialog",
+            "direction":"RIGHT",
+            "intValue":0
+         },         
          {
             "comment":"end",
             "command":"END"
@@ -3646,8 +3898,8 @@
       "name":"ScriptedEventDay04_Optional00",
       "actions":[
          {
-            "comment":"NPC0 sprite",
-            "intValue":2
+            "comment":"player sprite",
+            "intValue":1
          },
          {
             "comment":"dialog",
@@ -3655,10 +3907,25 @@
             "label":"StoryTextDay04SVideoLine1"
          },
          {
+            "comment":"move player to the left",
+            "direction":"LEFT",
+            "intValue":104
+         },      
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay04SVideoLine2"
          },
+         {
+            "comment":"change to npc1 sprite",
+            "command":"CHANGE_SPRITE",            
+            "intValue":3
+         },
+         {
+            "comment":"npc1 face right",
+            "direction":"RIGHT",
+            "intValue":0
+         }, 
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -3694,6 +3961,21 @@
             "command":"DIALOG",
             "label":"StoryTextDay04SVideoLine9"
          },
+         {
+            "comment":"npc1 exits scene",
+            "direction":"LEFT",
+            "intValue":64
+         },     
+         {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",            
+            "intValue":1
+         },
+         {
+            "comment":"player sprite moves right",
+            "direction":"RIGHT",
+            "intValue":72
+         },              
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -3751,6 +4033,51 @@
             "intValue":2
          },
          {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04NShackLine1"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04NShackLine2"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04NShackLine3"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04NShackLine4"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04NShackLine5"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04NShackLine6"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04NShackLine7"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04NShackLine8"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay04NShackLine9"
+         },         
+         {
             "comment":"fade out",
             "command":"FADE_BLACK"
          },
@@ -3783,6 +4110,27 @@
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight04TBooksLine5"
+         },
+         {
+            "comment":"move npc0 out of the scene",
+            "direction":"UP",
+            "intValue":56
+         },          
+         {
+            "comment":"move npc0 out of the scene",
+            "direction":"RIGHT",
+            "intValue":56
+         },          
+         {
+            "comment":"move npc0 out of the scene",
+            "direction":"UP",
+            "intValue":76
+         }, 
+         {
+            "comment":"clear npc out of tbooks",
+            "command":"UPDATE_SCENE_NPCS",
+            "sceneId":"SCENE_ID_TBOOKS",
+            "longValue":0
          },
          {
             "comment":"end",
@@ -3899,6 +4247,11 @@
             "label":"StoryTextNight04SouthHallLine6"
          },
          {
+            "comment":"move npc0 out of the scene",
+            "direction":"DOWN",
+            "intValue":116
+         },
+         {
             "comment":"end",
             "command":"END"
          }
@@ -3908,8 +4261,8 @@
       "name":"ScriptedEventNight04_Optional00_Laura",
       "actions":[
          {
-            "comment":"NPC0 sprite",
-            "intValue":2
+            "comment":"NPC1 sprite",
+            "intValue":3
          },
          {
             "comment":"dialog",
@@ -3941,6 +4294,11 @@
             "command":"DIALOG",
             "label":"StoryTextNight04WWTVLine6"
          },
+         {
+            "comment":"npc1 faces up after the event",
+            "direction":"UP",
+            "intValue":0
+         },          
          {
             "comment":"end",
             "command":"END"
@@ -3985,6 +4343,11 @@
             "label":"StoryTextNight04VBLine6"
          },
          {
+            "comment":"npc0 faces down after the event",
+            "direction":"DOWN",
+            "intValue":0
+         },         
+         {
             "comment":"end",
             "command":"END"
          }
@@ -3994,8 +4357,8 @@
       "name":"ScriptedEventDay05_00_Intro",
       "actions":[
          {
-            "comment":"NPC0 sprite",
-            "intValue":2
+            "comment":"NPC1 sprite (dani)",
+            "intValue":3
          },
          {
             "comment":"fade out",
@@ -4005,6 +4368,16 @@
             "comment":"change scene to denim country",
             "command":"CHANGE_SCENE",
             "intConst":"SCENE_ID_DENIMCOUNTRY"
+         },
+         {
+            "comment":"move npc1 sprite (dani) toward npc0 sprite (lisa)",
+            "direction":"LEFT",
+            "intConst":4
+         },
+         {
+            "comment":"move npc1 sprite (dani) toward npc0 sprite (lisa)",
+            "direction":"UP",
+            "intConst":48
          },
          {
             "comment":"dialog",
@@ -4027,10 +4400,31 @@
             "label":"StoryTextDay05DenimCountryLine4"
          },
          {
+            "comment":"move npc1 sprite (dani) face right",
+            "direction":"RIGHT",
+            "intConst":0
+         },         
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay05DenimCountryLine5"
          },
+         {
+            "comment":"move npc1 sprite out of the scene",
+            "direction":"RIGHT",
+            "intConst":82
+         },          
+         {
+            "comment":"move npc1 sprite out of the scene",
+            "direction":"UP",
+            "intConst":132
+         },   
+         {
+            "comment":"clear npc out of denmin country",
+            "command":"UPDATE_SCENE_NPCS",
+            "sceneId":"SCENE_ID_DENIMCOUNTRY",
+            "longValue":5
+         },                 
          {
             "comment":"end",
             "command":"END"
@@ -4041,8 +4435,8 @@
       "name":"ActionScriptDay05FCBFirearmsRespond0",
       "actions":[
          {
-            "comment":"NPC0 sprite",
-            "intValue":2
+            "comment":"NPC1 sprite",
+            "intValue":3
          },
          {
             "comment":"dialog",
@@ -4065,6 +4459,11 @@
             "label":"StoryTextDay05FCBFirearmsRespond0Line05"
          },
          {
+            "comment":"move npc1 out of the scene",
+            "direction":"DOWN",
+            "intValue":184
+         },
+         {
             "comment":"end",
             "command":"END"
          }
@@ -4074,8 +4473,8 @@
       "name":"ActionScriptDay05FCBFirearmsRespond1",
       "actions":[
          {
-            "comment":"NPC0 sprite",
-            "intValue":2
+            "comment":"NPC1 sprite",
+            "intValue":3
          },
          {
             "comment":"dialog",
@@ -4101,7 +4500,12 @@
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay05FCBFirearmsRespond1Line04"
-         },         
+         },   
+         {
+            "comment":"move npc1 out of the scene",
+            "direction":"DOWN",
+            "intValue":184
+         },
          {
             "comment":"end",
             "command":"END"
@@ -4112,8 +4516,8 @@
       "name":"ActionScriptDay05WWAudioRespond0",
       "actions":[
          {
-            "comment":"NPC0 sprite",
-            "intValue":2
+            "comment":"NPC1 sprite",
+            "intValue":3
          },
          {
             "comment":"dialog",
@@ -4156,6 +4560,11 @@
             "label":"StoryTextErynSpeechless"
          },
          {
+            "comment":"move npc1 out of the scene",
+            "direction":"RIGHT",
+            "intValue":128
+         },
+         {
             "comment":"end",
             "command":"END"
          }
@@ -4165,8 +4574,8 @@
       "name":"ActionScriptDay05WWAudioRespond1",
       "actions":[
          {
-            "comment":"NPC0 sprite",
-            "intValue":2
+            "comment":"NPC1 sprite",
+            "intValue":3
          },
          {
             "comment":"dialog",
@@ -4184,49 +4593,16 @@
             "label":"StoryTextDay05WWAudioRespond1Line04"
          },
          {
+            "comment":"move npc1 out of the scene",
+            "direction":"RIGHT",
+            "intValue":128
+         },
+         {
             "comment":"end",
             "command":"END"
          }
       ]
    },  
-   {
-      "name":"ScriptedEventDay05_03_DenimCountry",
-      "actions":[
-         {
-            "comment":"NPC0 sprite",
-            "intValue":2
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay05DenimCountry2Line1"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay05DenimCountry2Line2"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay05DenimCountry2Line3"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay05DenimCountry2Line4"
-         },
-         {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextDay05DenimCountry2Line5"
-         },
-         {
-            "comment":"end",
-            "command":"END"
-         }
-      ]
-   },
    {
       "name":"ScriptedEventDay05_Optional00",
       "actions":[
@@ -4250,9 +4626,29 @@
             "label":"StoryTextDay05CavernLine3"
          },
          {
+            "comment":"move npc0 (dani) up toward db",
+            "direction":"UP",
+            "intValue":88
+         },         
+         {
+            "comment":"move npc0 (dani) up toward db",
+            "direction":"LEFT",
+            "intValue":64
+         },         
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay05CavernLine4"
+         },
+         {
+            "comment":"change to npc1 sprite",
+            "command":"CHANGE_SPRITE",            
+            "intValue":3
+         },
+         {
+            "comment":"npc1 (db) face right",
+            "direction":"RIGHT",
+            "intValue":0
          },
          {
             "comment":"dialog",
@@ -4260,10 +4656,35 @@
             "label":"StoryTextDay05CavernLine5"
          },
          {
+            "comment":"move npc1 (db) toward cabinet",
+            "direction":"RIGHT",
+            "intValue":153
+         },         
+         {
+            "comment":"move npc1 (db) face up",
+            "direction":"UP",
+            "intValue":8
+         },         
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay05CavernLine6"
          },
+         {
+            "comment":"change to npc0 sprite",
+            "command":"CHANGE_SPRITE",            
+            "intValue":2
+         },         
+         {
+            "comment":"move npc0 (dani) toward cabinet",
+            "direction":"RIGHT",
+            "intValue":62
+         },         
+         {
+            "comment":"move npc0 (dani) face up",
+            "direction":"UP",
+            "intValue":8
+         },          
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -4280,9 +4701,39 @@
             "label":"StoryTextDay05CavernLine9"
          },
          {
+            "comment":"move npc0 (dani) out of the scene",
+            "direction":"DOWN",
+            "intValue":136
+         },
+         {
+            "comment":"move npc0 (dani) out of the scene",
+            "direction":"LEFT",
+            "intValue":98
+         },
+         {
+            "comment":"move npc0 (dani) out of the scene",
+            "direction":"DOWN",
+            "intValue":64
+         },
+         {
+            "comment":"change to npc1 sprite",
+            "command":"CHANGE_SPRITE",            
+            "intValue":3
+         },
+         {
+            "comment":"npc1 (db) face down",
+            "direction":"DOWN",
+            "intValue":0
+         },
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextDay05CavernLine10"
+         },
+         {
+            "comment":"npc1 (db) face up again",
+            "direction":"UP",
+            "intValue":4
          },
          {
             "comment":"end",
@@ -4317,13 +4768,108 @@
       "name":"ScriptedEventNight05_00_Intro",
       "actions":[
          {
-            "comment":"NPC0 sprite",
-            "intValue":2
+            "comment":"NPC1 sprite",
+            "intValue":3
          },
+         {
+            "comment":"move npc1 sprite (dani) toward npc0 sprite (lisa)",
+            "direction":"LEFT",
+            "intValue":4
+         },
+         {
+            "comment":"move npc1 sprite (dani) toward npc0 sprite (lisa)",
+            "direction":"UP",
+            "intValue":48
+         },         
+         {
+            "comment":"npc0 sprite (lisa)",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         },     
+         {
+            "comment":"face down",
+            "direction":"DOWN",
+            "intValue":0
+         },                
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05DenimCountry2Line1"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05DenimCountry2Line2"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05DenimCountry2Line3"
+         },
+         {
+            "comment":"npc1 sprite (dani)",
+            "command":"CHANGE_SPRITE",
+            "intValue":3
+         },          
+         {
+            "comment":"start moving npc1 sprite (dani) toward exit",
+            "direction":"DOWN",
+            "intValue":8
+         },         
+         {
+            "comment":"start moving npc1 sprite (dani) toward exit",
+            "direction":"LEFT",
+            "intValue":24
+         },         
+         {
+            "comment":"npc1 sprite (dani) face right",
+            "direction":"RIGHT",
+            "intValue":0
+         },         
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05DenimCountry2Line4"
+         },
+         {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         },         
+         {
+            "comment":"player sprite face left",
+            "direction":"LEFT",
+            "intValue":0
+         },          
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextDay05DenimCountry2Line5"
+         },         
+         {
+            "comment":"npc1 sprite (dani)",
+            "command":"CHANGE_SPRITE",
+            "intValue":3
+         }, 
+         {
+            "comment":"move npc1 sprite (dani) toward exit",
+            "direction":"LEFT",
+            "intConst":60
+         },          
          {
             "comment":"fade out",
             "command":"FADE_BLACK"
          },
+         {
+            "comment":"player sprite (now carl)",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         },     
+         {
+            "comment":"face up",
+            "direction":"UP",
+            "intValue":0
+         },           
          {
             "comment":"change scene to tbooks",
             "command":"CHANGE_SCENE",
@@ -4370,6 +4916,32 @@
             "label":"StoryTextNight05TBooksLine8"
          },
          {
+            "comment":"change to npc0 sprite (now charles)",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         },          
+         {
+            "comment":"move npc0 out of the scene",
+            "direction":"UP",
+            "intValue":56
+         },          
+         {
+            "comment":"move npc0 out of the scene",
+            "direction":"RIGHT",
+            "intValue":56
+         },          
+         {
+            "comment":"move npc0 out of the scene",
+            "direction":"UP",
+            "intValue":76
+         },     
+         {
+            "comment":"clear npc out of tnooks",
+            "command":"UPDATE_SCENE_NPCS",
+            "sceneId":"SCENE_ID_TBOOKS",
+            "longValue":0
+         },              
+         {
             "comment":"end",
             "command":"END"
          }
@@ -4379,8 +4951,23 @@
       "name":"ScriptedEventNight05_01_Cavern",
       "actions":[
          {
-            "comment":"NPC0 sprite",
-            "intValue":2
+            "comment":"player sprite",
+            "intValue":1
+         },
+         {
+            "comment":"walk player sprite into the scene",
+            "direction":"UP",
+            "intValue":80
+         },
+         {
+            "comment":"change to npc1 sprite (dani)",
+            "command":"CHANGE_SPRITE",
+            "intValue":3
+         },
+         {
+            "comment":"npc1 sprite (dani) face right",
+            "direction":"RIGHT",
+            "intValue":0
          },
          {
             "comment":"dialog",
@@ -4408,10 +4995,25 @@
             "label":"StoryTextNight05CavernLine5"
          },
          {
+            "comment":"npc1 sprite (dani) face down",
+            "direction":"DOWN",
+            "intValue":0
+         },         
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight05CavernLine6"
          },
+         {
+            "comment":"npc1 sprite (dani) exit scene",
+            "direction":"RIGHT",
+            "intValue":32
+         },         
+         {
+            "comment":"npc1 sprite (dani) exit scene",
+            "direction":"UP",
+            "intValue":76
+         },                  
          {
             "comment":"end",
             "command":"END"
@@ -4422,14 +5024,34 @@
       "name":"ScriptedEventNight05_02_BasementMDorm",
       "actions":[
          {
-            "comment":"NPC0 sprite",
-            "intValue":2
+            "comment":"player sprite",
+            "intValue":1
          },
+         {
+            "comment":"move player into the scene",
+            "direction":"DOWN",
+            "intValue":32
+         },          
+         {
+            "comment":"player face left",
+            "direction":"LEFT",
+            "intValue":0
+         },          
          {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight05BasementMDormLine1"
          },
+         {
+            "comment":"change to npc0 (brett)",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         },          
+         {
+            "comment":"npc0 (brett) face right",
+            "direction":"RIGHT",
+            "intValue":0
+         },         
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -4456,10 +5078,25 @@
             "label":"StoryTextNight05BasementMDormLine6"
          },
          {
+            "comment":"npc0 (brett) face down",
+            "direction":"DOWN",
+            "intValue":0
+         },         
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight05BasementMDormLine7"
          },
+         {
+            "comment":"change to npc1 (dani)",
+            "command":"CHANGE_SPRITE",
+            "intValue":3
+         },    
+         {
+            "comment":"npc1 (dani) exits the scene",
+            "direction":"LEFT",
+            "intValue":130
+         },                
          {
             "comment":"end",
             "command":"END"
@@ -4470,14 +5107,29 @@
       "name":"ScriptedEventNight05_03_BasementOffice",
       "actions":[
          {
-            "comment":"NPC0 sprite",
-            "intValue":2
+            "comment":"player sprite",
+            "intValue":1
          },
+         {
+            "comment":"move player further into the scene",
+            "direction":"UP",
+            "intValue":80
+         },          
          {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight05BasementOfficeLine1"
          },
+         {
+            "comment":"change to npc0 (al)",
+            "command":"CHANGE_SPRITE",
+            "intValue":2
+         },    
+         {
+            "comment":"npc0 (al) faces down",
+            "direction":"DOWN",
+            "intValue":0
+         },         
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -4558,6 +5210,21 @@
             "command":"DIALOG",
             "label":"StoryTextNight05BasementOfficeLine17"
          },
+         {
+            "comment":"change to npc2 (dani)",
+            "command":"CHANGE_SPRITE",
+            "intValue":4
+         },    
+         {
+            "comment":"npc2 (dani) exits scene",
+            "direction":"RIGHT",
+            "intValue":116
+         },         
+         {
+            "comment":"npc2 (dani) exits scene",
+            "direction":"DOWN",
+            "intValue":164
+         },           
          {
             "comment":"end",
             "command":"END"

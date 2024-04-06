@@ -246,3 +246,54 @@ PaletteWWTV01:
 PaletteWWHall:
 	include 'palettes/WWHall.X68'
 
+PaletteEndingGraphics00:
+	include 'palettes/credits-graphics-00.X68'
+
+PaletteEndingGraphics01:
+	include 'palettes/credits-graphics-01.X68'
+
+PaletteEndingGraphics02:
+	include 'palettes/credits-graphics-02.X68'
+
+PaletteEndingSound00:
+	include 'palettes/credits-sound-00.X68'
+
+PaletteEndingSound01:
+	include 'palettes/credits-sound-01.X68'
+
+PaletteEndingProgram00:
+	include 'palettes/credits-program-00.X68'
+
+PaletteEndingProgram01:
+	include 'palettes/credits-program-01.X68'
+
+PaletteEndingProgram02:
+	include 'palettes/credits-program-02.X68'
+
+PaletteEndingGood00:
+	include 'palettes/end-good-00.X68'
+
+PaletteEndingGood01:
+	include 'palettes/end-good-01.X68'
+
+PaletteEndingGood02:
+	include 'palettes/end-good-02.X68'
+
+PaletteEndingBad00:
+	include 'palettes/end-bad-00.X68'
+
+PaletteEndingBad01:
+	include 'palettes/end-bad-01.X68'
+
+PaletteEndingBad02:
+	include 'palettes/end-bad-02.X68'
+
+PaletteEndingPerfect00:
+	include 'palettes/end-perfect-00.X68'
+
+PaletteEndingPerfect01:
+	include 'palettes/end-perfect-01.X68'
+
+PaletteEndingPerfect02:
+	include 'palettes/end-perfect-02.X68'
+

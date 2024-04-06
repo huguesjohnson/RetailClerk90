@@ -1923,7 +1923,7 @@ ActionTableStart:
 ; day 12
 ;---------------------------------------------------------------------------
 ; scene 0
-	dc.l	ActionScriptDay06SceneVBTrading ; Interact
+	dc.l	ActionScriptDay06VBInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -2008,7 +2008,7 @@ ActionTableStart:
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 17
-	dc.l	ActionScriptDefaultInteract ; Interact
+	dc.l	ActionScriptDay06TBooksInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
@@ -2103,7 +2103,7 @@ ActionTableStart:
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 4
 	dc.l	ActionScriptDefaultInteract ; Interact
-	dc.l	ActionScriptNullEvent ; Respond
+	dc.l	ActionScriptNight06SHallRespond ; Respond
 	dc.l	ActionScriptNight06SHallExit ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 5
@@ -2220,7 +2220,7 @@ ActionTableStart:
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	DefaultExitScene ; ExitScene
-	dc.l	DefaultEnterScene ; EnterScene
+	dc.l	ActionScriptNight06BasementWDormEnter ; EnterScene
 ; scene 28
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond

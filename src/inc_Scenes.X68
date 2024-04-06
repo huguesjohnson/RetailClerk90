@@ -93,6 +93,24 @@ SceneBasementCafe:
 SceneBasementOffice:
 	include 'scenes/BasementOffice.X68'
 
+SceneCreditsProgram:
+	include 'scenes/CreditsProgram.X68'
+
+SceneCreditsGraphics:
+	include 'scenes/CreditsGraphics.X68'
+
+SceneCreditsSound:
+	include 'scenes/CreditsSound.X68'
+
+SceneEndingBad:
+	include 'scenes/EndingBad.X68'
+
+SceneEndingGood:
+	include 'scenes/EndingGood.X68'
+
+SceneEndingPerfect:
+	include 'scenes/EndingPerfect.X68'
+
 SceneIntroDay00:
 	include 'scenes/IntroDay00.X68'
 
@@ -116,24 +134,6 @@ SceneIntroDay06:
 
 SceneTitleDebug:
 	include 'scenes/TitleDebug.X68'
-
-SceneCreditsProgram:
-	include 'scenes/CreditsProgram.X68'
-
-SceneCreditsGraphics:
-	include 'scenes/CreditsGraphics.X68'
-
-SceneCreditsSound:
-	include 'scenes/CreditsSound.X68'
-
-SceneEndingBad:
-	include 'scenes/EndingBad.X68'
-
-SceneEndingGood:
-	include 'scenes/EndingGood.X68'
-
-SceneEndingPerfect:
-	include 'scenes/EndingPerfect.X68'
 
 SceneLoad:
 	include 'scenes/Load.X68'

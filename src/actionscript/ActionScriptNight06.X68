@@ -24,9 +24,7 @@ ActionScriptNight06BasementCafeInteract:
 	;---------------------------------------------------------------------------
 	; else update flags and run the scripted event
 	;---------------------------------------------------------------------------
-	bset.l	#FLAG_NIGHT06_EVENT00_BASEMENTKITCHEN,d7 ; set event is done
-	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-	move.w	#SCENE_ID_NSHACK,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
+	bsr.w Night06UpdateState
 	; setup scripted event
 	lea ScriptedEventNight06_01_BasementKitchenStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
@@ -35,6 +33,11 @@ ActionScriptNight06BasementCafeInteract:
 	bsr.w ShowDefaultText
 	rts
 
+Night06UpdateState: ; assumes d7 has MEM_DAY_EVENT_FLAGS
+	bset.l	#FLAG_NIGHT06_EVENT00_BASEMENTKITCHEN,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	move.w	#SCENE_ID_NSHACK,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
+	rts
 
 ;*******************************************************************************
 ; SCENE_ID_SHALL
@@ -70,7 +73,10 @@ ActionScriptNight06SHallRespond:
 	cmpi.w	#$0000,(MEM_MENU_RESPONSE) ; is the menu selection 0?
 	bne.s	.choice1
 .choice0	
-	bra.w	EndNight06
+	lea	StoryTextNight06EnterNShackChoice0,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the dialog
+	bsr.w	EndNight06
+	rts
 .choice1
 	lea	StoryTextNight06EnterNShackChoice1,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the dialog
@@ -193,6 +199,34 @@ ActionScriptNight06WWAppliancesInteract:
 	rts
 .default
 	bsr.w ShowDefaultText
+	rts
+	
+	
+;*******************************************************************************
+; SCENE_ID_BASEMENTWDORM
+;*******************************************************************************
+ActionScriptNight06BasementWDormEnter:
+	;---------------------------------------------------------------------------
+	; is the hidden event available?
+	;---------------------------------------------------------------------------
+	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7 ; copy global event flags to d7
+	btst.l	#FLAG_GLOBAL_Day06Hidden,d7 ; test if the event is available
+	beq.s	.default ; not set, don't run
+	;---------------------------------------------------------------------------
+	; has the hidden event already run?
+	;---------------------------------------------------------------------------
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+	btst.l	#FLAG_NIGHT06_HIDDEN0,d7 ; test if the event is complete
+	bne.s	.default ; show default text if the event is complete
+	;---------------------------------------------------------------------------
+	; else update flags and run the scripted event
+	;---------------------------------------------------------------------------
+	bset.l	#FLAG_NIGHT06_HIDDEN0,d7 ; set event complete
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	; setup scripted event
+	lea ScriptedEventNight06_HiddenStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+.default
 	rts
 	
 ;*******************************************************************************

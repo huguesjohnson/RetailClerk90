@@ -48,6 +48,16 @@ InitGameState:
 	; add the npcs that need to be present at the start
 	move.l	#$05232100,(MEM_NPC_LOCATION_DENIMCOUNTRY)	
 	move.l	#$02240000,(MEM_NPC_LOCATION_TBOOKS)
+	; add npcs from cutscenes
+	move.l	#$28000000,(MEM_NPC_LOCATION_VISION)	
+	move.l	#$28030000,(MEM_NPC_LOCATION_FLASHBACK)	
+	; add npcs that are in the ending scenes
+	move.l	#$00000000,(MEM_NPC_LOCATION_CREDITS_PROGRAM)	
+	move.l	#$00000000,(MEM_NPC_LOCATION_CREDITS_GRAPHICS)	
+	move.l	#$00000000,(MEM_NPC_LOCATION_CREDITS_SOUND)	
+	move.l	#$00000000,(MEM_NPC_LOCATION_END_GOOD)	
+	move.l	#$00000000,(MEM_NPC_LOCATION_END_BAD)	
+	move.l	#$00000000,(MEM_NPC_LOCATION_END_PERFECT)	
 	; scatter a few NPCs around
 	move.l	#$0B220000,(MEM_NPC_LOCATION_CPLANET)
 	move.l	#$0A250000,(MEM_NPC_LOCATION_CHECKERS)

@@ -576,7 +576,109 @@
 				"sourceFilePath":"design/img/swatches/wwhall.png",
 				"destinationFilePath":"src/palettes/WWHall.X68",
 				"allowDuplicateColors":"true"
-			}
+			},
+			{
+				"name":"PaletteEndingGraphics00",
+				"sourceFilePath":"design/img/swatches/credits-graphics-00.png",
+				"destinationFilePath":"src/palettes/credits-graphics-00.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteEndingGraphics01",
+				"sourceFilePath":"design/img/swatches/credits-graphics-01.png",
+				"destinationFilePath":"src/palettes/credits-graphics-01.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteEndingGraphics02",
+				"sourceFilePath":"design/img/swatches/credits-graphics-02.png",
+				"destinationFilePath":"src/palettes/credits-graphics-02.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteEndingSound00",
+				"sourceFilePath":"design/img/swatches/credits-sound-00.png",
+				"destinationFilePath":"src/palettes/credits-sound-00.X68",
+				"allowDuplicateColors":"true"
+			},	
+			{
+				"name":"PaletteEndingSound01",
+				"sourceFilePath":"design/img/swatches/credits-sound-01.png",
+				"destinationFilePath":"src/palettes/credits-sound-01.X68",
+				"allowDuplicateColors":"true"
+			},	
+			{
+				"name":"PaletteEndingProgram00",
+				"sourceFilePath":"design/img/swatches/credits-program-00.png",
+				"destinationFilePath":"src/palettes/credits-program-00.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteEndingProgram01",
+				"sourceFilePath":"design/img/swatches/credits-program-01.png",
+				"destinationFilePath":"src/palettes/credits-program-01.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteEndingProgram02",
+				"sourceFilePath":"design/img/swatches/credits-program-02.png",
+				"destinationFilePath":"src/palettes/credits-program-02.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteEndingGood00",
+				"sourceFilePath":"design/img/swatches/end-good-00.png",
+				"destinationFilePath":"src/palettes/end-good-00.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteEndingGood01",
+				"sourceFilePath":"design/img/swatches/end-good-01.png",
+				"destinationFilePath":"src/palettes/end-good-01.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteEndingGood02",
+				"sourceFilePath":"design/img/swatches/end-good-02.png",
+				"destinationFilePath":"src/palettes/end-good-02.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteEndingBad00",
+				"sourceFilePath":"design/img/swatches/end-bad-00.png",
+				"destinationFilePath":"src/palettes/end-bad-00.X68",
+				"allowDuplicateColors":"true"
+			},			
+			{
+				"name":"PaletteEndingBad01",
+				"sourceFilePath":"design/img/swatches/end-bad-01.png",
+				"destinationFilePath":"src/palettes/end-bad-01.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteEndingBad02",
+				"sourceFilePath":"design/img/swatches/end-bad-02.png",
+				"destinationFilePath":"src/palettes/end-bad-02.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteEndingPerfect00",
+				"sourceFilePath":"design/img/swatches/end-perfect-00.png",
+				"destinationFilePath":"src/palettes/end-perfect-00.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteEndingPerfect01",
+				"sourceFilePath":"design/img/swatches/end-perfect-01.png",
+				"destinationFilePath":"src/palettes/end-perfect-01.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteEndingPerfect02",
+				"sourceFilePath":"design/img/swatches/end-perfect-02.png",
+				"destinationFilePath":"src/palettes/end-perfect-02.X68",
+				"allowDuplicateColors":"true"
+			}			
 		],
 		"includeFilePath":"src/inc_Palettes.X68"
 	},
@@ -2641,6 +2743,12 @@
 			"/design/scene-json/basementmdorm.json",
 			"/design/scene-json/basementcafe.json",
 			"/design/scene-json/basementoffice.json",
+			"/design/scene-json/creditsprogram.json",
+			"/design/scene-json/creditsgraphics.json",
+			"/design/scene-json/creditssound.json",
+			"/design/scene-json/endbad.json",
+			"/design/scene-json/endgood.json",
+			"/design/scene-json/endperfect.json",			
 			"/design/scene-json/introday00.json",
 			"/design/scene-json/introday01.json",
 			"/design/scene-json/introday02.json",
@@ -2649,12 +2757,6 @@
 			"/design/scene-json/introday05.json",
 			"/design/scene-json/introday06.json",
 			"/design/scene-json/titledebug.json",
-			"/design/scene-json/creditsprogram.json",
-			"/design/scene-json/creditsgraphics.json",
-			"/design/scene-json/creditssound.json",
-			"/design/scene-json/endbad.json",
-			"/design/scene-json/endgood.json",
-			"/design/scene-json/endperfect.json",			
 			"/design/scene-json/load.json",
 			"/design/scene-json/title.json",
 			"/design/scene-json/legal.json",
@@ -2807,11 +2909,15 @@
 		{"day":12,"scene":"SCENE_ID_CAVERN","action":"Interact","label":"ActionScriptDay06CavernInteract"},		
 		{"day":12,"scene":"SCENE_ID_SVIDEO","action":"Interact","label":"ActionScriptDay06SVideoInteract"},		
 		{"day":12,"scene":"SCENE_ID_FCBCAMPING","action":"Interact","label":"ActionScriptDay06FCBCampingInteract"},		
+		{"day":12,"scene":"SCENE_ID_TBOOKS","action":"Interact","label":"ActionScriptDay06TBooksInteract"},				
+		{"day":12,"scene":"SCENE_ID_VB","action":"Interact","label":"ActionScriptDay06VBInteract"},				
 		{"day":13,"scene":"SCENE_ID_BASEMENTCAFE","action":"Interact","label":"ActionScriptNight06BasementCafeInteract"},		
 		{"day":13,"scene":"SCENE_ID_SHALL","action":"ExitScene","label":"ActionScriptNight06SHallExit"},		
+		{"day":13,"scene":"SCENE_ID_SHALL","action":"Respond","label":"ActionScriptNight06SHallRespond"},		
 		{"day":13,"scene":"SCENE_ID_CPLANET","action":"Interact","label":"ActionScriptNight06CPlanetInteract"},		
 		{"day":13,"scene":"SCENE_ID_VB","action":"Interact","label":"ActionScriptNight06VBInteract"},		
-		{"day":13,"scene":"SCENE_ID_WWAPPLIANCES","action":"Interact","label":"ActionScriptNight06WWAppliancesInteract"},		
+		{"day":13,"scene":"SCENE_ID_WWAPPLIANCES","action":"Interact","label":"ActionScriptNight06WWAppliancesInteract"},
+		{"day":13,"scene":"SCENE_ID_BASEMENTWDORM","action":"EnterScene","label":"ActionScriptNight06BasementWDormEnter"},						
 		{"day":2,"scene":"SCENE_ID_FCBFISHING","action":"Interact","label":"ActionScriptDay01SceneFCBFishingTrading"},
 		{"day":4,"scene":"SCENE_ID_FCBFISHING","action":"Interact","label":"ActionScriptDay01SceneFCBFishingTrading"},
 		{"day":6,"scene":"SCENE_ID_FCBFISHING","action":"Interact","label":"ActionScriptDay01SceneFCBFishingTrading"},

@@ -221,7 +221,7 @@ EndNight05:
 	move.l	d7,(MEM_GAME_STATE)	; save updated game state
 	; set the intro screen counter
 	move.w	#INTRO_SCREEN_COUNTER_START,(MEM_INTRO_SCENE_COUNTER)
-	lea	SceneIntroDay05,a6	; address of the scene for the title screen
+	lea	SceneIntroDay06,a6	; address of the scene for the title screen
 	bsr.w	LoadScene	; branch to LoadScene subroutine
 	bsr.w	FadeIn	; fade in to the new scene
 	; queue scripted event to launch
@@ -276,5 +276,6 @@ EndNight05SetupGameState: ; separated to help with debugging
 	move.l	#$0B250000,(MEM_NPC_LOCATION_CPLANET)
 	move.l	#$0E250000,(MEM_NPC_LOCATION_FCBFIREARMS)
 	move.l	#$11000000,(MEM_NPC_LOCATION_EEHALL)
-	move.l	#$00000000,(MEM_NPC_LOCATION_SHALL)	
+	move.l	#$00000000,(MEM_NPC_LOCATION_SHALL) ; no one here the next day
+	move.l	#$00000000,(MEM_NPC_LOCATION_CENTER) ; no one here the next day
 	rts	

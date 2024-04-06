@@ -2730,29 +2730,29 @@ DialogTextAlOldDay0D:
 	dc.b	"Why are you poking",LF
 	dc.b	"around here?",ETX
 	align 2
-; only present on day0C
+; not present until day0C
 DialogTextHiddenHJDay00:
-; only present on day0C
+; not present until day0C
 DialogTextHiddenHJDay01:
-; only present on day0C
+; not present until day0C
 DialogTextHiddenHJDay02:
-; only present on day0C
+; not present until day0C
 DialogTextHiddenHJDay03:
-; only present on day0C
+; not present until day0C
 DialogTextHiddenHJDay04:
-; only present on day0C
+; not present until day0C
 DialogTextHiddenHJDay05:
-; only present on day0C
+; not present until day0C
 DialogTextHiddenHJDay06:
-; only present on day0C
+; not present until day0C
 DialogTextHiddenHJDay07:
-; only present on day0C
+; not present until day0C
 DialogTextHiddenHJDay08:
-; only present on day0C
+; not present until day0C
 DialogTextHiddenHJDay09:
-; only present on day0C
+; not present until day0C
 DialogTextHiddenHJDay0A:
-; only present on day0C
+; not present until day0C
 DialogTextHiddenHJDay0B:
 DialogTextHiddenHJDay0C:
 	dc.w	OBJ_NPC_HIDDENHJ
@@ -2761,31 +2761,36 @@ DialogTextHiddenHJDay0C:
 	dc.b	"It was still worth",LF
 	dc.b	"the visit though.",ETX
 	align 2
-; only present on day0C
 DialogTextHiddenHJDay0D:
-; only present on day0C
+	dc.w	OBJ_NPC_HIDDENHJ
+	dc.b	"I feel like this room",LF
+	dc.b	"should have more^",FF
+	dc.b	"scenery.",LF
+	dc.b	"Very lazy effort.",ETX
+	align 2
+; not present until day0C
 DialogTextHiddenMJDay00:
-; only present on day0C
+; not present until day0C
 DialogTextHiddenMJDay01:
-; only present on day0C
+; not present until day0C
 DialogTextHiddenMJDay02:
-; only present on day0C
+; not present until day0C
 DialogTextHiddenMJDay03:
-; only present on day0C
+; not present until day0C
 DialogTextHiddenMJDay04:
-; only present on day0C
+; not present until day0C
 DialogTextHiddenMJDay05:
-; only present on day0C
+; not present until day0C
 DialogTextHiddenMJDay06:
-; only present on day0C
+; not present until day0C
 DialogTextHiddenMJDay07:
-; only present on day0C
+; not present until day0C
 DialogTextHiddenMJDay08:
-; only present on day0C
+; not present until day0C
 DialogTextHiddenMJDay09:
-; only present on day0C
+; not present until day0C
 DialogTextHiddenMJDay0A:
-; only present on day0C
+; not present until day0C
 DialogTextHiddenMJDay0B:
 DialogTextHiddenMJDay0C:
 	dc.w	OBJ_NPC_HIDDENMJ
@@ -2794,8 +2799,10 @@ DialogTextHiddenMJDay0C:
 	dc.b	"find the Kathleen",LF
 	dc.b	"Sunfire book.",ETX
 	align 2
-; only present on day0C
 DialogTextHiddenMJDay0D:
+	dc.w	OBJ_NPC_HIDDENMJ
+	dc.b	"This place is so sad.",ETX
+	align 2
 
 ;-------------------------------------------------------------------------------
 ; ObjectName
@@ -3199,7 +3206,7 @@ DebugScreenLine0C:
 DebugScreenLine0D:
 	dc.b	"{Night2 midpoint   {Test mystery item",ETX
 DebugScreenLine0E:
-	dc.b	"{Night2 events done{(not implemented)",ETX
+	dc.b	"{Night2 events done{Night6 south hall",ETX
 DebugScreenLine0F:
 	dc.b	"{Day3 start        {(not implemented)",ETX
 DebugScreenLine10:
@@ -7543,9 +7550,14 @@ StoryTextDay06EnterNShackChoice:
 	dc.b	"{ Yeah               ",LF
 	dc.b	"{ Nope       ",ETX
 	align 2
-StoryTextDay06EnterNShackChoice1:
+StoryTextDay06EnterNShackChoice0:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"I'll come back later.",ETX
+	align 2
+StoryTextDay06EnterNShackChoice1:
+	dc.w	OBJ_NPC_ERYN
+	dc.b	"(I wonder what she",LF
+	dc.b	"wants?)",ETX
 	align 2
 StoryTextNight06EnterNShackChoice:
 	dc.w	OBJ_NPC_CARL
@@ -7553,6 +7565,10 @@ StoryTextNight06EnterNShackChoice:
 	dc.b	"goodbye?^",FFR
 	dc.b	"{ Yeah               ",LF
 	dc.b	"{ Nope       ",ETX
+	align 2
+StoryTextNight06EnterNShackChoice0:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"(I guess it's time)",ETX
 	align 2
 StoryTextNight06EnterNShackChoice1:
 	dc.w	OBJ_NPC_CARL
@@ -7889,6 +7905,66 @@ StoryTextNight06VBLine10:
 	dc.b	"care.^",FF
 	dc.b	"Early congratulations",LF
 	dc.b	"on retiring.",ETX
+	align 2
+StoryTextNight06HiddenLine00:
+	dc.w	OBJ_NPC_HIDDENHJ
+	dc.b	"I don't think we're",LF
+	dc.b	"supposed to be here.",ETX
+	align 2
+StoryTextNight06HiddenLine01:
+	dc.w	OBJ_NPC_HIDDENMJ
+	dc.b	"Relax, no one is",LF
+	dc.b	"looking for us.^",FF
+	dc.b	"I just wanted to see",LF
+	dc.b	"if this place was^",FF
+	dc.b	"real.",ETX
+	align 2
+StoryTextNight06HiddenLine02:
+	dc.w	OBJ_NPC_HIDDENHJ
+	dc.b	"I know, I remember",LF
+	dc.b	"the rumors,^",FF
+	dc.b	"from when we worked",LF
+	dc.b	"here.^",FF
+	dc.b	"That was a long time",LF
+	dc.b	"ago.",ETX
+	align 2
+StoryTextNight06HiddenLine03:
+	dc.w	OBJ_NPC_HIDDENMJ
+	dc.b	"30 years...",ETX
+	align 2
+StoryTextNight06HiddenLine04:
+	dc.w	OBJ_NPC_HIDDENHJ
+	dc.b	"Oh, no. You don't",LF
+	dc.b	"have any regrets I^",FF
+	dc.b	"hope?",ETX
+	align 2
+StoryTextNight06HiddenLine05:
+	dc.w	OBJ_NPC_HIDDENMJ
+	dc.b	"Not at all. It's not",LF
+	dc.b	"that.^",FF
+	dc.b	"This is just sad to",LF
+	dc.b	"think about.^",FF
+	dc.b	"Mall employees stuck",LF
+	dc.b	"living in the^",FF
+	dc.b	"basement.",LF
+	dc.b	"We probably knew some^",FF
+	dc.b	"of them.",ETX
+	align 2
+StoryTextNight06HiddenLine06:
+	dc.w	OBJ_NPC_HIDDENHJ
+	dc.b	"I'd live in a 1990",LF
+	dc.b	"mall if could.",ETX
+	align 2
+StoryTextNight06HiddenLine07:
+	dc.w	OBJ_NPC_HIDDENHJ
+	dc.b	"Above ground of",LF
+	dc.b	"course.^",FF
+	dc.b	"Like a fancy mall",LF
+	dc.b	"condo.",ETX
+	align 2
+StoryTextNight06HiddenLine08:
+	dc.w	OBJ_NPC_HIDDENMJ
+	dc.b	"Sorry, not happening.",ETX
 	align 2
 StoryTextEndBadLine1:
 	dc.w	OBJ_NPC_JEN

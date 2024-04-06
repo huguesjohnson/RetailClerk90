@@ -109,12 +109,6 @@ TestTitleLoadDebugMenu:
 	move.w	#$0000,(MEM_PLAYER_SPRITE_Y)
 	bsr.w	FixSprites	
 	bsr.w	FadeIn	; fade in to the new scene
-
-;*******************************************************************************
-; TEMPORARY "QUICK DEBUG" FOR DEVELOPMENT - REMOVE THIS LATER
-;*******************************************************************************
-	move.w	#$0020,(MEM_MENU_SELECTION)
-
 	bra.s	ExitProcessTitleScreen	;	return to start of game loop
 	endif
 TestTitleLoadNewGame:

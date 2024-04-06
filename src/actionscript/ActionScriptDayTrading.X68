@@ -1,4 +1,11 @@
 ;*******************************************************************************
+; This is way too much duplicate code
+; If/when I decided to optimize this, like if I port it to soemthing else
+; Big if... but then this should be one subroutine with parameters
+;*******************************************************************************
+
+
+;*******************************************************************************
 ; day 01+ - trading sequence 
 ; (really day02,day04,day06,day08,day10,day12)
 ; FCBFishing
@@ -7,6 +14,17 @@
 ;  get: OBJ_ITEM_HANDWARMER
 ;*******************************************************************************
 ActionScriptDay01SceneFCBFishingTrading:
+	;----------------------------
+	; test if talking to npc0
+	;----------------------------
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
+	beq.w	TradingDefault ; not an npc - show default text
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.w	TradingDefault ; not npc0 - show default text
+	;----------------------------
+	; trading sequence
+	;----------------------------
 	move.l	(MEM_TRADING_SEQUENCE_DAY),d7 ; copy progress of day trading to d7
 	btst.l	#$0,d7 ; test if this trade is done
 	bne.s	.after
@@ -39,6 +57,17 @@ ActionScriptDay01SceneFCBFishingTrading:
 ;  get: OBJ_ITEM_LIPSTICK
 ;*******************************************************************************
 ActionScriptDay02SceneWWAppliancesTrading:
+	;----------------------------
+	; test if talking to npc0
+	;----------------------------
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
+	beq.w	TradingDefault ; not an npc - show default text
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.w	TradingDefault ; not npc0 - show default text
+	;----------------------------
+	; trading sequence
+	;----------------------------
 	move.l	(MEM_TRADING_SEQUENCE_DAY),d7 ; copy progress of day trading to d7
 	btst.l	#$1,d7 ; test if this trade is done
 	bne.s	.after
@@ -69,6 +98,17 @@ ActionScriptDay02SceneWWAppliancesTrading:
 ;  get: OBJ_ITEM_TICKETS
 ;*******************************************************************************
 ActionScriptDay03SceneCPlanetTrading:
+	;----------------------------
+	; test if talking to npc0
+	;----------------------------
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
+	beq.w	TradingDefault ; not an npc - show default text
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.w	TradingDefault ; not npc0 - show default text
+	;----------------------------
+	; trading sequence
+	;----------------------------
 	move.l	(MEM_TRADING_SEQUENCE_DAY),d7 ; copy progress of day trading to d7
 	btst.l	#$2,d7 ; test if this trade is done
 	bne.s	.after
@@ -99,6 +139,17 @@ ActionScriptDay03SceneCPlanetTrading:
 ;  get: OBJ_ITEM_PORTABLE_TV
 ;*******************************************************************************
 ActionScriptDay04SceneWWTVTrading:
+	;----------------------------
+	; test if talking to npc0
+	;----------------------------
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
+	beq.w	TradingDefault ; not an npc - show default text
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.w	TradingDefault ; not npc0 - show default text
+	;----------------------------
+	; trading sequence
+	;----------------------------
 	move.l	(MEM_TRADING_SEQUENCE_DAY),d7 ; copy progress of day trading to d7
 	btst.l	#$3,d7 ; test if this trade is done
 	bne.s	.after
@@ -129,6 +180,17 @@ ActionScriptDay04SceneWWTVTrading:
 ;  get: OBJ_ITEM_COUPONS
 ;*******************************************************************************
 ActionScriptDay05SceneFCBCheckoutTrading:
+	;----------------------------
+	; test if talking to npc0
+	;----------------------------
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
+	beq.w	TradingDefault ; not an npc - show default text
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.w	TradingDefault ; not npc0 - show default text
+	;----------------------------
+	; trading sequence
+	;----------------------------
 	move.l	(MEM_TRADING_SEQUENCE_DAY),d7 ; copy progress of day trading to d7
 	btst.l	#$4,d7 ; test if this trade is done
 	bne.s	.after
@@ -159,6 +221,17 @@ ActionScriptDay05SceneFCBCheckoutTrading:
 ;  get: OBJ_ITEM_LPS
 ;*******************************************************************************
 ActionScriptDay05SceneWWCheckoutTrading:
+	;----------------------------
+	; test if talking to npc0
+	;----------------------------
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
+	beq.w	TradingDefault ; not an npc - show default text
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.w	TradingDefault ; not npc0 - show default text
+	;----------------------------
+	; trading sequence
+	;----------------------------
 	move.l	(MEM_TRADING_SEQUENCE_DAY),d7 ; copy progress of day trading to d7
 	btst.l	#$5,d7 ; test if this trade is done
 	bne.s	.after
@@ -190,6 +263,17 @@ ActionScriptDay05SceneWWCheckoutTrading:
 ;  get: OBJ_ITEM_MYSTERY_BOX
 ;*******************************************************************************
 ActionScriptDay06ScenePogoDawgTrading:
+	;----------------------------
+	; test if talking to npc0
+	;----------------------------
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
+	beq.w	TradingDefault ; not an npc - show default text
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.w	TradingDefault ; not npc0 - show default text
+	;----------------------------
+	; trading sequence
+	;----------------------------
 	move.l	(MEM_TRADING_SEQUENCE_DAY),d7 ; copy progress of day trading to d7
 	btst.l	#$6,d7 ; test if this trade is done
 	bne.s	.after
@@ -220,11 +304,17 @@ ActionScriptDay06ScenePogoDawgTrading:
 ;  get: OBJ_ITEM_TROPHY
 ;*******************************************************************************
 ActionScriptDay06SceneVBTrading:
+	;----------------------------
+	; test if talking to npc0
+	;----------------------------
 	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
 	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
-	beq.s	TradingDefault
+	beq.s	TradingDefault ; not an npc - show default text
 	cmpi.w	#$0000,d7 ; test for npc0
-	bne.s	TradingDefault	
+	bne.s	TradingDefault ; not npc0 - show default text
+	;----------------------------
+	; trading sequence
+	;----------------------------
 	move.l	(MEM_TRADING_SEQUENCE_DAY),d7 ; copy progress of day trading to d7
 	btst.l	#$7,d7 ; test if this trade is done
 	bne.s	.after

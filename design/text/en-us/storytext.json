@@ -3157,9 +3157,14 @@
          "formFeed":"FFR",
          "align":2
          }, 
-      "StoryTextDay06EnterNShackChoice1":{
+      "StoryTextDay06EnterNShackChoice0":{
          "dialogTitle":"OBJ_NPC_ERYN",
          "text":"I'll come back later.",
+         "align":2
+         },           
+      "StoryTextDay06EnterNShackChoice1":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"(I wonder what she wants?)",
          "align":2
          },              
       "StoryTextNight06EnterNShackChoice":{
@@ -3168,6 +3173,11 @@
          "formFeed":"FFR",
          "align":2
          },
+      "StoryTextNight06EnterNShackChoice0":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"(I guess it's time)",
+         "align":2
+         },           
       "StoryTextNight06EnterNShackChoice1":{
          "dialogTitle":"OBJ_NPC_CARL",
          "text":"No rush, I'll come back when I'm ready.",
@@ -3417,7 +3427,52 @@
          "dialogTitle":"OBJ_NPC_CARL",
          "text":"Same to you. Take care.|Early congratulations on retiring.",
          "align":2
-         },                                 
+         },          
+      "StoryTextNight06HiddenLine00":{
+         "dialogTitle":"OBJ_NPC_HIDDENHJ",
+         "text":"I don't think we're supposed to be here.",
+         "align":2
+         },                                
+      "StoryTextNight06HiddenLine01":{
+         "dialogTitle":"OBJ_NPC_HIDDENMJ",
+         "text":"Relax, no one is looking for us.|I just wanted to see if this place was real.",
+         "align":2
+         },    
+      "StoryTextNight06HiddenLine02":{
+         "dialogTitle":"OBJ_NPC_HIDDENHJ",
+         "text":"I know, I remember the rumors,|from when we worked here.|That was a long time ago.",
+         "align":2
+         },    
+      "StoryTextNight06HiddenLine03":{
+         "dialogTitle":"OBJ_NPC_HIDDENMJ",
+         "text":"30 years...",
+         "align":2
+         },       
+      "StoryTextNight06HiddenLine04":{
+         "dialogTitle":"OBJ_NPC_HIDDENHJ",
+         "text":"Oh, no. You don't have any regrets I hope?",
+         "align":2
+         },    
+      "StoryTextNight06HiddenLine05":{
+         "dialogTitle":"OBJ_NPC_HIDDENMJ",
+         "text":"Not at all. It's not that.|This is just sad to think about.|Mall employees stuck living in the basement.|We probably knew some of them.",
+         "align":2
+         },         
+      "StoryTextNight06HiddenLine06":{
+         "dialogTitle":"OBJ_NPC_HIDDENHJ",
+         "text":"I'd live in a 1990 mall if could.",
+         "align":2
+         },                         
+      "StoryTextNight06HiddenLine07":{
+         "dialogTitle":"OBJ_NPC_HIDDENHJ",
+         "text":"Above ground of course.|Like a fancy mall condo.",
+         "align":2
+         },       
+      "StoryTextNight06HiddenLine08":{
+         "dialogTitle":"OBJ_NPC_HIDDENMJ",
+         "text":"Sorry, not happening.",
+         "align":2
+         },                             
       "StoryTextEndBadLine1":{
          "dialogTitle":"OBJ_NPC_JEN",
          "text":"So you're both leaving?",

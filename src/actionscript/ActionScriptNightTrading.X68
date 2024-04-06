@@ -1,4 +1,9 @@
 ;*******************************************************************************
+; This is (also) way too much duplicate code
+; See comments in ActionScriptDayTrading
+;*******************************************************************************
+
+;*******************************************************************************
 ; night 01+ - trading sequence
 ; (really day03,day05,day07,day09,day11,day13)
 ; scene 13 - FCBFirearms
@@ -7,6 +12,17 @@
 ;  get: OBJ_ITEM_MOOSE_ATTRACTANT
 ;*******************************************************************************
 ActionScriptNight01SceneFCBFirearmsTrading:
+	;----------------------------
+	; test if talking to npc0
+	;----------------------------
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
+	beq.w	TradingDefault ; not an npc - show default text
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.w	TradingDefault ; not npc0 - show default text
+	;----------------------------
+	; trading sequence
+	;----------------------------
 	move.l	(MEM_TRADING_SEQUENCE_NIGHT),d7 ; copy progress of night trading to d7
 	btst.l	#$0,d7 ; test if this trade is done
 	bne.s	.after
@@ -31,6 +47,17 @@ ActionScriptNight01SceneFCBFirearmsTrading:
 ;  get: OBJ_ITEM_SHIRT
 ;*******************************************************************************
 ActionScriptNight02SceneCheckersTrading:
+	;----------------------------
+	; test if talking to npc0
+	;----------------------------
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
+	beq.w	TradingDefault ; not an npc - show default text
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.w	TradingDefault ; not npc0 - show default text
+	;----------------------------
+	; trading sequence
+	;----------------------------
 	move.l	(MEM_TRADING_SEQUENCE_NIGHT),d7 ; copy progress of night trading to d7
 	btst.l	#$1,d7 ; test if this trade is done
 	bne.s	.after
@@ -61,6 +88,17 @@ ActionScriptNight02SceneCheckersTrading:
 ;  get: OBJ_ITEM_HEADBAND 
 ;*******************************************************************************
 ActionScriptNight03SceneWWAudioTrading:
+	;----------------------------
+	; test if talking to npc0
+	;----------------------------
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
+	beq.w	TradingDefault ; not an npc - show default text
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.w	TradingDefault ; not npc0 - show default text
+	;----------------------------
+	; trading sequence
+	;----------------------------
 	move.l	(MEM_TRADING_SEQUENCE_NIGHT),d7 ; copy progress of night trading to d7
 	btst.l	#$2,d7 ; test if this trade is done
 	bne.s	.after
@@ -91,6 +129,17 @@ ActionScriptNight03SceneWWAudioTrading:
 ;  get: OBJ_ITEM_FM_CONVERTER
 ;*******************************************************************************
 ActionScriptNight04SceneTLodgeTrading:
+	;----------------------------
+	; test if talking to npc0
+	;----------------------------
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
+	beq.w	TradingDefault ; not an npc - show default text
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.w	TradingDefault ; not npc0 - show default text
+	;----------------------------
+	; trading sequence
+	;----------------------------
 	move.l	(MEM_TRADING_SEQUENCE_NIGHT),d7 ; copy progress of night trading to d7
 	btst.l	#$3,d7 ; test if this trade is done
 	bne.s	.after
@@ -121,6 +170,17 @@ ActionScriptNight04SceneTLodgeTrading:
 ;  get: OBJ_ITEM_FLANNEL_SHIRT
 ;*******************************************************************************
 ActionScriptNight04SceneCNowTrading:
+	;----------------------------
+	; test if talking to npc0
+	;----------------------------
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
+	beq.w	TradingDefault ; not an npc - show default text
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.w	TradingDefault ; not npc0 - show default text
+	;----------------------------
+	; trading sequence
+	;----------------------------
 	move.l	(MEM_TRADING_SEQUENCE_NIGHT),d7 ; copy progress of night trading to d7
 	btst.l	#$4,d7 ; test if this trade is done
 	bne.s	.after
@@ -151,6 +211,17 @@ ActionScriptNight04SceneCNowTrading:
 ;  get: OBJ_ITEM_UTILITY_KNIFE
 ;*******************************************************************************
 ActionScriptNight05SceneFCBCampingTrading:
+	;----------------------------
+	; test if talking to npc0
+	;----------------------------
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
+	beq.w	TradingDefault ; not an npc - show default text
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.w	TradingDefault ; not npc0 - show default text
+	;----------------------------
+	; trading sequence
+	;----------------------------
 	move.l	(MEM_TRADING_SEQUENCE_NIGHT),d7 ; copy progress of night trading to d7
 	btst.l	#$5,d7 ; test if this trade is done
 	bne.s	.after
@@ -181,6 +252,17 @@ ActionScriptNight05SceneFCBCampingTrading:
 ;  get: OBJ_ITEM_EARRING
 ;*******************************************************************************
 ActionScriptNight06SceneCavernTrading:
+	;----------------------------
+	; test if talking to npc0
+	;----------------------------
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
+	beq.w	TradingDefault ; not an npc - show default text
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.w	TradingDefault ; not npc0 - show default text
+	;----------------------------
+	; trading sequence
+	;----------------------------
 	move.l	(MEM_TRADING_SEQUENCE_NIGHT),d7 ; copy progress of night trading to d7
 	btst.l	#$6,d7 ; test if this trade is done
 	bne.s	.after
@@ -211,6 +293,17 @@ ActionScriptNight06SceneCavernTrading:
 ;  get: OBJ_ITEM_FINALITEM
 ;*******************************************************************************
 ActionScriptNight06SceneDenimCountryTrading:
+	;----------------------------
+	; test if talking to npc0
+	;----------------------------
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
+	beq.w	TradingDefault ; not an npc - show default text
+	cmpi.w	#$0000,d7 ; test for npc0
+	bne.w	TradingDefault ; not npc0 - show default text
+	;----------------------------
+	; trading sequence
+	;----------------------------
 	move.l	(MEM_TRADING_SEQUENCE_NIGHT),d7 ; copy progress of night trading to d7
 	btst.l	#$7,d7 ; test if this trade is done
 	bne.s	.after

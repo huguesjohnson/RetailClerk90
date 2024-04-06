@@ -1,6 +1,6 @@
 	if	_DEBUG_
 
-; 54 possible options
+; 50 possible options
 DebugTable:
 	dc.l	LaunchDebug00
 	dc.l	LaunchDebug01
@@ -52,23 +52,14 @@ DebugTable:
 	dc.l	LaunchDebug47
 	dc.l	LaunchDebug48
 	dc.l	LaunchDebug49
-	dc.l	LaunchDebug50
-	dc.l	LaunchDebug51
-	dc.l	LaunchDebug52
-	dc.l	LaunchDebug53
 
 ProcessDebugScreen:
-;*******************************************************************************
-; TEMPORARY "QUICK DEBUG" FOR DEVELOPMENT - REMOVE THIS LATER
-;*******************************************************************************
-	move.b	#BUTTON_START,(MEM_CONTROL_PRESSED)
-
 	; process start press
 	move.b	(MEM_CONTROL_PRESSED),d6	; copy pressed buttons to d6
 	andi.b	#BUTTON_START,d6	; test if the start button was pressed
 	beq.s	ProcessDebugScreenTestDpad	; start not pressed, branch
 	lea	DebugTable,a5	; point to the table
-	move.w	(MEM_MENU_SELECTION),d7	; copy scene ID to d7
+	move.w	(MEM_MENU_SELECTION),d7	; copy menu selection to d7
 	mulu.w	#LWORD_SIZE,d7	; multiply by lword size to get offset
 	adda.w	d7,a5	; move to offset location
 	move.w	#$0000,(MEM_MENU_SELECTION)	; clear menu selection
@@ -972,7 +963,39 @@ LaunchDebug37: ; test mystery item name distortion effect
 	bsr.w FadeIn
 	rts
 
-LaunchDebug38:
+LaunchDebug38: ; night 06 - outside south hall, events complete, trading & optional events available
+	bsr.w	InitGlobalEvents
+	bsr.w	SetupTradingSequenceNight
+	;---------------------------------------------------------------------------
+	; setup relationship levels
+	;---------------------------------------------------------------------------
+	move.w	#MAX_REL,(MEM_REL_LAURA)
+	move.w	#MAX_REL,(MEM_REL_ELIZA)
+	move.w	#MAX_REL,(MEM_REL_GRUNBERG)	
+	;---------------------------------------------------------------------------
+	; setup global events
+	;---------------------------------------------------------------------------		
+	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7	
+	bset.l	#FLAG_GLOBAL_REL0Complete,d7
+	bset.l	#FLAG_GLOBAL_REL1Complete,d7
+	bset.l	#FLAG_GLOBAL_REL2Complete,d7
+	bset.l	#FLAG_GLOBAL_EVENT00_TLodgeEvent1123Night,d7
+	bset.l	#FLAG_GLOBAL_Victor1204,d7
+	bset.l	#FLAG_GLOBAL_TradingDayComplete,d7			
+	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS)
+	move.w	#PLAYER_SPRITE_CARL,(MEM_PLAYER_SPRITE) ; initial sprite
+	bsr.w	EndDay06SetupGameState
+	bsr.w	Night06UpdateState
+	lea	SceneSHall,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$01A8,(MEM_PLAYER_SPRITE_X)
+	move.w	#$00F0,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
+	rts
+
+
 LaunchDebug39:
 LaunchDebug40:	
 LaunchDebug41:
@@ -981,31 +1004,35 @@ LaunchDebug43:
 LaunchDebug44:
 LaunchDebug45:
 LaunchDebug46:
-LaunchDebug47:
-LaunchDebug48:
-LaunchDebug49:
-LaunchDebug50:
 
 DebugNotImplemented:
 	bra.w	NewGame
 
-
-; these three are not tested yet
-LaunchDebug51: ; test bad ending here
+LaunchDebug47: ; test bad ending here
+	bsr.w	InitGlobalEvents
+	;---------------------------------------------------------------------------
+	; setup
+	;---------------------------------------------------------------------------
 	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7 ; copy global event flags to d7
 	and.l	#$00000000,d7
 	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS)
+	move.l	#$07010F00,(MEM_NPC_LOCATION_NSHACK)
+	move.w	#PLAYER_SPRITE_CARL,(MEM_PLAYER_SPRITE) ; initial sprite
 	bsr.w	SetupEndGame
+	rts
 
-LaunchDebug52: ; test good ending here
+LaunchDebug48: ; test good ending here
 	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7 ; copy global event flags to d7
 	bset.l	#FLAG_GLOBAL_REL0Complete,d7
 	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS)
 	bsr.w	SetupEndGame
+	rts
 
-LaunchDebug53: ; test perfect ending here
+LaunchDebug49: ; test perfect ending here
 	move.l	#ALL_GLOBAL_FLAGS_SET,(MEM_GLOBAL_EVENT_FLAGS)
 	bsr.w	SetupEndGame
+	rts
+
 
 CatchAll:
 	; prevent freezing in case I messed up

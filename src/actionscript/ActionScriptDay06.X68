@@ -29,12 +29,14 @@ ActionScriptDay06SHallRespond:
 	cmpi.w	#$0000,(MEM_MENU_RESPONSE) ; is the menu selection 0?
 	bne.s	.choice1
 .choice0	
-	lea	StoryTextDay06EnterNShackChoice1,a6 ; point a6 to the first dialog
+	lea	StoryTextDay06EnterNShackChoice0,a6 ; point a6 to the first dialog
 	bsr.w	ShowDialog ; show the dialog
 	lea ScriptedEventPlayerSpriteLeft4Start,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 	rts
 .choice1
+	lea	StoryTextDay06EnterNShackChoice1,a6 ; point a6 to the first dialog
+	bsr.w	ShowDialog ; show the dialog
 	bsr.w	EndDay06
 	rts
 
@@ -145,6 +147,75 @@ ActionScriptDay06FCBCampingInteract:
 	rts
 	
 ;*******************************************************************************
+; SCENE_ID_VB
+;*******************************************************************************
+ActionScriptDay06VBInteract:	
+	;---------------------------------------------------------------------------
+	; test if this is the right npc
+	;---------------------------------------------------------------------------
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
+	beq.w	.default ; not an npc - show default text
+	cmpi.w	#$0001,d7 ; test for npc21
+	bne.w	.default ; not npc1 - show default text
+	;---------------------------------------------------------------------------
+	; test if the event has already run
+	; it shouldn't have unless I made a mistake elsewhere
+	;---------------------------------------------------------------------------
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+ 	btst.l	#FLAG_DAY06_HIDDEN1,d7 ; test if the optional event is complete
+	bne.s	.default ; show default text if the event is complete
+	;---------------------------------------------------------------------------
+	; else update state and run event
+	;---------------------------------------------------------------------------
+	bset.l	#FLAG_DAY06_HIDDEN1,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	; update npcs in the location
+	move.l	#$06000000,(MEM_NPC_LOCATION_VB)
+	; setup scripted event
+	lea ScriptedEventDay06_Hidden1Start,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts
+.default
+	bsr.w ShowDefaultText
+	rts	
+		
+	
+;*******************************************************************************
+; SCENE_ID_TBOOKS
+;*******************************************************************************
+ActionScriptDay06TBooksInteract:	
+	;---------------------------------------------------------------------------
+	; test if this is the right npc
+	;---------------------------------------------------------------------------
+	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
+	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
+	beq.w	.default ; not an npc - show default text
+	cmpi.w	#$0002,d7 ; test for npc2
+	bne.w	.default ; not npc2 - show default text
+	;---------------------------------------------------------------------------
+	; test if the event has already run
+	; it shouldn't have unless I made a mistake elsewhere
+	;---------------------------------------------------------------------------
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+ 	btst.l	#FLAG_DAY06_HIDDEN0,d7 ; test if the optional event is complete
+	bne.s	.default ; show default text if the event is complete
+	;---------------------------------------------------------------------------
+	; else update state and run event
+	;---------------------------------------------------------------------------
+	bset.l	#FLAG_DAY06_HIDDEN0,d7 ; set event is done
+	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
+	; update npcs in the location
+	move.l	#$02230000,(MEM_NPC_LOCATION_TBOOKS)
+	; setup scripted event
+	lea ScriptedEventDay06_Hidden0Start,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event
+	rts
+.default
+	bsr.w ShowDefaultText
+	rts	
+		
+;*******************************************************************************
 ; End of the day
 ;*******************************************************************************
 EndDay06:
@@ -158,6 +229,19 @@ EndDay06:
 	
 EndDay06SetupGameState: ; separated to help with debugging		
 	;---------------------------------------------------------------------------	
+	; test for hidden event
+	;---------------------------------------------------------------------------	
+	move.l	(MEM_DAY_EVENT_FLAGS),d7
+	btst.l	#FLAG_DAY06_HIDDEN0,d7 ; test if event is done	
+	beq.s	.setupnextday ; branch if not done
+	btst.l	#FLAG_DAY06_HIDDEN1,d7 ; test if event is done	
+	beq.s	.setupnextday ; branch if not done
+	; both events are done, set global flag
+	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7
+	bset.l	#FLAG_GLOBAL_Day06Hidden,d7
+	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS)
+.setupnextday
+	;---------------------------------------------------------------------------	
 	; setup the next day
 	;---------------------------------------------------------------------------	
 	move.w	#$000D,(MEM_DAY) ; increment day
@@ -165,10 +249,6 @@ EndDay06SetupGameState: ; separated to help with debugging
 	and.l	#$00000000,(MEM_DAY_EVENT_FLAGS) ; clear event flags
 	move.w	#SCENE_ID_BASEMENTCAFE,(MEM_STORY_EVENT1_SCENE_ID) ; initial story event
 	move.w	#$FFFF,(MEM_STORY_EVENT2_SCENE_ID) ; no 2nd story event
-	move.w	#PLAYER_SPRITE_CARL,(MEM_PLAYER_SPRITE) ; initial sprite
-	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
-	move.w	#$00DE,(MEM_PLAYER_SPRITE_X)
-	move.w	#$00EE,(MEM_PLAYER_SPRITE_Y)
 	;---------------------------------------------------------------------------	
 	; determine which optional events are available
 	;---------------------------------------------------------------------------	
@@ -191,8 +271,16 @@ EndDay06SetupGameState: ; separated to help with debugging
 	; update NPC locations
 	;---------------------------------------------------------------------------	
 	bsr.w	InitNPCLocationsNight ; reset the NPC locations
-	move.l	#$27000000,(MEM_NPC_LOCATION_TBOOKS)
+	move.l	#$18000000,(MEM_NPC_LOCATION_BASEMENTCAFE) ; brett is in the basement cafe
+	move.l	#$27000000,(MEM_NPC_LOCATION_TBOOKS) ; nelson is in tbooks
 	move.l	#$11000000,(MEM_NPC_LOCATION_CENTER) ; put the guard somewhere
-	move.l	#$0D110F1C,(MEM_NPC_LOCATION_CENTER) ; new year party at the cavern	
+	move.l	#$0F100D1C,(MEM_NPC_LOCATION_CAVERN) ; new year party at the cavern	
+	move.l	#$07010F00,(MEM_NPC_LOCATION_NSHACK)
+	; check for hidden event
+	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7
+	btst.l	#FLAG_GLOBAL_Day06Hidden,d7
+	beq.s	.exit
+	move.l	#$2A2B0000,(MEM_NPC_LOCATION_BASEMENTWDORM)	
+.exit	
 	rts		
 

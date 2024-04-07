@@ -608,6 +608,12 @@
 				"allowDuplicateColors":"true"
 			},	
 			{
+				"name":"PaletteEndingSound02",
+				"sourceFilePath":"design/img/swatches/credits-sound-02.png",
+				"destinationFilePath":"src/palettes/credits-sound-02.X68",
+				"allowDuplicateColors":"true"
+			},			
+			{
 				"name":"PaletteEndingProgram00",
 				"sourceFilePath":"design/img/swatches/credits-program-00.png",
 				"destinationFilePath":"src/palettes/credits-program-00.X68",

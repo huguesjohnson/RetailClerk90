@@ -21,9 +21,9 @@
 	;---------------------------------------------------------------------------
 	; palettes
 	;---------------------------------------------------------------------------
-	dc.l	PaletteBlack
-	dc.l	PaletteBlack
-	dc.l	PaletteBlack
+	dc.l	PaletteEndingGraphics00
+	dc.l	PaletteEndingGraphics01
+	dc.l	PaletteEndingGraphics02
 	dc.l	PalettePeople
 
 	;---------------------------------------------------------------------------

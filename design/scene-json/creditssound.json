@@ -7,9 +7,9 @@
 		"EndingFrame"
 	],
 	"paletteNames":[
-		"PaletteBlack",
-		"PaletteBlack",
-		"PaletteBlack",
+		"PaletteEndingSound00",
+		"PaletteEndingSound01",
+		"PaletteEndingSound02",
 		"PalettePeople"
 	],
 	"scenery":[

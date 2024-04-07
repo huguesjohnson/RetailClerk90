@@ -261,6 +261,9 @@ PaletteEndingSound00:
 PaletteEndingSound01:
 	include 'palettes/credits-sound-01.X68'
 
+PaletteEndingSound02:
+	include 'palettes/credits-sound-02.X68'
+
 PaletteEndingProgram00:
 	include 'palettes/credits-program-00.X68'
 

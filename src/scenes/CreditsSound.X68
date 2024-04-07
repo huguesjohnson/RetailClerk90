@@ -21,9 +21,9 @@
 	;---------------------------------------------------------------------------
 	; palettes
 	;---------------------------------------------------------------------------
-	dc.l	PaletteBlack
-	dc.l	PaletteBlack
-	dc.l	PaletteBlack
+	dc.l	PaletteEndingSound00
+	dc.l	PaletteEndingSound01
+	dc.l	PaletteEndingSound02
 	dc.l	PalettePeople
 
 	;---------------------------------------------------------------------------

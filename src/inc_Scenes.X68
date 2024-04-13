@@ -93,6 +93,15 @@ SceneBasementCafe:
 SceneBasementOffice:
 	include 'scenes/BasementOffice.X68'
 
+SceneVision:
+	include 'scenes/Vision.X68'
+
+SceneFlashbackStore:
+	include 'scenes/FlashbackStore.X68'
+
+SceneFlashbackParking:
+	include 'scenes/FlashbackParking.X68'
+
 SceneCreditsProgram:
 	include 'scenes/CreditsProgram.X68'
 

@@ -3169,9 +3169,9 @@ TitleScreenTextLoadGame:
 TitleScreenTextDebug:
 	dc.b	"{Debug",ETX
 TitleScreenTextTitle:
-	dc.b	"Mar24 Dev Build",ETX
+	dc.b	"Apr24 Dev Build",ETX
 TitleScreenTextTitleDebug:
-	dc.b	"Mar24 Debug Build",ETX
+	dc.b	"Apr24 Debug Build",ETX
 
 ;-------------------------------------------------------------------------------
 ; DebugScreen

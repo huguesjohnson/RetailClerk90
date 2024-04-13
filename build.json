@@ -578,6 +578,60 @@
 				"allowDuplicateColors":"true"
 			},
 			{
+				"name":"PaletteVision00",
+				"sourceFilePath":"design/img/swatches/vision-00.png",
+				"destinationFilePath":"src/palettes/vision-00.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteVision01",
+				"sourceFilePath":"design/img/swatches/vision-01.png",
+				"destinationFilePath":"src/palettes/vision-01.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteVision02",
+				"sourceFilePath":"design/img/swatches/vision-02.png",
+				"destinationFilePath":"src/palettes/vision-02.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteFlashbackStore00",
+				"sourceFilePath":"design/img/swatches/flashback-store-00.png",
+				"destinationFilePath":"src/palettes/flashback-store-00.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteFlashbackStore01",
+				"sourceFilePath":"design/img/swatches/flashback-store-01.png",
+				"destinationFilePath":"src/palettes/flashback-store-01.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteFlashbackStore02",
+				"sourceFilePath":"design/img/swatches/flashback-store-02.png",
+				"destinationFilePath":"src/palettes/flashback-store-02.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteFlashbackParking00",
+				"sourceFilePath":"design/img/swatches/flashback-parking-00.png",
+				"destinationFilePath":"src/palettes/flashback-parking-00.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteFlashbackParking01",
+				"sourceFilePath":"design/img/swatches/flashback-parking-01.png",
+				"destinationFilePath":"src/palettes/flashback-parking-01.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteFlashbackParking02",
+				"sourceFilePath":"design/img/swatches/flashback-parking-02.png",
+				"destinationFilePath":"src/palettes/flashback-parking-02.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
 				"name":"PaletteEndingGraphics00",
 				"sourceFilePath":"design/img/swatches/credits-graphics-00.png",
 				"destinationFilePath":"src/palettes/credits-graphics-00.X68",
@@ -2749,6 +2803,9 @@
 			"/design/scene-json/basementmdorm.json",
 			"/design/scene-json/basementcafe.json",
 			"/design/scene-json/basementoffice.json",
+			"/design/scene-json/vision.json",
+			"/design/scene-json/flashbackstore.json",
+			"/design/scene-json/flashbackparking.json",
 			"/design/scene-json/creditsprogram.json",
 			"/design/scene-json/creditsgraphics.json",
 			"/design/scene-json/creditssound.json",

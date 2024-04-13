@@ -48,31 +48,31 @@
 	dc.l	VDP_VRAM_WRITE_A+$00020000+$06000000 ; initial drawing location
 
 	dc.l	CreditsScreen01Line01
-	dc.w	FONT_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_A+$00020000+$07000000 ; initial drawing location
 
 	dc.l	CreditsScreen01Line02
-	dc.w	FONT_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_A+$00020000+$08000000 ; initial drawing location
 
 	dc.l	CreditsScreen01Line03
-	dc.w	FONT_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_A+$00020000+$09000000 ; initial drawing location
 
 	dc.l	CreditsScreen01Line04
-	dc.w	FONT_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_A+$00020000+$0A000000 ; initial drawing location
 
 	dc.l	CreditsScreen01Line05
-	dc.w	FONT_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_A+$00020000+$0B000000 ; initial drawing location
 
 	dc.l	CreditsScreen01Line06
-	dc.w	FONT_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_A+$00020000+$0C000000 ; initial drawing location
 
 	dc.l	CreditsScreen01Line07
-	dc.w	FONT_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_A+$00020000+$0D000000 ; initial drawing location
 
 	;---------------------------------------------------------------------------

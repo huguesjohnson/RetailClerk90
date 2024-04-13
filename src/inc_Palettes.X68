@@ -246,6 +246,33 @@ PaletteWWTV01:
 PaletteWWHall:
 	include 'palettes/WWHall.X68'
 
+PaletteVision00:
+	include 'palettes/vision-00.X68'
+
+PaletteVision01:
+	include 'palettes/vision-01.X68'
+
+PaletteVision02:
+	include 'palettes/vision-02.X68'
+
+PaletteFlashbackStore00:
+	include 'palettes/flashback-store-00.X68'
+
+PaletteFlashbackStore01:
+	include 'palettes/flashback-store-01.X68'
+
+PaletteFlashbackStore02:
+	include 'palettes/flashback-store-02.X68'
+
+PaletteFlashbackParking00:
+	include 'palettes/flashback-parking-00.X68'
+
+PaletteFlashbackParking01:
+	include 'palettes/flashback-parking-01.X68'
+
+PaletteFlashbackParking02:
+	include 'palettes/flashback-parking-02.X68'
+
 PaletteEndingGraphics00:
 	include 'palettes/credits-graphics-00.X68'
 

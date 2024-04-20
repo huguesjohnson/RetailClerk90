@@ -8,7 +8,7 @@
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0001 ; tileset count - 1
+	dc.w	$0003 ; tileset count - 1
 
 	; tileset 0 - tiles start at [0] - tileset length [1]
 	dc.l	TransparentTileTilesStart
@@ -17,6 +17,14 @@
 	; tileset 1 - tiles start at [1] - tileset length [9]
 	dc.l	EndingFrameTilesStart
 	dc.l	EndingFrameTilesEnd
+
+	; tileset 2 - tiles start at [A] - tileset length [4]
+	dc.l	FloorCenterHallTilesStart
+	dc.l	FloorCenterHallTilesEnd
+
+	; tileset 3 - tiles start at [E] - tileset length [C]
+	dc.l	SHallPlantTilesStart
+	dc.l	SHallPlantTilesEnd
 
 	;---------------------------------------------------------------------------
 	; palettes
@@ -29,7 +37,7 @@
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$0000 ; scenery count - 1
+	dc.w	$0003 ; scenery count - 1
 
 	; frame
 	dc.l	PatternEndingFrame
@@ -37,6 +45,27 @@
 	dc.w	%0110000000000001 ; vdp pattern
 	dc.w	$0000 ; repeat=0
 	dc.l	VDP_VRAM_WRITE_B+$00020000+$00800000 ; initial drawing location
+
+	; floor
+	dc.l	Pattern16x16x288
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000000001010 ; vdp pattern
+	dc.w	$0003 ; repeat=3
+	dc.l	VDP_VRAM_WRITE_B+$00040000+$01000000 ; initial drawing location
+
+	; plant - left side
+	dc.l	PatternSHallPlant
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000000001110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$00040000+$03800000 ; initial drawing location
+
+	; plant - right side
+	dc.l	PatternSHallPlant
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000000001110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$00340000+$03800000 ; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text
@@ -166,29 +195,29 @@
 	;---------------------------------------------------------------------------
 	dc.w	$0003 ; npc count - 1
 
-	dc.w	$0118 ; starting x location of npc0
-	dc.w	$00A5 ; starting y location of npc0
-	dc.w	DIRECTION_RIGHT ; starting direction of npc0
+	dc.w	$0100 ; starting x location of npc0
+	dc.w	$00B0 ; starting y location of npc0
+	dc.w	DIRECTION_DOWN ; starting direction of npc0
 	dc.w	$FFFF ; movement frequency of npc0
 	dc.l	NullMovementStart ; location of movement pattern for npc0
 	dc.w	(NullMovementEnd-NullMovementStart-1) ; movement pattern length
 
-	dc.w	$0136 ; starting x location of npc1
-	dc.w	$00A5 ; starting y location of npc1
+	dc.w	$0000 ; starting x location of npc1
+	dc.w	$0000 ; starting y location of npc1
 	dc.w	DIRECTION_RIGHT ; starting direction of npc1
 	dc.w	$FFFF ; movement frequency of npc1
 	dc.l	NullMovementStart ; location of movement pattern for npc1
 	dc.w	(NullMovementEnd-NullMovementStart-1) ; movement pattern length
 
-	dc.w	$0154 ; starting x location of npc2
-	dc.w	$00A5 ; starting y location of npc2
+	dc.w	$0000 ; starting x location of npc2
+	dc.w	$0000 ; starting y location of npc2
 	dc.w	DIRECTION_RIGHT ; starting direction of npc2
 	dc.w	$FFFF ; movement frequency of npc2
 	dc.l	NullMovementStart ; location of movement pattern for npc2
 	dc.w	(NullMovementEnd-NullMovementStart-1) ; movement pattern length
 
-	dc.w	$017C ; starting x location of npc3
-	dc.w	$00A5 ; starting y location of npc3
+	dc.w	$0000 ; starting x location of npc3
+	dc.w	$0000 ; starting y location of npc3
 	dc.w	DIRECTION_LEFT ; starting direction of npc3
 	dc.w	$FFFF ; movement frequency of npc3
 	dc.l	NullMovementStart ; location of movement pattern for npc3

@@ -206,3 +206,5 @@
 
 	include 'patterns/frame-inventory.X68'
 
+	include 'patterns/ending-program-counter.X68'
+

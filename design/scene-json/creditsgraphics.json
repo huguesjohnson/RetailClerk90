@@ -4,7 +4,9 @@
 	"destinationFilePath":"src/scenes/CreditsGraphics.X68",
 	"tilesetNames":[
 		"TransparentTile",
-		"EndingFrame"
+		"EndingFrame",
+		"FloorBasement",
+		"BasementPingPongTable32x48"		
 	],
 	"paletteNames":[
 		"PaletteEndingGraphics00",
@@ -24,7 +26,43 @@
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"00800000",
 			"column":"00020000"
-		}
+		},
+		{
+			"patternName":"Pattern16x16x288",
+			"comment":"floor",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":3,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"01000000",
+			"column":"00040000"
+		},
+		{
+			"patternName":"Pattern32x48",
+			"comment":"ping pong table - west",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01800000",
+			"column":"001A0000"
+		},		
+		{
+			"patternName":"Pattern32x48",
+			"comment":"ping pong table - east",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01800000",
+			"column":"002C0000"
+		}		
 	],
 	"text":[
 		{
@@ -113,30 +151,30 @@
 	],
 	"npcLocations":[
 		{
-			"x":350,
-			"y":160,
+			"x":210,
+			"y":170,
+			"direction":"DIRECTION_RIGHT",
+			"movementFrequency":65535,
+			"movementPatternName":"NullMovement"
+		},
+		{
+			"x":270,
+			"y":170,
 			"direction":"DIRECTION_LEFT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":300,
+			"x":364,
 			"y":160,
 			"direction":"DIRECTION_RIGHT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":280,
+			"x":394,
 			"y":160,
-			"direction":"DIRECTION_RIGHT",
-			"movementFrequency":65535,
-			"movementPatternName":"NullMovement"
-		},
-		{
-			"x":260,
-			"y":160,
-			"direction":"DIRECTION_RIGHT",
+			"direction":"DIRECTION_LEFT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		}		

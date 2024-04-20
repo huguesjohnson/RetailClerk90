@@ -997,6 +997,17 @@ LaunchDebug38: ; night 06 - outside south hall, events complete, trading & optio
 
 
 LaunchDebug39:
+	; temp for the moment
+	lea	SceneEndingPerfect,a6
+	bsr.w LoadScene
+	bsr.w LoadPlayerSprite
+	move.w	#$0000,(MEM_PLAYER_SPRITE_X)
+	move.w	#$0000,(MEM_PLAYER_SPRITE_Y)
+	bsr.w FixSprites	
+	bsr.w FadeIn
+	rts
+
+
 LaunchDebug40:	
 LaunchDebug41:
 LaunchDebug42:

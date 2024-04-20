@@ -111,11 +111,11 @@ SceneCreditsGraphics:
 SceneCreditsSound:
 	include 'scenes/CreditsSound.X68'
 
-SceneEndingBad:
-	include 'scenes/EndingBad.X68'
-
 SceneEndingGood:
 	include 'scenes/EndingGood.X68'
+
+SceneEndingBad:
+	include 'scenes/EndingBad.X68'
 
 SceneEndingPerfect:
 	include 'scenes/EndingPerfect.X68'

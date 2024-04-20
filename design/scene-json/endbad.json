@@ -4,7 +4,9 @@
 	"destinationFilePath":"src/scenes/EndingBad.X68",
 	"tilesetNames":[
 		"TransparentTile",
-		"EndingFrame"
+		"EndingFrame",
+		"FloorCenterHall",
+		"SHallPlant"
 	],
 	"paletteNames":[
 		"PaletteEndingBad00",
@@ -24,6 +26,40 @@
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"00800000",
 			"column":"00020000"
+		},
+		{
+			"patternName":"Pattern16x16x288",
+			"comment":"floor",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":3,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"01000000",
+			"column":"00040000"
+		},
+		{
+			"patternName":"PatternSHallPlant",
+			"comment":"plant - left side",
+			"tilesetIndex":3,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"03800000",
+			"column":"00040000"
+		},
+		{
+			"patternName":"PatternSHallPlant",
+			"comment":"plant - right side",
+			"tilesetIndex":3,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"03800000",
+			"column":"00340000"
 		}
 	],
 	"text":[
@@ -113,29 +149,29 @@
 	],
 	"npcLocations":[
 		{
-			"x":280,
-			"y":165,
+			"x":256,
+			"y":176,
+			"direction":"DIRECTION_DOWN",
+			"movementFrequency":65535,
+			"movementPatternName":"NullMovement"
+		},
+		{
+			"x":0,
+			"y":0,
 			"direction":"DIRECTION_RIGHT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":310,
-			"y":165,
+			"x":0,
+			"y":0,
 			"direction":"DIRECTION_RIGHT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":340,
-			"y":165,
-			"direction":"DIRECTION_RIGHT",
-			"movementFrequency":65535,
-			"movementPatternName":"NullMovement"
-		},
-		{
-			"x":380,
-			"y":165,
+			"x":0,
+			"y":0,
 			"direction":"DIRECTION_LEFT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"

@@ -404,8 +404,9 @@ MAX_REL=$0003
 ;
 ;-------------------------------------------------------------------------------
 ; max store id - used to check if a lookup is out of range
+; kind of a bad name - this is really 'max id of scenes with npcs'
 ;-------------------------------------------------------------------------------
-MAX_STORE_ID=SCENE_ID_BASEMENTOFFICE
+MAX_STORE_ID=SCENE_ID_END_PERFECT
 ;
 ;-------------------------------------------------------------------------------
 ; stuff that might only be used in this demo

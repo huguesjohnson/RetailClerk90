@@ -2534,7 +2534,14 @@
 				"paletteName":"PaletteFontDialogBase",
 				"sourceFilePath":"design/img/scene-tiles/menu/frame-inventory.png",
 				"destinationFilePath":"src/patterns/frame-inventory.X68"
-			}					
+			},
+			{
+				"name":"EndProgramCounter",
+				"tilesetName":"Counter",
+				"paletteName":"PaletteCounterBase",
+				"sourceFilePath":"design/img/scene-tiles/ending/program-counter.png",
+				"destinationFilePath":"src/patterns/ending-program-counter.X68"
+			}							
 		],
 		"patternIncludeFilePath":"src/inc_PatternsGenerated.X68"
 	},
@@ -2809,8 +2816,8 @@
 			"/design/scene-json/creditsprogram.json",
 			"/design/scene-json/creditsgraphics.json",
 			"/design/scene-json/creditssound.json",
-			"/design/scene-json/endbad.json",
 			"/design/scene-json/endgood.json",
+			"/design/scene-json/endbad.json",
 			"/design/scene-json/endperfect.json",			
 			"/design/scene-json/introday00.json",
 			"/design/scene-json/introday01.json",

@@ -4,7 +4,9 @@
 	"destinationFilePath":"src/scenes/CreditsSound.X68",
 	"tilesetNames":[
 		"TransparentTile",
-		"EndingFrame"
+		"EndingFrame",
+		"FloorCPlanet",
+		"CPlanetCDCrateLow24x24"
 	],
 	"paletteNames":[
 		"PaletteEndingSound00",
@@ -24,7 +26,91 @@
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"00800000",
 			"column":"00020000"
-		}
+		},
+		{
+			"patternName":"Pattern16x16x288",
+			"comment":"floor",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":3,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"01000000",
+			"column":"00040000"
+		},
+		{
+			"patternName":"Pattern24x24",
+			"comment":"cd crate",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"01000000",
+			"column":"00100000"
+		},
+		{
+			"patternName":"Pattern24x24",
+			"comment":"cd crate",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"01000000",
+			"column":"00160000"
+		},
+		{
+			"patternName":"Pattern24x24",
+			"comment":"cd crate",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"01000000",
+			"column":"00220000"
+		},
+		{
+			"patternName":"Pattern24x24",
+			"comment":"cd crate",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"01000000",
+			"column":"00280000"
+		},
+		{
+			"patternName":"Pattern24x24",
+			"comment":"cd crate",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"01000000",
+			"column":"002E0000"
+		},	
+		{
+			"patternName":"Pattern24x24",
+			"comment":"cd crate",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"01000000",
+			"column":"00340000"
+		}										
 	],
 	"text":[
 		{
@@ -113,30 +199,30 @@
 	],
 	"npcLocations":[
 		{
-			"x":168,
-			"y":165,
+			"x":196,
+			"y":151,
 			"direction":"DIRECTION_UP",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},
 		{
 			"x":220,
-			"y":165,
+			"y":151,
 			"direction":"DIRECTION_UP",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":360,
-			"y":165,
+			"x":268,
+			"y":151,
 			"direction":"DIRECTION_UP",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":384,
-			"y":165,
-			"direction":"DIRECTION_LEFT",
+			"x":340,
+			"y":151,
+			"direction":"DIRECTION_UP",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		}

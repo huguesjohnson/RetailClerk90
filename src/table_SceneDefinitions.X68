@@ -41,8 +41,8 @@ SceneDefinitionTable:
 	dc.l	SceneCreditsProgram
 	dc.l	SceneCreditsGraphics
 	dc.l	SceneCreditsSound
-	dc.l	SceneEndingBad
 	dc.l	SceneEndingGood
+	dc.l	SceneEndingBad
 	dc.l	SceneEndingPerfect
 	dc.l	SceneIntroDay00
 	dc.l	SceneIntroDay01
@@ -104,8 +104,8 @@ SCENE_ID_FLASHBACK_PARKING=$0021
 SCENE_ID_CREDITS_PROGRAM=$0022
 SCENE_ID_CREDITS_GRAPHICS=$0023
 SCENE_ID_CREDITS_SOUND=$0024
-SCENE_ID_END_BAD=$0025
-SCENE_ID_END_GOOD=$0026
+SCENE_ID_END_GOOD=$0025
+SCENE_ID_END_BAD=$0026
 SCENE_ID_END_PERFECT=$0027
 SCENE_ID_INTRO_DAY00=$0028
 SCENE_ID_INTRO_DAY01=$0029

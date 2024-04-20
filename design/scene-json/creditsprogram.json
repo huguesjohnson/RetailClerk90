@@ -4,7 +4,9 @@
 	"destinationFilePath":"src/scenes/CreditsProgram.X68",
 	"tilesetNames":[
 		"TransparentTile",
-		"EndingFrame"
+		"EndingFrame",
+		"FloorPogoDawg",
+		"Counter"		
 	],
 	"paletteNames":[
 		"PaletteEndingProgram00",
@@ -24,13 +26,37 @@
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"00800000",
 			"column":"00020000"
+		},
+		{
+			"patternName":"Pattern16x16x288",
+			"comment":"floor",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":3,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"01000000",
+			"column":"00040000"
+		},
+		{
+			"patternName":"PatternEndProgramCounter",
+			"comment":"counter",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01000000",
+			"column":"000E0000"
 		}
 	],
 	"text":[
 		{
 			"stringLabel":"CreditsScreen00Line00",
 			"highPriority":false,
-			"paletteNumber":1,
+			"paletteNumber":0,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"06000000",
 			"column":"00020000"
@@ -113,30 +139,30 @@
 	],
 	"npcLocations":[
 		{
-			"x":220,
-			"y":150,
+			"x":168,
+			"y":160,
 			"direction":"DIRECTION_RIGHT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":246,
-			"y":150,
+			"x":210,
+			"y":160,
 			"direction":"DIRECTION_LEFT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":308,
-			"y":138,
-			"direction":"DIRECTION_DOWN",
+			"x":238,
+			"y":160,
+			"direction":"DIRECTION_LEFT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":336,
-			"y":148,
-			"direction":"DIRECTION_UP",
+			"x":266,
+			"y":160,
+			"direction":"DIRECTION_LEFT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		}

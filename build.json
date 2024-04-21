@@ -1975,6 +1975,20 @@
 				"destinationFilePath":"src/tiles/scene-tiles/ending-frame.X68",
 				"allowDuplicateTiles":"false",
 				"patternFilePath":"src/patterns/ending-frame.X68"				
+			},		
+			{
+				"name":"EndingPerfectB",
+				"palette":"PaletteEndingPerfect00",
+				"sourceFilePath":"design/img/scene-tiles/ending/end-perfect-b.png",
+				"destinationFilePath":"src/tiles/scene-tiles/end-perfect-b.X68",
+				"allowDuplicateTiles":"false"
+			},		
+			{
+				"name":"EndingPerfectSign",
+				"palette":"PaletteEndingPerfect01",
+				"sourceFilePath":"design/img/scene-tiles/ending/end-perfect-a-sign.png",
+				"destinationFilePath":"src/tiles/scene-tiles/end-perfect-a-sign.X68",
+				"allowDuplicateTiles":"true"
 			}			
 		],
 		"tileIncludeFilePath":"src/inc_Tiles.X68",

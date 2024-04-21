@@ -712,3 +712,11 @@ EndingFrameTilesStart:
 	include 'tiles/scene-tiles/ending-frame.X68'
 EndingFrameTilesEnd:
 
+EndingPerfectBTilesStart:
+	include 'tiles/scene-tiles/end-perfect-b.X68'
+EndingPerfectBTilesEnd:
+
+EndingPerfectSignTilesStart:
+	include 'tiles/scene-tiles/end-perfect-a-sign.X68'
+EndingPerfectSignTilesEnd:
+

@@ -4,7 +4,9 @@
 	"destinationFilePath":"src/scenes/EndingPerfect.X68",
 	"tilesetNames":[
 		"TransparentTile",
-		"EndingFrame"
+		"EndingFrame",
+		"EndingPerfectB",
+		"EndingPerfectSign"
 	],
 	"paletteNames":[
 		"PaletteEndingPerfect00",
@@ -24,7 +26,55 @@
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"00800000",
 			"column":"00020000"
-		}
+		},
+		{
+			"patternName":"Pattern8x64",
+			"comment":"left wall",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"01000000",
+			"column":"00040000"
+		},
+		{
+			"patternName":"Pattern8x64",
+			"comment":"right wall",
+			"tilesetIndex":2,
+			"tilesetOffset":16,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"01000000",
+			"column":"004A0000"
+		},		
+		{
+			"patternName":"Pattern8x64x272",
+			"comment":"center wall",
+			"tilesetIndex":2,
+			"tilesetOffset":8,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"01000000",
+			"column":"00060000"
+		},
+		{
+			"patternName":"Pattern96x24",
+			"comment":"sign",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"01000000",
+			"column":"00200000"
+		}			
 	],
 	"text":[
 		{

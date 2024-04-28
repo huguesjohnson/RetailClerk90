@@ -3,7 +3,8 @@
 ; The modifications I made were:
 ; 	(1) Support for loading 1-4 palettes at a time
 ;	(2) Making the write address a parameter
-; This was mostly replaced in DrawScene but is still used for pause/unpause
+; This was mostly replaced in DrawScene+FadeInFadeOut...
+; but still used for pause/unpause
 ;-------------------------------------------------------------------------------
 
 ;-------------------------------------------------------------------------------

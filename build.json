@@ -98,6 +98,18 @@
 				"allowDuplicateColors":"true"
 			},
 			{
+				"name":"PalettePeopleGrayscale",
+				"sourceFilePath":"design/img/swatches/people-grayscale.png",
+				"destinationFilePath":"src/palettes/People-grayscale.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PalettePeopleBluescale",
+				"sourceFilePath":"design/img/swatches/people-bluescale.png",
+				"destinationFilePath":"src/palettes/People-bluescale.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
 				"name":"PaletteText00",
 				"sourceFilePath":"design/img/swatches/text/text00.png",
 				"destinationFilePath":"src/palettes/Text00.X68",
@@ -1989,7 +2001,119 @@
 				"sourceFilePath":"design/img/scene-tiles/ending/end-perfect-a-sign.png",
 				"destinationFilePath":"src/tiles/scene-tiles/end-perfect-a-sign.X68",
 				"allowDuplicateTiles":"true"
-			}			
+			},
+			{
+				"name":"EndingPerfectWindow",
+				"palette":"PaletteEndingPerfect01",
+				"sourceFilePath":"design/img/scene-tiles/ending/end-perfect-window.png",
+				"destinationFilePath":"src/tiles/scene-tiles/end-perfect-window.X68",
+				"allowDuplicateTiles":"true"
+			},
+			{
+				"name":"EndingPerfectDoor",
+				"palette":"PaletteEndingPerfect01",
+				"sourceFilePath":"design/img/scene-tiles/ending/end-perfect-door.png",
+				"destinationFilePath":"src/tiles/scene-tiles/end-perfect-door.X68",
+				"allowDuplicateTiles":"true"
+			},
+			{
+				"name":"EndingPerfectTree",
+				"palette":"PaletteEndingPerfect02",
+				"sourceFilePath":"design/img/scene-tiles/ending/end-perfect-tree.png",
+				"destinationFilePath":"src/tiles/scene-tiles/end-perfect-tree.X68",
+				"allowDuplicateTiles":"true"
+			},							
+			{
+				"name":"VisionBedHigh",
+				"palette":"PaletteVision02",
+				"sourceFilePath":"design/img/scene-tiles/vision/bed-high.png",
+				"destinationFilePath":"src/tiles/scene-tiles/vision-bed-high.X68",
+				"allowDuplicateTiles":"true"
+			},
+			{
+				"name":"VisionBedLow",
+				"palette":"PaletteVision02",
+				"sourceFilePath":"design/img/scene-tiles/vision/bed-low.png",
+				"destinationFilePath":"src/tiles/scene-tiles/vision-bed-low.X68",
+				"allowDuplicateTiles":"true"
+			},
+			{
+				"name":"VisionCouch",
+				"palette":"PaletteVision01",
+				"sourceFilePath":"design/img/scene-tiles/vision/couch.png",
+				"destinationFilePath":"src/tiles/scene-tiles/vision-couch.X68",
+				"allowDuplicateTiles":"true"
+			},
+			{
+				"name":"VisionDoor",
+				"palette":"PaletteVision01",
+				"sourceFilePath":"design/img/scene-tiles/vision/door.png",
+				"destinationFilePath":"src/tiles/scene-tiles/vision-door.X68",
+				"allowDuplicateTiles":"true"
+			},
+			{
+				"name":"VisionTable",
+				"palette":"PaletteVision01",
+				"sourceFilePath":"design/img/scene-tiles/vision/table.png",
+				"destinationFilePath":"src/tiles/scene-tiles/vision-table.X68",
+				"allowDuplicateTiles":"true"
+			},	
+			{
+				"name":"VisionTVStand",
+				"palette":"PaletteVision01",
+				"sourceFilePath":"design/img/scene-tiles/vision/tvstand.png",
+				"destinationFilePath":"src/tiles/scene-tiles/vision-tvstand.X68",
+				"allowDuplicateTiles":"true"
+			},			
+			{
+				"name":"VisionWallArt",
+				"palette":"PaletteVision02",
+				"sourceFilePath":"design/img/scene-tiles/vision/wallart.png",
+				"destinationFilePath":"src/tiles/scene-tiles/vision-wallart.X68",
+				"allowDuplicateTiles":"true"
+			},
+			{
+				"name":"FlashbackStoreBookcaseRight",
+				"palette":"PaletteFlashbackStore01",
+				"sourceFilePath":"design/img/scene-tiles/ending/flashback-store-bookcase-right.png",
+				"destinationFilePath":"src/tiles/scene-tiles/flashback-store-bookcase-right.X68",
+				"allowDuplicateTiles":"true"
+			},					
+			{
+				"name":"FlashbackStoreBookcaseFill",
+				"palette":"PaletteFlashbackStore01",
+				"sourceFilePath":"design/img/scene-tiles/ending/flashback-store-bookcase-fill.png",
+				"destinationFilePath":"src/tiles/scene-tiles/flashback-store-bookcase-fill.X68",
+				"allowDuplicateTiles":"true"
+			},				
+			{
+				"name":"FlashbackStoreBookcaseLeft",
+				"palette":"PaletteFlashbackStore01",
+				"sourceFilePath":"design/img/scene-tiles/ending/flashback-store-bookcase-left.png",
+				"destinationFilePath":"src/tiles/scene-tiles/flashback-store-bookcase-left.X68",
+				"allowDuplicateTiles":"true"
+			},							
+			{
+				"name":"FlashbackStoreTable",
+				"palette":"PaletteFlashbackStore02",
+				"sourceFilePath":"design/img/scene-tiles/ending/flashback-store-table.png",
+				"destinationFilePath":"src/tiles/scene-tiles/flashback-store-table.X68",
+				"allowDuplicateTiles":"true"
+			},	
+			{
+				"name":"FlashbackStoreChairLeft",
+				"palette":"PaletteFlashbackStore02",
+				"sourceFilePath":"design/img/scene-tiles/ending/flashback-store-chair-left.png",
+				"destinationFilePath":"src/tiles/scene-tiles/flashback-store-chair-left.X68",
+				"allowDuplicateTiles":"true"
+			},
+			{
+				"name":"FlashbackStoreChairRight",
+				"palette":"PaletteFlashbackStore02",
+				"sourceFilePath":"design/img/scene-tiles/ending/flashback-store-chair-right.png",
+				"destinationFilePath":"src/tiles/scene-tiles/flashback-store-chair-right.X68",
+				"allowDuplicateTiles":"true"
+			}
 		],
 		"tileIncludeFilePath":"src/inc_Tiles.X68",
 		"patternIncludeFilePath":"src/inc_PatternsGenerated.X68"
@@ -2193,6 +2317,13 @@
 				"destinationFilePath":"src/patterns/frame-east-closed.X68"
 			},
 			{
+				"name":"FrameEastClosed72",
+				"tilesetName":"Frame",
+				"paletteName":"PaletteFloorFrameBase",
+				"sourceFilePath":"design/img/scene-tiles/frame/frame-east-closed-72.png",
+				"destinationFilePath":"src/patterns/frame-east-closed-72.X68"
+			},
+			{
 				"name":"FrameEastOpen",
 				"tilesetName":"Frame",
 				"paletteName":"PaletteFloorFrameBase",
@@ -2205,7 +2336,14 @@
 				"paletteName":"PaletteFloorFrameBase",
 				"sourceFilePath":"design/img/scene-tiles/frame/frame-north-closed.png",
 				"destinationFilePath":"src/patterns/frame-north-closed.X68"
-			},			
+			},		
+			{
+				"name":"FrameNorthClosed160",
+				"tilesetName":"Frame",
+				"paletteName":"PaletteFloorFrameBase",
+				"sourceFilePath":"design/img/scene-tiles/frame/frame-north-closed-160.png",
+				"destinationFilePath":"src/patterns/frame-north-closed-160.X68"
+			},					
 			{
 				"name":"FrameNorthClosedEastOpen",
 				"tilesetName":"Frame",
@@ -2263,6 +2401,13 @@
 				"destinationFilePath":"src/patterns/frame-south-closed.X68"
 			},
 			{
+				"name":"FrameSouthClosed160",
+				"tilesetName":"Frame",
+				"paletteName":"PaletteFloorFrameBase",
+				"sourceFilePath":"design/img/scene-tiles/frame/frame-south-closed-160.png",
+				"destinationFilePath":"src/patterns/frame-south-closed-160.X68"
+			},
+			{
 				"name":"FrameSouthClosedSolo",
 				"tilesetName":"Frame",
 				"paletteName":"PaletteFloorFrameBase",
@@ -2303,6 +2448,13 @@
 				"paletteName":"PaletteFloorFrameBase",
 				"sourceFilePath":"design/img/scene-tiles/frame/frame-west-closed.png",
 				"destinationFilePath":"src/patterns/frame-west-closed.X68"
+			},	
+			{
+				"name":"FrameWestClosed72",
+				"tilesetName":"Frame",
+				"paletteName":"PaletteFloorFrameBase",
+				"sourceFilePath":"design/img/scene-tiles/frame/frame-west-closed-72.png",
+				"destinationFilePath":"src/patterns/frame-west-closed-72.X68"
 			},	
 			{
 				"name":"FrameWestOpen",

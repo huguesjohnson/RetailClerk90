@@ -102,6 +102,17 @@ Pattern16x16:
 	; row 01
 	dc.w	$02,$03
 
+; a 16x16 tile that is repeated to 128 wide
+Pattern16x16x128:
+	dc.w	$0001	; 2 rows
+	dc.w	$000F	; 16 columns
+	; row 00
+	dc.w	$00,$01,$00,$01,$00,$01,$00,$01
+	dc.w	$00,$01,$00,$01,$00,$01,$00,$01
+	; row 01
+	dc.w	$02,$03,$02,$03,$02,$03,$02,$03
+	dc.w	$02,$03,$02,$03,$02,$03,$02,$03
+
 ; a 16x16 tile that is repeated to 240 wide
 Pattern16x16x240:
 	dc.w	$0001	; 2 rows
@@ -579,6 +590,22 @@ Pattern40x40:
 	; row 04
 	dc.w	$14,$15,$16,$17,$18
 
+Pattern40x48:
+	dc.w	$0005	; 6 rows
+	dc.w	$0004	; 5 columns
+	; row 00
+	dc.w	$00,$01,$02,$03,$04
+	; row 01
+	dc.w	$05,$06,$07,$08,$09
+	; row 02
+	dc.w	$0A,$0B,$0C,$0D,$0E
+	; row 03
+	dc.w	$0F,$10,$11,$12,$13
+	; row 04
+	dc.w	$14,$15,$16,$17,$18
+	; row 05
+	dc.w	$19,$1A,$1B,$1C,$1D
+	
 Pattern48x8:
 	dc.w	$0000	; 1 row
 	dc.w	$0005	; 6 columns

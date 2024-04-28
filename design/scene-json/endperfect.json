@@ -6,7 +6,10 @@
 		"TransparentTile",
 		"EndingFrame",
 		"EndingPerfectB",
-		"EndingPerfectSign"
+		"EndingPerfectSign",
+		"EndingPerfectWindow",
+		"EndingPerfectDoor",
+		"EndingPerfectTree"
 	],
 	"paletteNames":[
 		"PaletteEndingPerfect00",
@@ -73,8 +76,92 @@
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"01000000",
-			"column":"00200000"
-		}			
+			"column":"001C0000"
+		},		
+		{
+			"patternName":"Pattern32x40",
+			"comment":"left window",
+			"tilesetIndex":4,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"02800000",
+			"column":"001C0000"
+		},
+		{
+			"patternName":"Pattern32x40",
+			"comment":"right window",
+			"tilesetIndex":4,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"02800000",
+			"column":"002C0000"
+		},
+		{
+			"patternName":"Pattern32x40",
+			"comment":"door",
+			"tilesetIndex":5,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"02800000",
+			"column":"00240000"
+		},		
+		{
+			"patternName":"Pattern40x48",
+			"comment":"tree",
+			"tilesetIndex":6,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"02000000",
+			"column":"00060000"
+		},
+		{
+			"patternName":"Pattern40x48",
+			"comment":"tree",
+			"tilesetIndex":6,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"02000000",
+			"column":"00100000"
+		},
+		{
+			"patternName":"Pattern40x48",
+			"comment":"tree",
+			"tilesetIndex":6,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"02000000",
+			"column":"00360000"
+		},
+		{
+			"patternName":"Pattern40x48",
+			"comment":"tree",
+			"tilesetIndex":6,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"02000000",
+			"column":"00400000"
+		}									
 	],
 	"text":[
 		{

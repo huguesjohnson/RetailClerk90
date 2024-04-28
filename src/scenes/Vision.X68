@@ -8,31 +8,144 @@
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0000 ; tileset count - 1
+	dc.w	$0009 ; tileset count - 1
 
 	; tileset 0 - tiles start at [0] - tileset length [1]
 	dc.l	TransparentTileTilesStart
 	dc.l	TransparentTileTilesEnd
 
+	; tileset 1 - tiles start at [1] - tileset length [4]
+	dc.l	FloorSVideoTilesStart
+	dc.l	FloorSVideoTilesEnd
+
+	; tileset 2 - tiles start at [5] - tileset length [4D]
+	dc.l	FrameTilesStart
+	dc.l	FrameTilesEnd
+
+	; tileset 3 - tiles start at [52] - tileset length [9]
+	dc.l	VisionBedHighTilesStart
+	dc.l	VisionBedHighTilesEnd
+
+	; tileset 4 - tiles start at [5B] - tileset length [6]
+	dc.l	VisionBedLowTilesStart
+	dc.l	VisionBedLowTilesEnd
+
+	; tileset 5 - tiles start at [61] - tileset length [F]
+	dc.l	VisionCouchTilesStart
+	dc.l	VisionCouchTilesEnd
+
+	; tileset 6 - tiles start at [70] - tileset length [8]
+	dc.l	VisionDoorTilesStart
+	dc.l	VisionDoorTilesEnd
+
+	; tileset 7 - tiles start at [78] - tileset length [F]
+	dc.l	VisionTableTilesStart
+	dc.l	VisionTableTilesEnd
+
+	; tileset 8 - tiles start at [87] - tileset length [9]
+	dc.l	VisionTVStandTilesStart
+	dc.l	VisionTVStandTilesEnd
+
+	; tileset 9 - tiles start at [90] - tileset length [10]
+	dc.l	VisionWallArtTilesStart
+	dc.l	VisionWallArtTilesEnd
+
 	;---------------------------------------------------------------------------
 	; palettes
 	;---------------------------------------------------------------------------
-	dc.l	PaletteEndingGraphics00
-	dc.l	PaletteEndingGraphics01
-	dc.l	PaletteEndingGraphics02
+	dc.l	PaletteVision00
+	dc.l	PaletteVision01
+	dc.l	PaletteVision02
 	dc.l	PalettePeople
 
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$0000 ; scenery count - 1
+	dc.w	$000B ; scenery count - 1
 
-	; frame
-	dc.l	PatternEndingFrame
+	; floor
+	dc.l	Pattern16x16x128
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0110000000000000 ; vdp pattern
+	dc.w	%0000000000000001 ; vdp pattern
+	dc.w	$0005 ; repeat=5
+	dc.l	VDP_VRAM_WRITE_B+$00180000+$03800000 ; initial drawing location
+
+	; west wall
+	dc.l	PatternFrameWestClosed72
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000000000101 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00020000+$00800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00140000+$04800000 ; initial drawing location
+
+	; east wall
+	dc.l	PatternFrameEastClosed72
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000000000101 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00380000+$04800000 ; initial drawing location
+
+	; south wall
+	dc.l	PatternFrameSouthClosed160
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000000000101 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00140000+$09000000 ; initial drawing location
+
+	; north wall
+	dc.l	PatternFrameNorthClosed160
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000000000101 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_B+$00140000+$02800000 ; initial drawing location
+
+	; bed - high
+	dc.l	Pattern24x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000001010010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00300000+$04800000 ; initial drawing location
+
+	; bed - low
+	dc.l	Pattern24x16
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001011011 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00300000+$03800000 ; initial drawing location
+
+	; couch
+	dc.l	Pattern24x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001100001 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00160000+$06800000 ; initial drawing location
+
+	; door
+	dc.l	Pattern16x32
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001110000 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$001A0000+$02800000 ; initial drawing location
+
+	; table
+	dc.l	Pattern24x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001111000 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$001E0000+$06800000 ; initial drawing location
+
+	; tv stand
+	dc.l	Pattern24x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000010000111 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00300000+$07800000 ; initial drawing location
+
+	; wall art
+	dc.l	Pattern32x32
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000010010000 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00240000+$02800000 ; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text
@@ -130,15 +243,15 @@
 	;---------------------------------------------------------------------------
 	dc.w	$0003 ; npc count - 1
 
-	dc.w	$015E ; starting x location of npc0
-	dc.w	$00A0 ; starting y location of npc0
+	dc.w	$0000 ; starting x location of npc0
+	dc.w	$0000 ; starting y location of npc0
 	dc.w	DIRECTION_LEFT ; starting direction of npc0
 	dc.w	$FFFF ; movement frequency of npc0
 	dc.l	NullMovementStart ; location of movement pattern for npc0
 	dc.w	(NullMovementEnd-NullMovementStart-1) ; movement pattern length
 
-	dc.w	$012C ; starting x location of npc1
-	dc.w	$00A0 ; starting y location of npc1
+	dc.w	$0000 ; starting x location of npc1
+	dc.w	$0000 ; starting y location of npc1
 	dc.w	DIRECTION_RIGHT ; starting direction of npc1
 	dc.w	$FFFF ; movement frequency of npc1
 	dc.l	NullMovementStart ; location of movement pattern for npc1

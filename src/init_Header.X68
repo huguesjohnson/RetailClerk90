@@ -5,7 +5,7 @@
 	dc.b	'2024.APR'	; date
 	dc.b	'Retail Clerk 90                                 '	; cart name
 	dc.b	'Retail Clerk 90                                 '	; cart name (alt)
-	dc.b	'GM 20240420-17'	; program type / serial number / version
+	dc.b	'GM 20240427-20'	; program type / serial number / version
 	dc.w	$0000	; ROM checksum
 	dc.b	'J               '	; I/O device support (unused)
 	dc.l	$00000000	; address of ROM start

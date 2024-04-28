@@ -270,6 +270,21 @@ SetupEndGame:
 	lea	ScriptedEventEndPerfectStart,a6	; point a6 to event to load
 	bra.s	.queue
 .goodending
+	; set which NPCs appear in the good ending
+	; d7 should have (MEM_GLOBAL_EVENT_FLAGS)
+.testrel3
+	btst.l	#FLAG_GLOBAL_REL3Complete,d7 ; test if this one is done
+	beq.s	.testrel4 ; not done
+	or.l	#$0000000B,(MEM_NPC_LOCATION_END_GOOD) ; add eliza to good ending
+.testrel4
+	btst.l	#FLAG_GLOBAL_REL4Complete,d7 ; test if this one is done
+	beq.s	.testrel5 ; not done	
+	or.l	#$000C0000,(MEM_NPC_LOCATION_END_GOOD) ; add grunberg to good ending
+.testrel5
+	btst.l	#FLAG_GLOBAL_REL5Complete,d7 ; test if this one is done
+	beq.s	.loadse ; not done	
+	or.l	#$00001D00,(MEM_NPC_LOCATION_END_GOOD) ; add laura to good ending
+.loadse
 	lea	ScriptedEventEndGoodStart,a6	; point a6 to event to load
 .queue
 	bsr.w QueueScriptedEvent	; queue the event

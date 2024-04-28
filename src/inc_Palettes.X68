@@ -6,6 +6,12 @@ PaletteBlack:
 PalettePeople:
 	include 'palettes/People.X68'
 
+PalettePeopleGrayscale:
+	include 'palettes/People-grayscale.X68'
+
+PalettePeopleBluescale:
+	include 'palettes/People-bluescale.X68'
+
 PaletteText00:
 	include 'palettes/Text00.X68'
 

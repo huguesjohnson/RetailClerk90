@@ -96,6 +96,7 @@ SCRIPTED_EVENT_LOADFONT=SCRIPTED_EVENT_BASE+$000C ; change the font
 SCRIPTED_EVENT_ADDITEM=SCRIPTED_EVENT_BASE+$000D ; add an item to inventory
 SCRIPTED_EVENT_REMOVEITEM=SCRIPTED_EVENT_BASE+$000E ; remove an item fron inventory
 SCRIPTED_EVENT_UPDATE_SCENE_NPCS=SCRIPTED_EVENT_BASE+$000F ; update npcs in a scene
+SCRIPTED_EVENT_LOADPALETTE=SCRIPTED_EVENT_BASE+$0010 ; load a palette
 ;
 ;-------------------------------------------------------------------------------
 ; sprite data structure

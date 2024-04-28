@@ -720,3 +720,67 @@ EndingPerfectSignTilesStart:
 	include 'tiles/scene-tiles/end-perfect-a-sign.X68'
 EndingPerfectSignTilesEnd:
 
+EndingPerfectWindowTilesStart:
+	include 'tiles/scene-tiles/end-perfect-window.X68'
+EndingPerfectWindowTilesEnd:
+
+EndingPerfectDoorTilesStart:
+	include 'tiles/scene-tiles/end-perfect-door.X68'
+EndingPerfectDoorTilesEnd:
+
+EndingPerfectTreeTilesStart:
+	include 'tiles/scene-tiles/end-perfect-tree.X68'
+EndingPerfectTreeTilesEnd:
+
+VisionBedHighTilesStart:
+	include 'tiles/scene-tiles/vision-bed-high.X68'
+VisionBedHighTilesEnd:
+
+VisionBedLowTilesStart:
+	include 'tiles/scene-tiles/vision-bed-low.X68'
+VisionBedLowTilesEnd:
+
+VisionCouchTilesStart:
+	include 'tiles/scene-tiles/vision-couch.X68'
+VisionCouchTilesEnd:
+
+VisionDoorTilesStart:
+	include 'tiles/scene-tiles/vision-door.X68'
+VisionDoorTilesEnd:
+
+VisionTableTilesStart:
+	include 'tiles/scene-tiles/vision-table.X68'
+VisionTableTilesEnd:
+
+VisionTVStandTilesStart:
+	include 'tiles/scene-tiles/vision-tvstand.X68'
+VisionTVStandTilesEnd:
+
+VisionWallArtTilesStart:
+	include 'tiles/scene-tiles/vision-wallart.X68'
+VisionWallArtTilesEnd:
+
+FlashbackStoreBookcaseRightTilesStart:
+	include 'tiles/scene-tiles/flashback-store-bookcase-right.X68'
+FlashbackStoreBookcaseRightTilesEnd:
+
+FlashbackStoreBookcaseFillTilesStart:
+	include 'tiles/scene-tiles/flashback-store-bookcase-fill.X68'
+FlashbackStoreBookcaseFillTilesEnd:
+
+FlashbackStoreBookcaseLeftTilesStart:
+	include 'tiles/scene-tiles/flashback-store-bookcase-left.X68'
+FlashbackStoreBookcaseLeftTilesEnd:
+
+FlashbackStoreTableTilesStart:
+	include 'tiles/scene-tiles/flashback-store-table.X68'
+FlashbackStoreTableTilesEnd:
+
+FlashbackStoreChairLeftTilesStart:
+	include 'tiles/scene-tiles/flashback-store-chair-left.X68'
+FlashbackStoreChairLeftTilesEnd:
+
+FlashbackStoreChairRightTilesStart:
+	include 'tiles/scene-tiles/flashback-store-chair-right.X68'
+FlashbackStoreChairRightTilesEnd:
+

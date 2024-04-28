@@ -8,7 +8,7 @@
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0003 ; tileset count - 1
+	dc.w	$0006 ; tileset count - 1
 
 	; tileset 0 - tiles start at [0] - tileset length [1]
 	dc.l	TransparentTileTilesStart
@@ -26,6 +26,18 @@
 	dc.l	EndingPerfectSignTilesStart
 	dc.l	EndingPerfectSignTilesEnd
 
+	; tileset 4 - tiles start at [46] - tileset length [14]
+	dc.l	EndingPerfectWindowTilesStart
+	dc.l	EndingPerfectWindowTilesEnd
+
+	; tileset 5 - tiles start at [5A] - tileset length [14]
+	dc.l	EndingPerfectDoorTilesStart
+	dc.l	EndingPerfectDoorTilesEnd
+
+	; tileset 6 - tiles start at [6E] - tileset length [1E]
+	dc.l	EndingPerfectTreeTilesStart
+	dc.l	EndingPerfectTreeTilesEnd
+
 	;---------------------------------------------------------------------------
 	; palettes
 	;---------------------------------------------------------------------------
@@ -37,7 +49,7 @@
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$0004 ; scenery count - 1
+	dc.w	$000B ; scenery count - 1
 
 	; frame
 	dc.l	PatternEndingFrame
@@ -72,7 +84,56 @@
 	;		%pccvhnnnnnnnnnnn
 	dc.w	%0010000000100010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_A+$00220000+$01000000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$001C0000+$01000000 ; initial drawing location
+
+	; left window
+	dc.l	Pattern32x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001000110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$001C0000+$02800000 ; initial drawing location
+
+	; right window
+	dc.l	Pattern32x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001000110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$002C0000+$02800000 ; initial drawing location
+
+	; door
+	dc.l	Pattern32x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000001011010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00240000+$02800000 ; initial drawing location
+
+	; tree
+	dc.l	Pattern40x48
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001101110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00060000+$02000000 ; initial drawing location
+
+	; tree
+	dc.l	Pattern40x48
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001101110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00100000+$02000000 ; initial drawing location
+
+	; tree
+	dc.l	Pattern40x48
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001101110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00360000+$02000000 ; initial drawing location
+
+	; tree
+	dc.l	Pattern40x48
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000001101110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00400000+$02000000 ; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text

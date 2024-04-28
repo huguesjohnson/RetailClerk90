@@ -186,7 +186,47 @@ ScriptedEventUpdateSceneNPCs:
 	lea	MEM_NPC_LOCATIONS,a1 ; point to npc locations
 	adda.l	d7,a1 ; add offset
 	move.l	(a6)+,(a1) ; copy new npc value
+	bra.w	ProcessScriptedEventQueueNextAction ; exit
 
+ScriptedEventLoadPalette:
+	;---------------------------------------------------------------------------
+	; In theory loading a palette is very simple
+	; I made it complicated to support dimming the palette when paused
+	; Also for fade in/fade out but pausing is the real issue
+	; A palette changed in the VDP will be un-changed when the game is paused
+	; So the palette to load has to be written to both:
+	; a) MEM_SCENE_PALETTE - where I keep a copy of the current palette
+	; b) VDP_CRAM_WRITE - the address where palettes are actually written
+	; 
+	; OK, so if MEM_SCENE_PALETTE=$FFFF0210	(for example) then:
+	; p0=FFFF0210, p1=FFFF0230, p2=FFFF0250, p3=FFFF0270
+	; VDP_CRAM_WRITE offsets should also be 20 (32 / 16 words)
+	;
+	; what we are using
+	; a0 = pointer to palette we are loading
+	; a1 = pointer to MEM_SCENE_PALETTE
+	; d0 = the palette slot being written to -> offset -> loop control
+	; d1 = VDP write address
+	;---------------------------------------------------------------------------
+	clr.l	d0 ; high word needs to be clear 
+	move.w	(a6)+,d0 ; which palette number to load (0-3)
+	mulu.w	#$0020,d0 ; calculate offset
+	movea.l	(a6)+,a0 ; start address of palette to load
+	; setup pointer to MEM_SCENE_PALETTE
+	lea	MEM_SCENE_PALETTE,a1 ; point a1 to scene palette address	
+	adda.l d0,a1 ; add offset
+	; setup VDP write address
+	move.l	#VDP_CRAM_WRITE,d1 ; start at VDP_CRAM_WRITE
+	add.l	d0,d1 ; add offset
+	move.l	d1,(VDP_CONTROL) ; set up VDP write to CRAM	
+	; setup loop control
+	clr.l	d0 ; just being overly cautious
+	move.w	#$000F,d0 ; 16 palette entries - 1
+ScriptedEventLoadPaletteLoop:
+	move.w	(a0),(a1)+ ; write the palette data to MEM_SCENE_PALETTE
+	move.w	(a0)+,(VDP_DATA) ; write the palette data to vdp
+	dbf	d0,ScriptedEventLoadPaletteLoop	; decrement value of d0 and loop if not 0
+	
 ProcessScriptedEventQueueNextAction:
 	move.w	(a6)+,(MEM_SCRIPTED_EVENT_ACTION) ; save next action
 	move.l	a6,(MEM_SCRIPTED_EVENT_ADDR) ; save address of next step	

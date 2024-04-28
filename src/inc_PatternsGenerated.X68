@@ -104,9 +104,13 @@
 
 	include 'patterns/frame-east-closed.X68'
 
+	include 'patterns/frame-east-closed-72.X68'
+
 	include 'patterns/frame-east-open.X68'
 
 	include 'patterns/frame-north-closed.X68'
+
+	include 'patterns/frame-north-closed-160.X68'
 
 	include 'patterns/frame-north-closed-east-open.X68'
 
@@ -124,6 +128,8 @@
 
 	include 'patterns/frame-south-closed.X68'
 
+	include 'patterns/frame-south-closed-160.X68'
+
 	include 'patterns/frame-south-closed-solo.X68'
 
 	include 'patterns/frame-south-closed-east-open.X68'
@@ -135,6 +141,8 @@
 	include 'patterns/frame-south-open-solo.X68'
 
 	include 'patterns/frame-west-closed.X68'
+
+	include 'patterns/frame-west-closed-72.X68'
 
 	include 'patterns/frame-west-open.X68'
 

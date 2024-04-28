@@ -3,26 +3,167 @@
 	"id":"SCENE_ID_VISION",
 	"destinationFilePath":"src/scenes/Vision.X68",
 	"tilesetNames":[
-		"TransparentTile"
+		"TransparentTile",
+		"FloorSVideo",
+		"Frame",
+		"VisionBedHigh",
+		"VisionBedLow",
+		"VisionCouch",
+		"VisionDoor",
+		"VisionTable",
+		"VisionTVStand",
+		"VisionWallArt"
 	],
 	"paletteNames":[
-		"PaletteEndingGraphics00",
-		"PaletteEndingGraphics01",
-		"PaletteEndingGraphics02",
+		"PaletteVision00",
+		"PaletteVision01",
+		"PaletteVision02",
 		"PalettePeople"
 	],
 	"scenery":[
 		{
-			"patternName":"PatternEndingFrame",
-			"comment":"frame",
-			"tilesetIndex":0,
+			"patternName":"Pattern16x16x128",
+			"comment":"floor",
+			"tilesetIndex":1,
 			"tilesetOffset":0,
 			"highPriority":false,
-			"paletteNumber":3,
+			"paletteNumber":0,
+			"repeat":5,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"03800000",
+			"column":"00180000"
+		},
+		{
+			"patternName":"PatternFrameWestClosed72",
+			"comment":"west wall",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"04800000",
+			"column":"00140000"
+		},
+		{
+			"patternName":"PatternFrameEastClosed72",
+			"comment":"east wall",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"04800000",
+			"column":"00380000"
+		},
+		{
+			"patternName":"PatternFrameSouthClosed160",
+			"comment":"south wall",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"09000000",
+			"column":"00140000"
+		},
+		{
+			"patternName":"PatternFrameNorthClosed160",
+			"comment":"north wall",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":0,
 			"repeat":0,
 			"layer":"VDP_VRAM_WRITE_B",
-			"row":"00800000",
-			"column":"00020000"
+			"row":"02800000",
+			"column":"00140000"
+		},
+		{
+			"patternName":"Pattern24x24",
+			"comment":"bed - high",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":true,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"04800000",
+			"column":"00300000"
+		},
+		{
+			"patternName":"Pattern24x16",
+			"comment":"bed - low",
+			"tilesetIndex":4,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"03800000",
+			"column":"00300000"
+		},
+		{
+			"patternName":"Pattern24x40",
+			"comment":"couch",
+			"tilesetIndex":5,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"06800000",
+			"column":"00160000"
+		},
+		{
+			"patternName":"Pattern16x32",
+			"comment":"door",
+			"tilesetIndex":6,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"02800000",
+			"column":"001A0000"
+		},
+		{
+			"patternName":"Pattern24x40",
+			"comment":"table",
+			"tilesetIndex":7,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"06800000",
+			"column":"001E0000"
+		},
+		{
+			"patternName":"Pattern24x24",
+			"comment":"tv stand",
+			"tilesetIndex":8,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":1,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"07800000",
+			"column":"00300000"
+		},
+		{
+			"patternName":"Pattern32x32",
+			"comment":"wall art",
+			"tilesetIndex":9,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"02800000",
+			"column":"00240000"
 		}
 	],
 	"objects":[
@@ -46,15 +187,15 @@
 	],
 	"npcLocations":[
 		{
-			"x":350,
-			"y":160,
+			"x":0,
+			"y":0,
 			"direction":"DIRECTION_LEFT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":300,
-			"y":160,
+			"x":0,
+			"y":0,
 			"direction":"DIRECTION_RIGHT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"

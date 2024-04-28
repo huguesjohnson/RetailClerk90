@@ -4,7 +4,11 @@
 	"destinationFilePath":"src/scenes/EndingGood.X68",
 	"tilesetNames":[
 		"TransparentTile",
-		"EndingFrame"
+		"EndingFrame",
+		"FloorVB",
+		"FlashbackStoreTable",
+		"FlashbackStoreChairLeft",
+		"FlashbackStoreChairRight"
 	],
 	"paletteNames":[
 		"PaletteEndingGood00",
@@ -24,7 +28,55 @@
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"00800000",
 			"column":"00020000"
-		}
+		},
+		{
+			"patternName":"Pattern16x16x288",
+			"comment":"floor",
+			"tilesetIndex":2,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":0,
+			"repeat":3,
+			"layer":"VDP_VRAM_WRITE_B",
+			"row":"01000000",
+			"column":"00040000"
+		},
+		{
+			"patternName":"Pattern24x24",
+			"comment":"chair - right - top",
+			"tilesetIndex":5,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"03000000",
+			"column":"001C0000"
+		},		
+		{
+			"patternName":"Pattern24x24",
+			"comment":"chair - left - top",
+			"tilesetIndex":4,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"03000000",
+			"column":"002E0000"
+		},
+		{
+			"patternName":"Pattern32x16",
+			"comment":"table",
+			"tilesetIndex":3,
+			"tilesetOffset":0,
+			"highPriority":false,
+			"paletteNumber":2,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"04000000",
+			"column":"00240000"
+		}				
 	],
 	"text":[
 		{
@@ -113,30 +165,30 @@
 	],
 	"npcLocations":[
 		{
-			"x":270,
-			"y":160,
-			"direction":"DIRECTION_RIGHT",
-			"movementFrequency":65535,
-			"movementPatternName":"NullMovement"
-		},
-		{
-			"x":300,
+			"x":378,
 			"y":160,
 			"direction":"DIRECTION_LEFT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":284,
-			"y":136,
-			"direction":"DIRECTION_DOWN",
+			"x":222,
+			"y":158,
+			"direction":"DIRECTION_RIGHT",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":200,
-			"y":166,
-			"direction":"DIRECTION_UP",
+			"x":335,
+			"y":158,
+			"direction":"DIRECTION_LEFT",
+			"movementFrequency":65535,
+			"movementPatternName":"NullMovement"
+		},
+		{
+			"x":282,
+			"y":146,
+			"direction":"DIRECTION_DOWN",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		}

@@ -95,6 +95,17 @@ SCRIPTED_EVENT_ADDITEM,SCRIPTED_EVENT_BASE+$000D,add an item to inventory
 SCRIPTED_EVENT_REMOVEITEM,SCRIPTED_EVENT_BASE+$000E,remove an item fron inventory
 SCRIPTED_EVENT_UPDATE_SCENE_NPCS,SCRIPTED_EVENT_BASE+$000F,update npcs in a scene
 SCRIPTED_EVENT_LOADPALETTE,SCRIPTED_EVENT_BASE+$0010,load a palette
+SCRIPTED_EVENT_SET_STATE_FLAG,SCRIPTED_EVENT_BASE+$0011,set a flag in the game state
+SCRIPTED_EVENT_CLEAR_STATE_FLAG,SCRIPTED_EVENT_BASE+$0012,clear a flag in the game state
+;
+;-------------------------------------------------------------------------------
+; scripted event sprite numbers
+;-------------------------------------------------------------------------------
+SCRIPTED_EVENT_SPRITE_PLAYER,1
+SCRIPTED_EVENT_SPRITE_NPC0,2
+SCRIPTED_EVENT_SPRITE_NPC1,3
+SCRIPTED_EVENT_SPRITE_NPC2,4
+SCRIPTED_EVENT_SPRITE_NPC3,5
 ;
 ;-------------------------------------------------------------------------------
 ; sprite data structure
@@ -171,7 +182,7 @@ CHARACTER_DEFINITION_SIZE,LWORD_SIZE
 [IF _DEBUG_]
 DIALOG_UPDATE_FREQUENCY,$0000,how often to update dialog animation
 SPRITE_MOVE_FREQUENCY,$0001,how many frames to wait between sprite moves
-INTRO_SCREEN_COUNTER_START,$0001,how long to display intro screens
+INTRO_SCREEN_COUNTER_START,$0168,how long to display intro screens
 FADE_FRAME_DELAY,$0001,how many frames to wait between fade in/out
 EVENT_FRAME_DELAY,$0008,delay used for scripted event scene changes
 LEGAL_SCREEN_LOOP,$0001,how long to display the legal screen

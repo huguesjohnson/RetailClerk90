@@ -451,6 +451,7 @@ LaunchDebug12: ; night 02 - midpoint
 
 LaunchDebug13: ; night 02 - after main events are done
 	bsr.w	InitGlobalEvents
+	move.w	#PLAYER_SPRITE_CARL,(MEM_PLAYER_SPRITE) ; initial sprite	
 	bsr.w	SetupTradingSequenceNight
 	bsr.w	EndDay02SetupGameState
 	;---------------------------------------------------------------------------	
@@ -460,11 +461,6 @@ LaunchDebug13: ; night 02 - after main events are done
 	bset.l	#FLAG_NIGHT02_EVENT00_FCBCAMPING,d7
 	bset.l	#FLAG_NIGHT02_EVENT01_NSHACK,d7 
 	move.l	d7,(MEM_DAY_EVENT_FLAGS)
-	bsr.w	CheckNight02Flags
-	move.l	d7,(MEM_DAY_EVENT_FLAGS)
-	bsr.w	Night02WWHallUpdateState
-	move.l	d7,(MEM_DAY_EVENT_FLAGS)
-	bsr.w	Night02CNowUpdateState
 	;---------------------------------------------------------------------------
 	; load starting scene and sprites
 	;---------------------------------------------------------------------------
@@ -997,17 +993,6 @@ LaunchDebug38: ; night 06 - outside south hall, events complete, trading & optio
 
 
 LaunchDebug39:
-	; temp for the moment
-	lea	SceneFlashbackParking,a6
-	bsr.w LoadScene
-	bsr.w LoadPlayerSprite
-	move.w	#$0000,(MEM_PLAYER_SPRITE_X)
-	move.w	#$0000,(MEM_PLAYER_SPRITE_Y)
-	bsr.w FixSprites	
-	bsr.w FadeIn
-	rts
-
-
 LaunchDebug40:	
 LaunchDebug41:
 LaunchDebug42:
@@ -1033,14 +1018,31 @@ LaunchDebug47: ; test bad ending here
 	rts
 
 LaunchDebug48: ; test good ending here
+	bsr.w	InitGlobalEvents
+	;---------------------------------------------------------------------------
+	; setup
+	;---------------------------------------------------------------------------
 	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7 ; copy global event flags to d7
-	bset.l	#FLAG_GLOBAL_REL0Complete,d7
+	and.l	#$00000000,d7
+	bset.l	#FLAG_GLOBAL_REL3Complete,d7
+	bset.l	#FLAG_GLOBAL_REL4Complete,d7
+	bset.l	#FLAG_GLOBAL_REL5Complete,d7
 	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS)
+	move.l	#$07010F00,(MEM_NPC_LOCATION_NSHACK)
+	move.w	#PLAYER_SPRITE_CARL,(MEM_PLAYER_SPRITE) ; initial sprite
 	bsr.w	SetupEndGame
 	rts
 
 LaunchDebug49: ; test perfect ending here
-	move.l	#ALL_GLOBAL_FLAGS_SET,(MEM_GLOBAL_EVENT_FLAGS)
+	bsr.w	InitGlobalEvents
+	;---------------------------------------------------------------------------
+	; setup
+	;---------------------------------------------------------------------------
+	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7 ; copy global event flags to d7
+	move.l	#ALL_GLOBAL_FLAGS_SET,d7
+	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS)
+	move.l	#$07010F00,(MEM_NPC_LOCATION_NSHACK)
+	move.w	#PLAYER_SPRITE_CARL,(MEM_PLAYER_SPRITE) ; initial sprite
 	bsr.w	SetupEndGame
 	rts
 

@@ -246,19 +246,8 @@ ActionScriptNight02VBRespond:
 ;*******************************************************************************
 EndNight02:
 	bsr.s	EndNight02SetupGameState
-	;---------------------------------------------------------------------------	
-	; set the intro screen
-	;---------------------------------------------------------------------------	
-	move.l	(MEM_GAME_STATE),d7	; copy game state
-	bset.l	#STATE_FLAG_INTRO_SCREEN,d7 ; set intro screen flag
-	move.l	d7,(MEM_GAME_STATE)	; save updated game state
-	; set the intro screen counter
-	move.w	#INTRO_SCREEN_COUNTER_START,(MEM_INTRO_SCENE_COUNTER)
-	lea	SceneIntroDay03,a6	; address of the scene for the title screen
-	bsr.w	LoadScene	; branch to LoadScene subroutine
-	bsr.w	FadeIn	; fade in to the new scene
 	; queue scripted event to launch
-	lea ScriptedEventDay03_00_IntroStart,a6 ; point a6 to event to load
+	lea ScriptedEventNight02Day03TransitionStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 	rts	
 
@@ -274,10 +263,6 @@ EndNight02SetupGameState: ; separated to help with debugging
 	move.w	#SCENE_ID_SVIDEO,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
 	move.w	#SCENE_ID_CAVERN,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
 	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
-	move.w	#PLAYER_SPRITE_ERYN,(MEM_PLAYER_SPRITE) ; initial sprite
-	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
-	move.w	#$00C2,(MEM_PLAYER_SPRITE_X)
-	move.w	#$00D0,(MEM_PLAYER_SPRITE_Y)
 	;---------------------------------------------------------------------------	
 	; update NPC locations
 	;---------------------------------------------------------------------------	

@@ -124,3 +124,7 @@ WWTVCollisionStart:
 	include 'collision-maps/WWTVCollision.X68'
 WWTVCollisionEnd:
 
+CutSceneCollisionStart:
+	include 'collision-maps/CutSceneCollision.X68'
+CutSceneCollisionEnd:
+

@@ -16,5 +16,7 @@ ScriptedEventActionTableStart:
 		dc.l	ScriptedEventRemoveItem ; SCRIPTED_EVENT_REMOVEITEM
 		dc.l	ScriptedEventUpdateSceneNPCs ; SCRIPTED_EVENT_UPDATE_SCENE_NPCS
 		dc.l	ScriptedEventLoadPalette ; SCRIPTED_EVENT_LOADPALETTE
+		dc.l	ScriptedEventSetStateFlag ; SCRIPTED_EVENT_SET_STATE_FLAG
+		dc.l	ScriptedEventClearStateFlag ; SCRIPTED_EVENT_CLEAR_STATE_FLAG
 ScriptedEventActionTableEnd:
 

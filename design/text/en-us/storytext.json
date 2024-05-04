@@ -1351,21 +1351,16 @@
          "align":2
          },     
       "StoryTextNight02VisionLine10":{
-         "dialogTitle":"OBJ_NPC_BASE",
-         "text":"It's OK to forget me.|We only spoke once.",
-         "align":2
-         },
-      "StoryTextNight02VisionLine11":{
          "dialogTitle":"OBJ_NPC_VICTOR",
          "text":"Get a load of this dump.",
          "align":2
          },     
-      "StoryTextNight02VisionLine12":{
+      "StoryTextNight02VisionLine11":{
          "dialogTitle":"OBJ_NPC_CARL",
          "text":"...",
          "align":2
          },                               
-      "StoryTextNight02VisionLine13":{
+      "StoryTextNight02VisionLine12":{
          "dialogTitle":"OBJ_NPC_VICTOR",
          "text":"This is the worst one yet.",
          "align":2
@@ -3636,12 +3631,12 @@
          }, 
       "StoryTextEndGoodLine23":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"They can't compete though.|They start closing stores.|The smaller mall ones are first.",
+         "text":"They can't compete though.|They start closing stores.|The smaller mall ones are first.|I'm on the liquidation team.",
          "align":2
          }, 
       "StoryTextEndGoodLine24":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"I'm on the liquidation team.|In November 2002...",
+         "text":"(In November 2002...)",
          "align":2
          }, 
       "StoryTextEndGoodLine25":{

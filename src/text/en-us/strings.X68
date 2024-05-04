@@ -3169,9 +3169,9 @@ TitleScreenTextLoadGame:
 TitleScreenTextDebug:
 	dc.b	"{Debug",ETX
 TitleScreenTextTitle:
-	dc.b	"Apr24 Dev Build",ETX
+	dc.b	"May24 Dev Build",ETX
 TitleScreenTextTitleDebug:
-	dc.b	"Apr24 Debug Build",ETX
+	dc.b	"May24 Debug Build",ETX
 
 ;-------------------------------------------------------------------------------
 ; DebugScreen
@@ -5238,20 +5238,15 @@ StoryTextNight02VisionLine9:
 	dc.b	"start on.",ETX
 	align 2
 StoryTextNight02VisionLine10:
-	dc.w	OBJ_NPC_BASE
-	dc.b	"It's OK to forget me.",LF
-	dc.b	"We only spoke once.",ETX
-	align 2
-StoryTextNight02VisionLine11:
 	dc.w	OBJ_NPC_VICTOR
 	dc.b	"Get a load of this",LF
 	dc.b	"dump.",ETX
 	align 2
-StoryTextNight02VisionLine12:
+StoryTextNight02VisionLine11:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"...",ETX
 	align 2
-StoryTextNight02VisionLine13:
+StoryTextNight02VisionLine12:
 	dc.w	OBJ_NPC_VICTOR
 	dc.b	"This is the worst one",LF
 	dc.b	"yet.",ETX
@@ -8178,13 +8173,13 @@ StoryTextEndGoodLine23:
 	dc.b	"They start closing",LF
 	dc.b	"stores.^",FF
 	dc.b	"The smaller mall ones",LF
-	dc.b	"are first.",ETX
+	dc.b	"are first.^",FF
+	dc.b	"I'm on the",LF
+	dc.b	"liquidation team.",ETX
 	align 2
 StoryTextEndGoodLine24:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"I'm on the",LF
-	dc.b	"liquidation team.^",FF
-	dc.b	"In November 2002...",ETX
+	dc.b	"(In November 2002...)",ETX
 	align 2
 StoryTextEndGoodLine25:
 	dc.w	OBJ_NPC_VICTOR

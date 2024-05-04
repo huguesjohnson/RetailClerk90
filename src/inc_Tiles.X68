@@ -784,3 +784,27 @@ FlashbackStoreChairRightTilesStart:
 	include 'tiles/scene-tiles/flashback-store-chair-right.X68'
 FlashbackStoreChairRightTilesEnd:
 
+FlashbackParkingTileTilesStart:
+	include 'tiles/scene-tiles/flashback-parking-tile.X68'
+FlashbackParkingTileTilesEnd:
+
+FlashbackParkingStripeTilesStart:
+	include 'tiles/scene-tiles/flashback-parking-stripe.X68'
+FlashbackParkingStripeTilesEnd:
+
+FlashbackParkingLandscapeRightTilesStart:
+	include 'tiles/scene-tiles/flashback-parking-landscape-right.X68'
+FlashbackParkingLandscapeRightTilesEnd:
+
+FlashbackParkingLandscapeLeftTilesStart:
+	include 'tiles/scene-tiles/flashback-parking-landscape-left.X68'
+FlashbackParkingLandscapeLeftTilesEnd:
+
+FlashbackParkingSignTilesStart:
+	include 'tiles/scene-tiles/flashback-parking-sign.X68'
+FlashbackParkingSignTilesEnd:
+
+FlashbackParkingWallTilesStart:
+	include 'tiles/scene-tiles/flashback-parking-wall.X68'
+FlashbackParkingWallTilesEnd:
+

@@ -273,7 +273,7 @@
 	;---------------------------------------------------------------------------
 	; collision data
 	;---------------------------------------------------------------------------
-	dc.l	$00000000 ; location of collision data
+	dc.l	CutSceneCollisionStart ; location of collision data
 
 	;---------------------------------------------------------------------------
 	; exits: 0=south,1=north,2=west,3=east
@@ -288,22 +288,22 @@
 	;---------------------------------------------------------------------------
 	dc.w	$0003 ; npc count - 1
 
-	dc.w	$015E ; starting x location of npc0
+	dc.w	$012C ; starting x location of npc0
 	dc.w	$00A0 ; starting y location of npc0
-	dc.w	DIRECTION_LEFT ; starting direction of npc0
+	dc.w	DIRECTION_RIGHT ; starting direction of npc0
 	dc.w	$FFFF ; movement frequency of npc0
 	dc.l	NullMovementStart ; location of movement pattern for npc0
 	dc.w	(NullMovementEnd-NullMovementStart-1) ; movement pattern length
 
-	dc.w	$012C ; starting x location of npc1
+	dc.w	$015E ; starting x location of npc1
 	dc.w	$00A0 ; starting y location of npc1
-	dc.w	DIRECTION_RIGHT ; starting direction of npc1
+	dc.w	DIRECTION_LEFT ; starting direction of npc1
 	dc.w	$FFFF ; movement frequency of npc1
 	dc.l	NullMovementStart ; location of movement pattern for npc1
 	dc.w	(NullMovementEnd-NullMovementStart-1) ; movement pattern length
 
-	dc.w	$0000 ; starting x location of npc2
-	dc.w	$0000 ; starting y location of npc2
+	dc.w	$0122 ; starting x location of npc2
+	dc.w	$00BE ; starting y location of npc2
 	dc.w	DIRECTION_RIGHT ; starting direction of npc2
 	dc.w	$FFFF ; movement frequency of npc2
 	dc.l	NullMovementStart ; location of movement pattern for npc2

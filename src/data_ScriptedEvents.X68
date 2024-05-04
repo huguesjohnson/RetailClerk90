@@ -1516,9 +1516,14 @@ ScriptedEventNight02_Optional01_ElizaStart:
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight02_Optional01_ElizaEnd:
 
-ScriptedEventNight02_04_VisionStart:
-	; NPC0 sprite
-	dc.w	$0002
+ScriptedEventNight02Day03TransitionStart:
+	; player sprite
+	dc.w	$0001
+	; fade out
+	dc.w	SCRIPTED_EVENT_FADE_BLACK
+	; change scene to vision in hotel
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_VISION
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight02VisionLine1
@@ -1555,18 +1560,35 @@ ScriptedEventNight02_04_VisionStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight02VisionLine12
-	; dialog
-	dc.w	SCRIPTED_EVENT_DIALOG
-	dc.l	StoryTextNight02VisionLine13
-	; end
-	dc.w	SCRIPTED_EVENT_END
-ScriptedEventNight02_04_VisionEnd:
-
-ScriptedEventDay03_00_IntroStart:
-	; NPC0 sprite
-	dc.w	$0002
 	; fade out
 	dc.w	SCRIPTED_EVENT_FADE_BLACK
+	; set where player sprite starts the scene
+	dc.w	SCRIPTED_EVENT_SET_PLAYER_SPRITE_X
+	dc.w	$0000
+	; set where player sprite starts the scene
+	dc.w	SCRIPTED_EVENT_SET_PLAYER_SPRITE_Y
+	dc.w	$0000
+	; change scene - day 03 intro
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_INTRO_DAY03
+	; timer for intro screen
+	dc.w	SCRIPTED_EVENT_TIMER
+	dc.w	INTRO_SCREEN_COUNTER_START
+	; change player sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_PLAYER_SPRITE
+	dc.w	PLAYER_SPRITE_ERYN
+	; change to player sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	$0001
+	; set where player sprite starts the scene
+	dc.w	SCRIPTED_EVENT_SET_PLAYER_SPRITE_X
+	dc.w	$00C2
+	; set where player sprite starts the scene
+	dc.w	SCRIPTED_EVENT_SET_PLAYER_SPRITE_Y
+	dc.w	$00D0
+	; face up
+	dc.w	DIRECTION_UP
+	dc.w	$0000
 	; change scene to denim country
 	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
 	dc.w	SCENE_ID_DENIMCOUNTRY
@@ -1587,7 +1609,7 @@ ScriptedEventDay03_00_IntroStart:
 	dc.l	StoryTextDay03DenimCountryLine4
 	; end
 	dc.w	SCRIPTED_EVENT_END
-ScriptedEventDay03_00_IntroEnd:
+ScriptedEventNight02Day03TransitionEnd:
 
 ScriptedEventDay03_01_PogoDawgStart:
 	; NPC0 sprite
@@ -3673,8 +3695,22 @@ ScriptedEventEndBadStart:
 ScriptedEventEndBadEnd:
 
 ScriptedEventEndGoodStart:
-	; NPC0 sprite
-	dc.w	$0002
+	; player sprite
+	dc.w	SCRIPTED_EVENT_SPRITE_PLAYER
+	; fade out
+	dc.w	SCRIPTED_EVENT_FADE_BLACK
+	; set where player sprite starts the scene
+	dc.w	SCRIPTED_EVENT_SET_PLAYER_SPRITE_X
+	dc.w	$0060
+	; set where player sprite starts the scene
+	dc.w	SCRIPTED_EVENT_SET_PLAYER_SPRITE_Y
+	dc.w	$00DC
+	; change scene to nshack
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_NSHACK
+	; move player sprite into the scene
+	dc.w	DIRECTION_RIGHT
+	dc.w	$0078
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine1
@@ -3684,6 +3720,12 @@ ScriptedEventEndGoodStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine3
+	; move player right 
+	dc.w	DIRECTION_RIGHT
+	dc.w	$0040
+	; player face up
+	dc.w	DIRECTION_UP
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine4
@@ -3693,30 +3735,75 @@ ScriptedEventEndGoodStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine6
+	; change to npc2
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	SCRIPTED_EVENT_SPRITE_NPC2
+	; npc2 face right
+	dc.w	DIRECTION_RIGHT
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine7
+	; change to player sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	SCRIPTED_EVENT_SPRITE_PLAYER
+	; npc2 face right
+	dc.w	DIRECTION_RIGHT
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine8
+	; change to npc2
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	SCRIPTED_EVENT_SPRITE_NPC2
+	; npc2 face down
+	dc.w	DIRECTION_DOWN
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine9
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine10
+	; npc2 face left
+	dc.w	DIRECTION_LEFT
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine11
+	; change to player sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	SCRIPTED_EVENT_SPRITE_PLAYER
+	; player faces left
+	dc.w	DIRECTION_LEFT
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine12
+	; player moves left
+	dc.w	DIRECTION_LEFT
+	dc.w	$0060
+	; player faces right
+	dc.w	DIRECTION_RIGHT
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine13
+	; player moves left
+	dc.w	DIRECTION_LEFT
+	dc.w	$0010
+	; player faces right
+	dc.w	DIRECTION_RIGHT
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine14
+	; change to npc1 sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	SCRIPTED_EVENT_SPRITE_NPC1
+	; npc1 faces down
+	dc.w	DIRECTION_DOWN
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine15
@@ -3732,30 +3819,114 @@ ScriptedEventEndGoodStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine19
+	; change to player sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	SCRIPTED_EVENT_SPRITE_PLAYER
+	; player paces a little
+	dc.w	DIRECTION_DOWN
+	dc.w	$0010
+	; player paces a little
+	dc.w	DIRECTION_UP
+	dc.w	$0010
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine20
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine21
+	; player faces down
+	dc.w	DIRECTION_DOWN
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine22
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine23
+	; fade out
+	dc.w	SCRIPTED_EVENT_FADE_BLACK
+	; move player sprite off screen
+	dc.w	SCRIPTED_EVENT_SET_PLAYER_SPRITE_X
+	dc.w	$0000
+	; move player sprite off screen
+	dc.w	SCRIPTED_EVENT_SET_PLAYER_SPRITE_Y
+	dc.w	$0000
+	; change scene - flashback store
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_FLASHBACK_STORE
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02VisionLine4
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02VisionLine5
+	; change to npc1 sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	SCRIPTED_EVENT_SPRITE_NPC1
+	; npc1 faces right
+	dc.w	DIRECTION_RIGHT
+	dc.w	$0000
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02VisionLine6
+	; dialog
+	dc.w	SCRIPTED_EVENT_DIALOG
+	dc.l	StoryTextNight02VisionLine7
+	; fade out
+	dc.w	SCRIPTED_EVENT_FADE_BLACK
+	; change scene - flashback parking
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_FLASHBACK_PARKING
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine24
+	; change to npc0 sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	SCRIPTED_EVENT_SPRITE_NPC0
+	; npc0 faces left
+	dc.w	DIRECTION_LEFT
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine25
+	; change to npc1 sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	SCRIPTED_EVENT_SPRITE_NPC1
+	; npc1 faces down
+	dc.w	DIRECTION_DOWN
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine26
+	; change to npc0 sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	SCRIPTED_EVENT_SPRITE_NPC0
+	; npc0 faces DOWN
+	dc.w	DIRECTION_DOWN
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine27
+	; npc0 exits north
+	dc.w	DIRECTION_UP
+	dc.w	$0070
+	; fade out
+	dc.w	SCRIPTED_EVENT_FADE_BLACK
+	; move player back on to the screen
+	dc.w	SCRIPTED_EVENT_SET_PLAYER_SPRITE_X
+	dc.w	$00D0
+	; move player sprite off screen
+	dc.w	SCRIPTED_EVENT_SET_PLAYER_SPRITE_Y
+	dc.w	$00E6
+	; change to player sprite
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	SCRIPTED_EVENT_SPRITE_PLAYER
+	; player moves down
+	dc.w	DIRECTION_DOWN
+	dc.w	$0000
+	; change scene - nshack
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_NSHACK
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine28
@@ -3771,9 +3942,15 @@ ScriptedEventEndGoodStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine32
+	; player moves left
+	dc.w	DIRECTION_LEFT
+	dc.w	$0018
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine33
+	; player moves right
+	dc.w	DIRECTION_RIGHT
+	dc.w	$0018
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine34
@@ -3792,12 +3969,53 @@ ScriptedEventEndGoodStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine39
+	; player moves toward exit
+	dc.w	DIRECTION_DOWN
+	dc.w	$0010
+	; player moves toward exit
+	dc.w	DIRECTION_LEFT
+	dc.w	$0050
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine40
+	; player faces right
+	dc.w	DIRECTION_RIGHT
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextEndGoodLine41
+	; fade out
+	dc.w	SCRIPTED_EVENT_FADE_BLACK
+	; move player sprite off screen
+	dc.w	SCRIPTED_EVENT_SET_PLAYER_SPRITE_X
+	dc.w	$0000
+	; move player sprite off screen
+	dc.w	SCRIPTED_EVENT_SET_PLAYER_SPRITE_Y
+	dc.w	$0000
+	; change scene - programming credits
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_CREDITS_PROGRAM
+	; timer for credits screen
+	dc.w	SCRIPTED_EVENT_TIMER
+	dc.w	CREDITS_SCREEN_LOOP
+	; change scene - graphics credits
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_CREDITS_GRAPHICS
+	; timer for credits screen
+	dc.w	SCRIPTED_EVENT_TIMER
+	dc.w	CREDITS_SCREEN_LOOP
+	; change scene - sound credits
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_CREDITS_SOUND
+	; timer for credits screen
+	dc.w	SCRIPTED_EVENT_TIMER
+	dc.w	CREDITS_SCREEN_LOOP
+	; change scene - ending
+	dc.w	SCRIPTED_EVENT_CHANGE_SCENE
+	dc.w	SCENE_ID_END_GOOD
+	; timer for credits screen
+	dc.w	SCRIPTED_EVENT_TIMER
+	dc.w	CREDITS_SCREEN_LOOP_LAST_SCREEN
 	; set end game
 	dc.w	SCRIPTED_EVENT_ENDGAME
 	; end

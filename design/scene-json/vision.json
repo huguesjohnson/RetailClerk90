@@ -178,7 +178,7 @@
 		null,
 		null
 	],
-	"collisionDataName":"$00000000",
+	"collisionDataName":"CutSceneCollisionStart",
 	"exitIds":[
 		"$0000",
 		"$0000",

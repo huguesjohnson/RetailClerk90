@@ -8,31 +8,255 @@
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0000 ; tileset count - 1
+	dc.w	$0007 ; tileset count - 1
 
 	; tileset 0 - tiles start at [0] - tileset length [1]
 	dc.l	TransparentTileTilesStart
 	dc.l	TransparentTileTilesEnd
 
+	; tileset 1 - tiles start at [1] - tileset length [4]
+	dc.l	FloorCenterHallTilesStart
+	dc.l	FloorCenterHallTilesEnd
+
+	; tileset 2 - tiles start at [5] - tileset length [4]
+	dc.l	FlashbackParkingTileTilesStart
+	dc.l	FlashbackParkingTileTilesEnd
+
+	; tileset 3 - tiles start at [9] - tileset length [1]
+	dc.l	FlashbackParkingStripeTilesStart
+	dc.l	FlashbackParkingStripeTilesEnd
+
+	; tileset 4 - tiles start at [A] - tileset length [12]
+	dc.l	FlashbackParkingLandscapeRightTilesStart
+	dc.l	FlashbackParkingLandscapeRightTilesEnd
+
+	; tileset 5 - tiles start at [1C] - tileset length [12]
+	dc.l	FlashbackParkingLandscapeLeftTilesStart
+	dc.l	FlashbackParkingLandscapeLeftTilesEnd
+
+	; tileset 6 - tiles start at [2E] - tileset length [30]
+	dc.l	FlashbackParkingSignTilesStart
+	dc.l	FlashbackParkingSignTilesEnd
+
+	; tileset 7 - tiles start at [5E] - tileset length [A]
+	dc.l	FlashbackParkingWallTilesStart
+	dc.l	FlashbackParkingWallTilesEnd
+
 	;---------------------------------------------------------------------------
 	; palettes
 	;---------------------------------------------------------------------------
-	dc.l	PaletteEndingGraphics00
-	dc.l	PaletteEndingGraphics01
-	dc.l	PaletteEndingGraphics02
+	dc.l	PaletteFlashbackParking00
+	dc.l	PaletteFlashbackParking01
+	dc.l	PaletteFlashbackParking02
 	dc.l	PalettePeople
 
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$0000 ; scenery count - 1
+	dc.w	$001C ; scenery count - 1
 
-	; frame
-	dc.l	PatternEndingFrame
+	; south hallway floor
+	dc.l	Pattern16x16x128
 	;		%pccvhnnnnnnnnnnn
-	dc.w	%0110000000000000 ; vdp pattern
+	dc.w	%0000000000000001 ; vdp pattern
+	dc.w	$0001 ; repeat=1
+	dc.l	VDP_VRAM_WRITE_B+$00180000+$00800000 ; initial drawing location
+
+	; pavement
+	dc.l	Pattern16x16x272
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000000101 ; vdp pattern
+	dc.w	$000B ; repeat=11
+	dc.l	VDP_VRAM_WRITE_B+$00060000+$02800000 ; initial drawing location
+
+	; parking stripe
+	dc.l	Pattern8x8
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000001001 ; vdp pattern
 	dc.w	$0000 ; repeat=0
-	dc.l	VDP_VRAM_WRITE_B+$00020000+$00800000 ; initial drawing location
+	dc.l	VDP_VRAM_WRITE_A+$00060000+$08800000 ; initial drawing location
+
+	; parking stripe
+	dc.l	Pattern8x8
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000001001 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00080000+$08800000 ; initial drawing location
+
+	; parking stripe
+	dc.l	Pattern8x8
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000001001 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$000A0000+$08800000 ; initial drawing location
+
+	; parking stripe
+	dc.l	Pattern8x8
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000001001 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00440000+$05800000 ; initial drawing location
+
+	; parking stripe
+	dc.l	Pattern8x8
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000001001 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00460000+$05800000 ; initial drawing location
+
+	; parking stripe
+	dc.l	Pattern8x8
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0010000000001001 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00480000+$05800000 ; initial drawing location
+
+	; landscape - right - 1/4
+	dc.l	Pattern24x48
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000000001010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$004A0000+$02800000 ; initial drawing location
+
+	; landscape - right - 2/4
+	dc.l	Pattern24x48
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000000001010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$004A0000+$05800000 ; initial drawing location
+
+	; landscape - right - 3/4
+	dc.l	Pattern24x48
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000000001010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$004A0000+$08800000 ; initial drawing location
+
+	; landscape - right - 4/4
+	dc.l	Pattern24x48
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000000001010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$004A0000+$0B800000 ; initial drawing location
+
+	; landscape - left - 1/4
+	dc.l	Pattern24x48
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000000011100 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00000000+$02800000 ; initial drawing location
+
+	; landscape - left - 2/4
+	dc.l	Pattern24x48
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000000011100 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00000000+$05800000 ; initial drawing location
+
+	; landscape - left - 3/4
+	dc.l	Pattern24x48
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000000011100 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00000000+$08800000 ; initial drawing location
+
+	; landscape - left - 4/4
+	dc.l	Pattern24x48
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0100000000011100 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00000000+$0B800000 ; initial drawing location
+
+	; sign
+	dc.l	Pattern128x24
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1100000000101110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00180000+$00000000 ; initial drawing location
+
+	; wall - 1/12
+	dc.l	Pattern16x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00000000+$00000000 ; initial drawing location
+
+	; wall - 2/12
+	dc.l	Pattern16x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00040000+$00000000 ; initial drawing location
+
+	; wall - 3/12
+	dc.l	Pattern16x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00080000+$00000000 ; initial drawing location
+
+	; wall - 4/12
+	dc.l	Pattern16x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$000C0000+$00000000 ; initial drawing location
+
+	; wall - 5/12
+	dc.l	Pattern16x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00100000+$00000000 ; initial drawing location
+
+	; wall - 6/12
+	dc.l	Pattern16x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00140000+$00000000 ; initial drawing location
+
+	; wall - 7/12
+	dc.l	Pattern16x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00380000+$00000000 ; initial drawing location
+
+	; wall - 8/12
+	dc.l	Pattern16x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$003C0000+$00000000 ; initial drawing location
+
+	; wall - 9/12
+	dc.l	Pattern16x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00400000+$00000000 ; initial drawing location
+
+	; wall - 10/12
+	dc.l	Pattern16x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00440000+$00000000 ; initial drawing location
+
+	; wall - 11/12
+	dc.l	Pattern16x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00480000+$00000000 ; initial drawing location
+
+	; wall - 12/12
+	dc.l	Pattern16x40
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%0000000001011110 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$004C0000+$00000000 ; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text
@@ -115,7 +339,7 @@
 	;---------------------------------------------------------------------------
 	; collision data
 	;---------------------------------------------------------------------------
-	dc.l	$00000000 ; location of collision data
+	dc.l	CutSceneCollisionStart ; location of collision data
 
 	;---------------------------------------------------------------------------
 	; exits: 0=south,1=north,2=west,3=east
@@ -130,16 +354,16 @@
 	;---------------------------------------------------------------------------
 	dc.w	$0003 ; npc count - 1
 
-	dc.w	$015E ; starting x location of npc0
-	dc.w	$00A0 ; starting y location of npc0
-	dc.w	DIRECTION_LEFT ; starting direction of npc0
+	dc.w	$0134 ; starting x location of npc0
+	dc.w	$00D0 ; starting y location of npc0
+	dc.w	DIRECTION_UP ; starting direction of npc0
 	dc.w	$FFFF ; movement frequency of npc0
 	dc.l	NullMovementStart ; location of movement pattern for npc0
 	dc.w	(NullMovementEnd-NullMovementStart-1) ; movement pattern length
 
-	dc.w	$012C ; starting x location of npc1
-	dc.w	$00A0 ; starting y location of npc1
-	dc.w	DIRECTION_RIGHT ; starting direction of npc1
+	dc.w	$0100 ; starting x location of npc1
+	dc.w	$00F0 ; starting y location of npc1
+	dc.w	DIRECTION_UP ; starting direction of npc1
 	dc.w	$FFFF ; movement frequency of npc1
 	dc.l	NullMovementStart ; location of movement pattern for npc1
 	dc.w	(NullMovementEnd-NullMovementStart-1) ; movement pattern length

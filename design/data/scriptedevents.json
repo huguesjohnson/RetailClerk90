@@ -2592,11 +2592,20 @@
       ]
    }, 
    {
-      "name":"ScriptedEventNight02_04_Vision",
+      "name":"ScriptedEventNight02Day03Transition",
       "actions":[
          {
-            "comment":"NPC0 sprite",
-            "intValue":2
+            "comment":"player sprite",
+            "intValue":1
+         },
+         {
+            "comment":"fade out",
+            "command":"FADE_BLACK"
+         },
+         {
+            "comment":"change scene to vision in hotel",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_VISION"
          },
          {
             "comment":"dialog",
@@ -2659,27 +2668,54 @@
             "label":"StoryTextNight02VisionLine12"
          },
          {
-            "comment":"dialog",
-            "command":"DIALOG",
-            "label":"StoryTextNight02VisionLine13"
-         },
-         {
-            "comment":"end",
-            "command":"END"
-         }
-      ]
-   },    
-   {
-      "name":"ScriptedEventDay03_00_Intro",
-      "actions":[
-         {
-            "comment":"NPC0 sprite",
-            "intValue":2
-         },
-         {
             "comment":"fade out",
             "command":"FADE_BLACK"
          },
+         {
+            "comment":"set where player sprite starts the scene",
+            "command":"SET_PLAYER_SPRITE_X",
+            "intValue":0
+         },
+         {
+            "comment":"set where player sprite starts the scene",
+            "command":"SET_PLAYER_SPRITE_Y",
+            "intValue":0
+         }, 
+         {
+            "comment":"change scene - day 03 intro",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_INTRO_DAY03"
+         },
+         {
+            "comment":"timer for intro screen",
+            "command":"TIMER",
+            "intConst":"INTRO_SCREEN_COUNTER_START"
+         },     
+         {
+            "comment":"change player sprite",
+            "command":"CHANGE_PLAYER_SPRITE",
+            "intConst":"PLAYER_SPRITE_ERYN"
+         },
+         {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intValue":1
+         }, 
+         {
+            "comment":"set where player sprite starts the scene",
+            "command":"SET_PLAYER_SPRITE_X",
+            "intValue":194
+         },
+         {
+            "comment":"set where player sprite starts the scene",
+            "command":"SET_PLAYER_SPRITE_Y",
+            "intValue":208
+         },
+         {
+            "comment":"face up",
+            "direction":"UP",
+            "intValue":0
+         },           
          {
             "comment":"change scene to denim country",
             "command":"CHANGE_SCENE",
@@ -6270,9 +6306,33 @@
       "name":"ScriptedEventEndGood",
       "actions":[
          {
-            "comment":"NPC0 sprite",
-            "intValue":2
+            "comment":"player sprite",
+            "intConst":"SCRIPTED_EVENT_SPRITE_PLAYER"
          },
+         {
+            "comment":"fade out",
+            "command":"FADE_BLACK"
+         },
+         {
+            "comment":"set where player sprite starts the scene",
+            "command":"SET_PLAYER_SPRITE_X",
+            "intValue":96
+         },
+         {
+            "comment":"set where player sprite starts the scene",
+            "command":"SET_PLAYER_SPRITE_Y",
+            "intValue":220
+         },         
+         {
+            "comment":"change scene to nshack",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_NSHACK"
+         },         
+         {
+            "comment":"move player sprite into the scene",
+            "direction":"RIGHT",
+            "intValue":120
+         },        
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -6289,6 +6349,16 @@
             "label":"StoryTextEndGoodLine3"
          },
          {
+            "comment":"move player right ",
+            "direction":"RIGHT",
+            "intValue":64
+         },         
+         {
+            "comment":"player face up",
+            "direction":"UP",
+            "intValue":0
+         },         
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextEndGoodLine4"
@@ -6304,15 +6374,45 @@
             "label":"StoryTextEndGoodLine6"
          },
          {
+            "comment":"change to npc2",
+            "command":"CHANGE_SPRITE",
+            "intConst":"SCRIPTED_EVENT_SPRITE_NPC2"
+         },   
+         {
+            "comment":"npc2 face right",
+            "direction":"RIGHT",
+            "intValue":0
+         },                
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextEndGoodLine7"
          },
          {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intConst":"SCRIPTED_EVENT_SPRITE_PLAYER"
+         },   
+         {
+            "comment":"npc2 face right",
+            "direction":"RIGHT",
+            "intValue":0
+         },         
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextEndGoodLine8"
          },
+         {
+            "comment":"change to npc2",
+            "command":"CHANGE_SPRITE",
+            "intConst":"SCRIPTED_EVENT_SPRITE_NPC2"
+         },   
+         {
+            "comment":"npc2 face down",
+            "direction":"DOWN",
+            "intValue":0
+         },         
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -6324,9 +6424,24 @@
             "label":"StoryTextEndGoodLine10"
          },
          {
+            "comment":"npc2 face left",
+            "direction":"LEFT",
+            "intValue":0
+         },          
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextEndGoodLine11"
+         },
+         {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intConst":"SCRIPTED_EVENT_SPRITE_PLAYER"
+         }, 
+         {
+            "comment":"player faces left",
+            "direction":"LEFT",
+            "intValue":0
          },
          {
             "comment":"dialog",
@@ -6334,15 +6449,45 @@
             "label":"StoryTextEndGoodLine12"
          },
          {
+            "comment":"player moves left",
+            "direction":"LEFT",
+            "intValue":96
+         },
+         {
+            "comment":"player faces right",
+            "direction":"RIGHT",
+            "intValue":0
+         },           
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextEndGoodLine13"
          },
          {
+            "comment":"player moves left",
+            "direction":"LEFT",
+            "intValue":16
+         },
+         {
+            "comment":"player faces right",
+            "direction":"RIGHT",
+            "intValue":0
+         },          
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextEndGoodLine14"
          },
+         {
+            "comment":"change to npc1 sprite",
+            "command":"CHANGE_SPRITE",
+            "intConst":"SCRIPTED_EVENT_SPRITE_NPC1"
+         },   
+         {
+            "comment":"npc1 faces down",
+            "direction":"DOWN",
+            "intValue":0
+         },          
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -6369,6 +6514,21 @@
             "label":"StoryTextEndGoodLine19"
          },
          {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intConst":"SCRIPTED_EVENT_SPRITE_PLAYER"
+         }, 
+         {
+            "comment":"player paces a little",
+            "direction":"DOWN",
+            "intValue":16
+         }, 
+         {
+            "comment":"player paces a little",
+            "direction":"UP",
+            "intValue":16
+         },                  
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextEndGoodLine20"
@@ -6378,6 +6538,11 @@
             "command":"DIALOG",
             "label":"StoryTextEndGoodLine21"
          },
+         {
+            "comment":"player faces down",
+            "direction":"DOWN",
+            "intValue":0
+         },                
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -6389,25 +6554,147 @@
             "label":"StoryTextEndGoodLine23"
          },
          {
+            "comment":"fade out",
+            "command":"FADE_BLACK"
+         },
+         {
+            "comment":"move player sprite off screen",
+            "command":"SET_PLAYER_SPRITE_X",
+            "intConst":"$0000"
+         },
+         {
+            "comment":"move player sprite off screen",
+            "command":"SET_PLAYER_SPRITE_Y",
+            "intConst":"$0000"
+         },          
+         {
+            "comment":"change scene - flashback store",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_FLASHBACK_STORE"
+         },
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight02VisionLine4"
+         },  
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight02VisionLine5"
+         },
+         {
+            "comment":"change to npc1 sprite",
+            "command":"CHANGE_SPRITE",
+            "intConst":"SCRIPTED_EVENT_SPRITE_NPC1"
+         }, 
+         {
+            "comment":"npc1 faces right",
+            "direction":"RIGHT",
+            "intValue":0
+         },               
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight02VisionLine6"
+         },         
+         {
+            "comment":"dialog",
+            "command":"DIALOG",
+            "label":"StoryTextNight02VisionLine7"
+         },
+         {
+            "comment":"fade out",
+            "command":"FADE_BLACK"
+         },         
+         {
+            "comment":"change scene - flashback parking",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_FLASHBACK_PARKING"
+         },         
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextEndGoodLine24"
          },
+         {
+            "comment":"change to npc0 sprite",
+            "command":"CHANGE_SPRITE",
+            "intConst":"SCRIPTED_EVENT_SPRITE_NPC0"
+         },   
+         {
+            "comment":"npc0 faces left",
+            "direction":"LEFT",
+            "intValue":0
+         },         
          {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextEndGoodLine25"
          },
          {
+            "comment":"change to npc1 sprite",
+            "command":"CHANGE_SPRITE",
+            "intConst":"SCRIPTED_EVENT_SPRITE_NPC1"
+         },   
+         {
+            "comment":"npc1 faces down",
+            "direction":"DOWN",
+            "intValue":0
+         },         
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextEndGoodLine26"
          },
          {
+            "comment":"change to npc0 sprite",
+            "command":"CHANGE_SPRITE",
+            "intConst":"SCRIPTED_EVENT_SPRITE_NPC0"
+         },   
+         {
+            "comment":"npc0 faces DOWN",
+            "direction":"DOWN",
+            "intValue":0
+         },           
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextEndGoodLine27"
          },
+         {
+            "comment":"npc0 exits north",
+            "direction":"UP",
+            "intValue":112
+         },         
+         {
+            "comment":"fade out",
+            "command":"FADE_BLACK"
+         },
+         {
+            "comment":"move player back on to the screen",
+            "command":"SET_PLAYER_SPRITE_X",
+            "intConst":"$00D0"
+         },
+         {
+            "comment":"move player sprite off screen",
+            "command":"SET_PLAYER_SPRITE_Y",
+            "intConst":"$00E6"
+         },
+         {
+            "comment":"change to player sprite",
+            "command":"CHANGE_SPRITE",
+            "intConst":"SCRIPTED_EVENT_SPRITE_PLAYER"
+         },   
+         {
+            "comment":"player moves down",
+            "direction":"DOWN",
+            "intValue":0
+         },                   
+         {
+            "comment":"change scene - nshack",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_NSHACK"
+         }, 
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -6434,10 +6721,20 @@
             "label":"StoryTextEndGoodLine32"
          },
          {
+            "comment":"player moves left",
+            "direction":"LEFT",
+            "intValue":24
+         },          
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextEndGoodLine33"
          },
+         {
+            "comment":"player moves right",
+            "direction":"RIGHT",
+            "intValue":24
+         },           
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -6469,15 +6766,84 @@
             "label":"StoryTextEndGoodLine39"
          },
          {
+            "comment":"player moves toward exit",
+            "direction":"DOWN",
+            "intValue":16
+         },
+         {
+            "comment":"player moves toward exit",
+            "direction":"LEFT",
+            "intValue":80
+         },   
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextEndGoodLine40"
          },
          {
+            "comment":"player faces right",
+            "direction":"RIGHT",
+            "intValue":0
+         },                          
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextEndGoodLine41"
          },
+         {
+            "comment":"fade out",
+            "command":"FADE_BLACK"
+         },
+         {
+            "comment":"move player sprite off screen",
+            "command":"SET_PLAYER_SPRITE_X",
+            "intConst":"$0000"
+         },
+         {
+            "comment":"move player sprite off screen",
+            "command":"SET_PLAYER_SPRITE_Y",
+            "intConst":"$0000"
+         },
+         {
+            "comment":"change scene - programming credits",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_CREDITS_PROGRAM"
+         },
+         {
+            "comment":"timer for credits screen",
+            "command":"TIMER",
+            "intConst":"CREDITS_SCREEN_LOOP"
+         },
+         {
+            "comment":"change scene - graphics credits",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_CREDITS_GRAPHICS"
+         },
+         {
+            "comment":"timer for credits screen",
+            "command":"TIMER",
+            "intConst":"CREDITS_SCREEN_LOOP"
+         },
+         {
+            "comment":"change scene - sound credits",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_CREDITS_SOUND"
+         },
+         {
+            "comment":"timer for credits screen",
+            "command":"TIMER",
+            "intConst":"CREDITS_SCREEN_LOOP"
+         },
+         {
+            "comment":"change scene - ending",
+            "command":"CHANGE_SCENE",
+            "intConst":"SCENE_ID_END_GOOD"
+         },
+         {
+            "comment":"timer for credits screen",
+            "command":"TIMER",
+            "intConst":"CREDITS_SCREEN_LOOP_LAST_SCREEN"
+         },  
          {
             "comment":"set end game",
             "command":"ENDGAME"

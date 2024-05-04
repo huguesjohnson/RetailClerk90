@@ -127,11 +127,15 @@ ScriptedEventFadeBlackLoop:
 	bra.w	ExitProcessScriptedEvent	; exit
 ScriptedEventTimer:
 	move.w	(a6)+,d7	; copy timer to d7
-	move.w	(a6)+,(MEM_SCRIPTED_EVENT_ACTION)	; save next action
-	move.l	a6,(MEM_SCRIPTED_EVENT_ADDR)	; save address of next step
+	move.w	(a6)+,(MEM_SCRIPTED_EVENT_ACTION) ; save next action
+	move.l	a6,(MEM_SCRIPTED_EVENT_ADDR) ; save address of next step
 ScriptedEventTimerLoop:
 	jsr	WaitVBlank	; wait for vblank
+	move.b	(MEM_CONTROL_PRESSED),d6 ; copy pressed buttons to d6
+	andi.b	#BUTTON_START,d6 ; test if the start button was pressed
+	bne.s	.exitScriptedEventTimerLoop	; exit loop if start is pressed	
 	dbf	d7,ScriptedEventTimerLoop	; loop
+.exitScriptedEventTimerLoop
 	bra.w	ExitProcessScriptedEvent	; exit
 ScriptedEventEndGame:
 	move.l	(MEM_GAME_STATE),d7	; copy current game state to d7
@@ -226,6 +230,21 @@ ScriptedEventLoadPaletteLoop:
 	move.w	(a0),(a1)+ ; write the palette data to MEM_SCENE_PALETTE
 	move.w	(a0)+,(VDP_DATA) ; write the palette data to vdp
 	dbf	d0,ScriptedEventLoadPaletteLoop	; decrement value of d0 and loop if not 0
+	bra.w	ProcessScriptedEventQueueNextAction ; exit
+	
+ScriptedEventSetStateFlag:
+	move.l	(a6)+,d7 ; state flag to set
+	move.l	(MEM_GAME_STATE),d6	; copy game state to d6
+	bset.l	d7,d6 ; set flag
+	move.l	d6,(MEM_GAME_STATE)	; save updated game state
+	bra.w	ProcessScriptedEventQueueNextAction ; exit
+
+ScriptedEventClearStateFlag:
+	move.l	(a6)+,d7 ; state flag to clear
+	move.l	(MEM_GAME_STATE),d6	; copy game state to d6
+	bclr.l	d7,d6 ; clear flag
+	move.l	d6,(MEM_GAME_STATE)	; save updated game state
+;	bra.w	ProcessScriptedEventQueueNextAction ; exit
 	
 ProcessScriptedEventQueueNextAction:
 	move.w	(a6)+,(MEM_SCRIPTED_EVENT_ACTION) ; save next action

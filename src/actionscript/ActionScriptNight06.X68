@@ -244,7 +244,7 @@ SetupEndGame:
 	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7 ; copy global event flags to d7
 	tst	d7 ; if d7 is zero we definitely have a bad ending
 	beq.s	.badending
-	cmpi.w	#ALL_GLOBAL_FLAGS_SET,d7 ; test if all flags are set
+	cmpi.l	#ALL_GLOBAL_FLAGS_SET,d7 ; test if all flags are set
 	beq.s	.perfectending
 	; --------------------------------------------------------------------------
 	; at this point, it's either or good or bad ending

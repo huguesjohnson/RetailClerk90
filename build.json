@@ -50,7 +50,8 @@
 			"design/collision/WWAudio.png":"src/collision-maps/WWAudioCollision.X68",
 			"design/collision/WWCheckout.png":"src/collision-maps/WWCheckoutCollision.X68",
 			"design/collision/WWHall.png":"src/collision-maps/WWHallCollision.X68",
-			"design/collision/WWTV.png":"src/collision-maps/WWTVCollision.X68"
+			"design/collision/WWTV.png":"src/collision-maps/WWTVCollision.X68",
+			"design/collision/CutScene.png":"src/collision-maps/CutSceneCollision.X68"
 		},
 		"includeFilePath":"src/inc_CollisionMaps.X68"
 	},
@@ -2113,7 +2114,49 @@
 				"sourceFilePath":"design/img/scene-tiles/ending/flashback-store-chair-right.png",
 				"destinationFilePath":"src/tiles/scene-tiles/flashback-store-chair-right.X68",
 				"allowDuplicateTiles":"true"
-			}
+			},
+			{
+				"name":"FlashbackParkingTile",
+				"palette":"PaletteFlashbackParking01",
+				"sourceFilePath":"design/img/scene-tiles/ending/flashback-parking-tile.png",
+				"destinationFilePath":"src/tiles/scene-tiles/flashback-parking-tile.X68",
+				"allowDuplicateTiles":"true"
+			},
+			{
+				"name":"FlashbackParkingStripe",
+				"palette":"PaletteFlashbackParking01",
+				"sourceFilePath":"design/img/scene-tiles/ending/flashback-parking-stripe.png",
+				"destinationFilePath":"src/tiles/scene-tiles/flashback-parking-stripe.X68",
+				"allowDuplicateTiles":"true"
+			},
+			{
+				"name":"FlashbackParkingLandscapeRight",
+				"palette":"PaletteFlashbackParking02",
+				"sourceFilePath":"design/img/scene-tiles/ending/flashback-parking-landscape-right.png",
+				"destinationFilePath":"src/tiles/scene-tiles/flashback-parking-landscape-right.X68",
+				"allowDuplicateTiles":"true"
+			},
+			{
+				"name":"FlashbackParkingLandscapeLeft",
+				"palette":"PaletteFlashbackParking02",
+				"sourceFilePath":"design/img/scene-tiles/ending/flashback-parking-landscape-left.png",
+				"destinationFilePath":"src/tiles/scene-tiles/flashback-parking-landscape-left.X68",
+				"allowDuplicateTiles":"true"
+			},		
+			{
+				"name":"FlashbackParkingSign",
+				"palette":"PaletteFlashbackParking02",
+				"sourceFilePath":"design/img/scene-tiles/ending/flashback-parking-sign.png",
+				"destinationFilePath":"src/tiles/scene-tiles/flashback-parking-sign.X68",
+				"allowDuplicateTiles":"true"
+			},
+			{
+				"name":"FlashbackParkingWall",
+				"palette":"PaletteFlashbackParking00",
+				"sourceFilePath":"design/img/scene-tiles/ending/flashback-parking-wall.png",
+				"destinationFilePath":"src/tiles/scene-tiles/flashback-parking-wall.X68",
+				"allowDuplicateTiles":"true"
+			}				
 		],
 		"tileIncludeFilePath":"src/inc_Tiles.X68",
 		"patternIncludeFilePath":"src/inc_PatternsGenerated.X68"

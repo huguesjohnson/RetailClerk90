@@ -51,3 +51,5 @@
 	; inventory handling
 	include	'lib/retailclerk/inventory/sub_ClearPlayerInventory.X68'
 	include	'lib/retailclerk/inventory/sub_Inventory.X68'
+	; util
+	include	'lib/retailclerk/util/sub_PseudoRandomWord.X68'

@@ -102,6 +102,9 @@ SceneFlashbackStore:
 SceneFlashbackParking:
 	include 'scenes/FlashbackParking.X68'
 
+SceneFlashbackTBooks:
+	include 'scenes/FlashbackTBooks.X68'
+
 SceneCreditsProgram:
 	include 'scenes/CreditsProgram.X68'
 
@@ -140,6 +143,9 @@ SceneIntroDay05:
 
 SceneIntroDay06:
 	include 'scenes/IntroDay06.X68'
+
+SceneIntroPerfectEnding:
+	include 'scenes/SceneIntroPerfectEnding.X68'
 
 SceneTitleDebug:
 	include 'scenes/TitleDebug.X68'

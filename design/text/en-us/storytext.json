@@ -1365,6 +1365,11 @@
          "text":"This is the worst one yet.",
          "align":2
          },     
+      "StoryTextNight02VisionLine13":{
+         "dialogTitle":"OBJ_NPC_BASE",
+         "text":"You don't need to remember me.|We only talked once.",
+         "align":2
+         },           
       "StoryTextNight02VBChoice":{
             "dialogTitle":"OBJ_NPC_GRUNBERG",
             "text":"Hey Carl, Stopping by to talk?|{ That's right        { Maybe later",
@@ -3616,7 +3621,7 @@
          },  
       "StoryTextEndGoodLine20":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"Yeah, we split up don't we?",
+         "text":"Yeah, I think I know.|We split up don't we?",
          "align":2
          },         
       "StoryTextEndGoodLine21":{
@@ -3646,7 +3651,7 @@
          },   
       "StoryTextEndGoodLine26":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"Just for a six months in 1990.|The friends I made though..",
+         "text":"Just for six months in 1990.|The friends I made though..",
          "align":2
          },      
       "StoryTextEndGoodLine27":{
@@ -3711,7 +3716,7 @@
          },         
       "StoryTextEndGoodLine39":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"I guess it's time to go",
+         "text":"I guess it's time to go.",
          "align":2
          },   
       "StoryTextEndGoodLine40":{
@@ -3732,7 +3737,7 @@
          },
       "StoryTextEndPerfectLine2":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"It's OK, I probably visit.",
+         "text":"It's OK, I'll probably visit.",
          "align":2
          },
       "StoryTextEndPerfectLine3":{
@@ -3752,7 +3757,7 @@
          },
       "StoryTextEndPerfectLine6":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"That's all it was, prank.",
+         "text":"That's all it was, a prank.",
          "align":2
          },
       "StoryTextEndPerfectLine7":{
@@ -3802,7 +3807,7 @@
          },    
       "StoryTextEndPerfectLine16":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"Then I'll defintely visit.|Not sure about trendy coffee,|but curious what it will all look like.",
+         "text":"Then I'll definitely visit.|Not sure about trendy coffee,|but curious what it will all look like.",
          "align":2
          },                   
       "StoryTextEndPerfectLine17":{
@@ -3815,6 +3820,11 @@
          "text":"You don't seem phased.",
          "align":2
          },
+      "StoryTextEndPerfectLine18a":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"No you don't.",
+         "align":2
+         },         
       "StoryTextEndPerfectLine19":{
          "dialogTitle":"OBJ_NPC_DB",
          "text":"What? Um, no, not really.|Just thinking about.. nevermind.",

@@ -44,6 +44,12 @@
 
 	include 'patterns/ending-frame.X68'
 
+	include 'patterns/flashback-tbooks-bookcase-high-56x16.X68'
+
+	include 'patterns/flashback-tbooks-bookcase-low-56x24.X68'
+
+	include 'patterns/flashback-tbooks-stain-16x8.X68'
+
 
 	;---------------------------------------------------------------------------
 	; patterns generated from tilesets

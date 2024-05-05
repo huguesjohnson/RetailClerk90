@@ -645,6 +645,24 @@
 				"allowDuplicateColors":"true"
 			},
 			{
+				"name":"PaletteFlashbackTBooks00",
+				"sourceFilePath":"design/img/swatches/flashback-tbooks-00.png",
+				"destinationFilePath":"src/palettes/flashback-tbooks-00.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteFlashbackTBooks01",
+				"sourceFilePath":"design/img/swatches/flashback-tbooks-01.png",
+				"destinationFilePath":"src/palettes/flashback-tbooks-01.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteFlashbackTBooks02",
+				"sourceFilePath":"design/img/swatches/flashback-tbooks-02.png",
+				"destinationFilePath":"src/palettes/flashback-tbooks-02.X68",
+				"allowDuplicateColors":"true"
+			},			
+			{
 				"name":"PaletteEndingGraphics00",
 				"sourceFilePath":"design/img/swatches/credits-graphics-00.png",
 				"destinationFilePath":"src/palettes/credits-graphics-00.X68",
@@ -2156,7 +2174,28 @@
 				"sourceFilePath":"design/img/scene-tiles/ending/flashback-parking-wall.png",
 				"destinationFilePath":"src/tiles/scene-tiles/flashback-parking-wall.X68",
 				"allowDuplicateTiles":"true"
-			}				
+			},
+			{
+				"name":"FlashbackTBooksBookcaseHigh56x16",
+				"palette":"PaletteFlashbackTBooks02",
+				"sourceFilePath":"design/img/scene-tiles/ending/flashback-tbooks-bookcase-high-56x16.png",
+				"destinationFilePath":"src/tiles/scene-tiles/flashback-tbooks-bookcase-high-56x16.X68",
+				"patternFilePath":"src/patterns/flashback-tbooks-bookcase-high-56x16.X68"
+			},
+			{
+				"name":"FlashbackTBooksBookcaseLow56x24",
+				"palette":"PaletteFlashbackTBooks02",
+				"sourceFilePath":"design/img/scene-tiles/ending/flashback-tbooks-bookcase-low-56x24.png",
+				"destinationFilePath":"src/tiles/scene-tiles/flashback-tbooks-bookcase-low-56x24.X68",
+				"patternFilePath":"src/patterns/flashback-tbooks-bookcase-low-56x24.X68"
+			},
+			{
+				"name":"FlashbackTBooksStain16x8",
+				"palette":"PaletteFlashbackTBooks02",
+				"sourceFilePath":"design/img/scene-tiles/ending/flashback-tbooks-stain-16x8.png",
+				"destinationFilePath":"src/tiles/scene-tiles/flashback-tbooks-stain-16x8.X68",
+				"patternFilePath":"src/patterns/flashback-tbooks-stain-16x8.X68"
+			}									
 		],
 		"tileIncludeFilePath":"src/inc_Tiles.X68",
 		"patternIncludeFilePath":"src/inc_PatternsGenerated.X68"
@@ -3022,6 +3061,7 @@
 			"/design/scene-json/vision.json",
 			"/design/scene-json/flashbackstore.json",
 			"/design/scene-json/flashbackparking.json",
+			"/design/scene-json/flashbacktbooks.json",
 			"/design/scene-json/creditsprogram.json",
 			"/design/scene-json/creditsgraphics.json",
 			"/design/scene-json/creditssound.json",
@@ -3035,6 +3075,7 @@
 			"/design/scene-json/introday04.json",
 			"/design/scene-json/introday05.json",
 			"/design/scene-json/introday06.json",
+			"/design/scene-json/introperfectending.json",
 			"/design/scene-json/titledebug.json",
 			"/design/scene-json/load.json",
 			"/design/scene-json/title.json",

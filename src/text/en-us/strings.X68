@@ -3476,6 +3476,10 @@ Day06IntroTip5:
 	dc.b	"There are three possible endings.",ETX
 Day06IntroTip6:
 	dc.b	" ",ETX
+PerfectEndingIntroTextTitle:
+	dc.b	" December 31, 1990 (for real this time) ",ETX
+PerfectEndingIntroText:
+	dc.b	"Meanwhile...",ETX
 
 ;-------------------------------------------------------------------------------
 ; LegalScreen
@@ -5250,6 +5254,12 @@ StoryTextNight02VisionLine12:
 	dc.w	OBJ_NPC_VICTOR
 	dc.b	"This is the worst one",LF
 	dc.b	"yet.",ETX
+	align 2
+StoryTextNight02VisionLine13:
+	dc.w	OBJ_NPC_BASE
+	dc.b	"You don't need to",LF
+	dc.b	"remember me.^",FF
+	dc.b	"We only talked once.",ETX
 	align 2
 StoryTextNight02VBChoice:
 	dc.w	OBJ_NPC_GRUNBERG
@@ -8154,8 +8164,8 @@ StoryTextEndGoodLine19:
 	align 2
 StoryTextEndGoodLine20:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"Yeah, we split up",LF
-	dc.b	"don't we?",ETX
+	dc.b	"Yeah, I think I know.",LF
+	dc.b	"We split up don't we?",ETX
 	align 2
 StoryTextEndGoodLine21:
 	dc.w	OBJ_NPC_CARL
@@ -8188,7 +8198,7 @@ StoryTextEndGoodLine25:
 	align 2
 StoryTextEndGoodLine26:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"Just for a six months",LF
+	dc.b	"Just for six months",LF
 	dc.b	"in 1990.^",FF
 	dc.b	"The friends I made",LF
 	dc.b	"though..",ETX
@@ -8283,7 +8293,7 @@ StoryTextEndGoodLine38:
 StoryTextEndGoodLine39:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"I guess it's time to",LF
-	dc.b	"go",ETX
+	dc.b	"go.",ETX
 	align 2
 StoryTextEndGoodLine40:
 	dc.w	OBJ_NPC_CARL
@@ -8307,8 +8317,8 @@ StoryTextEndPerfectLine1:
 	align 2
 StoryTextEndPerfectLine2:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"It's OK, I probably",LF
-	dc.b	"visit.",ETX
+	dc.b	"It's OK, I'll",LF
+	dc.b	"probably visit.",ETX
 	align 2
 StoryTextEndPerfectLine3:
 	dc.w	OBJ_NPC_ERYN
@@ -8328,7 +8338,7 @@ StoryTextEndPerfectLine5:
 	align 2
 StoryTextEndPerfectLine6:
 	dc.w	OBJ_NPC_ERYN
-	dc.b	"That's all it was,",LF
+	dc.b	"That's all it was, a",LF
 	dc.b	"prank.",ETX
 	align 2
 StoryTextEndPerfectLine7:
@@ -8393,7 +8403,7 @@ StoryTextEndPerfectLine15:
 	align 2
 StoryTextEndPerfectLine16:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"Then I'll defintely",LF
+	dc.b	"Then I'll definitely",LF
 	dc.b	"visit.^",FF
 	dc.b	"Not sure about trendy",LF
 	dc.b	"coffee,^",FF
@@ -8407,6 +8417,10 @@ StoryTextEndPerfectLine17:
 StoryTextEndPerfectLine18:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"You don't seem phased.",ETX
+	align 2
+StoryTextEndPerfectLine18a:
+	dc.w	OBJ_NPC_CARL
+	dc.b	"No you don't.",ETX
 	align 2
 StoryTextEndPerfectLine19:
 	dc.w	OBJ_NPC_DB

@@ -63,6 +63,8 @@
       "Day06IntroTip3":{"text":"Don't forget to say bye to new friends."},
       "Day06IntroTip4":{"text":" "},      
       "Day06IntroTip5":{"text":"There are three possible endings."},      
-      "Day06IntroTip6":{"text":" "}
+      "Day06IntroTip6":{"text":" "},
+      "PerfectEndingIntroTextTitle":{"text":" December 31, 1990 (for real this time) "},
+      "PerfectEndingIntroText":{"text":"Meanwhile..."}            
    }
 }

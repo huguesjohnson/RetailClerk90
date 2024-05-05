@@ -808,3 +808,15 @@ FlashbackParkingWallTilesStart:
 	include 'tiles/scene-tiles/flashback-parking-wall.X68'
 FlashbackParkingWallTilesEnd:
 
+FlashbackTBooksBookcaseHigh56x16TilesStart:
+	include 'tiles/scene-tiles/flashback-tbooks-bookcase-high-56x16.X68'
+FlashbackTBooksBookcaseHigh56x16TilesEnd:
+
+FlashbackTBooksBookcaseLow56x24TilesStart:
+	include 'tiles/scene-tiles/flashback-tbooks-bookcase-low-56x24.X68'
+FlashbackTBooksBookcaseLow56x24TilesEnd:
+
+FlashbackTBooksStain16x8TilesStart:
+	include 'tiles/scene-tiles/flashback-tbooks-stain-16x8.X68'
+FlashbackTBooksStain16x8TilesEnd:
+

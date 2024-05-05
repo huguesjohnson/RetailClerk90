@@ -279,6 +279,15 @@ PaletteFlashbackParking01:
 PaletteFlashbackParking02:
 	include 'palettes/flashback-parking-02.X68'
 
+PaletteFlashbackTBooks00:
+	include 'palettes/flashback-tbooks-00.X68'
+
+PaletteFlashbackTBooks01:
+	include 'palettes/flashback-tbooks-01.X68'
+
+PaletteFlashbackTBooks02:
+	include 'palettes/flashback-tbooks-02.X68'
+
 PaletteEndingGraphics00:
 	include 'palettes/credits-graphics-00.X68'
 

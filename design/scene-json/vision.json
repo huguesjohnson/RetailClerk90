@@ -187,33 +187,33 @@
 	],
 	"npcLocations":[
 		{
-			"x":0,
-			"y":0,
-			"direction":"DIRECTION_LEFT",
+			"x":324,
+			"y":190,
+			"direction":"DIRECTION_DOWN",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":0,
-			"y":0,
-			"direction":"DIRECTION_RIGHT",
+			"x":168,
+			"y":96,
+			"direction":"DIRECTION_DOWN",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":0,
-			"y":0,
-			"direction":"DIRECTION_RIGHT",
+			"x":408,
+			"y":96,
+			"direction":"DIRECTION_DOWN",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
 		},
 		{
-			"x":0,
-			"y":0,
-			"direction":"DIRECTION_RIGHT",
+			"x":168,
+			"y":96,
+			"direction":"DIRECTION_DOWN",
 			"movementFrequency":65535,
 			"movementPatternName":"NullMovement"
-		}		
+		}	
 	],
 	"bgmName":"BGM_Mystery"
 }

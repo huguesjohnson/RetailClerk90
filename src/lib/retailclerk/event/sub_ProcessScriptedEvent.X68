@@ -107,9 +107,11 @@ ScriptedEventChangePlayerSprite:
 	bra.w	ProcessScriptedEventQueueNextAction ; exit
 ScriptedEventSetPlayerSpriteX:
 	move.w	(a6)+,(MEM_PLAYER_SPRITE_X)	; update sprite
+	bsr.w	FixSprites
 	bra.w	ProcessScriptedEventQueueNextAction ; exit
 ScriptedEventSetPlayerSpriteY:
 	move.w	(a6)+,(MEM_PLAYER_SPRITE_Y)	; update sprite
+	bsr.w	FixSprites
 	bra.w	ProcessScriptedEventQueueNextAction ; exit
 ScriptedEventSetPlayerSpriteDirection:
 	move.w	(a6)+,(MEM_PLAYER_SPRITE_DIRECTION)	; update sprite
@@ -125,6 +127,9 @@ ScriptedEventFadeBlackLoop:
 	move.w	#$0000,(a1)+	; write the palette data
 	dbf	d7,ScriptedEventFadeBlackLoop	; decrement d7 and loop if not 0
 	bra.w	ExitProcessScriptedEvent	; exit
+ScriptedEventFadeIn:	
+	bsr.w	FadeIn	; fade in to the new scene
+	bra.w	ProcessScriptedEventQueueNextAction ; exit
 ScriptedEventTimer:
 	move.w	(a6)+,d7	; copy timer to d7
 	move.w	(a6)+,(MEM_SCRIPTED_EVENT_ACTION) ; save next action
@@ -219,17 +224,17 @@ ScriptedEventLoadPalette:
 	; setup pointer to MEM_SCENE_PALETTE
 	lea	MEM_SCENE_PALETTE,a1 ; point a1 to scene palette address	
 	adda.l d0,a1 ; add offset
-	; setup VDP write address
-	move.l	#VDP_CRAM_WRITE,d1 ; start at VDP_CRAM_WRITE
-	add.l	d0,d1 ; add offset
-	move.l	d1,(VDP_CONTROL) ; set up VDP write to CRAM	
 	; setup loop control
 	clr.l	d0 ; just being overly cautious
 	move.w	#$000F,d0 ; 16 palette entries - 1
 ScriptedEventLoadPaletteLoop:
-	move.w	(a0),(a1)+ ; write the palette data to MEM_SCENE_PALETTE
-	move.w	(a0)+,(VDP_DATA) ; write the palette data to vdp
+	move.w	(a0)+,(a1)+ ; write the palette data to MEM_SCENE_PALETTE
 	dbf	d0,ScriptedEventLoadPaletteLoop	; decrement value of d0 and loop if not 0
+	; reload palettes into CRAM
+	lea	(MEM_SCENE_PALETTE),a0	; point to scene palette
+	moveq	#$0004,d0	; number of palettes to load
+	move.l	#VDP_CRAM_WRITE,d1	; initial write address
+	bsr.w	LoadPalettes	; branch to LoadPalettes subroutine
 	bra.w	ProcessScriptedEventQueueNextAction ; exit
 	
 ScriptedEventSetStateFlag:

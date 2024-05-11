@@ -156,8 +156,37 @@ ActionScriptDay06VBInteract:
 	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
 	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
 	beq.w	.default ; not an npc - show default text
-	cmpi.w	#$0001,d7 ; test for npc21
-	bne.w	.default ; not npc1 - show default text
+	cmpi.w	#$0000,d7 ; test for npc0
+	beq.s	.npc0 ; branch if npc0
+	cmpi.w	#$0001,d7 ; test for npc1
+	beq.s	.npc1 ; branch if npc1
+	bne.w	.default ; otherwise show default text, hopefully unreachable
+.npc0 ; grunberg
+	move.l	(MEM_TRADING_SEQUENCE_DAY),d7 ; copy progress of day trading to d7
+	btst.l	#$7,d7 ; test if this trade is done
+	bne.s	.after
+	btst.l	#$6,d7 ; test if this trade is available
+	beq.s	.before
+	; otherwise trade
+	bset.l	#$7,d7 ; set trade complete
+	move.l	d7,(MEM_TRADING_SEQUENCE_DAY) ; save updated progress
+	;set FLAG_GLOBAL_TradingDayComplete
+	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7
+	bset.l	#FLAG_GLOBAL_TradingDayComplete,d7
+	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS)
+	; queue scripted event	
+	lea ScriptedEventTradingSequenceVBStart,a6 ; point a6 to event to load
+	bsr.w QueueScriptedEvent ; queue the event		
+	rts
+.after
+	lea	StoryTextTradingSequenceVBAfter,a6 ; point to text to display
+	bsr.w	ShowDialog
+	rts
+.before
+	lea	StoryTextTradingSequenceVBBefore,a6 ; point to text to display
+	bsr.w	ShowDialog
+	rts	
+.npc1 ; optional hidden event
 	;---------------------------------------------------------------------------
 	; test if the event has already run
 	; it shouldn't have unless I made a mistake elsewhere
@@ -275,7 +304,6 @@ EndDay06SetupGameState: ; separated to help with debugging
 	move.l	#$27000000,(MEM_NPC_LOCATION_TBOOKS) ; nelson is in tbooks
 	move.l	#$11000000,(MEM_NPC_LOCATION_CENTER) ; put the guard somewhere
 	move.l	#$0F100D1C,(MEM_NPC_LOCATION_CAVERN) ; new year party at the cavern	
-	move.l	#$07010F00,(MEM_NPC_LOCATION_NSHACK)
 	; check for hidden event
 	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7
 	btst.l	#FLAG_GLOBAL_Day06Hidden,d7

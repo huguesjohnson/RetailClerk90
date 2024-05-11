@@ -99,7 +99,7 @@
 	;---------------------------------------------------------------------------
 	; text
 	;---------------------------------------------------------------------------
-	dc.w	$0006 ; text count
+	dc.w	$000F ; text count
 
 	; map
 	dc.l	MenuScreenNavMap
@@ -132,6 +132,43 @@
 	dc.l	StatusScreenMapStoryEvent
 	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_B+$00040000+$0A800000 ; initial drawing location
+
+	; fast travel
+	dc.l	StatusScreenMapNoFastTravel
+	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.l	VDP_VRAM_WRITE_B+$002C0000+$09000000 ; initial drawing location
+
+	dc.l	StatusScreenMapNoFastTravel00
+	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.l	VDP_VRAM_WRITE_B+$002C0000+$09800000 ; initial drawing location
+
+	dc.l	StatusScreenMapNoFastTravel01
+	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.l	VDP_VRAM_WRITE_B+$002C0000+$0A000000 ; initial drawing location
+
+	dc.l	StatusScreenMapNoFastTravel02
+	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.l	VDP_VRAM_WRITE_B+$002C0000+$0A800000 ; initial drawing location
+
+	dc.l	StatusScreenMapNoFastTravel03
+	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.l	VDP_VRAM_WRITE_B+$002C0000+$0B000000 ; initial drawing location
+
+	dc.l	StatusScreenMapNoFastTravel04
+	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.l	VDP_VRAM_WRITE_B+$002C0000+$0B800000 ; initial drawing location
+
+	dc.l	StatusScreenMapNoFastTravel05
+	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.l	VDP_VRAM_WRITE_B+$002C0000+$0C000000 ; initial drawing location
+
+	dc.l	StatusScreenMapNoFastTravel06
+	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.l	VDP_VRAM_WRITE_B+$002C0000+$0C800000 ; initial drawing location
+
+	dc.l	StatusScreenMapNoFastTravel07
+	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.l	VDP_VRAM_WRITE_B+$002C0000+$0D000000 ; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; objects

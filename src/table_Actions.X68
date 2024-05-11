@@ -261,7 +261,7 @@ ActionTableStart:
 ; scene 17
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	ActionScriptNight00TBooksExit ; ExitScene
+	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 18
 	dc.l	ActionScriptDefaultInteract ; Interact
@@ -515,7 +515,7 @@ ActionTableStart:
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
 	dc.l	ActionScriptNight01SHallExit ; ExitScene
-	dc.l	DefaultEnterScene ; EnterScene
+	dc.l	ActionScriptNight01SHallEnter ; EnterScene
 ; scene 5
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
@@ -604,7 +604,7 @@ ActionTableStart:
 ; scene 22
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	ActionScriptNight01SouthCenterExit ; ExitScene
+	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 23
 	dc.l	ActionScriptDefaultInteract ; Interact

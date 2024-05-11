@@ -240,7 +240,6 @@ ActionScriptDay05SceneWWCheckoutTrading:
 	; otherwise trade
 	bset.l	#$5,d7 ; set trade complete
 	move.l	d7,(MEM_TRADING_SEQUENCE_DAY) ; save updated progress
-	bsr.w	ShowDialog
 	; queue scripted event
 	lea ScriptedEventTradingSequenceWWCheckoutStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event		
@@ -263,13 +262,11 @@ ActionScriptDay05SceneWWCheckoutTrading:
 ;  get: OBJ_ITEM_MYSTERY_BOX
 ;*******************************************************************************
 ActionScriptDay06ScenePogoDawgTrading:
-	;----------------------------
-	; test if talking to npc0
-	;----------------------------
-	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
-	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
-	beq.w	TradingDefault ; not an npc - show default text
-	cmpi.w	#$0000,d7 ; test for npc0
+	;---------------------------------------------------------------
+	; clerk hit region is an object because they are behind the counter
+	;---------------------------------------------------------------
+	move.w	(MEM_ACTION_TARGET_OBJID),d7 ; copy the object id to d7
+	cmpi.w	#OBJ_NPC_GRIFFY,d7 ; test if the target is the clerk
 	bne.w	TradingDefault ; not npc0 - show default text
 	;----------------------------
 	; trading sequence
@@ -302,44 +299,13 @@ ActionScriptDay06ScenePogoDawgTrading:
 ; Grunberg
 ;  give: OBJ_ITEM_MYSTERY_BOX
 ;  get: OBJ_ITEM_TROPHY
+;
+; THIS WAS MOVED TO ActionScriptDay06
 ;*******************************************************************************
-ActionScriptDay06SceneVBTrading:
-	;----------------------------
-	; test if talking to npc0
-	;----------------------------
-	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
-	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
-	beq.s	TradingDefault ; not an npc - show default text
-	cmpi.w	#$0000,d7 ; test for npc0
-	bne.s	TradingDefault ; not npc0 - show default text
-	;----------------------------
-	; trading sequence
-	;----------------------------
-	move.l	(MEM_TRADING_SEQUENCE_DAY),d7 ; copy progress of day trading to d7
-	btst.l	#$7,d7 ; test if this trade is done
-	bne.s	.after
-	btst.l	#$6,d7 ; test if this trade is available
-	beq.s	.before
-	; otherwise trade
-	bset.l	#$7,d7 ; set trade complete
-	move.l	d7,(MEM_TRADING_SEQUENCE_DAY) ; save updated progress
-	;set FLAG_GLOBAL_TradingDayComplete
-	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7
-	bset.l	#FLAG_GLOBAL_TradingDayComplete,d7
-	move.l	d7,(MEM_GLOBAL_EVENT_FLAGS)
-	; queue scripted event	
-	lea ScriptedEventTradingSequenceVBStart,a6 ; point a6 to event to load
-	bsr.w QueueScriptedEvent ; queue the event			
-	rts
-.after
-	lea	StoryTextTradingSequenceVBAfter,a6 ; point to text to display
-	bsr.w	ShowDialog
-	rts
-.before
-	lea	StoryTextTradingSequenceVBBefore,a6 ; point to text to display
-	bsr.w	ShowDialog
-	rts	
-	
+
+;*******************************************************************************
+; Default for both day and night
+;*******************************************************************************
 TradingDefault:
 	bsr.w ShowDefaultText
 	rts		

@@ -226,13 +226,16 @@ ActionScriptNight06BasementWDormEnter:
 	; setup scripted event
 	lea ScriptedEventNight06_HiddenStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
+	bsr.w	DefaultEnterScene
 	rts
 	
 ;*******************************************************************************
 ; End of the day
 ;*******************************************************************************
 EndNight06:
+	move.l	#$07010F00,(MEM_NPC_LOCATION_NSHACK) ; set the npcs for the ending
 
 SetupEndGame:
 	; --------------------------------------------------------------------------
@@ -244,6 +247,7 @@ SetupEndGame:
 	move.l	(MEM_GLOBAL_EVENT_FLAGS),d7 ; copy global event flags to d7
 	tst	d7 ; if d7 is zero we definitely have a bad ending
 	beq.s	.badending
+	bclr.l	#FLAG_GLOBAL_Day06Hidden,d7 ; one event is optional
 	cmpi.l	#ALL_GLOBAL_FLAGS_SET,d7 ; test if all flags are set
 	beq.s	.perfectending
 	; --------------------------------------------------------------------------
@@ -252,17 +256,17 @@ SetupEndGame:
 	; this will fall through to the bad ending by default
 	; --------------------------------------------------------------------------
 	btst.l	#FLAG_GLOBAL_REL0Complete,d7
-	beq.s	.goodending
+	bne.s	.goodending
 	btst.l	#FLAG_GLOBAL_REL1Complete,d7
-	beq.s	.goodending
+	bne.s	.goodending
 	btst.l	#FLAG_GLOBAL_REL2Complete,d7
-	beq.s	.goodending
+	bne.s	.goodending
 	btst.l	#FLAG_GLOBAL_REL3Complete,d7
-	beq.s	.goodending
+	bne.s	.goodending
 	btst.l	#FLAG_GLOBAL_REL4Complete,d7
-	beq.s	.goodending
+	bne.s	.goodending
 	btst.l	#FLAG_GLOBAL_REL5Complete,d7
-	beq.s	.goodending
+	bne.s	.goodending
 .badending
 	lea	ScriptedEventEndBadStart,a6	; point a6 to event to load
 	bra.s	.queue
@@ -279,7 +283,7 @@ SetupEndGame:
 .testrel4
 	btst.l	#FLAG_GLOBAL_REL4Complete,d7 ; test if this one is done
 	beq.s	.testrel5 ; not done	
-	or.l	#$000C0000,(MEM_NPC_LOCATION_END_GOOD) ; add grunberg to good ending
+	or.l	#$00060000,(MEM_NPC_LOCATION_END_GOOD) ; add grunberg to good ending
 .testrel5
 	btst.l	#FLAG_GLOBAL_REL5Complete,d7 ; test if this one is done
 	beq.s	.loadse ; not done	

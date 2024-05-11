@@ -53,7 +53,9 @@ ActionScriptNight02NShackEnter:
 	; setup scripted event
 	lea ScriptedEventNight02_02_NShackStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
+	bsr.w	DefaultEnterScene
 	rts
 
 CheckNight02Flags:
@@ -64,7 +66,7 @@ CheckNight02Flags:
 	beq.s	.exit ; exit if not
 	; both flags are set - update objective and story event location
 	move.w	#SCENE_ID_SHALL,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
-	move.w	#OBJECTIVE_D00_O04_Leave,(MEM_OBJECTIVE) ; update objective
+	move.w	#OBJECTIVE_D02_O04_Leave,(MEM_OBJECTIVE) ; update objective
 .exit
 	rts
 
@@ -82,7 +84,9 @@ ActionScriptNight02WWHallEnter:
 	; setup scripted event
 	lea ScriptedEventNight02_03_WWHallStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
+	bsr.w	DefaultEnterScene
 	rts
 	
 ; assumes d7 has MEM_DAY_EVENT_FLAGS	
@@ -112,7 +116,9 @@ ActionScriptNight02CNowEnter:
 	; setup scripted event
 	lea ScriptedEventNight02_CNowStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
+	bsr.w	DefaultEnterScene
 	rts	
 
 ; assumes d7 has MEM_GLOBAL_EVENT_FLAGS	

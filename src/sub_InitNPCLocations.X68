@@ -51,7 +51,7 @@ InitNPCLocationsNight:
 	move.l	#$07000000,(a0)+	; location 0D (NSHACK)
 	move.l	#$00000000,(a0)+	; location 0E (POGODAWG)
 	move.l	#$0B000000,(a0)+	; location 0F (CPLANET)
-	move.l	#$00000000,(a0)+	; location 10 (CNOW)
+	move.l	#$0C000000,(a0)+	; location 10 (CNOW)
 	move.l	#$00000000,(a0)+	; location 11 (TBOOKS)
 	move.l	#$14000000,(a0)+	; location 12 (FCBCHECKOUT)
 	move.l	#$0E000000,(a0)+	; location 13 (FCBFIREARMS)
@@ -60,11 +60,11 @@ InitNPCLocationsNight:
 	move.l	#$00000000,(a0)+	; location 16 (SOUTH_CENTER)
 	move.l	#$1A000000,(a0)+	; location 17 (WWCHECKOUT)
 	move.l	#$00000000,(a0)+	; location 18 (WWTV)
-	move.l	#$00000000,(a0)+	; location 19 (WWAUDIO)
+	move.l	#$1B000000,(a0)+	; location 19 (WWAUDIO)
 	move.l	#$1D000000,(a0)+	; location 1A (WWAPPLIANCES)
 	move.l	#$00000000,(a0)+	; location 1B (BASEMENTWDORM)
 	move.l	#$00000000,(a0)+	; location 1C (BASEMENTMDORM)
-	move.l	#$18000000,(a0)+	; location 1D (BASEMENTCAFE)
+	move.l	#$00000000,(a0)+	; location 1D (BASEMENTCAFE)
 	move.l	#$13160000,(a0)+	; location 1E (BASEMENTOFFICE)
 	rts	
 

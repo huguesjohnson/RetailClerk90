@@ -4,26 +4,19 @@
 ;*******************************************************************************
 
 ;*******************************************************************************
-; SCENE_ID_TBOOKS
-;*******************************************************************************
-ActionScriptNight00TBooksExit:
-	move.l	#$00000000,(MEM_NPC_LOCATION_TBOOKS)
-	bsr.w	DefaultExitScene ; default scene exit
-	rts
-
-;*******************************************************************************
 ; SCENE_ID_EEHALL
 ;*******************************************************************************
 ActionScriptNight00EEHallEnter:	
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy flags to d7
 	btst.l	#FLAG_NIGHT00_EVENT00_EEHALL,d7 ; test if event ran already
 	beq.s	.event ; branch if not set
+	bsr.w	DefaultEnterScene ; no event to run, use default
 	rts ; otherwise exit
 .event
 	bset.l	#FLAG_NIGHT00_EVENT00_EEHALL,d7 ; set that event ran
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags	
 	; the npcs in the area are different after the event
-	move.l	#$11000000,(MEM_NPC_LOCATION_EEHALL)			
+	;move.l	#$11000000,(MEM_NPC_LOCATION_EEHALL)
 	lea	ScriptedEventNight00_01_EEHallStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
 	rts

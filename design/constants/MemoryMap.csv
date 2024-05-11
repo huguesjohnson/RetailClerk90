@@ -1,6 +1,12 @@
 ;*******************************************************************************
 ; memory map for the base retail clerk game engine
+; combined with the MemoryMapRC90 because of how I implemented save/load
 ;*******************************************************************************
+;-------------------------------------------------------------------------------
+; debug registers
+;-------------------------------------------------------------------------------
+MEM_DEBUG_1,2,general debug register
+MEM_DEBUG_2,2,general debug register
 ;
 ;-------------------------------------------------------------------------------
 ; table to sort the draw order of sprites
@@ -60,6 +66,20 @@ MEM_STORY_EVENT2_SCENE_ID,2,scene where the next story event occurs
 MEM_OPTIONAL_EVENT1_SCENE_ID,2,scene where an optional event occurs
 MEM_OPTIONAL_EVENT2_SCENE_ID,2,scene where an optional event occurs
 MEM_OPTIONAL_EVENT3_SCENE_ID,2,scene where an optional event occurs
+;-------------------------------------------------------------------------------
+; relationship levels
+;-------------------------------------------------------------------------------
+MEM_PLAYER1_REL0,2,relationship score for p1 and npc0
+MEM_PLAYER1_REL1,2,relationship score for p1 and npc1
+MEM_PLAYER1_REL2,2,relationship score for p1 and npc2
+MEM_PLAYER2_REL0,2,relationship score for p2 and npc0
+MEM_PLAYER2_REL1,2,relationship score for p2 and npc1
+MEM_PLAYER2_REL2,2,relationship score for p2 and npc2
+;-------------------------------------------------------------------------------
+; trading sequence
+;-------------------------------------------------------------------------------
+MEM_TRADING_SEQUENCE_DAY,4,track trading sequence for the daytime
+MEM_TRADING_SEQUENCE_NIGHT,4,track trading sequence for the nighttime
 ;-------------------------------------------------------------------------------
 ; player inventory
 ;-------------------------------------------------------------------------------

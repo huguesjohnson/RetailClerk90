@@ -932,6 +932,9 @@ LaunchDebug36: ; test text distortion effect
 LaunchDebug37: ; test mystery item name distortion effect
 	bsr.w	InitGlobalEvents
 	; the item being tested
+	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 2nd pc inventory
+	move.w	#OBJ_ITEM_FINALITEM,d7 ; item to add
+	bsr.w	AddItem ; add item to inventory		
 	lea	MEM_PLAYER2_ITEM_COUNT,a1 ; point to 2nd pc inventory
 	move.w	#OBJ_ITEM_FINALITEM,d7 ; item to add
 	bsr.w	AddItem ; add item to inventory		

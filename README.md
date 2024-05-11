@@ -14,16 +14,15 @@ The rough list of enhancements from Retail Clerk '89 -> '90 includes:
 * A very basic "free time" system that also serves as an even more basic bonding-like system - this is blatantly ripping-off the bonding system in the Trails series and Tokyo Xanadu, although it's much smaller and less fun, I assume those games are ripping-off Persona which was probably inspired by something else and so on
 * Make scene change events part of action table - this probably sounds like gibberish to anyone that's not me but trust me, it's a big code improvement
 * Supporting add/remove item in scripted events - this also probably sounds like gibberish to anyone that's not me
+* Moving other things to scripted events like NPC locations, palette changes, and font changes - this means more code is auto-generated which will make the Retail Clerk game engine more portable if I ever want to do that
 
 **Development Status**
 
-All the previously listed improvements are done. The game script itself is close to being done. The current code just loads up the mall and has a ton of placeholder text. I'd like to be done with this in summer 2024 but no promises.
+There's an alpha build available on the project page. The final version should be done in summer 2024. No promises but I'd really like to be done in June 2024.
 
 **Links**
 
 Project page - https://www.huguesjohnson.com/rc90/
-
-Eventually there will be some information there about the source organization, build tools, and other related things.
 
 **Disclaimers**
 

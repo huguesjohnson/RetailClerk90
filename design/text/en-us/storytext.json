@@ -671,7 +671,7 @@
          "align":2
          },       
       "StoryTextDay01CavernLine10":{
-         "dialogTitle":"OBJ_NPC_DB",
+         "dialogTitle":"OBJ_NPC_ERYN",
          "text":"Isn't it time to loiter down the hall?^",
          "align":2
          },
@@ -1912,7 +1912,7 @@
          },         
       "StoryTextNight03WWCheckoutLine7":{
          "dialogTitle":"OBJ_NPC_GRUNBERG",
-         "text":"OK, escape, control F12, Y.|There you go.",
+         "text":"OK, escape, control F12, Y. There you go.",
          "align":2
          },          
       "StoryTextNight03WWCheckoutLine8":{
@@ -2255,7 +2255,7 @@
          },
       "StoryTextNight04CantUseStairs":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"(I should find out where this goes first)",
+         "text":"(I should ask where this goes first|I'll ask D.B. when he's back)",
          "align":2
          },            
       "StoryTextNight04CavernLine1":{
@@ -3850,9 +3850,19 @@
          "text":"Yeah, don't be too trendy.",
          "align":2
          },
-          "StoryTextTradingSequenceFCBFishing":{
+      "StoryTextTradingSequenceFCBFishing1":{
          "dialogTitle":"OBJ_NPC_HEATHER",
-         "text":"Is that the scarf I lost last month?|Let me give you a finder's fee.|Please take these pocket handwarmers.|Be careful with them though.",
+         "text":"Is that the scarf I lost last month?|Let me give you a finder's fee.|Please take these pocket handwarmers.",
+         "align":2
+         },  
+      "StoryTextTradingSequenceFCBFishing2":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"It's OK, keep them.",
+         "align":2
+         },           
+      "StoryTextTradingSequenceFCBFishing3":{
+         "dialogTitle":"OBJ_NPC_HEATHER",
+         "text":"I insist. Be careful with them though.",
          "align":2
          },  
       "StoryTextTradingSequenceFCBFishingAfter":{
@@ -3860,11 +3870,26 @@
          "text":"Be careful with those handwarmers.|They were recalled.",
          "align":2
          },
-      "StoryTextTradingSequenceFCBFirearms":{
+      "StoryTextTradingSequenceFCBFirearms1":{
+         "dialogTitle":"OBJ_NPC_RANDY",
+         "text":"What's that you're holding there?",
+         "align":2
+         },          
+      "StoryTextTradingSequenceFCBFirearms2":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"It's a nature video.",
+         "align":2
+         },          
+      "StoryTextTradingSequenceFCBFirearms3":{
          "dialogTitle":"OBJ_NPC_RANDY",
          "text":"That's the only tape in the series|I'm missing.|Do you mind trading?|I can give you this moose attractant.|I already shot one.",
          "align":2
          }, 
+      "StoryTextTradingSequenceFCBFirearms4":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"Great, thanks Randy!|I can't wait to find out who wants this.",
+         "align":2
+         },          
       "StoryTextTradingSequenceFCBFirearmsAfter":{
          "dialogTitle":"OBJ_NPC_RANDY",
          "text":"That moose photo is one of my best shots.|I'm working on a photography book.|Can't work in the mall forever.",
@@ -3874,10 +3899,15 @@
          "dialogTitle":"OBJ_NPC_LAURA",
          "text":"The worst thing here is parking.|They won't let us park near the door.|So we have to walk forever at night.|It's so cold out there.",
          "align":2
-         },          
-      "StoryTextTradingSequenceWWAppliances":{
+         },
+      "StoryTextTradingSequenceWWAppliances1":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"Have these handwarmers.|I don't need them.|I don't want anything in return.",
+         "align":2
+         },     
+      "StoryTextTradingSequenceWWAppliances2":{
          "dialogTitle":"OBJ_NPC_LAURA",
-         "text":"You're giving me these handwarmers?|Thanks! I will use them.|Let me give you this lipstick.|It's brand new. It's not my color.|I don't trust the guy who gave it me,|I think he's seeing someone else.",
+         "text":"Thanks! I will use them.|I have to give you something though.|How about this lipstick?|It's brand new. It's not my color.|I don't trust the guy who gave it me,|I think he's seeing someone else.",
          "align":2
          },     
       "StoryTextTradingSequenceWWAppliancesAfter":{
@@ -3890,11 +3920,26 @@
          "text":"My new years party is coming up.|I need something to draw in the ladies.",
          "align":2
          },          
-      "StoryTextTradingSequenceCheckers":{
+      "StoryTextTradingSequenceCheckers1":{
          "dialogTitle":"OBJ_NPC_TODD",
-         "text":"What is that? Some new kind of cologne?|I'd be happy to trade for it.|All I have is this clearance shirt.|We have to get rid of ASAP.|It's a smaller size.|And we have a new store policy to only sell clothes to people over 6ft.|Sorry if it's not your size.",
+         "text":"What is that strange aroma?|Some new kind of cologne?",
          "align":2
          },      
+      "StoryTextTradingSequenceCheckers2":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I suppose you could use it like that...",
+         "align":2
+         },              
+      "StoryTextTradingSequenceCheckers3":{
+         "dialogTitle":"OBJ_NPC_TODD",
+         "text":"I'd be happy to trade for it.|All I have is this clearance shirt.|We have to get rid of ASAP.|It's a smaller size.|And we have a new store policy to only sell clothes to people over 6ft.|Sorry if it's not your size.",
+         "align":2
+         },      
+      "StoryTextTradingSequenceCheckers4":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"That's fine, I'll find someone it fits.",
+         "align":2
+         },            
       "StoryTextTradingSequenceCheckersAfter":{
          "dialogTitle":"OBJ_NPC_TODD",
          "text":"No one under 6ft allowed.|It's a weird policy, I don't make the rules.",
@@ -3905,11 +3950,26 @@
          "text":"I could use something to freshen-up my look.",
          "align":2
          },          
-      "StoryTextTradingSequenceCPlanet":{
-         "dialogTitle":"OBJ_NPC_ELIZA",
-         "text":"That is a wild color lipstick.|Do you like underground bands?|We've giving away tickets for a show.|Take a pair with you.",
+      "StoryTextTradingSequenceCPlanet1":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"How about this lipstick?|Please don't give me anything back.",
          "align":2
          }, 
+      "StoryTextTradingSequenceCPlanet2":{
+         "dialogTitle":"OBJ_NPC_ELIZA",
+         "text":"That is a wild color of lipstick.|Do you like underground bands?|We've giving away tickets for a show.|Take a pair with you.",
+         "align":2
+         }, 
+      "StoryTextTradingSequenceCPlanet3":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"Do I have to take them?",
+         "align":2
+         },      
+      "StoryTextTradingSequenceCPlanet4":{
+         "dialogTitle":"OBJ_NPC_ELIZA",
+         "text":"That's how this works.|Maybe you can find someone to go with?",
+         "align":2
+         },              
       "StoryTextTradingSequenceCPlanetAfter":{
          "dialogTitle":"OBJ_NPC_ELIZA",
          "text":"I can't wait for the concert next month.",
@@ -3917,14 +3977,24 @@
          },           
       "StoryTextTradingSequenceWWAudioBefore":{
          "dialogTitle":"OBJ_NPC_CRAIG",
-         "text":"The dress code here is bad.|I only have one shirt that qualfies.|I'm doing laundy every day.",
+         "text":"The dress code here is bad.|I only have one shirt that qualifies.|I'm doing laundry every day.",
          "align":2
-         },          
-      "StoryTextTradingSequenceWWAudio":{
+         },   
+      "StoryTextTradingSequenceWWAudio1":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"It's your lucky day. I happen to have this.",
+         "align":2
+         },                 
+      "StoryTextTradingSequenceWWAudio2":{
          "dialogTitle":"OBJ_NPC_CRAIG",
-         "text":"That is my size, thanks.|I'll give you this in exchange.|It's a headband radio.|I guess for running or whatever.|We just discontined it.",
+         "text":"That is my size, thanks.|I'll give you this in exchange.|It's a headband radio.|I guess for running or whatever.|We just discontinued it.",
          "align":2
          }, 
+      "StoryTextTradingSequenceWWAudio3":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"Thanks, off to find a new owner for this.",
+         "align":2
+         },            
       "StoryTextTradingSequenceWWAudioAfter":{
          "dialogTitle":"OBJ_NPC_CRAIG",
          "text":"Thanks for the shirt.",
@@ -3934,12 +4004,22 @@
          "dialogTitle":"OBJ_NPC_JUAN",
          "text":"This town is so boring.|I wish there was anything to do.",
          "align":2
-         },          
-      "StoryTextTradingSequenceWWVideo":{
+         },       
+      "StoryTextTradingSequenceWWVideo1":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"Here, go to this concert.|Take both tickets, this isn't a date.|I'll be going now.",
+         "align":2
+         },            
+      "StoryTextTradingSequenceWWVideo2":{
          "dialogTitle":"OBJ_NPC_JUAN",
          "text":"You're giving me concert tickets?|I never of them but it's worth a try.|Take this portable TV demo unit.|I have to take it down anyway.|It's fun and everything,|but only gets one station in here.",
          "align":2
          },
+      "StoryTextTradingSequenceWWVideo3":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"You don't understand, I do not want...Fine.",
+         "align":2
+         },            
       "StoryTextTradingSequenceWWVideoAfter":{
          "dialogTitle":"OBJ_NPC_JUAN",
          "text":"I hope this band is good.",
@@ -3950,11 +4030,21 @@
          "text":"There isn't a gadget we don't sell.",
          "align":2
          },          
-      "StoryTextTradingSequenceTLodge":{
+      "StoryTextTradingSequenceTLodge1":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I don't know about that.|Do you have one of these?",
+         "align":2
+         },          
+      "StoryTextTradingSequenceTLodge2":{
          "dialogTitle":"OBJ_NPC_SCOTT",
          "text":"Is that a headband radio?|I thought we had everything.|That is so useless & tacky.|Can I trade you for it?|I'll give you a car radio FM converter.|It's also totally useless.",
          "align":2
          }, 
+      "StoryTextTradingSequenceTLodge3":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"It's not useless to someone I bet.",
+         "align":2
+         },          
       "StoryTextTradingSequenceTLodgeAfter":{
          "dialogTitle":"OBJ_NPC_SCOTT",
          "text":"Who drives a car without an FM now?",
@@ -3964,27 +4054,62 @@
          "dialogTitle":"OBJ_NPC_BECKY",
          "text":"My parents gave me an old mini-van.|It runs OK, but it's so ancient.",
          "align":2
-         },          
-      "StoryTextTradingSequenceCNow":{
+         },
+      "StoryTextTradingSequenceCNow1":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"Does it only have AM radio by chance?",
+         "align":2
+         }, 
+      "StoryTextTradingSequenceCNow2":{
+         "dialogTitle":"OBJ_NPC_BECKY",
+         "text":"It does. It's so old like that.|At night I only get shows about aliens.",
+         "align":2
+         }, 
+      "StoryTextTradingSequenceCNow3":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"Take this FM converter then.",
+         "align":2
+         }, 
+      "StoryTextTradingSequenceCNow4":{
          "dialogTitle":"OBJ_NPC_BECKY",
          "text":"Wow, I bet that will work in my car.|Finally, something to listen to|while I'm waiting for it to warm up.|Speaking of ancient junk from the 70s...|Take this flannel shirt.|I don't know why they keep shipping them.|They'll never be in style again.",
          "align":2
          }, 
+      "StoryTextTradingSequenceCNow5":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"You never know.",
+         "align":2
+         }, 
       "StoryTextTradingSequenceCNowAfter":{
          "dialogTitle":"OBJ_NPC_BECKY",
-         "text":"Thanks again! It's nice to a radio.|Last night there was show about..|...|[30 minutes later]|and they still haven't found him.",
+         "text":"Thanks again! It's nice to have a radio.|Last night there was show about..|...|[30 minutes later]|and they still haven't found him.",
          "align":2
          },            
       "StoryTextTradingSequenceFCBCheckoutBefore":{
          "dialogTitle":"OBJ_NPC_THOMAS",
          "text":"Everyone is done shopping for xmas.|It's totally dead here.|I'm more bored than usual.",
          "align":2
-         },          
-      "StoryTextTradingSequenceFCBCheckout":{
+         },   
+      "StoryTextTradingSequenceFCBCheckout1":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"Here's a TV you can watch.|It's slightly better than staring off.",
+         "align":2
+         },                 
+      "StoryTextTradingSequenceFCBCheckout2":{
          "dialogTitle":"OBJ_NPC_THOMAS",
-         "text":"You're giving me this TV?|At least it's something to do.|Am I supposed to trade in return?|Here's a coupon for angry customers.|It's good for 10% off any non-sale item,|good on weekdays in February only.",
+         "text":"You're giving me this TV?|At least it's something to do.|Am I supposed to trade in return?",
          "align":2
          }, 
+      "StoryTextTradingSequenceFCBCheckout3":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"Apparently.",
+         "align":2
+         },     
+      "StoryTextTradingSequenceFCBCheckout4":{
+         "dialogTitle":"OBJ_NPC_THOMAS",
+         "text":"Here's a coupon for angry customers.|It's good for 10% off any non-sale item,|good on weekdays in February only.",
+         "align":2
+         },                  
       "StoryTextTradingSequenceFCBCheckoutAfter":{
          "dialogTitle":"OBJ_NPC_THOMAS",
          "text":"Is this the only station it gets?",
@@ -3995,11 +4120,21 @@
          "text":"Hmm, how to get more after xmas shoppers?",
          "align":2
          },   
-      "StoryTextTradingSequenceWWCheckout":{
+      "StoryTextTradingSequenceWWCheckout1":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"What about this tacky coupon promo?",
+         "align":2
+         },           
+      "StoryTextTradingSequenceWWCheckout2":{
          "dialogTitle":"OBJ_NPC_TANYA",
          "text":"That coupon is a really good idea.|Can I take it to show to my manager?|I'll give you these LPs in return.|They got mixed-in with some laserdiscs.|Will anyone want LPs again though?",
          "align":2
          },      
+      "StoryTextTradingSequenceWWCheckout3":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"I don't want them now.",
+         "align":2
+         },            
       "StoryTextTradingSequenceWWCheckoutAfter":{
          "dialogTitle":"OBJ_NPC_TANYA",
          "text":"Thanks again for the coupon idea.",
@@ -4007,12 +4142,22 @@
          },                
       "StoryTextTradingSequenceFCBCampingBefore":{
          "dialogTitle":"OBJ_NPC_GRANT",
-         "text":"This place takes me back to my youth.|Youwere too young in the 70s,|you don't know what you missed out on.",
+         "text":"This place takes me back to my youth.|You were too young in the 70s,|you don't know what you missed out on.",
          "align":2
          },   
-      "StoryTextTradingSequenceFCBCamping":{
+      "StoryTextTradingSequenceFCBCamping1":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"The clothing was alright though.|Better than the 60s & 80s if you don't count disco.|Like this shirt here.|It looks cool, but not my style.",
+         "align":2
+         }, 
+      "StoryTextTradingSequenceFCBCamping2":{
          "dialogTitle":"OBJ_NPC_GRANT",
          "text":"You need to unload that flannel shirt?|I won't complain about taking it.|I'll give you this utility knife.|Just be careful with it.",
+         "align":2
+         }, 
+      "StoryTextTradingSequenceFCBCamping3":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"Oh I will, thanks.|Maybe I'll use it to trade again.",
          "align":2
          }, 
       "StoryTextTradingSequenceFCBCampingAfter":{
@@ -4024,12 +4169,22 @@
          "dialogTitle":"OBJ_NPC_GRIFFY",
          "text":"Have you ever... uh.|Have you ever, wait.|The thing with the movie and album.|You know, the thing?",
          "align":2
-         },                  
-      "StoryTextTradingSequencePogoDawg":{
+         },   
+      "StoryTextTradingSequencePogoDawg1":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"Are you attempting to talk about|The Wizard of Oz thing?|I don't think that's real.|Take these LPs anyway though.|Maybe one of them does something.",
+         "align":2
+         },                        
+      "StoryTextTradingSequencePogoDawg2":{
          "dialogTitle":"OBJ_NPC_GRIFFY",
-         "text":"Is that the, uh, what's is called?|...record...|Yeah.|Is that the record with the movie?|The thing with the movie & album.|Like you, um, play them together or...|Can I have that?|I'll give this, what's it called?|This, uh, package.|The, uh, the delivery guy left it.|When the, what's it called?|When the ambulance took him.",
+         "text":"I can have all these?|I'll give this, what's it called?|This, uh, package.|The, uh, the delivery guy left it.|When the, what's it called?|When the ambulance took him.",
          "align":2
          },
+      "StoryTextTradingSequencePogoDawg3":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"So your food send him to the ER,|and you want me to finish his job?",
+         "align":2
+         },             
       "StoryTextTradingSequencePogoDawgAfter":{
          "dialogTitle":"OBJ_NPC_GRIFFY",
          "text":"Uh... is there, yeah, uh.|Like something else you need?",
@@ -4040,11 +4195,21 @@
          "text":"Last year was so much more interesting.",
          "align":2
          },               
-      "StoryTextTradingSequenceVB":{
-         "dialogTitle":"OBJ_NPC_GRUNBERG",
-         "text":"You don't know who that box is for?|I enjoy a good mystery, let's open it.|[...]|Why it's a trophy.|Why don't you keep it.",
+      "StoryTextTradingSequenceVB1":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"I have this mystery box.|That could be something.",
          "align":2
          },        
+      "StoryTextTradingSequenceVB2":{
+         "dialogTitle":"OBJ_NPC_GRUNBERG",
+         "text":"You don't know who that box is for?|I enjoy a mystery, let's open it.|[...]|Hmmm...|Why it's just a trophy.",
+         "align":2
+         },    
+      "StoryTextTradingSequenceVB3":{
+         "dialogTitle":"OBJ_NPC_ERYN",
+         "text":"You know what, I'll just keep this.",
+         "align":2
+         },              
       "StoryTextTradingSequenceVBAfter":{
          "dialogTitle":"OBJ_NPC_GRUNBERG",
          "text":"I wish it was something mysterious.",
@@ -4055,14 +4220,24 @@
          "text":"Some kid jammed up a coin slot.|Looks like a random metal object.",
          "align":2
          }, 
-      "StoryTextTradingSequenceCavern":{
+      "StoryTextTradingSequenceCavern1":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"Maybe this knife has a tool for that?",
+         "align":2
+         }, 
+      "StoryTextTradingSequenceCavern2":{
          "dialogTitle":"OBJ_NPC_DB",
-         "text":"Can I borrow that knife you have there?|There's a metal thing jammed in coin slot.|Oh, it's a big round earring.|Think you can find the owner?",
+         "text":"Yeah, let me try...|Oh, it's a big round earring.|Great, I'll toss it.",
+         "align":2
+         }, 
+      "StoryTextTradingSequenceCavern3":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"I'm sure it has an owner though.|Keep the knife, you need it more than me.|I'll track down who lost that.",
          "align":2
          }, 
       "StoryTextTradingSequenceCavernAfter":{
          "dialogTitle":"OBJ_NPC_DB",
-         "text":"I don't know who lost that earring.",
+         "text":"I wonder who lost that earring.",
          "align":2
          },          
       "StoryTextTradingSequenceDenimCountryBefore":{
@@ -4070,9 +4245,14 @@
          "text":"(I've looked everywhere)|Sorry, I was thinking about something.",
          "align":2
          }, 
+      "StoryTextTradingSequenceDenimCountryPC1":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"Are you looking for this maybe?",
+         "align":2
+         },         
       "StoryTextTradingSequenceDenimCountry1":{
          "dialogTitle":"OBJ_NPC_LISA",
-         "text":"I'm so glad you found my earring.|This set belonged to my grandmother.|I couldn't stand to lose them.|I know this is really expensive|but I want you to have it.^",
+         "text":"Yes, that's the earring I lost.|I'm so glad you found it. I looked everywhere.|This set belonged to my grandmother.|I couldn't stand to lose them.|I know this is really expensive|but I want you to have it.^",
          "align":2
          },
       "StoryTextTradingSequenceDenimCountry2":{
@@ -4084,7 +4264,12 @@
          "dialogTitle":"OBJ_NPC_LISA",
          "text":"Please take it as a thank you.",
          "align":2
-         },                  
+         },
+      "StoryTextTradingSequenceDenimCountry4":{
+         "dialogTitle":"OBJ_NPC_CARL",
+         "text":"(What is this?)",
+         "align":2
+         },                      
       "StoryTextTradingSequenceDenimCountryAfter":{
          "dialogTitle":"OBJ_NPC_LISA",
          "text":"Thank you again Carl, seriously.|Those earrings mean so much to me.",

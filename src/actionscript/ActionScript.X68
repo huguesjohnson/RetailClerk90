@@ -60,13 +60,13 @@ DefaultExitSceneTestRight:
 DefaultExitSceneFixSprites:
 	bsr.w	FixSprites ; fix all the sprites
 ExitDefaultExit:
-	bsr.w	FadeIn ; fade in now that everything is loaded
 	rts
 
 ;*******************************************************************************
 ; default enter scene handler
 ;*******************************************************************************
 DefaultEnterScene:
+	bsr.w	FadeIn ; fade in to the new scene
 	rts
 
 ;*******************************************************************************

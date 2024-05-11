@@ -242,16 +242,9 @@ EndDay01SetupGameState: ; separated to help with debugging
 	move.w	#SCENE_ID_WWAPPLIANCES,(MEM_OPTIONAL_EVENT1_SCENE_ID) ; 1st optional event
 	move.w	#SCENE_ID_VB,(MEM_OPTIONAL_EVENT2_SCENE_ID) ; 2nd optional event
 	move.w	#$FFFF,(MEM_OPTIONAL_EVENT3_SCENE_ID) ; no 3rd optional event
-	move.w	#PLAYER_SPRITE_CARL,(MEM_PLAYER_SPRITE) ; initial sprite
 	move.w	#DIRECTION_UP,(MEM_PLAYER_SPRITE_DIRECTION)
 	move.w	#$00DE,(MEM_PLAYER_SPRITE_X)
 	move.w	#$00EE,(MEM_PLAYER_SPRITE_Y)
-	;---------------------------------------------------------------------------	
-	; eryn now has the letter
-	;---------------------------------------------------------------------------	
-	lea	MEM_PLAYER1_ITEM_COUNT,a1 ; point to 1st pc inventory
-	move.w	#OBJ_ITEM_LETTER,d7 ; item to add
-	bsr.w	AddItem ; add item to inventory			
 	;---------------------------------------------------------------------------	
 	; update NPC locations
 	;---------------------------------------------------------------------------	

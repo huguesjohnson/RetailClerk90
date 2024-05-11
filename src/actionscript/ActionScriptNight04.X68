@@ -58,7 +58,9 @@ ActionScriptNight04CavernEnterScene:
 	; setup scripted event
 	lea ScriptedEventNight04_02_CavernStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
+	bsr.w	DefaultEnterScene
 	rts
 	
 ActionScriptNight04CavernExitScene:	
@@ -169,7 +171,9 @@ ActionScriptNight04SHallEnter:
 	; setup scripted event
 	lea ScriptedEventNight04_03_SouthHallStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
+	bsr.w	DefaultEnterScene
 	rts
 
 ; assumes d7 has MEM_DAY_EVENT_FLAGS

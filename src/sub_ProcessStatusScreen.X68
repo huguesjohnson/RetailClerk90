@@ -269,19 +269,18 @@ ProcessStatusScreenMap:
 	move.w	(MEM_MENU_SELECTION),d7 ; copy scene id to d7
 	sub.w	#MAX_MENU_PAGE+$0001,d7 ; adjust for navigation menu
 	mulu.w	#LWORD_SIZE,d7 ; multiply by 2 to get offset in FastTravelSpriteXY table
-	lea	FastTravelSpriteXY,a6	; point a6 to the scene FastTravelSpriteXY table
+	lea	FastTravelSpriteXY,a6 ; point a6 to the scene FastTravelSpriteXY table
 	adda.l	d7,a6 ; add offset	
 	move.w	(a6)+,(MEM_PLAYER_SPRITE_X)	; starting x location
-	move.w	(a6),(MEM_PLAYER_SPRITE_Y)	; starting y location
+	move.w	(a6),(MEM_PLAYER_SPRITE_Y) ; starting y location
 	move.w	#SPRITE_PLAYER_PATTERN,(MEM_PLAYER_SPRITE_PATTERN_INDEX) ; pattern
-	move.w	#DIRECTION_DOWN,(MEM_PLAYER_SPRITE_DIRECTION)	; direction
-	move.w	#$0000,(MEM_PLAYER_SPRITE_FRAME)	; frame
+	move.w	#DIRECTION_DOWN,(MEM_PLAYER_SPRITE_DIRECTION) ; direction
+	move.w	#$0000,(MEM_PLAYER_SPRITE_FRAME) ; frame
 	;---------------------------------------------------------------------------
-	; fix sprites and fade in
+	; fix sprites
 	;---------------------------------------------------------------------------
 	bsr.w	LoadPlayerSprite ; load the player sprite
 	bsr.w	FixSprites ; move player sprite and reset sprite links
-	bsr.w	FadeIn ; fade in to the new scene
 	;---------------------------------------------------------------------------
 	; force enter scene action
 	;---------------------------------------------------------------------------

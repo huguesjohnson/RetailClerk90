@@ -55,7 +55,9 @@ ActionScriptDay04EEHallEnterScene:
 	; setup scripted event
 	lea ScriptedEventDay04_EEHallStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
+	bsr.w	DefaultEnterScene
 	rts
 
 ActionScriptDay04EEHallUpdateState: ; assumes d7 has MEM_DAY_EVENT_FLAGS

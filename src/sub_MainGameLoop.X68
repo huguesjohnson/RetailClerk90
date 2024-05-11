@@ -120,6 +120,8 @@ TestAction:
 	; setup action event for entering a scene if appropriate
 	; there's one catch to this implementation..
 	; if the player tries to leave a scene but is blocked this event will fire
+	; update: I wrote this comment then forgot about and it hosed me
+	; so let's try skip ACTION_ENTER_SCENE if STATE_FLAG_SCRIPTED_EVENT is set
 	;---------------------------------------------------------------------------
 	cmpi.w	#ACTION_EXIT_SCENE,(MEM_ACTION_ID) ; test if last action was exiting
 	bne.w	MainGameLoop ; if not then back to the start of the game loop
@@ -127,6 +129,16 @@ TestAction:
 	cmpi.w	#MAX_STORE_ID,d7 ; is the new scene a store?
 	bgt.w	MainGameLoop ; if not then back to the start of the game loop
 	move.l	(MEM_GAME_STATE),d7 ; copy game state to d7
+	;---------------------------------------------------------------------------
+	; don't set the enter action because a scripted event is about to run
+	; the scripted event "should" handle anything that would go in enter event
+	; update: dialog too, as in prompting whether to leave a scene
+	;---------------------------------------------------------------------------
+	btst.l	#STATE_FLAG_SCRIPTED_EVENT,d7 ; test the scripted event flag
+	bne.w	MainGameLoop ; return to start of game loop	
+	btst.l	#STATE_FLAG_DIALOG,d7 ; test the dialog flag	
+	bne.w	MainGameLoop ; return to start of game loop	
+.setEnterAction
 	bset.l	#STATE_FLAG_ACTION,d7 ; set the action flag
 	move.l	d7,(MEM_GAME_STATE) ; save it back
 	move.w	#ACTION_ENTER_SCENE,(MEM_ACTION_ID) ; set the action id

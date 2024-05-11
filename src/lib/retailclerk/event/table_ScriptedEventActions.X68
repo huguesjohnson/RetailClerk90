@@ -8,6 +8,7 @@ ScriptedEventActionTableStart:
 		dc.l	ScriptedEventSetPlayerSpriteY ; SCRIPTED_EVENT_SET_PLAYER_SPRITE_Y
 		dc.l	ScriptedEventSetPlayerSpriteDirection ; SCRIPTED_EVENT_SET_PLAYER_SPRITE_DIRECTION
 		dc.l	ScriptedEventFadeBlack ; SCRIPTED_EVENT_FADE_BLACK
+		dc.l	ScriptedEventFadeIn ; SCRIPTED_EVENT_FADE_IN
 		dc.l	ScriptedEventDrawScene ; SCRIPTED_EVENT_DRAW_SCENE
 		dc.l	ScriptedEventTimer ; SCRIPTED_EVENT_TIMER
 		dc.l	ScriptedEventEndGame ; SCRIPTED_EVENT_ENDGAME

@@ -261,6 +261,15 @@ PaletteVision01:
 PaletteVision02:
 	include 'palettes/vision-02.X68'
 
+PaletteVisionBluescale00:
+	include 'palettes/vision-bluescale-00.X68'
+
+PaletteVisionBluescale01:
+	include 'palettes/vision-bluescale-01.X68'
+
+PaletteVisionBluescale02:
+	include 'palettes/vision-bluescale-02.X68'
+
 PaletteFlashbackStore00:
 	include 'palettes/flashback-store-00.X68'
 

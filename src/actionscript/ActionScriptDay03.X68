@@ -91,7 +91,7 @@ ActionScriptDay04PogoDawgFinishedState:
 	bset.l	#FLAG_DAY03_EVENT04_DONE,d7 ; set event is done
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
 	move.w	#SCENE_ID_DENIMCOUNTRY,(MEM_STORY_EVENT1_SCENE_ID) ; set story event
-	move.w	#OBJECTIVE_D03_O04_CheckIn,(MEM_OBJECTIVE) ; update objective
+	move.w	#OBJECTIVE_D03_O02_ReportBack,(MEM_OBJECTIVE) ; update objective
 	rts
 
 ;*******************************************************************************
@@ -177,7 +177,6 @@ CheckDay03Events:
 	; otherwise update story event, objective, and npc locations
 	bset.l	#FLAG_DAY03_EVENT03_LUNCHESDELIVERED,d7 ; set events complete
 	move.l	d7,(MEM_DAY_EVENT_FLAGS) ; save updated flags
-	move.w	#OBJECTIVE_D03_O02_ReportBack,(MEM_OBJECTIVE) ; update objective	
 	move.w	#SCENE_ID_POGODAWG,(MEM_STORY_EVENT1_SCENE_ID) ; update story event
 	move.l	#$00000000,(MEM_NPC_LOCATION_SHALL) ; move characters
 .exit

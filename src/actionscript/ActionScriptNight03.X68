@@ -36,8 +36,6 @@ ActionScriptNight03TLodgeInteract:
 	lea ScriptedEventNight03_01_TLodgeStart,a6 ; point a6 to event to load
 	bra.s	.queuescriptedevent
 .altevent	
-	lea	StoryTextNight03TLodgeAltLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventNight03_01_TLodgeAltStart,a6 ; point a6 to event to load
 .queuescriptedevent
 	bsr.w QueueScriptedEvent ; queue the event
@@ -79,8 +77,6 @@ ActionScriptNight03CNowInteract:
 	lea ScriptedEventNight03_02_CNowStart,a6 ; point a6 to event to load
 	bra.s	.queuescriptedevent
 .altevent
-	lea	StoryTextNight03CNowAltLine1,a6 ; point a6 to the first dialog
-	bsr.w	ShowDialog ; show the first dialog
 	lea ScriptedEventNight03_02_CNowAltStart,a6 ; point a6 to event to load
 .queuescriptedevent
 	bsr.w QueueScriptedEvent ; queue the event

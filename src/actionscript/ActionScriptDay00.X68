@@ -166,7 +166,7 @@ ActionScriptDay00SouthHallExit:
 	btst.l	#FLAG_DAY00_EVENT03_INFODESKVISITED,d7 ; test if the mandatory event is complete
 	beq.s	.cantleave ; branch if not
 	bsr.w	EndDay00 ; transition to night
-	rts	
+	rts		
 .cantleave
 	lea ScriptedEventNotTimeToLeaveErynStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event	

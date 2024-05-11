@@ -33,7 +33,7 @@
       "DialogTextErynDay05":{
       	"comment":"text after story event",
       	"dialogTitle":"OBJ_NPC_ERYN",
-      	"text":"My ride is coming late.^|This place is OK to hang out in.",
+      	"text":"My ride is coming late.|This place is OK to hang out in.",
       	"align":2},
       "DialogTextErynDay06":{"comment":"PC on day06"},
       "DialogTextErynDay07":{
@@ -76,7 +76,7 @@
       "DialogTextCarlDay07":{"comment":"PC on day07"},
       "DialogTextCarlDay08":{
       	"dialogTitle":"OBJ_NPC_CARL",
-      	"text":"I don't talk to D.B. often.^|He's not here late every night.^|He must close up early if it's slow.",
+      	"text":"I don't talk to D.B. often.|He's not here late every night.|He must close up early if it's slow.",
       	"align":2},
       "DialogTextCarlDay09":{"comment":"PC on day09"},
       "DialogTextCarlDay0A":{
@@ -104,7 +104,7 @@
       "DialogTextFrankDay08":{
       	"comment":"hanging around the mall in the AM",
       	"dialogTitle":"OBJ_NPC_FRANK",
-      	"text":"I visit all the malls in my district.^|This is definitely the smallest.^|Maybe it started as a bigger idea.^|And that was too much to finish.^|I hope it gets an expansion.",
+      	"text":"I visit all the malls in my district.|This is definitely the smallest.|Maybe it started as a bigger idea.|And that was too much to finish.|I hope it gets an expansion.",
       	"align":2},
       "DialogTextFrankDay09":{"comment":"not present"},
       "DialogTextFrankDay0A":{"comment":"not present"},
@@ -123,7 +123,7 @@
       "DialogTextCarolDay03":{"comment":"not present at night"},
       "DialogTextCarolDay04":{
       	"dialogTitle":"OBJ_NPC_CAROL",
-      	"text":"I've worked here a long time.^|But I only work seasonal jobs.^|I don't about the mall's history.",
+      	"text":"I've worked here a long time.|But I only work seasonal jobs.|I don't about the mall's history.",
       	"align":2},
       "DialogTextCarolDay05":{"comment":"not present at night"},
       "DialogTextCarolDay06":{
@@ -169,11 +169,11 @@
       "DialogTextLisaDay06":{"comment":"no default text - used in story events"},  
       "DialogTextLisaDay07":{
       	"dialogTitle":"OBJ_NPC_LISA",
-      	"text":"You look really tired tonight.^|Oh, sorry for saying that.",
+      	"text":"You look really tired tonight.|Oh, sorry for saying that.",
       	"align":2},  
       "DialogTextLisaDay08":{
       	"dialogTitle":"OBJ_NPC_LISA",
-      	"text":"Your shift is already over.^|Did you forget something?",
+      	"text":"Your shift is already over.|Did you forget something?",
       	"align":2},  
       "DialogTextLisaDay09":{
       	"dialogTitle":"OBJ_NPC_LISA",
@@ -185,7 +185,7 @@
       	"align":2}, 
       "DialogTextLisaDay0B":{
       	"dialogTitle":"OBJ_NPC_LISA",
-      	"text":"Hey Carl, Merry Xmas.^|Or I hope it is.",
+      	"text":"Hey Carl, Merry Xmas.|Or I hope it is.",
       	"align":2},  
       "DialogTextLisaDay0C":{
       	"comment":"after intro event",
@@ -231,7 +231,7 @@
       	"align":2},
       "DialogTextGrunbergDay08":{
       	"dialogTitle":"OBJ_NPC_GRUNBERG",
-      	"text":"Asking about D.B.?^|He worked here last year.^|Good guy, a little odd at times.",
+      	"text":"Why are you asking about D.B.?|He worked here last year.|Good guy, a little odd at times.",
       	"align":2},
       "DialogTextGrunbergDay09":{
       	"comment":"after optional event",
@@ -240,11 +240,11 @@
       	"align":2},
       "DialogTextGrunbergDay0A":{
       	"dialogTitle":"OBJ_NPC_GRUNBERG",
-      	"text":"A lot of kids are getting new consoles this year.",
+      	"text":"A lot of kids are getting new consoles.",
       	"align":2},
       "DialogTextGrunbergDay0B":{
       	"dialogTitle":"OBJ_NPC_GRUNBERG",
-      	"text":"Day after xmas will be our busiest of the year.",
+      	"text":"Day after xmas is our busiest of the year.",
       	"align":2},
       "DialogTextGrunbergDay0C":{"comment":"trading sequence"},
       "DialogTextGrunbergDay0D":{
@@ -253,11 +253,11 @@
       	"align":2},
       "DialogTextJenDay00":{
       	"dialogTitle":"OBJ_NPC_JEN",
-      	"text":"You must be new here.^|Please stop by when you're on break.",
+      	"text":"You must be new here.|Please stop by when you're on break.",
       	"align":2},
       "DialogTextJenDay01":{
       	"dialogTitle":"OBJ_NPC_JEN",
-      	"text":"Sorry, have to do inventory.^|Let's hang out another night.",
+      	"text":"Sorry, have to do inventory.|Let's hang out another night.",
       	"align":2},
       "DialogTextJenDay02":{
       	"dialogTitle":"OBJ_NPC_JEN",
@@ -265,7 +265,7 @@
       	"align":2},
       "DialogTextJenDay03":{
       	"dialogTitle":"OBJ_NPC_JEN",
-      	"text":"You're looking for someone?^|Sorry, just me here tonight.",
+      	"text":"You're looking for someone?|Sorry, just me here tonight.",
       	"align":2},
       "DialogTextJenDay04":{
       	"dialogTitle":"OBJ_NPC_JEN",
@@ -297,7 +297,7 @@
       	"align":2},
       "DialogTextJenDay0B":{
       	"dialogTitle":"OBJ_NPC_JEN",
-      	"text":"You seem troubled tonight.^|I hope everything is OK.",
+      	"text":"You seem troubled tonight.|I hope everything is OK.",
       	"align":2},
       "DialogTextJenDay0C":{"comment":"only in story events this day"},
       "DialogTextJenDay0D":{"comment":"only in story events this day"},
@@ -321,7 +321,7 @@
       	"align":2},
       "DialogTextGriffyDay04":{
       	"dialogTitle":"OBJ_NPC_GRIFFY",
-      	"text":"I, uh, have only been here since..^|Wait, um, I don't know.",
+      	"text":"I, uh, have only been here since..|Wait, um, I don't know.",
       	"align":2},
       "DialogTextGriffyDay05":{
 		"comment":"not present at night but can still be interacted with due to my poor planning",
@@ -340,7 +340,7 @@
       	"align":2},
       "DialogTextGriffyDay08":{
       	"dialogTitle":"OBJ_NPC_GRIFFY",
-      	"text":"Do you, uh, want like fries with that?^|Oh, wait. Yeah, right. Uh..^|We don't have fries.",
+      	"text":"Do you, uh, want like fries with that?|Oh, wait. Yeah, right. Uh..|We don't have fries.",
       	"align":2},
       "DialogTextGriffyDay09":{"comment":"not present at night"},
       "DialogTextGriffyDay0A":{
@@ -365,7 +365,7 @@
       "DialogTextScottDay03":{
       	"comment":"dialog before hidden event",
       	"dialogTitle":"OBJ_NPC_SCOTT",
-      	"text":"I thought I heard someone go by.^|I guess it was just you.",
+      	"text":"I thought I heard someone go by.|I guess it was just you.",
       	"align":2},
       "DialogTextScottDay04":{
       	"comment":"after story event",
@@ -374,11 +374,11 @@
       	"align":2},
       "DialogTextScottDay05":{
       	"dialogTitle":"OBJ_NPC_SCOTT",
-      	"text":"Interested in a high speed casette dubbing system?",
+      	"text":"Interested in a high speed dubbing system?",
       	"align":2},
       "DialogTextScottDay06":{
       	"dialogTitle":"OBJ_NPC_SCOTT",
-      	"text":"I know cable is popular, but I think giant rooftop antennas will made a comeback.",
+      	"text":"Cable is popular, but I think rooftop antennas will comeback.",
       	"align":2},
       "DialogTextScottDay07":{
       	"comment":"after story event",
@@ -387,7 +387,7 @@
       	"align":2},
       "DialogTextScottDay08":{
       	"dialogTitle":"OBJ_NPC_SCOTT",
-      	"text":"You look like someone who would use a hi-gain signal amp.",
+      	"text":"You could use a hi-gain signal amp.",
       	"align":2},
       "DialogTextScottDay09":{"comment":"trading sequence"},
       "DialogTextScottDay0A":{
@@ -406,19 +406,19 @@
       	"align":2},
       "DialogTextToddDay01":{
       	"dialogTitle":"OBJ_NPC_TODD",
-      	"text":"I don't need any help tonight.^|Thanks for checking though.",
+      	"text":"I don't need any help tonight.|Thanks for checking though.",
       	"align":2},
       "DialogTextToddDay02":{
       	"dialogTitle":"OBJ_NPC_TODD",
-      	"text":"Lisa talked to me last night.^|Wish I could help.",
+      	"text":"Lisa talked to me last night.|Wish I could help.",
       	"align":2},
       "DialogTextToddDay03":{
       	"dialogTitle":"OBJ_NPC_TODD",
-      	"text":"I didn't see anyone like that.^|I doubt he would shop here.",
+      	"text":"I didn't see anyone like that.|I doubt he would shop here.",
       	"align":2},
       "DialogTextToddDay04":{
       	"dialogTitle":"OBJ_NPC_TODD",
-      	"text":"I haven't been here that long.^|It's only been.. 4 years.^|Really, 4 years already?^|Sorry, I can't help you.",
+      	"text":"I haven't been here that long.|It's only been.. 4 years.|Really, 4 years already?|Sorry, I can't help you.",
       	"align":2},
       "DialogTextToddDay05":{"comment":"trading sequence"},
       "DialogTextToddDay06":{
@@ -429,27 +429,27 @@
       "DialogTextToddDay07":{"comment":"trading sequence"},
       "DialogTextToddDay08":{
       	"dialogTitle":"OBJ_NPC_TODD",
-      	"text":"I tried talking Lisa down, no luck.^|She is really worked up about something.",
+      	"text":"I tried talking Lisa down, no luck.|She is really worked up about something.",
       	"align":2},
       "DialogTextToddDay09":{"comment":"trading sequence"},
       "DialogTextToddDay0A":{
       	"dialogTitle":"OBJ_NPC_TODD",
-      	"text":"Is your store busy today?^|We're doing alright.",
+      	"text":"Is your store busy today?|We're doing alright.",
       	"align":2},
       "DialogTextToddDay0B":{"comment":"trading sequence"},
       "DialogTextToddDay0C":{
       	"dialogTitle":"OBJ_NPC_TODD",
-      	"text":"Only hours until my new year party.^|I think this will be the best.",
+      	"text":"Only hours until my new year party.|I think this will be the best.",
       	"align":2},
       "DialogTextToddDay0D":{"comment":"trading sequence"},
       "DialogTextElizaDay00":{
       	"dialogTitle":"OBJ_NPC_ELIZA",
-      	"text":"Sorry, nothing new came in today.^|At least nothing good.",
+      	"text":"Sorry, nothing new came in today.|At least nothing good.",
       	"align":2},
       "DialogTextElizaDay01":{
       	"comment":"dialog after optional event",
       	"dialogTitle":"OBJ_NPC_ELIZA",
-      	"text":"Just give me a little more time.^|I'll figure you out.",
+      	"text":"Just give me a little more time.|I'll figure you out.",
       	"align":2},
       "DialogTextElizaDay02":{
       	"comment":"after the story event",
@@ -458,11 +458,11 @@
       	"align":2},
       "DialogTextElizaDay03":{
       	"dialogTitle":"OBJ_NPC_ELIZA",
-      	"text":"Looking for someone else?^|I see how it is with you.",
+      	"text":"Looking for someone else?|I see how it is with you.",
       	"align":2},
       "DialogTextElizaDay04":{
       	"dialogTitle":"OBJ_NPC_ELIZA",
-      	"text":"This is just my second year here.^|I hope it's the last.",
+      	"text":"This is just my second year here.|I hope it's the last.",
       	"align":2},
       "DialogTextElizaDay05":{
       	"comment":"after optional event",
@@ -489,13 +489,16 @@
       "DialogTextElizaDay0C":{"comment":"trading sequence"},
       "DialogTextElizaDay0D":{
       	"dialogTitle":"OBJ_NPC_ELIZA",
-      	"text":"You're too normal for your own good.^|Stop by if you're in town again.",
+      	"text":"You're too normal for your own good.|Stop by if you're in town again.",
       	"align":2},
       "DialogTextBeckyDay00":{
       	"dialogTitle":"OBJ_NPC_BECKY",
-      	"text":"Is this your first day?.^|That is so exciting!",
+      	"text":"Is this your first day?|That is so exciting!",
       	"align":2},
-      "DialogTextBeckyDay01":{"comment":"not present"},
+      "DialogTextBeckyDay01":{
+      	"dialogTitle":"OBJ_NPC_BECKY",
+      	"text":"I don't need help tonight,|thanks for stopping by!",
+      	"align":2},
       "DialogTextBeckyDay02":{
       	"dialogTitle":"OBJ_NPC_BECKY",
       	"text":"Anything weird? Not at all!",
@@ -506,7 +509,7 @@
       	"align":2},
       "DialogTextBeckyDay04":{
       	"dialogTitle":"OBJ_NPC_BECKY",
-      	"text":"I just started last year.^|Thanks for asking!",
+      	"text":"I just started last year.|Thanks for asking!",
       	"align":2},
       "DialogTextBeckyDay05":{
       	"dialogTitle":"OBJ_NPC_BECKY",
@@ -552,7 +555,7 @@
       	"align":2},
       "DialogTextCharlesDay0B":{
       	"dialogTitle":"OBJ_NPC_CHARLES",
-      	"text":"Last year was something.^|I only heard about it though.",
+      	"text":"Last year was something.|I only heard about it though.",
       	"align":2},
       "DialogTextCharlesDay0C":{
       	"dialogTitle":"OBJ_NPC_CHARLES",
@@ -561,11 +564,11 @@
       "DialogTextCharlesDay0D":{
       	"comment":"at the arcade",
       	"dialogTitle":"OBJ_NPC_CHARLES",
-      	"text":"Hey, great job with the store.^|I miss it, just a little, sometimes.",
+      	"text":"Hey, great job with the store.|I miss it, just a little, sometimes.",
       	"align":2},
       "DialogTextRandyDay00":{
       	"dialogTitle":"OBJ_NPC_RANDY",
-      	"text":"The new camping guy is alright.^|He likes the outdoors as much as me.",
+      	"text":"The new camping guy is alright.|He likes the outdoors as much as me.",
       	"align":2},
       "DialogTextRandyDay01":{
       	"dialogTitle":"OBJ_NPC_RANDY",
@@ -578,7 +581,7 @@
       "DialogTextRandyDay03":{"comment":"trading sequence"},
       "DialogTextRandyDay04":{
       	"dialogTitle":"OBJ_NPC_RANDY",
-      	"text":"Our store opened last year.^|I can't imagine any of us can help.",
+      	"text":"Our store opened last year.|I can't imagine any of us can help.",
       	"align":2},
       "DialogTextRandyDay05":{"comment":"trading sequence"},
       "DialogTextRandyDay06":{
@@ -588,7 +591,7 @@
       "DialogTextRandyDay07":{"comment":"trading sequence"},
       "DialogTextRandyDay08":{
       	"dialogTitle":"OBJ_NPC_RANDY",
-      	"text":"I can't until it's slow again,^|and I can get back to my hobby.",
+      	"text":"I can't until it's slow again,|and I can get back to my hobby.",
       	"align":2},
       "DialogTextRandyDay09":{"comment":"trading sequence"},
       "DialogTextRandyDay0A":{
@@ -606,7 +609,10 @@
       	"dialogTitle":"OBJ_NPC_DB",
       	"text":"Back for another round?",
       	"align":2},
-      "DialogTextDBDay01":{"comment":"not present this night"},
+      "DialogTextDBDay01":{
+      	"dialogTitle":"OBJ_NPC_DB",
+      	"text":"Hey Carl, being nosy again?",
+      	"align":2},
       "DialogTextDBDay02":{
       	"comment":"dialog after optional event",
       	"dialogTitle":"OBJ_NPC_DB",
@@ -619,21 +625,30 @@
       	"align":2},
       "DialogTextDBDay04":{
       	"dialogTitle":"OBJ_NPC_DB",
-      	"text":"This is just a regular mall.^|I wouldn't poke around too much.",
+      	"text":"This is just a regular mall.|I wouldn't poke around too much.",
       	"align":2},
-      "DialogTextDBDay05":{"comment":"not present this night"},
+      "DialogTextDBDay05":{
+      	"dialogTitle":"OBJ_NPC_DB",
+      	"text":"Hey Carl, being nosy again?",
+      	"align":2},
       "DialogTextDBDay06":{
       	"comment":"after optional event",
       	"dialogTitle":"OBJ_NPC_DB",
       	"text":"It's tricky to figure out the right combo.",
       	"align":2},
-      "DialogTextDBDay07":{"comment":"not present this night"},
+      "DialogTextDBDay07":{
+      	"dialogTitle":"OBJ_NPC_DB",
+      	"text":"Hey Carl, being nosy again?",
+      	"align":2},
       "DialogTextDBDay08":{
       	"comment":"after story event",
       	"dialogTitle":"OBJ_NPC_DB",
       	"text":"Just another regular day here.",
       	"align":2},
-      "DialogTextDBDay09":{"comment":"not present this night"},
+      "DialogTextDBDay09":{
+      	"dialogTitle":"OBJ_NPC_DB",
+      	"text":"Hey Carl, being nosy again?",
+      	"align":2},
       "DialogTextDBDay0A":{
       	"comment":"after optional event",
       	"dialogTitle":"OBJ_NPC_DB",
@@ -663,10 +678,13 @@
       	"dialogTitle":"OBJ_NPC_DANI",
       	"text":"Slacking on your job I see.",
       	"align":2},
-      "DialogTextDaniDay0B":{"comment":"only in story events this day"},
+      "DialogTextDaniDay0B":{
+      	"dialogTitle":"OBJ_NPC_DANI",
+      	"text":"See, it's nothing mysterious.",
+      	"align":2},
       "DialogTextDaniDay0C":{
       	"dialogTitle":"OBJ_NPC_DANI",
-      	"text":"Last day already?^|Not a bad idea to move on.",
+      	"text":"Last day already?|Not a bad idea to move on.",
       	"align":2},
       "DialogTextDaniDay0D":{
       	"comment":"at the arcade",
@@ -712,7 +730,7 @@
       	"align":2},
       "DialogTextGuardDay09":{
       	"dialogTitle":"OBJ_NPC_GUARD",
-      	"text":"Too many people around this late.^|Go home already all of you.",
+      	"text":"Too many people around this late.|Go home already all of you.",
       	"align":2},
       "DialogTextGuardDay0A":{
       	"dialogTitle":"OBJ_NPC_GUARD",
@@ -728,7 +746,7 @@
       	"align":2},
       "DialogTextGuardDay0D":{
       	"dialogTitle":"OBJ_NPC_GUARD",
-      	"text":"You all need to move on.^|I have plans tonight.^|No, really, I do.",
+      	"text":"You all need to move on.|I have plans tonight.|No, really, I do.",
       	"align":2},
       "DialogTextBillyDay00":{
       	"comment":"loitering in the tv section",
@@ -782,7 +800,7 @@
       "DialogTextAlDay0B":{
       	"comment":"after story event",
       	"dialogTitle":"OBJ_NPC_AL",
-      	"text":"This work is very important.^|You wouldn't understand.",
+      	"text":"This work is very important.|You wouldn't understand.",
       	"align":2},
       "DialogTextAlDay0C":{"comment":"eryn never visits the basement"},
       "DialogTextAlDay0D":{
@@ -1051,7 +1069,10 @@
       	"dialogTitle":"OBJ_NPC_CRAIG",
       	"text":"I didn't think anyone would find me.",
       	"align":2},
-      "DialogTextCraigDay01":{"comment":"not present this night"},
+      "DialogTextCraigDay01":{
+      	"dialogTitle":"OBJ_NPC_CRAIG",
+      	"text":"Closing takes too long .",
+      	"align":2},
       "DialogTextCraigDay02":{
       	"dialogTitle":"OBJ_NPC_CRAIG",
       	"text":"I barely see anything back here.",

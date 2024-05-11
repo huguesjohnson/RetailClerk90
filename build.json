@@ -2,8 +2,7 @@
 	"basePath":".",
 	"memoryMap":{
 		"sourceFiles":[
-			"design/constants/MemoryMapRC90.csv",
-			"design/constants/MemoryMapRCBase.csv"
+			"design/constants/MemoryMap.csv"
 		],
 		"destinationFile":"src/const_MemoryMap.X68",
 		"baseAddress":"FFFF0000"
@@ -608,6 +607,24 @@
 				"destinationFilePath":"src/palettes/vision-02.X68",
 				"allowDuplicateColors":"true"
 			},
+			{
+				"name":"PaletteVisionBluescale00",
+				"sourceFilePath":"design/img/swatches/vision-bluescale-00.png",
+				"destinationFilePath":"src/palettes/vision-bluescale-00.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteVisionBluescale01",
+				"sourceFilePath":"design/img/swatches/vision-bluescale-01.png",
+				"destinationFilePath":"src/palettes/vision-bluescale-01.X68",
+				"allowDuplicateColors":"true"
+			},
+			{
+				"name":"PaletteVisionBluescale02",
+				"sourceFilePath":"design/img/swatches/vision-bluescale-02.png",
+				"destinationFilePath":"src/palettes/vision-bluescale-02.X68",
+				"allowDuplicateColors":"true"
+			},			
 			{
 				"name":"PaletteFlashbackStore00",
 				"sourceFilePath":"design/img/swatches/flashback-store-00.png",
@@ -3095,7 +3112,6 @@
 		"textFilePath":"src/text/en-us/strings.X68",
 		"filePaths":[
 			"design/text/en-us/generaltext.json",
-			"design/text/en-us/scenetext.json",
 			"design/text/en-us/menus.json",
 			"design/text/en-us/characternames.json",
 			"design/text/en-us/defaultobjectdescriptions.json",
@@ -3130,7 +3146,6 @@
 		{"day":1,"scene":"SCENE_ID_EEHALL","action":"EnterScene","label":"ActionScriptNight00EEHallEnter"},
 		{"day":1,"scene":"SCENE_ID_SVIDEO","action":"Interact","label":"ActionScriptNight00SVideoInteract"},
 		{"day":1,"scene":"SCENE_ID_SHALL","action":"EnterScene","label":"ActionScriptNight00SouthHallEnter"},
-		{"day":1,"scene":"SCENE_ID_TBOOKS","action":"ExitScene","label":"ActionScriptNight00TBooksExit"},
 		{"day":1,"scene":"SCENE_ID_SHALL","action":"ExitScene","label":"ActionScriptNight00SouthHallExit"},
 		{"day":1,"scene":"SCENE_ID_VB","action":"Interact","label":"ActionScriptNight00VBInteract"},
 		{"day":1,"scene":"SCENE_ID_VB","action":"Respond","label":"ActionScriptNight00VBRespond"},
@@ -3149,8 +3164,8 @@
 		{"day":3,"scene":"SCENE_ID_EEHALL","action":"EnterScene","label":"ActionScriptNight01EEHallEnter"},
 		{"day":3,"scene":"SCENE_ID_TLODGE","action":"EnterScene","label":"ActionScriptNight01TLodgeEnter"},
 		{"day":3,"scene":"SCENE_ID_TLODGE","action":"Interact","label":"ActionScriptNight01TLodgeInteract"},
-		{"day":3,"scene":"SCENE_ID_SOUTH_CENTER","action":"ExitScene","label":"ActionScriptNight01SouthCenterExit"},
 		{"day":3,"scene":"SCENE_ID_SHALL","action":"ExitScene","label":"ActionScriptNight01SHallExit"},
+		{"day":3,"scene":"SCENE_ID_SHALL","action":"EnterScene","label":"ActionScriptNight01SHallEnter"},
 		{"day":3,"scene":"SCENE_ID_WWAPPLIANCES","action":"Interact","label":"ActionScriptNight01WWAppliancesInteract"},
 		{"day":3,"scene":"SCENE_ID_WWAPPLIANCES","action":"Respond","label":"ActionScriptNight01WWAppliancesRespond"},
 		{"day":3,"scene":"SCENE_ID_VB","action":"Interact","label":"ActionScriptNight01VBInteract"},
@@ -3261,7 +3276,6 @@
 		{"day":10,"scene":"SCENE_ID_WWCHECKOUT","action":"Interact","label":"ActionScriptDay05SceneWWCheckoutTrading"},
 		{"day":12,"scene":"SCENE_ID_WWCHECKOUT","action":"Interact","label":"ActionScriptDay05SceneWWCheckoutTrading"},
 		{"day":12,"scene":"SCENE_ID_POGODAWG","action":"Interact","label":"ActionScriptDay06ScenePogoDawgTrading"},
-		{"day":12,"scene":"SCENE_ID_VB","action":"Interact","label":"ActionScriptDay06SceneVBTrading"},
 		{"day":3,"scene":"SCENE_ID_FCBFIREARMS","action":"Interact","label":"ActionScriptNight01SceneFCBFirearmsTrading"},
 		{"day":5,"scene":"SCENE_ID_FCBFIREARMS","action":"Interact","label":"ActionScriptNight01SceneFCBFirearmsTrading"},
 		{"day":7,"scene":"SCENE_ID_FCBFIREARMS","action":"Interact","label":"ActionScriptNight01SceneFCBFirearmsTrading"},

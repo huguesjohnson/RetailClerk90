@@ -17,7 +17,9 @@ ActionScriptNight05CavernEnter:
 	; setup scripted event
 	lea ScriptedEventNight05_01_CavernStart,a6 ; point a6 to event to load
 	bsr.w QueueScriptedEvent ; queue the event
+	rts
 .default
+	bsr.w	DefaultEnterScene
 	rts
 
 ; assumes d7 has MEM_DAY_EVENT_FLAGS
@@ -52,6 +54,7 @@ ActionScriptNight05BasementMDormEnter:
 	bsr.w QueueScriptedEvent ; queue the event
 	rts
 .default
+	bsr.w	DefaultEnterScene
 	rts
 
 ;*******************************************************************************
@@ -75,7 +78,7 @@ ActionScriptNight05BasementOfficeEnter:
 	bsr.w QueueScriptedEvent ; queue the event
 	rts
 .default
-	bsr.w ShowDefaultText
+	bsr.w	DefaultEnterScene
 	rts
 
 CheckNight05Events:

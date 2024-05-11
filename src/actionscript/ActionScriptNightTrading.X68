@@ -12,13 +12,11 @@
 ;  get: OBJ_ITEM_MOOSE_ATTRACTANT
 ;*******************************************************************************
 ActionScriptNight01SceneFCBFirearmsTrading:
-	;----------------------------
-	; test if talking to npc0
-	;----------------------------
-	move.w	(MEM_ACTION_TARGET_NPCID),d7 ; copy the npc id to d7
-	cmpi.w	#$FFFF,d7 ; test if the target is even an npc
-	beq.w	TradingDefault ; not an npc - show default text
-	cmpi.w	#$0000,d7 ; test for npc0
+	;---------------------------------------------------------------
+	; clerk hit region is an object because they are behind the counter
+	;---------------------------------------------------------------
+	move.w	(MEM_ACTION_TARGET_OBJID),d7 ; copy the object id to d7
+	cmpi.w	#OBJ_NPC_RANDY,d7 ; test if the target is the clerk
 	bne.w	TradingDefault ; not npc0 - show default text
 	;----------------------------
 	; trading sequence

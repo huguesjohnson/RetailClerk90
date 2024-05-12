@@ -559,7 +559,7 @@
       	"align":2},
       "DialogTextCharlesDay0C":{
       	"dialogTitle":"OBJ_NPC_CHARLES",
-      	"text":"I hope D.B. is opening the arcade tonight.",
+      	"text":"I hope D.B. opens the arcade tonight.",
       	"align":2},
       "DialogTextCharlesDay0D":{
       	"comment":"at the arcade",
@@ -591,7 +591,7 @@
       "DialogTextRandyDay07":{"comment":"trading sequence"},
       "DialogTextRandyDay08":{
       	"dialogTitle":"OBJ_NPC_RANDY",
-      	"text":"I can't until it's slow again,|and I can get back to my hobby.",
+      	"text":"I can't wait until it's slow again,|so I have time for my hobby.",
       	"align":2},
       "DialogTextRandyDay09":{"comment":"trading sequence"},
       "DialogTextRandyDay0A":{
@@ -684,7 +684,7 @@
       	"align":2},
       "DialogTextDaniDay0C":{
       	"dialogTitle":"OBJ_NPC_DANI",
-      	"text":"Last day already?|Not a bad idea to move on.",
+      	"text":"It's your last day already?|Not a bad idea to move on.",
       	"align":2},
       "DialogTextDaniDay0D":{
       	"comment":"at the arcade",
@@ -996,7 +996,7 @@
       "DialogTextNickyDay06":{
       	"comment":"after optional event",
       	"dialogTitle":"OBJ_NPC_NICKY",
-      	"text":"That was so easy afterall.",
+      	"text":"That was so easy after all.",
       	"align":2},
       "DialogTextNickyDay07":{"comment":"not present at night"},
       "DialogTextNickyDay08":{
@@ -1045,7 +1045,7 @@
       	"align":2},
       "DialogTextTanyaDay07":{
       	"dialogTitle":"OBJ_NPC_TANYA",
-      	"text":"Is something wrong tonight?|You look flustered tonight.",
+      	"text":"Is something wrong tonight?|You look flustered.",
       	"align":2},
       "DialogTextTanyaDay08":{
       	"dialogTitle":"OBJ_NPC_TANYA",
@@ -1067,7 +1067,7 @@
       	"align":2},
       "DialogTextCraigDay00":{
       	"dialogTitle":"OBJ_NPC_CRAIG",
-      	"text":"I didn't think anyone would find me.",
+      	"text":"I didn't think anyone would find me here.",
       	"align":2},
       "DialogTextCraigDay01":{
       	"dialogTitle":"OBJ_NPC_CRAIG",
@@ -1126,7 +1126,7 @@
       "DialogTextJuanDay05":{"comment":"not present at night"},
       "DialogTextJuanDay06":{
       	"dialogTitle":"OBJ_NPC_JUAN",
-      	"text":"Maybe it's just just me but..|are some of the shoppers not very bright?",
+      	"text":"Maybe it's just just me but are some|of the shoppers not very bright?",
       	"align":2},
       "DialogTextJuanDay07":{"comment":"not present at night"},
       "DialogTextJuanDay08":{"comment":"trading sequence"},
@@ -1273,7 +1273,7 @@
       "DialogTextSantaDay07":{"comment":"not present at night"},
       "DialogTextSantaDay08":{
       	"dialogTitle":"OBJ_NPC_SANTA",
-      	"text":"Can the elves can make so many Game Boys?",
+      	"text":"Can the elves make so many Game Boys?",
       	"align":2},
       "DialogTextSantaDay09":{"comment":"not present at night"},
       "DialogTextSantaDay0A":{
@@ -1354,7 +1354,7 @@
       "DialogTextRockerDay0A":{
       	"comment":"at pogodawg this day",
       	"dialogTitle":"OBJ_NPC_ROCKER",
-      	"text":"I know this is awful.|But what choice is there?",
+      	"text":"I know this is awful.|What choice is there?",
       	"align":2},
       "DialogTextRockerDay0B":{"comment":"not present at night"},
       "DialogTextRockerDay0C":{
@@ -1390,7 +1390,7 @@
       "DialogTextShopperDay08":{
       	"comment":"at VB this day",
       	"dialogTitle":"OBJ_NPC_SHOPPER",
-      	"text":"I can't decide which if these looks better.",
+      	"text":"I can't decide which of these looks better.",
       	"align":2},
       "DialogTextShopperDay09":{"comment":"not present at night"},
       "DialogTextShopperDay0A":{
@@ -1544,7 +1544,7 @@
       "DialogTextYuppieDay06":{
       	"comment":"in the south hall this day",
       	"dialogTitle":"OBJ_NPC_YUPPIE",
-      	"text":"They need better resturaunts here.",
+      	"text":"They need better restaurants here.",
       	"align":2},
       "DialogTextYuppieDay07":{"comment":"not present at night"},
       "DialogTextYuppieDay08":{
@@ -1580,7 +1580,7 @@
       "DialogTextNelsonDay0C":{"comment":"not present until day0D"},
       "DialogTextNelsonDay0D":{
       	"dialogTitle":"OBJ_NPC_NELSON",
-      	"text":"Don't worry about me.|I can handle closing solo.",
+      	"text":"Don't worry, I can handle closing solo.",
       	"align":2},
       "DialogTextVictorDay00":{"comment":"only used in scripted events"},
       "DialogTextVictorDay01":{"comment":"only used in scripted events"},
@@ -1635,7 +1635,7 @@
       	"align":2},
       "DialogTextHiddenHJDay0D":{
       	"dialogTitle":"OBJ_NPC_HIDDENHJ",
-      	"text":"I feel like this room|should have more scenery.|Very lazy effort.",
+      	"text":"This room should have more scenery.|Very lazy effort.",
       	"align":2},
       "DialogTextHiddenMJDay00":{"comment":"not present until day0C"},
       "DialogTextHiddenMJDay01":{"comment":"not present until day0C"},

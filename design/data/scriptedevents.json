@@ -4481,8 +4481,8 @@
       "name":"ScriptedEventNight04_Optional00_Laura",
       "actions":[
          {
-            "comment":"NPC1 sprite",
-            "intConst":"SCRIPTED_EVENT_SPRITE_NPC1"
+            "comment":"NPC0 sprite",
+            "intConst":"SCRIPTED_EVENT_SPRITE_NPC0"
          },
          {
             "comment":"dialog",
@@ -4500,10 +4500,20 @@
             "label":"StoryTextNight04WWTVLine3"
          },
          {
+            "comment":"npc0 faces up",
+            "direction":"UP",
+            "intValue":0
+         },          
+         {
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight04WWTVLine4"
          },
+         {
+            "comment":"npc0 faces down",
+            "direction":"DOWN",
+            "intValue":0
+         },           
          {
             "comment":"dialog",
             "command":"DIALOG",
@@ -4513,6 +4523,11 @@
             "comment":"dialog",
             "command":"DIALOG",
             "label":"StoryTextNight04WWTVLine6"
+         },
+         {
+            "comment":"change to npc1",
+            "command":"CHANGE_SPRITE",
+            "intConst":"SCRIPTED_EVENT_SPRITE_NPC1"
          },
          {
             "comment":"npc1 faces up after the event",

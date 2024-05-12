@@ -2623,8 +2623,8 @@ ScriptedEventNight04_03_SouthHallStart:
 ScriptedEventNight04_03_SouthHallEnd:
 
 ScriptedEventNight04_Optional00_LauraStart:
-	; NPC1 sprite
-	dc.w	SCRIPTED_EVENT_SPRITE_NPC1
+	; NPC0 sprite
+	dc.w	SCRIPTED_EVENT_SPRITE_NPC0
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight04WWTVLine1
@@ -2634,15 +2634,24 @@ ScriptedEventNight04_Optional00_LauraStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight04WWTVLine3
+	; npc0 faces up
+	dc.w	DIRECTION_UP
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight04WWTVLine4
+	; npc0 faces down
+	dc.w	DIRECTION_DOWN
+	dc.w	$0000
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight04WWTVLine5
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight04WWTVLine6
+	; change to npc1
+	dc.w	SCRIPTED_EVENT_CHANGE_SPRITE
+	dc.w	SCRIPTED_EVENT_SPRITE_NPC1
 	; npc1 faces up after the event
 	dc.w	DIRECTION_UP
 	dc.w	$0000

@@ -9,11 +9,7 @@
 MovePlayer:
 	andi.l	#$00000000,d7	; lazy way to prevent issues
 	move.b	(MEM_CONTROL_HELD),d7	; copy button held value to d7 for eor
-;	cmpi.b	#$00,d7				; test if it is zero
 	beq.w	StopPlayerSprite		; branch if a direction is being held
-;PlayerNotMoving:
-;	bra.w	StopPlayerSprite		; reset the sprite frame
-;	;bra.w	EndMovePlayer	
 
 SetPlayerDirection:
 ; map key press to direction

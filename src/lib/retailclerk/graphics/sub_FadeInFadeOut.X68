@@ -14,7 +14,7 @@ LoadSceneFadeInOuterLoop:
 LoadSceneFadeInInnerLoop:
 	move.w	(a1)+,d6	; get the next palette entry
 	tst.w	d3	; is d3 0?
-	beq.s	LoadSceneFadeInWritePaletteEntry; if d3 is then then done fading
+	beq.s	LoadSceneFadeInWritePaletteEntry; if d3 is 0 then nothing to fade into
 LoadSceneFadeInLsrLoop:
 	lsr.w	#$01,d6	; shift bits to the right to decrease color intensity
 	;	      0000BBBSGGGSRRRS
@@ -58,6 +58,12 @@ ExitFadeOut:
 	rts	; exit
 
 FadeFrameDelay:
+	move.l	(MEM_GAME_STATE),d7 ; copy current game state to d7
+	btst.l	#STATE_FLAG_STATUS_SCREEN,d7 ; test if on the status/menu screen
+	beq.s	.defaultdelay ; not set, use default
+	move.w	#FADE_FRAME_DELAY_MENU,d4	; copy menu frame delay to d6
+	bra.s	FadeFrameDelayLoop ; go to the loop
+.defaultdelay
 	move.w	#FADE_FRAME_DELAY,d4	; copy frame delay to d6
 FadeFrameDelayLoop:
 	bsr.w	WaitVBlank	; force waiting for a frame

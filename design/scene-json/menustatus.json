@@ -108,7 +108,7 @@
 			"stringLabel":"StatusScreenInventory",
 			"comment":"inventory label",
 			"highPriority":false,
-			"paletteNumber":3,
+			"paletteNumber":1,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"0A800000",
 			"column":"00040000"

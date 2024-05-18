@@ -800,6 +800,13 @@
 				"allowDuplicateTiles":"false"
 			},
 			{
+				"name":"BorderTile",
+				"palette":"PalettePeople",
+				"sourceFilePath":"design/img/scene-tiles/border.png",
+				"destinationFilePath":"src/tiles/scene-tiles/border-tile.X68",
+				"allowDuplicateTiles":"false"
+			},
+			{
 				"name":"Font",
 				"palette":"PaletteFontDialogBase",
 				"sourceFilePath":"design/img/font-dialog-tiles/font.png",

@@ -14,7 +14,8 @@
 		"AudioSpeakerHigh16x8",
 		"AudioSpeakerLow16x24",
 		"AudioBoxWithSubwooferHigh32x8",
-		"AudioBoxWithSubwooferHighLow32x24"
+		"AudioBoxWithSubwooferHighLow32x24",
+		"BorderTile"
 	],
 	"paletteNames":[
 		"PaletteWWFloorWall",
@@ -466,6 +467,54 @@
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"08800000",
 			"column":"003A0000"
+		},
+		{
+			"patternName":"Pattern8x8x320",
+			"comment":"north border",
+			"tilesetIndex":12,
+			"tilesetOffset":0,
+			"highPriority":true,
+			"paletteNumber":3,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"00000000",
+			"column":"00000000"
+		},
+		{
+			"patternName":"Pattern8x8x320",
+			"comment":"south border",
+			"tilesetIndex":12,
+			"tilesetOffset":0,
+			"highPriority":true,
+			"paletteNumber":3,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"0D800000",
+			"column":"00000000"
+		},		
+		{
+			"patternName":"Pattern8x8",
+			"comment":"west border",
+			"tilesetIndex":12,
+			"tilesetOffset":0,
+			"highPriority":true,
+			"paletteNumber":3,
+			"repeat":26,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"00000000",
+			"column":"00000000"
+		},	
+		{
+			"patternName":"Pattern8x8",
+			"comment":"east border",
+			"tilesetIndex":12,
+			"tilesetOffset":0,
+			"highPriority":true,
+			"paletteNumber":3,
+			"repeat":26,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"00000000",
+			"column":"004E0000"
 		}		
 	],
 	"objects":[

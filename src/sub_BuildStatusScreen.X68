@@ -138,7 +138,7 @@ BuildStatusScreenObjectiveTextLoop:
 	cmpi.l	#STATUS_SCREEN_OBJECTIVE_VDP,d7 ; first line?
 	bne.s	.2 ; if not, palette 3
 	; otherwise palette 2
-	add.w	#FONT_BASE_TILE_LOW+%0100000000000000,d6	; add the base tile
+	add.w	#FONT_BASE_TILE_LOW+%0010000000000000,d6	; add the base tile
 	bra.s	.3
 .2
 	add.w	#FONT_BASE_TILE_LOW+%0110000000000000,d6	; add the base tile

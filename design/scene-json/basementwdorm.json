@@ -10,7 +10,8 @@
 		"BasementDresser32x40",
 		"BasementCouchLeft24x40",
 		"BasementCouchRight24x40",
-		"BasementGlassTable32x24"
+		"BasementGlassTable32x24",
+		"BorderTile"
 	],
 	"paletteNames":[
 		"PaletteBasementFloor",
@@ -189,7 +190,7 @@
 			"column":"002E0000"
 		},	
 		{
-			"patternName":"Pattern32x40",
+			"patternName":"Pattern32x24",
 			"comment":"glass table",
 			"tilesetIndex":7,
 			"tilesetOffset":0,
@@ -199,6 +200,54 @@
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"07800000",
 			"column":"00240000"
+		},
+		{
+			"patternName":"Pattern8x8x320",
+			"comment":"north border",
+			"tilesetIndex":8,
+			"tilesetOffset":0,
+			"highPriority":true,
+			"paletteNumber":3,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"00000000",
+			"column":"00000000"
+		},
+		{
+			"patternName":"Pattern8x8x320",
+			"comment":"south border",
+			"tilesetIndex":8,
+			"tilesetOffset":0,
+			"highPriority":true,
+			"paletteNumber":3,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"0D800000",
+			"column":"00000000"
+		},		
+		{
+			"patternName":"Pattern8x8",
+			"comment":"west border",
+			"tilesetIndex":8,
+			"tilesetOffset":0,
+			"highPriority":true,
+			"paletteNumber":3,
+			"repeat":26,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"00000000",
+			"column":"00000000"
+		},	
+		{
+			"patternName":"Pattern8x8",
+			"comment":"east border",
+			"tilesetIndex":8,
+			"tilesetOffset":0,
+			"highPriority":true,
+			"paletteNumber":3,
+			"repeat":26,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"00000000",
+			"column":"004E0000"
 		}		
 	],
 	"objects":[

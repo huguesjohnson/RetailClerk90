@@ -11,9 +11,10 @@ DrawScene:
 ;-------------------------------------------------------------------------------
 ; fade out current palette
 ;-------------------------------------------------------------------------------
-	move.l	(MEM_GAME_STATE),d7 ; copy current game state to d7
-	btst.l	#STATE_FLAG_STATUS_SCREEN,d7 ; test if on the status/menu screen
-	bne.s	DrawSceneClearVDP
+; next 3 lines - commented out to see how this looks on original hardware
+;	move.l	(MEM_GAME_STATE),d7 ; copy current game state to d7
+;	btst.l	#STATE_FLAG_STATUS_SCREEN,d7 ; test if on the status/menu screen
+;	bne.s	DrawSceneClearVDP
 	bsr.w	FadeOut
 
 ;-------------------------------------------------------------------------------

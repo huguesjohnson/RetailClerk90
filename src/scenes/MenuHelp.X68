@@ -87,7 +87,7 @@
 
 	; controls
 	dc.l	StatusScreenHelpControls
-	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_A+$00020000+$02000000 ; initial drawing location
 
 	dc.l	Day00IntroTip0
@@ -120,7 +120,7 @@
 
 	; hints
 	dc.l	StatusScreenHelpHints
-	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_A+$00020000+$0A000000 ; initial drawing location
 
 	dc.l	StatusScreenHelpHints00

@@ -4,6 +4,10 @@ TransparentTileTilesStart:
 	include 'tiles/scene-tiles/transparent-tile.X68'
 TransparentTileTilesEnd:
 
+BorderTileTilesStart:
+	include 'tiles/scene-tiles/border-tile.X68'
+BorderTileTilesEnd:
+
 FontTilesStart:
 	include 'tiles/font-tiles/dwf.X68'
 FontTilesEnd:

@@ -385,7 +385,7 @@
 			"stringLabel":"TitleScreenTextNewGame",
 			"comment":"new game text",
 			"highPriority":false,
-			"paletteNumber":3,
+			"paletteNumber":2,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"0A000000",
 			"column":"00140000"
@@ -394,7 +394,7 @@
 			"stringLabel":"TitleScreenTextLoadGame",
 			"comment":"load game text",
 			"highPriority":false,
-			"paletteNumber":3,
+			"paletteNumber":2,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"0A800000",
 			"column":"00140000"
@@ -403,7 +403,7 @@
 			"stringLabel":"TitleScreenTextDebug",
 			"comment":"debug text",
 			"highPriority":false,
-			"paletteNumber":3,
+			"paletteNumber":2,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"0B000000",
 			"column":"00140000"

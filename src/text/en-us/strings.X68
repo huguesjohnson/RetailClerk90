@@ -6627,7 +6627,7 @@ StoryTextDay05FCBFirearmsRespond0Line02:
 	dc.b	"mall.^",FF
 	dc.b	"Maybe the designer",LF
 	dc.b	"forgot...^",FF
-	dc.b	"or maybe the mall was",LF
+	dc.b	"Maybe the mall was",LF
 	dc.b	"too big & it got cut.^",FF
 	dc.b	"Whatever the case, no",LF
 	dc.b	"toy store.",ETX
@@ -6640,13 +6640,14 @@ StoryTextDay05FCBFirearmsRespond0Line03:
 StoryTextDay05FCBFirearmsRespond0Line04:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"Whoever designed this",LF
-	dc.b	"mall realized the^",FF
-	dc.b	"importance of denim.",LF
-	dc.b	"Like it's the fabric^",FF
-	dc.b	"of their life.",LF
-	dc.b	"I'd suggest Denim^",FF
-	dc.b	"Country,",LF
-	dc.b	"denim never goes out^",FF
+	dc.b	"mall placed an odd^",FF
+	dc.b	"amount of importance",LF
+	dc.b	"on denim.^",FF
+	dc.b	"Like it's the fabric",LF
+	dc.b	"of their life.^",FF
+	dc.b	"I'd suggest Denim",LF
+	dc.b	"Country,^",FF
+	dc.b	"denim never goes out",LF
 	dc.b	"of style.",ETX
 	align 2
 StoryTextDay05FCBFirearmsRespond0Line05:
@@ -6778,8 +6779,9 @@ StoryTextDay05DenimCountry2Line2:
 	align 2
 StoryTextDay05DenimCountry2Line3:
 	dc.w	OBJ_NPC_DANI
-	dc.b	"I'll just go alreday.",LF
-	dc.b	"I'm not scared of^",FF
+	dc.b	"I'll just go myself",LF
+	dc.b	"already.^",FF
+	dc.b	"I'm not scared of",LF
 	dc.b	"that loser.",ETX
 	align 2
 StoryTextDay05DenimCountry2Line4:
@@ -6802,12 +6804,11 @@ StoryTextDay05CavernChoice:
 	align 2
 StoryTextDay05CavernChoice0:
 	dc.w	OBJ_NPC_DB
-	dc.b	"Yeah, that would be",LF
-	dc.b	"great.^",FF
-	dc.b	"My sister doesn't",LF
-	dc.b	"like any of the new^",FF
-	dc.b	"games.",LF
-	dc.b	"There has to be one^",FF
+	dc.b	"Yeah. My sister",LF
+	dc.b	"doesn't like any of^",FF
+	dc.b	"the new games out",LF
+	dc.b	"right now.^",FF
+	dc.b	"There has to be one",LF
 	dc.b	"for her.",ETX
 	align 2
 StoryTextDay05CavernChoice1:
@@ -6902,12 +6903,11 @@ StoryTextDay05FCBCampingLine1:
 	align 2
 StoryTextDay05FCBCampingLine2:
 	dc.w	OBJ_NPC_GRANT
-	dc.b	"And who remembers",LF
-	dc.b	"their parents^",FF
-	dc.b	"friends?.",LF
-	dc.b	"I do miss the old^",FF
-	dc.b	"times with them.",LF
-	dc.b	"But I wouldn't change^",FF
+	dc.b	"Who remembers their",LF
+	dc.b	"parents friends?^",FF
+	dc.b	"I miss the old times",LF
+	dc.b	"with them.^",FF
+	dc.b	"But I wouldn't change",LF
 	dc.b	"a thing.",ETX
 	align 2
 StoryTextNight05TBooksLine1:
@@ -7006,8 +7006,8 @@ StoryTextNight05BasementMDormLine1:
 	dc.b	"for employees.^",FF
 	dc.b	"When the mall was",LF
 	dc.b	"built in 1975^",FF
-	dc.b	"they had temporary",LF
-	dc.b	"housing built.^",FF
+	dc.b	"they included",LF
+	dc.b	"temporary housing.^",FF
 	dc.b	"There's a kitchen &",LF
 	dc.b	"showers too.^",FF
 	dc.b	"That's Brett.",ETX
@@ -7130,7 +7130,7 @@ StoryTextNight05BasementOfficeLine11:
 	dc.b	"Hmph. She's as",LF
 	dc.b	"miserable as ever.^",FF
 	dc.b	"I think we need to",LF
-	dc.b	"tweek the algorithm.|",ETX
+	dc.b	"tweak the algorithm.|",ETX
 	align 2
 StoryTextNight05BasementOfficeLine12:
 	dc.w	OBJ_NPC_DANI
@@ -7161,7 +7161,7 @@ StoryTextNight05BasementOfficeLine16:
 	dc.b	"better.^",FF
 	dc.b	"Don't try to",LF
 	dc.b	"interfere with us.^",FF
-	dc.b	"Come back in 10",LF
+	dc.b	"Come back in 10-15",LF
 	dc.b	"years,^",FF
 	dc.b	"I promise you'll be",LF
 	dc.b	"euphoric.",ETX
@@ -7212,10 +7212,8 @@ StoryTextNight05WWAppliancesLine2:
 	align 2
 StoryTextNight05WWAppliancesLine3:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"Not mine, it was just",LF
-	dc.b	"the 4 of us.^",FF
-	dc.b	"We didn't celebrate",LF
-	dc.b	"that much.^",FF
+	dc.b	"Not mine, we didn't",LF
+	dc.b	"celebrate much.^",FF
 	dc.b	"One year we didn't",LF
 	dc.b	"even have a tree.",ETX
 	align 2
@@ -7288,8 +7286,9 @@ StoryTextNight05CPlanetLine5:
 	align 2
 StoryTextNight05CPlanetLine6:
 	dc.w	OBJ_NPC_ELIZA
-	dc.b	"That's OK.",LF
-	dc.b	"Say Carl, how'd you^",FF
+	dc.b	"That's OK. It was a",LF
+	dc.b	"long shot to ask you.^",FF
+	dc.b	"Say Carl, how'd you",LF
 	dc.b	"like to tag along?",ETX
 	align 2
 StoryTextNight05CPlanetLine7:
@@ -7417,7 +7416,7 @@ StoryTextDay06CavernLine4:
 	dc.b	"The last 2 months are",LF
 	dc.b	"enough for me.^",FF
 	dc.b	"I'll work outdoors",LF
-	dc.b	"for summer break.",ETX
+	dc.b	"over summer break.",ETX
 	align 2
 StoryTextDay06CavernLine5:
 	dc.w	OBJ_NPC_DB
@@ -7640,12 +7639,11 @@ StoryTextNight06TBooksLine5:
 	align 2
 StoryTextNight06TBooksLine6:
 	dc.w	OBJ_NPC_NELSON
-	dc.b	"I'm surprised they",LF
-	dc.b	"offered me this^",FF
-	dc.b	"promotion.",LF
-	dc.b	"I'd been an assistant^",FF
-	dc.b	"for only 1 year.",LF
-	dc.b	"Why did you turn down^",FF
+	dc.b	"I'm surprised I got",LF
+	dc.b	"this promotion.^",FF
+	dc.b	"I'd been an assistant",LF
+	dc.b	"for only 1 year.^",FF
+	dc.b	"Why did you turn down",LF
 	dc.b	"the manager job here?",ETX
 	align 2
 StoryTextNight06TBooksLine7:
@@ -7677,9 +7675,9 @@ StoryTextNight06TBooksLine10:
 	dc.b	"If you have things",LF
 	dc.b	"under control^",FF
 	dc.b	"do you mind if I",LF
-	dc.b	"leave? There are a^",FF
-	dc.b	"few people I want to",LF
-	dc.b	"see^",FF
+	dc.b	"leave?^",FF
+	dc.b	"There are a few",LF
+	dc.b	"people I want to see^",FF
 	dc.b	"before it's too late",LF
 	dc.b	"at night.",ETX
 	align 2
@@ -7691,7 +7689,7 @@ StoryTextNight06TBooksLine11:
 StoryTextNight06BasementKitchenLine1:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"I'll try once more",LF
-	dc.b	"before I go,^",FF
+	dc.b	"before I go...^",FF
 	dc.b	"how can I help you?",ETX
 	align 2
 StoryTextNight06BasementKitchenLine2:
@@ -7728,7 +7726,7 @@ StoryTextNight06BasementKitchenLine7:
 	align 2
 StoryTextNight06BasementKitchenLine8:
 	dc.w	OBJ_NPC_BRETT
-	dc.b	"Hey, quick one",LF
+	dc.b	"Hey, one quick",LF
 	dc.b	"thing...^",FF
 	dc.b	"I overhear those guys",LF
 	dc.b	"in the office.^",FF
@@ -7739,10 +7737,10 @@ StoryTextNight06BasementKitchenLine8:
 	align 2
 StoryTextNight06BasementKitchenLine9:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"I don't think I will.",LF
+	dc.b	"It's not in my plans.",LF
 	dc.b	"This mall is fine,^",FF
 	dc.b	"but I won't be in the",LF
-	dc.b	"area again.",ETX
+	dc.b	"area soon.",ETX
 	align 2
 StoryTextNight06BasementKitchenLine10:
 	dc.w	OBJ_NPC_BRETT
@@ -7758,8 +7756,9 @@ StoryTextNight06WWAppliancesLine1:
 	align 2
 StoryTextNight06WWAppliancesLine2:
 	dc.w	OBJ_NPC_LAURA
-	dc.b	"That's a shame, Carl.",LF
-	dc.b	"Who will help us out^",FF
+	dc.b	"That's a real shame,",LF
+	dc.b	"Carl.^",FF
+	dc.b	"Who will help us out",LF
 	dc.b	"at night now?",ETX
 	align 2
 StoryTextNight06WWAppliancesLine3:
@@ -7789,7 +7788,7 @@ StoryTextNight06WWAppliancesLine7:
 	dc.b	"The mall part is 8",LF
 	dc.b	"stories.^",FF
 	dc.b	"The entire building",LF
-	dc.b	"is over 70.",ETX
+	dc.b	"is over 60.",ETX
 	align 2
 StoryTextNight06WWAppliancesLine8:
 	dc.w	OBJ_NPC_LAURA
@@ -7894,7 +7893,7 @@ StoryTextNight06VBLine5:
 	dc.b	"soon.^",FF
 	dc.b	"We already picked out",LF
 	dc.b	"a place up north.^",FF
-	dc.b	"I'm won't to leave",LF
+	dc.b	"I don't want to leave",LF
 	dc.b	"the company dry.^",FF
 	dc.b	"I want to find my",LF
 	dc.b	"replacement first.",ETX
@@ -7944,8 +7943,7 @@ StoryTextNight06HiddenLine01:
 	dc.b	"Relax, no one is",LF
 	dc.b	"looking for us.^",FF
 	dc.b	"I just wanted to see",LF
-	dc.b	"if this place was^",FF
-	dc.b	"real.",ETX
+	dc.b	"if this was real.",ETX
 	align 2
 StoryTextNight06HiddenLine02:
 	dc.w	OBJ_NPC_HIDDENHJ
@@ -7962,20 +7960,17 @@ StoryTextNight06HiddenLine03:
 	align 2
 StoryTextNight06HiddenLine04:
 	dc.w	OBJ_NPC_HIDDENHJ
-	dc.b	"Oh, no. You don't",LF
-	dc.b	"have any regrets I^",FF
-	dc.b	"hope?",ETX
+	dc.b	"No regrets I hope?",ETX
 	align 2
 StoryTextNight06HiddenLine05:
 	dc.w	OBJ_NPC_HIDDENMJ
-	dc.b	"Not at all. It's not",LF
+	dc.b	"No, nothing like",LF
 	dc.b	"that.^",FF
-	dc.b	"This is just sad to",LF
-	dc.b	"think about.^",FF
-	dc.b	"Mall employees stuck",LF
-	dc.b	"living in the^",FF
-	dc.b	"basement.",LF
-	dc.b	"We probably knew some^",FF
+	dc.b	"This place makes me",LF
+	dc.b	"sad.^",FF
+	dc.b	"Employees living in",LF
+	dc.b	"the basement,^",FF
+	dc.b	"we probably knew some",LF
 	dc.b	"of them.",ETX
 	align 2
 StoryTextNight06HiddenLine06:
@@ -8007,7 +8002,7 @@ StoryTextEndBadLine2:
 StoryTextEndBadLine3:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"Weren't you looking",LF
-	dc.b	"at a letter?^",FF
+	dc.b	"into a letter?^",FF
 	dc.b	"Or something like",LF
 	dc.b	"that.",ETX
 	align 2
@@ -8128,8 +8123,7 @@ StoryTextEndGoodLine12:
 StoryTextEndGoodLine13:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"All the Iraq news",LF
-	dc.b	"will put me to sleep^",FF
-	dc.b	"as usual.",ETX
+	dc.b	"will put me to sleep.",ETX
 	align 2
 StoryTextEndGoodLine14:
 	dc.w	OBJ_NPC_CARL
@@ -8172,7 +8166,7 @@ StoryTextEndGoodLine18:
 	dc.b	"I helped you both",LF
 	dc.b	"every night.^",FF
 	dc.b	"Eryn joined our group",LF
-	dc.b	"in winter.^",FF
+	dc.b	"in the fall.^",FF
 	dc.b	"We were together",LF
 	dc.b	"every night.",ETX
 	align 2
@@ -8234,7 +8228,7 @@ StoryTextEndGoodLine27:
 	dc.b	"get this done.^",FF
 	dc.b	"Then it's off to the",LF
 	dc.b	"next town.^",FF
-	dc.b	"If you're done",LF
+	dc.b	"If you're through",LF
 	dc.b	"moping, let's go.",ETX
 	align 2
 StoryTextEndGoodLine28:
@@ -8248,8 +8242,10 @@ StoryTextEndGoodLine29:
 	dc.b	"Engine.^",FF
 	dc.b	"It reached its full",LF
 	dc.b	"power in 2000.^",FF
-	dc.b	"In 2002 you wished it",LF
-	dc.b	"was 1990 again,^",FF
+	dc.b	"You came back here in",LF
+	dc.b	"2002.^",FF
+	dc.b	"You wished it was",LF
+	dc.b	"1990 again,^",FF
 	dc.b	"and that's exactly",LF
 	dc.b	"what you saw.",ETX
 	align 2
@@ -8263,7 +8259,7 @@ StoryTextEndGoodLine31:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"Did you learn",LF
 	dc.b	"anything this year?^",FF
-	dc.b	"Or is only what you",LF
+	dc.b	"Or this only what you",LF
 	dc.b	"remember?",ETX
 	align 2
 StoryTextEndGoodLine32:
@@ -8308,10 +8304,10 @@ StoryTextEndGoodLine38:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"A story about time",LF
 	dc.b	"travel & regrets.^",FF
-	dc.b	"It's been done, but",LF
-	dc.b	"it works.^",FF
-	dc.b	"Some people like that",LF
-	dc.b	"story.",ETX
+	dc.b	"It's not very",LF
+	dc.b	"original,^",FF
+	dc.b	"but some people like",LF
+	dc.b	"that kind of story.",ETX
 	align 2
 StoryTextEndGoodLine39:
 	dc.w	OBJ_NPC_CARL
@@ -8349,9 +8345,10 @@ StoryTextEndPerfectLine3:
 	align 2
 StoryTextEndPerfectLine4:
 	dc.w	OBJ_NPC_DB
-	dc.b	"At least nothing",LF
-	dc.b	"weird happened this^",FF
-	dc.b	"year.",ETX
+	dc.b	"I'm happy it was a",LF
+	dc.b	"normal year.^",FF
+	dc.b	"Nothing weird",LF
+	dc.b	"happened this time.",ETX
 	align 2
 StoryTextEndPerfectLine5:
 	dc.w	OBJ_NPC_CARL
@@ -8420,9 +8417,8 @@ StoryTextEndPerfectLine14:
 	align 2
 StoryTextEndPerfectLine15:
 	dc.w	OBJ_NPC_JEN
-	dc.b	"Exactly, but more",LF
-	dc.b	"like tearing down the^",FF
-	dc.b	"80s.",ETX
+	dc.b	"More like tearing",LF
+	dc.b	"down the 80s.",ETX
 	align 2
 StoryTextEndPerfectLine16:
 	dc.w	OBJ_NPC_CARL
@@ -8512,10 +8508,10 @@ StoryTextTradingSequenceFCBFirearms2:
 	align 2
 StoryTextTradingSequenceFCBFirearms3:
 	dc.w	OBJ_NPC_RANDY
-	dc.b	"That's the only tape",LF
-	dc.b	"in the series^",FF
-	dc.b	"I'm missing.",LF
-	dc.b	"Do you mind trading?^",FF
+	dc.b	"That's the last tape",LF
+	dc.b	"in the series.^",FF
+	dc.b	"Do you mind trading",LF
+	dc.b	"with me for it?^",FF
 	dc.b	"I can give you this",LF
 	dc.b	"moose attractant.^",FF
 	dc.b	"I already shot one.",ETX
@@ -8523,7 +8519,8 @@ StoryTextTradingSequenceFCBFirearms3:
 StoryTextTradingSequenceFCBFirearms4:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"Great, thanks Randy!",LF
-	dc.b	"I can't wait to find^",FF
+	dc.b	"It's a deal.^",FF
+	dc.b	"I can't wait to find",LF
 	dc.b	"out who wants this.",ETX
 	align 2
 StoryTextTradingSequenceFCBFirearmsAfter:
@@ -8532,7 +8529,7 @@ StoryTextTradingSequenceFCBFirearmsAfter:
 	dc.b	"one of my best shots.^",FF
 	dc.b	"I'm working on a",LF
 	dc.b	"photography book.^",FF
-	dc.b	"Can't work in the",LF
+	dc.b	"Can't stay in the",LF
 	dc.b	"mall forever.",ETX
 	align 2
 StoryTextTradingSequenceWWAppliancesBefore:
@@ -8548,10 +8545,9 @@ StoryTextTradingSequenceWWAppliancesBefore:
 	align 2
 StoryTextTradingSequenceWWAppliances1:
 	dc.w	OBJ_NPC_ERYN
-	dc.b	"Have these",LF
+	dc.b	"Please take these",LF
 	dc.b	"handwarmers.^",FF
-	dc.b	"I don't need them.",LF
-	dc.b	"I don't want anything^",FF
+	dc.b	"I don't want anything",LF
 	dc.b	"in return.",ETX
 	align 2
 StoryTextTradingSequenceWWAppliances2:
@@ -8565,7 +8561,7 @@ StoryTextTradingSequenceWWAppliances2:
 	dc.b	"It's brand new. It's",LF
 	dc.b	"not my color.^",FF
 	dc.b	"I don't trust the guy",LF
-	dc.b	"who gave it me,^",FF
+	dc.b	"who gave it to me,^",FF
 	dc.b	"I think he's seeing",LF
 	dc.b	"someone else.",ETX
 	align 2
@@ -8601,14 +8597,13 @@ StoryTextTradingSequenceCheckers3:
 	dc.b	"for it.^",FF
 	dc.b	"All I have is this",LF
 	dc.b	"clearance shirt.^",FF
-	dc.b	"We have to get rid of",LF
-	dc.b	"ASAP.^",FF
-	dc.b	"It's a smaller size.",LF
-	dc.b	"And we have a new^",FF
-	dc.b	"store policy to only",LF
-	dc.b	"sell clothes to^",FF
-	dc.b	"people over 6ft.",LF
-	dc.b	"Sorry if it's not^",FF
+	dc.b	"We have to get rid",LF
+	dc.b	"off all small sizes.^",FF
+	dc.b	"There's a new store",LF
+	dc.b	"policy from HQ.^",FF
+	dc.b	"We only sell to",LF
+	dc.b	"people over 6ft now.^",FF
+	dc.b	"Sorry if it's not",LF
 	dc.b	"your size.",ETX
 	align 2
 StoryTextTradingSequenceCheckers4:
@@ -8621,8 +8616,7 @@ StoryTextTradingSequenceCheckersAfter:
 	dc.b	"No one under 6ft",LF
 	dc.b	"allowed.^",FF
 	dc.b	"It's a weird policy,",LF
-	dc.b	"I don't make the^",FF
-	dc.b	"rules.",ETX
+	dc.b	"I didn't make it.",ETX
 	align 2
 StoryTextTradingSequenceCPlanetBefore:
 	dc.w	OBJ_NPC_ELIZA
@@ -8718,8 +8712,8 @@ StoryTextTradingSequenceWWVideo2:
 	dc.w	OBJ_NPC_JUAN
 	dc.b	"You're giving me",LF
 	dc.b	"concert tickets?^",FF
-	dc.b	"I never of them but",LF
-	dc.b	"it's worth a try.^",FF
+	dc.b	"I never heard of them",LF
+	dc.b	"but why not?^",FF
 	dc.b	"Take this portable TV",LF
 	dc.b	"demo unit.^",FF
 	dc.b	"I have to take it",LF
@@ -8921,15 +8915,17 @@ StoryTextTradingSequenceFCBCamping1:
 	dc.b	"The clothing was",LF
 	dc.b	"alright though.^",FF
 	dc.b	"Better than the 60s &",LF
-	dc.b	"80s if you don't^",FF
-	dc.b	"count disco.",LF
-	dc.b	"Like this shirt here.^",FF
+	dc.b	"80s.^",FF
+	dc.b	"If you don't count",LF
+	dc.b	"disco I guess.^",FF
+	dc.b	"Like this flannel",LF
+	dc.b	"shirt here.^",FF
 	dc.b	"It looks cool, but",LF
 	dc.b	"not my style.",ETX
 	align 2
 StoryTextTradingSequenceFCBCamping2:
 	dc.w	OBJ_NPC_GRANT
-	dc.b	"You need to unload",LF
+	dc.b	"You want to unload",LF
 	dc.b	"that flannel shirt?^",FF
 	dc.b	"I won't complain",LF
 	dc.b	"about taking it.^",FF
@@ -8941,8 +8937,7 @@ StoryTextTradingSequenceFCBCamping2:
 StoryTextTradingSequenceFCBCamping3:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"Oh I will, thanks.",LF
-	dc.b	"Maybe I'll use it to^",FF
-	dc.b	"trade again.",ETX
+	dc.b	"Maybe I'll trade it.",ETX
 	align 2
 StoryTextTradingSequenceFCBCampingAfter:
 	dc.w	OBJ_NPC_GRANT
@@ -8973,9 +8968,11 @@ StoryTextTradingSequencePogoDawg1:
 StoryTextTradingSequencePogoDawg2:
 	dc.w	OBJ_NPC_GRIFFY
 	dc.b	"I can have all these?",LF
-	dc.b	"I'll give this,^",FF
-	dc.b	"what's it called?",LF
-	dc.b	"This, uh, package.^",FF
+	dc.b	"Nice..^",FF
+	dc.b	"I'll give this,",LF
+	dc.b	"what's it called?^",FF
+	dc.b	"This, uh, thing, um,",LF
+	dc.b	"package.^",FF
 	dc.b	"The, uh, the delivery",LF
 	dc.b	"guy left it.^",FF
 	dc.b	"When the, what's it",LF
@@ -8985,7 +8982,7 @@ StoryTextTradingSequencePogoDawg2:
 	align 2
 StoryTextTradingSequencePogoDawg3:
 	dc.w	OBJ_NPC_ERYN
-	dc.b	"So your food send him",LF
+	dc.b	"So your food sent him",LF
 	dc.b	"to the ER,^",FF
 	dc.b	"and you want me to",LF
 	dc.b	"finish his job?",ETX
@@ -9044,9 +9041,10 @@ StoryTextTradingSequenceCavern1:
 	align 2
 StoryTextTradingSequenceCavern2:
 	dc.w	OBJ_NPC_DB
-	dc.b	"Yeah, let me try...",LF
-	dc.b	"Oh, it's a big round^",FF
-	dc.b	"earring.",LF
+	dc.b	"Yeah, that might",LF
+	dc.b	"work... let me try...^",FF
+	dc.b	"Oh, it's a big round",LF
+	dc.b	"earring.^",FF
 	dc.b	"Great, I'll toss it.",ETX
 	align 2
 StoryTextTradingSequenceCavern3:
@@ -9080,15 +9078,16 @@ StoryTextTradingSequenceDenimCountry1:
 	dc.b	"Yes, that's the",LF
 	dc.b	"earring I lost.^",FF
 	dc.b	"I'm so glad you found",LF
-	dc.b	"it. I looked^",FF
-	dc.b	"everywhere.",LF
-	dc.b	"This set belonged to^",FF
-	dc.b	"my grandmother.",LF
-	dc.b	"I couldn't stand to^",FF
-	dc.b	"lose them.",LF
-	dc.b	"I know this is really^",FF
-	dc.b	"expensive",LF
-	dc.b	"but I want you to^",FF
+	dc.b	"it.^",FF
+	dc.b	"I looked everywhere I",LF
+	dc.b	"could think.^",FF
+	dc.b	"This set belonged to",LF
+	dc.b	"my grandmother.^",FF
+	dc.b	"I couldn't stand to",LF
+	dc.b	"lose them.^",FF
+	dc.b	"I know this is really",LF
+	dc.b	"expensive^",FF
+	dc.b	"but I want you to",LF
 	dc.b	"have it.^",ETX
 	align 2
 StoryTextTradingSequenceDenimCountry2:

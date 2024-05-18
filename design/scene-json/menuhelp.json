@@ -97,7 +97,7 @@
 			"stringLabel":"StatusScreenHelpControls",
 			"comment":"controls",
 			"highPriority":false,
-			"paletteNumber":3,
+			"paletteNumber":1,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"02000000",
 			"column":"00020000"
@@ -162,7 +162,7 @@
 			"stringLabel":"StatusScreenHelpHints",
 			"comment":"hints",
 			"highPriority":false,
-			"paletteNumber":3,
+			"paletteNumber":1,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"0A000000",
 			"column":"00020000"

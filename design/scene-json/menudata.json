@@ -120,7 +120,7 @@
 			"stringLabel":"StatusScreenSave",
 			"comment":"save label",
 			"highPriority":false,
-			"paletteNumber":3,
+			"paletteNumber":1,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"03000000",
 			"column":"00120000"
@@ -147,7 +147,7 @@
 			"stringLabel":"StatusScreenLoad",
 			"comment":"load label",
 			"highPriority":false,
-			"paletteNumber":3,
+			"paletteNumber":1,
 			"layer":"VDP_VRAM_WRITE_B",
 			"row":"08000000",
 			"column":"00120000"

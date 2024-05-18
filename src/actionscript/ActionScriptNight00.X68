@@ -58,6 +58,7 @@ ActionScriptNight00SouthHallEnter:
 	btst.l	#FLAG_NIGHT00_EVENT01_SVIDEO,d7 ; test if required event ran
 	bne.s	.event
 .default	
+	bsr.w	DefaultEnterScene
 	rts
 .event	
 	bsr.s	ActionScriptNight00UpdateStateAfterSHall

@@ -12,7 +12,8 @@
 		"FCBTent56x40",
 		"FCBFire32x32",
 		"FCBBench32x32",
-		"FCBBench48x32"
+		"FCBBench48x32",
+		"BorderTile"
 	],
 	"paletteNames":[
 		"PaletteFCBFloorWall",
@@ -236,7 +237,55 @@
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"02800000",
 			"column":"003E0000"
-		}		
+		},
+		{
+			"patternName":"Pattern8x8x320",
+			"comment":"north border",
+			"tilesetIndex":10,
+			"tilesetOffset":0,
+			"highPriority":true,
+			"paletteNumber":3,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"00000000",
+			"column":"00000000"
+		},
+		{
+			"patternName":"Pattern8x8x320",
+			"comment":"south border",
+			"tilesetIndex":10,
+			"tilesetOffset":0,
+			"highPriority":true,
+			"paletteNumber":3,
+			"repeat":0,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"0D800000",
+			"column":"00000000"
+		},		
+		{
+			"patternName":"Pattern8x8",
+			"comment":"west border",
+			"tilesetIndex":10,
+			"tilesetOffset":0,
+			"highPriority":true,
+			"paletteNumber":3,
+			"repeat":26,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"00000000",
+			"column":"00000000"
+		},	
+		{
+			"patternName":"Pattern8x8",
+			"comment":"east border",
+			"tilesetIndex":10,
+			"tilesetOffset":0,
+			"highPriority":true,
+			"paletteNumber":3,
+			"repeat":26,
+			"layer":"VDP_VRAM_WRITE_A",
+			"row":"00000000",
+			"column":"004E0000"
+		}				
 	],
 	"objects":[
 		{

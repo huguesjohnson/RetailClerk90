@@ -192,7 +192,7 @@ ProcessStatusScreenACButtonPressed:
 	adda.l	#$2,a6	; skip scene id before branching to DrawScene
 	bsr.w	DrawScene	; branch to subroutine to draw the scene
 	bsr.w	BuildStatusScreen	; build the status screen
-;	bsr.w	FadeIn	; fade in the status screen
+	bsr.w	FadeIn	; build the status screen
 	bra.w	ExitProcessStatusScreen	
 .1
 	cmpi.w	#MENU_PAGE_STATUS,(MEM_MENU_SELECTION)
@@ -202,7 +202,7 @@ ProcessStatusScreenACButtonPressed:
 	adda.l	#$2,a6	; skip scene id before branching to DrawScene
 	bsr.w	DrawScene	; branch to subroutine to draw the scene
 	bsr.w	BuildStatusScreen	; build the status screen
-;	bsr.w	FadeIn	; fade in the status screen
+	bsr.w	FadeIn	; build the status screen
 	bra.w	ExitProcessStatusScreen	
 .2
 	cmpi.w	#MENU_PAGE_DATA,(MEM_MENU_SELECTION)
@@ -212,7 +212,7 @@ ProcessStatusScreenACButtonPressed:
 	adda.l	#$2,a6	; skip scene id before branching to DrawScene
 	bsr.w	DrawScene	; branch to subroutine to draw the scene
 	bsr.w	BuildStatusScreen	; build the status screen
-;	bsr.w	FadeIn	; fade in the status screen
+	bsr.w	FadeIn	; build the status screen
 	bra.w	ExitProcessStatusScreen	
 .3
 	cmpi.w	#MENU_PAGE_HELP,(MEM_MENU_SELECTION)
@@ -222,7 +222,7 @@ ProcessStatusScreenACButtonPressed:
 	adda.l	#$2,a6	; skip scene id before branching to DrawScene
 	bsr.w	DrawScene	; branch to subroutine to draw the scene
 	bsr.w	BuildStatusScreen	; build the status screen
-;	bsr.w	FadeIn	; fade in the status screen
+	bsr.w	FadeIn	; build the status screen
 	bra.w	ExitProcessStatusScreen	
 .4
 	;---------------------------------------------------------------------------
@@ -408,11 +408,6 @@ ProcessStatusScreenUpdateSelectorXY:
 .1 ; navigating the page-specific menus
 	subq	#MAX_MENU_PAGE+$0001,d6
 	; no menu to navigate on the help page
-	;cmpi.w	#MENU_PAGE_HELP,(MEM_MENU_SCREEN_PAGE)
-	;bne.s	.2
-	;lea	MenuNavigationTable,a6	; point a6 to the lookup table for the menu
-	;bra.s	ProcessStatusScreenUpdateSelectorXYUpdateVDP
-;.2
 	cmpi.w	#MENU_PAGE_DATA,(MEM_MENU_SCREEN_PAGE)
 	bne.s	.3
 	lea	DataNavigationTable,a6	; point a6 to the lookup table for the data menu
@@ -420,7 +415,6 @@ ProcessStatusScreenUpdateSelectorXY:
 .3	
 	cmpi.w	#MENU_PAGE_STATUS,(MEM_MENU_SCREEN_PAGE)
 	bne.s	.4
-	; TODO - UPDATE TO CORRECT TABLE
 	lea	StatusNavigationTable,a6	; point a6 to the lookup table for the menu
 	bra.s	ProcessStatusScreenUpdateSelectorXYUpdateVDP
 .4
@@ -444,28 +438,6 @@ ProcessStatusScreenUpdateSelectorXYUpdateVDP:
 	add.l	#$00060000,d6	; move to x-coordinate
 	move.l	d6,(VDP_CONTROL)	; set write location in VDP
 	move.w	(a6),(VDP_DATA)	; copy the new x-coordinate
-	bra.w	ExitProcessStatusScreenUpdateSelectorXY
-	nop
-;	subq.w	#$0004,d4	; subtract 4 from d6
-;	move.w	#$0090,d5	; set x position
-;	bra.s	.2	; move to set y position and update VDP
-;.1
-;	move.w	#$0100,d5	; set x position
-;.2
-;	mulu.w	#$0008,d4	; multiply by 16 to get y index
-;	add.w	#$0130,d4	; add offset of first item
-;	;---------------------------------------------------------------------------
-;	; update y
-;	;---------------------------------------------------------------------------
-;	move.l	#VDP_VRAM_WRITE_SPRITE,d6	; add to sprite table address
-;	move.l	d6,(VDP_CONTROL)	; set write location in VDP
-;	move.w	d4,(VDP_DATA)	; copy the new y-coordinate
-;	;---------------------------------------------------------------------------
-;	; update x
-;	;---------------------------------------------------------------------------
-;	add.l	#$00060000,d6	; move to x-coordinate
-;	move.l	d6,(VDP_CONTROL)	; set write location in VDP
-;	move.w	d5,(VDP_DATA)	; copy the new x-coordinate
 ExitProcessStatusScreenUpdateSelectorXY:
 	rts
 

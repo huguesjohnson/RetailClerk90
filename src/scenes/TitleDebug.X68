@@ -287,17 +287,17 @@
 
 	; new game text
 	dc.l	TitleScreenTextNewGame
-	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_A+$00140000+$0A000000 ; initial drawing location
 
 	; load game text
 	dc.l	TitleScreenTextLoadGame
-	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_A+$00140000+$0A800000 ; initial drawing location
 
 	; debug text
 	dc.l	TitleScreenTextDebug
-	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_A+$00140000+$0B000000 ; initial drawing location
 
 	;---------------------------------------------------------------------------

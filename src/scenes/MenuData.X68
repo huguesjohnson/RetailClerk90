@@ -105,7 +105,7 @@
 
 	; save label
 	dc.l	StatusScreenSave
-	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_B+$00120000+$03000000 ; initial drawing location
 
 	; save help - line 0
@@ -120,7 +120,7 @@
 
 	; load label
 	dc.l	StatusScreenLoad
-	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_B+$00120000+$08000000 ; initial drawing location
 
 	; load help - line 0

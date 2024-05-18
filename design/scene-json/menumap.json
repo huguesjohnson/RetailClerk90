@@ -170,7 +170,7 @@
 			"stringLabel":"StatusScreenMapFastTravel",
 			"comment":"fast travel",
 			"highPriority":false,
-			"paletteNumber":3,
+			"paletteNumber":1,
 			"layer":"VDP_VRAM_WRITE_B",
 			"column":"002C0000",
 			"row":"09000000"

@@ -8,7 +8,7 @@
 	;---------------------------------------------------------------------------
 	; tiles
 	;---------------------------------------------------------------------------
-	dc.w	$0005 ; tileset count - 1
+	dc.w	$0006 ; tileset count - 1
 
 	; tileset 0 - tiles start at [0] - tileset length [1]
 	dc.l	TransparentTileTilesStart
@@ -34,6 +34,10 @@
 	dc.l	LaserDiscsLow64x24TilesStart
 	dc.l	LaserDiscsLow64x24TilesEnd
 
+	; tileset 6 - tiles start at [A2] - tileset length [1]
+	dc.l	BorderTileTilesStart
+	dc.l	BorderTileTilesEnd
+
 	;---------------------------------------------------------------------------
 	; palettes
 	;---------------------------------------------------------------------------
@@ -45,7 +49,7 @@
 	;---------------------------------------------------------------------------
 	; scenery
 	;---------------------------------------------------------------------------
-	dc.w	$000F ; scenery count - 1
+	dc.w	$0013 ; scenery count - 1
 
 	; floor
 	dc.l	Pattern16x16x304
@@ -158,6 +162,34 @@
 	dc.w	%0100000010001010 ; vdp pattern
 	dc.w	$0000 ; repeat=0
 	dc.l	VDP_VRAM_WRITE_B+$00320000+$03800000 ; initial drawing location
+
+	; north border
+	dc.l	Pattern8x8x320
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1110000010100010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00000000+$00000000 ; initial drawing location
+
+	; south border
+	dc.l	Pattern8x8x320
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1110000010100010 ; vdp pattern
+	dc.w	$0000 ; repeat=0
+	dc.l	VDP_VRAM_WRITE_A+$00000000+$0D800000 ; initial drawing location
+
+	; west border
+	dc.l	Pattern8x8
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1110000010100010 ; vdp pattern
+	dc.w	$001A ; repeat=26
+	dc.l	VDP_VRAM_WRITE_A+$00000000+$00000000 ; initial drawing location
+
+	; east border
+	dc.l	Pattern8x8
+	;		%pccvhnnnnnnnnnnn
+	dc.w	%1110000010100010 ; vdp pattern
+	dc.w	$001A ; repeat=26
+	dc.l	VDP_VRAM_WRITE_A+$004E0000+$00000000 ; initial drawing location
 
 	;---------------------------------------------------------------------------
 	; text

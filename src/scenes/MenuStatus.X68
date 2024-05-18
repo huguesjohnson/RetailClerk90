@@ -97,7 +97,7 @@
 
 	; inventory label
 	dc.l	StatusScreenInventory
-	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0010000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_B+$00040000+$0A800000 ; initial drawing location
 
 	;---------------------------------------------------------------------------

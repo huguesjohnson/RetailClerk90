@@ -2423,7 +2423,7 @@
          },
       "StoryTextDay05FCBFirearmsRespond0Line02":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"No. And surprisingly there isn't|a toy store in this mall.|Maybe the designer forgot...|or maybe the mall was too big & it got cut.|Whatever the case, no toy store.",
+         "text":"No. And surprisingly there isn't|a toy store in this mall.|Maybe the designer forgot...|Maybe the mall was too big & it got cut.|Whatever the case, no toy store.",
          "align":2
          },        
       "StoryTextDay05FCBFirearmsRespond0Line03":{
@@ -2433,7 +2433,7 @@
          },     
       "StoryTextDay05FCBFirearmsRespond0Line04":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"Whoever designed this mall realized the importance of denim.|Like it's the fabric of their life.|I'd suggest Denim Country,|denim never goes out of style.",
+         "text":"Whoever designed this mall placed an odd amount of importance on denim.|Like it's the fabric of their life.|I'd suggest Denim Country,|denim never goes out of style.",
          "align":2
          },    
       "StoryTextDay05FCBFirearmsRespond0Line05":{
@@ -2539,7 +2539,7 @@
          },
       "StoryTextDay05DenimCountry2Line3":{
          "dialogTitle":"OBJ_NPC_DANI",
-         "text":"I'll just go alreday.|I'm not scared of that loser.",
+         "text":"I'll just go myself already.|I'm not scared of that loser.",
          "align":2
          },         
       "StoryTextDay05DenimCountry2Line4":{
@@ -2560,7 +2560,7 @@
          },        
       "StoryTextDay05CavernChoice0":{
             "dialogTitle":"OBJ_NPC_DB",
-            "text":"Yeah, that would be great.|My sister doesn't like any of the new games.|There has to be one for her.",
+            "text":"Yeah. My sister doesn't like any of the new games out right now.|There has to be one for her.",
             "align":2
          },         
       "StoryTextDay05CavernChoice1":{
@@ -2641,7 +2641,7 @@
          },
       "StoryTextDay05FCBCampingLine2":{
          "dialogTitle":"OBJ_NPC_GRANT",
-         "text":"And who remembers their parents friends?.|I do miss the old times with them.|But I wouldn't change a thing.",
+         "text":"Who remembers their parents friends?|I miss the old times with them.|But I wouldn't change a thing.",
          "align":2
          },   
       "StoryTextNight05TBooksLine1":{
@@ -2716,7 +2716,7 @@
          },                 
       "StoryTextNight05BasementMDormLine1":{
          "dialogTitle":"OBJ_NPC_DANI",
-         "text":"This is an old dorm for employees.|When the mall was built in 1975|they had temporary housing built.|There's a kitchen & showers too.|That's Brett.",
+         "text":"This is an old dorm for employees.|When the mall was built in 1975|they included temporary housing.|There's a kitchen & showers too.|That's Brett.",
          "align":2
          },
       "StoryTextNight05BasementMDormLine2":{
@@ -2801,7 +2801,7 @@
          },         
       "StoryTextNight05BasementOfficeLine11":{
          "dialogTitle":"OBJ_NPC_AL",
-         "text":"Hmph. She's as miserable as ever.|I think we need to tweek the algorithm.|",
+         "text":"Hmph. She's as miserable as ever.|I think we need to tweak the algorithm.|",
          "align":2
          },      
       "StoryTextNight05BasementOfficeLine12":{
@@ -2826,7 +2826,7 @@
          },        
       "StoryTextNight05BasementOfficeLine16":{
          "dialogTitle":"OBJ_NPC_AL",
-         "text":"And it's only getting better.|Don't try to interfere with us.|Come back in 10 years,|I promise you'll be euphoric.",
+         "text":"And it's only getting better.|Don't try to interfere with us.|Come back in 10-15 years,|I promise you'll be euphoric.",
          "align":2
          },           
       "StoryTextNight05BasementOfficeLine17":{
@@ -2862,7 +2862,7 @@
          },   
       "StoryTextNight05WWAppliancesLine3":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"Not mine, it was just the 4 of us.|We didn't celebrate that much.|One year we didn't even have a tree.",
+         "text":"Not mine, we didn't celebrate much.|One year we didn't even have a tree.",
          "align":2
          },  
       "StoryTextNight05WWAppliancesLine4":{
@@ -2918,7 +2918,7 @@
          },   
       "StoryTextNight05CPlanetLine6":{
          "dialogTitle":"OBJ_NPC_ELIZA",
-         "text":"That's OK.|Say Carl, how'd you like to tag along?",
+         "text":"That's OK. It was a long shot to ask you.|Say Carl, how'd you like to tag along?",
          "align":2
          },        
       "StoryTextNight05CPlanetLine7":{
@@ -3028,7 +3028,7 @@
          },
       "StoryTextDay06CavernLine4":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"The last 2 months are enough for me.|I'll work outdoors for summer break.",
+         "text":"The last 2 months are enough for me.|I'll work outdoors over summer break.",
          "align":2
          },        
       "StoryTextDay06CavernLine5":{
@@ -3210,7 +3210,7 @@
          },    
       "StoryTextNight06TBooksLine6":{
          "dialogTitle":"OBJ_NPC_NELSON",
-         "text":"I'm surprised they offered me this promotion.|I'd been an assistant for only 1 year.|Why did you turn down the manager job here?",
+         "text":"I'm surprised I got this promotion.|I'd been an assistant for only 1 year.|Why did you turn down the manager job here?",
          "align":2
          },
       "StoryTextNight06TBooksLine7":{
@@ -3230,7 +3230,7 @@
          },      
       "StoryTextNight06TBooksLine10":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"I won't. I've made up my mind.|If you have things under control|do you mind if I leave? There are a few people I want to see|before it's too late at night.",
+         "text":"I won't. I've made up my mind.|If you have things under control|do you mind if I leave?|There are a few people I want to see|before it's too late at night.",
          "align":2
          },          
       "StoryTextNight06TBooksLine11":{
@@ -3240,7 +3240,7 @@
          },                                                
       "StoryTextNight06BasementKitchenLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"I'll try once more before I go,|how can I help you?",
+         "text":"I'll try once more before I go...|how can I help you?",
          "align":2
          },
       "StoryTextNight06BasementKitchenLine2":{
@@ -3275,12 +3275,12 @@
          },    
       "StoryTextNight06BasementKitchenLine8":{
          "dialogTitle":"OBJ_NPC_BRETT",
-         "text":"Hey, quick one thing...|I overhear those guys in the office.|I don't understand what they're up to.|But I don't think you should come back.",
+         "text":"Hey, one quick thing...|I overhear those guys in the office.|I don't understand what they're up to.|But I don't think you should come back.",
          "align":2
          },  
       "StoryTextNight06BasementKitchenLine9":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"I don't think I will.|This mall is fine, but I won't be in the area again.",
+         "text":"It's not in my plans.|This mall is fine, but I won't be in the area soon.",
          "align":2
          },  
       "StoryTextNight06BasementKitchenLine10":{
@@ -3295,7 +3295,7 @@
          },
       "StoryTextNight06WWAppliancesLine2":{
          "dialogTitle":"OBJ_NPC_LAURA",
-         "text":"That's a shame, Carl.|Who will help us out at night now?",
+         "text":"That's a real shame, Carl.|Who will help us out at night now?",
          "align":2
          },    
       "StoryTextNight06WWAppliancesLine3":{
@@ -3320,7 +3320,7 @@
          },           
       "StoryTextNight06WWAppliancesLine7":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"The mall part is 8 stories.|The entire building is over 70.",
+         "text":"The mall part is 8 stories.|The entire building is over 60.",
          "align":2
          },       
       "StoryTextNight06WWAppliancesLine8":{
@@ -3400,7 +3400,7 @@
          },   
       "StoryTextNight06VBLine5":{
          "dialogTitle":"OBJ_NPC_GRUNBERG",
-         "text":"I'm going to retire soon.|We already picked out a place up north.|I'm won't to leave the company dry.|I want to find my replacement first.",
+         "text":"I'm going to retire soon.|We already picked out a place up north.|I don't want to leave the company dry.|I want to find my replacement first.",
          "align":2
          },    
       "StoryTextNight06VBLine6":{
@@ -3435,7 +3435,7 @@
          },                                
       "StoryTextNight06HiddenLine01":{
          "dialogTitle":"OBJ_NPC_HIDDENMJ",
-         "text":"Relax, no one is looking for us.|I just wanted to see if this place was real.",
+         "text":"Relax, no one is looking for us.|I just wanted to see if this was real.",
          "align":2
          },    
       "StoryTextNight06HiddenLine02":{
@@ -3450,12 +3450,12 @@
          },       
       "StoryTextNight06HiddenLine04":{
          "dialogTitle":"OBJ_NPC_HIDDENHJ",
-         "text":"Oh, no. You don't have any regrets I hope?",
+         "text":"No regrets I hope?",
          "align":2
          },    
       "StoryTextNight06HiddenLine05":{
          "dialogTitle":"OBJ_NPC_HIDDENMJ",
-         "text":"Not at all. It's not that.|This is just sad to think about.|Mall employees stuck living in the basement.|We probably knew some of them.",
+         "text":"No, nothing like that.|This place makes me sad.|Employees living in the basement,|we probably knew some of them.",
          "align":2
          },         
       "StoryTextNight06HiddenLine06":{
@@ -3485,7 +3485,7 @@
          },   
       "StoryTextEndBadLine3":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"Weren't you looking at a letter?|Or something like that.",
+         "text":"Weren't you looking into a letter?|Or something like that.",
          "align":2
          },   
       "StoryTextEndBadLine4":{
@@ -3586,7 +3586,7 @@
          },                                             
       "StoryTextEndGoodLine13":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"All the Iraq news will put me to sleep as usual.",
+         "text":"All the Iraq news will put me to sleep.",
          "align":2
          },    
       "StoryTextEndGoodLine14":{
@@ -3611,7 +3611,7 @@
          },           
       "StoryTextEndGoodLine18":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"You're being weird, stop it.|It's 1990 & I'm with my friends.|We met over the summer.|I helped you both every night.|Eryn joined our group in winter.|We were together every night.",
+         "text":"You're being weird, stop it.|It's 1990 & I'm with my friends.|We met over the summer.|I helped you both every night.|Eryn joined our group in the fall.|We were together every night.",
          "align":2
          },  
       "StoryTextEndGoodLine19":{
@@ -3656,7 +3656,7 @@
          },      
       "StoryTextEndGoodLine27":{
          "dialogTitle":"OBJ_NPC_VICTOR",
-         "text":"..have all moved on with their lives.|We have two months to get this done.|Then it's off to the next town.|If you're done moping, let's go.",
+         "text":"..have all moved on with their lives.|We have two months to get this done.|Then it's off to the next town.|If you're through moping, let's go.",
          "align":2
          },            
       "StoryTextEndGoodLine28":{
@@ -3666,7 +3666,7 @@
          },                              
       "StoryTextEndGoodLine29":{
          "dialogTitle":"OBJ_NPC_DB",
-         "text":"It's the Nostalgia Engine.|It reached its full power in 2000.|In 2002 you wished it was 1990 again,|and that's exactly what you saw.",
+         "text":"It's the Nostalgia Engine.|It reached its full power in 2000.|You came back here in 2002.|You wished it was 1990 again,|and that's exactly what you saw.",
          "align":2
          }, 
       "StoryTextEndGoodLine30":{
@@ -3676,7 +3676,7 @@
          }, 
       "StoryTextEndGoodLine31":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"Did you learn anything this year?|Or is only what you remember?",
+         "text":"Did you learn anything this year?|Or this only what you remember?",
          "align":2
          }, 
       "StoryTextEndGoodLine32":{
@@ -3711,7 +3711,7 @@
          },       
       "StoryTextEndGoodLine38":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"A story about time travel & regrets.|It's been done, but it works.|Some people like that story.",
+         "text":"A story about time travel & regrets.|It's not very original,|but some people like that kind of story.",
          "align":2
          },         
       "StoryTextEndGoodLine39":{
@@ -3747,7 +3747,7 @@
          },
       "StoryTextEndPerfectLine4":{
          "dialogTitle":"OBJ_NPC_DB",
-         "text":"At least nothing weird happened this year.",
+         "text":"I'm happy it was a normal year.|Nothing weird happened this time.",
          "align":2
          },         
       "StoryTextEndPerfectLine5":{
@@ -3802,7 +3802,7 @@
          }, 
       "StoryTextEndPerfectLine15":{
          "dialogTitle":"OBJ_NPC_JEN",
-         "text":"Exactly, but more like tearing down the 80s.",
+         "text":"More like tearing down the 80s.",
          "align":2
          },    
       "StoryTextEndPerfectLine16":{
@@ -3882,17 +3882,17 @@
          },          
       "StoryTextTradingSequenceFCBFirearms3":{
          "dialogTitle":"OBJ_NPC_RANDY",
-         "text":"That's the only tape in the series|I'm missing.|Do you mind trading?|I can give you this moose attractant.|I already shot one.",
+         "text":"That's the last tape in the series.|Do you mind trading with me for it?|I can give you this moose attractant.|I already shot one.",
          "align":2
          }, 
       "StoryTextTradingSequenceFCBFirearms4":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"Great, thanks Randy!|I can't wait to find out who wants this.",
+         "text":"Great, thanks Randy! It's a deal.|I can't wait to find out who wants this.",
          "align":2
          },          
       "StoryTextTradingSequenceFCBFirearmsAfter":{
          "dialogTitle":"OBJ_NPC_RANDY",
-         "text":"That moose photo is one of my best shots.|I'm working on a photography book.|Can't work in the mall forever.",
+         "text":"That moose photo is one of my best shots.|I'm working on a photography book.|Can't stay in the mall forever.",
          "align":2
          },           
       "StoryTextTradingSequenceWWAppliancesBefore":{
@@ -3902,12 +3902,12 @@
          },
       "StoryTextTradingSequenceWWAppliances1":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"Have these handwarmers.|I don't need them.|I don't want anything in return.",
+         "text":"Please take these handwarmers.|I don't want anything in return.",
          "align":2
          },     
       "StoryTextTradingSequenceWWAppliances2":{
          "dialogTitle":"OBJ_NPC_LAURA",
-         "text":"Thanks! I will use them.|I have to give you something though.|How about this lipstick?|It's brand new. It's not my color.|I don't trust the guy who gave it me,|I think he's seeing someone else.",
+         "text":"Thanks! I will use them.|I have to give you something though.|How about this lipstick?|It's brand new. It's not my color.|I don't trust the guy who gave it to me,|I think he's seeing someone else.",
          "align":2
          },     
       "StoryTextTradingSequenceWWAppliancesAfter":{
@@ -3932,7 +3932,7 @@
          },              
       "StoryTextTradingSequenceCheckers3":{
          "dialogTitle":"OBJ_NPC_TODD",
-         "text":"I'd be happy to trade for it.|All I have is this clearance shirt.|We have to get rid of ASAP.|It's a smaller size.|And we have a new store policy to only sell clothes to people over 6ft.|Sorry if it's not your size.",
+         "text":"I'd be happy to trade for it.|All I have is this clearance shirt.|We have to get rid off all small sizes.|There's a new store policy from HQ.|We only sell to people over 6ft now.|Sorry if it's not your size.",
          "align":2
          },      
       "StoryTextTradingSequenceCheckers4":{
@@ -3942,7 +3942,7 @@
          },            
       "StoryTextTradingSequenceCheckersAfter":{
          "dialogTitle":"OBJ_NPC_TODD",
-         "text":"No one under 6ft allowed.|It's a weird policy, I don't make the rules.",
+         "text":"No one under 6ft allowed.|It's a weird policy, I didn't make it.",
          "align":2
          },            
       "StoryTextTradingSequenceCPlanetBefore":{
@@ -4012,7 +4012,7 @@
          },            
       "StoryTextTradingSequenceWWVideo2":{
          "dialogTitle":"OBJ_NPC_JUAN",
-         "text":"You're giving me concert tickets?|I never of them but it's worth a try.|Take this portable TV demo unit.|I have to take it down anyway.|It's fun and everything,|but only gets one station in here.",
+         "text":"You're giving me concert tickets?|I never heard of them but why not?|Take this portable TV demo unit.|I have to take it down anyway.|It's fun and everything,|but only gets one station in here.",
          "align":2
          },
       "StoryTextTradingSequenceWWVideo3":{
@@ -4147,17 +4147,17 @@
          },   
       "StoryTextTradingSequenceFCBCamping1":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"The clothing was alright though.|Better than the 60s & 80s if you don't count disco.|Like this shirt here.|It looks cool, but not my style.",
+         "text":"The clothing was alright though.|Better than the 60s & 80s.|If you don't count disco I guess.|Like this flannel shirt here.|It looks cool, but not my style.",
          "align":2
          }, 
       "StoryTextTradingSequenceFCBCamping2":{
          "dialogTitle":"OBJ_NPC_GRANT",
-         "text":"You need to unload that flannel shirt?|I won't complain about taking it.|I'll give you this utility knife.|Just be careful with it.",
+         "text":"You want to unload that flannel shirt?|I won't complain about taking it.|I'll give you this utility knife.|Just be careful with it.",
          "align":2
          }, 
       "StoryTextTradingSequenceFCBCamping3":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"Oh I will, thanks.|Maybe I'll use it to trade again.",
+         "text":"Oh I will, thanks.|Maybe I'll trade it.",
          "align":2
          }, 
       "StoryTextTradingSequenceFCBCampingAfter":{
@@ -4177,12 +4177,12 @@
          },                        
       "StoryTextTradingSequencePogoDawg2":{
          "dialogTitle":"OBJ_NPC_GRIFFY",
-         "text":"I can have all these?|I'll give this, what's it called?|This, uh, package.|The, uh, the delivery guy left it.|When the, what's it called?|When the ambulance took him.",
+         "text":"I can have all these? Nice..|I'll give this, what's it called?|This, uh, thing, um, package.|The, uh, the delivery guy left it.|When the, what's it called?|When the ambulance took him.",
          "align":2
          },
       "StoryTextTradingSequencePogoDawg3":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"So your food send him to the ER,|and you want me to finish his job?",
+         "text":"So your food sent him to the ER,|and you want me to finish his job?",
          "align":2
          },             
       "StoryTextTradingSequencePogoDawgAfter":{
@@ -4227,7 +4227,7 @@
          }, 
       "StoryTextTradingSequenceCavern2":{
          "dialogTitle":"OBJ_NPC_DB",
-         "text":"Yeah, let me try...|Oh, it's a big round earring.|Great, I'll toss it.",
+         "text":"Yeah, that might work... let me try...|Oh, it's a big round earring.|Great, I'll toss it.",
          "align":2
          }, 
       "StoryTextTradingSequenceCavern3":{
@@ -4252,7 +4252,7 @@
          },         
       "StoryTextTradingSequenceDenimCountry1":{
          "dialogTitle":"OBJ_NPC_LISA",
-         "text":"Yes, that's the earring I lost.|I'm so glad you found it. I looked everywhere.|This set belonged to my grandmother.|I couldn't stand to lose them.|I know this is really expensive|but I want you to have it.^",
+         "text":"Yes, that's the earring I lost.|I'm so glad you found it.|I looked everywhere I could think.|This set belonged to my grandmother.|I couldn't stand to lose them.|I know this is really expensive|but I want you to have it.^",
          "align":2
          },
       "StoryTextTradingSequenceDenimCountry2":{

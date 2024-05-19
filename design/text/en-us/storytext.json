@@ -2058,7 +2058,7 @@
          },
       "StoryTextDay04NShackLine4":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"You're friends with D.B. right?",
+         "text":"You're friends with DB right?",
          "align":2
          },         
       "StoryTextDay04NShackLine5":{
@@ -2240,12 +2240,12 @@
          },        
       "StoryTextNight04NShackLine5":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"A week ago I saw this disheveled guy,|he went into the cavern & disappeared.|D.B. acted like he never saw him.",
+         "text":"A week ago I saw this disheveled guy,|he went into the cavern & disappeared.|DB acted like he never saw him.",
          "align":2
          },
       "StoryTextNight04NShackLine6":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"There is a backroom there.|I think they keep old games in it.|Maybe he was a repair guy.|Probably just let himself in.|D.B. might not have noticed.",
+         "text":"There is a backroom there.|I think they keep old games in it.|Maybe he was a repair guy.|Probably just let himself in.|DB might not have noticed.",
          "align":2
          },       
       "StoryTextNight04NShackLine7":{
@@ -2265,12 +2265,12 @@
          },
       "StoryTextNight04CantUseStairs":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"(I should ask where this goes first)|(I'll ask D.B. when he's back)",
+         "text":"(I should ask where this goes first)|(I'll ask DB when he's back)",
          "align":2
          },            
       "StoryTextNight04CavernLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"(D.B. must have gone home already)|(I'll just look around a little)",
+         "text":"(DB must have gone home already)|(I'll just look around a little)",
          "align":2
          },
       "StoryTextNight04SouthHallLine1":{
@@ -2676,7 +2676,7 @@
          },           
       "StoryTextNight05TBooksLine5":{
          "dialogTitle":"OBJ_NPC_CHARLES",
-         "text":"I won't keep you late.|I've got plans with D.B. and Dani anyway.",
+         "text":"I won't keep you late.|I've got plans with DB and Dani anyway.",
          "align":2
          },             
       "StoryTextNight05TBooksLine6":{
@@ -2686,7 +2686,7 @@
          },           
       "StoryTextNight05TBooksLine7":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"Something happened with them last year?|I overheard D.B. talking to Jen.|Do you know what it was?",
+         "text":"Something happened with them last year?|I overheard DB talking to Jen.|Do you know what it was?",
          "align":2
          },    
       "StoryTextNight05TBooksLine8":{
@@ -2741,7 +2741,7 @@
          },   
       "StoryTextNight05BasementMDormLine4":{
          "dialogTitle":"OBJ_NPC_DANI",
-         "text":"My brother found him hiding one night.|He's homeless, a run of bad luck,|so D.B. told him about this dorm.",
+         "text":"My brother found him hiding one night.|He's homeless, a run of bad luck,|so DB told him about this dorm.",
          "align":2
          },   
       "StoryTextNight05BasementMDormLine5":{
@@ -2761,7 +2761,7 @@
          },                          
       "StoryTextNight05BasementOfficeLine1":{
          "dialogTitle":"OBJ_NPC_DANI",
-         "text":"Look at these three losers.|They live down here too.|Working on their fancy mall computer.",
+         "text":"Check out these losers.|They live down here too.|Working on their fancy mall computer.",
          "align":2
          },
       "StoryTextNight05BasementOfficeLine2":{
@@ -2811,7 +2811,7 @@
          },         
       "StoryTextNight05BasementOfficeLine11":{
          "dialogTitle":"OBJ_NPC_AL",
-         "text":"Hmph. She's as miserable as ever.|I think we need to tweak the algorithm.|",
+         "text":"Hmph. She's as miserable as ever.|I think we need to tweak the algorithm.",
          "align":2
          },      
       "StoryTextNight05BasementOfficeLine12":{
@@ -3807,7 +3807,7 @@
          },
       "StoryTextEndPerfectLine14":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"This is what you meant before?|Tearing down stores & replacing then.",
+         "text":"This is what you meant before?|Tearing down stores & replacing them.",
          "align":2
          }, 
       "StoryTextEndPerfectLine15":{

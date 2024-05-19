@@ -495,7 +495,7 @@ DialogTextErynDay08:
 ; text after story event
 DialogTextErynDay09:
 	dc.w	OBJ_NPC_ERYN
-	dc.b	"I wonder why D.B. is",LF
+	dc.b	"I wonder why DB is",LF
 	dc.b	"being like this?",ETX
 	align 2
 ; PC on day0A
@@ -538,7 +538,7 @@ DialogTextCarlDay06:
 DialogTextCarlDay07:
 DialogTextCarlDay08:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"I don't talk to D.B.",LF
+	dc.b	"I don't talk to DB",LF
 	dc.b	"often.^",FF
 	dc.b	"He's not here late",LF
 	dc.b	"every night.^",FF
@@ -767,9 +767,7 @@ DialogTextGrunbergDay07:
 	align 2
 DialogTextGrunbergDay08:
 	dc.w	OBJ_NPC_GRUNBERG
-	dc.b	"Why are you asking",LF
-	dc.b	"about D.B.?^",FF
-	dc.b	"He worked here last",LF
+	dc.b	"DB worked here last",LF
 	dc.b	"year.^",FF
 	dc.b	"Good guy, a little",LF
 	dc.b	"odd at times.",ETX
@@ -844,8 +842,11 @@ DialogTextJenDay07:
 	dc.b	"Maybe some sleep",LF
 	dc.b	"would help.",ETX
 	align 2
-; only in story events this day
 DialogTextJenDay08:
+	dc.w	OBJ_NPC_JEN
+	dc.b	"Are you waiting here",LF
+	dc.b	"tonight?",ETX
+	align 2
 ; after story event
 DialogTextJenDay09:
 	dc.w	OBJ_NPC_JEN
@@ -1241,7 +1242,7 @@ DialogTextCharlesDay0B:
 	align 2
 DialogTextCharlesDay0C:
 	dc.w	OBJ_NPC_CHARLES
-	dc.b	"I hope D.B. opens the",LF
+	dc.b	"I hope DB opens the",LF
 	dc.b	"arcade tonight.",ETX
 	align 2
 ; at the arcade
@@ -1480,7 +1481,7 @@ DialogTextGuardDay09:
 DialogTextGuardDay0A:
 	dc.w	OBJ_NPC_GUARD
 	dc.b	"So many people to",LF
-	dc.b	"watch today",ETX
+	dc.b	"watch today.",ETX
 	align 2
 DialogTextGuardDay0B:
 	dc.w	OBJ_NPC_GUARD
@@ -1509,7 +1510,7 @@ DialogTextBillyDay00:
 	align 2
 ; not present at night
 DialogTextBillyDay01:
-; in VB this day
+; in cavern this day
 DialogTextBillyDay02:
 	dc.w	OBJ_NPC_BILLY
 	dc.b	"Do you work here too?",ETX
@@ -1540,7 +1541,7 @@ DialogTextBillyDay08:
 	align 2
 ; not present at night
 DialogTextBillyDay09:
-; in ewhall this day
+; in a hallway this day
 DialogTextBillyDay0A:
 	dc.w	OBJ_NPC_BILLY
 	dc.b	"Where should I go",LF
@@ -2856,7 +2857,7 @@ ItemNamePortableTv:
 ItemNameFmConverter:
 	dc.b	"FMConvert",ITEMNAMEEND
 ItemNameFlannelShirt:
-	dc.b	"Flannels",ITEMNAMEEND
+	dc.b	"Flannel",ITEMNAMEEND
 ItemNameCoupons:
 	dc.b	"Coupon",ITEMNAMEEND
 ItemNameLps:
@@ -6129,7 +6130,7 @@ StoryTextDay04NShackLine3:
 StoryTextDay04NShackLine4:
 	dc.w	OBJ_NPC_ERYN
 	dc.b	"You're friends with",LF
-	dc.b	"D.B. right?",ETX
+	dc.b	"DB right?",ETX
 	align 2
 StoryTextDay04NShackLine5:
 	dc.w	OBJ_NPC_JEN
@@ -6369,7 +6370,7 @@ StoryTextNight04NShackLine5:
 	dc.b	"disheveled guy,^",FF
 	dc.b	"he went into the",LF
 	dc.b	"cavern & disappeared.^",FF
-	dc.b	"D.B. acted like he",LF
+	dc.b	"DB acted like he",LF
 	dc.b	"never saw him.",ETX
 	align 2
 StoryTextNight04NShackLine6:
@@ -6382,7 +6383,7 @@ StoryTextNight04NShackLine6:
 	dc.b	"guy.^",FF
 	dc.b	"Probably just let",LF
 	dc.b	"himself in.^",FF
-	dc.b	"D.B. might not have",LF
+	dc.b	"DB might not have",LF
 	dc.b	"noticed.",ETX
 	align 2
 StoryTextNight04NShackLine7:
@@ -6406,12 +6407,12 @@ StoryTextNight04CantUseStairs:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"(I should ask where",LF
 	dc.b	"this goes first)^",FF
-	dc.b	"(I'll ask D.B. when",LF
+	dc.b	"(I'll ask DB when",LF
 	dc.b	"he's back)",ETX
 	align 2
 StoryTextNight04CavernLine1:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"(D.B. must have gone",LF
+	dc.b	"(DB must have gone",LF
 	dc.b	"home already)^",FF
 	dc.b	"(I'll just look",LF
 	dc.b	"around a little)",ETX
@@ -6948,7 +6949,7 @@ StoryTextNight05TBooksLine5:
 	dc.b	"I won't keep you",LF
 	dc.b	"late.^",FF
 	dc.b	"I've got plans with",LF
-	dc.b	"D.B. and Dani anyway.",ETX
+	dc.b	"DB and Dani anyway.",ETX
 	align 2
 StoryTextNight05TBooksLine6:
 	dc.w	OBJ_NPC_CARL
@@ -6959,7 +6960,7 @@ StoryTextNight05TBooksLine7:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"Something happened",LF
 	dc.b	"with them last year?^",FF
-	dc.b	"I overheard D.B.",LF
+	dc.b	"I overheard DB",LF
 	dc.b	"talking to Jen.^",FF
 	dc.b	"Do you know what it",LF
 	dc.b	"was?",ETX
@@ -7036,8 +7037,8 @@ StoryTextNight05BasementMDormLine4:
 	dc.b	"hiding one night.^",FF
 	dc.b	"He's homeless, a run",LF
 	dc.b	"of bad luck,^",FF
-	dc.b	"so D.B. told him",LF
-	dc.b	"about this dorm.",ETX
+	dc.b	"so DB told him about",LF
+	dc.b	"this dorm.",ETX
 	align 2
 StoryTextNight05BasementMDormLine5:
 	dc.w	OBJ_NPC_BRETT
@@ -7062,7 +7063,7 @@ StoryTextNight05BasementMDormLine7:
 	align 2
 StoryTextNight05BasementOfficeLine1:
 	dc.w	OBJ_NPC_DANI
-	dc.b	"Look at these three",LF
+	dc.b	"Check out these",LF
 	dc.b	"losers.^",FF
 	dc.b	"They live down here",LF
 	dc.b	"too.^",FF
@@ -7140,7 +7141,7 @@ StoryTextNight05BasementOfficeLine11:
 	dc.b	"Hmph. She's as",LF
 	dc.b	"miserable as ever.^",FF
 	dc.b	"I think we need to",LF
-	dc.b	"tweak the algorithm.|",ETX
+	dc.b	"tweak the algorithm.",ETX
 	align 2
 StoryTextNight05BasementOfficeLine12:
 	dc.w	OBJ_NPC_DANI
@@ -8423,7 +8424,7 @@ StoryTextEndPerfectLine14:
 	dc.b	"This is what you",LF
 	dc.b	"meant before?^",FF
 	dc.b	"Tearing down stores &",LF
-	dc.b	"replacing then.",ETX
+	dc.b	"replacing them.",ETX
 	align 2
 StoryTextEndPerfectLine15:
 	dc.w	OBJ_NPC_JEN

@@ -319,11 +319,11 @@ ActionScriptNight06SceneDenimCountryTrading:
 	bsr.w QueueScriptedEvent ; queue the event
 	rts
 .after
-	lea	StoryTextTradingSequenceDenimCountryBefore,a6 ; point to text to display
+	lea	StoryTextTradingSequenceDenimCountryAfter,a6 ; point to text to display
 	bsr.w	ShowDialog
 	rts
 .before
-	lea	StoryTextTradingSequenceDenimCountryAfter,a6 ; point to text to display
+	lea	StoryTextTradingSequenceDenimCountryBefore,a6 ; point to text to display
 	bsr.w	ShowDialog
 	rts
 	

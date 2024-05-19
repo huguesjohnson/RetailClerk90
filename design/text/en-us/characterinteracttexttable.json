@@ -45,7 +45,7 @@
       "DialogTextErynDay09":{
       	"comment":"text after story event",
       	"dialogTitle":"OBJ_NPC_ERYN",
-      	"text":"I wonder why D.B. is being like this?",
+      	"text":"I wonder why DB is being like this?",
       	"align":2},
       "DialogTextErynDay0A":{"comment":"PC on day0A"},
       "DialogTextErynDay0B":{"comment":"story event, no default dialog"},
@@ -76,7 +76,7 @@
       "DialogTextCarlDay07":{"comment":"PC on day07"},
       "DialogTextCarlDay08":{
       	"dialogTitle":"OBJ_NPC_CARL",
-      	"text":"I don't talk to D.B. often.|He's not here late every night.|He must close up early if it's slow.",
+      	"text":"I don't talk to DB often.|He's not here late every night.|He must close up early if it's slow.",
       	"align":2},
       "DialogTextCarlDay09":{"comment":"PC on day09"},
       "DialogTextCarlDay0A":{
@@ -231,7 +231,7 @@
       	"align":2},
       "DialogTextGrunbergDay08":{
       	"dialogTitle":"OBJ_NPC_GRUNBERG",
-      	"text":"Why are you asking about D.B.?|He worked here last year.|Good guy, a little odd at times.",
+      	"text":"DB worked here last year.|Good guy, a little odd at times.",
       	"align":2},
       "DialogTextGrunbergDay09":{
       	"comment":"after optional event",
@@ -285,7 +285,10 @@
       	"dialogTitle":"OBJ_NPC_JEN",
       	"text":"Maybe some sleep would help.",
       	"align":2},
-      "DialogTextJenDay08":{"comment":"only in story events this day"},
+      "DialogTextJenDay08":{
+      	"dialogTitle":"OBJ_NPC_JEN",
+      	"text":"Are you waiting here tonight?",
+      	"align":2},
       "DialogTextJenDay09":{
       	"comment":"after story event",
       	"dialogTitle":"OBJ_NPC_JEN",
@@ -559,7 +562,7 @@
       	"align":2},
       "DialogTextCharlesDay0C":{
       	"dialogTitle":"OBJ_NPC_CHARLES",
-      	"text":"I hope D.B. opens the arcade tonight.",
+      	"text":"I hope DB opens the arcade tonight.",
       	"align":2},
       "DialogTextCharlesDay0D":{
       	"comment":"at the arcade",
@@ -734,7 +737,7 @@
       	"align":2},
       "DialogTextGuardDay0A":{
       	"dialogTitle":"OBJ_NPC_GUARD",
-      	"text":"So many people to watch today",
+      	"text":"So many people to watch today.",
       	"align":2},
       "DialogTextGuardDay0B":{
       	"dialogTitle":"OBJ_NPC_GUARD",
@@ -755,7 +758,7 @@
       	"align":2},
       "DialogTextBillyDay01":{"comment":"not present at night"},
       "DialogTextBillyDay02":{
-      	"comment":"in VB this day",
+      	"comment":"in cavern this day",
       	"dialogTitle":"OBJ_NPC_BILLY",
       	"text":"Do you work here too?",
       	"align":2},
@@ -779,7 +782,7 @@
       	"align":2},
       "DialogTextBillyDay09":{"comment":"not present at night"},
       "DialogTextBillyDay0A":{
-      	"comment":"in ewhall this day",
+      	"comment":"in a hallway this day",
       	"dialogTitle":"OBJ_NPC_BILLY",
       	"text":"Where should I go today?",
       	"align":2},

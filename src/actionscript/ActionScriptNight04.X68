@@ -330,11 +330,11 @@ EndNight04SetupGameState: ; separated to help with debugging
 	; scatter some NPCs around
 	;---------------------------------------------------------------------------	
 	move.l	#$09260000,(MEM_NPC_LOCATION_TLODGE)
-	move.l	#$19120000,(MEM_NPC_LOCATION_SVIDEO)
+	move.l	#$19000000,(MEM_NPC_LOCATION_SVIDEO)
 	move.l	#$15230000,(MEM_NPC_LOCATION_FCBFISHING)
 	move.l	#$1D220000,(MEM_NPC_LOCATION_WWAPPLIANCES)
 	move.l	#$0A200000,(MEM_NPC_LOCATION_CHECKERS)
 	move.l	#$08210000,(MEM_NPC_LOCATION_POGODAWG)
 	move.l	#$11000000,(MEM_NPC_LOCATION_WWHALL)
-	move.l	#$00000000,(MEM_NPC_LOCATION_SHALL)		
+	move.l	#$12000000,(MEM_NPC_LOCATION_SHALL)		
 	rts		

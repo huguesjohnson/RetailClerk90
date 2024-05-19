@@ -1448,6 +1448,12 @@
             "label":"StoryTextNight01WEHallLine3"
          },
          {
+            "comment":"clear npc out of we hall",
+            "command":"UPDATE_SCENE_NPCS",
+            "sceneId":"SCENE_ID_WEHALL",
+            "longValue":0
+         },            
+         {
             "comment":"end",
             "command":"END"
          }
@@ -1593,7 +1599,7 @@
             "comment":"walk to the north exit",
             "direction":"UP",
             "intValue":80
-         },                        
+         },
          {
             "comment":"end",
             "command":"END"
@@ -3189,7 +3195,7 @@
          {
             "comment":"move npc0 behind the counter",
             "direction":"DOWN",
-            "intValue":40
+            "intValue":32
          },         
          {
             "comment":"move npc0 behind the counter",

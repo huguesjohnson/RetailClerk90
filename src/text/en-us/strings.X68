@@ -4537,7 +4537,7 @@ StoryTextNight01SouthHallLine5:
 	align 2
 StoryTextNight01SouthHallLine6:
 	dc.w	OBJ_NPC_ERYN
-	dc.b	"Still sound shady",LF
+	dc.b	"Still sounds shady",LF
 	dc.b	"but, OK, I'm Eryn.^",FF
 	dc.b	"I work at Denim",LF
 	dc.b	"Country.^",FF
@@ -5469,6 +5469,16 @@ StoryTextDay03DenimCountry2Line2:
 	dc.b	"lying to me,^",FF
 	dc.b	"or that letter's from",LF
 	dc.b	"someone I missed.",ETX
+	align 2
+StoryTextDay03NotStartedCheckers:
+	dc.w	OBJ_NPC_TODD
+	dc.b	"(What is taking so",LF
+	dc.b	"long?)",ETX
+	align 2
+StoryTextDay03NotStartedCNow:
+	dc.w	OBJ_NPC_BECKY
+	dc.b	"(This is taking",LF
+	dc.b	"forever.)",ETX
 	align 2
 StoryTextDay03PogoDawgLine1:
 	dc.w	OBJ_NPC_ERYN

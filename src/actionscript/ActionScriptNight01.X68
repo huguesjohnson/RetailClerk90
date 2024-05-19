@@ -4,15 +4,6 @@
 ;*******************************************************************************
 
 ;*******************************************************************************
-; SCENE_ID_WEHALL:
-;*******************************************************************************
-ActionScriptNight01WEHallExit:
-	; need to clear out NPC who is set there at the start of the day
-	move.l	#$00000000,(MEM_NPC_LOCATION_WEHALL)
-	bsr.w	DefaultExitScene ; default scene exit
-	rts
-
-;*******************************************************************************
 ; SCENE_ID_CAVERN
 ;*******************************************************************************
 ActionScriptNight01CavernInteract:

@@ -823,7 +823,7 @@
          },
       "StoryTextNight01SouthHallLine6":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"Still sound shady but, OK, I'm Eryn.|I work at Denim Country.|I don't work that much though.|Lisa sends me on crazy snipe hunts.",
+         "text":"Still sounds shady but, OK, I'm Eryn.|I work at Denim Country.|I don't work that much though.|Lisa sends me on crazy snipe hunts.",
          "align":2
          },            
       "StoryTextNight01SouthHallLine7":{
@@ -1510,6 +1510,16 @@
       "StoryTextDay03DenimCountry2Line2":{
          "dialogTitle":"OBJ_NPC_LISA",
          "text":"I assume he wasn't any help then.|Sorry if I wasted your time.|I don't know what to make of this.|Either someone is lying to me,|or that letter's from someone I missed.",
+         "align":2
+         },
+      "StoryTextDay03NotStartedCheckers":{
+         "dialogTitle":"OBJ_NPC_TODD",
+         "text":"(What is taking so long?)",
+         "align":2
+         },
+      "StoryTextDay03NotStartedCNow":{
+         "dialogTitle":"OBJ_NPC_BECKY",
+         "text":"(This is taking forever.)",
          "align":2
          },
       "StoryTextDay03PogoDawgLine1":{

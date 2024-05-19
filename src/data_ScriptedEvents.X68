@@ -849,6 +849,10 @@ ScriptedEventNight01_00_IntroStart:
 	; dialog
 	dc.w	SCRIPTED_EVENT_DIALOG
 	dc.l	StoryTextNight01WEHallLine3
+	; clear npc out of we hall
+	dc.w	SCRIPTED_EVENT_UPDATE_SCENE_NPCS
+	dc.w	SCENE_ID_WEHALL
+	dc.l	$00000000
 	; end
 	dc.w	SCRIPTED_EVENT_END
 ScriptedEventNight01_00_IntroEnd:
@@ -1867,7 +1871,7 @@ ScriptedEventDay03_Optional01_NickyStart:
 	dc.w	SCRIPTED_EVENT_SPRITE_NPC0
 	; move npc0 behind the counter
 	dc.w	DIRECTION_DOWN
-	dc.w	$0028
+	dc.w	$0020
 	; move npc0 behind the counter
 	dc.w	DIRECTION_RIGHT
 	dc.w	$005A

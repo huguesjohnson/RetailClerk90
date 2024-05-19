@@ -504,7 +504,7 @@ ActionTableStart:
 ; scene 2
 	dc.l	ActionScriptDefaultInteract ; Interact
 	dc.l	ActionScriptNullEvent ; Respond
-	dc.l	ActionScriptNight01WEHallExit ; ExitScene
+	dc.l	DefaultExitScene ; ExitScene
 	dc.l	DefaultEnterScene ; EnterScene
 ; scene 3
 	dc.l	ActionScriptDefaultInteract ; Interact

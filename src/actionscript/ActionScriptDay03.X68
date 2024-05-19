@@ -107,6 +107,20 @@ ActionScriptDay03CheckersInteract:
 	cmpi.w	#$0000,d7 ; test for npc0
 	bne.s	.default
 	;---------------------------------------------------------------
+	; else check if the event started
+	;---------------------------------------------------------------
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7	
+	btst.l	#FLAG_DAY03_EVENT00_POGODAWG,d7 ; test if the optional event has started
+	bne.s	.testcomplete	
+	; show not started text
+	lea StoryTextDay03NotStartedCheckers,a6 ; point a6 to text to load
+	bsr.w ShowDialog ; show the dialog
+	rts	
+	;---------------------------------------------------------------
+	; else check if the event is complete
+	;---------------------------------------------------------------
+.testcomplete	
+	;---------------------------------------------------------------
 	; else check if the event is complete
 	;---------------------------------------------------------------
 	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
@@ -144,9 +158,19 @@ ActionScriptDay03CNowInteract:
 	cmpi.w	#$0000,d7 ; test for npc0
 	bne.s	.default
 	;---------------------------------------------------------------
+	; else check if the event started
+	;---------------------------------------------------------------
+	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7	
+	btst.l	#FLAG_DAY03_EVENT00_POGODAWG,d7 ; test if the optional event has started
+	bne.s	.testcomplete	
+	; show not started text
+	lea StoryTextDay03NotStartedCNow,a6 ; point a6 to text to load
+	bsr.w ShowDialog ; show the dialog
+	rts	
+	;---------------------------------------------------------------
 	; else check if the event is complete
 	;---------------------------------------------------------------
-	move.l	(MEM_DAY_EVENT_FLAGS),d7 ; copy day event flags to d7
+.testcomplete
 	btst.l	#FLAG_DAY03_EVENT02_CLOTHESNOW,d7 ; test if the optional event is complete
 	bne.s	.default ; show default text if the event is complete
 	;---------------------------------------------------------------------------

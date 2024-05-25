@@ -18,7 +18,7 @@ The rough list of enhancements from Retail Clerk '89 -> '90 includes:
 
 **Development Status**
 
-There's an alpha build available on the project page. The final version should be done in summer 2024. No promises but I'd really like to be done in June 2024.
+There's a beta build available on the project page. The final version should be done in summer 2024. No promises but I'd really like to be done in June 2024.
 
 There's a lot I could to do improve this demo. I'm a bit burned out on it though. It might be a while before I develop another retro console demo.
 

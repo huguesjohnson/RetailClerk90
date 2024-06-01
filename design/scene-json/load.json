@@ -385,7 +385,7 @@
 			"stringLabel":"LoadScreenHelp0",
 			"comment":"help text - line 0",
 			"highPriority":false,
-			"paletteNumber":3,
+			"paletteNumber":2,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"0B800000",
 			"column":"00100000"
@@ -394,7 +394,7 @@
 			"stringLabel":"LoadScreenHelp1",
 			"comment":"help text - line 0",
 			"highPriority":false,
-			"paletteNumber":3,
+			"paletteNumber":2,
 			"layer":"VDP_VRAM_WRITE_A",
 			"row":"0C000000",
 			"column":"00100000"

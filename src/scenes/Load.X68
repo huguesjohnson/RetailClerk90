@@ -287,12 +287,12 @@
 
 	; help text - line 0
 	dc.l	LoadScreenHelp0
-	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_A+$00100000+$0B800000 ; initial drawing location
 
 	; help text - line 0
 	dc.l	LoadScreenHelp1
-	dc.w	FONT_BASE_TILE_LOW+%0110000000000000 ; vdp pattern
+	dc.w	FONT_BASE_TILE_LOW+%0100000000000000 ; vdp pattern
 	dc.l	VDP_VRAM_WRITE_A+$00100000+$0C000000 ; initial drawing location
 
 	;---------------------------------------------------------------------------

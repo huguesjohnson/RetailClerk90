@@ -33,7 +33,17 @@ BuildSaveTitleLoop:
 	beq.s	BuildSaveTitleLoopExit	; end of text, move on
 	; update d6 to point to the tile ID
 	sub.w	#$20,d6	; subtract 32 to get the character index
+	; determine if we're on the status screen which uses a different color due to poor planning
+	move.l	(MEM_GAME_STATE),d7 ; copy game state to d7
+	btst.l	#STATE_FLAG_STATUS_SCREEN,d7 ; test status screen flag
+	bne.s	.statusscreen ; status screen flag is set
+.titlescreen	
+	add.w	#FONT_BASE_TILE_LOW+%0100000000000000,d6	; add the base tile
+	bra.s	.setvdpaddress
+.statusscreen
 	add.w	#FONT_BASE_TILE_LOW+%0110000000000000,d6	; add the base tile
+
+.setvdpaddress
 	move.l	(MEM_DIALOG_VDP),(VDP_CONTROL)	; set VDP address
 	move.w  d6,(VDP_DATA)	; copy the character to VDP
 	; draw the next character

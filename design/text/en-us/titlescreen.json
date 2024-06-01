@@ -11,7 +11,7 @@
       "TitleScreenTextNewGame":{"text":"{New Game"},
       "TitleScreenTextLoadGame":{"text":"{Load Game"},
       "TitleScreenTextDebug":{"text":"{Debug"},
-      "TitleScreenTextTitle":{"text":"May 2024 Beta"},
-      "TitleScreenTextTitleDebug":{"text":"May '24 Beta (Debug)"}
+      "TitleScreenTextTitle":{"text":"Version 1.0"},
+      "TitleScreenTextTitleDebug":{"text":"Version 1.0 (Debug)"}
    }
 }

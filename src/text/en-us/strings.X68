@@ -3204,9 +3204,9 @@ TitleScreenTextLoadGame:
 TitleScreenTextDebug:
 	dc.b	"{Debug",ETX
 TitleScreenTextTitle:
-	dc.b	"May 2024 Beta",ETX
+	dc.b	"Version 1.0",ETX
 TitleScreenTextTitleDebug:
-	dc.b	"May '24 Beta (Debug)",ETX
+	dc.b	"Version 1.0 (Debug)",ETX
 
 ;-------------------------------------------------------------------------------
 ; DebugScreen

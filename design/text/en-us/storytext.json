@@ -112,7 +112,7 @@
          },  
       "StoryTextDay00NPC2Choice1Line3":{
          "dialogTitle":"OBJ_NPC_ROCKER",
-         "text":"This a dumb question right?",
+         "text":"This is a dumb question right?",
          "align":2
          },  
       "StoryTextDay00NPC2Choice1Line4":{
@@ -243,7 +243,7 @@
          },     
       "StoryTextDay00SVideoChoice":{
             "dialogTitle":"OBJ_NPC_NICKY",
-            "text":"I don't suppose you want to help me out?|{ Help with what?     { Maybe later",
+            "text":"I don't suppose you can help me out?|{ Help with what?     { Maybe later",
             "formFeed":"FFR",
             "align":2
          },         
@@ -294,7 +294,7 @@
          },
       "StoryTextNight00TBooksLine2":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"It's been alright. No complaints.|I've even made a few friends.",
+         "text":"It's been alright. No complaints.|I even made a few friends.",
          "align":2
          },
       "StoryTextNight00TBooksLine3":{
@@ -314,7 +314,7 @@
          },
       "StoryTextNight00TBooksLine6":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"I still have one errand.|I need to deliver a special order.",
+         "text":"I still have one errand tonight.|I need to deliver a special order.",
          "align":2
          },                                   
       "StoryTextNight00TBooksLine7":{
@@ -450,7 +450,7 @@
          },   
       "StoryTextNight00CPlanetChoice":{
             "dialogTitle":"OBJ_NPC_ELIZA",
-            "text":"Hey Carl, stopping by to chat?|{ That's right        { Jusy saying 'bye'",
+            "text":"Hey Carl, stopping by to chat?|{ That's right        { Just leaving",
             "formFeed":"FFR",
             "align":2
          },         
@@ -591,7 +591,7 @@
          },
       "StoryTextDay01DenimCountry2Line3":{
          "dialogTitle":"OBJ_NPC_ERYN",
-         "text":"Are you going to tell what this is about?",
+         "text":"Are you going to say what this is about?",
          "align":2
          },       
       "StoryTextDay01DenimCountry2Line4":{
@@ -980,7 +980,7 @@
          },
       "StoryTextDay02TLodgeLine3":{
          "dialogTitle":"OBJ_NPC_SCOTT",
-         "text":"The mall was built in 1975.|It had a state of the art computer system.|For climate control and muzac.|Seemed like overkill for the time.|At least once a month the mall manager comes here looking for an old part.|They must still use an old computer.|Maybe even the original one.",
+         "text":"The mall was built in 1975.|It had a state of the art computer system,|for climate control and muzac.|Seemed like overkill for the time.|At least once a month the mall manager comes here looking for an old part.|They must still use an old computer.|Maybe even the original one.",
          "align":2
          },
       "StoryTextDay02TBooksLine1":{
@@ -1116,7 +1116,7 @@
          },        
       "StoryTextDay02SVideoChoice0":{
             "dialogTitle":"OBJ_NPC_NICKY",
-            "text":"Thanks, I'm just grabbing a snack.",
+            "text":"Thanks, I need to grab a quick snack.",
             "align":2
          },         
       "StoryTextDay02SVideoChoice1":{
@@ -1801,7 +1801,7 @@
          },
       "StoryTextNight03CNowAltLine2":{
          "dialogTitle":"OBJ_NPC_BECKY",
-         "text":"I can't forget it. It was awful.|I didn't thank you for showing up.|I thought he was there to rob us.|You must have scared him away.",
+         "text":"I can't forget it. It was awful.|I didn't thank you for showing up.|I thought he was going to rob us.|You must have scared him away.",
          "align":2
          },       
       "StoryTextNight03CNowAltLine3":{
@@ -1856,7 +1856,7 @@
          },   
       "StoryTextNight03NShackLine7":{
          "dialogTitle":"OBJ_NPC_JEN",
-         "text":"He's probably just a customer.|You talk to a dozen people a day.|You can't remember all their names.",
+         "text":"He's probably just a customer.|You talk to a dozen people a day.|You can't remember all their faces.",
          "align":2
          },      
       "StoryTextNight03NShackLine8":{
@@ -1963,7 +1963,7 @@
          },
       "StoryTextNight03CPlanetLine2":{
          "dialogTitle":"OBJ_NPC_ELIZA",
-         "text":"You know, bands that had one hit song.|Then they just disappeared.",
+         "text":"You know, bands that had one hit song.|Then they disappeared.",
          "align":2
          },    
       "StoryTextNight03CPlanetLine3":{
@@ -2165,7 +2165,7 @@
          },        
       "StoryTextDay04FCBCampingChoice0":{
             "dialogTitle":"OBJ_NPC_GRANT",
-            "text":"Sorry, didn't see you there.|I was just think about a roadtrip|I went on with your father.|Before your oldest brother was born.",
+            "text":"Sorry, didn't see you there.|I was thinking about a roadtrip|I went on with your father,|before your oldest brother was born.",
             "align":2
          },         
       "StoryTextDay04FCBCampingChoice1":{
@@ -2290,7 +2290,7 @@
          },       
       "StoryTextNight04SouthHallLine4":{
          "dialogTitle":"OBJ_NPC_VICTOR",
-         "text":"Have I said anything untrue?|They'll get over it soon enough.|This is just a temp job for them.",
+         "text":"Have I said anything untrue?|They'll get over it soon enough.|This is all a temp job for them.",
          "align":2
          },        
       "StoryTextNight04SouthHallLine5":{
@@ -2397,7 +2397,7 @@
          },                          
       "StoryTextDay05DenimCountryLine1":{
          "dialogTitle":"OBJ_NPC_DANI",
-         "text":"I see you haven't changed.|Fretting about whether the store.|You've have an ulcer before 30.",
+         "text":"I see you haven't changed.|Fretting about the store again.|You'll have an ulcer before 30.",
          "align":2
          },
       "StoryTextDay05DenimCountryLine2":{

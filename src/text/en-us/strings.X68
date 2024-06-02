@@ -3081,7 +3081,7 @@ StatusScreenDay03Objective02:
 	dc.b	"events will be lost.",ETX
 StatusScreenDay03Objective03:
 	dc.b	"December 16, 1990: Night",LF
-	dc.b	"Where did you that guy before?",ETX
+	dc.b	"Where did you see that guy go before?",ETX
 StatusScreenDay03Objective04:
 	dc.b	"December 16, 1990: Night",LF
 	dc.b	"Check-in with your friends.",ETX
@@ -3313,7 +3313,7 @@ CreditsScreen01Line07:
 CreditsScreen01Line08:
 	dc.b	"Additional graphics from:",ETX
 CreditsScreen01Line09:
-	dc.b	"http://zee-3.com/pickfordbros/archive/",ETX
+	dc.b	"Pickford Bros - Deathwake Font",ETX
 CreditsScreen01Line0A:
 	dc.b	"GameDev Market 8Bit/Pixelart Bundle",ETX
 CreditsScreen01Line0B:
@@ -3687,8 +3687,8 @@ StoryTextDay00NPC2Choice1Line2:
 	align 2
 StoryTextDay00NPC2Choice1Line3:
 	dc.w	OBJ_NPC_ROCKER
-	dc.b	"This a dumb question",LF
-	dc.b	"right?",ETX
+	dc.b	"This is a dumb",LF
+	dc.b	"question right?",ETX
 	align 2
 StoryTextDay00NPC2Choice1Line4:
 	dc.w	OBJ_NPC_ROCKER
@@ -3834,7 +3834,7 @@ StoryTextDay00CavernLine8:
 StoryTextDay00SVideoChoice:
 	dc.w	OBJ_NPC_NICKY
 	dc.b	"I don't suppose you",LF
-	dc.b	"want to help me out?^",FFR
+	dc.b	"can help me out?^",FFR
 	dc.b	"{ Help with what?    ",LF
 	dc.b	"{ Maybe later",ETX
 	align 2
@@ -3895,7 +3895,7 @@ StoryTextNight00TBooksLine2:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"It's been alright. No",LF
 	dc.b	"complaints.^",FF
-	dc.b	"I've even made a few",LF
+	dc.b	"I even made a few",LF
 	dc.b	"friends.",ETX
 	align 2
 StoryTextNight00TBooksLine3:
@@ -3920,7 +3920,7 @@ StoryTextNight00TBooksLine5:
 StoryTextNight00TBooksLine6:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"I still have one",LF
-	dc.b	"errand.^",FF
+	dc.b	"errand tonight.^",FF
 	dc.b	"I need to deliver a",LF
 	dc.b	"special order.",ETX
 	align 2
@@ -4081,7 +4081,7 @@ StoryTextNight00CPlanetChoice:
 	dc.b	"Hey Carl, stopping by",LF
 	dc.b	"to chat?^",FFR
 	dc.b	"{ That's right       ",LF
-	dc.b	"{ Jusy saying 'bye'",ETX
+	dc.b	"{ Just leaving",ETX
 	align 2
 StoryTextNight00CPlanetChoice0:
 	dc.w	OBJ_NPC_ELIZA
@@ -4239,7 +4239,7 @@ StoryTextDay01DenimCountry2Line2:
 	align 2
 StoryTextDay01DenimCountry2Line3:
 	dc.w	OBJ_NPC_ERYN
-	dc.b	"Are you going to tell",LF
+	dc.b	"Are you going to say",LF
 	dc.b	"what this is about?",ETX
 	align 2
 StoryTextDay01DenimCountry2Line4:
@@ -4761,8 +4761,8 @@ StoryTextDay02TLodgeLine3:
 	dc.b	"The mall was built in",LF
 	dc.b	"1975.^",FF
 	dc.b	"It had a state of the",LF
-	dc.b	"art computer system.^",FF
-	dc.b	"For climate control",LF
+	dc.b	"art computer system,^",FF
+	dc.b	"for climate control",LF
 	dc.b	"and muzac.^",FF
 	dc.b	"Seemed like overkill",LF
 	dc.b	"for the time.^",FF
@@ -4975,8 +4975,8 @@ StoryTextDay02SVideoChoice:
 	align 2
 StoryTextDay02SVideoChoice0:
 	dc.w	OBJ_NPC_NICKY
-	dc.b	"Thanks, I'm just",LF
-	dc.b	"grabbing a snack.",ETX
+	dc.b	"Thanks, I need to",LF
+	dc.b	"grab a quick snack.",ETX
 	align 2
 StoryTextDay02SVideoChoice1:
 	dc.w	OBJ_NPC_NICKY
@@ -5838,7 +5838,7 @@ StoryTextNight03CNowAltLine2:
 	dc.b	"I didn't thank you",LF
 	dc.b	"for showing up.^",FF
 	dc.b	"I thought he was",LF
-	dc.b	"there to rob us.^",FF
+	dc.b	"going to rob us.^",FF
 	dc.b	"You must have scared",LF
 	dc.b	"him away.",ETX
 	align 2
@@ -5915,7 +5915,7 @@ StoryTextNight03NShackLine7:
 	dc.b	"You talk to a dozen",LF
 	dc.b	"people a day.^",FF
 	dc.b	"You can't remember",LF
-	dc.b	"all their names.",ETX
+	dc.b	"all their faces.",ETX
 	align 2
 StoryTextNight03NShackLine8:
 	dc.w	OBJ_NPC_CARL
@@ -6025,8 +6025,7 @@ StoryTextNight03CPlanetLine2:
 	dc.w	OBJ_NPC_ELIZA
 	dc.b	"You know, bands that",LF
 	dc.b	"had one hit song.^",FF
-	dc.b	"Then they just",LF
-	dc.b	"disappeared.",ETX
+	dc.b	"Then they disappeared.",ETX
 	align 2
 StoryTextNight03CPlanetLine3:
 	dc.w	OBJ_NPC_CARL
@@ -6257,11 +6256,11 @@ StoryTextDay04FCBCampingChoice0:
 	dc.w	OBJ_NPC_GRANT
 	dc.b	"Sorry, didn't see you",LF
 	dc.b	"there.^",FF
-	dc.b	"I was just think",LF
-	dc.b	"about a roadtrip^",FF
+	dc.b	"I was thinking about",LF
+	dc.b	"a roadtrip^",FF
 	dc.b	"I went on with your",LF
-	dc.b	"father.^",FF
-	dc.b	"Before your oldest",LF
+	dc.b	"father,^",FF
+	dc.b	"before your oldest",LF
 	dc.b	"brother was born.",ETX
 	align 2
 StoryTextDay04FCBCampingChoice1:
@@ -6440,7 +6439,7 @@ StoryTextNight04SouthHallLine4:
 	dc.b	"untrue?^",FF
 	dc.b	"They'll get over it",LF
 	dc.b	"soon enough.^",FF
-	dc.b	"This is just a temp",LF
+	dc.b	"This is all a temp",LF
 	dc.b	"job for them.",ETX
 	align 2
 StoryTextNight04SouthHallLine5:
@@ -6579,9 +6578,9 @@ StoryTextDay05DenimCountryLine1:
 	dc.w	OBJ_NPC_DANI
 	dc.b	"I see you haven't",LF
 	dc.b	"changed.^",FF
-	dc.b	"Fretting about",LF
-	dc.b	"whether the store.^",FF
-	dc.b	"You've have an ulcer",LF
+	dc.b	"Fretting about the",LF
+	dc.b	"store again.^",FF
+	dc.b	"You'll have an ulcer",LF
 	dc.b	"before 30.",ETX
 	align 2
 StoryTextDay05DenimCountryLine2:

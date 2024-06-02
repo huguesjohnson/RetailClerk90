@@ -104,7 +104,7 @@
       "DialogTextFrankDay08":{
       	"comment":"hanging around the mall in the AM",
       	"dialogTitle":"OBJ_NPC_FRANK",
-      	"text":"I visit all the malls in my district.|This is definitely the smallest.|Maybe it started as a bigger idea.|And that was too much to finish.|I hope it gets an expansion.",
+      	"text":"I visit all the malls in my district.|This is definitely the smallest.|Maybe it started as a bigger idea.|And that was too much to finish.|I hope it gets an extension or remodel.",
       	"align":2},
       "DialogTextFrankDay09":{"comment":"not present"},
       "DialogTextFrankDay0A":{"comment":"not present"},
@@ -185,7 +185,7 @@
       	"align":2}, 
       "DialogTextLisaDay0B":{
       	"dialogTitle":"OBJ_NPC_LISA",
-      	"text":"Hey Carl, Merry Xmas.|Or I hope it is.",
+      	"text":"Hey Carl, merry xmas.|Or I hope it is.",
       	"align":2},  
       "DialogTextLisaDay0C":{
       	"comment":"after intro event",
@@ -253,7 +253,7 @@
       	"align":2},
       "DialogTextJenDay00":{
       	"dialogTitle":"OBJ_NPC_JEN",
-      	"text":"You must be new here.|Please stop by when you're on break.",
+      	"text":"You must be a new hire this year.|Stop by when you're on break.",
       	"align":2},
       "DialogTextJenDay01":{
       	"dialogTitle":"OBJ_NPC_JEN",
@@ -1124,7 +1124,7 @@
       "DialogTextJuanDay03":{"comment":"not present at night"},
       "DialogTextJuanDay04":{
       	"dialogTitle":"OBJ_NPC_JUAN",
-      	"text":"We came to this mall all the time.|They had Santa back here last year.|Before that it was a dept store.",
+      	"text":"We came to this mall all the time.|They had Santa back here last year.|Before that it was a department store.",
       	"align":2},
       "DialogTextJuanDay05":{"comment":"not present at night"},
       "DialogTextJuanDay06":{

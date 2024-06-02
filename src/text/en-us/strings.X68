@@ -357,8 +357,8 @@ ObjectDescriptionTLodgeDisks:
 	dc.b	"PC disks in different",LF
 	dc.b	"formats.",ETX
 ObjectDescriptionTLodgeRadios:
-	dc.b	"Radios and cassette",LF
-	dc.b	"player in many colors.",ETX
+	dc.b	"Colorful radios &",LF
+	dc.b	"cassette players.",ETX
 ObjectDescriptionTLodgeTVs:
 	dc.b	"Portable TVs for",LF
 	dc.b	"people on the go.",ETX
@@ -593,7 +593,7 @@ DialogTextFrankDay08:
 	dc.b	"And that was too much",LF
 	dc.b	"to finish.^",FF
 	dc.b	"I hope it gets an",LF
-	dc.b	"expansion.",ETX
+	dc.b	"extension or remodel.",ETX
 	align 2
 ; not present
 DialogTextFrankDay09:
@@ -710,7 +710,7 @@ DialogTextLisaDay0A:
 	align 2
 DialogTextLisaDay0B:
 	dc.w	OBJ_NPC_LISA
-	dc.b	"Hey Carl, Merry Xmas.",LF
+	dc.b	"Hey Carl, merry xmas.",LF
 	dc.b	"Or I hope it is.",ETX
 	align 2
 ; after intro event
@@ -797,9 +797,10 @@ DialogTextGrunbergDay0D:
 	align 2
 DialogTextJenDay00:
 	dc.w	OBJ_NPC_JEN
-	dc.b	"You must be new here.",LF
-	dc.b	"Please stop by when^",FF
-	dc.b	"you're on break.",ETX
+	dc.b	"You must be a new",LF
+	dc.b	"hire this year.^",FF
+	dc.b	"Stop by when you're",LF
+	dc.b	"on break.",ETX
 	align 2
 DialogTextJenDay01:
 	dc.w	OBJ_NPC_JEN
@@ -2042,7 +2043,7 @@ DialogTextJuanDay04:
 	dc.b	"They had Santa back",LF
 	dc.b	"here last year.^",FF
 	dc.b	"Before that it was a",LF
-	dc.b	"dept store.",ETX
+	dc.b	"department store.",ETX
 	align 2
 ; not present at night
 DialogTextJuanDay05:

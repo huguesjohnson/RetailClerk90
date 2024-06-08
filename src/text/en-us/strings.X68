@@ -5512,7 +5512,7 @@ StoryTextDay03PogoDawgLine5:
 StoryTextDay03PogoDawgLine6:
 	dc.w	OBJ_NPC_GRIFFY
 	dc.b	"Are you the... ",LF
-	dc.b	"where was I?^",FF
+	dc.b	"Where was I?^",FF
 	dc.b	"Right, the new",LF
 	dc.b	"delivery girl?",ETX
 	align 2
@@ -6917,8 +6917,8 @@ StoryTextDay05FCBCampingLine2:
 	dc.b	"Who remembers their",LF
 	dc.b	"parents friends?^",FF
 	dc.b	"I miss the old times",LF
-	dc.b	"with them.^",FF
-	dc.b	"But I wouldn't change",LF
+	dc.b	"with them,^",FF
+	dc.b	"but I wouldn't change",LF
 	dc.b	"a thing.",ETX
 	align 2
 StoryTextNight05TBooksLine1:
@@ -7216,8 +7216,8 @@ StoryTextNight05WWAppliancesLine2:
 	dc.b	"too much,^",FF
 	dc.b	"someone is unhappy",LF
 	dc.b	"with their gifts,^",FF
-	dc.b	"someone's kid is",LF
-	dc.b	"throws a fit.^",FF
+	dc.b	"someone's kid throws",LF
+	dc.b	"a fit.^",FF
 	dc.b	"It's the same for",LF
 	dc.b	"every family.",ETX
 	align 2
@@ -7701,7 +7701,7 @@ StoryTextNight06BasementKitchenLine1:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"I'll try once more",LF
 	dc.b	"before I go...^",FF
-	dc.b	"how can I help you?",ETX
+	dc.b	"How can I help you?",ETX
 	align 2
 StoryTextNight06BasementKitchenLine2:
 	dc.w	OBJ_NPC_BRETT
@@ -7912,8 +7912,8 @@ StoryTextNight06VBLine5:
 StoryTextNight06VBLine6:
 	dc.w	OBJ_NPC_CARL
 	dc.b	"I appreciate the",LF
-	dc.b	"consideration.^",FF
-	dc.b	"But I'd rather be in",LF
+	dc.b	"consideration,^",FF
+	dc.b	"but I'd rather be in",LF
 	dc.b	"the city.",ETX
 	align 2
 StoryTextNight06VBLine7:
@@ -8108,8 +8108,8 @@ StoryTextEndGoodLine9:
 	dc.b	"he said he was from",LF
 	dc.b	"2014.^",FF
 	dc.b	"Either they created",LF
-	dc.b	"time travel.^",FF
-	dc.b	"Or Jordan was",LF
+	dc.b	"time travel,^",FF
+	dc.b	"or Jordan was",LF
 	dc.b	"brain-fried.",ETX
 	align 2
 StoryTextEndGoodLine10:
@@ -8363,8 +8363,8 @@ StoryTextEndPerfectLine4:
 	align 2
 StoryTextEndPerfectLine5:
 	dc.w	OBJ_NPC_CARL
-	dc.b	"We're you looking",LF
-	dc.b	"into something?^",FF
+	dc.b	"You were looking into",LF
+	dc.b	"something?^",FF
 	dc.b	"A prank letter?",ETX
 	align 2
 StoryTextEndPerfectLine6:
@@ -8779,7 +8779,7 @@ StoryTextTradingSequenceTLodge3:
 StoryTextTradingSequenceTLodgeAfter:
 	dc.w	OBJ_NPC_SCOTT
 	dc.b	"Who drives a car",LF
-	dc.b	"without an FM now?",ETX
+	dc.b	"without FM now?",ETX
 	align 2
 StoryTextTradingSequenceCNowBefore:
 	dc.w	OBJ_NPC_BECKY
@@ -8872,7 +8872,7 @@ StoryTextTradingSequenceFCBCheckout4:
 	dc.b	"angry customers.^",FF
 	dc.b	"It's good for 10% off",LF
 	dc.b	"any non-sale item,^",FF
-	dc.b	"good on weekdays in",LF
+	dc.b	"good one day in",LF
 	dc.b	"February only.",ETX
 	align 2
 StoryTextTradingSequenceFCBCheckoutAfter:
@@ -8899,7 +8899,7 @@ StoryTextTradingSequenceWWCheckout2:
 	dc.b	"I'll give you these",LF
 	dc.b	"LPs in return.^",FF
 	dc.b	"They got mixed-in",LF
-	dc.b	"with some laserdiscs.^",FF
+	dc.b	"with some LaserDiscs.^",FF
 	dc.b	"Will anyone want LPs",LF
 	dc.b	"again though?",ETX
 	align 2
@@ -9065,7 +9065,7 @@ StoryTextTradingSequenceCavern3:
 	dc.b	"Keep the knife, you",LF
 	dc.b	"need it more than me.^",FF
 	dc.b	"I'll track down who",LF
-	dc.b	"lost that.",ETX
+	dc.b	"lost that earring.",ETX
 	align 2
 StoryTextTradingSequenceCavernAfter:
 	dc.w	OBJ_NPC_DB

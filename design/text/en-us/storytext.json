@@ -1549,7 +1549,7 @@
          },     
       "StoryTextDay03PogoDawgLine6":{
          "dialogTitle":"OBJ_NPC_GRIFFY",
-         "text":"Are you the... |where was I?|Right, the new delivery girl?",
+         "text":"Are you the... |Where was I?|Right, the new delivery girl?",
          "align":2
          },
       "StoryTextDay03PogoDawgLine7":{
@@ -2651,7 +2651,7 @@
          },
       "StoryTextDay05FCBCampingLine2":{
          "dialogTitle":"OBJ_NPC_GRANT",
-         "text":"Who remembers their parents friends?|I miss the old times with them.|But I wouldn't change a thing.",
+         "text":"Who remembers their parents friends?|I miss the old times with them,|but I wouldn't change a thing.",
          "align":2
          },   
       "StoryTextNight05TBooksLine1":{
@@ -2867,7 +2867,7 @@
          },
       "StoryTextNight05WWAppliancesLine2":{
          "dialogTitle":"OBJ_NPC_LAURA",
-         "text":"It's nothing bad, just the usual.|Everyone gets together,|someone drinks way too much,|someone is unhappy with their gifts,|someone's kid is throws a fit.|It's the same for every family.",
+         "text":"It's nothing bad, just the usual.|Everyone gets together,|someone drinks way too much,|someone is unhappy with their gifts,|someone's kid throws a fit.|It's the same for every family.",
          "align":2
          },   
       "StoryTextNight05WWAppliancesLine3":{
@@ -3250,7 +3250,7 @@
          },                                                
       "StoryTextNight06BasementKitchenLine1":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"I'll try once more before I go...|how can I help you?",
+         "text":"I'll try once more before I go...|How can I help you?",
          "align":2
          },
       "StoryTextNight06BasementKitchenLine2":{
@@ -3415,7 +3415,7 @@
          },    
       "StoryTextNight06VBLine6":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"I appreciate the consideration.|But I'd rather be in the city.",
+         "text":"I appreciate the consideration,|but I'd rather be in the city.",
          "align":2
          },       
       "StoryTextNight06VBLine7":{
@@ -3576,7 +3576,7 @@
          },
       "StoryTextEndGoodLine9":{
          "dialogTitle":"OBJ_NPC_DB",
-         "text":"I'm not sure what it even is.|They say it's a simulation,|but last year, that Jordan guy,|he said he was from 2014.|Either they created time travel.|Or Jordan was brain-fried.",
+         "text":"I'm not sure what it even is.|They say it's a simulation,|but last year, that Jordan guy,|he said he was from 2014.|Either they created time travel,|or Jordan was brain-fried.",
          "align":2
          },
       "StoryTextEndGoodLine10":{
@@ -3762,7 +3762,7 @@
          },         
       "StoryTextEndPerfectLine5":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"We're you looking into something?|A prank letter?",
+         "text":"You were looking into something?|A prank letter?",
          "align":2
          },
       "StoryTextEndPerfectLine6":{
@@ -4057,7 +4057,7 @@
          },          
       "StoryTextTradingSequenceTLodgeAfter":{
          "dialogTitle":"OBJ_NPC_SCOTT",
-         "text":"Who drives a car without an FM now?",
+         "text":"Who drives a car without FM now?",
          "align":2
          },          
       "StoryTextTradingSequenceCNowBefore":{
@@ -4117,7 +4117,7 @@
          },     
       "StoryTextTradingSequenceFCBCheckout4":{
          "dialogTitle":"OBJ_NPC_THOMAS",
-         "text":"Here's a coupon for angry customers.|It's good for 10% off any non-sale item,|good on weekdays in February only.",
+         "text":"Here's a coupon for angry customers.|It's good for 10% off any non-sale item,|good one day in February only.",
          "align":2
          },                  
       "StoryTextTradingSequenceFCBCheckoutAfter":{
@@ -4137,7 +4137,7 @@
          },           
       "StoryTextTradingSequenceWWCheckout2":{
          "dialogTitle":"OBJ_NPC_TANYA",
-         "text":"That coupon is a really good idea.|Can I take it to show to my manager?|I'll give you these LPs in return.|They got mixed-in with some laserdiscs.|Will anyone want LPs again though?",
+         "text":"That coupon is a really good idea.|Can I take it to show to my manager?|I'll give you these LPs in return.|They got mixed-in with some LaserDiscs.|Will anyone want LPs again though?",
          "align":2
          },      
       "StoryTextTradingSequenceWWCheckout3":{
@@ -4242,7 +4242,7 @@
          }, 
       "StoryTextTradingSequenceCavern3":{
          "dialogTitle":"OBJ_NPC_CARL",
-         "text":"I'm sure it has an owner though.|Keep the knife, you need it more than me.|I'll track down who lost that.",
+         "text":"I'm sure it has an owner though.|Keep the knife, you need it more than me.|I'll track down who lost that earring.",
          "align":2
          }, 
       "StoryTextTradingSequenceCavernAfter":{

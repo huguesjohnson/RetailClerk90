@@ -54,171 +54,255 @@
 	;---------------------------------------------------------------------------
 	; patterns generated from tilesets
 	;---------------------------------------------------------------------------
+	; source file: design/img/font-dialog-tiles/dialog-clear.png
 	include 'patterns/dialog-clear.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-frame0.png
 	include 'patterns/dialog-frame0.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-frame1.png
 	include 'patterns/dialog-frame1.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-frame2.png
 	include 'patterns/dialog-frame2.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-frame3.png
 	include 'patterns/dialog-frame3.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-frame4.png
 	include 'patterns/dialog-frame4.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-frame5.png
 	include 'patterns/dialog-frame5.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-frame6.png
 	include 'patterns/dialog-frame6.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-frame7.png
 	include 'patterns/dialog-frame7.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-frame8.png
 	include 'patterns/dialog-frame8.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-frame9.png
 	include 'patterns/dialog-frame9.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-framea.png
 	include 'patterns/dialog-framea.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-full.png
 	include 'patterns/dialog-full.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-titled-clear.png
 	include 'patterns/dialog-titled-clear.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-titled-frame0.png
 	include 'patterns/dialog-titled-frame0.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-titled-frame1.png
 	include 'patterns/dialog-titled-frame1.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-titled-frame2.png
 	include 'patterns/dialog-titled-frame2.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-titled-frame3.png
 	include 'patterns/dialog-titled-frame3.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-titled-frame4.png
 	include 'patterns/dialog-titled-frame4.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-titled-frame5.png
 	include 'patterns/dialog-titled-frame5.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-titled-frame6.png
 	include 'patterns/dialog-titled-frame6.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-titled-frame7.png
 	include 'patterns/dialog-titled-frame7.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-titled-frame8.png
 	include 'patterns/dialog-titled-frame8.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-titled-frame9.png
 	include 'patterns/dialog-titled-frame9.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-titled-framea.png
 	include 'patterns/dialog-titled-framea.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-titled-full.png
 	include 'patterns/dialog-titled-full.X68'
 
+	; source file: design/img/font-dialog-tiles/dialog-textarea.png
 	include 'patterns/dialog-textarea.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-east-closed.png
 	include 'patterns/frame-east-closed.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-east-closed-72.png
 	include 'patterns/frame-east-closed-72.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-east-open.png
 	include 'patterns/frame-east-open.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-north-closed.png
 	include 'patterns/frame-north-closed.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-north-closed-160.png
 	include 'patterns/frame-north-closed-160.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-north-closed-east-open.png
 	include 'patterns/frame-north-closed-east-open.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-north-closed-west-open.png
 	include 'patterns/frame-north-closed-west-open.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-north-closed-east-west-open.png
 	include 'patterns/frame-north-closed-east-west-open.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-north-entrance.png
 	include 'patterns/frame-north-entrance.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-north-open.png
 	include 'patterns/frame-north-open.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-north-open-west-side.png
 	include 'patterns/frame-north-open-west-side.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-north-open-east-side.png
 	include 'patterns/frame-north-open-east-side.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-south-closed.png
 	include 'patterns/frame-south-closed.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-south-closed-160.png
 	include 'patterns/frame-south-closed-160.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-south-closed-solo.png
 	include 'patterns/frame-south-closed-solo.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-south-closed-east-open.png
 	include 'patterns/frame-south-closed-east-open.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-south-closed-west-open.png
 	include 'patterns/frame-south-closed-west-open.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-south-open.png
 	include 'patterns/frame-south-open.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-south-open-solo.png
 	include 'patterns/frame-south-open-solo.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-west-closed.png
 	include 'patterns/frame-west-closed.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-west-closed-72.png
 	include 'patterns/frame-west-closed-72.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-west-open.png
 	include 'patterns/frame-west-open.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-nw-fill.png
 	include 'patterns/frame-nw-fill.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-ne-fill.png
 	include 'patterns/frame-ne-fill.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-sw-fill.png
 	include 'patterns/frame-sw-fill.X68'
 
+	; source file: design/img/scene-tiles/frame/frame-se-fill.png
 	include 'patterns/frame-se-fill.X68'
 
+	; source file: design/img/scene-tiles/fcb/counter.png
 	include 'patterns/fcb-counter.X68'
 
+	; source file: design/img/scene-tiles/tbooks/counter.png
 	include 'patterns/tbooks-counter.X68'
 
+	; source file: design/img/scene-tiles/vb/counter.png
 	include 'patterns/vb-counter.X68'
 
+	; source file: design/img/scene-tiles/tlodge/counter.png
 	include 'patterns/tlodge-counter.X68'
 
+	; source file: design/img/scene-tiles/svideo/counter.png
 	include 'patterns/svideo-counter.X68'
 
+	; source file: design/img/scene-tiles/checkers/counter-high.png
 	include 'patterns/checkers-counter-high.X68'
 
+	; source file: design/img/scene-tiles/checkers/counter-low.png
 	include 'patterns/checkers-counter-low.X68'
 
+	; source file: design/img/scene-tiles/pogodawg/counter.png
 	include 'patterns/pogodawg-counter.X68'
 
+	; source file: design/img/scene-tiles/wirewarehouse/counter-high.png
 	include 'patterns/wirewarehouse-counter-high.X68'
 
+	; source file: design/img/scene-tiles/wirewarehouse/counter-low.png
 	include 'patterns/wirewarehouse-counter-low.X68'
 
+	; source file: design/img/scene-tiles/cplanet/counter.png
 	include 'patterns/cplanet-counter.X68'
 
+	; source file: design/img/scene-tiles/denimcountry/counter.png
 	include 'patterns/denimcountry-counter.X68'
 
+	; source file: design/img/scene-tiles/cnow/counter.png
 	include 'patterns/cnow-counter.X68'
 
+	; source file: design/img/scene-tiles/nshack/counter-high.png
 	include 'patterns/nshack-counter-high.X68'
 
+	; source file: design/img/scene-tiles/nshack/counter-low.png
 	include 'patterns/nshack-counter-low.X68'
 
+	; source file: design/img/scene-tiles/nshack/display-high.png
 	include 'patterns/nshack-display-high.X68'
 
+	; source file: design/img/scene-tiles/nshack/display-low.png
 	include 'patterns/nshack-display-low.X68'
 
+	; source file: design/img/scene-tiles/center/platform.png
 	include 'patterns/center-platform.X68'
 
+	; source file: design/img/scene-tiles/wirewarehouse/wwtv-sw-corner16x8.png
 	include 'patterns/wwtv-sw-corner16x8.X68'
 
+	; source file: design/img/scene-tiles/wirewarehouse/wwtv-se-corner16x8.png
 	include 'patterns/wwtv-se-corner16x8.X68'
 
+	; source file: design/img/scene-tiles/pogodawg/table-high.png
 	include 'patterns/pogodawg-table-high.X68'
 
+	; source file: design/img/scene-tiles/pogodawg/table-low.png
 	include 'patterns/pogodawg-table-low.X68'
 
+	; source file: design/img/scene-tiles/title/mall-left.png
 	include 'patterns/title-mall-left.X68'
 
+	; source file: design/img/scene-tiles/title/mall-right.png
 	include 'patterns/title-mall-right.X68'
 
+	; source file: design/img/scene-tiles/title/mall-center.png
 	include 'patterns/title-mall-center.X68'
 
+	; source file: design/img/scene-tiles/title/frame.png
 	include 'patterns/title-frame.X68'
 
+	; source file: design/img/scene-tiles/title/frame-debug.png
 	include 'patterns/title-frame-debug.X68'
 
+	; source file: design/img/scene-tiles/load/frame.png
 	include 'patterns/load-frame.X68'
 
+	; source file: design/img/scene-tiles/menu/frame-save-load.png
 	include 'patterns/frame-save-load.X68'
 
+	; source file: design/img/scene-tiles/menu/frame-inventory.png
 	include 'patterns/frame-inventory.X68'
 
+	; source file: design/img/scene-tiles/ending/program-counter.png
 	include 'patterns/ending-program-counter.X68'
 

@@ -1,6 +1,7 @@
 *.class
 /build/*.bin
 /build/*.zip
+**/.DS_Store
 # licensed tilesets in their original form - should not redistribute these
 /design/img/modern/
 # excluding until xm->esf conversion is supported in build tools 
